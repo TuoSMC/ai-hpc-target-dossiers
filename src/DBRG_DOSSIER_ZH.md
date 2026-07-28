@@ -26,28 +26,52 @@
 
 ### 母公司經營團隊
 
-| 職務 | 姓名 | 備註 | 來源＋日期 | 標記 |
-| --- | --- | --- | --- | --- |
-| 執行長 | Marc C. Ganzi | 軟銀交割後續任執行長；DBRG 將以軟銀獨立子公司形態營運 | digitalbridge.com/about/leadership（2026-07）；SoftBank/DBRG 新聞稿 2025-12-29 | 已驗證（雙線）；交割後角色＝單一來源（研究線甲） |
-| 總裁暨投資長 | Ben（Benjamin J.）Jenkins | 投資決策領導 | 領導層頁面（2026-07）；雙線 | 已驗證 |
-| 財務長 | Thomas Mayrhofer | 2023-12-01 公告接任 | 領導層頁面（2026-07）；Business Wire 2023-12-01 | 已驗證 |
-| 營運長 | Liam Stewart | — | 領導層頁面（2026-07）；雙線 | 已驗證 |
-| 法務長暨公司秘書 | Geoffrey Goldschein | — | 領導層頁面（2026-07） | 單一來源（研究線甲） |
-| 商務暨策略長 | Kevin Smithen | 個人簡介稱自 2018 年起主導光纖／資料中心案源 | 領導層頁面（2026-07） | 單一來源（研究線甲） |
-| 人資長 | Francisco Sorrentino | — | 領導層頁面（2026-07） | 單一來源（研究線甲） |
-| 董事總經理暨會計長 | Tracey Teh | — | 領導層頁面（2026-07） | 單一來源（研究線甲） |
-| 董事總經理暨資訊長 | Stephen Stryker | **DBRG 並無公開的「技術長（CTO）」職稱** | 領導層頁面（2026-07） | 單一來源（研究線甲） |
-| 技術長（CTO） | GAP——查無此職稱 | — | 領導層頁面（2026-07） | GAP |
+| 職務 | 姓名 | 備註 | 來源＋日期 | 標記 | 公開聯絡管道 |
+| --- | --- | --- | --- | --- | --- |
+| 執行長 | Marc C. Ganzi | 軟銀交割後續任執行長；DBRG 將以軟銀獨立子公司形態營運 | digitalbridge.com/about/leadership（2026-07）；SoftBank/DBRG 新聞稿 2025-12-29 | 已驗證（雙線）；交割後角色＝單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道。可行途徑依序為：（1）LinkedIn InMail——他經常親自發文、追蹤數 3.1 萬，帳號顯然有在維護；（2）透過投資人關係窗口（[severin.white@digitalbridge.com](mailto:severin.white@digitalbridge.com)）申請高層簡報；（3）研討會現場——他是常態性主題演講／論壇講者（Bloomberg TV、德意志銀行投資人論壇、產業高峰會），透過主辦單位的講者聯絡窗口是正當途徑。切勿直接打 Boca Raton 總機期待找到他。務實而言，他是關係背書型聯絡人，不是採購決策者——DBRG 母公司不買伺服器。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** [marc-ganzi-627595](https://www.linkedin.com/in/marc-ganzi-627595) |
+| 總裁暨投資長 | Ben（Benjamin J.）Jenkins | 投資決策領導 | 領導層頁面（2026-07）；雙線 | 已驗證 | **接觸路徑：** 查無公開的個人管道。請走投資人關係窗口（[severin.white@digitalbridge.com](mailto:severin.white@digitalbridge.com)／[(212) 547-2777](tel:+12125472777)）或紐約辦公室總機（[(212) 547-2600](tel:+12125472600)，590 Madison Ave 34 樓）轉接其辦公室；並可同步以 LinkedIn InMail 接觸。他主持投資決策但不負責硬體採購——視為生態系可信度型聯絡人，排在 Smithen／Mauck 之後再接觸。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** [ben-jenkins-7080746](https://www.linkedin.com/in/ben-jenkins-7080746/) |
+| 財務長 | Thomas Mayrhofer | 2023-12-01 公告接任 | 領導層頁面（2026-07）；Business Wire 2023-12-01 | 已驗證 | **接觸路徑：** 查無公開的個人管道，LinkedIn 亦無法確認。途徑：投資人關係窗口（[severin.white@digitalbridge.com](mailto:severin.white@digitalbridge.com)）或 Boca Raton 總機（[(561) 544-7475](tel:+15615447475)）轉財務長辦公室。他是基金管理公司的財務長，不是硬體買家——只有在談到融資／租賃架構時才相關。他會出席論壇（私募股權的「The Evolving CFO」座談），研討會途徑可行。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** GAP（同名檔案逾 30 筆，皆無法確認） |
+| 營運長 | Liam Stewart | — | 領導層頁面（2026-07）；雙線 | 已驗證 | **接觸路徑：** 查無公開的個人管道。途徑：投資人關係窗口或紐約總機（[(212) 547-2600](tel:+12125472600)）；並可同步以 LinkedIn InMail 接觸。他會在產業活動（如 Connect (X)）發表主題演講，主辦單位講者窗口是正當的第二途徑。他是 316 人資產管理公司的營運長——負責公司營運，非資料中心採購。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** [liam-stewart-b9a1622](https://www.linkedin.com/in/liam-stewart-b9a1622/)——高度可能相符，但未經確認 |
+| 法務長暨公司秘書 | Geoffrey Goldschein | — | 領導層頁面（2026-07） | 單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道。以公司秘書身分，他是總部通訊地址（750 Park of Commerce Dr, Suite 210, Boca Raton, FL 33487）正式公司文書的法定收件人——這是唯一可靠途徑，且僅適用於 NDA／MSA 等文件，不適合開發客戶。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** GAP |
+| 商務暨策略長 | Kevin Smithen | 個人簡介稱自 2018 年起主導光纖／資料中心案源 | 領導層頁面（2026-07） | 單一來源（研究線甲） | **接觸路徑：直接聯絡** ——電子郵件與桌機分機皆由公司自行公布。這是本帳戶價值最高的單一聯絡人：檔案顯示他負責資料中心／光纖案源與策略客戶關係，也是 DBRG 營運高管中唯一有公司公布直撥電話者。開場可切入 Vantage Frontier TX 2026 下半年投產時程與 >250kW 液冷機櫃密度；請求的是「哪些租戶會落在哪些廠房」的方向性說明，而非訂單。副／備用途徑：LinkedIn。 · **Email：** [kevin.smithen@digitalbridge.com](mailto:kevin.smithen@digitalbridge.com) · **電話：** [(646) 883-2846](tel:+16468832846) · **LinkedIn：** [kevin-smithen-7a74a710](https://www.linkedin.com/in/kevin-smithen-7a74a710) |
+| 人資長 | Francisco Sorrentino | — | 領導層頁面（2026-07） | 單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道。對伺服器供應商而言非銷售相關對象。若確有需要：Boca Raton 總機（[(561) 544-7475](tel:+15615447475)）或 LinkedIn。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** GAP |
+| 董事總經理暨會計長 | Tracey Teh | — | 領導層頁面（2026-07） | 單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道，非銷售相關對象。若出現財務控管問題，請透過投資人關係窗口（[severin.white@digitalbridge.com](mailto:severin.white@digitalbridge.com)）。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** GAP |
+| 董事總經理暨資訊長 | Stephen Stryker | **DBRG 並無公開的「技術長（CTO）」職稱** | 領導層頁面（2026-07） | 單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道。他是 DBRG 母公司內最接近技術決策者的人——但他管的是約 316 人資產管理公司的內部 IT，預算是筆電與 SaaS，不是 GPU 機櫃。途徑：Boca Raton 總機（[(561) 544-7475](tel:+15615447475)）或 LinkedIn。優先度低；切勿與資料中心產能決策混為一談，後者在投資組合公司手上。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** GAP |
+| 技術長（CTO） | GAP——查無此職稱 | — | 領導層頁面（2026-07） | GAP | GAP——DBRG 無此職務，故無聯絡管道 |
 
 ### 資料中心投資決策圈（投資管理角色，並非企業伺服器採購者）
 
-| 姓名 | 職掌 | 來源＋日期 | 標記 |
-| --- | --- | --- | --- |
-| Ben Jenkins | 總裁暨投資長——投資決策領導 | 領導層頁面（2026-07） | 已驗證 |
-| Jon Mauck | 資深董事總經理；「主導資料中心投資策略」；投資委員會與執行委員會成員 | digitalbridge.com 領導層簡介（2026-07） | 單一來源（研究線甲） |
-| Brent Mayo | 董事總經理，投資管理——資料中心（發起／評估／管理資料中心投資） | IR 新聞稿 2026-06-08 | 單一來源（研究線甲） |
-| Kevin Smithen | 商務暨策略長 | 領導層簡介（2026-07） | 單一來源（研究線甲） |
-| Sureel Choksi（Vantage 執行長）、Raul Martynek（DataBank 執行長）、Rob Roy（Switch 創辦人暨執行長）、Steve Smith（Zayo 執行長） | 投資組合公司執行長，列於「Operating Partners & Senior Advisors」——實際經營資料中心平台，非 DBRG 母公司高管 | 領導層頁面（2026-07，研究線甲 p1） | 單一來源（研究線甲） |
+| 姓名 | 職掌 | 來源＋日期 | 標記 | 公開聯絡管道 |
+| --- | --- | --- | --- | --- |
+| Ben Jenkins | 總裁暨投資長——投資決策領導 | 領導層頁面（2026-07） | 已驗證 | **接觸路徑：** 查無公開的個人管道。請走投資人關係窗口（[severin.white@digitalbridge.com](mailto:severin.white@digitalbridge.com)／[(212) 547-2777](tel:+12125472777)）或紐約辦公室總機（[(212) 547-2600](tel:+12125472600)，590 Madison Ave 34 樓）轉接其辦公室；並可同步以 LinkedIn InMail 接觸。他主持投資決策但不負責硬體採購——視為生態系可信度型聯絡人，排在 Smithen／Mauck 之後再接觸。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** [ben-jenkins-7080746](https://www.linkedin.com/in/ben-jenkins-7080746/) |
+| Jon Mauck | 資深董事總經理；「主導資料中心投資策略」；投資委員會與執行委員會成員 | digitalbridge.com 領導層簡介（2026-07） | 單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道——另請注意，付費資料商（ZoomInfo、success.ai）確實流通他的聯絡資訊，本研究刻意未採用。可行途徑：（1）LinkedIn InMail，該檔案活躍；（2）研討會途徑——他在 Infrastructure Investor Global Summit、DCD 與 IJInvestor 等活動演講，其簡介亦出現在公開的退休基金董事會資料（如 Vermont Pension Investment Committee，2024-04-30），故活動主辦單位的講者窗口是正當途徑；（3）透過他任職董事的投資組合公司（Vantage 北美／歐非中東、Scala）取得引薦。是 Smithen 之後價值最高的經理人層級目標——他知道哪些租戶會落在哪些廠房。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** [jonathan-mauck-1950231](https://www.linkedin.com/in/jonathan-mauck-1950231/) |
+| Brent Mayo | 董事總經理，投資管理——資料中心（發起／評估／管理資料中心投資） | IR 新聞稿 2026-06-08 | 單一來源（研究線甲） | **接觸路徑：** 查無公開的個人管道——他是 2026 年新任高管，尚未出現在所擷取的領導層頁面名單中。他是資料中心投資團隊中最新、也最容易接觸到的人：（1）LinkedIn InMail——剛換新職是回覆率最高的時機；（2）透過發布其任命的媒體窗口（[dbrg-jf@joelefrank.com](mailto:dbrg-jf@joelefrank.com)）或投資人關係窗口；（3）他自 Newmark 帶過來的資本市場研討會圈（資料中心資本市場論壇）。他的職掌是在全球發起／評估／管理資料中心投資——談的是生態系盤點，不是訂單。 · **Email：** GAP · **電話：** GAP · **LinkedIn：** [brentmayo](https://www.linkedin.com/in/brentmayo/)——高度可能相符，但未經確認（LinkedIn 回傳 HTTP 999；同名檔案逾 10 筆） |
+| Kevin Smithen | 商務暨策略長 | 領導層簡介（2026-07） | 單一來源（研究線甲） | **接觸路徑：直接聯絡** ——電子郵件與桌機分機皆由公司自行公布。這是本帳戶價值最高的單一聯絡人：他負責資料中心／光纖案源與策略客戶關係，也是 DBRG 營運高管中唯一有公司公布直撥電話者。開場可切入 Vantage Frontier TX 2026 下半年投產時程與 >250kW 液冷機櫃密度；請求的是「哪些租戶會落在哪些廠房」的方向性說明，而非訂單。副／備用途徑：LinkedIn。 · **Email：** [kevin.smithen@digitalbridge.com](mailto:kevin.smithen@digitalbridge.com) · **電話：** [(646) 883-2846](tel:+16468832846) · **LinkedIn：** [kevin-smithen-7a74a710](https://www.linkedin.com/in/kevin-smithen-7a74a710) |
+| Sureel Choksi（Vantage 執行長）、Raul Martynek（DataBank 執行長）、Rob Roy（Switch 創辦人暨執行長）、Steve Smith（Zayo 執行長） | 投資組合公司執行長，列於「Operating Partners & Senior Advisors」——實際經營資料中心平台，非 DBRG 母公司高管 | 領導層頁面（2026-07，研究線甲 p1） | 單一來源（研究線甲） | **接觸路徑：** 四人皆查無公開的個人管道，且 DBRG 的投資人關係／媒體窗口不會代為轉介投資組合公司的商務洽談——請走各平台自己的公司窗口。**Sureel Choksi（Vantage）：** 他是 Frontier TX（1.4 GW、>250kW 液冷機櫃、首棟 2026 下半年投產）與 Lighthouse WI 的場域擁有者——談的是參考架構與租戶適配，不是訂單；LinkedIn InMail 可行（[sureelchoksi](https://www.linkedin.com/in/sureelchoksi)）；Email GAP · 電話 GAP。**Raul Martynek（DataBank）：** LinkedIn InMail 可行（[raulmartynek](https://www.linkedin.com/in/raulmartynek/)）；Email GAP · 電話 GAP。時程提醒：DataBank 公告 Kevin Ooley 自 2027-01-01 起接任執行長，Martynek 轉任執行董事長（單一來源為 LinkedIn 公司貼文——引用前請以 DataBank 新聞稿查證），因此應將 Ooley 視為前瞻性的決策者。**Rob Roy（Switch）：** Email GAP · 電話 GAP · LinkedIn GAP——請走 Switch 自己的公司／媒體窗口；Switch 主打 >2 MW/機櫃的「EVO AI Factories」，且已承載 CoreWeave 的 GB300 NVL72，故任何新進 EVO 租戶才是真正的潛在客戶。**Steve Smith（Zayo）：** Email GAP · 電話 GAP · LinkedIn GAP——請走 Zayo 自己的公司窗口；業務屬光纖／傳輸，四人中與伺服器關聯性最低。 |
+
+#### 公司公開聯絡管道
+
+| 管道 | 內容 | 來源 |
+| --- | --- | --- |
+| 總機——Boca Raton 總部（SEC 申報文件封面所載之註冊人電話） | [(561) 544-7475](tel:+15615447475) | [SEC EDGAR，DigitalBridge Group Inc. CIK 0001679688——申報文件封面「Registrant's telephone number, including area code」。註記：sec.gov 對本次研究抓取回傳 HTTP 403；該號碼係經 SEC 申報全文定向搜尋確認，並與本檔案他處引用之 10-K FY2025 封面一致。視為申報級資料，但對外使用前請以瀏覽器開啟封面頁再次查證。](https://www.sec.gov/Archives/edgar/data/1679688/000167968826000059/dbrg-20260511.htm) |
+| 總機——Boca Raton 總部（公司網站所載，備用） | [(561) 570-4644](tel:+15615704644) | [digitalbridge.com/contact——「Principal Domestic Locations／Boca Raton」（2026-07-28 擷取）。與 SEC 封面號碼不同，兩者皆為現用。依申報文件優先原則：先撥 561-544-7475。](https://www.digitalbridge.com/contact) |
+| 紐約辦公室總機（590 Madison Ave——Jenkins、Mauck、Smithen 與投資人關係團隊所在地） | [(212) 547-2600](tel:+12125472600) | [digitalbridge.com/contact——紐約據點列表（2026-07-28 擷取）](https://www.digitalbridge.com/contact) |
+| 洛杉磯辦公室總機 | [(310) 282-8820](tel:+13102828820) | [digitalbridge.com/contact——洛杉磯據點列表（2026-07-28 擷取）](https://www.digitalbridge.com/contact) |
+| 丹佛辦公室總機 | [(877) 940-8777](tel:+18779408777) | [digitalbridge.com/contact——丹佛「Other Domestic Location」列表（2026-07-28 擷取）](https://www.digitalbridge.com/contact) |
+| 投資人關係——電話（公開市場／上市股權投資人） | [(212) 547-2777](tel:+12125472777) — Severin White，董事總經理，公開市場投資人關係主管 | [DigitalBridge 新聞稿制式段落「INVESTOR RELATIONS」區塊（2026-07-01）；回溯至 2025-02-20 所查每一份 DBRG 新聞稿皆有相同區塊](https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan) |
+| 投資人關係——電子郵件（公開市場／上市股權投資人） | [severin.white@digitalbridge.com](mailto:severin.white@digitalbridge.com) | [DigitalBridge 新聞稿制式段落「INVESTOR RELATIONS」區塊（2026-07-01）](https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan) |
+| 募資／私募投資人關係——電子郵件＋直撥電話 | [leslie.golden@digitalbridge.com](mailto:leslie.golden@digitalbridge.com) · [(646) 585-6541](tel:+16465856541) — Leslie Wolff Golden，資深董事總經理，全球募資暨投資人關係主管 | [DigitalBridge Partners III 募集完成新聞稿（2025-11-18）「Private Investors」聯絡區塊](https://www.digitalbridge.com/news/2025-11-18-digitalbridge-announces-total-commitments-of-117-billion-in-fund-and-related-fund-lp-co-investment-commitments-for-digitalbridge-partners-iii) |
+| 媒體公關——外包代理公關公司（承攬 DBRG 所有企業公關） | [dbrg-jf@joelefrank.com](mailto:dbrg-jf@joelefrank.com) · [(212) 355-4449](tel:+12123554449) — Joele Frank, Wilkinson Brimmer Katcher（具名承辦人輪替：Erik Carlson／Alexander Wolfsohn；Jonathan Keehner／Sarah Salky；Aura Reinhard／Sarah Salky） | [DigitalBridge 新聞稿（2026-06-08）「Media Contacts」區塊；同一信箱亦見於 2025-11-18 DBP III 新聞稿](https://www.digitalbridge.com/news/2026-06-08-digitalbridge-expands-leadership-team-with-appointments-of-brent-mayo-and-nicholas-beatty) |
+| 媒體公關——公司內部媒體信箱 | [Media@digitalbridge.com](mailto:Media@digitalbridge.com) — Iris Tomczyk（DigitalBridge 媒體聯絡人） | [DigitalBridge／JEXI 新聞稿（2026-07-01）「MEDIA CONTACTS — DigitalBridge」區塊](https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan) |
+| 一般諮詢／美國投資查詢（最接近業務洽詢的正式入口） | [USinvest@digitalbridge.com](mailto:USinvest@digitalbridge.com) | [digitalbridge.com/contact——「General US Investment」信箱（2026-07-28 擷取）](https://www.digitalbridge.com/contact) |
+| 責任投資／ESG 查詢 | [responsibleinvestment@digitalbridge.com](mailto:responsibleinvestment@digitalbridge.com) | [digitalbridge.com/contact——環境／社會議題信箱（2026-07-28 擷取）](https://www.digitalbridge.com/contact) |
+| 總部通訊地址 | DigitalBridge Group, Inc., 750 Park of Commerce Drive, Suite 210, Boca Raton, FL 33487 | [digitalbridge.com/contact「Principal Domestic Locations」（2026-07-28 擷取）；與 SEC 10-K FY2025 封面之主要營業處所地址一致](https://www.digitalbridge.com/contact) |
+| 紐約通訊地址（接觸投資團隊最佳的實體途徑） | DigitalBridge, 590 Madison Avenue, 34th Floor, New York, NY 10022 | [digitalbridge.com/contact「Principal Domestic Locations — New York」（2026-07-28 擷取）](https://www.digitalbridge.com/contact) |
+| 股務代理機構（股東名冊相關查詢） | American Stock & Transfer Trust Company · [800-937-5449](tel:+18009375449) · www.amstock.com | [DigitalBridge 新聞稿制式段落「STOCK & TRANSFER AGENT」區塊（2026-07-01）](https://www.digitalbridge.com/news/2026-07-01-digitalbridge-and-jexi-announce-formation-of-nippon-gateway-infrastructure-a-new-data-center-platform-in-japan) |
+| 業務／合作／供應商聯絡表單網址 | **GAP**——DigitalBridge 未公布任何線上洽詢、合作、採購或供應商表單。digitalbridge.com/contact 是靜態的辦公室地址、電話與兩個信箱（USinvest@、responsibleinvestment@）清單，外加一個 LP 登入入口，頁面上並無任何送出表單。 | [digitalbridge.com/contact 於 2026-07-28 檢視——無表單欄位、無送出端點、無業務開發／合作連結](https://www.digitalbridge.com/contact) |
+| **電子郵件命名慣例**（可信度：**已觀察到**） | `first.last@digitalbridge.com`（全小寫、以點分隔、法定或已知名字＋姓氏）。證據：DBP III 募集完成新聞稿（2025-11-18）公布的三個個人信箱全部符合——kevin.smithen@、leslie.golden@、severin.white@；其中 severin.white@ 在 2025-02-20 至 2026-07-01 所查每份 DBRG 新聞稿中皆未變。**注意事項：**（1）功能型信箱「不」遵循此慣例（USinvest@、Media@、responsibleinvestment@ 為共用別名）；（2）此慣例僅在上述三人身上獲得確認——某付費資料商另將至少一名 DBRG 高管列於不同網域（digitalbridgellc.com），故無法證明全公司網域一致；（3）切勿據此為 Ganzi、Jenkins、Mauck、Mayo、Mayrhofer、Stewart 或其他任何人推導信箱——推導出的位址就是猜測，DBRG 有標準企業級防偽冒設定，退信或誤送會毀掉這個帳戶。請只使用上述三個已公布信箱，或投資人關係／媒體窗口。 | [DigitalBridge Partners III 募集完成新聞稿（2025-11-18）「Private Investors」聯絡區塊](https://www.digitalbridge.com/news/2025-11-18-digitalbridge-announces-total-commitments-of-117-billion-in-fund-and-related-fund-lp-co-investment-commitments-for-digitalbridge-partners-iii) |
+
+*聯絡資料僅來自公開來源（SEC 申報文件、投資人關係與公司聯絡頁、新聞稿、公開專業檔案）。不含個人手機或私人地址。GAP = 該個人查無公開管道，請改走公司窗口。*
 
 ---
 

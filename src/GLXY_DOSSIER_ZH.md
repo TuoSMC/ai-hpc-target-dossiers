@@ -25,13 +25,34 @@
 
 ### 具名高階主管（兩條研究線交叉查證）
 
-| 職務 | 姓名 | 來源 + 日期 |
+| 職務 | 姓名 | 來源 + 日期 | 公開聯絡管道 |
+| --- | --- | --- | --- |
+| 創辦人暨執行長 | Michael Novogratz | galaxy.com/leadership 2026-07；SEC 委託書 glxy-20260408；10-K FY2025；Galaxy 新聞稿 2026-07-06 | 價值最高的目標，也是 Helios/CoreWeave 僅有的兩位對外發言人之一。可行路徑：(1) 去信 [Investor.Relations@galaxy.com](mailto:Investor.Relations@galaxy.com) 並指名執行長／Helios 租賃管線 — 投資人關係窗口是接觸到他的關卡；(2) LinkedIn（他本人在 /in/novogratz 發文，InMail 確實會被看到）；(3) 研討會／媒體路徑 — 他固定出席 Nasdaq 活動、Bloomberg TV 及加密／AI 基礎設施研討會，透過議程聯絡人引薦可行；(4) 寄送正式書面信函至 300 Vesey Street 有效，因為他是 Galaxy 上架註冊書（shelf registration）具名的送達代理人。<br>**電子郵件：** GAP<br>**電話：** (212) 390-9216 — 公司總機，登載於 SEC S-3ASR 封面，與其姓名並列為送達代理電話。並非直撥或私人號碼。<br>**LinkedIn：** [linkedin.com/in/novogratz](https://www.linkedin.com/in/novogratz/) |
+| 財務長 | Anthony（Tony）Paquette | 領導層頁面 2026-07；SEC Form 4；委託書 NEO 名單 ~2026-04-08。任期細節（2025 年 1 月到任、前 Point72 財務長）：單一來源（Cointelegraph 2024-12） | 透過投資人關係窗口接觸 — 他共同主持法說會，並曾與 Novogratz 舉辦公開的「Ask Us Anything」場次，投資人關係／法說會管道才是他真正的公開接觸面。LinkedIn 可行（他本人會發文談 Galaxy 里程碑）。若要以資本支出／融資角度包裝伺服器或 DLC 液冷提案，請走 [Investor.Relations@galaxy.com](mailto:Investor.Relations@galaxy.com)，而非直接冷開發。<br>**電子郵件：** GAP<br>**電話：** GAP<br>**LinkedIn：** [linkedin.com/in/anthony-paquette](https://www.linkedin.com/in/anthony-paquette/) — 注意：另有一個同名檔案（/in/anthony-paquette-0b77126a/）亦提及 Galaxy，發送 InMail 前請先查證。 |
+| 總裁暨投資長 | Christopher Ferraro | 領導層頁面 2026-07；SEC 委託書 ~2026-04-08；The Org 檔案 | Helios/CoreWeave 的第二位對外發言人，也是實際主導資料中心建置資本配置的人 — 最佳的實務層級高階主管目標。路徑：[Investor.Relations@galaxy.com](mailto:Investor.Relations@galaxy.com)（他出席季度法說會並回應分析師提問，投資人關係窗口會把基礎設施問題轉給他），其次是在已確認的 LinkedIn 檔案發送 InMail。書面信函寄至 c/o Galaxy Digital Inc., 300 Vesey Street。<br>**電子郵件：** GAP<br>**電話：** GAP<br>**LinkedIn：** [linkedin.com/in/christopher-ferraro-23983165](https://www.linkedin.com/in/christopher-ferraro-23983165/) |
+| 營運長 | Erin Brown（Form 4：Erin Elizabeth Brown） | 領導層頁面 2026-07；SEC Form 4；委託書 ~2026-04-08。2021 年 5 月起任職：單一來源（The Org/ZoomInfo） | 查無公開的個人管道。可行路徑：寄送書面信函至「Erin Brown, Chief Operating Officer, c/o Galaxy Digital Inc., 300 Vesey Street, New York, NY 10282」（此為其本人 Section 16 申報所使用之地址），或透過投資人關係窗口引薦。她掌管營運，一旦 Ferraro 出面背書，資料中心供應／部署的對話最終會落到她手上。<br>**電子郵件：** GAP<br>**電話：** GAP<br>**LinkedIn：** [linkedin.com/in/erin-brown-02b21a112](https://www.linkedin.com/in/erin-brown-02b21a112/) — 僅屬高度可能之比對（Galaxy Digital + DePaul 大學 + 芝加哥地區與其公開簡歷相符），未經公司確認，接觸前請先查證。 |
+| 法務長 | Matt Friedrich | 領導層頁面 2026-07；SEC 委託書 ~2026-04-08。生效日 2025-09-08：單一來源（Galaxy 任命新聞稿，q4cdn PDF） | 屬合約／保密協議與主服務協議（MSA）路徑，而非銷售路徑。他是 Galaxy 上架註冊書具名的送達代理人，因此將法務文件寄至 300 Vesey Street 並使用 (212) 390-9216 專線，是已公開且正當的途徑。請勿在此開啟銷售對話 — 待 Helios 租戶或供應合約啟動後再運用。<br>**電子郵件：** GAP<br>**電話：** (212) 390-9216 — 公司總機，印於 SEC S-3ASR 封面其姓名正下方，為送達代理電話。非直撥號碼。<br>**LinkedIn：** GAP |
+
+#### 公司公開聯絡管道
+
+| 管道 | 內容 | 來源 |
 | --- | --- | --- |
-| 創辦人暨執行長 | Michael Novogratz | galaxy.com/leadership 2026-07；SEC 委託書 glxy-20260408；10-K FY2025；Galaxy 新聞稿 2026-07-06 |
-| 財務長 | Anthony（Tony）Paquette | 領導層頁面 2026-07；SEC Form 4；委託書 NEO 名單 ~2026-04-08。任期細節（2025 年 1 月到任、前 Point72 財務長）：單一來源（Cointelegraph 2024-12） |
-| 總裁暨投資長 | Christopher Ferraro | 領導層頁面 2026-07；SEC 委託書 ~2026-04-08；The Org 檔案 |
-| 營運長 | Erin Brown（Form 4：Erin Elizabeth Brown） | 領導層頁面 2026-07；SEC Form 4；委託書 ~2026-04-08。2021 年 5 月起任職：單一來源（The Org/ZoomInfo） |
-| 法務長 | Matt Friedrich | 領導層頁面 2026-07；SEC 委託書 ~2026-04-08。生效日 2025-09-08：單一來源（Galaxy 任命新聞稿，q4cdn PDF） |
+| 總機／主要營運辦公室電話 | (212) 390-9216 | [SEC Form S-3ASR 封面，2026-05-08 申報](https://www.sec.gov/Archives/edgar/data/1859392/000162828026032988/galaxy-sx3asr.htm) — 「300 Vesey Street, New York, New York 10282, (212) 390-9216」；同一號碼亦為 Galaxy 於 SEC EDGAR 公司紀錄上的營業電話 |
+| 投資人關係電子郵件 | [Investor.Relations@galaxy.com](mailto:Investor.Relations@galaxy.com) | [8-K 附件 99.1 新聞稿聯絡區塊，2026-07-24 申報](https://www.sec.gov/Archives/edgar/data/1859392/000185939226000074/exhibit991-pressreleasepri.htm) — 「Investor Relations Contact: Jonathan Goldowsky — Investor.Relations@galaxy.com」 |
+| 投資人關係電話 | (212) 390-9216 — 未公開專屬的投資人關係直撥線；此為 Galaxy 於 SEC 申報新聞稿制式聯絡區塊中，印在具名投資人關係聯絡人旁的公司總機 | [SEC Form 425 新聞稿聯絡區塊（2022）](https://www.sec.gov/Archives/edgar/data/1405064/000095010322001573/dp166134_425-2.htm) — 「Investors Relations Contacts ... (212) 390-9216」；該號碼於 2026 年 S-3ASR 封面再次確認 |
+| 新聞／媒體電子郵件 | [media@galaxy.com](mailto:media@galaxy.com) | [8-K 附件 99.1 新聞稿聯絡區塊，2026-07-24 申報](https://www.sec.gov/Archives/edgar/data/1859392/000185939226000074/exhibit991-pressreleasepri.htm) — 「Media Relations Contact: Michael Wursthorn — media@galaxy.com」 |
+| 一般諮詢電子郵件 | **GAP** — Galaxy 未公開任何一般 info@ 信箱；聯絡頁面將所有非投資人關係、非媒體的來訊一律導向網頁表單 | [galaxy.com/contact，2026-07-28 抓取](https://www.galaxy.com/contact) — 僅列出「Get Started」、「Media Inquiries」與「Investor Relations」連結，無電子郵件或電話 |
+| 業務／合作／商務洽詢表單 | [galaxy.com/get-started](https://www.galaxy.com/get-started) — 導向六條業務線表單：Trading & OTC、GalaxyOne（主經紀）、Investment Banking、Asset Management、Venture、Blockchain Services。注意：分流器中**沒有**資料中心／租賃／基礎設施採購選項。 | [galaxy.com/get-started，2026-07-28 抓取](https://www.galaxy.com/get-started) — 亦為 galaxy.com/data-centers 頁面唯一連出的聯絡選項 |
+| 媒體洽詢表單 | [galaxy.com/media-inquiries](https://www.galaxy.com/media-inquiries) | [galaxy.com/media-inquiries，2026-07-28 抓取](https://www.galaxy.com/media-inquiries) — 「For all press and media inquiries please use the form below.」 |
+| 總部通訊地址 | Galaxy Digital Inc., 300 Vesey Street, 13th Floor, New York, NY 10282 | [SEC Form S-3ASR 封面，2026-05-08 申報](https://www.sec.gov/Archives/edgar/data/1859392/000162828026032988/galaxy-sx3asr.htm) — 「13TH FLOOR」已於 CIK 1859392 之 SEC EDGAR 公司通訊／營業地址紀錄獨立確認 |
+| 寄送給具名高階主管或董事之信件路徑 | c/o Galaxy Digital Inc., 300 Vesey Street, New York, NY 10282 | [SEC Form 4（Novogratz Michael，執行長），2026-06-02 申報](https://www.sec.gov/Archives/edgar/data/1859392/000138061526000006/wk-form4_1780434854.xml) — 申報人地址「C/O GALAXY DIGITAL INC., NEW YORK NY 10282」；Bandrowczak 之 Form 3（2026-07-13）亦為同一地址 |
+| 投資人關係網站 | [investor.galaxy.com](https://investor.galaxy.com/) | [galaxy.com/contact，2026-07-28 抓取](https://www.galaxy.com/contact) — 亦見於 S-3ASR 之引置參照段落 |
+| 股權管理電子郵件（RSU／股權計畫文件） | [equity-administration@galaxy.com](mailto:equity-administration@galaxy.com) | [Schedule TO-I 附件 99.(a)(1)(A)，2025-08-19 申報](https://www.sec.gov/Archives/edgar/data/1859392/000185939225000046/exhibita1a-sctoxi.htm) — 「COPIES OF THE NTSUP ARE AVAILABLE UPON REQUEST BY EMAILING EQUITY-ADMINISTRATION@GALAXY.COM」 |
+| 股東名冊／委託書索取電子郵件 | [investor.relations@galaxy.com](mailto:investor.relations@galaxy.com) | [DEF 14A 正式委託書，2026-04-08 申報](https://www.sec.gov/Archives/edgar/data/1859392/000185939226000037/glxy-20260408.htm) — 股東名冊「available upon request ... by contacting us via email at investor.relations@galaxy.com」 |
+| 揭露資料中心組織的公開介面（徵才頁面） | [job-boards.greenhouse.io/galaxydigitalservices](https://job-boards.greenhouse.io/galaxydigitalservices) — 設有專屬「Data Centers」部門：Growth & Development Analyst (Data Centers) 紐約 + 德州達拉斯；Technical PM、Lead Scheduler Pre-Construction、Facilities Manager、Data Center Risk Associate（德州達拉斯）；Civil/Structural Architecture PM 與 Senior QA/QC Construction PM（德州 Afton＝Helios 場址）；Community Relations Coordinator（德州 Lubbock） | [Galaxy Greenhouse 徵才頁面，2026-07-28 取得](https://job-boards.greenhouse.io/galaxydigitalservices) — HTTP 200，66 個開放職缺；為唯一顯示資料中心組織與德州達拉斯開發據點的公開資料 |
+| **電子郵件命名慣例** — 可信度：**已實際觀察到（observed）** | Firstname.Lastname@galaxy.com。**重要：** 任何一位 Galaxy 具名高階主管的電子郵件位址，均未見於任何公開來源 — 此命名慣例僅供查證之用，**不得**用於推導或寄送至個別高階主管的信箱。現行網域之角色信箱為 Investor.Relations@galaxy.com、media@galaxy.com 與 equity-administration@galaxy.com。 | [Form S-4/A 附件 4.4（Partnership Promissory Note），2025-03-28 申報](https://www.sec.gov/Archives/edgar/data/1859392/000162828025015309/exhibit44-partnershippromi.htm) — 通知條款「Attention: Mr. Andrew Siegel — E-mail: Andrew.Siegel@galaxy.com」，地址 300 Vesey St., 13th Floor；相同的 first.last 慣例亦見於 2022 年 SEC Form 425 申報中的舊網域（elsa.ballard@galaxydigital.io、steven.wald@galaxydigital.io） |
+
+*聯絡資料僅來自公開來源（SEC 申報文件、投資人關係與公司聯絡頁、新聞稿、公開專業檔案）。不含個人手機或私人地址。GAP = 該個人查無公開管道，請改走公司窗口。*
 
 ### 延伸經營團隊 — 單一來源（galaxy.com/leadership 2026-07 抓取；未與申報文件交叉查證）
 

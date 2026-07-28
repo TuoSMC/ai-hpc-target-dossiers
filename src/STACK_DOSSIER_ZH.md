@@ -23,23 +23,47 @@
 
 ## 2. 領導層與決策者
 
-| 姓名 | 職稱/實體 | 備註 | 來源+日期 |
-| --- | --- | --- | --- |
-| Matt VanderZanden | STACK 美洲執行長(CEO) | 2025 年 12 月就任(新聞稿 2025-12-12)。美洲最高決策者。 | 官網團隊頁抓取 2026-07-27;STACK 新聞稿 2025-12-12 |
-| Brad Berkley | STACK 美洲財務長(CFO) | 美洲預算決策權。 | 團隊頁爬取 2026-07-26 + 抓取 2026-07-27 |
-| Mike Casey | STACK 美洲營運長(COO) | 營運;亦見於 FEC 公開紀錄(第 4 節)。 | 團隊頁 2026-07-26/27;Data Centre Magazine 2026-04-01 |
-| Ty Miller | 美洲商務長(Chief Commercial Officer) | 商務/租賃 — 掌握各園區承租客戶身分。 | 團隊頁,兩軌 2026-07-26/27 |
-| Bobby Hollis | 美洲開發長(Chief Development Officer) | 園區開發管線負責人。 | 團隊頁,兩軌 2026-07-26/27 |
-| Addam Friedl | 美洲技術長(CTO) | 技術;資料中心設計/標準面。 | 團隊頁,兩軌 2026-07-26/27 |
-| Tim Kuester | 美洲法務暨行政長 | 法務/行政。 | 團隊頁,兩軌 2026-07-26/27 |
-| Kevin Hughes | 美洲對外事務長(Chief External Affairs Officer) | 單一來源(僅 研究線乙 抓取 2026-07-27 之團隊頁);其 FEC 紀錄可獨立佐證職稱(第 4 節)。 | 官網團隊頁抓取 2026-07-27;FEC Schedule A 檢索 2026-07-27 |
-| Ravi Thota | STACK 美洲資訊長(CIO) | 單一來源(僅 研究線甲 團隊頁爬取 2026-07-26)。 | 研究線甲 爬取 2026-07-26 |
-| Brian Cox | STACK EMEA 代理執行長 | 前美洲 CEO;2018-10-15 起為 STACK 創始 CEO。 | 團隊頁 2026-07-26/27;公司新聞稿 2018-10-15 |
-| Richard Bienfait | STACK EMEA 財務長(CFO) | — | 團隊頁,兩軌 2026-07-26/27 |
-| Donough Roche | STACK EMEA 營運長(COO) | 單一來源(僅 研究線甲 爬取 2026-07-26)。 | 研究線甲 爬取 2026-07-26 |
-| Preet Gona | STACK APAC 執行長(CEO) | 2021-10-13 加入。APAC 之 CFO/COO 姓名:GAP(團隊頁未列)。 | 團隊頁 2026-07-26/27;BusinessWire 2021-10-13 |
-| Phil Koen | 董事會董事長 | 董事會監督。 | 團隊頁,兩軌 2026-07-26/27 |
-| Matt A'Hearn | Blue Owl Digital Infrastructure 負責人(出資方;前 IPI 管理合夥人) | 非 STACK 公司高階主管 — 出資方層級人物。 | Blue Owl 新聞稿 2024-10-07 / 2025-05-15;STACK 新聞稿 2025-09-26 |
+| 姓名 | 職稱/實體 | 備註 | 來源+日期 | 公開聯絡管道 |
+| --- | --- | --- | --- | --- |
+| Matt VanderZanden | STACK 美洲執行長(CEO) | 2025 年 12 月就任(新聞稿 2025-12-12)。美洲最高決策者。 | 官網團隊頁抓取 2026-07-27;STACK 新聞稿 2025-12-12 | 無公開個人管道。可行路徑:(1) 對官網公布的 LinkedIn 檔案發 InMail;(2) 以高層簡報邀約走 press@stackinfra.com(Sammer Khalaf,行銷副總)或官網聯絡表單,請對方轉介至執行長辦公室;(3) 側翼切入 — 他出身 Facebook 資料中心選址,由 Supermicro 主辦的園區/AI 基礎設施簡報比冷不防的請求更有勝算。不要以他為第一順位:對伺服器供應商而言,Friedl(技術長)與 Casey(營運長)才是真正的入口,VanderZanden 屬升級層級。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/matthewvanderzanden) |
+| Brad Berkley | STACK 美洲財務長(CFO) | 美洲預算決策權。 | 團隊頁爬取 2026-07-26 + 抓取 2026-07-27 | LinkedIn InMail;首次接觸優先度低。預算決策權在此,但由私募出資方支持的開發商 CFO 極少接受冷接觸的供應商會面。較佳做法:先立好技術理由,再由 Casey/Friedl 引薦入內。另有一項未解歧義 — Heather Paduck 於 2025-01-23 以「財務長(Chief Financial Officer)」身分簽署 STACK 實體的 SEC Form D,故實體層級與美洲層級 CFO 的職權範圍在公開來源中尚未釐清。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/brad-berkley-2388971/) |
+| Mike Casey | STACK 美洲營運長(COO) | 營運;亦見於 FEC 公開紀錄(第 4 節)。 | 團隊頁 2026-07-26/27;Data Centre Magazine 2026-04-01 | 對官網公布的 LinkedIn 檔案發 InMail。他在 2026-03-31 升任營運長前為技術長,兼具技術歷練與現任營運職權 — 對設施面與裝修議題是很強的雙重入口。若 InMail 無回應,改走 Rada Flom(關鍵營運資深副總)或 Richard Waddle(工程建設資深副總)作為進入其組織的實務層窗口,勝過冷打公司總機。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/mike-casey-22118514) |
+| Ty Miller | 美洲商務長(Chief Commercial Officer) | 商務/租賃 — 掌握各園區承租客戶身分。 | 團隊頁,兩軌 2026-07-26/27 | LinkedIn InMail。他是租賃/商務介面,掌握各園區承租客戶身分 — 適合租戶鄰接與共同銷售情報,不適合伺服器採購(租戶端運算決策在 Oracle/Amazon 這類客戶手上,不在 STACK)。實務替代方案:填寫 stackinfra.com/take-a-tour 的「參觀場館申請」表單,該表單會導入商務組織,再把參觀轉成商務對話。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/tyrmiller) |
+| Bobby Hollis | 美洲開發長(Chief Development Officer) | 園區開發管線負責人。 | 團隊頁,兩軌 2026-07-26/27 | LinkedIn InMail。園區開發管線負責人 — 適合在租戶裝修規格底定前,就新建案的電力/冷卻/密度規劃提早接觸。公開切入點:新園區公告的地方與市場報導常引述他,因此以特定市場(New Mexico Stargate、北維吉尼亞、達拉斯 Lancaster)切入,比泛用供應商推銷更容易奏效。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/bobby-hollis/) |
+| Addam Friedl | 美洲技術長(CTO) | 技術;資料中心設計/標準面。 | 團隊頁,兩軌 2026-07-26/27 | **對 Supermicro 而言的最高價值目標。** 無公開個人管道;請對官網公布的 LinkedIn 檔案發 InMail。接觸理由有公開依據:STACK 自家 2026-03-31 新聞稿載明他負責美洲的「創新與工程以及供應鏈」— 亦即他同時掌管 DLC/機櫃平台必須通過的技術標準,以及供應鏈關係。次要路徑:透過聯絡表單/新聞窗口要求技術標準簡報,並引述該新聞稿。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/addam-friedl-9ab944/) |
+| Tim Kuester | 美洲法務暨行政長 | 法務/行政。 | 團隊頁,兩軌 2026-07-26/27 | **唯一有公開直撥電話的 STACK 高階主管。** (913) 242-0683 印在 STACK SEC Form ABS-15G 申報文件封面(2023 年至 2026-02-05),為該申報之聯絡人。請節制使用:那是證券化/法務申報專線,不是業務線;冷推銷伺服器會燒掉這個窗口,且很可能被視為濫用。正當用途:確認公司實體/簽約架構、NDA/MSA 走件路徑,或確認誰負責供應商導入。要銷售請走 LinkedIn 或聯絡表單。**電子郵件:** GAP · **電話:** [(913) 242-0683](tel:+19132420683) · [LinkedIn](https://www.linkedin.com/in/timothy-kuester-7403565) |
+| Kevin Hughes | 美洲對外事務長(Chief External Affairs Officer) | 單一來源(僅 研究線乙 抓取 2026-07-27 之團隊頁);其 FEC 紀錄可獨立佐證職稱(第 4 節)。 | 官網團隊頁抓取 2026-07-27;FEC Schedule A 檢索 2026-07-27 | LinkedIn InMail。新設職位(2026-03-31 公告),涵蓋政府/社區/對外事務 — 凡涉及特定場址的許可、電力採購或社區影響,走他這條路最對。因對外事務與新聞公關重疊,亦可透過 press@stackinfra.com 以正式身分聯繫。本檔案先前對他的「單一來源」標記現已解除:他出現在官網現行團隊頁,亦見於公司新聞稿。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/k-r-hughes/) |
+| Ravi Thota | STACK 美洲資訊長(CIO) | 單一來源(僅 研究線甲 團隊頁爬取 2026-07-26)。 | 研究線甲 爬取 2026-07-26 | LinkedIn InMail。負責 STACK 自身的企業 IT/BMS/DCIM 環境 — 這是 STACK 本身的直接伺服器 TAM,規模有限。視為建立關係、踏進門的目標,而非交易本身。本檔案先前「僅研究線甲單一來源」的標記現已解除 — 他已列於官網現行領導層頁面,並附公司公布的 LinkedIn 連結(2026-07-28 複核)。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/ravikthota/) |
+| Brian Cox | STACK EMEA 代理執行長 | 前美洲 CEO;2018-10-15 起為 STACK 創始 CEO。 | 團隊頁 2026-07-26/27;公司新聞稿 2018-10-15 | LinkedIn InMail(官網公布的檔案)。他亦於 STACK 的 SEC Form D 中列名為董事(Director),營業地址為丹佛。因為他先掌美洲後轉 EMEA,即使目前席位在 EMEA,仍是可信的美洲團隊暖線引薦節點 — 若 Supermicro 已有 EMEA 關係尤其有用。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/brian-cox-671810a/) |
+| Richard Bienfait | STACK EMEA 財務長(CFO) | — | 團隊頁,兩軌 2026-07-26/27 | LinkedIn InMail;僅限 EMEA 範圍。對美國 Team 1 業務而言屬轄區外,請改由 Supermicro EMEA 出面,不要直接接觸。被動窗口替代方案:EMEA 組織可走 press-emea@stackinfra.com。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/richardbienfait/) |
+| Donough Roche | STACK EMEA 營運長(COO) | 單一來源(僅 研究線甲 爬取 2026-07-26)。 | 研究線甲 爬取 2026-07-26 | LinkedIn InMail;EMEA 範圍。本檔案先前「僅研究線甲單一來源」的標記現已解除 — 他已列於官網現行領導層頁面,並附公司公布的 LinkedIn 連結(2026-07-28 複核)。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/donough) |
+| Preet Gona | STACK APAC 執行長(CEO) | 2021-10-13 加入。APAC 之 CFO/COO 姓名:GAP(團隊頁未列)。 | 團隊頁 2026-07-26/27;BusinessWire 2021-10-13 | LinkedIn InMail。APAC 範圍 — 屬 Team 1 美國轄區外,請與 Supermicro APAC 協調。注意 APAC 商務對口 James Veness(STACK APAC 客戶長,linkedin.com/in/james-veness)與 Tom Duncan(APAC 業務開發資深副總)才是實務層商務窗口。APAC 新聞/媒體同樣走 press@stackinfra.com。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/preetgona/) |
+| Phil Koen | 董事會董事長 | 董事會監督。 | 團隊頁,兩軌 2026-07-26/27 | 不要為了供應商銷售直接接觸。官網有公布其 LinkedIn 檔案,供日後確有必要進行董事會層級引薦時使用。他亦於 STACK 的 SEC Form D 中列名為董事(Director),營業地址為 1700 Broadway, Suite 1750, Denver, CO 80290 — 正式書面路徑應為寄信至該地址轉董事會,而非電話或電子郵件。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/phil-koen-8a1461) |
+| Matt A'Hearn | Blue Owl Digital Infrastructure 負責人(出資方;前 IPI 管理合夥人) | 非 STACK 公司高階主管 — 出資方層級人物。 | Blue Owl 新聞稿 2024-10-07 / 2025-05-15;STACK 新聞稿 2025-09-26 | 僅限出資方層級路徑。Blue Owl 有公布個人簡介頁,但未公布個人電子郵件或電話。可行做法:(1) LinkedIn InMail;(2) Blue Owl 官網聯絡表單 blueowl.com/contact;(3) 所有權層級問題可走 Blue Owl 投資人關係專線 212-419-3000 / blueowlir@blueowl.com;(4) 會議路徑 — 他常公開參與談美國資料中心市場策略的 podcast/座談,是最容易且正當的引薦面。他亦於 STACK 的 SEC Form D 中列名為董事,地址為丹佛。**電子郵件:** GAP · **電話:** GAP · [LinkedIn](https://www.linkedin.com/in/matthew-a-hearn-0745a07) |
+
+#### 公司公開聯絡管道
+
+| 管道 | 內容 | 來源 |
+| --- | --- | --- |
+| 總部通訊地址(SEC 一手文件) | 1700 Broadway, Suite 1750, Denver, CO 80290 | [SEC Form D 封面,STACK Infrastructure USA III Foreign, LLC,申報日 2025-01-23](https://www.sec.gov/Archives/edgar/data/2051247/000205124725000001/primary_doc.xml) — STACK Infrastructure USA III, LLC 於 2023-01-20 的 Form D 亦為同一地址。注意:此可升級本檔案第 3 節「僅來自名錄」的但書 — 該街道地址確實載於 SEC 一手申報文件,只是未印在公司官網上。 |
+| 公司總機電話(SEC 申報文件封面) | [720-927-8100](tel:+17209278100) | [SEC Form D「Issuer Phone Number」欄位,STACK Infrastructure USA III Foreign, LLC,申報日 2025-01-23](https://www.sec.gov/Archives/edgar/data/2051247/000205124725000001/primary_doc.xml) — STACK Infrastructure USA III, LLC(2023)與 USA II, LLC(2021)的 Form D 為同一號碼。這是最佳的一手來源總機候選。ZoomInfo/名錄網站流傳的 833-471-7100 並未出現在任何一手來源。 |
+| 新聞/媒體電子郵件 | [press@stackinfra.com](mailto:press@stackinfra.com) | [公司聯絡頁(2026-07-28 抓取)](https://www.stackinfra.com/about/contact/) — 現行新聞稿亦印為媒體聯絡人,署名 Sammer Khalaf(行銷副總)。 |
+| 新聞/媒體電話(資料較舊) | [+1.866.307.2510](tel:+18663072510) — iMiller Public Relations,STACK 的外部公關公司 | [STACK 2019-07-31 新聞稿媒體聯絡欄](https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-headquarters-location-in-denver-colorado/) — 但書:屬 2019 年資訊。2025-2026 年新聞稿只印「Sammer Khalaf / press@stackinfra.com」,未附電話。撥打前請先確認。 |
+| EMEA 新聞電子郵件 | [press-emea@stackinfra.com](mailto:press-emea@stackinfra.com) | [公司聯絡頁 mailto 連結(2026-07-28 抓取)](https://www.stackinfra.com/about/contact/) |
+| 徵才電子郵件(美洲) | [careers@stackinfra.com](mailto:careers@stackinfra.com) | [公司聯絡頁 mailto 連結(2026-07-28 抓取)](https://www.stackinfra.com/about/contact/) |
+| 徵才電子郵件(EMEA) | [careers-emea@stackinfra.com](mailto:careers-emea@stackinfra.com) | [公司聯絡頁 mailto 連結(2026-07-28 抓取)](https://www.stackinfra.com/about/contact/) |
+| 業務/合作/一般洽詢表單 | [stackinfra.com/about/contact](https://www.stackinfra.com/about/contact/) — 內嵌 HubSpot 表單,標題為「Send us a message.」。這是公司唯一對外公布的接單入口;官網沒有 sales@ 或 info@ 信箱,全站也沒有任何電話號碼。 | [公司聯絡頁 HTML 檢視 2026-07-28](https://www.stackinfra.com/about/contact/) — HubSpot hbspt-form-v2 內嵌;僅四個 mailto 連結,零個 tel: 連結。 |
+| 售前/場館參觀申請表單 | [stackinfra.com/take-a-tour](https://www.stackinfra.com/take-a-tour/) — 「Request a Location Tour」(線上或實地)。對想安排園區參訪的供應商而言,是實務上的暖身入口。 | [公司官網,聯絡頁與頁尾的「CONNECT WITH US」CTA(2026-07-28 抓取)](https://www.stackinfra.com/take-a-tour/) |
+| SEC 申報聯絡窗口(法務/證券化) | Tim Kuester — [(913) 242-0683](tel:+19132420683) | [Form ABS-15G 封面,STACK Infrastructure Issuer, LLC / Stack Infrastructure Parent, LLC](https://www.sec.gov/Archives/edgar/data/1765411/000119312526039159/d77546dabs15g.htm) — 欄位為「就本申報案之聯絡人姓名與電話(含區碼)」。2023-02-24、2023-05-26、2023-10-17、2024-03-08、2025-05-06 與 2026-02-05 六份 ABS-15G 皆為同一姓名與號碼。 |
+| 證券化發行實體登記地址(SEC EDGAR 實體紀錄) | STACK Infrastructure Issuer, LLC / Stack Infrastructure Parent, LLC — 300 N. LaSalle Street, Suite 1875, Chicago, IL 60654;電話 [312.796.2205](tel:+13127962205) | [SEC EDGAR 公司申報紀錄,CIK 0001764630(發行體)與 CIK 0001765411(母體),2026-07-28 檢索](https://data.sec.gov/submissions/CIK0001764630.json) — 這是融資/ABS 實體地址,不是營運總部。 |
+| 公司 LinkedIn 專頁 | [linkedin.com/company/stackinfrastructure](https://www.linkedin.com/company/stackinfrastructure/) | [公司聯絡頁公布的社群連結(2026-07-28 抓取)](https://www.stackinfra.com/about/contact/) |
+| 母公司/出資方投資人關係(Blue Owl Capital,NYSE: OWL) | [blueowlir@blueowl.com](mailto:blueowlir@blueowl.com) · [212-419-3000](tel:+12124193000) · 399 Park Avenue, 37th Floor, New York, NY 10022 | [Blue Owl Capital 投資人關係聯絡頁(2026-07-28 抓取)](https://ir.blueowl.com/Investors/resources/investor-contacts/default.aspx) — 僅用於出資方層級/股權問題;STACK 本身為私有公司,沒有投資人關係窗口。 |
+| 出資方載體 SEC 封面聯絡資訊(Blue Owl Digital Infrastructure Trust) | [888-215-2015](tel:+18882152015) · 150 N. Riverside Plaza, 37th Floor, Chicago, IL 60606 | [SEC EDGAR 申報紀錄,Blue Owl Digital Infrastructure Trust,CIK 0002069692,2026-07-28 檢索](https://data.sec.gov/submissions/CIK0002069692.json) — 此載體即申報 Form 10/10-K、揭露 STACK 員工人數者。 |
+| STACK 投資人關係電話/電子郵件 | GAP — STACK 為私有公司,未公布投資人關係窗口、電話或電子郵件。最接近的替代為上列 Blue Owl 投資人關係專線,以及 ABS-15G 申報聯絡人(Tim Kuester)。 | [公司聯絡頁僅公布新聞/徵才代表信箱;stackinfra.com 全站無投資人關係區塊(2026-07-28 查核)](https://www.stackinfra.com/about/contact/) |
+| 一般洽詢/業務信箱 | GAP — 未公布 info@、sales@、leasing@ 或類似信箱。對外洽詢只能走聯絡表單或新聞/徵才代表信箱。 | [全站 mailto 掃描 /、/about/、/about/careers/、/locations/、/client-portal/ 與 /about/contact/,僅得四個新聞/徵才代表信箱(2026-07-28)](https://www.stackinfra.com/about/contact/) |
+| 電子郵件命名慣例 | `{first_initial}{lastname}@stackinfra.com` — 信心水準:**已觀察到(observed)**,僅一個公開實例。加州 CEQA 之 Notice of Determination(STACK Trade Zone Park 專案,SCH #2022060141)逐字載明:「Satiya Taeidi, Project Manager-Construction, STACK Americas, 2001 Fortune Drive, San Jose, CA 95131. Telephone: (408) 642-8775; Email: staeidi@stackinfra.com」— staeidi = S + Taeidi。但書:(a) 僅此一例,且該人士的 LinkedIn 現已顯示不同雇主,屬歷史觀察;(b) 其餘公開的 stackinfra.com 位址皆為職能代表信箱(press@、careers@、press-emea@、careers-emea@),對個人命名慣例無參考價值;(c) 商用爬蟲(RocketReach、LeadIQ、Clay、ZoomInfo)宣稱同一 FLast 格式且信心 94-98%,但那是推論而非觀察,並非本結論的依據。硬性規則:不得依此慣例為任何具名高管拼出電子郵件位址並當作已查得資料呈現 — 上表所有高管電子郵件一律為 GAP。 | [加州 CEQAnet,Notice of Determination,SCH #2022060141](https://ceqanet.lci.ca.gov/2022060141/6) |
+
+*聯絡資料僅來自公開來源(SEC 申報文件、投資人關係與公司聯絡頁、新聞稿、公開專業檔案)。不含個人手機或私人地址。GAP = 該個人查無公開管道,請改走公司窗口。*
 
 資料中心採購委員會判讀(依上列已揭露職稱推導;職稱為揭露事實,採購權限對應為推論):
 

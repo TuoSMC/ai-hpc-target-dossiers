@@ -25,17 +25,37 @@
 
 ## 2. 領導層與決策者
 
-| 姓名 | 職務 | 起任／狀態 | 來源 |
-|---|---|---|---|
-| Josh Sheng Chen（陳升） | 創辦人；董事會執行主席；**代理執行長** | 1996 年 5 月創業；2024 年 4 月起任代理執行長；至 2026-05-26 新聞稿仍為代理 | 20-F FY2024 Item 6.A；20-F FY2025 Item 6；Q1 2026 新聞稿（2026-05-26） |
-| Qiyu Wang | 財務長（2023 年 7 月起）— **2026-04-30 生效辭任**（個人因素） | 已離任 | 20-F FY2024 Item 6；VNET 領導層新聞稿 2026-04-20 |
-| Zhihua (Peter) Zhang | 營運財務資深副總裁；獲指定為**主要會計官（principal accounting officer）**。非財務長——正式財務長繼任人選 = **GAP** | 2026 年 2 月獲任命 | PRNewswire 領導層新聞稿 2026 年 2 月／4 月；20-F FY2025 Item 6 |
-| Xiao Liu | 「輪值總裁（Rotating President）」；主持 Q1 2026 業績說明 | **單一來源**（Motley Fool 法說會逐字稿，2026-05-26）；未經正式申報文件核實 | 僅法說會逐字稿 |
-| Jianbiao Zhu | 董事會聯席主席／執行董事（依 FY2024 20-F，2024 年 1 月起）；兼任 SDHG 執行長暨副董事長 | **FY2025 狀態未經核實**——未見於 研究線乙 輪之 FY2025 20-F Item 6 摘錄；可能為摘錄疏漏，亦可能已離任（SDHG 出售在即）。引用前務必查證 | 僅 20-F FY2024 Item 6（見第 10 節衝突表） |
-| Yoshihisa Ueno（63 歲） | 獨立董事 | — | 20-F FY2025 Item 6 |
-| Kenneth Chung-Hou Tai（戴宗鴻，75 歲） | 獨立董事 | — | 20-F FY2025 Item 6 |
-| Sean Shao（邵少，69 歲） | 獨立董事 | — | 20-F FY2025 Item 6 |
-| David Lifeng Chen（57 歲） | 獨立董事 | 2024 年 7 月起 | 20-F FY2024/FY2025 Item 6 |
+| 姓名 | 職務 | 起任／狀態 | 來源 | 公開聯絡管道 |
+|---|---|---|---|---|
+| Josh Sheng Chen（陳升） | 創辦人；董事會執行主席；**代理執行長** | 1996 年 5 月創業；2024 年 4 月起任代理執行長；至 2026-05-26 新聞稿仍為代理 | 20-F FY2024 Item 6.A；20-F FY2025 Item 6；Q1 2026 新聞稿（2026-05-26） | **管道：** 他是 SEC 申報文件指定的公司聯絡人（Company Contact Person），因此寄件或傳真至總部地址屬正式公開管道；但實務上應透過投資人關係窗口（Xinyuan Liu，[ir@vnet.com](mailto:ir@vnet.com)）遞交指名致他的書面簡報，或藉由其產業組織職務接觸（Co-Executive Director, Tsinghua Energy Internet Research Institute；Chairman, Zhongguancun CyberNext New Infrastructure Alliance；Vice Chairman, China Energy Internet Alliance；director, China Info100）——這些組織均舉辦公開高峰會且由他出席演講。不要期待有直接對外的來電專線。<br>**Email：** GAP<br>**電話：** [+86 10 8456-2121](tel:+861084562121) —— FY2025 20-F 封面以此號碼列為「他本人」的公司聯絡人電話；此為公司總機，並非直撥或個人號碼。傳真 (86) 10 8456-4234。<br>**LinkedIn：** GAP |
+| Qiyu Wang | 財務長（2023 年 7 月起）— **2026-04-30 生效辭任**（個人因素） | 已離任 | 20-F FY2024 Item 6；VNET 領導層新聞稿 2026-04-20 | **管道：** 請勿將他列為 VNET 的聯絡途徑——他已離任，且尚未指派繼任財務長。請自所有現行聯絡名單移除；財務職權目前由主要會計官 Peter Zhihua Zhang 承接。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| Zhihua (Peter) Zhang | 營運財務資深副總裁；獲指定為**主要會計官（principal accounting officer）**。非財務長——正式財務長繼任人選 = **GAP** | 2026 年 2 月獲任命 | PRNewswire 領導層新聞稿 2026 年 2 月／4 月；20-F FY2025 Item 6 | **管道：** 屬財務核決角色，非首要接觸對象。請透過投資人關係窗口（[ir@vnet.com](mailto:ir@vnet.com)）聯繫。若議題涉及可留意：他主導公司境內債務融資與 Microsoft 策略合作關係，亦即大額硬體採購的資本支出／融資架構會經他之手。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| Xiao Liu | 「輪值總裁（Rotating President）」；主持 Q1 2026 業績說明 | **單一來源**（Motley Fool 法說會逐字稿，2026-05-26）；未經正式申報文件核實 | 僅法說會逐字稿 | **管道：** 透過投資人關係窗口（她曾任本公司財務長，IR 熟知如何聯繫），或透過其 2018-2021 年財務長任內的賣方研究／投資銀行人脈。CRM 資料整理註記：她是 **Sharon Xiao Liu**，2025 年 11 月起任執行副總裁暨輪值總裁，**並非**現任財務長，且與投資人關係主管 Xinyuan Liu 為不同人。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| Jianbiao Zhu | 董事會聯席主席／執行董事（依 FY2024 20-F，2024 年 1 月起）；兼任 SDHG 執行長暨副董事長 | **FY2025 狀態未經核實**——未見於 研究線乙 輪之 FY2025 20-F Item 6 摘錄；可能為摘錄疏漏，亦可能已離任（SDHG 出售在即）。引用前務必查證 | 僅 20-F FY2024 Item 6（見第 10 節衝突表） | **管道：** 在董事身分重新查證前，請勿於對外接觸中使用其姓名。獨立摘錄 FY2025 20-F Item 6 表僅得 Sheng Chen、Yoshihisa Ueno、Kenneth Chung-Hou Tai、Sean Shao、David Lifeng Chen、Qiyu Wang 與 Zhihua Zhang 七人，並無 Zhu，此與 SDHG 出售案（CATL 關係企業 PJ Millennium 收購約 38.1% SDHG 持股，預計 2026 年第四季完成）同步離任的情況相符。除非另有申報文件說明，否則視為已離任。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| Yoshihisa Ueno（63 歲） | 獨立董事 | — | 20-F FY2025 Item 6 | **管道：** 僅屬董事會監督角色，非商務接觸管道。如有正當聯繫需求，請透過公司秘書／投資人關係窗口。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| Kenneth Chung-Hou Tai（戴宗鴻，75 歲） | 獨立董事 | — | 20-F FY2025 Item 6 | **管道：** 僅屬董事會監督角色——請勿進行銷售提案。此處列出係因其在台灣硬體生態系（Acer／Asustek／Wafer Works）的深厚背景，對伺服器供應商對話具背景參考價值，但**並非**銷售管道。如有正當聯繫需求，請透過公司秘書／投資人關係窗口。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| Sean Shao（邵少，69 歲） | 獨立董事 | — | 20-F FY2025 Item 6 | **管道：** 僅屬董事會監督角色，非商務接觸管道；以銷售提案接觸獨立董事暨審計委員會主席並不恰當。此處列出僅為決策者地圖之完整性。如有正當聯繫需求，一律透過公司秘書／投資人關係窗口。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+| David Lifeng Chen（57 歲） | 獨立董事 | 2024 年 7 月起 | 20-F FY2024/FY2025 Item 6 | **管道：** 僅屬董事會監督角色，非商務接觸管道。如有正當聯繫需求，請透過公司秘書／投資人關係窗口。<br>**Email：** GAP<br>**電話：** GAP<br>**LinkedIn：** GAP |
+
+#### 公司公開聯絡管道
+
+| 管道 | 內容 | 來源 |
+|---|---|---|
+| 總部總機電話 | [+86 10 8456-2121](tel:+861084562121) | [SEC Form 20-F FY2025 封面](https://www.sec.gov/Archives/edgar/data/1508475/000110465926044361/vnet-20251231x20f.htm) —— 2026-04-16 申報，受理編號 0001104659-26-044361；逐字為 "Phone: (86) 10 8456-2121"。同一號碼亦刊於 vnet.com 聯絡頁，寫作 "Tel: 010-8456 2121" |
+| 總部傳真 | +86 10 8456-4234 | [SEC Form 20-F FY2025 封面](https://www.sec.gov/Archives/edgar/data/1508475/000110465926044361/vnet-20251231x20f.htm) —— "Facsimile: (86) 10 8456-4234"；並經 [VNET 聯絡頁](https://www.vnet.com/en/contactus.html) 佐證 |
+| 投資人關係電話 | [+86 10 8456 2121](tel:+861084562121) | [SEC Form 6-K Ex-99.1，2026 年第一季業績新聞稿（2026-05-26）](https://www.sec.gov/Archives/edgar/data/1508475/000110465926065937/tm2615608d1_ex99-1.htm) —— 聯絡欄位為 "Investor Relations Contact: Xinyuan Liu / Tel: +86 10 8456 2121 / Email: ir@vnet.com"。與公司總機相同，並非 IR 專屬直撥號 |
+| 投資人關係 Email | [ir@vnet.com](mailto:ir@vnet.com) | [SEC Form 6-K Ex-99.1，2026 年第一季業績新聞稿（2026-05-26）](https://www.sec.gov/Archives/edgar/data/1508475/000110465926065937/tm2615608d1_ex99-1.htm) 聯絡欄位；亦逐字刊於[公司聯絡頁](https://www.vnet.com/en/contactus.html)（"Investor Relations: ir@vnet.com"） |
+| 一般諮詢／行銷／實質媒體 Email | [marketing@vnet.com](mailto:marketing@vnet.com) | [VNET 公司「Contact us」頁](https://www.vnet.com/en/contactus.html) —— 刊為 "E-mail: marketing@vnet.com" 並設有可點擊的 mailto: 連結；全站頁尾亦重複刊登。VNET 並未另設媒體聯絡信箱 |
+| 媒體／公關 Email | **GAP** —— 未公開任何專責媒體信箱。最接近的公開途徑為 [marketing@vnet.com](mailto:marketing@vnet.com)（站內頁尾）或投資人關係窗口 [ir@vnet.com](mailto:ir@vnet.com) | [PRNewswire，"VNET Announces New Strategic Investors"（2026-05-13）](https://www.prnewswire.com/news-releases/vnet-announces-new-strategic-investors-302770890.html) —— 新聞稿末僅列投資人關係聯絡人，無媒體聯絡欄；2026 年各篇新聞稿皆同 |
+| 中國業務／服務熱線 | 400-651-9966 | [VNET 公司聯絡頁](https://www.vnet.com/en/contactus.html) —— "Service Hotline: 400 651 9966"；全站亦顯示為「諮詢熱線 400 651 9966」。屬中國境內免付費號碼，無法以一般國際電話撥入 |
+| 總部通訊地址 | Guanjie Building, Southeast 1st Floor, 10# Jiuxianqiao East Road, Chaoyang District, Beijing 100016, The People's Republic of China | [SEC Form 20-F FY2025 封面](https://www.sec.gov/Archives/edgar/data/1508475/000110465926044361/vnet-20251231x20f.htm)（"Address of principal executive offices"）；與 EDGAR 登錄之營業／通訊地址一致，見 [data.sec.gov submissions CIK0001508475](https://data.sec.gov/submissions/CIK0001508475.json) |
+| 業務／合作聯絡表單 | [vnet.com/en/contactus.html](https://www.vnet.com/en/contactus.html) —— "Feedback" 表單（Name / Company / Telephone / Job / Email / Request / Code）；"Request" 下拉選單含 "Buy Product and Service" 與 "Business Cooperation"。全站右側浮動欄另有一組 "Business Inquiry" 表單 | [VNET 公司聯絡頁](https://www.vnet.com/en/contactus.html) —— 表單欄位與下拉選項係直接讀取頁面 HTML（2026-07-28）。此為唯一公開的入站業務／合作途徑 |
+| 香港分公司（英語／非中國大陸途徑） | 37/F, Tower 1, Metroplaza, 223 Hing Fong Road, Kwai Fong, New Territories, Hong Kong · [+852 2187 7600](tel:+85221877600) | [VNET「Office location」頁](https://www.vnet.com/en/contact/address.html) —— 為最易接觸的非中國大陸辦公室；投資人關係主管（Xinyuan Liu）與法務長（Derek Li）所列所在地皆為香港特別行政區 |
+| 投資人關係聯絡與 Email 通知訂閱頁 | [ir.vnet.com/investor-resource/contact-ir-email-alerts/](https://ir.vnet.com/investor-resource/contact-ir-email-alerts/)（鏡像站：[ir.21vianet.com](https://ir.21vianet.com/investor-resource/contact-ir-email-alerts/)） | [VNET 投資人關係網站](https://ir.vnet.com/investor-resource/contact-ir-email-alerts/)（由 Q4 Inc./gcs-web 代管）。訂閱 Email 通知是取得法說會與產能發布時程最乾淨的方式，無須陌生開發致電 |
+| 投資人關係經營團隊名冊（20-F 以外的具名高管來源） | [ir.vnet.com/corporate-governance/management-team](https://ir.vnet.com/corporate-governance/management-team)（個人頁如 /management/wen-teng/、/management/kun-yan、/management/ms-xiao-liu） | [VNET 投資人關係網站經營團隊名冊](https://ir.vnet.com/corporate-governance/management-team)；並鏡像於[公司網站領導團隊頁](https://www.vnet.com/en/portal/list/index/id/12.html) |
+| **Email 命名慣例** | **GAP** —— 可信度 **GAP**。所有已檢閱來源均未公開任何 VNET 員工的個人 Email，因此無從觀察其個人信箱命名慣例，亦不得自行推導。唯二公開者為 vnet.com 網域下的兩個職能信箱：ir@vnet.com 與 marketing@vnet.com。FY2025 20-F 封面設有公司聯絡人的 E-mail 欄位，VNET 刻意留白。公司郵件網域為 vnet.com（舊網域 21vianet.com 僅見於 2017 年前之申報文件及合規子網域 idcservice.21vianet.com）。請勿為任何具名高管推測 first.last@vnet.com、f.last@vnet.com 或其他變體——完全沒有任何可觀察到的佐證 | [VNET 公司聯絡頁](https://www.vnet.com/en/contactus.html) |
+
+*聯絡資料僅來自公開來源（SEC 申報文件、投資人關係與公司聯絡頁、新聞稿、公開專業檔案）。不含個人手機或私人地址。GAP = 該個人查無公開管道，請改走公司窗口。*
 
 **資料中心採購決策委員會（伺服器／基礎設施銷售對象）：**
 
