@@ -1,7 +1,7 @@
 # AI/HPC Target Dossiers — Supermicro Sales Team 1 (USA) & Sales Team 7
 
-Decision-grade sales intelligence on four AI/HPC datacenter targets:
-**Galaxy Digital (GLXY)** · **STACK Infrastructure** · **VNET Group (VNET)** · **DigitalBridge (DBRG)**
+Decision-grade sales intelligence on five AI/HPC datacenter targets:
+**Galaxy Digital (GLXY)** · **STACK Infrastructure** · **VNET Group (VNET)** · **DigitalBridge (DBRG)** · **Data Canopy** (ex-Hostway, private)
 
 Researched through corporate history, financial filings, U.S. political and legislative leanings,
 and each company's relationships with its customers. Every fact carries an inline source + date.
