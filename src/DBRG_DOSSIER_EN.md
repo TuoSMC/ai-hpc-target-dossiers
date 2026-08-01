@@ -1,6 +1,6 @@
 # DigitalBridge Group, Inc. (NYSE: DBRG) — Sales Intelligence Dossier
 
-**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 — Officer: Director of Sales, Paul Jarvis · Officer US8664 Tuo Cheng · **Date:** 2026-07-27
+**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · **Date:** 2026-07-27
 **Verification basis:** Two independent research passes (pass A p1/p2 + pass B finder) cross-checked; live FEC API re-pull 2026-07-27. Every fact carries its source + date inline. GAP = not found in reviewed public sources; GAP rows must not be filled by inference. Key framing: DBRG is a **fund manager** — data-center capacity sits in portfolio companies/funds, not on DBRG's corporate balance sheet (10-K FY2025 Item 1; both passes).
 
 ---

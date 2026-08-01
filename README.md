@@ -11,7 +11,7 @@ and each company's relationships with its customers. Every fact carries an inlin
 - Each dossier has an EN / 中文 toggle and prints to PDF from the browser.
 - `src/` holds the markdown sources; the HTML is generated from them.
 
-Prepared by Officer US8664 Tuo Cheng. Team 7 officer: Director of Sales, Paul Jarvis.
+Prepared by Officer US8664 Tuo Cheng.
 
 Political donations are public record and do not equal party registration.
 Surname origin entries are name-etymology only, not statements of ethnicity.

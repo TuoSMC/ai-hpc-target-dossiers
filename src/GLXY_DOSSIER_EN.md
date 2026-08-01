@@ -1,6 +1,6 @@
 # Galaxy Digital Inc. (NASDAQ: GLXY) — Sales Intelligence Dossier
 
-**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 — Officer: Director of Sales, Paul Jarvis · Officer US8664 Tuo Cheng · **Date:** 2026-07-27
+**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · **Date:** 2026-07-27
 **Company:** Digital assets financial services + AI/HPC data centers (Helios, West Texas)
 **Method:** Researched through corporate history, financial filings, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. Two independent research passes were reconciled against primary filings. Every fact carries its source + date inline. GAP = not found in verified material. No fabrication.
 

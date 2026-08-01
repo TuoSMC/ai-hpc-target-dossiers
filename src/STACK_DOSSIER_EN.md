@@ -1,6 +1,6 @@
 # STACK Infrastructure — Sales Intelligence Dossier
 
-Prepared for: Supermicro Sales Team 1 (USA) & Sales Team 7 — Officer: Director of Sales, Paul Jarvis · Officer US8664 Tuo Cheng · date 2026-07-27
+Prepared for: Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · date 2026-07-27
 
 Sourcing rule: every fact carries its source + date inline. GAP rows are kept visible. Verification basis: dual-pass research (pass A crawl 2026-07-26/27 + pass B fetch 2026-07-27) with live-site verifier fetches 2026-07-27; conflicts and single-source claims are listed in Section 10.
 
