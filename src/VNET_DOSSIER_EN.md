@@ -1,6 +1,6 @@
 # VNET Group, Inc. (NASDAQ: VNET) — Sales Intelligence Dossier
 
-**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · **Date:** 2026-07-27
+**Prepared for:** Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · **Date:** 2026-08-04
 **Basis:** Two-pass verified research (pass A pass + pass B pass, cross-checked 2026-07-27). Every fact carries its source and date inline. Rows marked **GAP** are intentionally unresolved — do not fill them from memory.
 **Not investment advice. Research scores are not buy/sell/hold recommendations.**
 

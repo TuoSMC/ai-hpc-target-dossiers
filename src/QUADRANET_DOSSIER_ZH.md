@@ -1,5 +1,5 @@
 # QuadraNet（QuadraNet Enterprises, LLC） — 銷售情報檔案
-**編製對象：** Supermicro 銷售一組（美國）　暨　銷售七組 · 專員 US8664 Tuo Cheng · **日期：** 2026-08-03
+**編製對象：** Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · **日期：** 2026-08-04
 **方法：** 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。GAP = 查證資料中未找到，不得憑記憶補寫。
 **轄區：** 加州洛杉磯 — West Coast South California = **T1**｜T2。一組雖可註冊，惟請先讀商業判定再決定是否動用名額。
 **CRM 狀態：** 2026-08-03 於 salesleads Search（Type = All）實查：無 lead、無 account、無 do-not-call 紀錄 — 從未註冊。

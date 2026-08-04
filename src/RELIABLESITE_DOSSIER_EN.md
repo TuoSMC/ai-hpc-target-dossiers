@@ -1,5 +1,5 @@
 # ReliableSite (RELIABLESITE.NET LLC) — Sales Intelligence Dossier
-**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · **Date:** 2026-08-03
+**Prepared for:** Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · **Date:** 2026-08-04
 **Method:** Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. GAP = not found in verified material. No fabrication.
 **Territory:** Miami, Florida (legal) and Piscataway, New Jersey (operations) — East Coast 3 / East Coast 1 = T2|T3|T6|T7|T12. Team 1 is NOT eligible: Rule 11 sets the large-datacenter exception at 100MW or more and this provider is far below it. Route through **T7 (lead: Brian Leaver)**. T11 is not eligible.
 **CRM status:** Verified 2026-08-03 in salesleads Search (Type = All): no lead, no account, no do-not-call record — never registered.

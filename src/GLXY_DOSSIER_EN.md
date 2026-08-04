@@ -1,6 +1,6 @@
 # Galaxy Digital Inc. (NASDAQ: GLXY) — Sales Intelligence Dossier
 
-**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · **Date:** 2026-07-27
+**Prepared for:** Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · **Date:** 2026-08-04
 **Company:** Digital assets financial services + AI/HPC data centers (Helios, West Texas)
 **Method:** Researched through corporate history, financial filings, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. Two independent research passes were reconciled against primary filings. Every fact carries its source + date inline. GAP = not found in verified material. No fabrication.
 
@@ -313,7 +313,7 @@
 17. Rack density design target 130–140 kW (pass A; galaxy.com marketing page, not a filing)
 18. Soluna Project Kati 48 MW mining-power relocation (pass A; DCD)
 19. Delphi Digital model ~$720M/yr for ~600 MW gross, 3% escalator, triple-net style (pass A; **third-party model 2025-06-11, NOT company disclosure — never quote as Galaxy guidance**)
-20. Q2 2026 earnings call date 2026-08-05 (pass A)
+20. Q2 2026 earnings call date 2026-08-04 (pass A)
 21. CoreWeave IPO co-manager role (pass A; Q1 2025 PR 2025-05-13)
 22. Two-platform 38%/40% revenue concentration (pass A; 10-K concentration note)
 23. BlackRock staking validator selection (pass A; Q1 2026 PR)

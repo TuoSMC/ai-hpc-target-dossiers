@@ -1,5 +1,5 @@
 # Psychz Networks (Profuse Solutions, Inc.) — Sales Intelligence Dossier
-**Prepared for:** Supermicro Sales Team 1 (USA) & Sales Team 7 · Officer US8664 Tuo Cheng · **Date:** 2026-08-03
+**Prepared for:** Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · **Date:** 2026-08-04
 **Method:** Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. GAP = not found in verified material. No fabrication.
 **Territory:** Los Angeles, California — West Coast South California = **T1** | T2. Team 1 can register directly.
 **CRM status:** Verified 2026-08-03 in salesleads Search (Type = All): no lead, no account, no do-not-call record — never registered.

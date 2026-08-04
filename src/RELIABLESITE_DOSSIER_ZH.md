@@ -1,5 +1,5 @@
 # ReliableSite（RELIABLESITE.NET LLC） — 銷售情報檔案
-**編製對象：** Supermicro 銷售一組（美國）　暨　銷售七組 · 專員 US8664 Tuo Cheng · **日期：** 2026-08-03
+**編製對象：** Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · **日期：** 2026-08-04
 **方法：** 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。GAP = 查證資料中未找到，不得憑記憶補寫。
 **轄區：** 佛州邁阿密（法定）與紐澤西 Piscataway（營運）— East Coast 3／East Coast 1 = T2｜T3｜T6｜T7｜T12。**一組不符資格**：規則 11 之大型資料中心例外門檻為 100MW 以上，本業者遠低於此。應循 **T7（主管 Brian Leaver）**。T11 不符資格。
 **CRM 狀態：** 2026-08-03 於 salesleads Search（Type = All）實查：無 lead、無 account、無 do-not-call 紀錄 — 從未註冊。
