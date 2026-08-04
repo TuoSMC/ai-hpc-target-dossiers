@@ -157,43 +157,339 @@ footer{border-top:1px solid var(--line);text-align:center;font:10px 'Courier New
 </table>
 <hr />
 <h2>4. Leadership &amp; ownership</h2>
+<p>Evidence grades used in this section: <strong>primary-record</strong> = internet-number registry, court docket, campaign-finance filing, regulator profile, or the company's own published page · <strong>corroborated</strong> = two or more independent secondary sources agree · <strong>single-source</strong> = one secondary source only, no corroboration · <strong><span class="gap">GAP</span></strong> = nothing found after a named search.</p>
+<p>Two framing facts before the table. First, <strong>the live 2026 webnx.com names nobody at all</strong> — it is a client-rendered React SPA whose <code>/about</code>, <code>/contact</code> and <code>/company/the-team/</code> paths all serve an identical 2,166-byte shell, and whose schema.org Organization block carries the literal placeholder founder string <code>"WebNX Founder"</code>. Every name below therefore comes from a registry, a filing, an archived capture of the company's own former team page, or a secondary source — never from the current site. Second, <strong>registry officers and network contacts are listed as rows in their own right and labelled as such</strong>: an ARIN OrgAdmin or an IRR <code>admin-c</code> is a named human being with a published, legitimately public route, and is often the only officer-grade name a private company exposes.</p>
+<h3>4.1 Named people</h3>
 <table>
 <thead>
 <tr>
-<th>Person</th>
-<th>Role</th>
-<th>Evidence</th>
+<th>Name</th>
+<th>Title</th>
+<th>Role type</th>
+<th>Evidence grade</th>
+<th>Public contact route</th>
+<th>FEC record</th>
+<th>Source</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Daniel Pautz</strong></td>
-<td><strong>Founder &amp; CEO</strong> — capex decision maker</td>
-<td>LinkedIn profile headline reads "Founder &amp; CEO of WebNX, Inc.", located Ogden, Utah (<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/daniel-pautz-0b11597/">LinkedIn</a>). BBB independently lists "Daniel Pautz" under principal contacts / management (<a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB</a>). Search results also associate him with founding <strong>GorillaServers</strong>, a <strong>legally separate</strong> dedicated-server company operating in the <strong>same Ogden facility</strong>. No public filing discloses equity percentages</td>
+<td><strong>President and CEO</strong> (the company's own wording on its team page, 1999–2024 site); "Founder &amp; CEO" on LinkedIn</td>
+<td><strong>Executive / owner</strong></td>
+<td><strong>primary-record</strong></td>
+<td><strong>dan@webnx.com</strong> — published by him in ARIN Whois, so a legitimately public route · +1-800-840-5996 · posts on WebHostingTalk as "dan"; archived live-chat operator id "danp"</td>
+<td><strong>No FEC record found.</strong> Schedule A returns 0 rows for <code>PAUTZ, DANIEL</code> in UT and 0 rows for surname Pautz in UT. The only national hit is PAUTZ, DANIEL J., an attorney at Bond Schoeneck &amp; King in Syracuse NY — a different person, no employer match</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/18450">ARIN RDAP autnum 18450</a> · <a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20150328190440/http://webnx.com:80/company/the-team/">WebNX team page, Wayback 2015-03-28</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB profile</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/daniel-pautz-0b11597/">LinkedIn</a></td>
 </tr>
 <tr>
 <td><strong>Dario Perovich</strong></td>
-<td><strong>Chief Operating Officer</strong> — operations / procurement route</td>
-<td>Listed as "Dario Perovich (Chief Operating Officer)" under principal contacts on the <a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB profile</a>. <strong><span class="gap">GAP</span>:</strong> no verified direct email and no verified LinkedIn URL</td>
+<td><strong>Chief Operating Officer</strong> (co-founder)</td>
+<td><strong>Executive / owner</strong></td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — no individual email or direct line published anywhere. Routes only via sales@webnx.com / support@webnx.com / 1-800-840-5996, or <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/darioperovich/">LinkedIn</a></td>
+<td><strong>Record found.</strong> PEROVICH, DARIO · employer <strong>WEBNX, INC</strong> · occupation <strong>MANAGEMENT</strong> · Pleasant View, UT · 2019-08-04 · $5.00 · recipient ACTBLUE. This is the only FEC row that independently corroborates an executive title</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20150328190440/http://webnx.com:80/company/the-team/">WebNX team page, Wayback 2015-03-28</a> · <a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS18450">RADB IRR via bgp.he.net AS18450</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB profile</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
 </tr>
 <tr>
-<td><strong>Beneficial owners / shareholders</strong></td>
-<td><strong><span class="gap">GAP</span></strong></td>
-<td>No SEC filings, no state registry officer list retrieved, no public cap table or investor disclosure. Crunchbase/PitchBook show no disclosed funding rounds. The company <strong>appears</strong> founder-owned and bootstrapped, but <strong>no verifiable document supports this</strong></td>
+<td><strong>Mitch (Mitchell) Pautz</strong></td>
+<td><strong>Director of Infrastructure</strong></td>
+<td>Executive / manager (technical)</td>
+<td><strong>corroborated</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — aggregator-masked as <code>m***@webnx.com</code>; LinkedIn is the only verified route</td>
+<td><strong>No FEC record found.</strong> Searches for <code>PAUTZ, MITCH</code> and <code>PAUTZ, MITCHELL</code> return 0 rows nationally</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mitch-pautz-895244aa/">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a></td>
 </tr>
 <tr>
-<td><strong>Any named staff below CEO/COO</strong></td>
-<td><strong><span class="gap">GAP</span></strong></td>
-<td>No VP Infrastructure, no procurement lead, no hiring manager identified anywhere. No direct-dial sales contact exists — only the 800 number and the support@ / noc@ aliases</td>
+<td><strong>Lynn Ure</strong></td>
+<td><strong>V.P. Operations</strong></td>
+<td>Executive</td>
+<td><strong>corroborated</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — no published individual route; <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lynn-ure-4289b2159">LinkedIn</a> only</td>
+<td><strong>No confirmed record.</strong> 18 contributions from a LYNN URE in Layton, UT (2021–2026, ActBlue) exist, but <strong>every one lists employer "NOT EMPLOYED"</strong> — no employer match to WebNX, so this is <strong>not</strong> asserted as the same person</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lynn-ure-4289b2159">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a> · LeadIQ masked directory (initials L.U., shown at both "Vice President Operations" and "Operations Manager")</td>
 </tr>
 <tr>
-<td><strong>Utah Division of Corporations record</strong></td>
+<td><strong>Jake Keitz</strong></td>
+<td><strong>Operations Manager</strong> (ZoomInfo renders it "Manager, Operations")</td>
+<td>Manager</td>
+<td><strong>corroborated</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — masked as <code>j***@webnx.com</code>; reachable only via support@webnx.com / noc@webnx.com or LinkedIn</td>
+<td><strong>No FEC record found.</strong> Surname Keitz returns 0 rows in UT; national Keitz hits sit in LA, KY, VA and TX with unrelated employers</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/jake-keitz-email_498495479">RocketReach person page</a> · ZoomInfo person page · LeadIQ masked directory (initials J.K.)</td>
+</tr>
+<tr>
+<td><strong>Oswald A.</strong> (surname withheld by the profile owner)</td>
+<td><strong>LA Operations Manager</strong></td>
+<td>Manager</td>
+<td><strong>corroborated</strong></td>
 <td><strong><span class="gap">GAP</span></strong></td>
-<td>Entity number, status, formation date and registered agent not retrieved; businessregistration.utah.gov is an interactive JS portal that returned no entity record via web fetch. BBB's unexplained "locally incorporated 2018-09-14" needs reconciling against the 1999 founding date</td>
+<td><strong>Not searchable — <span class="gap">GAP</span>, not "no record".</strong> Surname is unknown, so no FEC match can be attempted without guessing</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oswald-a-36a757174/">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a></td>
+</tr>
+<tr>
+<td><strong>Nicholas D.</strong> (LinkedIn vanity slug <code>nrdumont</code>; surname unconfirmed)</td>
+<td><strong>Technology Coordinator</strong></td>
+<td>Technical contact</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>No matching record.</strong> <code>DUMONT, NICHOLAS</code> returns 7 rows (PA, AZ, MA) with employers 8520 Rose LLC / student / not employed — none in Utah, none matching WebNX. The surname is unconfirmed anyway, so treat as <span class="gap">GAP</span></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nrdumont/">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a></td>
+</tr>
+<tr>
+<td><strong>Keegan Shields</strong></td>
+<td><strong>Datacenter Technician</strong> (Ogden)</td>
+<td>Technical contact</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>No FEC record found.</strong> <code>SHIELDS, KEEGAN</code> returns 0 rows nationally</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/keegan-shields-3a4aaa25a/">LinkedIn</a></td>
+</tr>
+<tr>
+<td><strong>Aidan Erickson</strong></td>
+<td><strong>Junior Technician</strong> (intern)</td>
+<td>Technical contact</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>Not searched — <span class="gap">GAP</span>, not "no record".</strong> Junior/intern role with no purchasing relevance</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aidan-erickson-809784286/">LinkedIn</a></td>
+</tr>
+<tr>
+<td><strong>Damon Sims</strong></td>
+<td><strong>Information Technology Technician</strong></td>
+<td>Technical contact</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>Not searched — <span class="gap">GAP</span>.</strong> Common name with no state anchor; any match would be a guess</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a></td>
+</tr>
+<tr>
+<td><strong>Mesikoo Kamali</strong></td>
+<td><strong>Employee — specific title not published</strong></td>
+<td>Technical contact</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>Not searched — <span class="gap">GAP</span>.</strong> No title or location anchor</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a></td>
+</tr>
+<tr>
+<td><strong>Kek P.</strong> (surname not published)</td>
+<td><strong>Business Development</strong></td>
+<td>Manager</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — the company's BD/sales traffic routes through sales@webnx.com, 1-800-840-5996 ext. 1</td>
+<td><strong>Not searchable — <span class="gap">GAP</span>.</strong> Surname unknown</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX management page</a> · LeadIQ masked directory (initials K.H.P.)</td>
+</tr>
+<tr>
+<td><strong>Marc Rosenthal</strong></td>
+<td><strong>Head of Business Development and Finance</strong> — <strong>FORMER</strong></td>
+<td>Former (executive)</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>No confirmed record.</strong> <code>ROSENTHAL, MARC</code> returns 269 rows but the top matches are a MARCIA ROSENTHAL in Santa Monica/Tarzana CA listed as not employed; no row matches a WebNX or CalPOP employer</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20150328190440/http://webnx.com:80/company/the-team/">WebNX team page, Wayback 2015-03-28</a> — the company's own site. Recruited from CalPOP.com in 2013 where he was acting CFO; Columbia graduate; ex-CFO of PRKarms. Present in the 2015-03-28 and 2015-09-25 captures, <strong>absent from 2019-08-21 onward</strong></td>
+</tr>
+<tr>
+<td><strong>Estella Mystagic</strong></td>
+<td><strong>Programmer</strong> (self-reported on a federal filing)</td>
+<td>Technical contact</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>Record found.</strong> MYSTAGIC, ESTELLA · employer <strong>WEBNX</strong> · occupation <strong>PROGRAMMER</strong> · Ogden UT · 2021-10-23 · $45.00 · WINRED</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
+</tr>
+<tr>
+<td><strong>Selphie Keller</strong></td>
+<td><strong>IT</strong> (self-reported on federal filings)</td>
+<td>Technical contact</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>Records found.</strong> KELLER, SELPHIE · employer <strong>WEBNX</strong> · occupation <strong>IT</strong> · Pleasant View UT · 15 contributions 2020-10-17 to 2021-01-18 · WINRED. Same town as Dario Perovich's FEC address</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
+</tr>
+<tr>
+<td><strong>Lance Bingham</strong></td>
+<td><strong>IT Tech</strong> — <strong>likely FORMER</strong> (no presence in any current roster)</td>
+<td>Former (technical contact)</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>Records found.</strong> BINGHAM, LANCE · employer <strong>WEBNX INC</strong> · occupation <strong>IT TECH</strong> · Ogden UT · 5 monthly contributions 2019-06-28 through 2019-10-28 · $5.00 each · ACTBLUE</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
+</tr>
+<tr>
+<td><strong>Daniel Pautz</strong> — <em>registry officer row</em></td>
+<td><strong>ARIN OrgAdmin</strong>, POC handle <strong>DPA132-ARIN</strong>, for Org WEBNX and AS18450</td>
+<td><strong>Registry officer (ARIN)</strong> — labelled as such</td>
+<td><strong>primary-record</strong></td>
+<td><strong>dan@webnx.com</strong> · +1-800-840-5996 — the contact details he personally validated with ARIN</td>
+<td><em>(same person as above — no FEC record found)</em></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/18450">ARIN RDAP autnum 18450</a> · <a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">ARIN Org WEBNX POC list</a></td>
+</tr>
+<tr>
+<td><strong>Dan Pautz</strong> and <strong>Dario Perovich</strong> — <em>network registry row</em></td>
+<td><strong>admin-c</strong> (Pautz) and <strong>tech-c</strong> (Perovich) on the RADB IRR aut-num object for AS18450 / AS-WEBNX, maintainer MAINT-AS18450</td>
+<td><strong>Network registry contacts (RADB IRR)</strong> — labelled as such</td>
+<td><strong>primary-record</strong></td>
+<td>notify address <strong>noc@webnx.com</strong></td>
+<td><em>(as above — Pautz no record; Perovich record found)</em></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS18450">bgp.he.net AS18450</a>, object last modified 2023-11-13</td>
+</tr>
+<tr>
+<td><strong>ARIN OrgTech / OrgNOC / OrgAbuse</strong></td>
+<td>TECHS71-ARIN, NOC2920-ARIN, ABUSE1832-ARIN</td>
+<td><strong>Registry contacts — ROLE ACCOUNTS, NO INDIVIDUAL NAMED (<span class="gap">GAP</span>)</strong></td>
+<td><strong>primary-record</strong> (that they are role accounts)</td>
+<td>TECHS71 points back at <strong>dan@webnx.com</strong>; NOC2920 = <strong>NOC@webnx.com</strong>; ABUSE1832 = <strong>abuse@webnx.com</strong>; all +1-800-840-5996 ext. 1</td>
+<td>n/a</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">ARIN Org WEBNX POC list</a></td>
+</tr>
+<tr>
+<td><strong>PeeringDB contacts</strong></td>
+<td>—</td>
+<td><strong>Network contacts (PeeringDB) — NONE PUBLISHED (<span class="gap">GAP</span>)</strong></td>
+<td><strong>primary-record</strong> (that the set is empty)</td>
+<td><code>/api/poc?net_id=4729</code> returns an empty data array; <code>poc_updated</code> is stale at 2017-08-08. No policy, technical or NOC contact is public</td>
+<td>n/a</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/net/4729">PeeringDB net/4729</a></td>
+</tr>
+<tr>
+<td><strong>Paul T. Landis</strong></td>
+<td>Partner, Bauman Loewe Witt &amp; Maxwell PLLC — <strong>attorney of record for plaintiff WebNX, Inc.</strong> in <em>WebNX Inc v. Cummins Inc</em>, D. Utah 1:23-cv-00055; argued the motion hearing on 2024-09-11</td>
+<td><strong>External — counsel of record</strong></td>
+<td><strong>primary-record</strong></td>
+<td><strong>Plandis@blwmlawfirm.com</strong> · 480.502.4664 ext. 4225</td>
+<td>Not applicable — external counsel, not a WebNX employee</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.courtlistener.com/docket/67354236/webnx-inc-v-cummins-inc/">CourtListener docket 67354236</a></td>
+</tr>
+<tr>
+<td><strong>Patrick Y. Howell</strong></td>
+<td>Attorney listed for plaintiff WebNX, Inc. on the same docket; the court entered a <strong>notice of ineligible attorney</strong> on 2023-05-09 (not admitted in D. Utah), so Landis carried the case</td>
+<td><strong>External — counsel (ineligible)</strong></td>
+<td><strong>primary-record</strong></td>
+<td><span class="gap">GAP</span></td>
+<td>Not applicable</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.courtlistener.com/docket/67354236/webnx-inc-v-cummins-inc/">CourtListener docket 67354236</a></td>
+</tr>
+<tr>
+<td><strong>Jonathan Box</strong></td>
+<td><strong>Sales Director, GorillaServers, Inc.</strong> — the sister company at the same Ogden address (AS53850), founded by Daniel Pautz. <strong>Not a WebNX employee</strong>; a lateral route into the same building and the same owner</td>
+<td><strong>Adjacent entity (sister company)</strong></td>
+<td><strong>single-source</strong></td>
+<td><span class="gap">GAP</span> — LinkedIn only</td>
+<td><strong>No FEC record found</strong> for GorillaServers as employer in three spellings (0 rows)</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jonathan-box-880a8011/">LinkedIn</a></td>
 </tr>
 </tbody>
 </table>
-<hr />
+<p><strong>Exclusion recorded, deliberately:</strong> searches for "WebNX" also surface <strong>Satyen Chaudhari, "CEO &amp; Founder at WebNX"</strong>. That is <strong>WebNX Global Services / webnx.in</strong>, an unrelated Indian web-development firm. He has <strong>no connection</strong> to WebNX, Inc. of Ogden and is excluded on purpose. Likewise, a "Lando Calrissean — Datacenter Technician" entry on the GorillaServers aggregator page is plainly a joke profile and is ignored.</p>
+<h3>4.2 Registry record</h3>
+<p>Note the boundary: the records below are <strong>internet-number registries (ARIN, RADB)</strong>, not a corporate registry. <strong>No corporate officer or director filing was obtainable</strong> — see 4.4.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Capacity</th>
+<th>Filing</th>
+<th>Filing date</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Daniel Pautz</strong></td>
+<td><strong>OrgAdmin</strong> (administrative point of contact), POC handle <strong>DPA132-ARIN</strong>, dan@webnx.com, +1-800-840-5996 — validated with ARIN</td>
+<td>ARIN Org record "WebNX, Inc." (Org handle <strong>WEBNX</strong>) and autnum <strong>AS18450</strong>, 119 N 600 W, Ogden UT 84404</td>
+<td>Org registered <strong>2006-11-01</strong>; AS18450 registered <strong>2007-07-27</strong>; ASN record last changed 2012-03-02; Org record last updated <strong>2024-11-25</strong></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/18450">rdap.arin.net/registry/autnum/18450</a></td>
+</tr>
+<tr>
+<td><strong>Tech Support</strong> (role account — no individual named)</td>
+<td><strong>OrgTech</strong>, POC handle TECHS71-ARIN, email <strong>dan@webnx.com</strong> (routes to the CEO), +1-800-840-5996 ext. 1</td>
+<td>ARIN Org record WEBNX POC list</td>
+<td>Org record last updated 2024-11-25</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">whois.arin.net/rest/org/WEBNX/pocs</a></td>
+</tr>
+<tr>
+<td><strong>NOC</strong> (role account — no individual named)</td>
+<td><strong>OrgNOC</strong>, POC handle NOC2920-ARIN, NOC@webnx.com, +1-800-840-5996 ext. 1</td>
+<td>ARIN Org record WEBNX POC list</td>
+<td>Org record last updated 2024-11-25</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">whois.arin.net/rest/org/WEBNX/pocs</a></td>
+</tr>
+<tr>
+<td><strong>Abuse</strong> (role account — no individual named)</td>
+<td><strong>OrgAbuse</strong>, POC handle ABUSE1832-ARIN, abuse@webnx.com, +1-800-840-5996 ext. 1</td>
+<td>ARIN Org record WEBNX POC list</td>
+<td>Org record last updated 2024-11-25</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">whois.arin.net/rest/org/WEBNX/pocs</a></td>
+</tr>
+<tr>
+<td><strong>Dan Pautz</strong> (admin-c) and <strong>Dario Perovich</strong> (tech-c)</td>
+<td>IRR route-object maintainers for AS18450 / AS-WEBNX under MAINT-AS18450, notify noc@webnx.com. <strong>The only public record naming Perovich in a technical-registry capacity</strong></td>
+<td>RADB IRR aut-num object for AS18450</td>
+<td>Last modified <strong>2023-11-13T15:52:56Z</strong></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS18450">bgp.he.net/AS18450</a></td>
+</tr>
+<tr>
+<td><strong>ARIN Admin / Tech / NOC / Abuse — all role accounts</strong> (GorillaServers named <strong>no individual</strong>)</td>
+<td>OrgAdmin ARINA106-ARIN (arin-admin@GorillaServers.com), OrgTech TECHC24-ARIN, OrgNOC NOC11801-ARIN, OrgAbuse ABUSE2878-ARIN; +1-801-752-0084; Org handle GORIL-3, <strong>same building at 119 N 600 W Ogden</strong>. Sister company AS53850 exposes <strong>zero</strong> personal names</td>
+<td>ARIN Org record GorillaServers, Inc. / autnum <strong>AS53850</strong></td>
+<td>Record as retrieved 2026-08-04</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/53850">rdap.arin.net/registry/autnum/53850</a></td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 Buying committee</h3>
+<p>WebNX is a <strong>founder-owned private company with roughly 18 employees, no published CFO and no published board</strong>. There is effectively <strong>no procurement layer</strong> between the founder and a hardware purchase order — which shortens the path but also means the technical credibility of the first contact decides everything.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Why they matter for a server purchase</th>
+<th>How to approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Daniel Pautz</strong> — President &amp; CEO, Founder</td>
+<td><strong>He is the signature.</strong> Three independent primary records make him the sole named principal: ARIN OrgAdmin under his personal email, BBB Principal Contact <em>and</em> Customer Contact, and "President and CEO" on the company's own team page for a decade. His published bio is explicitly hardware-centric — a self-taught hardware builder who developed his own line of whitebox servers — so he is <strong>technically opinionated about server specs, not merely a signer</strong>. He also owns GorillaServers in the same building, so one relationship can cover two AS numbers</td>
+<td><strong>Direct, technical, specific.</strong> Email <strong>dan@webnx.com</strong> (published in ARIN, a legitimately public route) or engage him on WebHostingTalk where he posts as "dan". Lead with density, power envelope and delivery lead times against a <strong>named platform already in their live catalogue</strong> — AMD EPYC Genoa, Threadripper, Xeon E-series and GPU builds. <strong>Do not open with a generic company introduction</strong>; a founder who builds whitebox servers will bin it</td>
+</tr>
+<tr>
+<td><strong>Dario Perovich</strong> — Co-Founder &amp; COO</td>
+<td>Co-founder and the <strong>only other person the company has ever named in an executive capacity</strong> — on its own site, on the BBB record, and as tech-c on the RADB IRR object. His own FEC filing self-describes his occupation as "MANAGEMENT". As COO of a colocation and dedicated-server operator he <strong>owns the deployment reality</strong> — rack space, power, cooling, staging labour — which is where a large server order either works or does not. He can kill a deal on operational grounds even if Pautz likes the box</td>
+<td><strong>Second call, not first.</strong> Once Pautz is engaged, bring Perovich in on deployment mechanics: rack-and-stack labour, IPMI / out-of-band management, RMA turnaround, staging in Ogden versus the LA/Equinix and Manhattan sites. No published individual email — route via <strong>noc@webnx.com</strong>, a Pautz-brokered introduction, or <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/darioperovich/">LinkedIn</a></td>
+</tr>
+<tr>
+<td><strong>Mitch (Mitchell) Pautz</strong> — Director of Infrastructure</td>
+<td>The <strong>most senior named technical role below the founders</strong> and the closest thing WebNX has to a VP Infrastructure. Aggregator data places him in Glendora, CA, which maps to the ~10,000 sq ft Los Angeles footprint rather than the 100,000+ sq ft Ogden site — so he plausibly owns <strong>platform standards across sites</strong>. Shares a surname with the CEO, which suggests unusual internal trust; <strong>no filing confirms a family relationship, so that stays an inference, not a fact</strong></td>
+<td><strong>Technical validation track.</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mitch-pautz-895244aa/">LinkedIn</a> is the only verified route — his email is aggregator-masked and <strong>must not be guessed</strong>. Engage on platform standardisation, GPU/HPC density and refresh cycles across Ogden + LA + Manhattan</td>
+</tr>
+<tr>
+<td><strong>Lynn Ure</strong> — V.P. Operations</td>
+<td>A <strong>VP-level operations owner distinct from the COO</strong>, and the LeadIQ data pattern suggests promotion from Operations Manager — i.e. deep institutional knowledge of how kit actually gets received and deployed. In a company this size the VP Ops is usually the person who converts an approved purchase into a delivery schedule and who feels the pain of a bad vendor</td>
+<td><strong>Post-technical, pre-signature.</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lynn-ure-4289b2159">LinkedIn</a>. Talk delivery windows, palletisation, on-site spares and support SLA — <strong>operational risk reduction, not speeds and feeds</strong></td>
+</tr>
+<tr>
+<td><strong>Jake Keitz</strong> — Operations Manager (Ogden)</td>
+<td>Day-to-day operations manager and a realistic <strong>early-signal contact</strong>: he will know actual refresh timing and what is failing in the field long before a purchase is formalised. Not a signer, but a credible internal advocate</td>
+<td><strong>Low-key discovery.</strong> Aggregator-masked email only (<code>j***@webnx.com</code>), so reach him via the published support/NOC routes or LinkedIn. Anchor on the roles they are currently hiring — "Computer Tech - Data Center", "Logistics &amp; Inventory Clerk", "Principal Linux Systems Engineer" — which together say they are <strong>building and racking servers in volume and staffing up receiving</strong></td>
+</tr>
+<tr>
+<td><strong>Kek P.</strong> — Business Development <em>(partial name — <span class="gap">GAP</span>)</em></td>
+<td>The <strong>only commercial/BD-side name attached to WebNX since Marc Rosenthal left</strong>, and only a first name plus initial is public. Flagged as an influence node rather than a target because the identification is single-source and incomplete</td>
+<td><strong>Do not attempt contact by name until the surname is confirmed by a primary record.</strong> Use sales@webnx.com (1-800-840-5996 ext. 1) and ask for the business development lead <strong>by role, not by name</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>4.4 Unfilled roles — every one a <span class="gap">GAP</span></h3>
+<p><strong><span class="gap">GAP</span> — CFO / VP Finance / Controller:</strong> no name, ever. WebNX has never published a CFO; the nearest historical equivalent, Marc Rosenthal ("Head of Business Development and Finance"), appears only in 2015 captures and was gone by 2019-08-21. Nobody has filled the slot publicly in 7+ years. · <strong><span class="gap">GAP</span> — Accounts Payable / billing owner:</strong> only the role mailbox accounts@webnx.com and 1-800-840-5996 ext. 2. · <strong><span class="gap">GAP</span> — Procurement / purchasing / vendor manager:</strong> no such title in any roster, job board, LinkedIn result or filing; the closest signal is an open "Logistics &amp; Inventory Clerk" req in Ogden at $18–20/hr, implying receiving is being staffed but <strong>purchasing authority is not delegated</strong>. · <strong><span class="gap">GAP</span> — CTO / VP Engineering:</strong> no name, and probably no such role — the senior technical title that does exist is "Director of Infrastructure", reinforced by current reqs for a "Hands-on Architect" and a "Principal Linux Systems Engineer", both explicitly <strong>individual-contributor</strong>, not leadership. · <strong><span class="gap">GAP</span> — VP Sales / Head of Sales:</strong> only the partial "Kek P., Business Development". · <strong><span class="gap">GAP</span> — corporate officers and directors of record:</strong> the Utah Division of Corporations search sits behind a Cloudflare interactive challenge; <strong>CAPTCHAs are not bypassed</strong>, so officers, directors, managers/members and annual-report signatories are unverified, and every aggregator mirror was blocked or empty. · <strong><span class="gap">GAP</span> — registered agent for WebNX, Inc.</strong> · <strong><span class="gap">GAP</span> — Utah entity number and filing history</strong>, including previously listed officers. · <strong><span class="gap">GAP</span> — the "President" reported as initials "J. F." by ZoomInfo/LeadIQ:</strong> unresolved and <strong>conflicting</strong> with WebNX's own site, which gave "President and CEO" to Daniel Pautz through November 2024. Could be a genuine recent hire, a stale record, or an aggregator artefact — <strong>no name will be guessed</strong>. · <strong><span class="gap">GAP</span> — GorillaServers, Inc. (AS53850) officers:</strong> its ARIN record is 100% role accounts; only Daniel Pautz's founder link is documented, and via press coverage rather than a filing. · <strong><span class="gap">GAP</span> — UCC-1 secured parties and debtor signatories:</strong> the Utah UCC search sits on the same blocked state platform. · <strong><span class="gap">GAP</span> — USPTO trademark declaration signatory and correspondent:</strong> no WEBNX trademark record was retrievable, and it is quite possible no federal registration exists. · <strong><span class="gap">GAP</span> — historical pre-privacy webnx.com WHOIS registrant:</strong> every history provider reached was paywalled or bot-blocked. · <strong><span class="gap">GAP</span> — Weber County owner of record for 119 N 600 W:</strong> not retrieved, and note it would name <strong>the landlord, not WebNX</strong> — the federal court's own findings state WebNX entered a long-term lease for the building in 2014 and bought the generator from its landlord.</p>
+<h3>4.5 Sources worked — including what returned nothing</h3>
+<p><strong>Productive:</strong> <strong>ARIN Whois/RDAP</strong> (autnum 18450, Org WEBNX POC list, and a POC-by-email-domain search on <code>@webnx.com</code>) — returned exactly one human, Daniel Pautz, plus three role accounts; <strong>AS53850 (GorillaServers) returned four role accounts and zero personal names</strong>. · <strong>RADB IRR via bgp.he.net</strong> — the only registry record naming Perovich. · <strong>BBB business profile</strong> — confirms legal name, the 1999-04-04 establishment date, Pautz as Principal <em>and</em> Customer Contact, Perovich as COO, plus an unexplained "incorporated 2018-09-14" pointer. · <strong>Wayback Machine CDX + archived webnx.com</strong> — the single richest source: the 2015 <code>/company/the-team/</code> captures carry three bios and are where Marc Rosenthal was recovered; 2019, 2021, 2023 and 2024 captures carry only Pautz and Perovich, pinning his departure to between late 2015 and mid-2019. · <strong>CourtListener / RECAP</strong> — 17 dockets; <em>WebNX Inc v. Cummins Inc</em> (D. Utah 1:23-cv-00055-JNP-JCB) was read in full. · <strong>FEC Schedule A</strong> — run on <strong>every</strong> name; the employer-matched search surfaced three otherwise-invisible staff and corroborated Perovich. · <strong>LinkedIn public profiles</strong> and <strong>RocketReach/LeadIQ/ZoomInfo</strong> (secondary, graded accordingly).</p>
+<p><strong>Reached but returned nothing on people:</strong> <strong>PeeringDB</strong> (net/4729 is populated on the network side but <code>/api/poc</code> returns an empty array; <code>poc_updated</code> stale since 2017-08-08) · <strong>the live webnx.com</strong> (the 1.7 MB JS bundle was pulled and searched directly: <strong>zero</strong> occurrences of Pautz, Perovich, Ure or Keitz, and a placeholder founder string) · <strong>historical WHOIS for webnx.com</strong> (registrant fully redacted behind Tucows tiered access; whoisrequest 403, whoxy 522, viewdns paid-only, securitytrails auth-required) · <strong>USPTO TSDR/TESS</strong> (API 404s, Justia 403 behind a JS challenge, no WEBNX mark surfaced at all) · <strong>job postings</strong> on Indeed, Glassdoor, KSL and ZipRecruiter (no named hiring manager, no "reports to" line, no recruiter name in any posting) · <strong>LowEndTalk</strong> (nothing; searches polluted by the unrelated webnx.in) · <strong>WebHostingTalk</strong> (thin — confirms only that Pautz posts as "dan") · <strong>conference speaker and exhibitor lists</strong> for HostingCon, CloudFest / CloudFest Americas, DataCenter World, NANOG and WHD.global (<strong>no WebNX record on any of them</strong>) · <strong>press, interviews and podcasts</strong> (the 2021 generator fire was covered by The Register, DCD, Data Center Frontier, TechRadar and Slashdot, but the only named source in that coverage is <strong>Kevin Brown, Ogden City Fire Marshal</strong> — an external official; Pautz is referenced as CEO but never quoted).</p>
+<p><strong>Blocked or not reached, and why:</strong> <strong>Utah Division of Corporations</strong> — <code>secure.utah.gov/bes/</code> is retired and redirects to <code>businessregistration.utah.gov</code>, which returns HTTP 403 behind a Cloudflare interactive challenge; <strong>CAPTCHAs are not solved</strong>, so this is a hard stop, not an oversight. · <strong>Third-party Utah mirrors</strong> — OpenCorporates (CAPTCHA), Bizapedia (CAPTCHA), CorporationWiki (403), OpenGovUS (404), BizProfile (wrong entities), Buzzfile (not found). · <strong>Utah UCC search</strong> — same blocked platform. · <strong>Weber County property/assessor</strong> — connection failed, and deprioritised because the court record already establishes WebNX is a <strong>tenant</strong>. · <strong>Delaware and Nevada registries</strong> — not separately queried: every primary record reached puts the operating entity at 119 N 600 W, Ogden UT as a Utah corporation, so pursuing DE/NV without a lead would have been speculative.</p>
+<h2><strong>Best neutral next step to close the officer gap without touching the company:</strong> <strong>Paul T. Landis</strong> at Bauman Loewe Witt &amp; Maxwell (Plandis@blwmlawfirm.com, 480.502.4664 ext. 4225), counsel of record for WebNX in the Cummins suit. Note the firm is a <strong>property-subrogation</strong> practice, which implies WebNX's insurer is driving that recovery.</h2>
 <h2>5. Footprint</h2>
 <table>
 <thead>
@@ -823,43 +1119,339 @@ footer{border-top:1px solid var(--line);text-align:center;font:10px 'Courier New
 </table>
 <hr />
 <h2>4. 領導層與所有權</h2>
+<p>本節證據等級：<strong>primary-record（一手紀錄）</strong>＝網路號碼登錄機構、法院案卷、聯邦競選財務申報、主管機關檔案，或公司自家已發布頁面｜<strong>corroborated（多方佐證）</strong>＝兩個以上獨立次級來源互相印證｜<strong>single-source（單一來源）</strong>＝僅一個次級來源，無其他佐證｜<strong><span class="gap">GAP</span></strong>＝已具名搜尋但查無。</p>
+<p>進入表格前有兩項前提。第一，<strong>2026 年現行的 webnx.com 完全沒有具名任何人</strong>：該站為前端渲染的 React SPA，<code>/about</code>、<code>/contact</code>、<code>/company/the-team/</code> 三個路徑回傳的是同一份 2,166 bytes 的空殼，其 schema.org Organization 區塊的創辦人欄位是字面上的佔位字串 <code>"WebNX Founder"</code>。因此以下每一個姓名都來自登錄機構、政府申報、公司自家舊版團隊頁的存檔，或次級來源，<strong>沒有一個來自現行官網</strong>。第二，<strong>登錄機構幹部與網路聯絡人以獨立列呈現並明確標示</strong>：ARIN OrgAdmin 或 IRR <code>admin-c</code> 是有名有姓的真人，且是公開合法的接觸管道；對未上市公司而言，這往往是唯一能取得的幹部等級姓名。</p>
+<h3>4.1 具名人員</h3>
 <table>
 <thead>
 <tr>
 <th>姓名</th>
-<th>職務</th>
-<th>證據</th>
+<th>職稱</th>
+<th>角色類型</th>
+<th>證據等級</th>
+<th>公開聯絡管道</th>
+<th>FEC 紀錄</th>
+<th>來源</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Daniel Pautz</strong></td>
-<td><strong>創辦人暨 CEO</strong> — 資本支出決策者</td>
-<td>LinkedIn 標題為「Founder &amp; CEO of WebNX, Inc.」，位於 Ogden, Utah（<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/daniel-pautz-0b11597/">LinkedIn</a>）。BBB 主要聯絡人／管理層欄位獨立列出「Daniel Pautz」（<a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB</a>）。搜尋結果亦將他與 <strong>GorillaServers</strong> 的創立連結——該公司為<strong>法律上獨立</strong>、但在<strong>同一棟 Ogden 廠房</strong>營運的專用伺服器業者。無任何公開申報揭露股權比例</td>
+<td><strong>President and CEO</strong>（公司自家團隊頁用語，1999–2024 年版官網）；LinkedIn 標題為「Founder &amp; CEO」</td>
+<td><strong>高階主管／所有權人</strong></td>
+<td><strong>primary-record</strong></td>
+<td><strong>dan@webnx.com</strong> — 由他本人登錄於 ARIN Whois，屬公開合法管道 · +1-800-840-5996 · 於 WebHostingTalk 以帳號「dan」發文；存檔站內線上客服操作員代號為「danp」</td>
+<td><strong>查無 FEC 紀錄。</strong> Schedule A 於猶他州查詢 <code>PAUTZ, DANIEL</code> 回傳 0 筆，姓氏 Pautz 於猶他州亦為 0 筆。全國唯一命中者為 PAUTZ, DANIEL J.，紐約州 Syracuse 的 Bond Schoeneck &amp; King 律師——<strong>不同人</strong>，雇主不符</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/18450">ARIN RDAP autnum 18450</a> · <a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20150328190440/http://webnx.com:80/company/the-team/">WebNX 團隊頁，Wayback 2015-03-28</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB 檔案</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/daniel-pautz-0b11597/">LinkedIn</a></td>
 </tr>
 <tr>
 <td><strong>Dario Perovich</strong></td>
-<td><strong>營運長（COO）</strong> — 營運／採購路徑</td>
-<td><a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB 主要聯絡人</a> 欄位列為「Dario Perovich (Chief Operating Officer)」。<strong><span class="gap">GAP</span>：</strong> 未取得可查證之直接 email，亦無可查證之 LinkedIn 網址</td>
+<td><strong>Chief Operating Officer（營運長，共同創辦人）</strong></td>
+<td><strong>高階主管／所有權人</strong></td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — 全網查無個人 email 或直撥號碼。僅能經 sales@webnx.com／support@webnx.com／1-800-840-5996，或 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/darioperovich/">LinkedIn</a></td>
+<td><strong>查有紀錄。</strong> PEROVICH, DARIO · 雇主 <strong>WEBNX, INC</strong> · 職業 <strong>MANAGEMENT</strong> · 猶他州 Pleasant View · 2019-08-04 · $5.00 · 受款方 ACTBLUE。這是唯一一筆能獨立佐證高階主管職務的 FEC 紀錄</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20150328190440/http://webnx.com:80/company/the-team/">WebNX 團隊頁，Wayback 2015-03-28</a> · <a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS18450">RADB IRR，經 bgp.he.net AS18450</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.bbb.org/us/ut/ogden/profile/internet-service/webnx-inc-1166-90026506">BBB 檔案</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
 </tr>
 <tr>
-<td><strong>受益所有權／股東</strong></td>
-<td><strong><span class="gap">GAP</span></strong></td>
-<td>無 SEC 申報、未取得州登記幹部名單、無公開股權結構或投資人揭露。Crunchbase／PitchBook 無揭露之募資輪。外觀為創辦人自有、自力成長，但<strong>無任何可查證文件佐證</strong></td>
+<td><strong>Mitch (Mitchell) Pautz</strong></td>
+<td><strong>Director of Infrastructure（基礎設施總監）</strong></td>
+<td>高階主管／技術管理職</td>
+<td><strong>corroborated</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — 資料商遮罩為 <code>m***@webnx.com</code>；LinkedIn 為唯一可查證管道</td>
+<td><strong>查無 FEC 紀錄。</strong> <code>PAUTZ, MITCH</code> 與 <code>PAUTZ, MITCHELL</code> 全國查詢均為 0 筆</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mitch-pautz-895244aa/">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a></td>
 </tr>
 <tr>
-<td><strong>CEO 與 COO 以外的具名人員</strong></td>
-<td><strong><span class="gap">GAP</span></strong></td>
-<td>全網查無 VP Infrastructure、採購主管或招募窗口。亦無任何直撥業務窗口——僅有 800 免付費號碼與 support@／noc@ 群組信箱</td>
+<td><strong>Lynn Ure</strong></td>
+<td><strong>V.P. Operations（營運副總）</strong></td>
+<td>高階主管</td>
+<td><strong>corroborated</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — 無公開個人管道；僅 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lynn-ure-4289b2159">LinkedIn</a></td>
+<td><strong>無確認紀錄。</strong> 猶他州 Layton 有一位 LYNN URE 於 2021–2026 年間有 18 筆捐款（ActBlue），但<strong>每一筆的雇主欄皆為「NOT EMPLOYED」</strong>——與 WebNX 無雇主對應，因此<strong>不主張</strong>為同一人</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lynn-ure-4289b2159">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a> · LeadIQ 遮罩名錄（縮寫 L.U.，同時出現於「Vice President Operations」與「Operations Manager」兩職）</td>
 </tr>
 <tr>
-<td><strong>Utah Division of Corporations 登記紀錄</strong></td>
+<td><strong>Jake Keitz</strong></td>
+<td><strong>Operations Manager（營運經理）</strong>（ZoomInfo 呈現為「Manager, Operations」）</td>
+<td>中階管理職</td>
+<td><strong>corroborated</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — 遮罩為 <code>j***@webnx.com</code>；僅能經 support@webnx.com／noc@webnx.com 或 LinkedIn 觸及</td>
+<td><strong>查無 FEC 紀錄。</strong> 姓氏 Keitz 於猶他州為 0 筆；全國命中者分布於路易斯安那、肯塔基、維吉尼亞與德州，雇主均不相關</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/jake-keitz-email_498495479">RocketReach 個人頁</a> · ZoomInfo 個人頁 · LeadIQ 遮罩名錄（縮寫 J.K.）</td>
+</tr>
+<tr>
+<td><strong>Oswald A.</strong>（姓氏由本人隱私設定截斷）</td>
+<td><strong>LA Operations Manager（洛杉磯營運經理）</strong></td>
+<td>中階管理職</td>
+<td><strong>corroborated</strong></td>
 <td><strong><span class="gap">GAP</span></strong></td>
-<td>未取得實體編號、狀態、設立日與註冊代理人；businessregistration.utah.gov 為 JS 互動式入口，抓取無回傳紀錄。BBB 未經解釋的「locally incorporated 2018-09-14」須與 1999 創立年份對帳</td>
+<td><strong>無法查詢——記為 <span class="gap">GAP</span>，而非「查無紀錄」。</strong> 姓氏不明，不猜測即無法比對 FEC</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/oswald-a-36a757174/">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a></td>
+</tr>
+<tr>
+<td><strong>Nicholas D.</strong>（LinkedIn 短網址為 <code>nrdumont</code>，姓氏未經確認）</td>
+<td><strong>Technology Coordinator（技術協調專員）</strong></td>
+<td>技術聯絡人</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>無相符紀錄。</strong> <code>DUMONT, NICHOLAS</code> 回傳 7 筆（賓州、亞利桑那、麻州），雇主為 8520 Rose LLC／學生／未就業——皆不在猶他州，亦不符 WebNX。且姓氏本身未經確認，故記為 <span class="gap">GAP</span></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nrdumont/">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a></td>
+</tr>
+<tr>
+<td><strong>Keegan Shields</strong></td>
+<td><strong>Datacenter Technician（機房技術員，Ogden）</strong></td>
+<td>技術聯絡人</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>查無 FEC 紀錄。</strong> <code>SHIELDS, KEEGAN</code> 全國回傳 0 筆</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/keegan-shields-3a4aaa25a/">LinkedIn</a></td>
+</tr>
+<tr>
+<td><strong>Aidan Erickson</strong></td>
+<td><strong>Junior Technician（初階技術員，實習）</strong></td>
+<td>技術聯絡人</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>未查詢——記為 <span class="gap">GAP</span>，而非「查無紀錄」。</strong> 初階／實習職，與採購決策無關</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aidan-erickson-809784286/">LinkedIn</a></td>
+</tr>
+<tr>
+<td><strong>Damon Sims</strong></td>
+<td><strong>Information Technology Technician（資訊技術員）</strong></td>
+<td>技術聯絡人</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>未查詢——記為 <span class="gap">GAP</span>。</strong> 姓名常見且無所在州可錨定，任何比對結果都只是猜測</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a></td>
+</tr>
+<tr>
+<td><strong>Mesikoo Kamali</strong></td>
+<td><strong>員工——未公布具體職稱</strong></td>
+<td>技術聯絡人</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>未查詢——記為 <span class="gap">GAP</span>。</strong> 無職稱亦無地點可錨定</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a></td>
+</tr>
+<tr>
+<td><strong>Kek P.</strong>（姓氏未公開）</td>
+<td><strong>Business Development（業務開發）</strong></td>
+<td>中階管理職</td>
+<td><strong>single-source</strong></td>
+<td><strong><span class="gap">GAP</span></strong> — 公司業務開發流量一律經 sales@webnx.com、1-800-840-5996 分機 1</td>
+<td><strong>無法查詢——記為 <span class="gap">GAP</span>。</strong> 姓氏不明</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rocketreach.co/webnx-inc-management_b442cf68fa127bd0">RocketReach WebNX 管理層頁</a> · LeadIQ 遮罩名錄（縮寫 K.H.P.）</td>
+</tr>
+<tr>
+<td><strong>Marc Rosenthal</strong></td>
+<td><strong>Head of Business Development and Finance（業務開發暨財務主管）——已離職</strong></td>
+<td>前任（高階主管）</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>無確認紀錄。</strong> <code>ROSENTHAL, MARC</code> 回傳 269 筆，但最相符者為加州 Santa Monica／Tarzana 的 MARCIA ROSENTHAL（未就業）；無任何一筆雇主為 WebNX 或 CalPOP</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20150328190440/http://webnx.com:80/company/the-team/">WebNX 團隊頁，Wayback 2015-03-28</a> — 公司自家網站。2013 年自 CalPOP.com 延攬，於該公司任代理 CFO；哥倫比亞大學畢業；曾任 PRKarms 的 CFO。見於 2015-03-28 與 2015-09-25 兩份存檔，<strong>自 2019-08-21 起的每一份存檔均已消失</strong></td>
+</tr>
+<tr>
+<td><strong>Estella Mystagic</strong></td>
+<td><strong>Programmer（程式設計師）</strong>（聯邦申報中自陳）</td>
+<td>技術聯絡人</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>查有紀錄。</strong> MYSTAGIC, ESTELLA · 雇主 <strong>WEBNX</strong> · 職業 <strong>PROGRAMMER</strong> · 猶他州 Ogden · 2021-10-23 · $45.00 · WINRED</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
+</tr>
+<tr>
+<td><strong>Selphie Keller</strong></td>
+<td><strong>IT</strong>（聯邦申報中自陳）</td>
+<td>技術聯絡人</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>查有紀錄。</strong> KELLER, SELPHIE · 雇主 <strong>WEBNX</strong> · 職業 <strong>IT</strong> · 猶他州 Pleasant View · 2020-10-17 至 2021-01-18 共 15 筆 · WINRED。與 Dario Perovich 的 FEC 地址同一城鎮</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
+</tr>
+<tr>
+<td><strong>Lance Bingham</strong></td>
+<td><strong>IT Tech（資訊技術員）——研判已離職</strong>（不見於任何現行名冊）</td>
+<td>前任（技術聯絡人）</td>
+<td><strong>primary-record</strong></td>
+<td><strong><span class="gap">GAP</span></strong></td>
+<td><strong>查有紀錄。</strong> BINGHAM, LANCE · 雇主 <strong>WEBNX INC</strong> · 職業 <strong>IT TECH</strong> · 猶他州 Ogden · 2019-06-28 至 2019-10-28 共 5 筆按月捐款 · 每筆 $5.00 · ACTBLUE</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=WEBNX">FEC Schedule A</a></td>
+</tr>
+<tr>
+<td><strong>Daniel Pautz</strong> — <em>登錄機構幹部列</em></td>
+<td><strong>ARIN OrgAdmin</strong>，POC 代號 <strong>DPA132-ARIN</strong>，對應 Org WEBNX 與 AS18450</td>
+<td><strong>登錄機構幹部（ARIN）</strong> — 已標示</td>
+<td><strong>primary-record</strong></td>
+<td><strong>dan@webnx.com</strong> · +1-800-840-5996 — 由他本人向 ARIN 驗證的聯絡資料</td>
+<td><em>（同上列同一人——查無 FEC 紀錄）</em></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/18450">ARIN RDAP autnum 18450</a> · <a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">ARIN Org WEBNX POC 清單</a></td>
+</tr>
+<tr>
+<td><strong>Dan Pautz</strong> 與 <strong>Dario Perovich</strong> — <em>網路登錄列</em></td>
+<td>AS18450／AS-WEBNX 的 RADB IRR aut-num 物件上，分別為 <strong>admin-c</strong>（Pautz）與 <strong>tech-c</strong>（Perovich），維護者 MAINT-AS18450</td>
+<td><strong>網路登錄聯絡人（RADB IRR）</strong> — 已標示</td>
+<td><strong>primary-record</strong></td>
+<td>通知信箱 <strong>noc@webnx.com</strong></td>
+<td><em>（同上——Pautz 查無紀錄；Perovich 查有紀錄）</em></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS18450">bgp.he.net AS18450</a>，物件最後修改 2023-11-13</td>
+</tr>
+<tr>
+<td><strong>ARIN OrgTech／OrgNOC／OrgAbuse</strong></td>
+<td>TECHS71-ARIN、NOC2920-ARIN、ABUSE1832-ARIN</td>
+<td><strong>登錄機構聯絡人——皆為職務帳號，未具名任何個人（<span class="gap">GAP</span>）</strong></td>
+<td><strong>primary-record</strong>（就「皆為職務帳號」此一事實而言）</td>
+<td>TECHS71 導回 <strong>dan@webnx.com</strong>；NOC2920 為 <strong>NOC@webnx.com</strong>；ABUSE1832 為 <strong>abuse@webnx.com</strong>；均為 +1-800-840-5996 分機 1</td>
+<td>不適用</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">ARIN Org WEBNX POC 清單</a></td>
+</tr>
+<tr>
+<td><strong>PeeringDB 聯絡人</strong></td>
+<td>—</td>
+<td><strong>網路聯絡人（PeeringDB）——未公開任何一位（<span class="gap">GAP</span>）</strong></td>
+<td><strong>primary-record</strong>（就「清單為空」此一事實而言）</td>
+<td><code>/api/poc?net_id=4729</code> 回傳空的 data 陣列；<code>poc_updated</code> 停滯於 2017-08-08。政策、技術與 NOC 聯絡人皆未公開</td>
+<td>不適用</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/net/4729">PeeringDB net/4729</a></td>
+</tr>
+<tr>
+<td><strong>Paul T. Landis</strong></td>
+<td>Bauman Loewe Witt &amp; Maxwell PLLC 合夥人——<strong>WebNX, Inc. 原告方登錄律師</strong>，案號 D. Utah 1:23-cv-00055《WebNX Inc v. Cummins Inc》；2024-09-11 出庭辯論動議</td>
+<td><strong>外部——登錄律師</strong></td>
+<td><strong>primary-record</strong></td>
+<td><strong>Plandis@blwmlawfirm.com</strong> · 480.502.4664 分機 4225</td>
+<td>不適用——外部律師，非 WebNX 員工</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.courtlistener.com/docket/67354236/webnx-inc-v-cummins-inc/">CourtListener 案卷 67354236</a></td>
+</tr>
+<tr>
+<td><strong>Patrick Y. Howell</strong></td>
+<td>同一案卷中列為 WebNX, Inc. 原告方律師；法院於 2023-05-09 發出<strong>律師不具資格通知</strong>（未取得猶他州聯邦地院執業資格），故本案由 Landis 承接</td>
+<td><strong>外部——律師（不具資格）</strong></td>
+<td><strong>primary-record</strong></td>
+<td><span class="gap">GAP</span></td>
+<td>不適用</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.courtlistener.com/docket/67354236/webnx-inc-v-cummins-inc/">CourtListener 案卷 67354236</a></td>
+</tr>
+<tr>
+<td><strong>Jonathan Box</strong></td>
+<td><strong>GorillaServers, Inc. 業務總監</strong>——與 WebNX 同址（Ogden，AS53850）的姊妹公司，由 Daniel Pautz 創立。<strong>並非 WebNX 員工</strong>；可視為切入同一棟建物、同一位所有權人的側翼路徑</td>
+<td><strong>關聯實體（姊妹公司）</strong></td>
+<td><strong>single-source</strong></td>
+<td><span class="gap">GAP</span> — 僅 LinkedIn</td>
+<td>以 GorillaServers 為雇主的三種拼法查詢 FEC 均為 0 筆，<strong>查無紀錄</strong></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jonathan-box-880a8011/">LinkedIn</a></td>
 </tr>
 </tbody>
 </table>
-<hr />
+<p><strong>刻意排除，並在此載明：</strong> 搜尋「WebNX」時會出現 <strong>Satyen Chaudhari，職稱「CEO &amp; Founder at WebNX」</strong>。該公司為 <strong>WebNX Global Services／webnx.in</strong>，是一家與本案無關的印度網站開發公司。他與猶他州 Ogden 的 WebNX, Inc. <strong>毫無關聯</strong>，故刻意排除。同理，GorillaServers 資料商頁面上的「Lando Calrissean — Datacenter Technician」明顯是惡搞檔案，不予採計。</p>
+<h3>4.2 登錄紀錄（Registry record）</h3>
+<p>須先界定範圍：以下為<strong>網路號碼登錄機構（ARIN、RADB）</strong>紀錄，<strong>不是公司登記機關紀錄</strong>。<strong>公司幹部或董事申報文件並未取得</strong>——詳見 4.4。</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>身分／權限</th>
+<th>申報文件</th>
+<th>申報日期</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Daniel Pautz</strong></td>
+<td><strong>OrgAdmin（行政聯絡人）</strong>，POC 代號 <strong>DPA132-ARIN</strong>，dan@webnx.com，+1-800-840-5996——已向 ARIN 完成驗證</td>
+<td>ARIN Org 紀錄「WebNX, Inc.」（Org 代號 <strong>WEBNX</strong>）與 autnum <strong>AS18450</strong>，119 N 600 W, Ogden UT 84404</td>
+<td>Org 登記 <strong>2006-11-01</strong>；AS18450 登記 <strong>2007-07-27</strong>；ASN 紀錄最後異動 2012-03-02；Org 紀錄最後更新 <strong>2024-11-25</strong></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/18450">rdap.arin.net/registry/autnum/18450</a></td>
+</tr>
+<tr>
+<td><strong>Tech Support</strong>（職務帳號——未具名個人）</td>
+<td><strong>OrgTech</strong>，POC 代號 TECHS71-ARIN，信箱 <strong>dan@webnx.com</strong>（導向 CEO 本人），+1-800-840-5996 分機 1</td>
+<td>ARIN Org WEBNX POC 清單</td>
+<td>Org 紀錄最後更新 2024-11-25</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">whois.arin.net/rest/org/WEBNX/pocs</a></td>
+</tr>
+<tr>
+<td><strong>NOC</strong>（職務帳號——未具名個人）</td>
+<td><strong>OrgNOC</strong>，POC 代號 NOC2920-ARIN，NOC@webnx.com，+1-800-840-5996 分機 1</td>
+<td>ARIN Org WEBNX POC 清單</td>
+<td>Org 紀錄最後更新 2024-11-25</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">whois.arin.net/rest/org/WEBNX/pocs</a></td>
+</tr>
+<tr>
+<td><strong>Abuse</strong>（職務帳號——未具名個人）</td>
+<td><strong>OrgAbuse</strong>，POC 代號 ABUSE1832-ARIN，abuse@webnx.com，+1-800-840-5996 分機 1</td>
+<td>ARIN Org WEBNX POC 清單</td>
+<td>Org 紀錄最後更新 2024-11-25</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://whois.arin.net/rest/org/WEBNX/pocs">whois.arin.net/rest/org/WEBNX/pocs</a></td>
+</tr>
+<tr>
+<td><strong>Dan Pautz</strong>（admin-c）與 <strong>Dario Perovich</strong>（tech-c）</td>
+<td>AS18450／AS-WEBNX 的 IRR route object 維護者，維護代號 MAINT-AS18450，通知信箱 noc@webnx.com。<strong>這是唯一在技術登錄身分上具名 Perovich 的公開紀錄</strong></td>
+<td>AS18450 的 RADB IRR aut-num 物件</td>
+<td>最後修改 <strong>2023-11-13T15:52:56Z</strong></td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS18450">bgp.he.net/AS18450</a></td>
+</tr>
+<tr>
+<td><strong>ARIN Admin／Tech／NOC／Abuse — 全為職務帳號</strong>（GorillaServers <strong>未具名任何個人</strong>）</td>
+<td>OrgAdmin ARINA106-ARIN（arin-admin@GorillaServers.com）、OrgTech TECHC24-ARIN、OrgNOC NOC11801-ARIN、OrgAbuse ABUSE2878-ARIN；+1-801-752-0084；Org 代號 GORIL-3，<strong>同址於 119 N 600 W, Ogden</strong>。姊妹公司 AS53850 對外揭露的個人姓名為<strong>零</strong></td>
+<td>ARIN Org 紀錄 GorillaServers, Inc.／autnum <strong>AS53850</strong></td>
+<td>取件日 2026-08-04</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/53850">rdap.arin.net/registry/autnum/53850</a></td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 採購決策圈（Buying committee）</h3>
+<p>WebNX 是一家<strong>創辦人自有、員工約 18 人、未公布 CFO、未公布董事會</strong>的未上市公司。創辦人與硬體採購單之間<strong>實質上沒有採購層級</strong>——路徑因此很短，但也代表<strong>第一次接觸的技術可信度就決定一切</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>為何對伺服器採購具關鍵性</th>
+<th>接觸方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Daniel Pautz</strong> — President &amp; CEO、創辦人</td>
+<td><strong>他就是簽核人。</strong> 三項互相獨立的一手紀錄使他成為唯一具名的主事者：以個人信箱登記的 ARIN OrgAdmin、BBB 上同時為 Principal Contact 與 Customer Contact、以及公司自家團隊頁長達十年的「President and CEO」。他公開的個人簡介以硬體為核心——自學出身的硬體實作者，自行開發過 whitebox 伺服器產品線——因此他<strong>對伺服器規格有技術主見，不只是簽名的人</strong>。他同時擁有同棟樓內的 GorillaServers，一段關係即可覆蓋兩個 AS 號碼</td>
+<td><strong>直接、技術、具體。</strong> 寄 <strong>dan@webnx.com</strong>（登錄於 ARIN，屬公開合法管道），或於 WebHostingTalk 上以其帳號「dan」互動。開場即談密度、功耗上限與交期，並針對<strong>其現行型錄中已有的具名平台</strong>切入——AMD EPYC Genoa、Threadripper、Xeon E 系列與 GPU 機種。<strong>切勿以制式公司介紹開場</strong>；一位親手組 whitebox 伺服器的創辦人會直接刪信</td>
+</tr>
+<tr>
+<td><strong>Dario Perovich</strong> — 共同創辦人暨 COO</td>
+<td>共同創辦人，且是<strong>公司唯一另外具名過的高階主管</strong>——出現於自家網站、BBB 紀錄，以及 RADB IRR 物件的 tech-c。他自己的 FEC 申報將職業自陳為「MANAGEMENT」。身為 colocation 與專用伺服器業者的 COO，他<strong>掌握部署現實</strong>：機櫃空間、電力、散熱、上架人力——大批伺服器訂單能否落地正是在此決勝。即使 Pautz 認同機器，他仍可能以營運理由否決</td>
+<td><strong>第二通電話，不是第一通。</strong> 待 Pautz 進場後，再引入 Perovich 談部署細節：上架人力、IPMI／頻外管理、RMA 週轉、以及 Ogden 與 LA/Equinix、曼哈頓各站的預裝作業。無公開個人信箱——經 <strong>noc@webnx.com</strong>、由 Pautz 引介，或 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/darioperovich/">LinkedIn</a></td>
+</tr>
+<tr>
+<td><strong>Mitch (Mitchell) Pautz</strong> — Director of Infrastructure</td>
+<td>兩位創辦人之下<strong>層級最高的具名技術職</strong>，也是 WebNX 最接近「VP Infrastructure」的角色。資料商顯示其位於加州 Glendora，對應的是約 10,000 平方英尺的洛杉磯據點，而非 100,000+ 平方英尺的 Ogden 站——因此他很可能掌管<strong>跨站點的平台標準</strong>。與 CEO 同姓，暗示內部信任度異於一般；<strong>但無任何申報文件確認親屬關係，此點僅為推論，不是事實</strong></td>
+<td><strong>技術驗證線。</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mitch-pautz-895244aa/">LinkedIn</a> 是唯一可查證管道——其信箱遭資料商遮罩，<strong>不得以格式推測</strong>。切入點為平台標準化、GPU／HPC 密度，以及 Ogden＋LA＋曼哈頓三站的汰換週期</td>
+</tr>
+<tr>
+<td><strong>Lynn Ure</strong> — V.P. Operations</td>
+<td><strong>與 COO 並存、獨立的 VP 層級營運負責人</strong>，且 LeadIQ 的資料型態顯示其由 Operations Manager 晉升，代表對「機器如何被收貨、如何被部署」有深厚的內部知識。在這種規模的公司，VP Ops 通常就是把已核准的採購轉成交付排程、也最能感受到爛供應商之痛的人</td>
+<td><strong>技術驗證之後、簽核之前。</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/lynn-ure-4289b2159">LinkedIn</a>。談交付窗口、棧板化、現場備品與支援 SLA——<strong>主軸是營運風險下降，不是規格數字</strong></td>
+</tr>
+<tr>
+<td><strong>Jake Keitz</strong> — Operations Manager（Ogden）</td>
+<td>日常營運經理，是實務上的<strong>早期訊號來源</strong>：早在採購正式立案之前，他就已知道真正的汰換時點與現場故障狀況。他不是簽核人，但可能成為可信的內部推手</td>
+<td><strong>低調探詢。</strong> 僅有遮罩信箱（<code>j***@webnx.com</code>），因此經公開的 support／NOC 管道或 LinkedIn 接觸。以其現正招募的職缺為切入——「Computer Tech - Data Center」、「Logistics &amp; Inventory Clerk」、「Principal Linux Systems Engineer」——三者合起來說明他們<strong>正在大量組裝與上架伺服器，並擴編收貨人力</strong></td>
+</tr>
+<tr>
+<td><strong>Kek P.</strong> — Business Development <em>（姓名不完整——<span class="gap">GAP</span>）</em></td>
+<td>自 Marc Rosenthal 離職後，<strong>WebNX 唯一一個與商務／業務端相關的具名人物</strong>，且公開資訊僅有名字加一個縮寫。因識別為單一來源且不完整，僅列為影響節點，不列為接觸目標</td>
+<td><strong>在姓氏獲一手紀錄確認前，不得以姓名嘗試接觸。</strong> 請改用 sales@webnx.com（1-800-840-5996 分機 1），<strong>以職務而非姓名</strong>指名其業務開發負責人</td>
+</tr>
+</tbody>
+</table>
+<h3>4.4 未能具名之職位——每一項皆為 <span class="gap">GAP</span></h3>
+<p><strong><span class="gap">GAP</span> — CFO／財務副總／財務主辦：</strong> 從未有過姓名。WebNX 從未公布過 CFO；歷史上最接近的 Marc Rosenthal（「Head of Business Development and Finance」）僅見於 2015 年存檔，2019-08-21 之後即消失。此職位公開空缺已逾七年。 · <strong><span class="gap">GAP</span> — 應付帳款／帳務負責人：</strong> 僅有職務信箱 accounts@webnx.com 與 1-800-840-5996 分機 2。 · <strong><span class="gap">GAP</span> — 採購／採購主管／供應商管理：</strong> 任何名冊、求職網站、LinkedIn 結果與申報文件中皆無此職稱；最接近的訊號是 Ogden 一則時薪 $18–20 的「Logistics &amp; Inventory Clerk」職缺，顯示<strong>收貨端正在擴編，但採購權並未下放</strong>。 · <strong><span class="gap">GAP</span> — CTO／工程副總：</strong> 無姓名，且很可能根本沒有此職位——實際存在的最高技術職稱是「Director of Infrastructure」；其現行招募的「Hands-on Architect」與「Principal Linux Systems Engineer」也都明確定位為<strong>個人貢獻者</strong>，不是管理職。 · <strong><span class="gap">GAP</span> — 業務副總／業務主管：</strong> 僅有不完整的「Kek P., Business Development」。 · <strong><span class="gap">GAP</span> — 公司登記之幹部與董事：</strong> 猶他州 Division of Corporations 查詢介面位於 Cloudflare 互動式挑戰之後；<strong>本檔不繞過 CAPTCHA</strong>，因此幹部、董事、經理人／股東與年報簽署人皆未經查證，且所有資料商鏡像站亦全數被阻擋或無資料。 · <strong><span class="gap">GAP</span> — WebNX, Inc. 之註冊代理人。</strong> · <strong><span class="gap">GAP</span> — 猶他州實體編號與申報歷史</strong>（含歷任幹部名單）。 · <strong><span class="gap">GAP</span> — ZoomInfo／LeadIQ 顯示縮寫為「J. F.」的 President：</strong> 無法解析，且<strong>與公司自家網站矛盾</strong>——官網直到 2024 年 11 月仍將「President and CEO」歸於 Daniel Pautz。可能是近期新聘、可能是過期資料、也可能是資料商雜訊；<strong>不猜測姓名</strong>。 · <strong><span class="gap">GAP</span> — GorillaServers, Inc.（AS53850）幹部：</strong> 其 ARIN 紀錄 100% 為職務帳號；僅 Daniel Pautz 的創辦關聯有據，且來源是媒體報導而非申報文件。 · <strong><span class="gap">GAP</span> — UCC-1 擔保權人與債務人簽署人：</strong> 猶他州 UCC 查詢位於同一個被阻擋的州政府平台。 · <strong><span class="gap">GAP</span> — USPTO 商標聲明簽署人與代理人：</strong> 查無可取得的 WEBNX 商標紀錄，且很可能根本不存在聯邦註冊。 · <strong><span class="gap">GAP</span> — webnx.com 隱私遮蔽前的歷史 WHOIS 登記人：</strong> 所觸及的歷史查詢服務不是付費牆就是被機器人偵測阻擋。 · <strong><span class="gap">GAP</span> — 119 N 600 W 之 Weber County 產權登記人：</strong> 未取得，且須注意該紀錄指向的是<strong>房東而非 WebNX</strong>——聯邦法院自身的認定即載明 WebNX 於 2014 年就該建物簽訂長期租約，並向其房東購買該台發電機。</p>
+<h3>4.5 已實際查詢之來源——含「查無」者</h3>
+<p><strong>有產出者：</strong> <strong>ARIN Whois/RDAP</strong>（autnum 18450、Org WEBNX POC 清單，以及以 <code>@webnx.com</code> 網域反查 POC）——僅回傳一位真人 Daniel Pautz 與三個職務帳號；<strong>AS53850（GorillaServers）回傳四個職務帳號、零個人姓名</strong>。 · <strong>RADB IRR（經 bgp.he.net）</strong>——唯一具名 Perovich 的登錄紀錄。 · <strong>BBB 商業檔案</strong>——確認法定名稱、1999-04-04 成立日、Pautz 同時為 Principal 與 Customer Contact、Perovich 為 COO，另有一則未經解釋的「incorporated 2018-09-14」線索。 · <strong>Wayback Machine CDX 與 webnx.com 存檔</strong>——本節最豐富的單一來源：2015 年 <code>/company/the-team/</code> 的兩份存檔載有三份主管簡介，Marc Rosenthal 即由此還原；2019、2021、2023 與 2024 年存檔僅剩 Pautz 與 Perovich，據此把其離職時點框定在 2015 年底至 2019 年中之間。 · <strong>CourtListener／RECAP</strong>——17 件案卷，《WebNX Inc v. Cummins Inc》（D. Utah 1:23-cv-00055-JNP-JCB）已完整閱讀。 · <strong>FEC Schedule A</strong>——對<strong>每一個</strong>姓名逐一查詢；以雇主反查的方式挖出三位在其他管道完全不可見的員工，並佐證了 Perovich。 · <strong>LinkedIn 公開個人檔案</strong> 與 <strong>RocketReach／LeadIQ／ZoomInfo</strong>（次級來源，證據等級已據此下調）。</p>
+<p><strong>已觸及但在人員面查無者：</strong> <strong>PeeringDB</strong>（net/4729 的網路面資料完整，但 <code>/api/poc</code> 回傳空陣列，<code>poc_updated</code> 自 2017-08-08 起停滯） · <strong>現行 webnx.com</strong>（已直接下載並全文搜尋其 1.7 MB JS bundle：Pautz、Perovich、Ure、Keitz <strong>出現次數皆為零</strong>，創辦人欄位是佔位字串） · <strong>webnx.com 歷史 WHOIS</strong>（登記人資料完全遮蔽於 Tucows 分層授權之後；whoisrequest 回 403、whoxy 回 522、viewdns 僅限付費金鑰、securitytrails 需驗證） · <strong>USPTO TSDR/TESS</strong>（API 回 404、Justia 回 403 且有 JS 挑戰，完全未浮現任何 WEBNX 商標） · <strong>Indeed、Glassdoor、KSL、ZipRecruiter 職缺</strong>（所有職缺皆無具名招募主管、無「reports to」欄位、無招募顧問姓名） · <strong>LowEndTalk</strong>（查無；搜尋結果被無關的 webnx.in 干擾） · <strong>WebHostingTalk</strong>（收穫稀薄——僅確認 Pautz 以「dan」發文） · <strong>HostingCon、CloudFest／CloudFest Americas、DataCenter World、NANOG、WHD.global 之講者與參展名單</strong>（<strong>任何一份都查無 WebNX 紀錄</strong>） · <strong>媒體報導、專訪與 podcast</strong>（2021 年發電機火警由 The Register、DCD、Data Center Frontier、TechRadar 與 Slashdot 報導，但該批報導中唯一具名的消息來源是 <strong>Ogden 市消防主任 Kevin Brown</strong>——外部官員；Pautz 僅被提及為 CEO，從未被引述）。</p>
+<p><strong>受阻或未觸及者及其原因：</strong> <strong>猶他州 Division of Corporations</strong>——<code>secure.utah.gov/bes/</code> 已停用並轉址至 <code>businessregistration.utah.gov</code>，後者於 Cloudflare 互動式挑戰後回傳 HTTP 403；<strong>本檔不破解 CAPTCHA</strong>，故此為硬性中止，不是疏漏。 · <strong>猶他州公司資料的第三方鏡像站</strong>——OpenCorporates（CAPTCHA）、Bizapedia（CAPTCHA）、CorporationWiki（403）、OpenGovUS（404）、BizProfile（回傳無關的紐約實體）、Buzzfile（查無此公司）。 · <strong>猶他州 UCC 查詢</strong>——同一個受阻平台。 · <strong>Weber County 產權／估價紀錄</strong>——連線失敗，且因法院紀錄已確立 WebNX 為<strong>承租方</strong>而降低優先序。 · <strong>德拉瓦州與內華達州登記機關</strong>——未另行查詢：所有已取得的一手紀錄都把營運實體指向猶他州 Ogden 的 119 N 600 W，在無線索的情況下追查 DE／NV 屬臆測。</p>
+<h2><strong>在不驚動公司的前提下、補齊幹部名單的最佳中性路徑：</strong> Bauman Loewe Witt &amp; Maxwell 的 <strong>Paul T. Landis</strong>（Plandis@blwmlawfirm.com，480.502.4664 分機 4225），即 Cummins 案中 WebNX 的登錄律師。須注意該事務所主攻<strong>財產代位求償</strong>，暗示推動該案求償的其實是 WebNX 的保險公司。</h2>
 <h2>5. 據點與機房</h2>
 <table>
 <thead>
