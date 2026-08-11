@@ -180,7 +180,270 @@ Sharktech, Inc. 是一家創辦人自有、家族控股的 DDoS 防護型裸機�
 
 ---
 
-## 8. 客戶與網路
+## 8. 融資鏈與 UCC 紀錄
+
+**範圍：** 僅涵蓋擔保融資與設備融資紀錄。以下逐筆記錄本次所有查詢動作，**包含被阻擋的那些**，以免「查不到」被誤讀成「不存在」。
+
+### 8.1 結論
+
+> ## **UNVERIFIED — portal blocked（未經查證 — 入口遭阻擋）**
+
+其中一個索引（**Montana**）已完整查詢完畢，在所有名稱變體與所有狀態篩選條件下皆回傳**零筆紀錄**，並以對照查詢（positive control）證明該索引確實在運作。而**最有理由存在申報紀錄的索引（Nevada）——公司總部所在地、自 2013-06-14 起即在此登記、最新機房與最新硬體都部署於此——則完全無法連線**：四個端點全部位於 Imperva／Incapsula WAF 之後，任何嘗試（含帶完整瀏覽器標頭與持久 cookie jar 的請求）皆回傳 `Request unsuccessful. Incapsula incident ID: 361000350130468865-125680011644045550`。
+
+**不可以對業務團隊說「Sharktech 沒有任何留置權」。** 唯一站得住腳的講法是：**「Sharktech 在 Montana 沒有任何 UCC 申報紀錄，而 Nevada 的索引尚未查詢。」**
+
+**GAP — 債務人的設立州（domicile state）未確認，這一點動搖了整個 UCC 查核的基礎。** 公開紀錄顯示 Sharktech, Inc. 於 **2013-06-14 以 FOREIGN Corporation（外國公司）身分在 Nevada 申報**，依定義即代表其設立地在別州——但本次未能取得載明該母州的紀錄。Montana 的公司實體查詢 API（`POST https://biz.sosmt.gov/api/Records/businesssearch`）對每一次查詢都回傳 Cloudflare「Just a moment…」攔截頁，儘管**同一主機上的留置權查詢 API 卻正常回應**。依 **UCC Article 9-307**，正確的申報機關是債務人的設立州，因此**若設立州不是 Montana，那份乾淨的 Montana 查詢結果就完全不具意義**。請注意本檔第 2 節與第 4.2 節載有「home jurisdiction＝Montana」（取自登記鏡像站），該前提**本次並未在原始來源再確認**，應視為未結案。**解法：** 透過 Nevada SOS 實體查詢調出 Nevada 外國公司登記紀錄（其中載有母州），或直接致電 Nevada SOS **(775) 684-5708**。
+
+### 8.2 查詢紀錄 — 每一次嘗試各佔一列，不合併
+
+| 入口（Portal） | URL | 使用的查詢字串 | 回應 | 遭阻擋時的替代路徑 |
+|---|---|---|---|---|
+| Montana Secretary of State 商業入口 — 著陸頁勘查（WebFetch） | [https://biz.sosmt.gov/search/business](https://biz.sosmt.gov/search/business) | 無 — 僅載入頁面，未送出任何債務人字串 | 頁面只回傳標題「Secretary of State」，沒有任何表單欄位、查詢控制項或錯誤訊息。該站是完全由前端渲染的 React 單頁應用（build 日期 meta 標籤：Thu Jul 23 2026 18:19:35 GMT），純抓取只會拿到空殼。 | 不適用 — 此為勘查步驟，非查詢。接著改為找出底層 API。 |
+| Montana Secretary of State — 直接嘗試 UCC 查詢路徑（WebFetch） | [https://biz.sosmt.gov/search/ucc](https://biz.sosmt.gov/search/ucc) | 無 — 僅載入頁面，未送出任何債務人字串 | 同樣的空 React 殼：只有標題「Secretary of State」，無表單欄位、無錯誤訊息。確認不執行 JavaScript 就無法操作介面，因此改為下載並分析應用程式 bundle `https://biz.sosmt.gov/wwwroot/static/js/main.b791fd76.js`（7,114,254 bytes）以定位底層 REST API。 | 不適用 — 勘查步驟。 |
+| Montana Secretary of State — 推測性 API 端點（WebFetch） | [https://biz.sosmt.gov/api/Business/Search?searchTerm=SHARKTECH](https://biz.sosmt.gov/api/Business/Search?searchTerm=SHARKTECH) | `SHARKTECH` | **HTTP 404 Not Found。** 未回傳 response body。 | 不適用 — 端點猜錯，已藉由閱讀應用程式 bundle 修正。 |
+| Montana Secretary of State — 由應用程式 bundle 取出的 UCC 查詢鍵，第一次嘗試 | [https://biz.sosmt.gov/api/Search/SEARCH_UCC](https://biz.sosmt.gov/api/Search/SEARCH_UCC) | POST body `{"SEARCH_VALUE":"SHARKTECH"}` | **HTTP 500。** 原文 body：`{"code":"api/search","message":"Error during search","internalerror":null,"displayInWizard":false}` | 不適用 — body 格式錯誤。 |
+| Montana Secretary of State — 同一端點，加分頁參數的 body 變體 | [https://biz.sosmt.gov/api/Search/SEARCH_UCC](https://biz.sosmt.gov/api/Search/SEARCH_UCC) | POST body `{"SEARCH_VALUE":"SHARKTECH","PAGE_NUMBER":1,"PAGE_SIZE":25}` | **HTTP 500。** 原文 body：`{"code":"api/search","message":"Error during search","internalerror":null,"displayInWizard":false}` | 不適用 — body 格式錯誤。 |
+| Montana Secretary of State — UCC11 認證版 Information Request 查詢端點（付費、具認證效力的路徑） | [https://biz.sosmt.gov/api/records/uccinforeqsearch](https://biz.sosmt.gov/api/records/uccinforeqsearch) | POST body 含 `SEARCH_ORG_NAME="SHARKTECH, INC."`、`SEARCH_TYPE="DEBTOR"`、`IS_ORG=true`、`IS_PARTIAL=true`、`SEARCH_LAPSED=true`、`SEARCH_UCC=true`、`SEARCH_GOV=true`、`SEARCH_EFS=true`、`SEARCH_CROP_LIEN=true`、`SEARCH_AG_LIEN=true`、`SEARCH_REQUEST_TYPE="LIST_ONLY"`、`SEC_PARTY_SEARCH_YN=false` | **HTTP 500。** 原文 body：`{"code":"api/Records","message":"Internal Error Occurred","internalerror":null,"displayInWizard":false}`。此端點位於付費 UCC11 精靈流程之後，需登入工作階段並完成付款，無法以匿名方式驅動。 | 此端點**本身就是**付費認證路徑。Montana 費用表：透過 UCC11 Information Request 表單，每筆標準債務人或擔保權人查詢 **$7.00**；加選「List and Copies」以檢視擔保品明細 **+$5.00**；每次認證副本 **$7.00**；或月訂閱 Monthly Lien Search Subscription **$25.00/月**無限次查詢。表單：[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131)・費用來源：[https://sosmt.gov/business/lien-information/](https://sosmt.gov/business/lien-information/) |
+| Montana Secretary of State — 通用查詢鍵猜測 | [https://biz.sosmt.gov/api/Search/UCC](https://biz.sosmt.gov/api/Search/UCC) | POST body `{"SEARCH_VALUE":"SHARKTECH"}` | **HTTP 500。** 原文 body：`{"code":"api/search","message":"Error during search","internalerror":null,"displayInWizard":false}` | 不適用 — 查詢鍵錯誤。 |
+| Montana Secretary of State — 通用查詢鍵猜測 | [https://biz.sosmt.gov/api/Search/LIENS](https://biz.sosmt.gov/api/Search/LIENS) | POST body `{"SEARCH_VALUE":"SHARKTECH"}` | **HTTP 500。** 原文 body：`{"code":"api/search","message":"Error during search","internalerror":null,"displayInWizard":false}` | 不適用 — 查詢鍵錯誤。 |
+| Montana Secretary of State — 查詢說明端點（用以確認免費索引的涵蓋範圍與認證效力） | [https://biz.sosmt.gov/api/search/description/ucc](https://biz.sosmt.gov/api/search/description/ucc) | 無 — GET，僅取 metadata | **HTTP 200。** 原文："Search by debtor name or lien filing number. Maximum of 100 results provided; please use options on the Advanced tab to narrow results. [Note] - these search results are not certified. To purchase certified search results, use the [UCC11 request form>>>](/forms/new/1131). - This search tool uses a \"contains\" search by default. Ex. Entering \"Montana\" in the search box will return results that start with Montana (Montana Sky) as well as those that contain the name (Let's Visit Montana.) - Spaces are important and can affect results. Please search multiple variations to obtain results. Ex. \"A&B\" vs. \"A& B\" vs. \"A & B\". - When attempting to exclude individual names, enter a list of singular names separated by commas. Ex. (Anna, George, Paula) Do not include last names. - If conducting a \"contains\" search by last name, please note that only the first debtor's name will appear. Ex. Searching for last name \"Doe\" will only show a result for \"John Doe.\" You must click on the result to see additional debtor names on the right-side panel. (Jane Doe, Henry Doe, etc.)" | 不需替代路徑 — 免費公開索引已成功連線。若需**具認證效力**的結果，付費路徑仍是 UCC11 Information Request 表單 [https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131)，每筆 **$7.00**（加 List and Copies **+$5.00**），依 [https://sosmt.gov/business/lien-information/](https://sosmt.gov/business/lien-information/)。該端點自述："these search results are not certified. To purchase certified search results, use the UCC11 request form"。 |
+| **Montana Secretary of State — 免費公開留置權索引（可用端點、正確 body 格式）。以債務人姓名建索引，涵蓋 UCC、EFS 與 Title 71 各類留置權。** | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch)（介面等同：[https://biz.sosmt.gov/search/ucc](https://biz.sosmt.gov/search/ucc)） | `SEARCH_VALUE="SHARKTECH"`、`STARTS_WITH_YN=false`（包含式比對）、`STATUS="ALL"`、`EXCLUDE_VALUES=""`、`FILING_DATE={start:null,end:null}`、`LAPSE_DATE={start:null,end:null}`、`CITY=""` | **HTTP 200。零筆紀錄。** 原文 body：`{"template":[{"label":"Lien Type","id":"RECORD_TYPE"},{"label":"Debtor Info","id":"TITLE"},{"label":"File Number","id":"RECORD_NUM"},{"label":"Secured Party Info","id":"SEC_PARTY"},{"label":"Status","id":"STATUS"},{"label":"Filing Date","id":"FILING_DATE"},{"label":"Lapse Date","id":"LAPSE_DATE"}],"rows":{}}` | 若要就此「零筆」結果取得認證確認：Montana UCC11 Information Request 表單 [https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131)，標準查詢每筆 **$7.00**、「List and Copies」**+$5.00**、每次認證副本 **$7.00**，或 **$25.00/月**無限次訂閱。費用來源：[https://sosmt.gov/business/lien-information/](https://sosmt.gov/business/lien-information/) |
+| Montana Secretary of State — 免費公開留置權索引，**含已失效（LAPSED）** 篩選 | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="SHARKTECH"`、`STATUS="ACTIVE_LAPSED_UNLAPSED"`、`STARTS_WITH_YN=false` | **HTTP 200。零筆紀錄。** `"rows":{}` — 確認連已失效或歷史申報也不存在。 | 同上 — Montana UCC11 每筆 **$7.00**，[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131) |
+| Montana Secretary of State — 免費公開留置權索引，**僅有效未失效（ACTIVE UNLAPSED）** 篩選 | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="SHARKTECH"`、`STATUS="ACTIVE_UNLAPSED"`、`STARTS_WITH_YN=false` | **HTTP 200。零筆紀錄。** `"rows":{}` | 同上 — Montana UCC11 每筆 **$7.00**，[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131) |
+| Montana Secretary of State — 免費公開留置權索引，含空格的別名變體 | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="SHARK TECH"`（含空格變體；入口說明特別警告「Spaces are important and can affect results」） | **HTTP 200。零筆紀錄。** `"rows":{}` | 同上 — Montana UCC11 每筆 **$7.00**，[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131) |
+| Montana Secretary of State — 免費公開留置權索引，含標點的完整法定名稱 | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="SHARKTECH, INC."`、`STATUS="ALL"`、`STARTS_WITH_YN=false` | **HTTP 200。零筆紀錄。** `"rows":{}` | 同上 — Montana UCC11 每筆 **$7.00**，[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131) |
+| Montana Secretary of State — 免費公開留置權索引，不含標點的法定名稱 | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="SHARKTECH INC"`、`STATUS="ALL"`、`STARTS_WITH_YN=false` | **HTTP 200。零筆紀錄。** `"rows":{}` | 同上 — Montana UCC11 每筆 **$7.00**，[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131) |
+| **Montana Secretary of State — 免費公開留置權索引，對照組查詢（POSITIVE CONTROL）**（以較寬的字根查詢，專門用來證明索引確實在運作並會比對） | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="SHARK"`、`STATUS="ALL"`、`STARTS_WITH_YN=false`（包含式比對） | **HTTP 200。回傳六筆紀錄——對照組成功，證明上述「零筆」是真陰性，不是查詢壞掉。** 回傳紀錄包括：(1)「SHARKEY INSURANCE CENTER, INC. - MISSOULA, MT」，文號 1610281443304，申報日 10/28/2016，失效日 10/28/2031，類型 UCC，狀態 Approved，擔保權人「FIRST SECURITY BANK OF MISSOULA, DIVISION OF GLACIER BANK - MISSOULA, MT」；(2)「SHARKEY INSURANCE CENTER INC. - MISSOULA, MT」，文號 20200446625，申報日 06/17/2020，失效日 06/17/2030，類型 UCC，狀態 Approved，擔保權人「U.S. SMALL BUSINESS ADMINISTRATION - EL PASO, TX」；(3)「SHARK LLC - MISSOULA, MT」，文號 20220370193，申報日 06/08/2022，失效日 06/08/2027，類型 UCC，狀態 Approved，擔保權人「M2B FUNDING CORP. - AVENTURA, FL」；另有三筆 SHARK 字根紀錄。**六筆全部與 Sharktech, Inc. 無關，也與任何主機代管、科技或資料中心業者無關。** | 不需替代路徑 — 此次嘗試本來就是為了證明端點沒有靜默失敗。 |
+| Montana Secretary of State — 免費公開留置權索引，**擔保權人姓名探測**（測試 Montana 索引中是否存在任何與 Lenovo 相關的申報） | [https://biz.sosmt.gov/api/Records/uccsearch](https://biz.sosmt.gov/api/Records/uccsearch) | `SEARCH_VALUE="LENOVO"`、`STATUS="ALL"`、`STARTS_WITH_YN=false` | **HTTP 200。零筆紀錄。** `"rows":{}` — Montana 索引中沒有任何一筆申報在建索引的姓名欄位帶有 LENOVO。 | **注意：** 依該索引自述（「Search by debtor name or lien filing number」），它是以**債務人**姓名建索引，因此此處為零**並不排除** Lenovo 以擔保權人身分出現在另一個名稱不同的債務人項下。真正的擔保權人查詢須走付費 UCC11 路徑並設定 `SEC_PARTY_SEARCH_YN`，每筆 **$7.00**：[https://biz.sosmt.gov/forms/new/1131](https://biz.sosmt.gov/forms/new/1131) |
+| Montana Secretary of State — **公司實體登記查詢**（嘗試確認設立州前提） | [https://biz.sosmt.gov/api/Records/businesssearch](https://biz.sosmt.gov/api/Records/businesssearch) | `SEARCH_VALUE="SHARKTECH"`、`STARTS_WITH_YN=false`、`ACTIVE_ONLY_YN=false` | **遭阻擋。** 回傳的不是 JSON 而是 Cloudflare 攔截頁：`<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title>...`，帶有 Cloudflare challenge-platform CSP。**注意這個不對稱：** 同一主機、同一工作階段中，留置權查詢端點正常回應，但公司實體端點卻掛著挑戰驗證。**設立州無法確認。** | 於 [https://biz.sosmt.gov/search/business](https://biz.sosmt.gov/search/business) 以人工瀏覽器工作階段查詢（免費），或以電話向 Montana SOS 調閱公司登記紀錄。**這是確認或推翻「Sharktech, Inc. 是否為 Montana 設立實體」此一前提所必需。** |
+| Montana Secretary of State — 公司實體登記查詢，改用較寬字根重試 | [https://biz.sosmt.gov/api/Records/businesssearch](https://biz.sosmt.gov/api/Records/businesssearch) | `SEARCH_VALUE="SHARK"`、`STARTS_WITH_YN=false`、`ACTIVE_ONLY_YN=false` | **遭阻擋。** 同樣的 Cloudflare「Just a moment…」挑戰攔截頁。已改以自 `https://biz.sosmt.gov/search/business` 取得的持久 cookie jar 重試——仍然被送挑戰頁。 | 於 [https://biz.sosmt.gov/search/business](https://biz.sosmt.gov/search/business) 以人工瀏覽器工作階段查詢（免費）。 |
+| **Nevada Secretary of State — UCC 查詢索引（esos.nv.gov）** | [https://esos.nv.gov/UCC/UCCSearch/UCCSearchIndex](https://esos.nv.gov/UCC/UCCSearch/UCCSearchIndex) | 無 — 入口無法連線，因此**從未送出任何債務人字串** | **遭 Imperva／Incapsula 阻擋。** HTTP 302 轉向 `/?IsAccountExpired=False`，接著是 Incapsula 攔截頁。原文內容：`Request unsuccessful. Incapsula incident ID: 361000350130468865-125680011644045550`。回應標頭確認 WAF：`x-cdn: Imperva`、`x-iinfo: 49-39743069-39743094 NNNY...`。Server: Microsoft-IIS/10.0，`x-aspnetmvc-version: 5.2`。 | Nevada UCC 查詢需要 SilverFlume 帳號並以人工瀏覽器操作。Nevada SOS Commercial Recordings 電話 **(775) 684-5708**。**本次未查證 Nevada 的查詢費與認證副本費，故刻意不列出——見 GAP。** 商業替代方案：委由 CSC 或 Wolters Kluwer Lien Solutions 等留置權查詢服務商執行全國性債務人查詢，費用為報價制，本次未查證。 |
+| Nevada Secretary of State — UCC 短路徑嘗試 | [https://esos.nv.gov/ucc](https://esos.nv.gov/ucc) | 無 — 入口無法連線，未送出債務人字串 | **遭 Imperva／Incapsula 阻擋。** HTTP 200，但只回傳 212 bytes 的殘段，內含 `_Incapsula_Resource` script 與一個隱藏的挑戰 iframe。未提供任何查詢表單。 | 同上 — SilverFlume 帳號加人工瀏覽器工作階段；Nevada SOS Commercial Recordings **(775) 684-5708**。Nevada 費用**未查證**。 |
+| Nevada SilverFlume 商業入口 — UCC 路徑 | [https://www.nvsilverflume.gov/ucc](https://www.nvsilverflume.gov/ucc) | 無 — 入口無法連線，未送出債務人字串 | **遭 Imperva／Incapsula 阻擋。** HTTP 200，212 bytes 的 Incapsula 殘段，未提供查詢表單。 | 同上 — SilverFlume 帳號加人工瀏覽器工作階段。Nevada 費用**未查證**。 |
+| Nevada Secretary of State — 實體查詢（嘗試自外國公司登記紀錄確認母州／設立州） | [https://esos.nv.gov/EntitySearch/OnlineEntitySearch](https://esos.nv.gov/EntitySearch/OnlineEntitySearch) | 無 — 入口無法連線，未送出任何債務人或實體字串 | **遭 Imperva／Incapsula 阻擋。** HTTP 200，212 bytes 的 Incapsula 殘段。公開次級來源顯示 Sharktech, Inc. 於 **2013-06-14 以 FOREIGN Corporation 身分在 Nevada 申報**，此點確認公司設立於他州，但**載明該州別的紀錄無法取得。** | 同上。原本可藉此自 Nevada 外國公司登記紀錄確認 Sharktech 的母州——**該筆資料至今仍未取得。** |
+| Nevada Secretary of State — UCC 查詢，**以完整瀏覽器模擬升級重試** | [https://esos.nv.gov/UCC/UCCSearch/UCCSearchIndex](https://esos.nv.gov/UCC/UCCSearch/UCCSearchIndex) | 無 — 重試時帶 Chrome 126 user-agent 與 Accept／Accept-Language／Upgrade-Insecure-Requests／Sec-Fetch-Dest／Sec-Fetch-Mode／Sec-Fetch-Site 標頭、持久 cookie jar 並跟隨轉向。**仍然沒有任何債務人字串抵達索引。** | **遭阻擋。** HTTP 200，922 bytes 的 Incapsula 挑戰頁，內含 `Request unsuccessful`、`_Incapsula_Resource` 與 `Incapsula` 等原文字串。完整瀏覽器模擬並未突破該 WAF。**NEVADA 完全未經查詢。** | 自動化存取 Nevada 不可行。必要路徑為：(a) 以註冊帳號在 SilverFlume 進行人工瀏覽器工作階段；(b) 致電 Nevada SOS Commercial Recordings **(775) 684-5708**；或 (c) 委由商業留置權查詢服務商（CSC、Wolters Kluwer Lien Solutions）代為執行 Nevada 債務人查詢。**NEVADA 費用未查證——寧可不列，也不臆測。** |
+
+### 8.3 在案申報全文
+
+**零筆申報。`ucc_filings[]` 是因為證據為零而空白，不是因為漏寫。**
+
+此處沒有申報明細可以呈現，因為唯一有回應的索引——Montana 免費公開留置權索引，以債務人姓名建索引，涵蓋 UCC、EFS 與 Title 71 各類留置權——在 `SHARKTECH`、`SHARK TECH`、`SHARKTECH, INC.`、`SHARKTECH INC` 四種名稱下，以及 `STATUS="ALL"`、`STATUS="ACTIVE_LAPSED_UNLAPSED"`、`STATUS="ACTIVE_UNLAPSED"` 三種狀態篩選下，全部回傳**零筆紀錄**；而同一工作階段、同一端點上的 `SHARK` 對照查詢回傳了六筆真實的 Montana 申報並附完整擔保權人資料。因此這個零是**該索引的真陰性**，不是靜默失敗。
+
+因此本節：
+
+- **沒有文號（filing number）**可謄錄；
+- **沒有申報日期**；
+- **沒有失效／續期日期**——因此**沒有任何「等留置權到期」的時點可供替換策略使用**；
+- **沒有擔保權人名稱與地址**；
+- **沒有申報所載的債務人名稱與地址**；
+- **沒有擔保品描述**——沒有任何原始文字可以逐字引述於引用區塊，本檔亦未杜撰；
+- **沒有任何修正、讓與、續期或終止申報**；
+- **沒有紀錄連結。**
+
+**「沒有終止申報（TERMINATION）」這件事，資訊量與「沒有 UCC-1」一樣大。** 若存在已終止的申報，代表這家公司曾以設備借款並已清償，借款額度因而重新開放。但實際情況是：**該索引中根本沒有任何以設備為標的的信用歷史紀錄。**
+
+**GAP：** 擔保權人身分完全未知。由於唯一有回應的索引查出零筆，因此沒有任何擔保權人名稱、地址、擔保品描述、文號、失效日、修正、讓與或終止可供謄錄。
+
+**GAP：** Nevada 索引從未被查詢，因此 Nevada 可能存在申報——包括可能的 Lenovo Financial Services 或設備出租人 UCC-1——而這些完全不會出現在本檔任何位置。
+
+### 8.4 這份紀錄的意義
+
+| 觀察 | 代表什麼 | 信心度 | 對銷售的意義 |
+|---|---|---|---|
+| Montana 留置權索引對 SHARKTECH 在所有名稱變體與所有狀態篩選（含已失效申報）下皆回傳**零筆紀錄**。該查詢已由對照組證明有效：同一工作階段、同一端點上的 `SHARK` 查詢回傳六筆真實的 Montana 申報並附完整擔保權人資料（SHARKEY INSURANCE CENTER, INC.／FIRST SECURITY BANK OF MISSOULA；SHARKEY INSURANCE CENTER INC.／U.S. SMALL BUSINESS ADMINISTRATION；SHARK LLC／M2B FUNDING CORP.，另有三筆）。因此該零筆是**真陰性**，不是靜默失敗。 | 兩種可能：**(a)** Sharktech 確實從未設定過任何登記於 Montana 的擔保權；或 **(b)** Montana 根本不是正確的申報機關，因為公司並非在該州設立。依 **UCC 9-307**，登記組織的正確申報機關是其設立州，因此若 Montana 前提有誤，這份乾淨結果**不但不令人安心，反而毫無意義**。 | 對**觀察本身**為 **HIGH**（查詢確實執行、回傳 HTTP 200，且對照查詢證明索引在運作且會比對）。對**由此導出的任何結論**為 **LOW-TO-MEDIUM**，因為債務人設立州未確認，Montana 很可能根本是錯的索引。 | **不可以對業務團隊說「Sharktech 沒有任何留置權」。** 站得住腳的說法要更窄：**「Sharktech 在 Montana 沒有任何 UCC 申報紀錄，而 Nevada 的索引尚未查詢。」** 在以留置權到期為基礎建立任何替換時點策略之前，先花 **$7** 取得認證版 Montana UCC-11，並把 Nevada 查詢做完。**這是一件兩小時、總花費不到 $50 的工作，卻能消除本檔最大的單一未知。** |
+| **Lenovo 是既有硬體廠商，此點由第一手來源獨立確認，完全不依賴 UCC 查詢。** Sharktech 公告 **#221**（**2025-01-16**）推出 AMD EPYC 7702P 裸機產品線，規格欄逐字列為："System : Lenovo \| CPU : AMD EPYC 7702P - 64 Cores / 128 Threads \| Memory : 256GB DDR4 RAM \| Storage : 2TB NVMe (expandable to 14 NVMe U.2 drives) \| Network : 10G Shared Unmetered (up to 40Gbps) \| Locations Available : Los Angeles, Las Vegas \| Monthly Pricing : Starting at $599/month"。關鍵在於，**唯一有回應的索引中並未出現任何 Lenovo Financial Services 的擔保權。**（[公告 #221](https://portal.sharktech.net/index.php?rp=/announcements/221)） | 就 Montana 紀錄所示，這段 Lenovo 關係看起來是**單純的採購關係，而非融資關係**。原廠的自有金融部門（Lenovo Financial Services、Dell Financial Services、HPE Financial Services）在承作設備融資時，幾乎必然會以 UCC-1 完成擔保權設定。**沒有這類申報，是「Lenovo 設備是以現金買斷或透過經銷商以一般商業條件購入，而非走原廠租賃或存貨融資額度」的弱證據。** | **HIGH** — 這是公司自家面向客戶公告中的直接引述，不是推論。 | 既有關係是真的，但**通常鞏固既有關係的那層融資並不存在。那就是切入口。** 主打 EPYC 平台（他們毛利最健康、且持續補貨的產品線），不要一開始就想替換整個 Xeon 機隊。另外注意該公告自己承認："initial quantities are limited, and delivery may take up to 10 days"。**對一家庫存 48 小時內就賣光的公司來說，交期是活生生的痛點**——只要打敗這個 10 天的數字，就有一個他們零成本即可驗證的具體楔子。 |
+| 對一家在五個資料中心運作數千台伺服器的公司而言，所查索引中**完全沒有設備留置權**是不尋常的。本研究其他部分呈現的採購模式解釋了這件事：他們一次只買一小批七年舊的翻新料件（「we received a new batch of EPYC 7702 servers from our supplier」，[公告 #244](https://portal.sharktech.net/index.php?rp=/announcements/244)）、自行組裝而非買整機（「We're currently building 12 of them in Las Vegas」，[公告 #243](https://portal.sharktech.net/index.php?rp=/announcements/243)），並以營運現金自籌——**2025-04-01 以「as our own costs of operation continue to grow」為由調漲 9.25%**，以及寧可整個搬遷資料中心也不吸收房東漲價，都是佐證。 | 採購是**以現金流支應，不是舉債**。這代表**沒有優先債權人的財務條款限制其設備採購**（明天想跟誰買都可以），但同樣代表**沒有可動用的既有信用額度**（因此批量大小受限於手上現金，這也解釋了為何一次買十二台而不是一百台）。同時也代表**沒有任何融資綁定在保護既有廠商。** | **MEDIUM** — 採購行為證據強且為第一手，但「沒有留置權」這件事的可靠度，等同於「只查了一個索引」的可靠度。 | **這是一個沒有既有信用額度的現金買家，這一點完全決定了交易的設計方式。** 不要用整機隊汰換的大額資本支出報價開場。要按照一個以現金支應、以採購戰役為節奏的買家真正吃得下的規模來設計：**小批量首單（10–15 台，正好對應他們實際觀察到的「12 台」採購單位）、分批交付**，並且——如果可以提供的話——**提供融資或租賃方案；就目前證據，這是他們現在從任何人那裡都沒有拿到的東西**，因此會是真正的差異化提案，而不是商品化報價。 |
+| 原本被視為關鍵的問題——擔保權人究竟是原廠金融部門、經銷商、銀行還是設備出租人，以及這對通路行為代表什麼——**無法從留置權紀錄回答，因為所查索引中根本沒有擔保權人。** 不過公司自己的措辭回答了背後真正的商業問題。[公告 #244](https://portal.sharktech.net/index.php?rp=/announcements/244) 說他們「received a new batch of EPYC 7702 servers from **our supplier**」——單數、通稱，而且明白指向中介商而非製造商。[公告 #221](https://portal.sharktech.net/index.php?rp=/announcements/221) 具名系統為 Lenovo，但**並未**具名 Lenovo 為賣方。 | 他們是**透過中介通路採購，不是直接向原廠買**，而且買的是**翻新品而非全新品**。這與其他所有觀察一致：2016–2019 世代料件、自行組裝、小批量，以及把 CPU 換進自己既有的機殼（公告 #243 的 Gold 6148 → Gold 6248 升級是**處理器移植，不是整機採購**）。 | **MEDIUM** — 推論方向有第一手措辭強力支持，但實際上並未辨識出任何擔保權人，因此「通路 vs. 直接」這個問題是由公告而非留置權紀錄定案的。 | **視為通路型帳戶（CHANNEL account），不是直接帳戶。** 就 Rule 8 的經銷商核准而言，證據指向既有的經銷／中盤商關係而非直接原廠關係，因此**以經銷商為主導的銷售動作才是正確路徑，且應事先取得核准**。兩個實務追蹤事項：查出「our supplier」到底是誰（一通業務電話就能問到），並且認知到不論那是誰，目前握有這層關係**以及交期承諾**。競爭戰場是對抗中盤商的翻新品報價，不是對抗 Lenovo 的定價表。 |
+| **Nevada 索引——最有理由存在申報紀錄的地方**，因為公司總部設於此、自 2013-06-14 起在此登記、最新機房與最新硬體都部署於此——**從未被查詢。** 四個 Nevada 入口端點對每一次嘗試（含帶完整瀏覽器標頭與持久 cookie jar 者）皆回傳 Imperva／Incapsula 阻擋（`Request unsuccessful. Incapsula incident ID: 361000350130468865-…`）。 | 任何與 Lenovo 相關或與出租人相關的申報，**最可能所在的位置尚未被檢查**。另外有一個值得測試的時點巧合：**2025-12-16** 於 ARIN 登記的 **208.98.32.0/19**（名稱「SHARKTECH-LAS」）與 **2024-05-23** 的 IPv6「ST-LV6」區段，都代表拉斯維加斯的實質產能承諾——**而實質產能承諾正是設備融資最容易被完成設定的時點。** | 對「Nevada 未被查詢、因此結論不完整」為 **HIGH**，這是直接觀察。至於「Nevada 查下去會查到什麼」的具體預測則**明確屬於推測**，僅作為查詢假設提出。 | **在任何替換計畫定案之前，先把 Nevada 查詢的預算編進去。** 若 Nevada 真的查到 Lenovo Financial Services 或原廠金融的 UCC-1，則原本的前提成立，接觸時點就必須**對準到期日**——以 2025 年 1 月 EPYC 採購前後申報的五年期 UCC-1 推算，大約落在 **2030 年 1 月**，那會是與目前證據所支持者完全不同的計畫。若 Nevada 也是乾淨的，那麼替換就是**純商業競爭**（價格、交期、密度、記憶體／儲存採購槓桿），可以立刻展開。**整個進入市場的姿態，取決於一項不到 $50 且尚未執行的查詢。** |
+| **沒有續期、終止或修正紀錄可供分析，因為根本沒有申報。** 而「沒有終止申報」與「沒有 UCC-1」一樣具資訊量：若存在已終止的申報，代表這家公司曾以設備借款並已清償，借款額度因而重新開放。實際情況是**該索引中根本沒有任何以設備為標的的信用歷史紀錄。** | 結合已觀察到的行為——**2025-04-01 調漲 9.25%**、拒絕接受 H5 的「massive price increase」並於 **2026 年 5 月將整個丹佛 point of presence 遷至 US Signal COO1**、採購七年舊的翻新料件、自行組裝——整體圖像是一個**資本紀律極強、一切以現金流支應、靠控制投入成本而非靠漲價來守住毛利的營運者。** | 對營運面解讀為 **MEDIUM-HIGH**（建立在有日期的第一手陳述上）；對「若有留置權會顯示什麼」的反事實推論為 **LOW**。 | 兩個推論。**第一**，沒有留置權到期日可以對準，因此以目前證據，**時點問題在 Montana 是無實益的**，而交易規模的限制因素是**現金，不是擔保負擔**。**第二**，H5 事件是本檔中最好用的一段素材：**這是一個為了避免漲價而願意實體搬遷整個資料中心的買家。** 任何提案都必須以**每台可售節點的每月總成本**為主軸，並把機櫃空間與電力節省明確量化，因為那正是他們已經公開、實際且付出代價去操作過的槓桿。**不要以效能開場，要以每台節點的成本開場。**（[公告 #223](https://portal.sharktech.net/index.php?rp=/announcements/223)・[公告 #235](https://portal.sharktech.net/index.php?rp=/announcements/235)） |
+
+### 8.5 本節未結 GAP
+
+1. **設立州未確認** — 本節最大的缺口。Nevada 外國公司身分已確認（2013-06-14 申報），證明公司設立於**其他州**，但載明該州的紀錄未取得。Montana 公司實體 API 遭 Cloudflare 攔截。**解法：Nevada SOS 實體查詢，或致電 (775) 684-5708。**
+2. **NEVADA UCC 索引從未查詢** — 四個端點全遭 Imperva／Incapsula 阻擋，零筆 Nevada 申報被檢視。**對 Nevada 的融資情形不能作任何陳述。**
+3. **NEVADA UCC 查詢費未查證** — 刻意不列。Montana 費用**已**查證（標準查詢 $7、List and Copies +$5、每次認證副本 $7、月訂閱 $25 無限次）。**不可假設 Nevada 比照 Montana。**
+4. **擔保權人身分完全未知** — 沒有任何名稱、地址、擔保品、文號、失效日、修正、讓與或終止可供謄錄。
+5. **未查詢任何其他州** — 本次範圍僅 Montana（已完成）與 Nevada（遭阻擋）。**California（洛杉磯）、Colorado（丹佛）、Illinois（芝加哥）與 Delaware 皆未查詢。** 設備出租人經常在設備所在州提出預防性 UCC-1，因此在釐清設立州之後，逐站點掃描 CA／CO／IL 是價值最高的下一步查詢。
+6. **既有廠商前提存在張力，尚未解決** — Lenovo 已由第一手來源確認（公告 #221，"System : Lenovo"），但一則未經查證的 LowEndTalk 貼文則指向 Supermicro 與 Gigabyte 的較新 Genoa 世代庫存。兩者可能同時為真（Lenovo 對應對外零售的 EPYC 7702P 產品線；Supermicro／Gigabyte 對應從未公開上架的倉庫庫存）。**各廠商的錢包佔比未知。**
+
+---
+
+## 9. 採購時鐘
+
+### 9.1 型錄快照時間軸
+
+| 快照日期 | SKU 數 | 最新世代料件 | 較前次新增 | 較前次下架 | 快照連結 |
+|---|---|---|---|---|---|
+| **2022-12-07** | 31 個 SKU 列 | Intel Xeon Silver 4114 — Skylake-SP，第一代 Xeon Scalable，**2017** 上市（擷取當下機隊已落後當時最新料件 5 年） | **基準線** — 建立起始機隊。當時在售最新為 Xeon Silver 4114（2017），最舊為 Xeon E3-1270v2（Sandy Bridge，2012）。此次擷取的 tooltip 文字為「Dual Xeon Silver 4114(v2 available)」。 | **基準線** | [Wayback 2022-12-07](https://web.archive.org/web/20221207130126/https://sharktech.net/dedicated-servers/) |
+| **2023-09-21**（2023-09-25 確認相同） | 31 個 SKU 列 | Intel Xeon Gold 6148 — Skylake-SP，**2017**（與它取代的 Silver 4114 同世代，是較高階的型號，**不是**世代躍進） | **新基礎 CPU：Dual Xeon Gold 6148。** 由兩個第一手來源獨立且**更早**佐證：2023-06-20 張貼的 Web Hosting Talk 促銷，於阿姆斯特丹、芝加哥、丹佛與洛杉磯以 $329–399/月販售「Dual Xeon Gold 6148 / 256GB RAM / 2x 2TB NVMe / 10Gbps unmetered」（[WHT 討論串](https://www.webhostingtalk.com/showthread.php?t=1898496)），以及 Sharktech 2023-06-01 的[公告 #207](https://portal.sharktech.net/index.php?rp=/announcements/207)「More Xeon Scalable Gold 6148 Systems now in Stock!」。**因此真正首次出現的時點是 2023-06-01 或更早，而非九月。** | Dual Xeon Silver 4114 自基礎組態下架 | [Wayback 2023-09-21](https://web.archive.org/web/20230921160541/https://sharktech.net/dedicated-servers/) |
+| **2023-12-08** | 27 個 SKU 列 | Intel Xeon Gold 6148（Skylake-SP，2017） | 無 — 無新 CPU 或 GPU。型錄縮減 4 列。 | Dual Xeon E5-2670v2（Ivy Bridge，2013）與 Xeon E3-1270v2（Sandy Bridge，2012）同時下架 — **最舊的料件終於離開型錄** | [Wayback 2023-12-08](https://web.archive.org/web/20231208100055/https://sharktech.net/dedicated-servers/) |
+| **2024-04-22** | 27 個 SKU 列 | Intel Xeon Gold 6148（Skylake-SP，2017） | 無。**四個半月型錄零變動——本觀察期內最長的靜默期，也是本檔中最明確的「沒有在採購」訊號。** | 無 | [Wayback 2024-04-22](https://web.archive.org/web/20240422095050/https://sharktech.net/dedicated-servers/) |
+| **2024-08-06** | 33 個 SKU 列 | Xeon Gold 6148（2017）仍為最新；新進的 E5-2695v4 是 **2016** 世代 | **採購事件 — 新基礎 CPU：Dual Xeon E5-2695v4**（Broadwell-EP，18C，2016）。史上第一顆 v4 世代料件出現。型錄自 27 擴至 33 列（+6）。**請注意方向：他們在加入較新料件（2017 Skylake）的同時，也加入了更舊的料件（2016 Broadwell）——這是「翻新通路有什麼便宜就買什麼」而非「照產品藍圖走」的特徵。** | 無 | [Wayback 2024-08-06](https://web.archive.org/web/20240806204518/https://sharktech.net/dedicated-servers/) |
+| **2024-12-01** | 42 個 SKU 列 | NVIDIA RTX A4000 16GB — Ampere，**2021**（整個機隊的最高水位，而且是**工作站級顯示卡，不是資料中心加速器**） | **採購事件 — 史上第一個 GPU 層級：** NVIDIA RTX A4000 16GB 以基礎 GPU 產品出現，V100 32GB 列為升級選項。型錄自 33 擴至 42 列（+9）。**這是 Sharktech 型錄中放進去過最新的料件，而且至今仍是。** | 無 | [Wayback 2024-12-01](https://web.archive.org/web/20241201134007/https://sharktech.net/dedicated-servers/) |
+| **2025-05-27** | 47 個 SKU 列 | AMD EPYC 7702P — Zen 2「Rome」，**2019**（CPU 端）；NVIDIA RTX A4000 2021（GPU 端） | **採購事件 — 史上第一顆 AMD 料件：AMD EPYC 7702P**（64C，2019）。型錄自 42 擴至 47 列（+5）。由 2025-01-16 的[公告 #221](https://portal.sharktech.net/index.php?rp=/announcements/221) 精確定日，該公告同時具名廠商：**"System : Lenovo"**、256GB DDR4、2TB NVMe 可擴充至 14× NVMe U.2、10G unmetered 最高 40Gbps、供應地洛杉磯與拉斯維加斯、$599/month 起、"initial quantities are limited, and delivery may take up to 10 days"。 | Dual Xeon E5-2678v3（Haswell，2014）與 Xeon E3-1270v5（Skylake，2015）同時下架 — 最後的單插槽 E3 產品線消失，機隊變成清一色雙插槽加 EPYC | [Wayback 2025-05-27](https://web.archive.org/web/20250527215039/https://sharktech.net/dedicated-servers/) |
+| **2025-09-07** | 51 個 SKU 列 | Intel Xeon Gold 6262V — Cascade Lake，**2019** | **採購事件 — 新基礎 CPU：Dual Xeon Gold 6262V**（24C，2019）。型錄達到 51 列（+4），此數字維持了接下來十一個月。第一顆進入基礎組態的 Cascade Lake 料件。 | 無 | [Wayback 2025-09-07](https://web.archive.org/web/20250907113911/https://sharktech.net/dedicated-servers/) |
+| **2026-02-07** | 51 個 SKU 列 | 基礎組態中為 AMD EPYC 7702P（2019）／Xeon Gold 6148（2017） | 無。Gold 6262V 自基礎組態退回 CPU 升級選項清單，至今仍在該清單中。 | Dual Xeon Gold 6262V 自基礎組態移除（保留為升級選項） | [Wayback 2026-02-07](https://web.archive.org/web/20260207044530/https://sharktech.net/dedicated-servers/) |
+| **2026-04-10** | 51 個 SKU 列 | 基礎組態中為 AMD EPYC 7702P（2019）／Xeon Gold 6148（2017） | 無。**兩個月零變動。整個丹佛遷移規劃期間，型錄完全靜止。** | 無 | [Wayback 2026-04-10](https://web.archive.org/web/20260410092631/https://sharktech.net/dedicated-servers/) |
+| **2026-07-28** | 51 個 SKU（取自 servers.json 的機器可讀計數） | Intel Xeon Gold 6248（Cascade Lake，2019）與 AMD EPYC 7702（Rome，2019）——**仍是 2019 世代料件，擷取當下已七年舊** | **兩起採購事件，皆由公司自家公告獨立定日。** (1) Dual Xeon Gold 6248 成為 **51 個 SKU 中 20 個**的基礎 CPU — [公告 #243](https://portal.sharktech.net/index.php?rp=/announcements/243)，2026-07-01："we're upgrading our flagship Xeon Gold 6148 server to Dual Xeon Gold 6248 CPUs. We're currently building 12 of them in Las Vegas"；接著 [公告 #245](https://portal.sharktech.net/index.php?rp=/announcements/245)，2026-07-21："we added new Xeon Gold 6248 servers in Los Angeles, Las Vegas, Denver, and Chicago"。(2) Dual AMD EPYC 7702（雙插槽、128C）成為 5 個 SKU 的基礎 CPU — [公告 #244](https://portal.sharktech.net/index.php?rp=/announcements/244)，2026-07-13。當日組成：E5-2695v4 ×21、Gold 6248 ×20、EPYC 7702P ×5、Dual EPYC 7702 ×5。**注意：網站也在此日之前由內嵌 HTML 改版為 servers.json 資料源。** | **Dual Xeon Gold 6148 自基礎組態全面消失** — 這顆 2017 年的 Skylake 旗艦在擔任主打 SKU 約三年後終於被取代 | [Wayback 2026-07-28 servers.json](https://web.archive.org/web/20260728101501/https://sharktech.net/servers.json) |
+| **2026-08-10（即時，今日抓取）** | **56 個 SKU** — 40 個通用、25 個儲存、1 個 GPU（類型有重疊）；拉斯維加斯 12 個，阿姆斯特丹、芝加哥、丹佛、洛杉磯各 11 個 | Intel Xeon Gold 6246（Cascade Lake，**2019**）。整份型錄中絕對最新的料件仍是 NVIDIA RTX A4000（2021），**而且缺貨**。公開型錄中**沒有任何 Ice Lake、沒有 Sapphire Rapids、沒有 EPYC Milan／Genoa／Bergamo，也沒有任何當代資料中心 GPU（A100／H100／L40S）**。 | **採購事件正在進行中** — 五個全新 SKU，id **814／815／816／817／818**，全部是 Dual Xeon Gold 6246（12C、3.3GHz 高時脈）、128GB、10 Gbps，每個資料中心各一：洛杉磯 $309、阿姆斯特丹 $309、丹佛 $269、芝加哥 $269、拉斯維加斯 $269。**這些 id 在 13 天前完全不存在。** 另外，同一 13 天窗口內**有八個既有 SKU 從缺貨翻轉為有貨**（id 638、662、664、703、704、732、741、767、768），只有一個（id 700）反向。新增 SKU 加上大範圍補貨，這個組合代表**實體庫存正在進場**。6246 的選擇在策略上也讀得懂：24 × 3.3GHz 對比 6248 的 40 × 2.5GHz，也就是他們正在**為授權敏感型與單執行緒工作負載採購高時脈／低核心數料件**，並比 6248 多收 $10/月。 | 無 | [即時 servers.json](https://sharktech.net/servers.json) |
+
+### 9.2 採購節奏
+
+**依據 — 兩條獨立證據線互相勾稽。** **第一條，型錄考古：** 自 2022-12-07 至今，[https://sharktech.net/dedicated-servers/](https://sharktech.net/dedicated-servers/) 與 [https://sharktech.net/servers.json](https://sharktech.net/servers.json) 共 12 個可用擷取，逐 SKU 列解析。基礎處理器特別自 `div.processor-field` 內的標題文字區塊擷取，以確保**CPU 升級選項**（存放於相鄰的 tooltip script）絕不會被誤計為基礎組態的新到貨——這點很重要，因為對整頁做粗略 regex 會在 2024 年 12 月就「找到」Gold 6248／6238／6246，但當時它們只是加購選項，不是已採購的基礎庫存。2026-07-28 與即時擷取則以 servers.json 的 `id` 層級做差異比對。**第二條，公司自家附日期的採購公告**，位於 [portal.sharktech.net announcements](https://portal.sharktech.net/index.php?rp=/announcements)（RSS，27 則），以白話文加日期直接陳述採購。**第二條線的事件日期一貫早於第一條線**（例如 Gold 6148 公告到貨為 2023-06-01，型錄首見則是 2023-09-21），因此第二條線是領先指標，第一條線是確認。另以 2023-06-20 的 [Web Hosting Talk 促銷](https://www.webhostingtalk.com/showthread.php?t=1898496) 作為第三方交叉檢核 2023 年的定價與規格。
+
+**觀察到的間隔。** *型錄觀察之新機種首次出現（第一條線）：* Gold 6148（≤2023-06-01）→ E5-2695v4（2024-08-06）＝**約 14.2 個月**；E5-2695v4 → RTX A4000（2024-12-01）＝**3.9 個月**；RTX A4000 → EPYC 7702P（2025-01-16 公告）＝**1.5 個月**；EPYC 7702P → Gold 6262V（2025-09-07）＝**7.7 個月**；Gold 6262V → Dual Gold 6248（2026-07-01 公告）＝**9.8 個月**；Dual Gold 6248 → Dual EPYC 7702（2026-07-13）＝**0.4 個月**；Dual EPYC 7702 → Gold 6248 全機隊（2026-07-21）＝**0.3 個月**；Gold 6248 → Gold 6246（≤2026-08-10）＝**0.6 個月**。*公司公告之採購事件（第二條線，證據力較強）：* 2023-06-01 → 2025-01-16＝**19.5 個月**；2025-01-16 → 2026-07-01＝**17.5 個月**；2026-07-01 → 2026-07-13＝**0.4 個月**；2026-07-13 → 2026-07-21＝**0.3 個月**；2026-07-21 → 2026-08-10＝**0.6 個月**。**形狀非常明確：採購是戰役式（campaign-based），不是穩定節奏。先是 17–20 個月的長期靜默，然後三到四筆採購壓縮在 3–6 週內完成。**
+
+**中位數月數。** 型錄觀察之新機種首次出現間隔中位數為 **4.9 個月**（n=6：10.5、3.9、5.8、3.4、10.7、0.4）。**但中位數在這裡是錯的統計量，不應用於規劃。** 該分布是明顯的**雙峰**，不是集中分布。若改用公司自家公告的採購事件，事件間隔中位數會塌縮到 **0.6 個月**，因為事件是叢聚的。誠實的描述是：**17–20 個月長期靜默，然後 3–6 週內爆出 3–4 筆採購。要對準戰役來規劃，不要對準中位數。**
+
+**最近一次採購事件。** **截至今日（2026-08-10）仍在進行中。** 最近一筆離散事件是即時 [servers.json](https://sharktech.net/servers.json) 中出現**五個 Dual Xeon Gold 6246 SKU（id 814–818，每個資料中心各一）**——2026-07-28 的 Wayback 擷取中並不存在，今日已存在，同時**另有八個 SKU 回復有貨**。公司最近一次公告的事件是 **2026-07-21 的[公告 #245](https://portal.sharktech.net/index.php?rp=/announcements/245)**，「New Xeon Gold 6248 servers」上架洛杉磯、拉斯維加斯、丹佛與芝加哥，"ready for immediate delivery"。緊接在前的是 **2026-07-13 的[公告 #244](https://portal.sharktech.net/index.php?rp=/announcements/244)**，"we received a new batch of EPYC 7702 servers from our supplier"；以及 **2026-07-01 的[公告 #243](https://portal.sharktech.net/index.php?rp=/announcements/243)**，"We're currently building 12 of them in Las Vegas."
+
+**下一個窗口推估。** **窗口現在就是開的——這不是預測，是觀察。** 2026-07-01、2026-07-13、2026-07-21 三起公告採購事件，接著 2026-08-10 有五個新 SKU 上線、八個 SKU 補貨。這場戰役已經跑了約六週，**而且尚未關閉**。預期會持續開放**到大約 2026 年 10 月**，理由是前兩次戰役各持續數個月，且目前仍有兩項已宣示但未完成的承諾：[公告 #241](https://portal.sharktech.net/index.php?rp=/announcements/241)（2026-06-18）說 "Soon we will be adding more storage systems to our clusters"，而 2026-06-25 完成的 400GE 傳輸升級被明確定位為提升 "capacity for rapid deployment"——**網路容量先於伺服器採購完成，這正是有後續動作的計畫性擴張的標準順序。** **第二個窗口：** 若歷史上 17–20 個月的戰役間隔自本次戰役起點重演，下一場獨立戰役約落在 **2027 年第四季至 2028 年第一季**。**此推估請視為弱證據。** **實務重點：不要等。** 他們自己的話是 "servers of this type are usually sold out within 48 hours" 與 "If you were planning to expand, now might be a good time."。**一家庫存 48 小時內售罄、且以三週為單位連續採購的公司，其供應商決策的時間尺度是以天計，不是以季計。**
+
+**信心度。** **HIGH** — 採購戰役現正進行中：21 天內三則有日期的第一手公告、最近 13 天內五個新 SKU、同一窗口內八個 SKU 回復有貨，多重獨立佐證。**HIGH** — 機隊停滯在 2019 年（含）以前的料件：可於即時 JSON 資料源直接觀察，無需推論。**MEDIUM** — 戰役間隔模型與 2027 年前瞻推估：僅建立在**兩個**完整的戰役間隔上（19.5 與 17.5 個月），且公告存檔有 19 個月的空洞（編號 209–220 缺漏，代表十二則公告遭刪除），使 2023 下半年與整個 2024 年的採購在最強來源中**完全不可見**，只能靠型錄差異推論。**LOW** — 任何關於「他們買了但不對外零售」的說法：未經查證的 LowEndTalk 貼文暗示存在從未出現在型錄中的 Genoa 世代 Supermicro／Gigabyte 庫存，但無法確認。
+
+### 9.3 擴張訊號
+
+| 日期 | 訊號 | 來源 |
+|---|---|---|
+| **2024-04（開幕）／2024-05-16（報導）** | **拉斯維加斯資料中心開幕——第五個機房，設於 Flexential。** 官方理由是修正在地延遲，不再把拉斯維加斯流量繞經洛杉磯；並拉了一條專屬 100GE 線路至洛杉磯機房，站點間延遲約 4 ms。上線時標準伺服器與配 GPU 伺服器皆提供 10Gbps unmetered。 | [HostingAdvice](https://www.hostingadvice.com/blog/sharktech-opens-a-new-data-center-location-in-las-vegas/) |
+| **2024-05-23** | **ARIN IPv6 配發 2610:151::/34**，handle NET6-2610-151-1，網路名稱 **"ST-LV6"** — 這是拉斯維加斯專屬的 IPv6 子配發，登記時間就在該機房開幕**一個月後**。證明拉斯維加斯的建置是真實且已配發位址的，不只是行銷公告。 | [ARIN NET6-2610-151-1](https://whois.arin.net/rest/net/NET6-2610-151-1) |
+| **2025-01-16** | **公告 #221「Now Available: AMD EPYC 7702P with NVMe U.2!」** — 裸機產品線新增平台。**明確載明 "System : Lenovo"。** 規格：EPYC 7702P 64C/128T、256GB DDR4、2TB NVMe 可擴充至 14 NVMe U.2、10G shared unmetered 最高 40Gbps。供應地洛杉磯與拉斯維加斯。$599/month 起。"initial quantities are limited, and delivery may take up to 10 days"。 | [公告 #221](https://portal.sharktech.net/index.php?rp=/announcements/221) |
+| **2025-04-01（生效；2025-03-07 公告）** | **公告 #223 — 所有 Bare-Metal 與 Colocation 服務調漲 9.25%，且包含既有訂閱**，理由為通膨與營運成本上升。"It's been years since we increased our prices."。CVS 與 Cloud Hosting 除外。**這是毛利受壓的訊號，也是多年來第一次定價表調整。** | [公告 #223](https://portal.sharktech.net/index.php?rp=/announcements/223) |
+| **2025-08-14** | **公告 #225「Cloud Solution Upgrade!」** — 完成儲存系統升級專案。Tier0 讀寫 290–350MB/s、最高 6K IOPS；Tier2 700MB/s–1GB/s、最高 20K IOPS。明確表示 "completely discontinued the usage of SATA based storage solutions for those two tiers" — **即 SATA 轉 NVMe／SSD 的汰換，也就是一次儲存媒體採購週期。** | [公告 #225](https://portal.sharktech.net/index.php?rp=/announcements/225) |
+| **2025-12-03** | **公告 #228「Bare-Metal Default now 10G!」** — 完成全部資料中心的網路基礎架構升級。所有裸機系統都取得原生 10G 乙太網連線，所有現售 Bare-Metal 產品皆以 10G 出貨。描述為 "after a very long process"。**這是一次全機隊的交換器／網卡汰換。** | [公告 #228](https://portal.sharktech.net/index.php?rp=/announcements/228) |
+| **2025-12-16** | **ARIN IPv4 登記 208.98.32.0/19**，handle NET-208-98-32-0-1，網路名稱 **"SHARKTECH-LAS"** — 自其舊有的 208.98.0.0/18 切出一段專屬 /19（8,192 個位址），專為拉斯維加斯重新登記。**產能正被正式配置到最新站點。** **注意：** 這是既有位址空間的重新切分，**不是**新的 ARIN 配發；他們最後一次真正的新 IPv4 配發是 2015-02-06 的 45.58.128.0/18，與 ARIN IPv4 耗盡的情況一致。 | [ARIN NET-208-98-32-0-1](https://whois.arin.net/rest/net/NET-208-98-32-0-1) |
+| **2026-03-02** | **公告 #235 — CEO Tim Timrawi 宣布丹佛 point of presence 將自 H5 Data Centers 遷至 US Signal COO1。** "This decision was forced on us by H5 Data Centers and the massive price increase that we were presented with. If we agreed, we would have to increase prices for our clients, which I'm strongly against."。新機房具備 Tier3、SSAE 18、SOC1 Type2、SOC2 Type2、HIPAA/HITECH、PCI-DSS、ISO/IEC 27001:2022、US-EU Privacy Shield 認證。**這是一個硬證據等級、白紙黑字的成本紀律資料點。** | [公告 #235](https://portal.sharktech.net/index.php?rp=/announcements/235) |
+| **2026-04-07** | **公告 #236 — 丹佛遷移日期確認：** 2026-05-01 開始，2026-05-31 前全部完成。裸機客戶在伺服器搬遷前一週收到通知；colocation 客戶須於 2026-05-29 前排定時程。 | [公告 #236](https://portal.sharktech.net/index.php?rp=/announcements/236) |
+| **2026-05-04** | **公告 #238 — 丹佛遷移的資產搬遷自 2026-05-08（週五）開始。** 整個站點機隊的實體搬遷，**通常會讓壽命到期的硬體浮上檯面，並自然形成一個汰換決策點。** | [公告 #238](https://portal.sharktech.net/index.php?rp=/announcements/238) |
+| **2026-06-18** | **公告 #241 — 洛杉磯 Smart VPS 儲存容量擴充完成**，起因為多次效能劣化事件。"Soon we will be adding more storage systems to our clusters to provide ample more throughput."。**這是一項已宣示、仍未完成的前瞻性儲存採購意圖。** | [公告 #241](https://portal.sharktech.net/index.php?rp=/announcements/241) |
+| **2026-06-25** | **公告 #242「400G」** — 完成將對傳輸供應商的連線升級為 400GE。"a big increase in the capacity for rapid deployment"。**網路容量在七月伺服器採購戰役之前就先完成升級，這是計畫性擴張的典型順序。** | [公告 #242](https://portal.sharktech.net/index.php?rp=/announcements/242) |
+| **2026-07-01** | **公告 #243「Dual Xeon Gold 6248 in Las Vegas」— 採購事件。** "we're upgrading our flagship Xeon Gold 6148 server to Dual Xeon Gold 6248 CPUs. We're currently building 12 of them in Las Vegas."。基礎組態：Dual Xeon Gold 6248、128GB RAM、2TB NVMe（最多 2× 2TB M.2；總計最多 6 顆硬碟）、10GE 含每月 300TB。**注意 "building" 一詞——他們是自行組裝的。** | [公告 #243](https://portal.sharktech.net/index.php?rp=/announcements/243) |
+| **2026-07-13** | **公告 #244「New EPYC 7702 servers」— 採購事件。** "we received a new batch of EPYC 7702 servers from our supplier, and they're now available in all US locations: Los Angeles, Las Vegas, Denver, and Chicago."。基礎組態：EPYC 7702 CPU、128GB RAM、2TB NVMe（最多 10× 2TB NVMe U.2）、10GE 含每月 300TB。**"EPYC servers are usually sold out within 48 hours on a first-come, first-served basis. If you were planning to expand, now might be a good time."** | [公告 #244](https://portal.sharktech.net/index.php?rp=/announcements/244) |
+| **2026-07-21** | **公告 #245「New Xeon Gold 6248 servers」— 採購事件。** "we added new Xeon Gold 6248 servers in Los Angeles, Las Vegas, Denver, and Chicago. They're ready for immediate delivery, but please note that servers of this type are usually sold out within 48 hours."。**21 天內的第三起獨立採購事件。** | [公告 #245](https://portal.sharktech.net/index.php?rp=/announcements/245) |
+| **2026-08-07** | **公告 #246 — 洛杉磯的 China Telecom 對接升級**，以改善中國大陸連線品質。Sharktech 的客戶見證高度偏向中國市場（Dingdian Network、Wings Technology、"Our mainland China IDC company"），因此這是**洛杉磯站點的需求端容量訊號。** | [公告 #246](https://portal.sharktech.net/index.php?rp=/announcements/246) |
+| **2026-08-10（即時觀察；2026-07-28 擷取中不存在）** | **即時型錄新增五個 SKU** — id 814、815、816、817、818，Dual Xeon Gold 6246、128GB、10 Gbps，每個資料中心各一（洛杉磯 $309、阿姆斯特丹 $309、丹佛 $269、芝加哥 $269、拉斯維加斯 $269）。**型錄自 51 增至 56 個 SKU。** 同時**有八個既有 SKU 由缺貨翻轉為有貨**（id 638、662、664、703、704、732、741、767、768）。**這是庫存正在實體進場。** | [即時 servers.json](https://sharktech.net/servers.json) |
+| **2025-01-03 — 未經查證，見 GAP** | LowEndTalk 討論串「New Year, New Servers in stock!」被歸屬於 Sharktech，**據稱**列有 Supermicro RYZEN／EPYC 4004 3U 8 節點、Supermicro EPYC 9004 Genoa 2U 4 節點，以及 Gigabyte 1U 雙 EPYC 9004 Genoa 配 12× NVMe，另稱其倉庫有 **約 50,000 台翻新伺服器**，涵蓋 E5-2600v3/v4 至第三代 Xeon Scalable 與 EPYC 7003。**無法謄錄** — 該頁即時存取回 HTTP 403（Cloudflare），唯一的 Wayback 擷取（20250108134355）本身也是 403。**視為需電話確認的線索，不是證據。** 若屬實則意義重大：那些 Genoa／Bergamo 世代硬體從未出現在公開型錄中，代表他們的庫存與零售品項之間存在很大的落差。 | [LowEndTalk 討論串](https://lowendtalk.com/discussion/201506/new-year-new-servers-in-stock) |
+| **2022-07-27（最後更新）— 資料陳舊訊號** | **AS46844 的 PeeringDB 紀錄**（net id 16595，建立於 2018-04-30）自 2022-07-27 後未再更新。其備註仍只列四個地點——「Los Angeles One Wilshire, Denver H5 Data Centers, Chicago 365 Data Centers, Amsterdam AM11 Equinix」——**沒有拉斯維加斯**，而且仍列著**他們已於 2026 年 5 月撤離的 Denver H5**。netfac 機房紀錄為零。**他們的公開對接資料大約落後四年，因此任何依賴 PeeringDB 的競爭對手，用的是一張錯的地圖。** | [PeeringDB API AS46844](https://www.peeringdb.com/api/net?asn=46844) |
+
+### 9.4 本節未結 GAP
+
+1. **2025 年 1 月的 LOWENDTALK 貼文無法謄錄** — [該討論串](https://lowendtalk.com/discussion/201506/new-year-new-servers-in-stock) 對 WebFetch 與帶完整瀏覽器標頭的直接 curl 皆回 HTTP 403（Cloudflare JS 挑戰），唯一的 Wayback 擷取（時戳 20250108134355）記錄到的也是 403 而非頁面內容。因此 Supermicro／Gigabyte EPYC 9004 Genoa 的備貨說法，以及「倉庫約 50,000 台翻新伺服器」的數字，**僅建立在搜尋引擎摘要上。未經查證。這兩個數字都不可以對客戶引用。**
+2. **兩個 WAYBACK 擷取窗口偏薄** — `/dedicated-servers/` 的 20230308032418、20230915202746、20250108103623、20250329174849、20251119135556、20251209191740 與 20260728101451 等擷取皆為部分擷取（41KB–363KB），缺少 SKU 折疊區塊的標記；20230401051412 則正好在 1,048,576 bytes 處被截斷，其 13 列 SKU 計數不可靠而予以排除。**因此 2023 年第一季與 2025 年第一／第四季的窗口比時間軸其餘部分更薄。**
+3. **2022 年以前的型錄未做差異比對** — Sharktech 較早期的型錄位於不同 URL（`/dedicated-servers.php`、`/?ID=dedicatedserver`），本次未解析，因此 Xeon Silver 4114 與 E5-2670v2（兩者在 2022-12-07 基準線中即已存在）的首次出現日期未知。**採購節奏中最早的那個間隔屬於左設限（left-censored）。**
+4. **公告存檔有 19 個月的空洞** — 入口 RSS 回傳 27 則，但 **#208（2023-06-14）** 與 **#221（2025-01-16）** 之間完全空白。編號缺口（209–220 缺漏）顯示**有十二則公告被刪除或取消發布**，而不是那段期間沒事發生。**2023 下半年與整個 2024 年的採購事件在此來源中不可見**，只能靠型錄差異推論。
+
+---
+
+## 10. 成本天花板
+
+### 10.1 由租金反推的硬體成本天花板
+
+#### 假設區間 — 以下皆為「假設」，不是查證所得的事實
+
+**以下每一項營運成本數字都是假設，不是研究查證所得的事實。** 這些是「以自有／代管機櫃營運 2U 雙插槽節點的 DDoS 防護裸機業者」的產業常規值。**沒有任何一項來自 Sharktech、來自任何申報文件，或來自任何供應商文件。** 之所以明列，是為了讓算式可稽核，也讓讀者可以代入自己的數字。
+
+**在計算硬體成本天花板前，自毛租金扣除的每月營運成本（皆為假設）：**
+
+- **電力**（伺服器耗電加上冷卻／PUE 額外負擔）：**假設** 2U 雙插槽節點連續耗電 400–800 W，**假設**到電成本全包為 $0.09–$0.16/kWh → 約 **每節點每月 $40–$90**。
+- **頻寬／IP 傳輸：** SKU 以 10 Gbps、每月 300 TB 額度銷售，但實際混合使用率**假設**為承諾額度的 5–20% → 以**假設**的批發傳輸費率計約 **每節點每月 $15–$50**。
+- **機櫃空間、交叉連接、機房：** **假設**攤提為 **每節點每月 $20–$40**。
+- **遠端支援、客服、DDoS 清洗量能、管理面板、帳務與間接費用：** **假設每節點每月 $15–$35**。
+- **合計假設營運成本：約每節點每月 $90–$215**，對應以下 SKU 價格區間，等於毛租金的 **40% 至 55%**。
+
+**表中採用的中點：營運成本比 50%。** 因此每月硬體貢獻＝`monthly_price × 0.50`，且：
+
+```
+ceiling_12mo = monthly_price × 0.50 × 12
+ceiling_18mo = monthly_price × 0.50 × 18
+ceiling_24mo = monthly_price × 0.50 × 24
+```
+
+在 **40%（樂觀）** 端，所有天花板乘以 **1.20**；在 **55%（保守）** 端乘以 **0.90**。
+
+**另有四項會實質改變答案、且全部未經查證的假設：**
+
+1. **假設 100% 滿載。** 實務上裸機使用率鮮少達到 100%。若一台節點有 15% 的時間閒置，**所有天花板約下降 15%**。Sharktech 自家公告反覆稱庫存 "usually sold out within 48 hours"，這是支持高滿載率的質性論據，但**那是行銷文案，不是使用率數據**。
+2. **假設收得到定價表價格。** Sharktech 公布的年繳價明顯低於月繳 ×12——例如 SKU 704 月繳 $259，但年繳 **$2,641.80，折合每月 $220.15，約 15% 折扣**。任何採年繳的客戶，都會使該 SKU 的天花板**下降約 15%**。
+3. **未扣除硬體故障／備品準備金。** 在 2016–2019 年的翻新料件上，備品準備金是真實成本，會使天花板進一步下降。
+4. **未計入組裝人工。** [公告 #243](https://portal.sharktech.net/index.php?rp=/announcements/243) 顯示他們是手工組裝（"we're currently building 12 of them"），因此人工是真實的單機成本，而**未**包含在上述數字中。
+
+**以下是事實而非假設，且它限制了上述所有內容：** Sharktech 自 **2025-04-01 起將 Bare-Metal 與 Colocation 價格調漲 9.25%**，並表示 "as our own costs of operation continue to grow, we must keep up with the economy" 與 "It's been years since we increased our prices"（[公告 #223](https://portal.sharktech.net/index.php?rp=/announcements/223)）。另外，他們於 2026 年 5 月將整個丹佛 point of presence 自 H5 Data Centers 遷至 US Signal COO1，原因是 H5 提出他們拒絕轉嫁給客戶的 "massive price increase"（[公告 #235](https://portal.sharktech.net/index.php?rp=/announcements/235)）。**這兩項事實都指出營運成本比正承受上行壓力，因此以 55%（保守）端作為規劃假設較為安全。**
+
+#### 各 SKU 的租金反推天花板
+
+| SKU | 月費 | 規格 | 年營收 | 12 個月回收期天花板 | 18 個月 | 24 個月 | 來源 |
+|---|---|---|---|---|---|---|---|
+| **798 — Las Vegas Dual Xeon E5-2695V4 / 6 SATA-SAS 2.5 Bays**（區間入門款） | **$219.00** | Dual Xeon E5-2695v4（36 × 2.1GHz）、64GB RAM（可升 128GB/256GB/512GB/768GB/1TB）、2TB M.2 NVMe ＋ 2 個 M.2 插槽、6 個 SATA/SAS 2.5in 槽位、10 Gbps／每月 300TB，可升 40 Gbps 與 100 Gbps | $2,628.00（依月費計；年繳為 $2,233.80，折合每月 $186.15） | **$1,314** | **$1,971** | **$2,628** | [servers.json](https://sharktech.net/servers.json) |
+| **704 — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays**（走量主力） | **$259.00** | Dual Xeon Gold 6248（40 × 2.5GHz）、128GB RAM（可升至 1TB）、2TB M.2 NVMe ＋ 2 個 M.2 插槽、3 個 SATA/SAS 3.5in 槽位、10 Gbps／每月 300TB；CPU 升級選項 Dual Gold 6262v、Dual Gold 6246 | $3,108.00（依月費計；年繳為 $2,641.80，折合每月 $220.15） | **$1,554** | **$2,331** | **$3,108** | [servers.json](https://sharktech.net/servers.json) |
+| **818 — Las Vegas Dual Xeon Gold 6246 / 3 SATA-SAS 3.5 Bays**（**最新 SKU — 2026-07-28 尚不存在，2026-08-10 已上線**） | **$269.00** | Dual Xeon Gold 6246（24 × 3.3GHz — 高時脈、低核心數版本）、128GB RAM（可升至 1TB）、2TB M.2 NVMe ＋ 2 個 M.2 插槽、3 個 SATA/SAS 3.5in 槽位、10 Gbps／每月 300TB；CPU 升級選項 Dual Gold 6248、Dual Gold 6262v | $3,228.00（依月費計；年繳為 $2,743.80，折合每月 $228.65） | **$1,614** | **$2,421** | **$3,228** | [servers.json](https://sharktech.net/servers.json) |
+| **701 — Las Vegas Dual Xeon E5-2695V4 儲存型 / 12 SATA-SAS 3.5 Bays** | **$349.00** | Dual Xeon E5-2695v4（36 × 2.1GHz）、128GB RAM、2TB M.2 NVMe、12 個 SATA/SAS 3.5in 槽位並提供 8TB/16TB/20TB HDD 升級選項、10 Gbps／每月 300TB | $4,188.00（依月費計；拉斯維加斯儲存型 SKU 家族年繳為 $3,562.20） | **$2,094** | **$3,141** | **$4,188** | [servers.json](https://sharktech.net/servers.json) |
+| **707 — Las Vegas GPU 伺服器：Dual Xeon E5-2695V4 ＋ NVIDIA RTX A4000 16GB**（**全型錄唯一**的 GPU SKU） | **折合 $380.00**（未公布月費；由季繳 $1,140.00 ÷ 3 與年繳 $4,560.00 ÷ 12 推導，兩者一致） | Dual Xeon E5-2695v4（36 × 2.1GHz）、128GB RAM、NVIDIA RTX A4000 16GB、12 個 SATA/SAS 3.5in 槽位、2TB M.2 NVMe、10 Gbps／每月 300TB；GPU 升級選項 Dual/Triple RTX A4000、NVIDIA V100 32GB、Dual/Triple V100 32GB。**目前缺貨。** | $4,560.00（公布的年繳價，精確值；季繳 $1,140.00） | **$2,280** | **$3,420** | **$4,560** | [servers.json](https://sharktech.net/servers.json) |
+| **730 — Las Vegas AMD EPYC 7702P / 10 U.2 Bays**（已確認為 Lenovo 的平台） | **$459.00** | AMD EPYC 7702P（64 × 2.0GHz、64C/128T）、128GB RAM（可升至 1TB）、2TB M.2 NVMe ＋ 10 個 U.2 槽位（3.84TB／7.68TB／15.36TB U.2 NVMe 升級選項）、10 Gbps／每月 300TB；CPU 升級選項 AMD EPYC 7742 | $5,508.00（依月費計；年繳為 $4,681.80，折合每月 $390.15） | **$2,754** | **$4,131** | **$5,508** | [servers.json](https://sharktech.net/servers.json) |
+| **795 — Las Vegas Dual AMD EPYC 7702 / 10 U.2 Bays**（美國區頂規） | **$659.00** | Dual AMD EPYC 7702（128 × 2.0GHz、128C/256T）、128GB RAM（可升至 1TB）、2TB M.2 NVMe ＋ 10 個 U.2 槽位、10 Gbps／每月 300TB；CPU 升級選項 Dual AMD EPYC 7742。**目前缺貨。** | $7,908.00（依月費計；年繳為 $7,117.20，折合每月 $593.10） | **$3,954** | **$5,931** | **$7,908** | [servers.json](https://sharktech.net/servers.json) |
+| **762 — Amsterdam Dual AMD EPYC 7702 / 10 U.2 Bays**（全型錄頂規；歐洲定價一貫較美國高 $40） | **$699.00** | Dual AMD EPYC 7702（128 × 2.0GHz）、128GB RAM、2TB M.2 NVMe ＋ 10 個 U.2 槽位、10 Gbps／每月 300TB。**目前缺貨。** | $8,388.00（依月費計；年繳為 $7,549.20，折合每月 $629.10） | **$4,194** | **$6,291** | **$8,388** | [servers.json](https://sharktech.net/servers.json) |
+
+### 10.2 物料清單（BOM），以及這個落差對提案的意義
+
+#### 零組件層級 BOM
+
+| SKU | 零組件 | 料件 | 市場價 | 來源 |
+|---|---|---|---|---|
+| **704** — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays（$259/mo） | CPU（需 2 顆） | Intel Xeon Gold 6248，20C/40T，2.5GHz，27.5MB，150W，FCLGA3647（Cascade Lake）— HPE 選配料號 P10951-B21，**翻新品**，90 天保固，有現貨 | **每顆 $140.00 ＝ 雙插槽一對 $280.00** | [ServerSupply P10951-B21](https://www.serversupply.com/PROCESSORS/Intel%20Xeon%2020-Core/2.5GHz%20-%2010.4GT%20UPI/HPE/P10951-B21_325250.htm) |
+| **704** — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays（$259/mo） | CPU — **全新通路參考價（僅供對照，不是 Sharktech 實付價）** | Intel Xeon Gold 6248，20 CORE，2.50GHZ，27.5MB Cache，TDP 150W，FCLGA3647（Cascade Lake），狀態 **NEW** | **每顆 $3,050.00 ＝ 一對 $6,100.00（為翻新價的 21.8 倍）** | [ITCreations 111561](https://www.itcreations.com/product/111561) |
+| **704** — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays（$259/mo） | 記憶體 — 合計 128GB（4× 32GB） | 32GB（1×32GB）DDR4-2666 PC4-21300 ECC RDIMM，狀態 Brand New | **每條 32GB $200.00 ＝ 128GB $800.00** | [Aventis Systems](https://www.aventissystems.com/32gb-1-x-32gb-ddr4-ecc-rdimm-server-memory/) |
+| **704** — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays（$259/mo） | 開機／主要 NVMe — 2TB M.2 | 2TB Gen4 M.2 NVMe SSD — 2026 年市場區間（價格自 2025 年底 $80–$100 的低點大幅上漲） | **$280.00–$450.00（市場區間）**；Samsung 990 EVO Plus 2TB 零售參考價 $579.99 | [Samsung 990 EVO Plus 2TB](https://www.samsung.com/us/computing/memory-storage/solid-state-drives/990-evo-plus-gen4-nvme-ssd-2tb-mz-v9s2t0b-am/) |
+| **704** — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays（$259/mo） | 網卡 — 10GbE | Intel X520-DA2 雙埠 SFP+ 10GbE，PCIe 2.0 x8，Intel 82599ES，**翻新品** | **$49.00**（翻新；另一報價 $67.49 含免運） | [Newegg Intel X520-DA2](https://www.newegg.com/intel-x520-da2/p/14U-0045-00560) |
+| **704** — Las Vegas Dual Xeon Gold 6248 / 3 SATA-SAS 3.5 Bays（$259/mo） | 機殼／電源／主機板 | 雙 LGA3647 2U 準系統，含 3× 3.5in 槽位 ＋ 2× M.2 ＋ 冗餘電源 — **本次未查證價格** | **未查證 — 見 GAP** | **未查證 — 未取得可引用之報價頁** |
+| **730** — Las Vegas AMD EPYC 7702P / 10 U.2 Bays（$459/mo） | CPU（1 顆，單插槽） | AMD EPYC 7702P，64C/128T，2.0GHz 基頻／3.35GHz 加速，256MB L3，200W，SP3 — 二手／次級市場 | **$549.99（Dell 鎖定版）至約 $720.00（未鎖定二手）**；全新／定價參考 $1,550.00（截至 2026-01-14） | [CPUBenchmark EPYC 7702P](https://www.cpubenchmark.net/cpu.php?cpu=AMD+EPYC+7702P&id=3555) |
+| **730** — Las Vegas AMD EPYC 7702P / 10 U.2 Bays（$459/mo） | CPU — 次級市場報價交叉檢核 | AMD EPYC 7702P 2.0GHz 64 Cores 256MB TDP-200W SP3 伺服器處理器，二手刊登 | **觀察到的刊登區間 $549.99–$720.00** | [eBay EPYC 7702P 刊登](https://www.ebay.com/shop/epyc-7702p?_nkw=epyc+7702p) |
+| **730** — Las Vegas AMD EPYC 7702P / 10 U.2 Bays（$459/mo） | 記憶體 — 合計 128GB（4× 32GB） | 32GB（1×32GB）DDR4-2666 PC4-21300 ECC RDIMM，狀態 Brand New | **每條 $200.00 ＝ 128GB $800.00** | [Aventis Systems](https://www.aventissystems.com/32gb-1-x-32gb-ddr4-ecc-rdimm-server-memory/) |
+| **730** — Las Vegas AMD EPYC 7702P / 10 U.2 Bays（$459/mo） | 主要 NVMe — 2TB | 2TB Gen4 NVMe SSD — 2026 年市場區間 | **$280.00–$450.00（市場區間）** | [CheapestSSD 2TB NVMe](https://www.cheapestssd.com/2tb-nvme-ssd/) |
+| **730** — Las Vegas AMD EPYC 7702P / 10 U.2 Bays（$459/mo） | 基礎系統／機殼 — **確認既有廠商的關鍵列** | Lenovo ThinkSystem（單插槽 2U EPYC 7002「Rome」級，即 SR655 系列）— **Sharktech 自家[公告 #221](https://portal.sharktech.net/index.php?rp=/announcements/221) 就這個 EPYC 7702P SKU 明載 "System : Lenovo"。** 翻新準系統價格**未查證**。 | **未查證** — 找到翻新 Lenovo SR655/SR665 的經銷刊登，但未取得公開價格 | [Alta Technologies Lenovo ThinkSystem SR665](https://altatechnologies.com/collections/lenovo-thinksystem-sr665) |
+| **730** — Las Vegas AMD EPYC 7702P / 10 U.2 Bays（$459/mo） | 網卡 — 10GbE | Intel X520-DA2 雙埠 SFP+ 10GbE，**翻新品** | **$49.00** | [Newegg Intel X520-DA2](https://www.newegg.com/intel-x520-da2/p/14U-0045-00560) |
+| **818** — Las Vegas Dual Xeon Gold 6246 / 3 SATA-SAS 3.5 Bays（$269/mo）— **最新 SKU，兩週內才上架** | CPU（需 2 顆） | Intel Xeon Gold 6246，12C/24T，3.30GHz，24.75MB，165W，FCLGA3647（Cascade Lake）— HP CPU KIT 7UD05AA，**翻新品**（kit ＝ 1 顆處理器 ＋ 1 組散熱器，HP Z8 G4 工作站套件） | **每顆 $4,495.00 — 這是 OEM 品牌工作站套件價，應視為離群的上限值，不是中盤商價格** | [ITCreations 119493](https://www.itcreations.com/product/119493) |
+| **818** — Las Vegas Dual Xeon Gold 6246 / 3 SATA-SAS 3.5 Bays（$269/mo）— **最新 SKU，兩週內才上架** | CPU — 純散裝（tray）替代刊登 | SRFPJ — INTEL XEON Gold 12 CORE Processor 6246 3.30GHZ 24.75MB Cache TDP 165W FCLGA3647（Cascade Lake），狀態 NEW | **未取得 — 刊登存在，但本次未取得價格** | [ITCreations 113849](https://www.itcreations.com/product/113849) |
+| **818** — Las Vegas Dual Xeon Gold 6246 / 3 SATA-SAS 3.5 Bays（$269/mo）— **最新 SKU，兩週內才上架** | 記憶體 — 合計 128GB（4× 32GB） | 32GB（1×32GB）DDR4-2666 PC4-21300 ECC RDIMM，Brand New | **每條 $200.00 ＝ 128GB $800.00** | [Aventis Systems](https://www.aventissystems.com/32gb-1-x-32gb-ddr4-ecc-rdimm-server-memory/) |
+| **818** — Las Vegas Dual Xeon Gold 6246 / 3 SATA-SAS 3.5 Bays（$269/mo）— **最新 SKU，兩週內才上架** | 開機／主要 NVMe — 2TB M.2 | 2TB Gen4 M.2 NVMe SSD — 2026 年市場區間 | **$280.00–$450.00** | [CheapestSSD 2TB NVMe](https://www.cheapestssd.com/2tb-nvme-ssd/) |
+| **818** — Las Vegas Dual Xeon Gold 6246 / 3 SATA-SAS 3.5 Bays（$269/mo）— **最新 SKU，兩週內才上架** | 網卡 — 10GbE | Intel X520-DA2 雙埠 SFP+ 10GbE，**翻新品** | **$49.00** | [Newegg Intel X520-DA2](https://www.newegg.com/intel-x520-da2/p/14U-0045-00560) |
+
+#### 彙總對照：組裝零件成本 vs 租金反推天花板
+
+所有營運成本假設依第 10.1 節；採 50% 營運成本中點。
+
+**SKU 704 — Dual Xeon Gold 6248、128GB、2TB M.2、10GbE — $259/月。**
+翻新路徑 BOM：2× CPU $280 ＋ 128GB 全新 RDIMM $800 ＋ 2TB NVMe 約 $400 ＋ X520-DA2 $49 ＝ **$1,529**，另加一組**未計價**的雙 LGA3647 機殼／電源／主機板。
+天花板：12 個月 **$1,554**｜18 個月 **$2,331**｜24 個月 **$3,108**。
+→ **在機殼都還沒加進去之前，$1,529 的 BOM 就已吃掉整個 12 個月回收天花板的 98%。以 12 個月回收期計算，這個 SKU 在今天的零件價格下根本不成立。** 只有在 18 個月（佔天花板 66%）或 24 個月（49%）才成立。
+**全新通路路徑：** 光是 CPU 每顆 $3,050、一對 **$6,100**，就是**整整 24 個月天花板的 2.0 倍**。**在 $259/月的售價下，用全新料件買這個平台在算術上根本不可能。這是本檔中最硬的一個數字。**
+
+**SKU 730 — EPYC 7702P（Lenovo 系統）、128GB、2TB NVMe、10× U.2 — $459/月。**
+翻新路徑 BOM：CPU $550–$720 ＋ 128GB $800 ＋ 2TB NVMe 約 $400 ＋ 網卡 $49 ＝ **$1,799–$1,969**，另加**未計價**的 Lenovo SR655 級準系統。
+天花板：12 個月 **$2,754**｜18 個月 **$4,131**｜24 個月 **$5,508**。
+→ **12 個月即可回收，且留有約 $785–$955 的餘裕**供機殼、開機 NVMe 以外的硬碟、滑軌與組裝人工使用。**這是他們毛利最健康的 SKU，也解釋了為何 EPYC 是他們一再補貨的平台**（2025-01-16 與 2026-07-13 兩則公告）。
+
+**SKU 818 — Dual Xeon Gold 6246、128GB、2TB M.2 — $269/月（最新 SKU，兩週內才上線）。**
+天花板：12 個月 **$1,614**｜18 個月 **$2,421**｜24 個月 **$3,228**。
+唯一查證到的 6246 價格是 OEM 品牌 HP 工作站套件 **每顆 $4,495——單顆 CPU 就是它所驅動之 SKU 整整 24 個月天花板的 2.8 倍**。這個價格顯然**不是** Sharktech 實付價；真正的中盤商價格**未經查證（GAP）**。有用的推論要反過來看：**若一台 Dual 6246 的機器要在 18 個月回收期內成立，他們取得 6246 的價格大約必須落在一對 $150–$400 的範圍**——也就是深入翻新／中盤通路，而且幾乎可以確定是**把拆機 CPU 裝進他們本來就有的機殼**。
+
+#### 這個落差對「以整合式平台對抗自行組裝」的提案意味著什麼
+
+1. **在這裡，自行組裝不是偏好，而是唯一算得過去的算術。** [公告 #243](https://portal.sharktech.net/index.php?rp=/announcements/243)（2026-07-01）用他們自己的話說："we're upgrading our flagship Xeon Gold 6148 server to Dual Xeon Gold 6248 CPUs. We're currently building 12 of them in Las Vegas."。**那是把 CPU 換進既有機殼，不是採購平台。** 任何預設他們會購買整機新系統的提案，在第二次會議之前就會被價格擋掉。
+2. **壓力來自記憶體與 NAND，不是來自 CPU。** 2TB NVMe 已從 2025 年底的約 $80–$100 漲到現在的 **$280–$450**，32GB RDIMM 全新價約 **$200**。以 SKU 704 為例，**記憶體加儲存是 $1,529 BOM 中的 $1,200——佔 78%；CPU 只佔 18%。** 因此整合式平台唯一站得住腳的論點，是**記憶體與儲存的採購槓桿**以及**密度**（每機櫃、每瓦可售節點更多），**不是**處理器價格。
+3. **他們的定價幾乎沒有空間了。** 他們在 2025-04-01 對所有 Bare-Metal 與 Colocation 調漲 **9.25%** 並明講是成本通膨；2026 年 3 月則寧可把整個丹佛據點搬出 H5，也不接受機房漲價。**平台提案必須以每台可售節點的每月總成本為主軸**，並量化機櫃空間與電力的節省，因為那正是他們已經證明會實際動手的槓桿。
+4. **要打進他們真正使用的回收期窗口。** 依證據判斷，他們的內部核算落在 **12 至 18 個月之間**。**任何無法以他們公布的租金證明「18 個月內回收」的方案，都過不了他們的內部算術。**
+5. **每個 SKU 都提供的 40Gbps 與 100Gbps 網路升級選項**，加上已完成的 **400GE 傳輸升級（2026-06-25）**，代表主機板內建高速網路對他們具有真實且可量化的價值——**今天是每張卡省下 $49 的成本，但到了 40／100G 就會變成真正的差異化條件。**
+
+### 10.3 本節未結 GAP
+
+1. **三個 BOM SKU 的機殼／準系統價格皆未查證。** 未取得雙 LGA3647 2U 準系統的任何公開價格，也未取得翻新 Lenovo ThinkSystem SR655/SR665 的公開價格。**這一項通常佔翻新組裝成本的 25–45%，因此上述每一份 BOM 總額都是真實組裝成本的低估。**
+2. **XEON GOLD 6246 的中盤商價格未查證** — 唯一取得的價格是 OEM 品牌 HP Z8 G4 工作站 CPU 套件（料號 7UD05AA）$4,495，這是它所驅動之 SKU 整整 24 個月租金反推天花板的 2.8 倍，顯然不是 Sharktech 的實付價。**未取得裸裝 Gold 6246 散裝 CPU 的真實中盤商價格。** eBay 搜尋頁回 HTTP 403，ServerSupply 商品頁對 curl 與 WebFetch 皆回 Cloudflare 403。
+3. **SERVERSUPPLY 的 $140 XEON GOLD 6248 價格屬二手資訊** — 該數字取自 ServerSupply 刊登頁的搜尋結果摘要；頁面本身（HPE P10951-B21）對直接抓取回 Cloudflare 403，因此**無法直接從頁面上讀取確認。引用前務必查證。**
+4. **真實使用率／滿載率未知** — 所有成本天花板皆假設 100% 滿載。Sharktech 說庫存 "usually sold out within 48 hours"，但**那是行銷文案**。這家私有公司未取得任何流失率、滿載率或營收數字。
+5. **GPU SKU 707 未公布月費** — JSON 中 `monthly: null`，僅有季繳 $1,140.00 與年繳 $4,560.00。**天花板表中使用的 $380/月是推導值，不是公布值。** 該 SKU 目前亦為缺貨狀態，因此型錄中唯一的 GPU 產品線可能已形同虛設。
+
+---
+
+## 11. 客戶與網路
 
 **客戶**
 
@@ -204,7 +467,7 @@ Sharktech, Inc. 是一家創辦人自有、家族控股的 DDoS 防護型裸機�
 
 ---
 
-## 9. 政治與公開紀錄
+## 12. 政治與公開紀錄
 
 僅取公開紀錄，且僅針對具名負責人。每項均附標記。
 
@@ -217,7 +480,7 @@ Sharktech, Inc. 是一家創辦人自有、家族控股的 DDoS 防護型裸機�
 
 ---
 
-## 10. 公開聯絡管道
+## 13. 公開聯絡管道
 
 以下全部**僅為公開來源** — 不含個人行動電話、不含私人住址。無公開管道者明列 GAP。
 
@@ -240,7 +503,7 @@ Sharktech, Inc. 是一家創辦人自有、家族控股的 DDoS 防護型裸機�
 
 ---
 
-## 11. Supermicro 銷售切入點
+## 14. Supermicro 銷售切入點
 
 ### 分類：**競爭對手的帳戶 → 替換／第二供應商（displacement）**
 
@@ -268,9 +531,9 @@ Sharktech 經營五個站點、自有 ASN 擁有 **124,416 個 IPv4 位址**、5
 
 ---
 
-## 12. 查證附錄
+## 15. 查證附錄
 
-### 12.1 單一來源支撐的說法（引用前須再驗證）
+### 15.1 單一來源支撐的說法（引用前須再驗證）
 
 | 說法 | 唯一來源 | 風險 |
 |---|---|---|
@@ -280,7 +543,7 @@ Sharktech 經營五個站點、自有 ASN 擁有 **124,416 個 IPv4 位址**、5
 | **內華達州登記細節（實體編號、幹部、本籍 Montana）** | 單一登記鏡像網站 | 第一手來源 esos.nv.gov 與 Bizapedia 皆為 **Incapsula／CAPTCHA 阻擋、未予繞過**，因此該鏡像未能與州政府原始紀錄交叉核對。（[nevada-register.com](https://www.nevada-register.com/1182880-sharktech-inc)） |
 | **設施層面積／電力數字（Flexential Las Vegas 111,240 sq ft／9.00 MW；H5 Denver 300,000 sq ft）** | 第三方設施資料與 2016 年新聞稿 | **這些描述的是整棟建物，不是 Sharktech 的佔用量。絕對不可當成 Sharktech 的容量陳述。** |
 
-### 12.2 第三方估計互相矛盾之處（呈現分歧，不擇一）
+### 15.2 第三方估計互相矛盾之處（呈現分歧，不擇一）
 
 **員工數**（全部為估計）
 
@@ -326,7 +589,7 @@ Sharktech 經營五個站點、自有 ASN 擁有 **124,416 個 IPv4 位址**、5
 
 - 「Over 1Tbps of Internet Connectivity」**在四個站點頁面逐字重複**（LA、芝加哥、丹佛、阿姆斯特丹）——**讀來像樣板而非各站量測值**；拉斯維加斯另寫「Up to 400 Gbps」。**各站實際承諾的 transit 容量未揭露。**
 
-### 12.3 未結 GAP
+### 15.3 未結 GAP
 
 1. **Montana 本籍設立紀錄未取得。** 內華達州那份是 FOREIGN 公司資格登記、本籍為 MT，因此原始章程、設立日與其他幹部／股東皆在 Montana SOS 登記系統中，本次未檢索。內華達州 SOS（esos.nv.gov）與 Bizapedia 皆為 Incapsula／CAPTCHA 阻擋，未予繞過。
 2. **五個站點的伺服器數、機櫃數、cabinet 數與 cage 面積**——Sharktech 與五家機房夥伴全數未揭露。僅存在設施層總量（Flexential Las Vegas 約 111,240 sq ft／9 MW；H5 Denver 300,000 sq ft；Equinix AM11 89,555 sq ft），**這些都不是 Sharktech 自身的佔用量**。
@@ -344,8 +607,8 @@ Sharktech 經營五個站點、自有 ASN 擁有 **124,416 個 IPv4 位址**、5
 14. **總體網路容量**——「Over 1Tbps」在四個站點頁逐字重複，讀來像樣板；各站實際承諾的 transit 容量未揭露。
 15. **法人層級的政治紀錄**——Sharktech Inc 本身查無任何 FEC、遊說或州級紀錄；僅查得 Timrawi 家戶的個人捐輸。
 
-### 12.4 影響本檔完整度的工具與取得限制
+### 15.4 影響本檔完整度的工具與取得限制
 
 - **遭遇的 HTTP 阻擋來源：** HostingAdvice（403）、ZoomInfo（403）、Crunchbase（403）、Bizapedia／OpenCorporates（安全檢查／CAPTCHA，未予繞過）、esos.nv.gov（Incapsula）。凡依賴上述來源的發現，本檔皆已標記為社群來源、次級擷取或第三方估計。
-- **無法以程式查詢的 JavaScript 介面：** fec.gov 的個人捐獻查詢介面。第 9 節的 Timrawi FEC 結果係取自 FEC Schedule A 資料並標記為 `公開紀錄`；**本檔不因抓取失敗而推論「沒有捐獻」。**
+- **無法以程式查詢的 JavaScript 介面：** fec.gov 的個人捐獻查詢介面。第 12 節的 Timrawi FEC 結果係取自 FEC Schedule A 資料並標記為 `公開紀錄`；**本檔不因抓取失敗而推論「沒有捐獻」。**
 - **政治紀錄一致原則：** 本檔所有政治資料僅取自公開紀錄，並逐條標記為 `公開紀錄`、`未證實` 或 `GAP`。

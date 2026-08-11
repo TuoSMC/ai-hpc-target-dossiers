@@ -51,7 +51,7 @@ QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用
 
 | 姓名 | 職稱 | 角色類型 | 證據等級 | 公開聯絡途徑 | 來源 | FEC |
 |---|---|---|---|---|---|---|
-| **Ilan Mishan** | Co-Founder & Chief Executive Officer（約 2022 年中／2023 年離任——其本人 LinkedIn 貼文開頭寫「After 22 years as QuadraNet's founder, chief…」，自 2001 年創立起算為 22 年） | 創辦人／前高階主管／前登記職員 | **primary-record** — QuadraNet 自家 Leadership 頁以「Co-Founder & CEO」具名並附完整簡歷；CRO 新聞稿引述為「QuadraNet founder and CEO」，2018-08-21 CFO 新聞稿引述為「Co-Founder and CEO Ilan Mishan」；2025 年不當佔有訴狀所附第六、第七次租約修訂本附件中，承租方通知聯絡人載為「Attn: Ilan Mishan, QuadraNet, Inc.」；加州 SoS 沿革顯示他擔任 Agent for Service of Process 直到 2023-04-13 該次申報將其更換 | **GAP** — 無任何經確認之個人地址。LinkedIn：https://www.linkedin.com/in/ilan-mishan-b915163/ 。USPTO 商標申請案的通訊 email 為 **milan@quadranet.com** 與 **michelle@quadranet.com**；「milan@」看似可拆為 M. Ilan／Mishan Ilan，但此歸屬**無法證實**——僅記為公司通訊途徑，不是他本人已確認之信箱 | [QuadraNet Leadership 頁（存檔）](https://web.archive.org/web/2022id_/https://squiggly.quadranet.com/leadership) | **前次查核已取得 1 筆紀錄**（見 §9）：捐獻人「MISHAN, ILAN」，Tarzana CA，雇主「QUADRANET INC」，$250.00，收受日 2012-10-03，受款委員會「ROMNEY FOR PRESIDENT INC.」。**本次無法複查**——api.open.fec.gov 以共用 DEMO_KEY 回 HTTP 429 OVER_RATE_LIMIT（Retry-After 約 7.6 小時），且本環境瀏覽器政策封鎖 fec.gov |
+| **Ilan Mishan** | Co-Founder & Chief Executive Officer（約 2022 年中／2023 年離任——其本人 LinkedIn 貼文開頭寫「After 22 years as QuadraNet's founder, chief…」，自 2001 年創立起算為 22 年） | 創辦人／前高階主管／前登記職員 | **primary-record** — QuadraNet 自家 Leadership 頁以「Co-Founder & CEO」具名並附完整簡歷；CRO 新聞稿引述為「QuadraNet founder and CEO」，2018-08-21 CFO 新聞稿引述為「Co-Founder and CEO Ilan Mishan」；2025 年不當佔有訴狀所附第六、第七次租約修訂本附件中，承租方通知聯絡人載為「Attn: Ilan Mishan, QuadraNet, Inc.」；加州 SoS 沿革顯示他擔任 Agent for Service of Process 直到 2023-04-13 該次申報將其更換 | **GAP** — 無任何經確認之個人地址。LinkedIn：https://www.linkedin.com/in/ilan-mishan-b915163/ 。USPTO 商標申請案的通訊 email 為 **milan@quadranet.com** 與 **michelle@quadranet.com**；「milan@」看似可拆為 M. Ilan／Mishan Ilan，但此歸屬**無法證實**——僅記為公司通訊途徑，不是他本人已確認之信箱 | [QuadraNet Leadership 頁（存檔）](https://web.archive.org/web/2022id_/https://squiggly.quadranet.com/leadership) | **前次查核已取得 1 筆紀錄**（見 §12）：捐獻人「MISHAN, ILAN」，Tarzana CA，雇主「QUADRANET INC」，$250.00，收受日 2012-10-03，受款委員會「ROMNEY FOR PRESIDENT INC.」。**本次無法複查**——api.open.fec.gov 以共用 DEMO_KEY 回 HTTP 429 OVER_RATE_LIMIT（Retry-After 約 7.6 小時），且本環境瀏覽器政策封鎖 fec.gov |
 | **Tim Caulfield** | Chief Executive Officer（President and CEO）——私募基金／VSS 時期 | 高階主管／**登記職員** | **primary-record** — 加州 SoS 針對 QuadraNet Enterprises, LLC 的登記紀錄列其為 Chief Executive Officer（530 W 6th Street Ste #901, Los Angeles CA 90014）；並由公司自家 2023-03-23 新聞稿獨立佐證，逐字為「Tim Caulfield, President and CEO, QuadraNet」 | **GAP** — 無公開個人聯絡方式。搜尋結果可見 LinkedIn 活動跡象（貼文網址含「timcaulfield」），惟無法確認正式個人頁網址 | [GlobeNewswire，2023-03-23](https://www.globenewswire.com/news-release/2023/03/23/2633250/0/en/QuadraNet-Acquires-Commercial-Managed-Services-And-Private-Cloud-Division-From-Contegix.html) | **未確立（NOT ESTABLISHED）** — FEC API 受限流（HTTP 429），fec.gov 遭瀏覽器政策封鎖，查核未完成。**此非等同於「查無紀錄」** |
 | **Kiarash Jahangiri** | 自 2024-04 起任 QuadraNet 之 Chief Executive Officer（先前為 Edge Centres 之 CTO） | 高階主管（併購後） | **由業界媒體互相佐證，但未經登記驗證** — 多家報導 Edge Centres 收購案（約 2024-04-08 完成）時提及其獲任；引述為「Edge Centres' bold series of acquisitions made over the last year will now be unified under the QuadraNet brand.」**他並未出現在加州 SoS 職員紀錄上，該紀錄迄今仍列 Tim Caulfield 為 CEO**——此 CEO 職稱應視為媒體報導，而非登記驗證 | **GAP** — 無公開個人聯絡方式；無法確認公開 LinkedIn 網址。僅能循 Edge Centres 公司管道 | [LowEndBox — Edge Centres 收購 QuadraNet](https://lowendbox.com/blog/quadranet-acquired-by-edge-centres/) | **未確立** — FEC API 受限流，查核未完成。註：其為 Edge Centres 高階主管，可能非美國人士，果如此則 FEC 個人捐獻比對不適用 |
 | **Ken Lee** | QuadraNet Enterprises, LLC 之 Manager 暨 Agent for Service of Process；**外傳**兼 Chief Financial Officer | **登記職員**／高階主管 | **Manager 與 Agent for Service of Process 為 primary-record**（加州 Statement of Information，實體編號 201819010002，地址 530 West 6th Street Suite 901, Los Angeles CA 90014）。2023-04-13 該次申報將註冊代理人**自 Ilan Mishan 更換為 Ken Lee**，主要地址亦自 Suite 1301 改為 Suite 901。**CFO 職稱為 single-source** — 僅第三方檔案（背景記為 Evoque Data Center Solutions、Sandstone Energy），非公司或州政府文件 | 登記在案之送達代理地址：**530 West 6th Street, Suite 901, Los Angeles, CA 90014**。無公開個人 email。**注意：公司已遭該大樓驅離，該地址時效性存疑。** 無法確認公開 LinkedIn 網址（姓名常見，多筆無關 Ken Lee 檔案未做比對） | [加州 SoS 登記紀錄（bizprofile.net 鏡像）](https://www.bizprofile.net/ca/los-angeles/quadranet-enterprises-llc) | **未確立** — FEC API 受限流，查核未完成 |
@@ -103,7 +103,7 @@ QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用
 
 ### 4.4 未能具名的職位（全數列為 GAP）
 
-**GAP** — *破產管理人／受讓人／清算人／受託人*：**查無，且該簡報前提看來並無支撐**——CourtListener 聯邦 API 查無 QuadraNet 之破產、接管或債權人利益讓與案號，亦查無 Edge Centres 之澳洲管理人或清算人指派；經查證的瓦解途徑是州法院不當佔有訴訟加上資產零散出售，**故不得將「母公司進入清算」當作事實簡報**。 · **GAP** — *現任財務長*：**狀態不明**——Brian Flowers 依公司新聞稿自 2018-08-21 任 CFO；Ken Lee 在第三方檔案中被描述為 CFO，但在州政府申報中僅為 Manager 與 Agent for Service of Process；**沒有任何申報文件指出現任 CFO 為何人**。 · **GAP** — *VP of Infrastructure／VP of Engineering*：任何來源皆查無此職。 · **GAP** — *採購／購案負責人／供應鏈經理*：**無姓名，且無證據顯示此職位存在**——任何申報文件、新聞稿、名錄或徵才啟事皆未出現採購類職稱。 · **GAP** — *Chief Operating Officer*：任何來源皆未辨識出 COO。 · **GAP** — *法務長／法務主管*：均未辨識；值得注意的是 USPTO 商標申請顯示「Attorney of Record — None」，即公司自行申請，暗示當時並無內部法務。 · **GAP** — *VP of Information Executive & CIO*：該職**存在**但姓名遭遮蔽——LeadIQ 僅露出縮寫「J. G.」。不臆測。 · **GAP** — *VP of Administration and People（人資主管）*：職位存在，僅有縮寫「C. W.」。 · **GAP** — *Director of Information Technology*：職位存在，僅有縮寫「B. H.」。 · **GAP** — *Chief Cloud Officer*：職位存在，僅有縮寫「W. S.」。 · **GAP** — *Technical Support Manager、Data Analyst、Sales Engineer、Technical Advisor、Advertisement Manager*：這些職位在 LeadIQ 名錄中存在，但**姓名全數遮蔽為縮寫**（「J. E.」「E. W.」「Z. M.」「J. W.」「W. J.」「A. B.」）。 · **GAP** — *「Michelle」*：由序號 87762260 之 USPTO 通訊 email michelle@quadranet.com 可證實確有此員工名字，但**姓氏無法自任何來源還原**。 · **GAP** — *商標聲明書簽署人及其職稱*：**無法取得**——TSDR 狀態檢視頁不暴露簽署人，文件檢視器亦僅顯示 Notice of Abandonment。 · **GAP** — *QuadraNet 自身的租約簽署人*：**無法取得**——第六、第七次修訂本簽名頁上，QuadraNet, Inc. 與 QuadraNet Enterprises, LLC 欄位以無法辨識的手寫簽名簽署，且印刷的「Name:」與「Title:」欄位**留白**；已將該等頁面以 3 倍放大轉為影像目視確認，確無可辨識姓名。**刻意不臆測。** · **GAP** — *ARIN 與 PeeringDB 上具名的 NOC／網路工程師*：**根本不存在**——每一個 ARIN POC 都是角色帳號，PeeringDB 的 poc_set 完全為空。 · **GAP** — *徵才啟事中的具名用人主管或招募人員*：均未公布——存檔的徵才頁無任何具名窗口、無職缺清單、無用人主管，僅將應徵者導向 LinkedIn 頁面與總機 888-578-2372。 · **GAP** — *研討會講者簡歷（HostingCon、WHD.global、DataCenter World、Cloudfest）*：已查，**均無所獲**；唯一取得的研討會證據是 NANOG 出席紀錄，並由此得到 Kate Gerry。 · **GAP** — *具名之 VSS 交易合夥人或董事*：任何可取得之來源皆未具名；QuadraNet 為 LLC，法律上無須公開董事名冊。 · **GAP** — *Delaware 登記之職員／經理人*：**未取得**——本環境瀏覽器政策封鎖 icis.corp.delaware.gov；且須注意 Delaware 的 LLC 申報本就不會揭露成員或經理人，故加州 Statement of Information 是更好的來源，本檔亦採之。 · **GAP** — *UCC-1 擔保權人與債務人簽署人*：**未取得**——加州 UCC 查詢位於機器人偵測閘門之後，未予繞過。 · **GAP** — *FEC 捐獻紀錄*：十二位個人中有**十一位未確立**——詳見 §4.5；除前次查核已取得並記載於 §9 的 Ilan Mishan 單筆紀錄外，對任何人皆不得主張「查無紀錄」之結論。
+**GAP** — *破產管理人／受讓人／清算人／受託人*：**查無，且該簡報前提看來並無支撐**——CourtListener 聯邦 API 查無 QuadraNet 之破產、接管或債權人利益讓與案號，亦查無 Edge Centres 之澳洲管理人或清算人指派；經查證的瓦解途徑是州法院不當佔有訴訟加上資產零散出售，**故不得將「母公司進入清算」當作事實簡報**。 · **GAP** — *現任財務長*：**狀態不明**——Brian Flowers 依公司新聞稿自 2018-08-21 任 CFO；Ken Lee 在第三方檔案中被描述為 CFO，但在州政府申報中僅為 Manager 與 Agent for Service of Process；**沒有任何申報文件指出現任 CFO 為何人**。 · **GAP** — *VP of Infrastructure／VP of Engineering*：任何來源皆查無此職。 · **GAP** — *採購／購案負責人／供應鏈經理*：**無姓名，且無證據顯示此職位存在**——任何申報文件、新聞稿、名錄或徵才啟事皆未出現採購類職稱。 · **GAP** — *Chief Operating Officer*：任何來源皆未辨識出 COO。 · **GAP** — *法務長／法務主管*：均未辨識；值得注意的是 USPTO 商標申請顯示「Attorney of Record — None」，即公司自行申請，暗示當時並無內部法務。 · **GAP** — *VP of Information Executive & CIO*：該職**存在**但姓名遭遮蔽——LeadIQ 僅露出縮寫「J. G.」。不臆測。 · **GAP** — *VP of Administration and People（人資主管）*：職位存在，僅有縮寫「C. W.」。 · **GAP** — *Director of Information Technology*：職位存在，僅有縮寫「B. H.」。 · **GAP** — *Chief Cloud Officer*：職位存在，僅有縮寫「W. S.」。 · **GAP** — *Technical Support Manager、Data Analyst、Sales Engineer、Technical Advisor、Advertisement Manager*：這些職位在 LeadIQ 名錄中存在，但**姓名全數遮蔽為縮寫**（「J. E.」「E. W.」「Z. M.」「J. W.」「W. J.」「A. B.」）。 · **GAP** — *「Michelle」*：由序號 87762260 之 USPTO 通訊 email michelle@quadranet.com 可證實確有此員工名字，但**姓氏無法自任何來源還原**。 · **GAP** — *商標聲明書簽署人及其職稱*：**無法取得**——TSDR 狀態檢視頁不暴露簽署人，文件檢視器亦僅顯示 Notice of Abandonment。 · **GAP** — *QuadraNet 自身的租約簽署人*：**無法取得**——第六、第七次修訂本簽名頁上，QuadraNet, Inc. 與 QuadraNet Enterprises, LLC 欄位以無法辨識的手寫簽名簽署，且印刷的「Name:」與「Title:」欄位**留白**；已將該等頁面以 3 倍放大轉為影像目視確認，確無可辨識姓名。**刻意不臆測。** · **GAP** — *ARIN 與 PeeringDB 上具名的 NOC／網路工程師*：**根本不存在**——每一個 ARIN POC 都是角色帳號，PeeringDB 的 poc_set 完全為空。 · **GAP** — *徵才啟事中的具名用人主管或招募人員*：均未公布——存檔的徵才頁無任何具名窗口、無職缺清單、無用人主管，僅將應徵者導向 LinkedIn 頁面與總機 888-578-2372。 · **GAP** — *研討會講者簡歷（HostingCon、WHD.global、DataCenter World、Cloudfest）*：已查，**均無所獲**；唯一取得的研討會證據是 NANOG 出席紀錄，並由此得到 Kate Gerry。 · **GAP** — *具名之 VSS 交易合夥人或董事*：任何可取得之來源皆未具名；QuadraNet 為 LLC，法律上無須公開董事名冊。 · **GAP** — *Delaware 登記之職員／經理人*：**未取得**——本環境瀏覽器政策封鎖 icis.corp.delaware.gov；且須注意 Delaware 的 LLC 申報本就不會揭露成員或經理人，故加州 Statement of Information 是更好的來源，本檔亦採之。 · **GAP** — *UCC-1 擔保權人與債務人簽署人*：**未取得**——加州 UCC 查詢位於機器人偵測閘門之後，未予繞過。 · **GAP** — *FEC 捐獻紀錄*：十二位個人中有**十一位未確立**——詳見 §4.5；除前次查核已取得並記載於 §12 的 Ilan Mishan 單筆紀錄外，對任何人皆不得主張「查無紀錄」之結論。
 
 ### 4.5 已實查來源——實際查詢了哪些登記與資料庫，哪些一無所獲
 
@@ -162,7 +162,261 @@ QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用
 
 ---
 
-## 8. 客戶與網路
+## 8. 融資鏈與 UCC 紀錄
+
+**範圍註記：** 本標的是**事後解剖，不是活的帳戶**。截至 2026-08-10，AS8100 **宣告零個 IPv4 前綴**，[quadranet.com](https://quadranet.com/) 僅回傳一份 445 bytes 的黑底頁面、頁內只有一張 logo（HTTP `Last-Modified: 2025-03-18`），其約 263,168 個 IPv4 位址中已有約 **256,512 個被移轉出去**。商業上仍存活的實體是同集團／後手 **Multacom Corporation，正改名為「Digital Space」**，並於 **2026-07-06 至 2026-07-14** 期間遷入 **6171 W Century Blvd**——即原 QuadraNet LA Century 機房。
+
+### 8.1 判定
+
+> ## **UNVERIFIED — portal blocked（未經查證——查詢入口被封鎖）**
+
+這**不是**「查無擔保設定」的結論。**任何 UCC 索引都沒有回傳任何一筆結果列——不論是正面或負面的。** 加州四次獨立嘗試全部回傳 Imperva／Incapsula 攔截頁；德拉瓦州根本沒有免費的公開債務人姓名查詢，並將查詢權限限縮給州政府核可之查詢人並收費；佛州因其免費登記系統設有須勾選同意的使用條款彈窗，未代使用者接受而未執行查詢；伊利諾州無法建立連線；喬治亞州回傳 HTTP 500；德州須付費開立 SOSDirect 帳號。**因此，任何「QuadraNet Enterprises, LLC 名下無擔保負擔」的說法，本檔均不予支持。**
+
+### 8.2 查詢紀錄——逐次分列，不合併
+
+| 查詢入口 | URL | 實際使用之查詢字串 | 回應 | 受阻時之替代途徑 |
+|---|---|---|---|---|
+| California Secretary of State — bizfile Online UCC Search（JSON API，直接 HTTPS POST） | [bizfileonline.sos.ca.gov/api/Records/uccsearch](https://bizfileonline.sos.ca.gov/api/Records/uccsearch) | `SEARCH_VALUE="QuadraNet"`、`SEARCH_TYPE_ID=1`（債務人姓名），無日期篩選 | **HTTP 403。** 回應主體為 Imperva／Incapsula 攔截頁：「Request unsuccessful. Incapsula incident ID: 414000330046713937-77490079154440309」。未回傳任何 UCC 資料。**這是機器人攔截，不是零結果回應。** | CA SOS 認證 UCC 查詢（UCC-11 Information Request）——線上每一個債務人名稱 **US$5.00**；紙本 UCC-11 郵寄，申請人慣以支票註明「Not to exceed $35.00」。或由真人在一般瀏覽器工作階段中互動式執行同一項免費查詢。 |
+| California Secretary of State — bizfile Online UCC Search（互動式瀏覽器，頁面載入） | [bizfileonline.sos.ca.gov/search/ucc](https://bizfileonline.sos.ca.gov/search/ucc) | 導向 UCC Search 頁面，嘗試於「Search by name or file number」欄位輸入「QuadraNet」並按 Return | 頁面外框有算繪出來，但應用程式自身的 bootstrap API 呼叫早已被攔截——**原始 Incapsula HTML 被直接算繪進頁面內文，成為說明文字**（「Request unsuccessful. Incapsula incident ID: 414000330046225999-43138857706588270」）。搜尋輸入框不接受、也未送出所輸入之字串。**未回傳任何結果，亦不主張任何結果。** | 同上：每一名稱 $5.00 之認證線上查詢，或由真人自住宅 IP 之瀏覽器工作階段執行。 |
+| California Secretary of State — bizfile Online UCC Search（自已載入頁面內發出之同源 fetch，帶該站自身 cookie） | [bizfileonline.sos.ca.gov/api/Records/uccsearch](https://bizfileonline.sos.ca.gov/api/Records/uccsearch) | `SEARCH_VALUE="QuadraNet"`、`SEARCH_FILTER_TYPE_ID=0`、`SEARCH_TYPE_ID=1`、`FILING_TYPE_ID=""`、`STATUS_ID=""`、`FILING_DATE={start:null,end:null}` | **HTTP 200，但主體是 Incapsula 中介頁而非 JSON：**「Request unsuccessful. Incapsula incident ID: 414000330046225999-43245810982193262」。未回傳任何登記紀錄。 | CA SOS UCC-11 認證查詢，每名稱 $5.00；或委由 UCC 查詢廠商（CSC、CT Corporation、Capitol Services）——認證州級查詢之市場行情約為**每州每一債務人名稱 USD 35–95**。 |
+| California Secretary of State — bizfile Online UCC Search（延遲 6 秒待 Incapsula JS 挑戰完成後重試） | [bizfileonline.sos.ca.gov/api/Records/uccsearch](https://bizfileonline.sos.ca.gov/api/Records/uccsearch) | `SEARCH_VALUE="QuadraNet"`（同一 payload，待頁面 JS 穩定後重送） | **HTTP 200，再次是 Incapsula 中介頁：**「Request unsuccessful. Incapsula incident ID: 414000330046225999-44512602996213870」。**加州四次獨立嘗試、四次被擋。加州維持 UNVERIFIED——未取得任何一筆結果列，正面或負面皆無。** | 由真人操作瀏覽器，或每名稱 $5.00 之加州認證 UCC-11。 |
+| Delaware Division of Corporations — ICIS UCC Search（舊版深層連結） | [icis.corp.delaware.gov/Ecorp/UccSearch/UccSearch.aspx](https://icis.corp.delaware.gov/Ecorp/UccSearch/UccSearch.aspx) | 嘗試載入頁面，以取得可輸入債務人「QuadraNet Enterprises, LLC」之欄位 | **HTTP 404 Not Found。** 此路徑下無任何可用之查詢表單。 | 須由德拉瓦州核可之查詢人代查（見下一列）。 |
+| Delaware Division of Corporations — ICIS eCorp 根路徑 | [icis.corp.delaware.gov/eCorp](https://icis.corp.delaware.gov/eCorp) | 載入入口根路徑，以列舉針對債務人「QuadraNet Enterprises, LLC」可用之 UCC 服務 | 自 `https://icis.corp.delaware.gov/` HTTP 302 轉址至 `/eCorp`；該入口**僅提供「FILE UCC」與「ENTITY SEARCH」。此入口背後並無免費的公開 UCC 債務人姓名查詢。** 未取得任何登記資料。 | 德拉瓦州將 UCC 資料庫查詢限縮給**州核可查詢人**。官方收費：**每一債務人名稱 $25 認證查詢費**，加上**每次查詢強制 $25 之 24 小時加急費**，認證影本**首頁 $10、每加頁 $2**。實務途徑：透過德拉瓦州核可查詢人／註冊代理人下單（例如 Delaware Business Incorporators、Corp1、DCS Delaware）——含廠商費用之總成本通常為**每一債務人名稱 USD 75–150**。 |
+| Delaware Division of Corporations — 公布之 UCC 收費表（此次呼叫是為了「舉證付費牆存在」，而非為了取得檔案） | [corp.delaware.gov/uccfeessept09/](https://corp.delaware.gov/uccfeessept09/) | UCC-11／UCC 查詢費用與核可查詢人之要求 | 已確認：德拉瓦州 UCC 查詢須付費且限縮給核可查詢人。每一債務人 $25 認證查詢，UCC-11 強制次日加急 $25，影本首頁 $10＋每加頁 $2。**因此德拉瓦州記為 PAYWALLED（付費牆），而非「查無登記」。** | 不適用——此次呼叫目的在記錄成本，非取得檔案。 |
+| Florida Secured Transaction Registry（FSTR）— 首頁 | [floridaucc.com](https://floridaucc.com/) | 載入登記系統首頁，以進入免費 UCC 債務人查詢（佛州是少數真正免費的州級登記之一；QuadraNet 曾營運 Miami 機房） | **HTTP 200。** 已確認該登記系統存活且可免費查詢。由 FLORIDAUCC, LLC 依 Ch. 679 Fla. Stat. 擔任佛州州務院之約聘廠商營運。此步驟未執行查詢。 | 此步驟不適用。 |
+| Florida Secured Transaction Registry（FSTR）— UCC Search | [floridaucc.com/search](https://floridaucc.com/search) | 預計送出之債務人字串：「QuadraNet Enterprises, LLC」「QuadraNet Enterprises LLC」「QuadraNet, Inc.」「QuadraNet」。**一個都沒有送出。** | **是被我方自身規則擋下，不是被網站擋下。** 進入查詢路徑會跳出「Terms of Use」使用條款彈窗，必須勾選「I accept the terms in the agreement」後 Next 按鈕才會啟用。代使用者接受使用條款須取得使用者明示許可，該工作階段並無此許可，故未勾選、未執行查詢。**佛州因此為 UNSEARCHED（未查詢）——未取得任何正面或負面之結果。** | **免費**——由真人接受 FSTR 使用條款一次後，即可無限次免費執行債務人姓名查詢。或向州務院訂購佛州 UCC-11 認證查詢。**這是整個 UCC 軌道中成本最低且尚未探索的途徑，應優先執行。** |
+| Illinois Secretary of State — UCC Search | [apps.ilsos.gov/uccsearch/](https://apps.ilsos.gov/uccsearch/) | 於針對「QuadraNet Enterprises, LLC」之債務人查詢前嘗試載入頁面（QuadraNet 曾營運 Chicago／Elk Grove Village 機房） | **連線失敗——curl 回傳 HTTP code 000**（未收到任何回應；自本主機無法建立連線）。未執行查詢，未取得資料。 | 改由其他網路重試，或以郵寄方式向 Illinois SOS 提出 UCC 資訊請求（IL 認證查詢約 **$10 一次**）。 |
+| Washington State Department of Licensing — UCC 業務 | [dol.wa.gov/professional-licenses/uniform-commercial-code-ucc](https://dol.wa.gov/professional-licenses/uniform-commercial-code-ucc) | 於債務人查詢前定位線上申報與查詢之入口（QuadraNet 曾營運 Seattle／Tukwila 機房） | 自 `https://www.dol.wa.gov/business/ucc/` 轉址後 HTTP 200。頁面確認線上申報與查詢存在，並連向另一份「Online file and search fees」收費表，**惟自回傳內容無法解析出該收費頁與實際查詢工具之 URL。未執行任何債務人查詢。** | 直接聯繫 WA DOL UCC 業務：**360-664-6616／UCC@dol.wa.gov** 詢問現行線上查詢費，或走紙本 UCC-11。 |
+| Nevada SilverFlume — UCC | [nvsilverflume.gov/ucc](https://www.nvsilverflume.gov/ucc) | 債務人查詢前之入口可達性探測 | **HTTP 200——入口可達。未執行查詢。** 內華達州優先度低，因為 QuadraNet Enterprises LLC 是**德拉瓦州**的 LLC，主要營業處所在加州，內華達州只可能存在誤申報之聲明。 | Nevada SOS UCC 查詢可免費互動式執行；認證影本須付費。 |
+| Texas Secretary of State — UCC | [sos.state.tx.us/ucc/index.shtml](https://www.sos.state.tx.us/ucc/index.shtml) | 債務人查詢前之入口可達性探測（QuadraNet 曾營運 Dallas／TierPoint 機房） | **HTTP 200——僅為說明頁。** 德州 UCC 查詢須經 SOSDirect，需**付費帳號**。無免費債務人查詢可用，未取得資料。 | Texas SOSDirect 帳號：**每次 UCC 查詢 $1.00，另每份文件影像 $1.00**；須先設立帳號。或紙本 UCC-11，**每一債務人名稱 $15.00**。 |
+| Georgia Superior Court Clerks' Cooperative Authority（GSCCCA）— UCC Search | [search.gsccca.org/UCC/](https://search.gsccca.org/UCC/) | 債務人查詢前之入口可達性探測（QuadraNet 曾營運 Atlanta／CoreSite AT1 機房） | 對本用戶端回傳 **HTTP 500 Internal Server Error**。未進到查詢表單，未取得資料。 | GSCCCA 之 UCC 索引查詢須**免費註冊帳號**；影像須付費。已註冊之真人使用者可免費查詢喬治亞州 UCC 索引。 |
+| Los Angeles County Registrar-Recorder/County Clerk — 不動產文件查詢（針對 530 W. 6th St 地址及任何已登錄之留置權／判決） | [lavote.gov/home/records/real-estate-records/property-document-search](https://www.lavote.gov/home/records/real-estate-records/property-document-search) | 嘗試進入 grantor／grantee 索引，查詢「QuadraNet」與「530 6th Street, LLC」 | **HTTP 404 Not Found**——該文件所載 URL 路徑已不存在。未取得任何郡登記處紀錄。 | LA County RR/CC 臨櫃或其現行線上索引（每份影本通常 **$6–$8，每加頁 $3**）；LA County 之 grantor／grantee 索引認證查詢亦須付費。 |
+| CourtListener／RECAP 聯邦案件查詢（破產、接管、附屬程序） | [courtlistener.com/api/rest/v4/search/?q=QuadraNet&type=r](https://www.courtlistener.com/api/rest/v4/search/?q=QuadraNet&type=r) | `q="QuadraNet"`、`type=r`（RECAP dockets） | **48 筆結果。** 相關者：「QuadraNet, Inc.」——U.S. Bankruptcy Court, E.D. California，案號 **05-60874**，2005-10-12 立案（與洛杉磯這家主機商之同一性**未**確立；E.D. Cal. 管轄地反證其非同一——標記為未查證）。其餘命中全為第三方傳票、刑事與民事案件，QuadraNet 僅以主機服務商身分出現，非債務人。**QuadraNet Enterprises LLC 查無任何破產、接管或債權人利益讓與程序。** | 若日後確認具體案號，可用 PACER free-look 或直接於 PACER 購買案件文件，**每頁 $0.10（每份文件上限 $3.00）**。 |
+| CourtListener／RECAP 聯邦案件查詢（精確實體字串） | [courtlistener.com/api/rest/v4/search/?q="QuadraNet Enterprises"&type=r&order_by=dateFiled desc](https://www.courtlistener.com/api/rest/v4/search/?q=%22QuadraNet%20Enterprises%22&type=r&order_by=dateFiled%20desc) | `q="QuadraNet Enterprises"`（精確片語）、`type=r`，依立案日期遞減排序 | **7 筆結果，最新為 2023-03-30。** 每一筆都是第三方案件（Microsoft v. John Does；In re Mizuho；Millennium Funding v. 1701 Management；US v. Adepoju；WhatsApp v. NSO Group），QuadraNet Enterprises 以主機服務商或傳票受送達人身分出現。**零筆清償／破產申請。確認整個收攤是在法院程序外進行的。** | 於 PACER 以當事人名稱跨全部轄區直接查詢（每頁 $0.10）。 |
+| CourtListener／RECAP 聯邦案件查詢（母公司） | [courtlistener.com/api/rest/v4/search/?q="Edge Centres"&type=r](https://www.courtlistener.com/api/rest/v4/search/?q=%22Edge%20Centres%22&type=r) | `q="Edge Centres"`（精確片語），另外單獨查 `q="Edge Centres LLC"` | **兩個精確片語皆為 0 筆結果。** 母公司以該名稱在美國聯邦並無破產、接管或清償程序案件。母公司之財務困境因此**在美國聯邦法院紀錄中查無佐證**——須改由澳洲 ASIC 清償公告追查，本次未觸及。 | [ASIC Published Notices](https://publishednotices.asic.gov.au/)——外部管理／清算人指派公告可免費查詢；ASIC 公司謄本 **AUD 9–40**。 |
+| CourtListener／RECAP 聯邦案件查詢（同集團實體） | [courtlistener.com/api/rest/v4/search/?q=Multacom&type=r](https://www.courtlistener.com/api/rest/v4/search/?q=Multacom&type=r) | `q="Multacom"` | **11 筆結果。** 全部為第三方案件（Rivers v. Multacom Corporation／DawgPoundUSA W.D.N.C. 3:24-cv-00632 與 3:23-cv-00063；Rivers v. Multacom S.D.N.Y. 1:24-cv-05585；US v. Tsastsin；Gubarev v. BuzzFeed；Microsoft v. John Does）。**查無清償程序。** Multacom 在 Aon Center 的房東糾紛屬州法院案件，不會出現在 RECAP。 | LA County Superior Court 案件索引（不當佔有／有限民事），或 UniCourt（訂閱制）。 |
+| **ARIN 大量移轉紀錄檔——真正走通的替代舉證途徑** | [ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) | 下載完整 **30,319,603 bytes** 之移轉紀錄檔（**44,977 筆**，最後更新 2026-08-10），篩出 JSON 內含「quadranet」「pacificrack」或「edge centres」之全部紀錄 | **282 筆相符之移轉紀錄，其中 260 筆以 QuadraNet／PacificRack 為 SOURCE（出讓方）。** 這是關於「什麼資產被質押、被賣掉、被搬走」最具權威性、免費且第一手的紀錄。完整結果轉錄於 §9.3 與 §8.4。**此途徑可替代 UCC 查詢，但不等同 UCC 查詢：ARIN 顯示的是資產處分，不是擔保權益。** | 不適用——免費且完整。 |
+| ARIN RDAP — 登記組織與資源持有 | [rdap.arin.net/registry/entity/QEL-5](https://rdap.arin.net/registry/entity/QEL-5) · [rdap.arin.net/registry/autnum/8100](https://rdap.arin.net/registry/autnum/8100) | Org handle QEL-5（QuadraNet Enterprises LLC）與 AS8100 | **Org QEL-5：** 2018-06-07 登記，**最後異動 2024-11-25**。地址 530 W. 6th ST, STE #901, Los Angeles, CA 90014。持有 **4 個 ASN**（AS8100、AS62639 QUADRANET、AS62878 QUADRANET-TRANSIT、AS64270 PACIFICRACK）與 **9 個網段**：IPv4 104.223.124.0/24、155.94.234.0/24、173.205.80.0/20、69.174.96.0/21（合計 **6,656 個位址**）；IPv6 2602:FFDC::/36、2602:FFEA::/32、2604:C3C0::/32、2607:FCD0::/32、2607:FF48::/32。**AS8100** 於 2009-10-22 登記，最後異動 2018-08-30，狀態 Active，濫用通報聯絡仍為 support@quadranet.com／+1-213-614-9371。 | 不適用——免費且完整。 |
+| OpenCorporates API — 法人實體／別名變體列舉 | [api.opencorporates.com/v0.4/companies/search?q=quadranet](https://api.opencorporates.com/v0.4/companies/search?q=quadranet) | `q=quadranet` | `{"error":{"message":"Invalid Api Token. Please check your OpenCorporates account"}}`——**HTTP 層級即遭拒。** 未取得實體清單，故無法自此來源列舉完整之登記別名／DBA 變體。本次調查他處所用之別名變體僅來自 ARIN、法院案由與新聞報導。 | 申請 OpenCorporates API token（非商業用途有免費層，付費自約 **USD 149/月**起），或在 [opencorporates.com](https://opencorporates.com/) 免費互動查詢；或用 CA SOS bizfile 商業實體查詢（自本主機同樣被 Incapsula 擋下）。 |
+
+### 8.3 已取得之登記檔案全文
+
+> ### **零筆。沒有任何登記檔案文字可以呈現，因為沒有任何索引回傳過任何一列。**
+
+本小節刻意保留為空集合而非直接刪除，以讓「缺失證據的形狀」保持可見。**若曾取得任何一筆登記，本小節將以「一筆一區塊」呈現——絕不壓縮成單一表格列，絕不縮寫擔保物條款——每一區塊包含：**
+
+- **登記編號**（例如 CA SOS 十位數 file number，或 Delaware UCC-1 initial financing statement 編號）
+- **登記日期**與**失效日期**（UCC-1 自登記起 5 年失效，除非辦理續期），以及在失效前 6 個月窗口內所辦之任何**續期（continuation）**
+- **擔保權人（secured party）姓名／名稱＋完整地址**，逐字照登記所載
+- **債務人（debtor）姓名／名稱＋完整地址**，逐字照登記所載，並註明債務人係載為「QuadraNet Enterprises, LLC」（德拉瓦州 LLC）或「QuadraNet, Inc.」（較早的加州公司）——兩者是不同債務人，對其中之一設定之留置權不會及於另一方
+- **擔保物描述，以 blockquote 逐字全文引用**、不刪節；因為「all assets, wherever located, now owned or hereafter acquired」與「特定設備之 PMSI 附表」之間的差別，就是整個商業問題本身
+- **修正、讓與、部分解除與終止**，依登記順序列出
+- **紀錄連結**，指向可調閱之索引條目或認證影本
+
+**本檔並未就擔保權益之存否作成任何認定。** 零結果係取得管道所致，逐列記錄於上方 §8.2。
+
+### 8.4 這份紀錄實際說明什麼
+
+| 觀察 | 其意涵 | 信心度 | 銷售後果 |
+|---|---|---|---|
+| **德拉瓦州——唯一可能合法登記對 QuadraNet Enterprises, LLC 之已完善擔保權益的登記處——正好就是那個有付費牆、且限縮給州核可查詢人的登記處**（$25 查詢＋$25 強制加急＋$10／$2 影本費）。依 **UCC §9-307(e)**，已登記組織之所在地即其設立州，因此對德拉瓦州 LLC 放款的擔保權人會在**德拉瓦州**登記，而不是加州。加州、佛州、德州、喬治亞州若有登記，也只會是針對較早的加州公司「QuadraNet, Inc.」，或屬防禦性／誤申報之聲明。 | 本次調查的「零筆登記」結果是**取得管道的產物，不是事實的產物**。QuadraNet Enterprises LLC 此刻名下完全可能存在一筆概括留置權（blanket lien），而免費紀錄中不會有任何跡象。**任何「本公司無擔保負擔」之主張皆無依據。** | **高**——這是法律管轄地的確定性，不是判斷題。 | 在與後手實體展開任何設備對話之前，先花 **約 $75–150** 調閱德拉瓦州 UCC-11，對象為 **QuadraNet Enterprises LLC**、**Multacom Corporation** 及任何 **Edge Centres 美國實體**。若查出仍在續期中的概括留置權，後手**在未取得既有貸方從屬同意（subordination）前，無法就新硬體設定購置價金擔保權（PMSI）**——這會直接殺掉供應商融資或租賃架構，逼成現金交易或通路架構。**這 $150 就決定了本案是現金單，還是根本沒有單。** |
+| 該公司自家 2025 年 3 月的型錄頁上，逐字掛著行銷文案 **「We are a financially stable and debt-free company」**——刊於 quadranet.com/los-angeles-dedicated-servers，[2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers)；亦即在房東於 2025-02-06 就 **$599,379.76** 欠租張貼 3 日內付租或遷離通知之後約**四週**，且在 2025-03-01 通知 LA 客戶須於 2025-03-07 前撤離之後**五天**。 | 有兩種讀法，而兩種在商業上指向同一結論。若「debt-free」為**真**，則之所以沒有 UCC 登記，是因為機隊以現金購入，或是帳面接近零的完全折舊舊機——這正是那份凍結在 2012–2018 年矽晶的型錄所顯示的樣子。若那只是**沒人維護的過期樣板文案**，那就說明營運方早在崩潰前數月就已停止照料自家門面。無論何者：一家真的沒有留置權、卻仍付不出約 60 萬美元租金的業者，**受限的不是貸方給不給錢，而是收入。** | 觀察本身 **中高**（文字與日期均逐字取自存檔）；**中**，就哪一種讀法為真而言。 | **不要對這一類業者用「融資」當突破口。** 限制不在信用取得，而在於每機櫃的收入（十年前矽晶、每台 $109–649/月）撐不起**任何**新硬體的分期。有效的切角是**每機櫃收入的擴張**——密度與每單位算力價格——不是付款條件。 |
+| **移動最有價值的資產，完全不需要任何 UCC 登記。** 2024-09-09 至 2025-01-30 之間，**267,824 個 IPv4 位址**經由五筆 ARIN `RESOURCE_TRANSFER` 離開 QuadraNet Enterprises LLC，流向五個不同受讓人——**Interserver, Inc**（2024-09-09，8,192）、**Volt Broadband**（2024-12-02，2,048）、**Alkira Inc**（2024-12-04，1,024）、**NetSpeed LLC**（2024-12-09，2,048）與 **HostPapa**（2024-12-13、2025-01-02、2025-01-30，共 256,512、209 個區塊）。每一筆的型別都是 `RESOURCE_TRANSFER`，即常規對價之指定移轉，**不是** `MERGER_ACQUISITION`。 | 這是**困境求現，不是策略性出售**的特徵。破綻在順序：在大筆交易前的 14 週窗口內，先有四筆小額移轉給四個互不相關的買家——那正是「能賣什麼就賣什麼、誰能最快成交就賣給誰」的做法。這也代表 IPv4 **並未被設定為擔保物**：若有擔保權人對號碼資源設定留置權，勢必須經其同意，而沒有人會在貸方盯著的情況下把擔保物拆給五個買家。IPv4 是唯一有流動市場的資產，也是第一個被變現的，這強烈暗示**伺服器本身價值低到沒人想費事**。 | 移轉本身 **高**（[ARIN 第一手來源](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json)，日期與數量精確）；困境求現之解讀 **中高**。 | **把買家排序，因為買家就是帳戶。** HostPapa 拿走 **97%** 的位址空間（256,512 個 IP、209 個區塊）——剛取得 26 萬個 IP 的業者**必須在後面擺上算力**，否則資產就是死重；這是一個有明確日期（2025 年 1 月）與明確時鐘的硬體採購觸發點。Interserver、Volt Broadband、Alkira 與 NetSpeed 規模較小，但每一家都在 2024 Q4 自我表態為手上有現金的擴張型買家。**先追 HostPapa。** |
+| **資產處分在 2026 年仍在進行中，而且已經賣到 ASN 本身。** AS29761 於 **2025-04-10** 自 QuadraNet Enterprises LLC 移轉給 **Converted Networks LLC**。**AS22298** 於 **2026-07-28** 自 QuadraNet Enterprises LLC 移轉給**個人「Jan Vaclav」**——距本次調查僅十三天。同時，組織紀錄 **QEL-5 最後異動日為 2024-11-25，與 Multacom Corporation 的 ARIN 組織紀錄最後異動日完全相同。** | 在營運停止十八個月後，**仍有人在管理並持續變現 QuadraNet 這個空殼**。把 ASN 賣給具名個人已是刮鍋底——那是位址空間、客戶與建物都沒了之後剩下的東西。兩份 ARIN 組織紀錄同為 2024-11-25 異動，是**集團層級的行政動作**，直接證明兩個登記組織在 Edge Centres 之下是同一本帳在管。網域證據亦相互印證：**quadranet.com 與 digitalspace.com 都由澳洲註冊商 Synergy Wholesale Accreditations Pty Ltd 登記**，且 digitalspace.com 於 **2026-08-08** 更新——距本次調查兩天。 | **高**——四項資料點全為第一手（ARIN 移轉紀錄、ARIN RDAP、註冊商 WHOIS）。 | **有一位具簽核權限的活人仍在管理這份遺產，而且找得到** ——他們把 quadranet.com 續約到 2027-09-29，並在 2026-08-08 動過 digitalspace.com。這個人就是 2026 年 7 月在 **6171 W Century Blvd** 重新上架機隊的守門人。**接觸路徑走 Digital Space／Multacom 那一側，不要走 QuadraNet 這一側；帶著訴訟的是 QuadraNet 這個名字。** |
+| **QuadraNet Enterprises LLC、Edge Centres 與 Multacom 均無任何美國聯邦清償程序。** CourtListener／RECAP 對「Edge Centres」與「Edge Centres LLC」皆回傳 0 筆；對精確片語「QuadraNet Enterprises」回傳 7 筆，每一筆都是第三方傳票或智財案件。唯一的清償程序命中「QuadraNet, Inc.」Bankr. E.D. Cal. **05-60874**（2005-10-12 立案），幾乎可以確定是另一家公司（管轄地錯、年代錯）。 | 這是一次**法院程序外的瓦解：房東自力救濟，而非 Chapter 7／11，也不是 ABC**。這對**資產所有權**影響極大。破產或接管會有受託人、財產清冊、經公告之出售程序與乾淨的權利移轉。這裡一樣都沒有——房東 **530 6th Street, LLC** 把套房鎖起來，而 2025-03-01 發給客戶的通知是由 **Melissa Pearl, Director of Client Success，代表 MORLIN ASSET MANAGEMENT, LP（Jock A. Ebner, President）** 具名，也就是房東的物業管理公司，**不是** QuadraNet。當物業管理公司開始寫信給你的客戶，這個營運方在實務上就已經不存在了。 | 聯邦案件之不存在 **高**（四次精確片語查詢皆乾淨）；Morlin／房東署名 **高**（逐字取自已公開之信件）。 | **仍留在 530 W 6th St 的任何硬體，權利狀態都是混濁的**——受房東留置權以及可能的倉庫留置／遺棄物主張所拘束，且**沒有受託人可以移轉乾淨權利**。**不要以那批機器設計任何以舊換新、回購或資產抵扣的架構。** 反過來說，這正是「全新一批」提案的切入點：後手無法安全地沿用被遺棄的機隊，因此他們在 6171 W Century Blvd 重新上架的東西**必須重新採購**。 |
+| **AS8100 今天宣告零個 IPv4 前綴**，僅發出一個 IPv6 /48，且被 [bgp.he.net](https://bgp.he.net/AS8100) 標記為屬於 Free Range Cloud Hosting Inc. 的 **bogon**，可觀察到的對等體只剩一個（**AS29802 Hivelocity**）。**PeeringDB 上仍宣傳該網路有 18,500 個 IPv4 前綴、100–200Gbps 與 13 處設施**——該紀錄之 IX 埠最後實質更新在 **2017 年**，設施在 **2025-04-24**，且七個非 LA 設施全部是在 **2021-03-31 同一天**批次加上去的。 | PeeringDB 檔案是一份**化石**。宣稱的 18,500 個前綴與實際的零之間的落差，是衡量這個網路被剝得多乾淨最清楚的一把尺。2021-03-31 的批次設施新增是**文件整理動作，不是七座機房開幕**——真實的擴張不會全部落在同一個日曆日。任何拿 PeeringDB 對這個 ASN 做容量規劃的人，用的是一個**錯到無限大**的數字。 | **高**——bgp.he.net 與 PeeringDB API 均為第一手且已直接讀取。 | **立即把 AS8100 從任何以 AS 為基礎的開發名單中剔除**，並將全轄區的 PeeringDB 前綴／流量數字視為**未經稽核的自報行銷內容，而非容量訊號**。更有用的是：最後僅存的對等體是 **Hivelocity**，這是殘餘流量、乃至殘餘客戶去向的線索——**值得打一通電話**。 |
+| 一家曾營運七個城市據點、約 **263,168 個 IPv4 位址**的業者，在免費紀錄中呈現為**零筆留置權**——但紀錄恰好就在留置權應該存在的地方（**德拉瓦州**）是不完整的；而業者自家型錄顯示的機隊是 **Xeon E5-2650（2012）、E5-2620v4（2016）、E5-2698v4（2016）與 E-2124G／E-2146G（2018）** 的矽晶。 | **完全折舊的商用 Xeon 不是可融資的擔保物。** 沒有設備租賃商會對 2012 年 Sandy Bridge 雙路機開票，也沒有銀行會對一批清算價值大約等於廢鐵加 DIMM 的機隊設定概括留置權。最可能的真實狀態是：硬體以現金購入，或是透過 2015–2018 年的整併收購一併繼承（Crissic Solutions 2015、Secured Private Network 2015、Global Layer BV 2018、BuffaloColo 2018——在 ARIN 紀錄中全部登錄為 `MERGER_ACQUISITION` 移轉），從未再融資、也從未更新。**此處「沒有留置權」不是財務體質良好的訊號——而是資產不值得被拿來借錢的訊號。** | **中高**——矽晶清單逐字取自存檔；融資結論屬**推論**，若德拉瓦州 UCC-11 查出概括留置權即會被推翻。 | **這是全轄區每一家低階專用伺服器／colo 業者的通則：「沒有留置權」不等於現金充裕、準備採購——往往代表機隊老到借不到錢。** 請以型錄年齡測試（§9）為**主要**資格條件，UCC 紀錄為**次要**條件。型錄凍結且無留置權的業者，是**財務困難**帳戶，不是乾淨帳戶。 |
+| **優先順位問題目前無法回答，而這件事本身就是發現：** 在零筆登記的情況下，**沒有擔保權人可辨識、沒有登記日期樣態可讀成採購節奏、沒有擔保物描述可分類為概括或特定設備、沒有續期可證明債務仍未清償、也沒有終止可證明舉債能力已回復。** | 本軌道原本應回答的八個商業問題——貸方是**原廠融資部門**（暗示直接採購）還是**通路／經銷貸方**（暗示該帳戶走通路採購，因而觸發 Rule 8 之經銷商核准）？登記節奏是否吻合換機節奏？留置權是概括或 PMSI？已續期或已終止？誰有第一順位？——**全部卡在同一筆 $75–150 的德拉瓦州查詢上。** | **高**——這是關於「證據裡沒有什麼」的陳述。 | **把德拉瓦州 UCC-11 當成有負責人、有期限的關卡型行動項目，不是背景研究。負責人：一組（US8664 Tuo Cheng）。在跑完之前，帳戶計畫無法回答本案是直購或走通路，因此也無法對 Rule 8 經銷商核准要求與 $100M 門檻進行評分。** 請同時對 **Multacom Corporation** 與 **Edge Centres 美國實體**下單——那才是有未來的實體，而同一筆約 $150 就涵蓋三個名稱。 |
+
+### 8.5 GAP——融資鏈軌道
+
+- **GAP — 德拉瓦州才是勝負關鍵，而它沒有被查。** QuadraNet Enterprises, LLC 是德拉瓦州 LLC，依 **UCC §9-307(e)**，任何對其之已完善擔保權益只會登記在德拉瓦州。德拉瓦州 UCC 資料庫限縮給州核可查詢人：**每一債務人 $25 認證查詢＋$25 強制加急＋影本首頁 $10／每加頁 $2**，透過註冊代理人之總成本約 **USD 75–150**。**本次未執行。** §8.4 中所有關於留置權的內容都是**從「沒有證據」推論而來，不是「證明沒有」**。
+- **GAP — 加州被擋了四次。** 對 bizfileonline.sos.ca.gov 的四次獨立嘗試（直接 API POST、瀏覽器頁面載入、同源已驗證 fetch、JS 挑戰後延遲重試）全部回傳 Imperva／Incapsula 中介頁，incident ID 分別為 `414000330046713937-77490079154440309`、`414000330046225999-43138857706588270`、`414000330046225999-43245810982193262` 與 `414000330046225999-44512602996213870`。**未取得任何結果列。** 針對舊的加州公司 **「QuadraNet, Inc.」** 之加州登記完全未查。
+- **GAP — 佛州是被我方自身限制擋下的，而且它是免費的。** [floridaucc.com/search](https://floridaucc.com/search) 的佛州擔保交易登記查詢確實免費，但入口設有須勾選「I accept」的使用條款彈窗。代使用者接受條款所需之許可並未取得，故未勾選、**未執行查詢**。**這是整個調查中成本最低且尚未探索的途徑，應由真人優先執行。**
+- **GAP — 另有四個州級登記處未解。** 伊利諾州（[apps.ilsos.gov/uccsearch](https://apps.ilsos.gov/uccsearch/)）回傳 HTTP 000，連線未建立。喬治亞州（[search.gsccca.org/UCC](https://search.gsccca.org/UCC/)）回傳 HTTP 500。德州須付費開立 SOSDirect 帳號（每次查詢 $1.00＋每份影像 $1.00，或紙本 UCC-11 $15.00）。華盛頓州 DOL 確認有線上查詢，但工具 URL 與收費表皆無法解析。**這四州都設有 QuadraNet 機房（Chicago／Elk Grove、Atlanta、Dallas、Seattle／Tukwila），四州全部未查。**
+- **GAP — 未能執行別名變體掃描。** 由於每個登記處都在能逐一嘗試之前就被擋下，實際送出過的債務人字串只有 **「QuadraNet」** 一個。應查而未查的變體包括：*QuadraNet Enterprises, LLC · QuadraNet Enterprises LLC · QuadraNet, Inc. · QuadraNet Inc · Quadranet · PacificRack · Multacom Corporation · Edge Centres* 及任何 Edge Centres 美國子公司——**這些從未在任何索引上跑過**。OpenCorporates 本可列舉已登記之變體，但以「Invalid Api Token」拒絕呼叫。
+- **GAP — 未觸及洛杉磯郡登記處。** LA County Registrar-Recorder 之不動產文件查詢 URL 回傳 HTTP 404。**未對 QuadraNet 或 530 6th Street, LLC 執行任何郡級留置權、判決留置權、承攬人留置權或 grantor／grantee 索引查詢。**
+- **GAP — 驅逐案件的案號缺失。** 兩件不當佔有訴狀目前僅知 LowEndBox 所報之非正式標籤「Complaint 530」與「Complaint 530PH」。**沒有 LA Superior Court 案號**、沒有訴狀本身之立案日（只有 2025-02-06 張貼與 2025-02-09 屆期）、沒有法院股別、沒有處分結果。相關的 2019 年案件（*QuadraNet, Inc. v. 530 6th Street, LLC*，LA Superior Court，Stanley Mosk，2019-07-17 立案，2021-06-11 依原告聲請撤回）之案號在 UniCourt 上被遮蔽。
+- **GAP — 母公司清償狀態被主張，但本檔並未取得文件佐證。** CourtListener 對「Edge Centres」與「Edge Centres LLC」回傳 0 筆，確認美國聯邦無程序。**澳洲端——ASIC Published Notices 之外部管理或清算人指派公告、受指派清算人身分、指派日期——本次未查。** 缺此一環，「母公司進入清算」僅立於二手報導，而非第一手清償紀錄。
+- **GAP — 查無拍賣或資產出售公告。** 就 QuadraNet 硬體，查無任何已公告之拍賣標的、接管人公告、債權人利益讓與申報或設備清算商公告。鑑於本次瓦解屬法院程序外性質，可能本來就沒有；但**此處之「沒有」屬未經確認，而非已成立**。
+- **GAP — 2005 年破產案之同一性未解。** CourtListener 顯示「QuadraNet, Inc.」於 U.S. Bankruptcy Court, E.D. California，案號 **05-60874**，2005-10-12 立案。管轄地（Fresno，不是 Los Angeles）與年代都強烈指向**另一家公司**，但本次未調閱案卷確認——CourtListener 之 docket API 回傳空欄位。**在未調閱案卷前，不得將此案引為 QuadraNet 主機業務之歷史。**
+
+---
+
+## 9. 採購時鐘
+
+### 9.1 型錄快照時間軸
+
+採購事件之定義嚴格限於**新一代 CPU 或 GPU 首次出現在型錄上**。來源：Wayback Machine CDX 索引，加上對 `quadranet.com/los-angeles-dedicated-servers` 與 `quadranet.com/dedicated-servers/` 之十九次個別抓取與解析（2018-10-27 至 2025-12-04），並與 2026-08-10 直接抓取之線上網站交叉核對。
+
+| 快照日期 | SKU 數 | 最新矽晶 | 較前次新增 | 較前次下架 | 快照 |
+|---|---|---|---|---|---|
+| **2018-10-27** | 13 個標價品項（12 個伺服器 SKU＋$29/月代管加購） | Intel Xeon E3-1240v6／E3-1270v6（Kaby Lake，2017 Q1）單路；Dual Xeon E5-2620v4（Broadwell-EP，2016 Q1）雙路 | **本次調查之基準快照。** 完整在售 CPU 組：Intel Xeon E3-1230v2、E3-1240v3、E3-1240v6、E3-1270v6、Dual Xeon E5-2620v2、Dual Xeon E5-2620v3、Dual Xeon E5-2620v4。價格 $119/$129/$159/$169/$279/$329/$339/$379/$179/$209/$369/$399＋$29。 | 不適用（基準） | [存檔](https://web.archive.org/web/20181027140448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2019-01-29** | 13 個標價品項 | **Intel Xeon E-2124G 與 E-2146G（Coffee Lake，Xeon E-2100 系列，2018 Q3）** | **採購事件。** E-2124G（3.40GHz 4C）與 E-2146G（3.50GHz 6C+HT）首次出現，頁面橫幅寫「QuadraNet is pleased to announce the Intel Xeon E-2 Series dedicated servers」。**Dual Xeon E5-2650（Sandy Bridge-EP，2012）同時出現——請注意這是「更舊」的矽晶被加進來，亦即二手／重新部署的產能，不是新採購。** 價格重設為 $139/$155/$209/$259/$159/$239/$249/$399/$289/$399/$469/$599＋$29。 | Intel Xeon E3-1230v2、E3-1240v3、E3-1240v6、E3-1270v6、Dual Xeon E5-2620v2、Dual Xeon E5-2620v3 全部移除。**整條 E3 單路產品線一次汰換。** | [存檔](https://web.archive.org/web/20190129094810/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2019-08-22** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018）——未變 | 無。CPU 組與 13 個價格與 2019-01-29 **完全逐字相同**。 | 無。 | [存檔](https://web.archive.org/web/20190822135442/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2020-04-25** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018）——未變 | 無新矽晶。**全面降價：** $139→$109、$155→$119、$209→$149、$259→$189、$239→$189、$249→$249、$399→$279、$289→$379、$399→$419、$469→$499、$599→$649。**這組價格自此 59 個月未再變動。** | 無。 | [存檔](https://web.archive.org/web/20200425152318/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2020-11-29** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018） | 無。CPU 組與價格組與 2020-04-25 相同。 | 無。 | [存檔](https://web.archive.org/web/20201129103744/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2021-07-27** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018） | 無。完全相同。 | 無。 | [存檔](https://web.archive.org/web/20210727220123/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2022-01-26** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018） | 無。完全相同。 | 無。 | [存檔](https://web.archive.org/web/20220126234231/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2022-12-05** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018） | 無。完全相同。 | 無。 | [存檔](https://web.archive.org/web/20221205001613/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2023-01-23** | 行銷登陸頁上 6 個價格點（colocation $50/$55/$65，專用伺服器 $109/$149/$189）——這是**摘要頁**，不是完整 LA 型錄 | 行銷文案提及 Intel Xeon E3-1240、E3-1276、E5-2620、E5-2650——**全頁未提及任何 2016 年以後的矽晶** | 無新增。**注意：Wayback Machine 沒有任何 2023 年對完整 `/los-angeles-dedicated-servers` 型錄頁的擷取，因此 2023 年僅能靠摘要頁涵蓋。已列為 GAP。** | 無。 | [存檔](https://web.archive.org/web/20230123021356/https://quadranet.com/dedicated-servers/) |
+| **2023-08-03** | 6 個價格點（$50/$55/$65/$109/$149/$189） | 同樣四個 CPU 家族：E3-1240、E3-1276、E5-2620、E5-2650 | 無。頁面內容與 2023-01-23 相同。 | 無。 | [存檔](https://web.archive.org/web/20230803035913/https://quadranet.com/dedicated-servers/) |
+| **2023-12-10** | 7 個價格點——在 $50/$55/$65/$109/$149/$189 之外多出 $599 層級 | 同樣四個 CPU 家族；無新矽晶 | 出現 **「$599/mo 10G Dedicated Servers」** 層級，標示「Coming Soon!」。**這是網路端加購（10GE 埠），不是新的 CPU 世代，因此不構成採購事件。** | 無。 | [存檔](https://web.archive.org/web/20231210192611/https://quadranet.com/dedicated-servers/) |
+| **2024-03-21** | **無法解析**——頁面改版（HTML 自約 162KB 縮至約 80KB），SKU 表移到用戶端算繪之後。可見的價格片段：$35.00/$39.00/$45.00/$79.00/$100/$500/$1000 | 自本次擷取無法判定 | 僅為網站改版。**Edge Centres 於此期間完成對 QuadraNet 之收購（2024-04-08 公布，賣方 VSS Capital Partners）——改版時點正好夾住所有權變更。** | 無法判定 | [存檔](https://web.archive.org/web/20240321090328/https://quadranet.com/dedicated-servers/) |
+| **2024-09-05** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018）——完整型錄確認在收購後仍未變 | **完全沒有。Edge Centres 收購完成五個月後，CPU 組與全部 13 個價格仍與 2020-04-25 逐字相同。新東家沒有注入任何硬體。** | 無。 | [存檔](https://web.archive.org/web/20240905182606/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2024-11-03** | 13 個標價品項 | Intel Xeon E-2124G／E-2146G（2018） | 無。完全相同。 | 無。 | [存檔](https://web.archive.org/web/20241103192930/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2024-12-07** | 促銷登陸頁上 14 個價格點 | Xeon E5-2698 v4（Broadwell-EP，2016）出現在**清倉**列表中 | **清算訊號，不是採購事件。** 出現單一「Dedicated Special」：「E5-2698 V4 / 256GB RAM / 4x8TB SSD / Full GIGE unmetered / 1Gbps Port / /29 IPv4」自 **$849 砍到 $399/月**，並逐字標註「*while supplies last」與「**limited inventory」。Colocation 機櫃自 $849 降到 $699，另有 $999 促銷層級搭配 6 個月後調漲。**時點正好落在 HostPapa 取得第一批 17,408 個 IPv4 的同一個月（2024-12-13）。** | 沒有移除品項，但敘事框架已從型錄轉為**清倉**。 | [存檔](https://web.archive.org/web/20241207023812/https://quadranet.com/dedicated-servers/) |
+| **2025-02-28** | 14 個價格點——與 2024-12-07 相同 | Xeon E5-2698 v4（2016）清倉列表仍在 | 無。頁面凍結。**擷取時點在房東張貼 3 日內付租或遷離通知（2025-02-06）之後 22 天——這家店還在賣伺服器，而它正被趕出那棟樓。** | 無。 | [存檔](https://web.archive.org/web/20250228230257/https://quadranet.com/dedicated-servers/) |
+| **2025-03-06** | 13 個標價品項——**最後一份已知的活型錄** | Intel Xeon E-2124G／E-2146G（Coffee Lake，2018）。完整組：E-2124G、E-2146G、Dual Xeon E5-2650、Dual Intel Xeon E5-2620v4。 | 無。**價格與 2020-04-25 完全相同——凍結 59 個月。** 頁面仍掛著「NEW! … QuadraNet is pleased to announce the Intel Xeon E-2 Series」橫幅（2018 年的公告在 2025 年仍標示 NEW），以及 **「We are a financially stable and debt-free company」** 這句話。擷取時點在 2025-03-07 12:00 PST 客戶撤離期限的**前一天**。 | 無。 | [存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **2025-12-04** | **0——HTTP 404** | 不適用——型錄已移除 | 型錄消失。`/dedicated-servers` 路徑回傳 404。最後一次成功擷取首頁為 2025-03-21。 | **整份產品型錄。** | [存檔](https://web.archive.org/web/20251204000714/https://quadranet.com/dedicated-servers/) |
+| **2026-08-10**（線上，直接抓取） | **0** | 不適用 | 線上網站是一份 **445 bytes 的 HTML**：黑底、一張置中 logo 圖、`<title>Quadranet</title>`，無導覽、無產品、無聯絡方式。HTTP `Last-Modified: Tue, 18 Mar 2025 16:18:03 GMT`——**該頁已 17 個月未被動過。** 由 **148.135.2.50** 提供，RIPE 記載 netnum 148.135.0.0–148.135.127.255、netname **BGXO**、status **LEGACY**、org **ORG-PC1796-RIPE「Private Customer」**、國別 **AU**，由 netutils-mnt 與 lir-us-brander-group-1-MNT 維護。網域註冊商為 **Synergy Wholesale Accreditations Pty Ltd**（澳洲），WHOIS 更新於 2025-08-13，登記到期 **2027-09-29**。權威 NS 為 ns1/ns2.quadranet.com（**204.13.153.43** ＝ ARIN 區塊 NET-204-13-152-0-1、MULTA-NET1、**MULTACOM CORPORATION**）與 ns1/ns2.lax-noc.com。 | **全部。** 目前還在付錢的只剩網域註冊與 DNS 代管——**而 DNS 現在落在 Multacom 的位址空間內。** | [quadranet.com](https://quadranet.com/) |
+
+### 9.2 採購節奏
+
+**已觀察到的間隔。** 在存檔窗口內只觀察到**一次**採購事件，之後什麼都沒有。**事件 1（也是最後一次）：** Intel Xeon E-2100 系列（**E-2124G、E-2146G**；Coffee Lake，Intel 於 2018 Q3 發表）在 **2018-10-27** 與 **2019-01-29** 兩次快照之間首次出現在型錄上，同時汰除整條 Xeon E3 線（E3-1230v2、E3-1240v3、E3-1240v6、E3-1270v6）與較舊的雙路層級（E5-2620v2、E5-2620v3）。**自 2019-01-29 到 2025-03-06——最後一次活型錄，74 個月之後——CPU 組一次都沒有變過：** E-2124G、E-2146G、Dual Xeon E5-2650、Dual Xeon E5-2620v4，橫跨**九次獨立驗證的快照**。價格則自 2020-04-25 起完全凍結（**59 個月，零變動**）。更早的世代轉換可自 2018-10-27 基準快照上的矽晶**推論**（E5-2620v2 ≈ 2013–14 年採購、E5-2620v3 ≈ 2015、E5-2620v4 與 E3-1240v6／E3-1270v6 ≈ 2017）——推得 2018 年以前約為 **18–24 個月**的換機節奏——**但本次未抓取 2018 年以前的型錄快照，故此為推論，非觀察。**
+
+**中位數月數。** **無法計算。** 中位數至少需要兩個已觀察間隔，而目前只有一次已觀察事件。真正**可測量**且真正重要的數字是：最後一次採購事件（2018 Q4／2019-01）到最後一份活型錄（2025-03-06）之間相隔 **74 個月**，到今天（2026-08-10）相隔 **91 個月**，而**這整段期間沒有引進任何新的 CPU 或 GPU 世代**。以 2018 年以前推得的 ~18–24 個月節奏對照，2018 年之後的凍結期約為該業者自身歷史節奏的 **3–4 倍長**。
+
+**最後一次採購事件。** **Intel Xeon E-2124G／E-2146G（Xeon E-2100 系列，Coffee Lake）**，於 **2018-10-27 至 2019-01-29** 之間進入型錄——由兩次相鄰的 Wayback 擷取收斂到約 **13 週的窗口**。請注意同一窗口新增的 **Dual Xeon E5-2650** 是 **2012 年 Sandy Bridge-EP 矽晶**——亦即連最後一次「更新」都有一部分是重新部署的二手庫存，而非新採購。**存檔歷史中從未出現過任何 GPU SKU：** 2018 至 2025 年的任何一次快照，都沒有 NVIDIA、Tesla、RTX、A 系列、H 系列或 L 系列零件。
+
+**下一個窗口推估。** 就 **QuadraNet Enterprises, LLC 而言：永遠沒有。** 不會再有下一個窗口——該實體宣告零個 IPv4 前綴、型錄 404、網站是黑底一張 logo、97% 的位址空間已消失，而且遲至 2026-07-28 都還在賣 ASN。**改指向承接客戶的實體——Multacom Corporation，正改名為 Digital Space：採購窗口現在是開的，而且關得很快。** 已公告之基礎設施遷移至 **6171 W Century Blvd**（原 QuadraNet LA Century 機房）期間為 **2026-07-06 至 2026-07-14**，以 2026-08-10 計已是 **4–5 週前**。實體換棟重新上架，是整個群集中**機率最高的硬體採購事件**：設備會被盤點、壞掉的節點會被報廢而不是搬過去，而密度決策會依新大樓的電力包絡重新做一次。**推估採購決策窗口：2026-08 至 2026 Q4**，最強的訊號是他們必須在剛承諾下來的樓地板後面擺上算力。**次要窗口（已部分錯過）：** HostPapa，於 2024-12-13 至 2025-01-30 之間吸收 **256,512 個 IPv4、209 個區塊**，必須在後面部署算力。
+
+**依據。** Wayback Machine CDX 索引，加上對 `quadranet.com/los-angeles-dedicated-servers` 與 `quadranet.com/dedicated-servers/` 之**十九次**個別抓取與解析（2018-10-27 至 2025-12-04），逐次以程式擷取 CPU 型號字串與各 SKU 月費；並與 2026-08-10 直接抓取之線上網站交叉核對。採購事件嚴格定義為新一代 CPU 或 GPU 首次出現在型錄上。改指向窗口之依據：已公告之 Multacom→Digital Space 機房搬遷日期與 [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json)。
+
+**信心度。** **凍結本身為高**——九次快照橫跨 74 個月回傳同一組 CPU，且自 2020 年起回傳同一組 13 項價格向量，這在網頁考古中已是極少見的明確；並由 2024 年 12 月「while supplies last／limited inventory」清倉列表，以及 2018 年 E-2 公告在 2025 年仍標示為「NEW」兩項獨立佐證。**2018 年以前的節奏為中低**，係由矽晶年份推論而非自快照觀察。**改指向的下一個窗口推估為中**——搬遷日期出自社群來源而非公司文件，且無法對照第一手文件獨立確認。
+
+### 9.3 擴張訊號
+
+| 日期 | 訊號 | 來源 |
+|---|---|---|
+| **2024-09-09** | **ARIN `RESOURCE_TRANSFER`：8,192 個 IPv4 位址、4 個區塊自 QuadraNet Enterprises LLC 移轉予 Interserver, Inc**——第一筆對外位址出售，也是清算的起手式 | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2024-12-02** | ARIN `RESOURCE_TRANSFER`：**2,048 個 IPv4**、2 個區塊自 QuadraNet Enterprises LLC 移轉**予 Volt Broadband** | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2024-12-04** | ARIN `RESOURCE_TRANSFER`：**1,024 個 IPv4**、1 個區塊自 QuadraNet Enterprises LLC 移轉**予 Alkira Inc** | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2024-12-09** | ARIN `RESOURCE_TRANSFER`：**2,048 個 IPv4**、1 個區塊自 QuadraNet Enterprises LLC 移轉**予 NetSpeed LLC** | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2024-12-13** | ARIN `RESOURCE_TRANSFER` **對 HostPapa 之第 1／3 批：17,408 個 IPv4**、8 個區塊。**與網站上出現「$399/月 while supplies last、limited inventory」清倉列表同月** | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2025-01-02** | ARIN `RESOURCE_TRANSFER` **對 HostPapa 之第 2／3 批：22,528 個 IPv4**、88 個區塊 | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2025-01-30** | **ARIN `RESOURCE_TRANSFER` 對 HostPapa 之第 3／3 批：216,576 個 IPv4、113 個區塊——主戲。** 最大的單一區塊：204.44.64.0–204.44.127.255（16,384）、155.94.128.0–155.94.191.255（16,384）、66.63.160.0–66.63.191.255（8,192）、64.188.0.0–64.188.31.255（8,192）、198.55.96.0–198.55.127.255（8,192）、173.44.32.0–173.44.63.255（8,192）、167.160.160.0–167.160.191.255（8,192）、155.94.192.0–155.94.223.255（8,192）、104.223.64.0–104.223.95.255（8,192）、104.129.32.0–104.129.63.255（8,192）。**HostPapa 三批合計：256,512 個 IPv4、209 個區塊** | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2025-01-31** | LowEndBox 公開報導此次移轉：**QuadraNet 自約 263,000 個 IPv4 降至 6,656**，LA 機房離線五天，狀態頁自 2025-01-28 起凍結於「Thank you for your continued patience as we work through our maintenance in our Los Angeles facilities」，Chicago 與 Dallas 亦有斷線 | [LowEndBox](https://lowendbox.com/blog/hostpapa-acquires-nearly-all-quadranet-ips/) |
+| **2025-02-06** | **房東 530 6th Street, LLC 對 QuadraNet 張貼兩份 3 日內付租或遷離通知**——租約 1（起始 2004-07-01）逾期 **$318,722.24**；租約 2（起始 2010-01-01）逾期 **$280,657.52**；**合計 $599,379.76**。通知 2025-02-06 張貼，2025-02-09 屆期 | [LowEndBox](https://lowendbox.com/blog/600000-in-overdue-rent-read-the-quadranet-eviction-complaints/) |
+| **2025-03-01** | **最後一封客戶信——營運方不再回應，改由房東的物業管理公司接手客戶關係。** 由 **Melissa Pearl, Director of Client Success，代表 Morlin Asset Management, LP（Jock A. Ebner, President）** 發出。涵蓋 530 West 6th Street 的 LAX1 與 Century 據點。信中寫明「Our current operations at 530 W 6th St can no longer be maintained」。**撤離期限：2025-03-07 12:00 PM PST。** 具名建議之後手業者：**ColoCrossing、Psychz Networks 與 MULTACOM**。合約作廢並免除提前終止違約金 | [LowEndBox](https://lowendbox.com/blog/read-the-final-quadranet-email-youve-got-one-week-to-get-out-of-los-angeles/) |
+| **2025-03-18** | quadranet.com 被換成**只有一張 logo 的 445 bytes 黑底頁面**——HTTP `Last-Modified` 時戳，即**門面被關掉的確切時刻** | [quadranet.com](https://quadranet.com/) |
+| **2025-04-10** | ARIN `RESOURCE_TRANSFER`，**移轉的是 ASN：AS29761 自 QuadraNet Enterprises LLC 移轉予 Converted Networks LLC** | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2025-04-24** | PeeringDB netfac 紀錄最後修改（CoreSite Atlanta AT1 條目更新）。設施數仍顯示 **13**，其中七處——CoreSite AT1、Equinix CH3 Elk Grove、WowRack Tukwila、HostSlim Woerden NL、InterServer Teb2 Secaucus、TierPoint Dallas——**全部是在 2021-03-31 同一天批次加入，這是文件整理動作而非七座機房開幕。自 2021-03-31 之後未再新增任何設施。** IX 埠（FL-IX、Equinix Los Angeles、Any2West，皆 10Gbps）最後更新於 **2017-03-26** | [PeeringDB netfac API](https://www.peeringdb.com/api/netfac?net_id=2452) |
+| **2025-08-13** | quadranet.com 網域 WHOIS 更新並**續約至登記到期 2027-09-29**，經由澳洲註冊商 **Synergy Wholesale Accreditations Pty Ltd**——**網站關燈五個月後，仍有人在積極付錢保住這個名字** | [quadranet.com](https://quadranet.com/) |
+| **2026-07-06** | **Multacom Corporation 改名為 Digital Space**，並公告舊有基礎設施遷移與機房搬遷至 **6171 W Century Blvd, Los Angeles, CA 90045——即原 QuadraNet LA Century 機房。遷移窗口 2026-07-06 至 2026-07-14。** 報導脈絡：Multacom 在 Aon Center 面臨房東就逾 $400,000 欠租提起之訴訟，並取得 digitalspace.com 以脫離訴訟形象改名。**這就是採購事件——承接客戶的實體實體換棟重新上架** | [LowEndTalk](https://lowendtalk.com/discussion/218705/multacom-legacy-infrastructure-migration-and-facility-relocation-notice) |
+| **2026-07-28** | ARIN `RESOURCE_TRANSFER`，移轉的是 ASN：**AS22298 自 QuadraNet Enterprises LLC 移轉予名為 Jan Vaclav 之個人。** 營運停止 **18 個月**後資產處分仍在進行，而且已到了把 ASN 賣給個人的地步 | [ARIN 移轉紀錄](https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json) |
+| **2026-08-08** | **digitalspace.com WHOIS 更新**——註冊商 **Synergy Wholesale Accreditations Pty Ltd**，與持有 quadranet.com 者為**同一家**澳洲註冊商，並使用 Cloudflare nameserver。**直接證明同一個澳洲主體（Edge Centres 集團）同時控制已死的 QuadraNet 品牌與存活的 Digital Space 後手品牌** | [digitalspace.com](https://digitalspace.com/) |
+| **2026-08-10** | **目前網路狀態（今日實測）：** AS8100 宣告 **零個 IPv4 前綴**，僅發出一個 IPv6 /48（2602:fed2:708d::/48），且被 bgp.he.net 標記為屬於 Free Range Cloud Hosting Inc. 的 **bogon**。可觀察到的 BGP 對等體僅剩一個：**AS29802 HIVELOCITY, Inc.** Org QEL-5 名下殘餘 ARIN 持有共 **6,656 個 IPv4**（104.223.124.0/24、155.94.234.0/24、173.205.80.0/20、69.174.96.0/21），另有五個 IPv6 區塊與四個剩餘 ASN（AS8100、AS62639、AS62878、AS64270 PACIFICRACK）。**PeeringDB 仍宣傳 18,500 個 IPv4 前綴與 100–200Gbps——一份錯到無限大的化石紀錄** | [bgp.he.net/AS8100](https://bgp.he.net/AS8100) |
+
+### 9.4 GAP——採購時鐘軌道
+
+- **GAP — 2023 年是型錄紀錄的一個破洞。** Wayback Machine 沒有任何 2023 年對 `quadranet.com/los-angeles-dedicated-servers`（承載完整 SKU 表的頁面）之擷取。2023 年僅靠摘要頁 `/dedicated-servers/` 的三次擷取涵蓋。由於型錄在破洞兩側（2022-12-05 與 2024-09-05）可證明完全相同，漏掉採購事件的風險**低，但不是零**。
+- **GAP — 2024 年 3 月的擷取無法解析。** 2024-03-21 快照顯示網站已改版（HTML 自約 162KB 降至約 80KB），SKU 表移到用戶端算繪之後；**無法擷取任何 CPU 型號或 SKU 價格。** 該次擷取正好壓在 Edge Centres 收購公告（2024-04-08）之上——正是新東家最可能注入硬體的窗口。2024-09-05 的擷取顯示什麼都沒變，實務上已把問題關掉，**但三月那次擷取本身是黑的。**
+- **GAP — 2018 年以前的節奏是推論，不是觀察。** 未抓取 2018-10-27 以前的任何型錄快照。所推得的 ~18–24 個月歷史換機節奏，是自該基準快照上**矽晶的發表年份**重建的，不是自已觀察到的型錄轉換得來。**真正被觀察到的採購事件只有一次，因此無法計算中位間隔。**
+- **GAP — 從未查核非 LA 的型錄。** 所有 SKU 考古都是針對**洛杉磯**型錄。Dallas、Miami、Atlanta、Chicago、New Jersey、Seattle 與 Amsterdam 的頁面從未抓取，因此**若有採購事件只發生在非 LA 據點，本次會漏掉**。
+- **GAP — 從來沒有 GPU，且未能直接收割 WHT／LET 公告。** 2018–2025 年的任何一次快照都沒有 NVIDIA、Tesla、RTX、GeForce、Quadro、A 系列、H 系列或 L 系列零件；**這家業者從未賣過 GPU 算力。** 另外，webhostingtalk.com 與 lowendtalk.com 對直接抓取皆回傳 **HTTP 403**，因此無法直接收割「新硬體到貨」公告討論串——**本檔引用之 LowEndTalk 事實來自搜尋結果摘要，不是來自討論串本身。**
+- **GAP — 2026 年 7 月的搬遷日期是二手資訊。** Multacom→Digital Space 的遷移窗口 **2026-07-06 至 2026-07-14** 與搬遷至 **6171 W Century Blvd** 均出自無法直接抓取的 LowEndTalk／LowEndBox 報導（HTTP 403／404）。**已**驗證的第一手佐證雖薄但為真：digitalspace.com 與 quadranet.com 共用同一家澳洲註冊商（Synergy Wholesale Accreditations Pty Ltd），且 digitalspace.com WHOIS 於 2026-08-08 更新。**搬遷本身未經任何公司文件確認。**
+
+---
+
+## 10. 成本天花板
+
+### 10.1 假設區間——以「假設」而非「發現」陳述
+
+> **這些價格不是現行價格。** [quadranet.com](https://quadranet.com/) 今天只回傳一份 445 bytes 的黑底頁面，沒有活型錄可取樣。§10.2 中的每一個價格都取自**最後一份已知的活型錄**，存檔日為 **2025-03-06**（伺服器）與 **2024-12-07**（colocation）——分別是該業者要求客戶撤離的前一天與前三個月。**請視之為一家正在倒閉的業者最後一份被觀察到的價目表，是地板價，不是市場行情。**
+
+> **營運成本扣除——以下是被強加的產業慣例假設，不是關於 QuadraNet 的已查證事實。** 未取得任何 QuadraNet 財務報表、電力合約、頻寬成本、機櫃成本或人力數字。**以下沒有任何一項曾對照 QuadraNet 文件驗證。**
+
+**所採用的假設區間（假設）：** 非硬體總成本——電力、冷卻、頻寬、機櫃／空間、IP 空間、remote hands、NOC、支援、帳務、流失與 SG&A——在此類低階美國專用伺服器代管中，佔月毛收入的 **45% 至 60%**。本檔採 **52.5% 之中點**，得出統一套用之**貢獻毛利係數 0.475**。§10.2 中每一個天花板數字皆為：**`月費 × 0.475 × 回本月數`**。
+
+該區間背後之各項推理——**全部都是假設**：
+
+- **電力（假設）：** 每 1U 節點平均耗電 150–300W；以 PUE ≈1.6、洛杉磯商用電價約 **$0.12–0.18/kWh** 計，約為**每節點每月 $15–45**。LA 是高電價市場，會把這一項推向區間上緣。
+- **頻寬（假設）：** 內含 10TB/月流量。以低階混合 transit 與 IX 價格計，約為**每節點每月 $5–20**，並假設實際用量相對內含上限偏低。
+- **機櫃與空間（假設）：** 以 42RU 機櫃攤提 1U。其自家公布之機櫃價 $849–$999/月，隱含零售端約 **每 RU 每月 $20–24**；內部成本較低，假設為**每 U $8–15**。
+- **IPv4（假設）：** 一個 /29 為 8 個位址。2024 年後租賃市場約為**每 IP 每月 $0.50–0.70**，故為**每節點每月 $4–6**。這是真實且持續上升的成本，也是位址空間最先被賣掉的重要原因之一。
+- **支援、NOC、開通、帳務、流失與間接費（假設）：** 佔營收 **20–30%**。其型錄承諾 24×7×365 現場工程師、免費掛載 KVM、自動化 OS 安裝與 99.999% 網路 SLA——在 $109/月的價位上，這是昂貴的服務承諾。
+
+**敏感度：** 若真實營運成本比為 **45%** 而非 52.5%，則**每一個天花板上升約 16%**；若為 **60%**，則**每一個天花板下降約 16%**。**SKU 之間的排序在兩種情況下都不變，而排序才是提案要用的東西。**
+
+**其他但書（皆為假設，並如實標示）：**（1）天花板假設整個回本期間**滿載 100%**，這偏寬鬆——低階機隊按月流失下的實際使用率明顯更低，因此請視為**樂觀上限**。（2）天花板為**稅前、融資前**，且不計貨幣時間價值。（3）**不含交換、路由、帶外管理、佈線與 DDoS 清洗之資本支出**，這些都是節點也必須分攤的共用基礎設施。（4）$999 的 colocation 品項是**促銷價，第 7–12 個月會調升至 $1,299**，而年營收數字是以 $999 平推，因此**低估**了真實的 12 個月收入。（5）**colocation 天花板不可與伺服器天花板相比**——colocation 的業者買的是機櫃、電力與網路，不是伺服器。
+
+### 10.2 由租金推導之成本天花板
+
+| SKU | 月費 | 規格 | 年營收 | 12 個月回本天花板 | 18 個月 | 24 個月 | 來源 |
+|---|---|---|---|---|---|---|---|
+| **LA-SP-1** — 入門單路 | **$109.00/mo** | Intel Xeon E-2124G，3.40GHz × 4 cores，8GB DDR4 ECC，1TB SATA 或 256GB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量，100Mbps 埠 | $1,308.00 | **$621.30** | $931.95 | $1,242.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-SP-3** — 中階單路 | **$149.00/mo** | Intel Xeon E-2146G，3.50GHz × 6 cores + HT，32GB DDR4 ECC，2TB SATA 或 2× 256GB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量 | $1,788.00 | **$849.30** | $1,273.95 | $1,698.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-DP-2** — 入門雙路、全 SSD | **$189.00/mo** | Dual Xeon E5-2650，2.00GHz × 16 cores + HT，64GB DDR3 ECC，2× 1TB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量 | $2,268.00 | **$1,077.30** | $1,615.95 | $2,154.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-DP-4** — 大記憶體雙路、全 SSD | **$279.00/mo** | Dual Xeon E5-2650，2.00GHz × 16 cores + HT，128GB DDR3 ECC，4× 1TB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量 | $3,348.00 | **$1,590.30** | $2,385.45 | $3,180.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-V4-1** — 入門 Broadwell 雙路 | **$379.00/mo** | Dual Intel Xeon E5-2620v4，2.10GHz × 16 cores + HT，32GB DDR4 ECC，2× 1TB SATA 或 2× 256GB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量 | $4,548.00 | **$2,160.30** | $3,240.45 | $4,320.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-V4-3** — 大記憶體 Broadwell 雙路 | **$499.00/mo** | Dual Intel Xeon E5-2620v4，2.10GHz × 16 cores + HT，128GB DDR4 ECC，4× 1TB SATA 或 4× 256GB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量 | $5,988.00 | **$2,844.30** | $4,266.45 | $5,688.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-V4-4** — 頂規、全 SSD | **$649.00/mo** | Dual Intel Xeon E5-2620v4，2.10GHz × 16 cores + HT，128GB DDR4 ECC，4× 1TB SSD，/29 IPv4（5 個可用），3Gbps VEST DDoS，10TB 流量 | $7,788.00 | **$3,699.30** | $5,548.95 | $7,398.60 | [2025-03-06 存檔](https://web.archive.org/web/20250306214448/https://quadranet.com/los-angeles-dedicated-servers) |
+| **LA-COLO-999** — 整櫃 colocation *（硬體由客戶自備；此處天花板＝每櫃可投入之機櫃／電力／網路基礎建設支出，**不是**伺服器支出）* | **$999.00/mo 促銷價**（表訂 $849.00；促銷結構為前 6 個月 $999、後 6 個月 $1,299） | 整組上鎖機櫃，Downtown Los Angeles，42RU，20A/208V 電路（可用 3.32kW），1Gbps 不限量專屬頻寬，1Gbps uplink，/27 IPv4（29 個可用），3Gbps VEST DDoS，24/7 隨需 KVM-over-IP，UPS＋Caterpillar 柴油發電機，100% 電力可用度 SLA，免設定費 | $11,988.00 | **$5,694.30** | $8,541.45 | $11,388.60 | [2024-12-07 存檔](https://web.archive.org/web/20241207023812/https://quadranet.com/dedicated-servers/) |
+
+### 10.3 物料清單（BOM）——重建之機型
+
+所有零件價格均取自 **parts.theserverstore.com**，抓取日 **2026-08-10**，單台零售價。
+
+| SKU 重建 | 元件 | 零件 | 市售價 | 來源 |
+|---|---|---|---|---|
+| **BOM A** — LA-SP-1，$109/月入門 SKU | CPU | Intel Xeon E-2124G，quad core，3.40GHz，8MB cache，LGA1151（SR3WL） | **$70.99** | [theserverstore](https://parts.theserverstore.com/products/sr3wl-intel-xeon-e-2124g-quad-core-3-40ghz-8mb-lga1151-cpu-processor) |
+| **BOM A** | 主機板 | Supermicro X11SCW-F，單路 FCLGA1151（Socket H4），板載 IPMI/KVM-over-IP，板載雙 GbE | **$207.99** | [theserverstore](https://parts.theserverstore.com/products/supermicro-motherboard-single-socket-fclga1151-socket-h4-supported-x11scw-f) |
+| **BOM A** | 記憶體 | 16GB（1×16GB）PC4-19200R 2400MHz DDR4 ECC Registered。**註：這是 RDIMM，而 Xeon E-2100 平台使用 ECC UDIMM——此處作為已標價之上限代理值使用，因為找不到已驗證的 UDIMM 價格。已列於 §10.5。SKU 規格為 8GB，故此處記憶體亦屬超規。** | **$76.99** | [theserverstore](https://parts.theserverstore.com/products/16gb-1x16gb-pc4-19200r-2400mhz-ddr4-ecc-registered-memory) |
+| **BOM A** | 儲存 | Western Digital 1TB 7.2K 3Gbps SATA 3.5" hard drive（SP-302A-R5） | **$18.99** | [theserverstore](https://parts.theserverstore.com/products/sp-302a-r5-western-digital-1tb-7-2k-3gbps-sata-3-5-hard-drive) |
+| **BOM A** | 電源 | Supermicro 750W 1U 冗餘電源（PWS-750P-1R） | **$37.99** | [theserverstore](https://parts.theserverstore.com/products/pws-750p-1r-supermicro-750w-1u-redundant-power-supply) |
+| **BOM A** | 網卡 | **不採購**——X11SCW-F 板載雙 GbE。該 SKU 出的是 100Mbps 埠，無須外加網卡。 | **$0.00** | [theserverstore](https://parts.theserverstore.com/products/supermicro-motherboard-single-socket-fclga1151-socket-h4-supported-x11scw-f) |
+| **BOM A** | 機殼／滑軌 | Supermicro 1U 機殼滑軌組，28–37.3"，整組（CSE-PT34L）。**註：僅有滑軌——找不到已驗證的裸機殼價格，故本 BOM 缺少真實機殼成本，下方合計因而低估。已列於 §10.5。** | **$94.99** | [theserverstore](https://parts.theserverstore.com/products/cse-pt34l-supermicro-1u-chassis-mounting-rail-kit-28-37-3-complete-set) |
+| **BOM B** — LA-V4-1，$379/月 Broadwell 雙路 SKU | CPU（×2） | 2× Intel Xeon E5-2620v4，2.10GHz，8 core，20MB cache，85W，FCLGA2011-3（SR2R6），**每顆 $6.99** | **$13.98** | [theserverstore](https://parts.theserverstore.com/products/sr2r6-intel-xeon-e5-2620v4-2-10ghz-8-core-20mb-cache-fclga-2011-processor) |
+| **BOM B** | 主機板 | Supermicro X10DRi，雙路 FCLGA2011-3 Socket R3，DDR4，板載 Intel i350 雙 GbE，E-ATX，16 個 DIMM 插槽 | **$151.99** | [theserverstore](https://parts.theserverstore.com/products/supermicro-dual-fclga-2011-3-socket-r3-ddr4-i350-nic-e-atx-motherboard-x10dri) |
+| **BOM B** | 記憶體 | 32GB（2×16GB）PC4-19200R 2400MHz DDR4 ECC Registered，適用 Supermicro X10DRi——**與公布之 SKU 規格完全相符** | **$154.99** | [theserverstore](https://parts.theserverstore.com/products/32gb-2x16gb-pc4-19200r-2400mhz-ddr4-ecc-registered-memory-for-supermicro-x10dri) |
+| **BOM B** | 儲存（×2） | 2× Western Digital 1TB 7.2K 3Gbps SATA 3.5" hard drive（SP-302A-R5），每顆 $18.99 | **$37.98** | [theserverstore](https://parts.theserverstore.com/products/sp-302a-r5-western-digital-1tb-7-2k-3gbps-sata-3-5-hard-drive) |
+| **BOM B** | 電源 | Supermicro 750W 1U 冗餘電源（PWS-750P-1R） | **$37.99** | [theserverstore](https://parts.theserverstore.com/products/pws-750p-1r-supermicro-750w-1u-redundant-power-supply) |
+| **BOM B** | 網卡 | **不採購**——X10DRi 板載 Intel i350 雙 GbE。供參：若要組 10GE 加購層級，Broadcom 57810S 雙埠 10GbE SFP+ 介面卡為 **$46.99**。 | **$0.00** | [theserverstore](https://parts.theserverstore.com/products/bcm957810a1006g-broadcom-10gb-dual-port-sfp-network-card) |
+| **BOM B** | 機殼／滑軌 | Supermicro 1U 機殼滑軌組，整組（CSE-PT34L）——**僅有滑軌，裸機殼價格缺失，合計低估** | **$94.99** | [theserverstore](https://parts.theserverstore.com/products/cse-pt34l-supermicro-1u-chassis-mounting-rail-kit-28-37-3-complete-set) |
+| **BOM C** — LA-V4-4，$649/月頂規全 SSD SKU | CPU（×2） | 2× Intel Xeon E5-2620v4，2.10GHz，8 core，20MB，FCLGA2011-3（SR2R6），每顆 $6.99 | **$13.98** | [theserverstore](https://parts.theserverstore.com/products/sr2r6-intel-xeon-e5-2620v4-2-10ghz-8-core-20mb-cache-fclga-2011-processor) |
+| **BOM C** | 主機板 | Supermicro X10DRi，雙路 FCLGA2011-3 Socket R3，DDR4，i350 NIC，E-ATX | **$151.99** | [theserverstore](https://parts.theserverstore.com/products/supermicro-dual-fclga-2011-3-socket-r3-ddr4-i350-nic-e-atx-motherboard-x10dri) |
+| **BOM C** | 記憶體 | 128GB（2×64GB）PC4-19200R 2400MHz DDR4 ECC Registered，適用 Supermicro X10DRi——與公布之 128GB 規格相符 | **$663.99** | [theserverstore](https://parts.theserverstore.com/products/128gb-2x64gb-pc4-19200r-ddr4-ecc-registered-memory-for-supermicro-x10dri) |
+| **BOM C** | 儲存（×4） | 4× Samsung 960GB 2.5" SATA III 6Gb/s mixed-use 企業級 SSD（MZ7WD960HAGP-00003），**每顆 $284.99**。這是最接近公布規格「4× 1TB SSD」的已標價企業級零件；1.92TB 級每顆 $450.99、480GB 級每顆 $132.99，故**這一行是整份 BOM 中最大的擺盪因子**。 | **$1,139.96** | [theserverstore](https://parts.theserverstore.com/products/samsung-960gb-2-5-inch-sata-iii-6gb-s-mixed-use-enterprise-solid-state-drive-ssd-p-n-mz7wd960hagp-00003) |
+| **BOM C** | 電源 | Supermicro 750W 1U 冗餘電源（PWS-750P-1R） | **$37.99** | [theserverstore](https://parts.theserverstore.com/products/pws-750p-1r-supermicro-750w-1u-redundant-power-supply) |
+| **BOM C** | 網卡 | **不採購**——X10DRi 板載 Intel i350 雙 GbE | **$0.00** | [theserverstore](https://parts.theserverstore.com/products/supermicro-dual-fclga-2011-3-socket-r3-ddr4-i350-nic-e-atx-motherboard-x10dri) |
+| **BOM C** | 機殼／滑軌 | Supermicro 1U 機殼滑軌組，整組（CSE-PT34L）——**僅有滑軌，裸機殼價格缺失，合計低估** | **$94.99** | [theserverstore](https://parts.theserverstore.com/products/cse-pt34l-supermicro-1u-chassis-mounting-rail-kit-28-37-3-complete-set) |
+
+### 10.4 彙總比較——自組零件成本 vs 租金推導天花板
+
+所有天花板均採 **52.5% 營運成本假設**。
+
+| 機型 | 自組成本（**不含**裸機殼） | 12 個月天花板 | 18 個月天花板 | 24 個月天花板 | 純零件回本期 | 12 個月的餘裕 |
+|---|---|---|---|---|---|---|
+| **BOM A** — $109/月入門單路（E-2124G，8GB，1TB SATA） | **$507.94**（CPU 70.99＋主機板 207.99＋記憶體 76.99＋硬碟 18.99＋電源 37.99＋網卡 0＋滑軌 94.99） | $621.30 | $931.95 | $1,242.60 | **9.8 個月** | **$113.36——約 18%** |
+| **BOM B** — $379/月 Broadwell 雙路（2× E5-2620v4，32GB，2× 1TB SATA） | **$491.92**（CPU 13.98＋主機板 151.99＋記憶體 154.99＋硬碟 37.98＋電源 37.99＋網卡 0＋滑軌 94.99） | $2,160.30 | $3,240.45 | $4,320.60 | **2.7 個月** | **$1,668.38——零件成本僅占第一年貢獻的 23%** |
+| **BOM C** — $649/月頂規全 SSD（2× E5-2620v4，128GB，4× 960GB 企業級 SSD） | **$2,102.90**（CPU 13.98＋主機板 151.99＋記憶體 663.99＋SSD 1,139.96＋電源 37.99＋網卡 0＋滑軌 94.99） | $3,699.30 | $5,548.95 | $7,398.60 | **6.8 個月** | **$1,596.40** |
+
+**這個落差對提案實際代表什麼**
+
+1. **CPU 在經濟上是免費的，而這就是全部的故事。** 一對 Xeon E5-2620v4 處理器——支撐 $379、$419、$499 與 $649 這幾個 SKU 的矽晶，也就是**這家業者整份價目表的上半部**——成本 **$13.98**。十四美元的 CPU 撐起 **$4,548 至 $7,788** 的年營收。面對這個數字，**任何新矽晶平台在回本算式上都贏不了**，而任何 performance-per-watt 的論述碰上 2.7 個月的回本期也撐不住。**這就是型錄凍結 74 個月的原因：拒絕更新不是疏忽，而是面對眼前經濟現實的理性答案。**
+
+2. **成本已經完全從運算遷移到記憶體與快閃。** 在 BOM C 中，CPU 只占物料成本的 **0.7%**，而記憶體占 **31.6%**、SSD 占 **54.2%**——兩者合計 **85.8%**。在 BOM B 中，記憶體單項就占 **31.5%**，兩顆 CPU 只占 **2.8%**。**任何以處理器世代開場的提案，瞄準的是這張發票上最小的一行。** 真正撬動他們損益的是**每可用 GB 的 DIMM 與 NVMe 成本，以及密度**——一個 rack-unit、一個 kW 能塞進多少可計費的記憶體與快閃。
+
+3. **自組在頂規真的很便宜，在入門真的很貴。** BOM B 的回本期是 **2.7 個月**；BOM A 是 **9.8 個月**，第一年只有 **18% 的餘裕**——因為一塊 **$207.99 的主機板要攤在 $109/月的租金上**，光主機板就占整台的 **41%**。**這個反轉就是切入口。** 整合式平台在價格上贏不了 $13.98 的二手 Broadwell，但它不需要贏那個：它要贏的是**入門層的自組**——在那裡，主機板、電源、滑軌、機殼、IPMI 授權、燒機工時、RMA 處理與備品池的固定成本，被攤在一條薄到撐不起它的租金上。**在價目表的底部推密度與消除每節點固定成本，不要在頂部推原始效能。**
+
+4. **沒有被列價的項目，正是整合式平台真正賺到毛利的地方——而那些項目從來不會出現在這位買家自己做的自組試算表裡。** 本 BOM 合計**不含裸機殼**（只取得 $94.99 的滑軌，沒有已驗證的機殼價格），也**不含任何人力與生命週期成本**：組裝、韌體驗證、燒機、映像佈署、現場上架、備品庫存、RMA 物流，以及要讓四個不同 CPU 世代都能從同一套佈署系統開機所需的工程時間。一家同時跑 **E-2124G、E-2146G、E5-2650 與 E5-2620v4** 的機房，背著**四套 BIOS 基線、三種記憶體型別（DDR3 RDIMM、DDR4 RDIMM、DDR4 UDIMM）與兩個腳位家族**。收斂到單一平台所省下的是真金白銀，而它永遠不會出現在零件比價表上——**這就是整合式平台的論點，而且它是營運成本論點，不是價格論點。**
+
+5. **對照這場失敗本身來讀：** 上面的算式說明機隊在每節點層級是**賺錢的**，而公司卻**付不出 $599,379.76 的租金**。這代表真正的限制**從來不是硬體成本**——而是**出租率、每 rack-unit 收入與固定設施成本**。一台零件成本 $491.92 卻能收 $379/月的機器，業者不是在硬體上虧錢；他是虧在**空機櫃，以及 2004 年與 2010 年簽下的洛杉磯市中心租約**。**對這個區隔要賣的是每機櫃收入與每 kW 收入。對一家有出租率問題的代管業者賣更便宜的伺服器，是在解錯的方程式。**
+
+### 10.5 GAP——成本天花板軌道
+
+- **GAP — 沒有現行價格。** quadranet.com 只回傳 445 bytes 的黑底頁面。§10.2 中的每一個價格都來自 **2025-03-06** 與 **2024-12-07** 的存檔——一家距離趕走自家客戶只剩一天的公司最後的價目表。**這些不是市場行情，不得如此引用。**
+- **GAP — 整個營運成本扣除全是假設。** **45–60% 的區間**與每一個天花板計算所用的 **52.5% 中點**，都是分析者強加的**產業慣例**。未取得任何 QuadraNet 財務報表、電力合約、transit 或 IX 成本、機櫃成本、人力數或流失率。**§10.1 中沒有任何一項曾對照 QuadraNet 文件驗證。** 45% 會讓每個天花板上升約 16%；60% 會讓每個天花板下降約 16%。
+- **GAP — 天花板假設滿載無空窗。** 每一個數字都假設節點在整個回本期間 **100%** 售出且收得到款，不計流失與重新開通的空窗，不計貨幣時間價值，且不含節點也必須分攤的交換、路由、帶外管理、佈線與 DDoS 清洗資本支出。**請視為樂觀上限。**
+- **GAP — 三份 BOM 全部缺裸機殼價格。** 已取得 Supermicro 1U 滑軌（CSE-PT34L，$94.99），但**找不到已驗證的裸 1U 機殼價格**。**三份 BOM 的合計因此都低估了機殼成本，合理估計為每節點 $100–250。** 回本月數也因而偏樂觀。
+- **GAP — BOM A 的記憶體型別不符。** Xeon E-2100 平台使用 **ECC UDIMM**；但只能驗證到 **PC4-19200R ECC RDIMM** 的價格（$76.99），**模組類別錯誤**，而且是 **16GB** 模組、SKU 規格卻是 **8GB**。**BOM A 的記憶體一行是已標價的上限代理值，不是正確零件。** 此外**完全找不到 Xeon E-2146G 的任何刊登**，因此 **$149 與 $189 兩個單路 SKU 未做 BOM 重建**。
+- **GAP — SSD 容量為近似值，且它主導 BOM C。** 型錄規格為「4× 1TB SSD」；最接近的已標價企業級零件為 **960GB $284.99**、**1.92TB $450.99**、**480GB $132.99**（每顆）。本檔採 960GB。由於 SSD 占 BOM C 的 **54.2%**，**改用不同容量級距會讓該 BOM 合計上下擺動遠超過 $500，回本期也會位移數個月。**
+- **GAP — 單一供應商報價。** 所有零件價格都來自**同一家零售商**（parts.theserverstore.com），抓取日 2026-08-10。**未做跨供應商驗證**（eBay 成交價、ServerMonkey、Serversupply 或盤商／量販報價）。代管業者透過盤商大量採購的實際單價會明顯低於這些單台零售價，**因此 §10.4 中的自組經濟性是保守的——真實落差比呈現出來的更大。**
+
+---
+
+## 11. 客戶與網路
 
 ### 已具名客戶
 
@@ -184,7 +438,7 @@ QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用
 
 ---
 
-## 9. 政治與公開紀錄
+## 12. 政治與公開紀錄
 
 僅列具名主要人士，並逐條標記。
 
@@ -195,7 +449,7 @@ QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用
 
 ---
 
-## 10. 公開聯絡管道
+## 13. 公開聯絡管道
 
 **僅限公開來源。本檔不記錄任何個人手機或私人住址。無公開管道者標記 GAP。** 以公司現況而言，以下多數已失效或降級，逐一標註。
 
@@ -214,7 +468,7 @@ QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用
 
 ---
 
-## 11. Supermicro 銷售切入點
+## 14. Supermicro 銷售切入點
 
 ### 分類：**不做前瞻銷售** — 僅作信用風險與資產追蹤
 
@@ -240,9 +494,9 @@ QuadraNet 曾在約十餘處設施營運相當規模的機隊，ASN 高峰期擁
 
 ---
 
-## 12. 查證附錄
+## 15. 查證附錄
 
-### 12.1 單一來源支撐的說法（引用前須再驗證）
+### 15.1 單一來源支撐的說法（引用前須再驗證）
 
 | 說法 | 唯一來源 | 風險 |
 |---|---|---|
@@ -253,7 +507,7 @@ QuadraNet 曾在約十餘處設施營運相當規模的機隊，ASN 高峰期擁
 | 機隊中存在 **Dell** | 某特賣頁上的「Dell Enterprises iDRAC」帶外管理選項 | **僅由管理控制器名稱推得。無 PowerEdge 型號、世代或佔比。不得作為已知的廠商事實陳述。** |
 | 存在 **AMD EPYC** | [cxponent 市集檔案](https://cxponent.com/marketplace/software/vendor/quadranet) 行銷文字 | **第三方行銷，非 QuadraNet 規格頁。所有可還原的 QuadraNet 自述組態皆為 Intel Xeon。未證實。** |
 
-### 12.2 第三方估計互相矛盾之處（**呈現分歧，不擇一**）
+### 15.2 第三方估計互相矛盾之處（**呈現分歧，不擇一**）
 
 **員工數**
 
@@ -291,7 +545,7 @@ QuadraNet 曾在約十餘處設施營運相當規模的機隊，ASN 高峰期擁
 
 **兩者是不同量測；且皆為歷史值——現行實際可用容量＝GAP，且以網路拆解程度判斷很可能趨近於零。**
 
-### 12.3 未結 GAP
+### 15.3 未結 GAP
 
 1. **加州 SOS 實體／檔案編號、設立日、現行狀態與註冊代理人**——三個入口皆被阻擋（bizfileonline.sos.ca.gov 僅暴露不透明影像 API 端點；Bizapedia 顯示安全檢查頁；OpenCorporates 顯示 HAProxy CAPTCHA，未予繞過）。另未解：「QuadraNet, Inc.」與「QuadraNet Enterprises, LLC」是否為不同法人或屬舊名／DBA。NV、UT、WA、DE 皆查無登記。
 2. **母公司崩解後，美國實體的法律與營運現況**——美國「Edge Centres LLC」與 QuadraNet Enterprises LLC 是否進入接管、解散、再轉售，或名義上仍在營業。**清算人姓名與美國資產處置＝GAP。**
@@ -309,7 +563,7 @@ QuadraNet 曾在約十餘處設施營運相當規模的機隊，ASN 高峰期擁
 14. **2025-02 colocation 客戶撤離與母公司清算之後，LA 套房中的實體 Supermicro 資產由誰控制。****這是本帳戶唯一實際的商業角度，且無法由公開來源解決。**
 15. **歷史徵才啟事無法取得**（LowEndBox 分析曾指其徵才頁仍掛 2019 年的職缺作為衰敗訊號），故無法自職缺還原任何招募主管姓名或硬體採購窗口。
 
-### 12.4 影響本檔完整度的工具與取得限制
+### 15.4 影響本檔完整度的工具與取得限制
 
 - **HTTP 阻擋來源：** WebHostingTalk（403）、datacenters.com（403）、ZoomInfo（403）、Crunchbase（403）、HostingAdvice（403）、DataCenterDynamics（403）、bizfileonline.sos.ca.gov（403）、Bizapedia／OpenCorporates（安全檢查／CAPTCHA，未予繞過）。**凡依賴上述來源之發現，皆已在本檔中標記為社群來源、次級擷取或第三方估計。**
 - **JavaScript 介面無法程式查詢：** fec.gov 個人捐獻查詢與 OpenSecrets 捐款人查詢。Ilan Mishan 的 FEC 紀錄係經 FEC 自家 Schedule A API 取得故屬可靠；其餘四位具名人士的「查無紀錄」屬**未查詢／未找到**，**不得寫成已證明的負面結論**。

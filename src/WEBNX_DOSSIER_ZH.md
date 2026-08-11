@@ -36,7 +36,7 @@ WebNX, Inc. 是一家私人持股、由創辦人主導的專用伺服器、主�
 |---|---|---|---|
 | 1 | **WebNX 使用 Supermicro 和／或 Dell 硬體** | **無法證實 — 不得對客戶陳述** | 經 16 次以上檢索並直接抓取 WebNX 的 Ogden custom／GPU-AI／storage／Intel／colocation 商店頁、Utah 機房頁、LinkedIn 與兩則線上 Indeed 職缺，**WebNX 從未具名任何系統廠、機殼型號或主機板品牌**。其 WHMCS 知識庫為空（「No Articles Found」，[knowledgebase](https://clients.webnx.com/index.php?rp=/knowledgebase)），連帶外管理品牌（Supermicro IPMI／Dell iDRAC／HPE iLO）這條慣用辨識線索也斷了。**已確立的是：** WebNX 是元件級自組整合商——職缺明載「assembling & disassembling servers, testing hardware」「repair or replace faulty hardware components」，以及用棧板車搬運整棧伺服器零件，並自述每年測試「hundreds of server configurations and parts」（[Indeed](https://www.indeed.com/viewjob?jk=9329bfea43788efd)）。全網**唯一**出現 Dell／SuperMicro／HP 字樣的文字，描述的是 **GorillaServers**——同一位創辦人（Daniel Pautz）、同一棟 Ogden 廠房、但**法人不同**——且出自第三方評測而非官方揭露。**不得以此推定 WebNX 的機隊。** |
 | 2 | **WebNX 提供 GPU 伺服器** | **確認** — 原始名單中唯一完全成立的硬體相關說法 | 僅 Ogden 一地即有 **14 個公開標價的 GPU SKU**，自 $299/月（雙 Xeon Gold 6148 配 GT 1030）到 $7,999/月（雙 AMD EPYC 9575F、1.5 TB DDR5、2 × 15 TB Gen5 NVMe、4 × RTX PRO 6000 96 GB）。洛杉磯與達拉斯另設有獨立的 GPU & AI 商店分類。LinkedIn 專長欄獨立列出「ai server rental」與「hpc rental」。（[Ogden GPU & AI 商店](https://clients.webnx.com/index.php?rp=/store/ogden-gpu-and-ai-servers)，2026-08-03 讀取） |
-| 3 | **WebNX 在猶他州 Ogden 設有資料中心** | **確認** — 四個獨立來源 | WebNX 自家 [Utah 機房頁](https://webnx.com/datacenter-locations-and-networks/utah)：Ogden 設施逾 100,000 平方英尺，N+1 電力（雙市電饋線、N+1 UPS、多台柴油發電機），直連 Level3、NTT、Zayo、Telia、China Unicom。DataCenterMap 列「WebNX Ogden Data Center, 119 North 600 West, Bldg 3B」。BBB 以同址登錄該公司。WebNX 自家 [Indeed 職缺](https://www.indeed.com/viewjob?jk=9329bfea43788efd) 將機房技師職務置於該址，並寫明 WebNX「operates self-managed data centers across Utah, California, and New York」。2021 年 4 月 Ogden 全市停電期間的發電機起火事件（[The Register，2021-04-06](https://www.theregister.com/2021/04/06/webnx_data_fire/)）進一步佐證該實體據點存在。*（LinkedIn 稱「nearly 150,000 square-foot」屬**面積**衝突，非位置衝突——見第 12 節。）* |
+| 3 | **WebNX 在猶他州 Ogden 設有資料中心** | **確認** — 四個獨立來源 | WebNX 自家 [Utah 機房頁](https://webnx.com/datacenter-locations-and-networks/utah)：Ogden 設施逾 100,000 平方英尺，N+1 電力（雙市電饋線、N+1 UPS、多台柴油發電機），直連 Level3、NTT、Zayo、Telia、China Unicom。DataCenterMap 列「WebNX Ogden Data Center, 119 North 600 West, Bldg 3B」。BBB 以同址登錄該公司。WebNX 自家 [Indeed 職缺](https://www.indeed.com/viewjob?jk=9329bfea43788efd) 將機房技師職務置於該址，並寫明 WebNX「operates self-managed data centers across Utah, California, and New York」。2021 年 4 月 Ogden 全市停電期間的發電機起火事件（[The Register，2021-04-06](https://www.theregister.com/2021/04/06/webnx_data_fire/)）進一步佐證該實體據點存在。*（LinkedIn 稱「nearly 150,000 square-foot」屬**面積**衝突，非位置衝突——見第 15 節。）* |
 | 4 | **隱含前提：WebNX 是既有 Supermicro 客戶** | **反證（就前提而言）** | 此前提無法成立。在本次研究的業者中，WebNX 是**唯一一家伺服器品牌證據為零**的業者。以「我們知道你們在用 Supermicro」開場，會在對方第一個問題就破功。正確定位是**平台轉換 ＋ 探詢式提問**，不是既有客戶防守。 |
 | 5 | **第三方名錄（datacenters.com、ZoomInfo）將 WebNX 總部記為加州** | **反證 — 本檔採 Ogden** | BBB、兩則 Indeed 職缺與 CEO 本人 LinkedIn 皆將公司置於猶他州 Ogden。CEO、職缺與 BBB 紀錄都在 Ogden。加州之說研判為資料商誤植，或反映其 Equinix LA3 租用據點。**來源端仍未和解**——已標記，未逕行略去 |
 
@@ -187,7 +187,253 @@ Ogden 完整已查證型錄——**14 個 SKU，全部公開月租、無合約**
 
 ---
 
-## 8. 客戶與網路
+## 8. 融資鏈與 UCC 紀錄
+
+**本軌研究範圍：** WebNX, Inc.（[webnx.com](https://webnx.com)，AS18450）——猶他州 Ogden；whitebox 自組專屬伺服器／主機代管業者。**同步查核之姊妹實體：** GorillaServers, Inc.（[gorillaservers.com](https://gorillaservers.com)），同一棟 Ogden 廠房，且 WebNX 為其網域註冊登記者（registrar of record）。
+
+### 8.1 判定
+
+> ### UNVERIFIED — portal blocked
+
+**請完全照字面理解。** 兩個 debtor 皆未取得任何 UCC 申報紀錄，且**從未有任何 debtor 名稱查詢真正送進猶他州任何一套 UCC 系統**——每一次嘗試都在到達搜尋欄位之前，就卡在驗證層或路由層。§8.3 的空白代表**什麼都沒看到**，**不代表** WebNX 沒有擔保債務。此結果不得對客戶陳述、不得引用給徵信單位、也不得以「查無留置權」寫入 CRM。此處的阻擋是**程序性的，不是資產負債表乾淨的證據**。
+
+### 8.2 查詢紀錄——一次嘗試一列，不合併
+
+| 入口 | URL | 使用的查詢字串 | 回應 | 受阻時的替代路徑 |
+|---|---|---|---|---|
+| Utah Division of Corporations — Business Entity Search（原始需求中所指的舊 UCC 入口） | [secure.utah.gov/bes/](https://secure.utah.gov/bes/) | 嘗試進入 UCC debtor 搜尋介面。**無法送出任何 debtor 字串**——該主機從未提供搜尋表單。 | **HTTP 301 Moved Permanently。** 跨主機轉址至 [businessregistration.utah.gov](https://businessregistration.utah.gov/)。`secure.utah.gov/bes` 未提供任何 UCC 搜尋。 | 依轉址前往 [businessregistration.utah.gov](https://businessregistration.utah.gov/)（見下一列獨立紀錄）。 |
+| Utah Business Registration（`secure.utah.gov/bes` 的轉址目的地） | [businessregistration.utah.gov](https://businessregistration.utah.gov/) | 嘗試載入搜尋首頁以便送出 debtor `WEBNX, INC.`。**表單從未被算繪出來。** | **HTTP 403 Forbidden。** 內容為 Cloudflare 攔截頁：`<title>Just a moment...</title>`，meta robots 為 `noindex,nofollow`。屬機器人防護挑戰；頁面從未算繪。**未嘗試破解或繞過該挑戰。** | **由真人以瀏覽器操作同一網址——免費。** 該挑戰是防機器人閘門，不是付費牆；真人檢視成本為 **$0**。否則採用下述認證查詢路徑。 |
+| Utah Department of Commerce — Division of Corporations，Searches 索引頁 | [commerce.utah.gov/corporations/searches/](https://commerce.utah.gov/corporations/searches/) | 唯讀：盤點有哪些查詢服務，並找出權威 UCC/CFS 搜尋網址。 | **HTTP 200。** 列出七項服務。UCC/CFS Search 說明為：「This service allows you to search UCC & CFS records by debtor name or filing number. This service also allows you to certify records.」權威網址標示為 [ucc.utah.gov](https://ucc.utah.gov/)。聯絡電話 **(801) 530-4849**。 | 前往 [ucc.utah.gov](https://ucc.utah.gov/)（見下方獨立紀錄）。 |
+| Utah UCC/CFS Self-Service 網站（權威 UCC 查詢系統） | [ucc.utah.gov](https://ucc.utah.gov/) | 嘗試送出 debtor 名稱 `WEBNX, INC.`，後續預定再送出別名變體 `WEBNX INC`、`WEBNX`、`WEB NX`、`WEBNX INCORPORATED`。**全部無法送出。** | **HTTP 200，5,796 bytes。頁面「只」算繪出登入閘門。** 可見文字原文：「Utah Department of Commerce - Division of Corporations and Commercial Code UCC/CFS」／「LOGIN」／「Password:」／「Forgot your password?」／「Welcome to Utah Department of Commerce - Division of Corporations and Commercial Code UCC/CFS Self-Service site.」頁面上僅有的表單輸入為 `__RequestVerificationToken`、`password`、`ErrorMessage`。密碼救回指向 [login.utah.gov/user/recover](https://login.utah.gov/user/recover)，即州政府 Utah-ID SSO。**此頁面上沒有任何匿名 debtor 名稱搜尋欄位。** | (a) 於 [login.utah.gov](https://login.utah.gov/) 免費註冊 Utah-ID 帳號後使用自助 debtor 搜尋——註冊成本 **$0**。**本次未採此路徑**：代客戶建立帳號、輸入密碼不在可執行範圍內。(b) **以郵寄／傳真／臨櫃方式辦理認證查詢——每個名稱 $12.00**（見下方費用列）。 |
+| Utah UCC/CFS Self-Service 網站——`/Search` 路徑探測 | [ucc.utah.gov/Search](https://ucc.utah.gov/Search) | 探測是否存在可接受 debtor `WEBNX, INC.` 的免登入搜尋端點。 | **HTTP 200，但以 302 轉址鏈導向** [ucc.utah.gov/EntitySearch/OnlineEntitySearch](https://ucc.utah.gov/EntitySearch/OnlineEntitySearch)。所提供的是**實體／商標搜尋，不是 UCC debtor 搜尋**。算繪出的標題原文寫著「Nevada Business Search」——猶他州部署上未修正的廠商樣板文字。表單 action 為 `/EntitySearch/OnlineEntitySearch`。欄位：`SearchCriteria`、`SearchType`、Entity Number、「NV Business ID Number」、Officer Name、Registered Agent Name、`MarkSearch_Index_txtMarkNumber`、`MarkSearch_Index_txtGoods`、`MarkSearch_Index_txtOwnerName`。**不存在 debtor、secured party、擔保品或融資聲明（financing statement）任何欄位。** | **此端點無替代路徑**——無論輸入什麼都不可能回傳 UCC 融資聲明。請採 **$12.00** 認證查詢。 |
+| Utah UCC/CFS Self-Service 網站——UCC 端點窮舉（13 條候選路徑） | [ucc.utah.gov](https://ucc.utah.gov/)（測試路徑：`/UCC/Search`、`/Home/Search`、`/SearchUCC`、`/Search/Debtor`、`/PublicSearch`、`/Filing/Search`、`/UccSearch`、`/UCCSearch/Index`、`/Search/UCC`、`/EntitySearch/OnlineUCCSearch`、`/UccFilingSearch`、`/Ucc/Search`、`/OnlineUCCSearch`） | 在宣告該入口受阻之前，系統性探測**任何**免登入 UCC debtor 搜尋路徑。 | **十三條全部回傳 HTTP 404**，各自轉址至 `https://ucc.utah.gov/ErrorPage.html?aspxerrorpath=<path>`。僅 `/Account/Login` 回傳 HTTP 200——即同一個登入閘門。**結論：猶他州入口不存在任何匿名 UCC debtor 搜尋路徑。** | 具 Utah-ID 登入之工作階段，或 **$12.00／名稱**的認證查詢。 |
+| Utah Department of Commerce — UCC 費用與資料調閱規費表 | [commerce.utah.gov/corporations/uniform-commercial-code/](https://commerce.utah.gov/corporations/uniform-commercial-code/) | 唯讀：確立取得 WEBNX／GORILLASERVERS 申報資料的具名、可計價替代路徑。 | **HTTP 200。** 原文：「UCC Certified Search / UCC Certified Search with Copies **Fee: $12.00 per name searched**」以及「**$12.00 per file number certified**（copy 每頁 30¢）」。未認證影本為「30¢ per page（未滿 $3.00 免收）」。申請表為「**UCC II Information Request (National)**」，須填「Debtor Name(s)（**One name or file number per form**）」。處理時程：「Generally, request for information from the Division will take **ten working days** to process and deliver.」受理方式為郵寄、傳真與臨櫃。 | **這就是那條具名替代路徑。** 清查兩個 debtor 的成本：**2 × $12.00 = $24.00**（每個名稱一張 UCC-11：`WEBNX, INC.` 與 `GORILLASERVERS, INC.`），影本每頁 $0.30，約 10 個工作天。若另要查未加後綴的 `WEBNX` 與 `GORILLASERVERS`，每個別名再加 $12.00。 |
+| 公開網路搜尋：是否有已被索引、指名任一 debtor 的猶他州 UCC 申報 | [google.com](https://www.google.com)（透過 WebSearch） | `"WEBNX" UCC filing secured party lien Utah financing statement` | **零筆申報層級結果。** 僅回傳通用的猶他州 UCC 法條／表單頁面（uslegalforms、justia、Cornell LII、commerce.utah.gov 說明 PDF）。**任何索引中都未出現 WebNX 的申報號碼、secured party 或擔保品文字。** | 認證查詢（**$12.00／名稱**）——公開網路索引並未鏡像猶他州 UCC 申報全文。 |
+| 公開網路搜尋：兩家實體、加上年份限縮 | [google.com](https://www.google.com)（透過 WebSearch） | `"WebNX" OR "GorillaServers" UCC lien filing secured party Utah 2024 2025` | **兩家實體皆零筆申報層級結果。** 僅回傳 Utah Central Filing System 頁面、NASS UCC 概覽、LexisNexis UCC 產品頁，以及商業 UCC 查詢廠商的到達頁。**GORILLASERVERS 同樣沒有任何申報浮現。** | 認證查詢（**$12.00／名稱**），並將 `GORILLASERVERS, INC.` 另立一張表單。 |
+| 商業 UCC 資料聚合商——已辨識但**未交易** | [LexisNexis 支援文件 1089612](https://supportcenter.lexisnexis.com/app/answers/answer_view/a_id/1089612/) · [courtcasefinder.com/ucc-records](https://courtcasefinder.com/ucc-records) · [entitycheck.com/ucc-search](https://entitycheck.com/ucc-search) · [secstates.com/UT_UCC_Utah_Universal_Commercial_Code_Search](https://secstates.com/UT_UCC_Utah_Universal_Commercial_Code_Search) | 辨識為取得猶他州 UCC 資料（debtor `WEBNX, INC.`／`GORILLASERVERS, INC.`）的付費第三方路徑。 | **全部為訂閱制或單次付費產品。** 在未開帳號、未付款的前提下，皆未揭露 WebNX 或 GorillaServers 的申報資料。**未建立任何帳號，亦未購買任何查詢。** | 付費聚合商訂閱（LexisNexis UCC 公開紀錄模組——企業定價，未公開牌價），或**州政府 $12.00／名稱的認證查詢**；後者明顯便宜，且是權威紀錄。 |
+
+### 8.3 已在案之申報——每筆完整列出
+
+**取得之申報筆數：0。**
+
+以下沒有任何申報區塊，因為**沒有任何一個查詢面回傳過任何申報**。此處沒有壓縮、簡寫或省略任何內容——登記簿根本未曾被觸及。因此，徵信或通路決策所需的每一個申報欄位，對兩個 debtor 而言都是明確的 GAP：
+
+| 每筆申報所需欄位 | `WEBNX, INC.` | `GORILLASERVERS, INC.` |
+|---|---|---|
+| 申報號碼（filing number） | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| 申報日期（filing date） | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| 失效日／續期狀態（lapse／continuation） | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| Secured party 名稱與地址 | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| Debtor 申報名稱與地址 | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| 擔保品描述（逐字原文） | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| 修正／讓與／終止（amendments／assignments／terminations） | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+| 紀錄連結 | **GAP — 登記簿未曾觸及** | **GAP — 登記簿未曾觸及** |
+
+上述欄位只能靠 **UCC-11「Information Request (National)」認證查詢**取得：**每個名稱 $12.00**，約 10 個工作天，來源為 [commerce.utah.gov/corporations/uniform-commercial-code/](https://commerce.utah.gov/corporations/uniform-commercial-code/)。
+
+### 8.4 這份紀錄的意涵
+
+以下為推論，不是已目視之證據。每一列自帶信心度。
+
+| 觀察 | 意涵 | 信心度 | 對銷售的後果 |
+|---|---|---|---|
+| 猶他州 UCC debtor 搜尋**在「可瀏覽」的意義上並不是公開紀錄**——它完全位於 Utah-ID SSO 登入之後（[ucc.utah.gov](https://ucc.utah.gov/) 只提供密碼表單；13 條候選搜尋路徑全部 404）。該主機上唯一對外開放的匿名搜尋是實體／商標搜尋，且標題原文仍寫著「Nevada Business Search」。因此本軌的正確讀法是：**WebNX 的留置權狀態是「未知」，不是「乾淨」。** | 不能從「查無結果」推出關於 WebNX 擔保債務的任何結論。任何「WebNX 沒有留置權」的陳述都缺乏依據。此處的阻擋是程序性的，不是資產負債表乾淨的證據。 | **高** — 直接觀察所得：HTTP 200 登入閘門，僅有 `__RequestVerificationToken`／`password`／`ErrorMessage` 輸入欄，且 UCC 搜尋路徑 13 條全數 404 | **絕對不要讓任何人以「查無 UCC 申報」為基礎，建立徵信或通路核准的論證。** 在任何 Rule 8 經銷核准討論或直接付款條件決策**之前**，先花 **$24.00** 與約 10 個工作天，送出兩張 UCC-11「Information Request (National)」（`WEBNX, INC.` 與 `GORILLASERVERS, INC.`）。這是整份檔案中成本最低的去風險動作。 |
+| WebNX 在自家 2025-01-24 的 WHT 主機代管貼文中公開表示：「in some cases we can also offer high end and mid level **LTO** on servers（**we keep millions in hardware on hand**）」。LTO = lease-to-own。**他們正在對自己的客戶提供設備融資。**（[WHT thread 1933969](https://www.webhostingtalk.com/showthread.php?t=1933969)） | 會承作硬體 lease-to-own 債權的營運者，資金來源不是 (a) 現金／保留盈餘，就是 (b) floor-plan／存貨額度——而 floor-plan 額度幾乎一律是以**針對存貨、應收帳款與收益的 UCC-1 概括性申報**完成對抗要件。「millions in hardware on hand」正是放款人會設定的擔保品池。這**顯著提高「至少存在一筆有效 UCC-1」的先驗機率**，而受阻的入口讓我們無從看見。 | **中** — LTO 與「millions in hardware」引文有明確來源與日期；但由此推到 floor-plan 留置權屬商業推理，**並非已目視之申報** | **在認證查詢給出相反答案之前，先假設可能存在概括性留置權。** 若查出針對「inventory, equipment, accounts and proceeds」的概括性 UCC-1，新供應商就無法在未對既有 secured party 發出 **PMSI 通知**的情況下，對出貨硬體取得購買價金擔保權益——這是實質的交易時程風險。請現在就要求徵信單位規劃 PMSI 通知機制，而不是等到下 PO 時才發現。 |
+| WebNX 採購並上架的是 **whitebox 零組件，不是原廠品牌整機**：觀察到的機隊為 Supermicro 等級主機板，加上散裝 AMD EPYC／Ryzen／Threadripper CPU、Kioxia／Samsung U.2 NVMe，以及消費級 NVIDIA GeForce（RTX 3090／4090／5090）與資料中心級 A100／RTX 6000 並存。**在 862 筆型錄紀錄中，任何位置都未出現 Dell／HPE／Lenovo 的 SKU 型態。** | 若最終查到 secured party，**其身分本身就是關鍵線索**。若是銀行或設備租賃商（Zions、Celtic、猶他區域銀行，或 Meridian／Trinity 之類租賃商），代表 WebNX 用自有營運資金直接採購並自行整合——那是可以直接賣零組件／平台給他的買家樣態。若是經銷商或原廠融資部門，代表他們已經走通路交易，而這正是 Rule 8 經銷核准真正要處理的事。一家完全沒有品牌整機足跡的 whitebox 整合商，出現的多半是銀行或獨立租賃商，而不是原廠自營融資。 | **中** — whitebox 硬體型態在型錄中證據充分；但由 secured party 類型推導採購路徑屬產業推論 | **認證查詢結果中，商業價值最高的欄位就是 secured party 的「名稱」，請先讀它。** 若是經銷商或原廠融資部門，就把案子走既有通路，Rule 8 核准大致已預先解決。若是銀行或獨立租賃商，他們就是**直接買家**，應該提直接付款條件——但接著必須先處理上述概括性留置權／PMSI 問題。 |
+| 無法取得任何申報日期，因此無法從登記簿讀出申報節奏。不過，我們從型錄重建了一組**獨立的採購時鐘**（見 §9）：2023-04 至 2025-10 之間共八次矽晶世代採購事件，**中位間隔 2.35 個月**，之後急停——**自 2025-10-12 起的十個月內，零個新 CPU 或 GPU 世代**，且 2026 年的快照覆蓋良好。 | 若留置權存在、且申報日期集中在 2024–2025 年並於 2025 年底停止，即可佐證**一套已暫停或已用罄的融資性採購計畫**。若申報是舊案且持續續期（是 continuation 而非新申報），則代表**舊債仍未清償，而該業者已停止換代**——即資本受限的讀法。無論何者，登記簿都能為這條融資線標定時間，這就是「日期」與「名稱」同樣重要的原因。 | **中** — 採購時鐘的停滯是直接觀察且覆蓋良好；但與融資的連結屬推論 | 認證查詢回來後，**請把申報日期對照 2025-10-12 的採購時鐘停點**。若兩者對齊，就把「他們暫停採購」這種軟性說法，轉成「他們的融資窗口關閉了」這種硬性說法——而這會把訴求從**產品**改成**融資結構**。 |
+| 猶他州登記簿把 **UCC 與 CFS**（Central Filing System，即農產品擔保登記）合併索引，查詢方式為 debtor 名稱**或**申報號碼，且**每張 UCC-11 只能填一個名稱**。 | 單一張 `WEBNX, INC.` 的表單，**不會**涵蓋以別名或前身名稱索引的申報，也不會涵蓋 GorillaServers。猶他州 UCC 查詢邏輯採精確／標準比對，因此 `WEBNX INC`、`WEBNX, INC.`、`WEB NX` 可能回傳不同集合。**只送一張表單，等於預留一個假陰性。** | **高** — 「One name or file number per form」係逐字引自該局自家[費用頁](https://commerce.utah.gov/corporations/uniform-commercial-code/) | **編列四張表單的預算，不是一張：** `WEBNX, INC.`、`WEBNX INC`、`GORILLASERVERS, INC.`、`GORILLASERVERS INC` = **$48.00**。這是很便宜的保險，避免一個假的「查無申報」結論被當成事實在 CRM 內被反覆引用。 |
+| GorillaServers, Inc. 在**同一棟 Ogden 廠房**營運，且 WebNX 是其**網域註冊登記者**，但兩者經營完全獨立的 WHMCS 商店、獨立品牌與獨立 PoP 清單（GorillaServers 主打 Ogden、LA、Dallas、Staten Island——**與 WebNX 目前銷售的四個都會區完全相同**）。 | 兩者幾乎可以確定是**共同控制或高度關聯的實體**，共用樓地板、網路（AS18450）與採購。若融資存在，可能掛在持有硬體的那一方；只查 WebNX 有可能**漏掉一筆以 GorillaServers 為 debtor、卻設定在同一批實體機隊上的留置權**。反之，若只有一方有留置權，那就告訴你**哪一方才是資產負債表主體**——你的合約與信用曝險就該指名那一方。 | **中** — 同址、共用註冊登記者與四都會 PoP 完全一致皆為觀察所得；**共同控制屬推論，未由所有權紀錄驗證** | **兩個 debtor 都要查，並做比較。** 承擔擔保債務的那一方才是真正的資產負債表——與那一方簽約，或要求由該方出具保證。另外，在對任一方提供付款條件之前，先用猶他州實體查詢（免費，真人瀏覽器可達）驗證兩者的董監經理人重疊情況。 |
+| 若認證查詢對兩家實體**確實回報全空**，對一家橫跨五個都會區、營運數千台伺服器的業者而言（Ogden 自有自營 100k–120k 平方英尺、Equinix LA3 逾 200 racks 與 5 個 cage，另有 LA1、NY1、NY2、DA1），這件事本身就是很強的商業訊號。 | 這種規模的機隊卻**零筆已完成對抗要件的留置權**，只有三種可能：(1) **由營運利潤現金支應**——對一家 1999 年創立、創辦人主導、對舉債保守的主機業者非常合理，代表有真實自由現金流、且沒有放款人否決權；(2) 以營運租賃結構安排，因此不需申報 UCC-1，或硬體不列在資產負債表上；(3) 融資申報在其他管轄區、且以另一個名稱的實體為 debtor。對一家自己都在對客戶承作 lease-to-own 的公司而言，(1) 最有可能——一般來說，自己借到滿的人不會再去放款給別人。 | **中** — 條件式推論；**在認證查詢回來之前無法檢驗** | 一個經**查證**的「無申報」結果，對**直接付款條件與更大單量而言是綠燈**：不需放款人同意、不需 PMSI 通知、沒有債權人間協議的摩擦，而且對方一直在自籌資本支出。它同時也代表**價格才是槓桿，而不是融資**——這點很重要，因為 §10 顯示他們的 24 個月回收模型目前已被記憶體價格打破。 |
+| 在有多個 secured party 的情況下，猶他州依 UCC Article 9 採**先申報或先完成對抗要件者優先**；設備類購買價金擔保權益（PMSI）只有在 debtor 取得占有後 **20 天內**完成對抗要件才取得超優先地位，存貨類則另需**事前書面通知既有申報人**。 | 若查詢回傳兩筆以上有效申報，**最早申報的概括性留置權即控制整個擔保品池**。後進供應商無法單靠「再去申報一次」壓過它；PMSI 必須積極完成對抗要件，且時程很緊。 | **高** — Article 9 的既定機制；猶他州擔保交易規定於 **Title 70A Chapter 9a** | 若出現兩筆以上申報，**在徵信單位讀完擔保品描述、並確認 PMSI 是否可行之前，不要報付款條件**。**20 天的設備時限意味著文件必須在硬體出貨「之前」就備妥，而不是之後**——請把這一步放進報價到出貨的流程，否則擔保權益就喪失了。 |
+| 若查到 **termination statement**，代表原債務已清償、擔保品已解除；若查到 **continuation**（於五年失效前六個月內申報），代表債務仍然存續。 | Termination 會回復未設定負擔的舉債能力——WebNX 將可再次以機隊設定擔保，也就是**有能力融資一次補課式的大量硬體採購**。仍有效的 continuation 則代表擔保品仍被綁住，增量資本支出多半只能自有現金支應或次順位處理。 | **高** — 標準 Article 9 失效／續期機制；認證查詢一到手即可直接讀出 | **這個欄位會告訴你「原廠／通路融資的換代案是否根本可行」。** 考慮到採購時鐘停在 2025-10-12，而目前的記憶體價格讓現金支應的換代不具經濟性（§10），**一筆近期的 TERMINATION 會是這份檔案裡最強的買訊**——擔保品已解禁、換代已逾期、現金回收模型已破，三者相加就是一個融資型交易的切入口。 |
+
+### 8.5 GAP — Track 1，如實列出
+
+- **UCC 是「未查證」，不是「乾淨」。** 兩個 debtor 皆未取得任何猶他州 UCC 申報。登記簿完全位於 Utah-ID SSO 登入之後（[ucc.utah.gov](https://ucc.utah.gov/) 只回傳密碼表單；13 條候選 UCC 搜尋路徑全數 404）。**未建立帳號、未輸入任何憑證。§8.3 是空的，因為什麼都沒看到——此結果絕不可被表述為「沒有融資」。** 解法：UCC-11「Information Request (National)」，**每個名稱 $12.00**，約 10 個工作天，以郵寄／傳真／臨櫃辦理。建議送**四張表單（$48.00）**：`WEBNX, INC.`、`WEBNX INC`、`GORILLASERVERS, INC.`、`GORILLASERVERS INC`。
+- **從未有任何 debtor 名稱查詢真正送進猶他州任一 UCC 系統。** 每一次嘗試都在到達搜尋欄位之前，就卡在驗證層或路由層。§8.2 中列出的別名變體是**「原本打算送出」的字串，不是已對登記簿執行過的查詢**。請勿把它們讀成已執行的搜尋。
+- **[businessregistration.utah.gov](https://businessregistration.utah.gov/)**（原始需求所指 `secure.utah.gov/bes` 的轉址目的地）對自動化存取回傳 **HTTP 403，且擋在 Cloudflare 挑戰之後**。真人瀏覽器很可能可以正常載入。因此 WebNX, Inc. 與 GorillaServers, Inc. 的猶他州實體資料——註冊代理人、經理人、狀態、設立日期——**皆未取得**，兩家實體的經理人重疊只能說「合理」，屬**未查證**。*（此即 §4.4 已記錄的同一個硬性停損點。）*
+- **WebNX, Inc. 與 GorillaServers, Inc. 之間的共同控制屬推論，非文件所證**——依據為同址廠房、WebNX 為 gorillaservers.com 的註冊登記者，以及四個都會 PoP 完全一致。**未取得任何所有權文件、申報或經理人名冊加以證實。**
+
+---
+
+## 9. 採購時鐘
+
+WebNX 實際上多久買一次新矽晶——由其自家公開型錄三年來的變化讀出。本節建立在 **862 筆型錄紀錄**之上：134 份已封存 WHMCS 商店分類快照中的 681 個產品、80 份已封存 WordPress 型錄頁中的 105 筆標價列，以及 2026-08-10 由 WebNX 產品 API 取得的 57 個即時 SKU。
+
+### 9.1 快照時間軸
+
+| 快照日期 | SKU 數 | 最新矽晶 | 較前次新增 | 較前次退場 | 快照連結 |
+|---|---|---|---|---|---|
+| **2023-02-15** | 2023-02 擷取之 9 份 WordPress 型錄頁中回收 13 筆標價列（**封存覆蓋有限，非完整型錄普查**） | AMD EPYC 7002/7003（Rome/Milan）、Intel Xeon E5 v4 與 Scalable Gold/Platinum、AMD Ryzen 7000（Zen 4） | 本研究之基準快照 | 基準。值得注意：三張清倉表格原文皆為「We don't have any Clearance Servers in Los Angeles at this time.」／「…in Utah…」／「…in NYC at this time.」——**清倉庫存為零**，即沒有老舊庫存在出清 | [web.archive.org 2023-02-15](https://web.archive.org/web/20230215034913/https://webnx.com/dedicated-servers/clearance-servers/) |
+| **2023-04-22** | 2023-04 擷取之 12 頁中 38 筆標價列 | **雙 AMD EPYC 9654（Genoa, Zen 4, 192C/384T）**，1.5 TB DDR5 ECC 與 4 × 12.8 TB PCIe4 NVMe，$1,999/mo | **採購事件** — EPYC 9004「Genoa」（Zen 4）首次進入型錄。Genoa 於 2022-11 發表，即**從矽晶發表到可上架庫存約 5 個月** | 未觀察到退場；雙 Xeon E5-2696v2／E5-2697v3 與 Platinum 8124 仍以 $149／$299／$479 並列銷售 | [web.archive.org 2023-04-22](https://web.archive.org/web/20230422032134/https://webnx.com/dedicated-servers/ogden-utah-dedicated-servers/dual-cpu-servers/) |
+| **2023-10-01** | 回收 13 個不重複 SKU（2023-T3 視窗，**封存覆蓋稀薄**） | EPYC 9004 Genoa 仍為在售最新平台 | 未觀察到新矽晶世代 | 未觀察到退場。WHMCS 商店開始被封存，標誌著即時型錄自 WordPress 遷出 | [web.archive.org 2023-10-01](https://web.archive.org/web/20231001094848/https://clients.webnx.com/index.php) |
+| **2024-07-15** | 17 個分類中 44 個不重複 SKU（2024-T2 視窗） | AMD Threadripper 7000（Zen 4）、NVIDIA RTX 4090、NVIDIA A100 | **三重採購事件** — Threadripper 7000、RTX 4090 與 A100 80 GB 全部首次出現。**這是 GPU/AI 成為產品線的起點**；專屬商店分類 `/store/ogden-gpu-and-ai-servers` 與 `/store/los-angeles-instant-gpu-and-ai` 分別於 2024-07-15 與 2024-09-13 首次被封存 | 無退場；雙 E5-2690v4 的 12 × 14 TB 儲存機殼續存 | [web.archive.org 2024-07-15](https://web.archive.org/web/20240715085731/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd) |
+| **2024-09-20** | 21 個分類中 76 個不重複 SKU（2024-T3 視窗） | AMD Ryzen 9000（Zen 5）— 9950X | **採購事件** — Ryzen 9000（Zen 5）。2024-08 發表，**約 1 個月內就上型錄——本研究中最快的矽晶到機櫃週期** | Ryzen 5000（Zen 3）仍在，但比重下降 | [web.archive.org 2024-09-20](https://web.archive.org/web/20240920012844/https://webnx.com/dedicated-servers/ogden-utah-dedicated-servers/dual-cpu-servers/) |
+| **2024-12-05** | 2024-12 擷取之 7 個分類頁中 41 筆標價列 | AMD EPYC 9005「Turin」（Zen 5）— 9755／9754S 高核心數型號；RTX 4060/5060 級 GPU | **採購事件** — EPYC 9005 Turin。由 WebNX 自家 [2024-11-30 WHT 貼文](https://www.webhostingtalk.com/showthread.php?t=1931019) 佐證：「EPYC 9355 single and dual IN STOCK NOW!（Available in LA & Utah）」、「EPYC Dual 9575F 128c 256t high clock, fastest listed on passmark at nearly 200k! IN STOCK」、「Dual and single 9755 128 and 256 core setups」，以及「9255 high clock 24 core… stock due in middle of month」。同篇另有：「Ryzen 9950X 4090 Builds: Nearly 100 ordered in the past month!」 | 未觀察到退場 | [web.archive.org 2024-12-05](https://web.archive.org/web/20241205214221/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-los-angeles-intel) |
+| **2025-03-19** | 19 個分類中 95 個不重複 SKU（2025-T1 視窗） | AMD EPYC 9275F（Turin 高時脈） | **採購事件** — EPYC 9275F 進入型錄，把 Turin 從最初的高核心數型號向外擴張 | 未觀察到退場 | [web.archive.org 2025-03-19](https://web.archive.org/web/20250319122118/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-la) |
+| **2025-04-27** | 2025-04 擷取之 13 個分類頁中 59 筆標價列 | AMD EPYC 9575F；Intel Xeon 6（Granite Rapids, 6760P）；NVIDIA RTX 5090 | **三重採購事件** — EPYC 9575F、Intel Xeon 6 與 RTX 5090 皆首次出現。RTX 5090 於 2025-01 發表，即**約 3 個月上架**。**Xeon 6 是 2023–2026 全期間唯一一次 Intel 採購事件** | RTX 4090 最後一次出現於 2025-05-17，之後消失 | [web.archive.org 2025-04-27](https://web.archive.org/web/20250427153831/https://clients.webnx.com/index.php?rp=/store/ogden-gpu-and-ai-servers) |
+| **2025-05-17** | 8 個分類中 44 個不重複 SKU（2025-T2 視窗） | NVIDIA RTX 6000／A6000 級（96 GB VRAM 版本出現在 Ogden GPU SKU 中） | **採購事件** — RTX 6000／A6000 級 GPU 進入型錄 | RTX 4090 於本快照最後一次出現 | [web.archive.org 2025-05-17](https://web.archive.org/web/20250517154807/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd) |
+| **2025-08-05** | 2025-08 擷取之 4 個分類頁中 25 筆標價列 | AMD EPYC 9355P | **採購事件** — EPYC 9355P。由 [2025-06-27 WHT 貼文](https://www.webhostingtalk.com/showthread.php?t=1943375) 佐證：「Lots of newest generation EPYCs in stock, from 9275F to 9755 duals and everything inbetween」，另有 8 × GPU／256 GB VRAM／1 TB RAM 雙 Platinum 8260 機種標價 $999 | 未觀察到退場 | [web.archive.org 2025-08-05](https://web.archive.org/web/20250805174651/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-nyc) |
+| **2025-10-12** | **20 個分類中 141 個不重複 SKU（2025-T3 視窗）——本研究全期間觀察到最寬的型錄** | AMD Threadripper 9000（Zen 5, 9960X/9970X）；AMD EPYC 9255；AMD EPYC 4004/4005 AM5（4585PX） | **三重採購事件——也是最後一次觀察到的採購事件。** Threadripper 9000（2025-07 發表，約 3 個月上架）、EPYC 9255，以及 EPYC 4005 AM5 產品線全部首次出現 | Ryzen 5000（Zen 3）於本快照最後一次出現，之後消失 | [web.archive.org 2025-10-12](https://web.archive.org/web/20251012113042/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd) |
+| **2026-02-13** | 21 個分類中 138 個不重複 SKU（2026-T1 視窗，**52 頁／6 個不同擷取日——覆蓋良好**） | 未變：EPYC 9575F／Threadripper 9000／Ryzen 9950X3D／RTX 5090 仍為最新零件 | **無採購事件。零個新 CPU 或 GPU 世代。** 這**不是**封存覆蓋造成的假象——2026 年在 21 個分類上有 6 個不同擷取日 | Intel Xeon 6（Granite Rapids）最後出現於 2025-10-12，至 2026 年已消失——**唯一一次 Intel 採購事件並未重複** | [web.archive.org 2026-02-13](https://web.archive.org/web/20260213195638/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd) |
+| **2026-04-25** | 2026-04 擷取之 32 個分類頁中 168 筆標價列（**封存中最密集的單次爬取**） | 自 2025-10 起未變 | **無新矽晶。** 但**有新地理據點** — `/store/dallas-instant-ryzen` 於本日首次被封存，佐證 **DA1 Dallas PoP 上線** | 未觀察到退場 | [web.archive.org 2026-04-25](https://web.archive.org/web/20260425055420/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd) |
+| **2026-08-10（即時，今日）** | **57 個在庫 SKU**（API `result:'success'`、`totalResults:57`）。另於全部 23 個即時 WHMCS 商店分類爬取到 **74 筆產品列表**（含 8 項主機代管品項）。分布：**Ogden 35、Los Angeles 8、Staten Island 6、Dallas 4、Manhattan 2** | AMD EPYC 9575F／9754S／9355P／9275F／9255（Turin, Zen 5）；EPYC 9B14；Threadripper 9970X／9960X（Zen 5）；Ryzen 9950X3D；RTX 5090；A100 80 GB；RTX 6000 96 GB | **十個月內無任何新矽晶世代。** 新地理據點已確認上線：**NY2（Staten Island）** 的 Ryzen／EPYC／Threadripper 分類，以及 **DA1（Dallas）** 的 Ryzen ＋ GPU&AI 分類——NY2 **從未**被 Wayback Machine 擷取過，因此比 2026-04-25 更新 | **庫存嚴重收縮：** 由 141 個不重複 SKU（2025-10）與 138 個（2026-02），降至**即時在庫 57 個——約減少 60%**。`/store/clearance-instant` 與 `/store/ny2-staten-island-instant-threadripper` **皆回傳零產品**。**57 個即時 SKU 中有 26 個顯示 `stocklevel=1`** | [webnx.com/api/whmcs/getProducts](https://webnx.com/api/whmcs/getProducts)（POST） · [clients.webnx.com 商店](https://clients.webnx.com/index.php?rp=/store) |
+
+### 9.2 採購節奏
+
+**觀察到的間隔**——以型錄中新 CPU／GPU 世代首次出現日之間距計算：
+
+| 起 → 迄 | 間隔 |
+|---|---|
+| 2023-04-22 → 2024-07-15 | **14.8 個月** — 2023-06 至 2024-03 封存覆蓋稀薄，故此為**上界，且很可能掩蓋了一次以上的事件** |
+| 2024-07-15 → 2024-09-20 | 2.2 個月 |
+| 2024-09-20 → 2024-12-05 | 2.5 個月 |
+| 2024-12-05 → 2025-03-19 | 3.4 個月 |
+| 2025-03-19 → 2025-04-27 | 1.3 個月 |
+| 2025-04-27 → 2025-05-17 | 0.7 個月 |
+| 2025-05-17 → 2025-08-05 | 2.6 個月 |
+| 2025-08-05 → 2025-10-12 | 2.2 個月 |
+| 2025-10-12 → 今日（2026-08-10） | **9.9 個月，且無任何採購事件** |
+
+**中位數：** **2.35 個月**（八個觀察間隔 0.7、1.3、2.2、2.2、2.5、2.6、3.4、14.8 之中位數）。若排除覆蓋受限的 14.8 個月，2024–2025 年七個乾淨間隔的中位數為 **2.2 個月**。
+
+**最後一次採購事件：** **2025-10-12** — AMD Threadripper 9000（Zen 5, 9960X/9970X）、AMD EPYC 9255 與 AMD EPYC 4004/4005 AM5 產品線（4585PX）同時首次出現，觀察於 [web.archive.org 2025-10-12](https://web.archive.org/web/20251012113042/https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd)。
+
+**下一個窗口推估：已逾期。** 依觀察到的 2.2–2.35 個月節奏，下一次採購事件本應落在 **2025-12-20** 前後；如今已**遲了約 8 個月**，且 2026 年四個乾淨快照視窗（1 月、2 月、3/4 月、5 月）加上今日的即時型錄，都沒有新矽晶。推估下一次真正的採購事件落在 **2026 Q4 – 2027 Q1**，且**受制於 DRAM 價格，而非矽晶供給**。兩個具體觀察觸發點：**(1)** DDR5 RDIMM 現貨價回落至每 64 GB 模組約 **$700–900** 以下——多份 2026 年來源把這件事放在 2027 而非 2026；**(2)** 出現**原廠或放款方融資**，讓他們不必用現金支應記憶體。第三個較弱的觸發點是 AMD 下一代 EPYC（Venice／Zen 6）造成他們無法忽視的競爭壓力。
+
+**依據：** 採購事件由 **862 筆型錄紀錄**推導——134 份已封存 WHMCS 商店分類快照中的 681 個產品、80 份已封存 WordPress 型錄頁中的 105 筆標價列，以及 2026-08-10 由 WebNX 產品 API 取得的 57 個即時 SKU。並與 WebNX 自家有日期的 WebHostingTalk 公告交叉佐證（[2024-11-30](https://www.webhostingtalk.com/showthread.php?t=1931019) EPYC 9005 上市，含「9255… stock due in middle of month」；[2025-06-27](https://www.webhostingtalk.com/showthread.php?t=1943375)「Lots of newest generation EPYCs in stock, from 9275F to 9755 duals」）。2026 年「無事件」的發現由良好的封存覆蓋（僅 2026-T1 就有 6 個不同擷取日、52 個分類頁）**加上**即時 API 共同支撐，因此反映的是真實行為，不是紀錄斷層。
+
+**信心度：** 2024–2025 節奏為**中高**（多來源密集覆蓋，且有業者自身有日期的貼文佐證）。2025-10 停滯這件事本身為**中高**（2026 年由兩個獨立面向提供良好覆蓋）。前瞻窗口為**中**，因為它取決於 DRAM 價格路徑，而那是**預測，不是觀察**。2023–2024 的單一間隔為**低**，因覆蓋受限，**不得當作真有 15 個月採購空窗的事實引用**。
+
+### 9.3 擴張訊號（依日期）
+
+| 日期 | 訊號 | 來源 |
+|---|---|---|
+| **2008-01-11** | ARIN 直接 IPv4 配發 WEBNX（NET-67-220-192-0-1），**67.220.192.0/19** — 第一個以 WebNX 命名之區塊 | [rdap.arin.net 67.220.192.0](https://rdap.arin.net/registry/ip/67.220.192.0) |
+| **2010-03-19** | ARIN 配發 WEBNX-BLK-3（NET-173-231-0-0-1），**173.231.0.0/18** — WebNX 單一最大區塊 | [rdap.arin.net 173.231.0.0](https://rdap.arin.net/registry/ip/173.231.0.0) |
+| **2012-04-26** | **AS18450** 之 PeeringDB 網路紀錄建立 | [peeringdb.com/api/net?asn=18450](https://www.peeringdb.com/api/net?asn=18450) |
+| **2014-04-06** | 建立 **Any2West（CoreSite）IX 互連** — 現為 100G | [peeringdb.com/api/netixlan?net_id=4729](https://www.peeringdb.com/api/netixlan?net_id=4729) |
+| **2014-11-21** | 同日登錄 ARIN 配發 WEBNX-UT-107-182-160-0（**107.182.160.0/20**）與 WEBNX-NY-64-185-224-0（**64.185.224.0/20**）— **第一個明確標示 NY 的 WebNX 區塊，佐證紐約建置** | [rdap.arin.net 64.185.224.0](https://rdap.arin.net/registry/ip/64.185.224.0) |
+| **2015-02-22** | PeeringDB 新增設施：**CoreSite LA1 One Wilshire、Level(3) Salt Lake City、DataBank SLC1** | [peeringdb.com/api/netfac?net_id=4729](https://www.peeringdb.com/api/netfac?net_id=4729) |
+| **2015-04-17** | ARIN 配發 WEBNX-BLK-14（NET-64-140-160-0-1），**64.140.160.0/20** — **WebNX 取得的最後一筆 ARIN 直接 IPv4 配發**，緊接在 2015 年 9 月 ARIN IPv4 自由池耗盡之前 | [rdap.arin.net 64.140.160.0](https://rdap.arin.net/registry/ip/64.140.160.0) |
+| **2015-11-20** | 建立 **SLIX Salt Lake City IX** 互連（40G） | [peeringdb.com/api/netixlan?net_id=4729](https://www.peeringdb.com/api/netixlan?net_id=4729) |
+| **2017-08-08** | PeeringDB 新增設施：**NYI NY1（100 William Street）** 與 **Flexential SLC04** | [peeringdb.com/api/netfac?net_id=4729](https://www.peeringdb.com/api/netfac?net_id=4729) |
+| **2019-07-30** | 建立 **Equinix Los Angeles IX** 互連（100G）；Equinix LA1 於 2019-08-09 加入 PeeringDB 設施清單 | [peeringdb.com/api/netixlan?net_id=4729](https://www.peeringdb.com/api/netixlan?net_id=4729) |
+| **2022-02-24** | WHT 公告：**「NYC RELAUNCH」**，同時推出 EPYC 7513、12900K DDR5、雙 E5 10 × NVMe $299、64 核 Milan $599 | [WHT thread 1867917](https://www.webhostingtalk.com/showthread.php?t=1867917) |
+| **2024-07-15** | **GPU/AI 成為獨立產品線** — `/store/ogden-gpu-and-ai-servers` 首次被封存（RTX 4090 與 A100 80 GB 於同一視窗進入型錄） | [web.archive.org 2024-07-15](https://web.archive.org/web/20240715072706/https://clients.webnx.com/index.php?rp=/store/ogden-gpu-and-ai-servers) |
+| **2024-09-13** | **洛杉磯 GPU/AI 商店分類**首次被封存 | [web.archive.org 2024-09-13](https://web.archive.org/web/20240913035728/https://clients.webnx.com/index.php?rp=/store/los-angeles-instant-gpu-and-ai) |
+| **2024-11-30** | WHT：**「New Site, New EPYC 5th Gen Servers」** — EPYC 9005 Turin 上市（9355、雙 9575F、9755）、新官網上線、黑五代碼 NX_BF_2024，另有「Ryzen 9950X 4090 Builds: **Nearly 100 ordered in the past month!**」與「A large batch of 9950x's just came online in NYC」 | [WHT thread 1931019](https://www.webhostingtalk.com/showthread.php?t=1931019) |
+| **2025-01-24** | WHT 主機代管貼文：「WebNX is one of the largest clients of **Equinix LA3, now over 200 racks and 5 cages**, we have Flex Space（office on site）with our own employees… **recently signed another 5 year term**」。另有猶他「**first 40 rack colo pod is complete**」、「dual path terrabit connections back to coresite LA1 / one wilshire」、50U 機櫃搭配雙路 208V 30A 供電，以及「**we keep millions in hardware on hand**」。公開機櫃定價：1U/2U **$129/mo**；整櫃 3KW/100G/100TB/25 **$1,500/mo**；25 櫃私有 cage 75KW **$23,000/mo**。署名 Daniel Pautz, WebNX, Inc. | [WHT thread 1933969](https://www.webhostingtalk.com/showthread.php?t=1933969) |
+| **2025-04-16** | **建立 NYIIX New York IX 互連，100G** — 六年來唯一新增的 IX，也是紐約都會擴張（進而產生 NY2 Staten Island PoP）最明確的有日期標記 | [peeringdb.com/api/netixlan?net_id=4729](https://www.peeringdb.com/api/netixlan?net_id=4729) |
+| **2025-06-27** | WHT：**「Deepseek 8x GPU 1TB RAM $999」** — 8 × GPU／256 GB VRAM／1 TB RAM 雙 Platinum 8260 機種、RTX 5090，以及曼哈頓的「Lots of newest generation EPYCs in stock, from 9275F to 9755 duals and everything inbetween」。貼文開頭寫「**Its been over 2 months from the last post**」 | [WHT thread 1943375](https://www.webhostingtalk.com/showthread.php?t=1943375) |
+| **2026-04-25** | **DA1 Dallas PoP 上線獲得佐證** — `/store/dallas-instant-ryzen` 唯一一次 Wayback 擷取 | [web.archive.org 2026-04-25](https://web.archive.org/web/20260425055422/https://clients.webnx.com/index.php?rp=%2Fstore%2Fdallas-instant-ryzen) |
+| **2026-08-10** | **五都會據點於 WHMCS 商店導覽中即時確認**：NY1（Manhattan）、NY2（Staten Island）、UTAH、DA1（Dallas）、LOS ANGELES，共 23 個商店分類。**NY2 Staten Island 與 DA1 Dallas GPU&AI 從未被** Wayback Machine 封存過，故兩者皆新於 2026-04-25。各站即時庫存：**Ogden 35、LA 8、Staten Island 6、Dallas 4、Manhattan 2** | [clients.webnx.com 公告頁](https://clients.webnx.com/index.php?rp=/announcements) |
+| **2026-08-10** | **目前路由規模：** AS18450 宣告 159 個 IPv4 前綴與 8 個 IPv6 前綴，合計 **142,336 個 IPv4 位址**（約 2.17 個 /16）。PeeringDB 自報 **200–300 Gbps、以出向為主**，網路型態為 Content | [stat.ripe.net announced-prefixes AS18450](https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS18450) |
+| **2026-07-15** | **批發／轉售客戶群在路由上可見**——由 AS18450 宣告、但 ARIN 登記於*其他*主機商名下的區塊：RACKNERD-UT 104.156.142.0/24（2022-01-20）、RACKNERD-V46NET 23.159.8.0/24（2023-08-03）、ALPHAVPS-NET-0 165.140.240.0/23（2021-10-07）、ALPHAVPS-NET-2 104.152.50.0/24（2023-04-03）、365GROUP ×4（2019–2021）、ZENLAYER-INC 209.200.238.0/24（2025-06-13）、TECHNOLOGY-INNOVATION-LAB 209.200.241.0/24（2025-01-07），以及 NET-209-200-240-0-24（**2026-07-15，最新出現的第三方區塊**） | [rdap.arin.net 209.200.240.0](https://rdap.arin.net/registry/ip/209.200.240.0) |
+
+### 9.4 GAP — Track 2 與跨軌，如實列出
+
+- **SKU 數量與原始需求衝突。** 原始需求稱有 **1,851 個即時 SKU**。此數字在任何查詢面都無法重現。WebNX 即時產品 API（POST [webnx.com/api/whmcs/getProducts](https://webnx.com/api/whmcs/getProducts)）回傳 `result:'success'`、**`totalResults:57`**。爬取全部 23 個即時 WHMCS 商店分類得到 **74 筆產品列表**（含 8 項主機代管品項）。封存中觀察到最寬的型錄為 **141 個不重複 SKU（2025-10-12）**。1,851 可能是把可組態的規格排列組合、升級選項、歷史／已下架產品，或另一家廠商的資料算進去——但**它與 WebNX 公開的即時型錄不符**。請以 **57 在庫／74 列表**為實測值，並在商業使用 1,851 之前先把差異釐清。
+- **機櫃數與原始需求衝突。** 原始需求稱 Equinix LA3**約 150 racks**。WebNX 自己有日期的說法（2025-01-24）是「one of the largest clients of Equinix LA3, **now over 200 racks and 5 cages**」。那是**自報的行銷說法，不是經查核的數字**，且已是 18 個月前。**150 與 200+ 兩者皆未經獨立查證。** PeeringDB 甚至沒有把 LA3 列為 WebNX 設施（它列的是 Equinix LA1），因此 PeeringDB 無法佐證任一數字。*（此處不推翻 §5 的任何內容——兩個數字都仍未解決。）*
+- **webnx.com 行銷型錄是客戶端算繪的 React SPA**，頁面外殼僅約 2.1 KB。Wayback 對 `/all-dedicated-servers` 與 `/standard-dedicated-servers` 只擷取到空殼，因此**完全無法從行銷網站回收歷史 SKU 資料**。整條時間軸建立在伺服器端算繪的 WHMCS 商店，加上 2025 年前的 WordPress 型錄之上。**任何只存在於行銷網站的 SKU，對本研究是不可見的。**
+- **2023 年封存覆蓋稀薄**（WHMCS 商店在 2023 年 10 月、12 月各只有 1 次擷取；該年主要由 WordPress 頁面支撐）。2023-04-22 與 2024-07-15 兩次採購事件之間表面上的 **14.8 個月**間隔，很可能是覆蓋造成的假象、掩蓋了一次以上的真實事件，因此已將其排除於收斂後的中位數之外。**不得把「歷史上有 15 個月採購空窗」當成事實引用。**
+- **各快照的 SKU 數取決於封存覆蓋，不是型錄普查。** 擷取到 32 個分類頁的視窗，自然會比只擷取到 4 個的視窗顯示更多不重複 SKU。**請比較趨勢與矽晶，而不是原始數量**——除註明者外（2025-10 與 2026-02 覆蓋都很好，這正是「掉到即時 57 個」有意義的原因）。
+- **DA1 Dallas 與 NY2 Staten Island 兩個 PoP 的確切上線日期未能確立。** 兩個機房頁面（`webnx.com/datacenter-locations-and-networks/dallas` 與 `/statenisland`）**Wayback 擷取次數為零**，且為 JS 算繪，無法擷取任何有日期的內容。Dallas 只能界定為**在 2026-04-25 之前已上線**；Staten Island **從未**被封存，只能界定為**在今日之前已上線**。2025-04-16 建立的 NYIIX 100G 互連是紐約擴張最接近的有日期替代指標。
+- **WebNX 的 WHMCS 公告頁算繪出「Aug 2026」的月份標頭，卻沒有任何公告項目**，且未找到可用的 RSS feed（試過三個候選端點）。因此 2026 年任何有日期的產品公告都不在訊號集內，這在邊際上削弱了「2026 年無採購事件」的信心——不過型錄面的證據本身很強、且相互獨立。
+- **未找到任何晚於 2025-06-27 的 WebNX WebHostingTalk 貼文。** WHT 的會員發文歷史搜尋對自動化存取回傳 HTTP 403，因此無法窮舉其完整討論串清單。**2026 年可能存在一則 WHT 公告，而那會是確認或推翻採購時鐘停滯最快的方法。值得人工查一次。**
+- **RTX 3090 在型態掃描中顯示的首次出現日為 2026-08-10，這是假象**——3090 級顯卡在 2022 年的 WHT 討論串中已被提及，實際上架時間必然更早。**GPU 的首次出現日請視為比 CPU 日期更不可靠**，因為 GPU 常以可組態升級選項出現，而非具名型錄 SKU。
+- **跨軌 — AS18450 的 PeeringDB 設施資料已過時：** 最近新增的設施是 **2019 年的 Equinix LA1**，該紀錄整體最後更新為 **2022-07-27**。**Equinix LA3、DA1 Dallas 與 NY2 Staten Island 全部缺漏。** 因此 PeeringDB **低估了目前的據點規模**，不得單獨用來衡量此帳戶的量體。
+- **跨軌 — 公司規模數字未能確立：** 員工數、營收、伺服器數量與 Ogden 確切樓地板面積皆未取得。WebNX 在一處自稱猶他設施「over 100,000 sq ft」，另一處寫「Large 120k Sq」；**兩者都是自報的行銷說法**。此私有公司沒有可取得的財務報表。
+
+---
+
+## 10. 成本天花板
+
+每一台伺服器對 WebNX 值多少錢，以及今天重建同一台機器要花多少錢。本節回答一個問題：**在什麼樣的硬體成本之下，WebNX 的 SKU 才還付得回本？**
+
+### 10.1 假設——請先讀這一段；這些是假設，不是查證發現
+
+**營運成本扣除：以月租金的 40% 一體適用。** 天花板 = `月租 × (1 − 0.40) × N 個月`。**這是假設，不是查證得到的事實**——它是本分析選用的產業常態區間，並非 WebNX 揭露的數字。**以下每一個天花板數字都請當作模型估計值。**
+
+- **假設區間。** 就單一台專屬伺服器的電力＋頻寬＋機櫃＋現場代工＋IP＋流失／閒置準備而言，**30%（低）至 50%（高）** 是可辯護的區間。opex 取 30% 時，24 個月天花板較所列數字**上升 17%**；取 50% 時**下降 17%**。以 EPYC 9255 這個 SKU 為例，24 個月天花板區間為 **$10,062（30%）／$8,626（40%，本文採用）／$7,188（50%）**。
+- **為什麼取 40% 作為中點，以及唯一的真實錨點。** WebNX 於 2025-01-24 公布過自家**零售**主機代管價目（[WHT thread 1933969](https://www.webhostingtalk.com/showthread.php?t=1933969)）：1U/2U 單機、208V 2 安培（約 400W）、一個 /29、一個 10G 埠與 50 TB 流量，零售價 **$129/月**；整櫃 3 KW 可用、100G、100 TB 為 **$1,500/月**，加電每 kW $300；25 櫃私有 cage、75 KW 共用為 **$23,000/月**。$129 是**對第三方的零售價**，因此是 WebNX 自身收容一台機器內部成本的**上界**——真實內部成本明顯更低，尤其在 Ogden，他們是自營約 100,000–120,000 平方英尺的自有廠房而非承租。對照 $259/月的專屬 SKU，這個「零售等值收容成本」約為 50%；對照 $599/月的 SKU 則約為 22%。**40% 落在兩者之間，且刻意偏保守。**
+- **站點不對稱——真實存在，但未納入模型。** Ogden 為自有自營，該站 opex 應落在區間**低**端。洛杉磯是承租於 Equinix LA3 的空間，WebNX 自述為「one of the largest clients… now over 200 racks and 5 cages」且近期續約五年；該站 opex 應落在**高**端。本文對所有站點一律採 40%，**是為了可比性**。若改採分站模型，Ogden 天花板會上升、LA 天花板會下降，各約 10 個百分點。
+- **未納入的項目。** 未計資金成本／折現（在 10–12% 的現實資金成本下，24 個月回收比所列未折現數字**嚴格約 8–10%**）；未分攤業務、支援、授權與管銷；未考量 **57 個即時 SKU 中有 26 個 `stocklevel=1`**、代表這些是沒有量產採購議價能力的單台組建；未計入生命週期末端的殘值——對二手 Xeon 與儲存機殼而言殘值其實不小，計入會**提高**有效天花板。
+- **回收期的選擇。** 12／18／24 個月。請注意，此市場區隔的專屬伺服器硬體通常會持有 **4–6 年**——2023 年的型錄還在賣 Xeon E5-2696v2（2013 年矽晶）——因此 **24 個月回收是商業門檻報酬率，不是資產壽命限制**。24 個月那一欄請讀作「此 SKU 在什麼價格下能穩健獲利」，**不是**「超過這個價格就不可能」。
+
+### 10.2 由租金推導之每 SKU 天花板
+
+| SKU | 月租 | 規格 | 年營收 | 12 個月天花板 | 18 個月天花板 | 24 個月天花板 | 來源 |
+|---|---|---|---|---|---|---|---|
+| **pid 954 — (IP-OGD1) AMD Ryzen 9700X**，Ogden UT。入門錨點；`stocklevel 20`，即時型錄中庫存最深者 | **$95.00** | AMD Ryzen 9700X（8C/16T）、64 GB DDR5、1.92 TB PCIe4 NVMe、10 Gbps 埠、50 TB 出向流量、/29 IPv4 | $1,140 | $684 | $1,026 | **$1,368** | [商店連結](https://clients.webnx.com/index.php?rp=/store/utah-instant-ryzen/ip-ogd1-amd-ryzen-9700x-64gb-ddr5-192tb-nvme-10g) |
+| **pid 942 — (IP-LA1) 雙 Intel Xeon Gold 6226**，Los Angeles。主力二手 Xeon 機種；`stocklevel 8` | **$259.00** | 雙 Intel Xeon Gold 6226（合計 24C/48T）、192 GB DDR4、1.2 TB NVMe、10 Gbps 埠、100 TB 出向流量 | $3,108 | $1,865 | $2,797 | **$3,730** | [商店連結](https://clients.webnx.com/index.php?rp=/store/instant-provisioning-los-angeles-intel/ip-la1-dual-intel-gold-6226-192gb-ram-12tb-nvme-10g) |
+| **pid 425 — (STOR-OGD) 雙 Intel E5-2690v4**，Ogden UT。大容量儲存層 | **$359.00** | 雙 Intel Xeon E5-2690v4（20C/40T）、128 GB RAM、2 × 240 GB SSD、12 × 14 TB SAS HDD 硬體 RAID、1 Gbps 埠、100 TB 出向流量 | $4,308 | $2,585 | $3,877 | **$5,170** | [商店連結](https://clients.webnx.com/index.php?rp=/store/storage-servers-ogden/stor-ogd-dual-intel-e5-2630v4-128gb-ram-2-x-240gb-ssd-12-x-14tb-sas-hdd-hw-raid) |
+| **pid 884 — (GPU-LA) AMD Ryzen 9950X ＋ RTX 5090**，Los Angeles。當世代消費級 GPU AI 層 | **$479.00** | AMD Ryzen 9950X（16C/32T）、128 GB DDR5 全速 5600、7.6 TB Gen4 NVMe、1 × NVIDIA RTX 5090、10 Gbps 埠、50 TB 出向流量 | $5,748 | $3,449 | $5,173 | **$6,898** | [商店連結](https://clients.webnx.com/index.php?rp=/store/los-angeles-instant-gpu-and-ai/gpu-la-amd-ryzen-9950x-128gb-ddr5-76tb-gen4-nvme-rtx-5090-gpu-10g) |
+| **pid 587 — (IP-OGD) AMD EPYC 9255**，Ogden UT。當世代 EPYC 9xxx 參考 SKU | **$599.00** | AMD EPYC 9255（24C/48T, Turin Zen 5）、768 GB DDR5、2 × 3.84 TB PCIe4 NVMe、10 Gbps 埠、100 TB 出向流量、/29 IPv4 | $7,188 | $4,313 | $6,469 | **$8,626** | [商店連結](https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd/ip-ogd-amd-epyc-9255-768gb-ram-2-x-384tb-pcie4-nvme-10g) |
+| **pid 836 — (IP-OGD) AMD EPYC 9354P**，Ogden UT。全 NVMe 儲存旗艦；約 91 TB 原始快閃容量 | **$1,499.00** | AMD EPYC 9354P（32C/64T）、384 GB DDR5、1.92 TB NVMe 開機碟 ＋ 12 × 7.6 TB PCIe4 NVMe、10 Gbps 埠、100 TB 出向流量 | $17,988 | $10,793 | $16,189 | **$21,586** | [商店連結](https://clients.webnx.com/index.php?rp=/store/instant-provisioning-ogd/ip-ogd-amd-epyc-9354p-384gb-ddr5-192tb-nvme-12-x-76tb-pcie4-nvme-10g) |
+| **pid 651 — (GPU-OGD) AMD EPYC 7443P ＋ 2 × A100 80 GB**，Ogden UT。資料中心級 GPU AI 層 | **$1,499.00** | AMD EPYC 7443P（24C/48T, Milan）、512 GB RAM、2 × 3.84 TB Gen4 NVMe、2 × NVIDIA A100 80 GB、10 Gbps 埠、100 TB 出向流量 | $17,988 | $10,793 | $16,189 | **$21,586** | [商店連結](https://clients.webnx.com/index.php?rp=/store/ogden-gpu-and-ai-servers/gpu-ogd-amd-epyc-7443p-512gb-ram-2-x-384tb-gen4-nvme-2-x-a100-80gb-gpu-10g) |
+| **pid 802 — (GPU-OGD) 雙 AMD EPYC 9575F ＋ 4 × RTX 6000 96 GB**，Ogden UT。**產品線頂端** | **$7,999.00** | 雙 AMD EPYC 9575F（128C/256T, Turin 高時脈）、1.5 TB DDR5、2 × 15 TB Gen5 NVMe、4 × RTX 6000 96 GB VRAM、10 Gbps 埠、100 TB 出向流量 | $95,988 | $57,593 | $86,389 | **$115,186** | [商店連結](https://clients.webnx.com/index.php?rp=/store/ogden-gpu-and-ai-servers/gpu-ogd-dual-amd-epyc-9575f-15tb-ddr5-2-x-15tb-gen5-nvme-4-x-rtx-6000-96gb-vram-gpu-10g) |
+
+### 10.3 2026-08-10 街頭價之物料清單（BOM）
+
+| SKU | 元件 | 品項 | 街頭價 | 來源 |
+|---|---|---|---|---|
+| **pid 587 — EPYC 9255／768 GB DDR5／2 × 3.84 TB NVMe — $599/mo** | CPU | AMD EPYC 9255，24C/48T，基頻 3.2 GHz／加速 4.3 GHz，128 MB L3，200 W TDP，Socket SP5，Turin（第 5 代）。原廠料號 **100-000000694**。狀態：全新 | **$2,835.00** | [itcreations.com/product/148926](https://www.itcreations.com/product/148926) |
+| pid 587 | 記憶體（12 × 64 GB，湊足 768 GB、12 通道全插） | **Kingston KSM56R46BD4PMI** 64 GB DDR5 ECC RDIMM — 2026-08-10 追蹤到最便宜的 64 GB DDR5 RDIMM，$32.25/GB。單價 $2,064.00 × 12 | **$24,768.00**（12 × $2,064.00） | [datacenterdisk.com 64GB DDR5](https://datacenterdisk.com/server-ram/ddr5/64gb) |
+| pid 587 | NVMe 儲存（2 × 3.84 TB） | **Kioxia CD8 3.84 TB U.2 NVMe PCIe Gen4**（ASIN B0CL4VJR2D），2026-08-10 追蹤價 $2,570.00／每 TB $669.27。單價 $2,570.00 × 2 | **$5,140.00**（2 × $2,570.00） | [datacenterdisk.com Kioxia 3.84TB Gen4](https://datacenterdisk.com/drives/kioxia-3-84tb-nvme-gen4) |
+| pid 587 | 主機板 | **Supermicro MBD-H13SSL-N**，ATX，Socket SP5，支援 AMD EPYC 9004/9005，12 × DDR5 DIMM 插槽（最高 3 TB 3DS ECC RDIMM），PCIe 5.0，雙 GbE，AST2600 BMC | **$649.00** | [neweggbusiness.com 9b-13-183-819](https://www.neweggbusiness.com/product/product.aspx?item=9b-13-183-819) |
+| pid 587 | 網卡（10 Gbps 埠） | **Intel Ethernet Converged Network Adapter X710-DA2**，雙埠 10GbE SFP+，PCIe 3.0 x8（**X710DA2BLK**） | **$257.49** | [compsource.com X710DA2BLK](https://www.compsource.com/buy/X710DA2BLK/Intel-211) |
+| pid 587 | 機殼＋電源 | **Supermicro CSE-825TQC-R1K03LPB**，2U 機架式，冗餘 1000 W Titanium 級電源 | **$987.99** | [newegg.com CSE-825TQC-R1K03LPB](https://www.newegg.com/supermicro-cse-825tqc-r1k03lpb/p/N82E16811152596) |
+| **pid 884 — Ryzen 9950X／128 GB／7.6 TB／RTX 5090 — $479/mo** | CPU | **AMD Ryzen 9 9950X**，16C/32T，Zen 5，未鎖頻桌上型處理器（上市定價 $649，目前已降價） | **$499.99** | [camelcamelcamel B0D6NNRBGP](https://camelcamelcamel.com/product/B0D6NNRBGP) |
+| pid 884 | 記憶體（128 GB，2 × 64 GB UDIMM — 消費級平台，**非 ECC**） | **Corsair Vengeance DDR5 128 GB（2×64 GB）6400 MHz 等級套裝**，追蹤價 $8.55/GB。可比品：Crucial Pro CT2K64G56C46U5 128 GB（2×64 GB）DDR5-5600 UDIMM。觀察到的零售區間 $800–$1,425 | **$1,094.00** | [camelcamelcamel B0DSQWFYPP](https://camelcamelcamel.com/product/B0DSQWFYPP) |
+| pid 884 | NVMe 儲存（7.6 TB，以 2 × 3.84 TB 計價） | **Kioxia CD8 3.84 TB U.2 NVMe Gen4** × 2 = 7.68 TB 可用。單價 $2,570.00 × 2。**注意：WebNX 可能使用單顆 7.68 TB 硬碟；7.68 TB 的確切街頭價無法取得來源——見 §10.5** | **$5,140.00**（2 × $2,570.00） | [datacenterdisk.com Kioxia 3.84TB Gen4](https://datacenterdisk.com/drives/kioxia-3-84tb-nvme-gen4) |
+| pid 884 | GPU | **NVIDIA GeForce RTX 5090，32 GB GDDR7。** MSRP $1,999；2026 年 8 月美國街頭價風冷版 **$2,999–$3,700**，水冷版 $5,000 以上。本文採中點 | **$3,400.00**（觀察區間 $2,999–$3,700） | [videocardprices.com RTX 5090](https://videocardprices.com/card/nvidia-rtx-5090/) |
+| pid 884 | 主機板 | AM5 腳位主機板，X670E／B650 等級，具 IPMI 或標準 ATX 佈局——**WebNX 未揭露具體型號。估計值，未取得來源網址——見 §10.5** | **$300.00（估計值，無來源）** | **未取得來源——見 §10.5** |
+| pid 884 | 網卡（10 Gbps 埠） | **Intel Ethernet Converged Network Adapter X710-DA2**，雙埠 10GbE SFP+ | **$257.49** | [compsource.com X710DA2BLK](https://www.compsource.com/buy/X710DA2BLK/Intel-211) |
+| pid 884 | 機殼＋電源 | **Supermicro CSE-825TQC-R1K03LPB** 2U，冗餘 1000 W Titanium（GPU 可用之 2U，對 575 W RTX 5090 有足夠餘裕） | **$987.99** | [newegg.com CSE-825TQC-R1K03LPB](https://www.newegg.com/supermicro-cse-825tqc-r1k03lpb/p/N82E16811152596) |
+| **pid 942 — 雙 Xeon Gold 6226／192 GB／1.2 TB NVMe — $259/mo** | CPU（2 顆） | **Intel Xeon Gold 6226**，12C/24T，2.7 GHz，19.25 MB 快取，LGA3647，SRFPP。**二手／整新品。** 觀察區間 $21.99（PCSP）至 $73.92（Newegg 二手）；**採較高者以求保守。** $73.92 × 2 | **$147.84**（2 × $73.92） | [newegg.com Xeon Gold 6226 列表](https://www.newegg.com/p/pl?d=intel+xeon+gold+6226+%40+2.70ghz) |
+| pid 942 | 記憶體（192 GB，以 6 × 32 GB DDR4-2666 RDIMM 計） | **Samsung 32 GB PC4-2666V-R 2Rx4 ECC RDIMM M393A4K40CB2-CTD**，整新品，每支 $201.95。整新 32 GB DDR4 市場區間報價 $110–$280。$201.95 × 6 | **$1,211.70**（6 × $201.95） | [etb-tech.com M393A4K40CB2-CTD](https://www.etb-tech.com/samsung-32gb-pc4-2666v-r-2rx4-ecc-m393a4k40cb2-ctd-mem0654.html) |
+| pid 942 | NVMe 儲存（1.2 TB） | 1.2 TB U.2／AIC NVMe，企業級二手／整新品。**估計值，未取得確切來源——見 §10.5** | **$200.00（估計值，無來源）** | **未取得來源——見 §10.5** |
+| pid 942 | 主機板 | **Supermicro X11DPi-N** 雙 LGA3647 E-ATX，Intel C621。已在 eBay 找到二手掛牌，但**無法取得已成交價格。估計值——見 §10.5** | **$350.00（估計值，無來源）** | **未取得來源——見 §10.5** |
+| pid 942 | 網卡（10 Gbps 埠） | **Intel Ethernet Converged Network Adapter X710-DA2**，雙埠 10GbE SFP+（以**全新**計價；二手拆機件明顯更便宜） | **$257.49** | [compsource.com X710DA2BLK](https://www.compsource.com/buy/X710DA2BLK/Intel-211) |
+| pid 942 | 機殼＋電源 | **Supermicro CSE-825** 2U，2 × 冗餘電源，二手市場（全新對應型號 CSE-825TQC-R1K03LPB 為 $987.99）。**二手估計值——見 §10.5** | **$300.00（估計值，無來源）** | **未取得來源——見 §10.5** |
+
+### 10.4 彙總對比——以及這個落差對訴求的意義
+
+**核心結論：以今日街頭價計算，WebNX 當世代 EPYC 旗艦 SKU 的重建成本，遠遠高於它自己的開價。而這個落差完全來自記憶體。**
+
+**SKU A — pid 587，AMD EPYC 9255／768 GB DDR5／2 × 3.84 TB NVMe，$599/mo，Ogden。**
+以 2026-08-10 街頭價組裝的元件成本：**$34,637.48**（CPU $2,835.00 ＋ RAM $24,768.00 ＋ NVMe $5,140.00 ＋ 主機板 $649.00 ＋ 網卡 $257.49 ＋ 機殼／電源 $987.99）。由租金推導的 24 個月天花板：**$8,626。BOM 是天花板的 4.02 倍。** 在 40% opex 下的未折現回收期：**96.4 個月——八年。** 光是記憶體就要 **$24,768，等於整個 24 個月天花板的 287%**；那 768 GB DDR5 的價格，是整台伺服器兩年所能產生金額的 2.9 倍。若改用**危機前的元件價格**重算同一台機器（64 GB DDR5 RDIMM 約 $255、3.84 TB NVMe 約 $500，其餘不變）：**$8,789.48——為 24 個月天花板的 1.02 倍，回收 24.5 個月。** 那是一台教科書等級、健康的 whitebox 機器。**也就是說，$599 這個定價，是在「機器約 24 個月回本」的世界裡訂出來的，而那個世界已經結束了。** 每 64 GB 模組從約 $255 漲到 $2,064，是**約 8 倍**的變動。
+
+**SKU B — pid 884，Ryzen 9950X／128 GB／7.6 TB／RTX 5090，$479/mo，Los Angeles。**
+組裝元件成本：**$11,679.47**（CPU $499.99 ＋ RAM $1,094.00 ＋ NVMe $5,140.00 ＋ GPU $3,400.00 ＋ 主機板約 $300 ＋ 網卡 $257.49 ＋ 機殼／電源 $987.99）。24 個月天花板：**$6,898。BOM 為 1.69 倍。回收 40.6 個月。** 光是 RTX 5090 的 $3,400 就佔 24 個月天花板的 **49%**——而且它是沒有 ECC 的消費級顯卡，卻被賣進 AI 推論用途。請注意這裡有雙重擠壓：GPU 街頭價因 GDDR7 成本而**高出 $1,999 MSRP 約 70%**，所以這個 SKU 被同一場 DRAM 短缺打了**兩次**，一次在系統記憶體、一次在 GPU。
+
+**SKU C — pid 942，雙 Xeon Gold 6226／192 GB DDR4／1.2 TB NVMe，$259/mo，Los Angeles。**
+組裝元件成本：**$2,467.03**（CPU $147.84 ＋ RAM $1,211.70 ＋ NVMe 約 $200 ＋ 主機板約 $350 ＋ 網卡 $257.49 ＋ 機殼／電源約 $300）。24 個月天花板：**$3,730。BOM 為 0.66 倍——三者中唯一過關者。回收 15.9 個月。** 兩顆 12 核 Xeon 只要 $147.84，**比網卡還便宜**。即使是這一台，整新 DDR4 仍佔 BOM 的 49%。
+
+**這個落差，對「整合平台 vs 自行組裝」的訴求意味著什麼：**
+
+1. **不要以機殼、主機板或 CPU 的整合節省作為開場。** 在一台 $34,637 的機器上，這幾項合計只有 $1,900–2,000，**不到 6%**。一家在 Ogden 有自己人手、在 LA3 有 Flex Space 的 whitebox 業者，在組裝工時上永遠贏過整合商，而且他們自己很清楚。任何建立在「我們幫你省組裝工」的訴求，**在算術上就輸了**。
+2. **從記憶體採購切入，因為當世代 BOM 有 71% 落在那裡。** 可信的價值主張是：**低於現貨價的 DDR5 契約配額、確定的遠期價格，或含記憶體的整機報價**，讓他們不必暴露在現貨波動中。一個以契約價而非現貨價把記憶體包進去的整合平台，其價值是**其他所有節省項目加總的數倍**。
+3. **自行組裝這條路，對他們而言現在比以前更差，而這正是切入口。** whitebox 業者的結構性優勢，是在公開市場買零組件——而那個市場正好壞掉了。**在這家公司 27 年歷史上，第一次出現「有配額的供應商相對現貨買家享有真實（雖然是暫時的）優勢」。**
+4. **依層級調整訴求。** 二手 Xeon 層（SKU C）在經濟上仍然成立，不需要我們提供任何東西。**當世代 EPYC 層（SKU A）才是模型破掉的地方，也是對話該開始的地方。** GPU 層（SKU B）是中間案例——被擠壓，但還撐得住。
+5. **要有心理準備：這會是一場融資對話，不只是價格對話。** 在 24 個月天花板 4.02 倍的情況下，沒有理性的營運者會用現金支應 SKU A——這正是採購時鐘停在 2025-10-12（§9）、以及即時型錄從 141 個 SKU 掉到 57 個的原因。真正能打開這個帳戶的交易，最可能是**結構化的**（延長付款條件、租賃，或含記憶體的整包報價），**而這正是 §8 的 UCC 留置權狀態必須先釐清的原因**——它決定了結構化條件是否根本可行。
+6. **對其訂價能力的合理性檢查：** 在現貨記憶體價格下，重建後的 SKU A 需要約 **$2,400/月**才能達成 24 個月回收，而他們今天只收 **$599**。他們不會把牌價調高四倍，一定有別的東西要讓步——**配額、融資，或組態**（每台機器縮小記憶體容量）。**請把「新 SKU 的記憶體容量縮水」當成他們選了哪個槓桿的領先指標來觀察。**
+
+### 10.5 GAP — Track 3，如實列出
+
+- **所有價格皆為 2026-08-10 的零售／現貨街頭價**，取自公開掛牌與價格追蹤站。WebNX 以經銷或契約價採購，以其量體推估，CPU 與硬碟可能**比這些數字低 15–40%**；若他們握有配額，記憶體可能低更多。**因此每一個 BOM 總額都是上界。** 結論方向是穩健的（記憶體佔絕對大宗；以現貨價計 SKU A 不可能在 24 個月回本），但在真實契約價下，數量級會被壓縮。
+- **記憶體價格目前極度波動，且各來源互相矛盾。** [Datacenterdisk](https://datacenterdisk.com/server-ram/ddr5/64gb) 在 2026-08-10 回報最便宜的 64 GB DDR5 ECC RDIMM 為 **$2,064.00（$32.25/GB）**；其他 2026 年來源對 64 GB RDIMM 的報價為 **$1,200–$2,300**，而一份 2026 年 3 月的參考資料把 DDR5 ECC RDIMM 放在 **$520–$1,150**。本文採用追蹤站數字，因為它有日期且具體，但**在該來源區間內，SKU A 的 BOM 會擺盪約 $10,000。這一個輸入值主導了核心結論，在對客戶引用之前，務必當日重新查核。**
+- **SKU A 的「危機前」對照使用每 64 GB DDR5 RDIMM $255、每 3.84 TB NVMe $500。** $255 取自一份描述 2025 Q3 至 2026 年初走勢（約 $255 漲到 $900 以上）的二手資料；**$500 的 NVMe 數字是估計值，並未取得來源。** 24.5 個月的危機前回收期應視為**指示性、非精確值**。
+- **BOM 中有四個項目是未取得來源的估計值**，並已在 §10.3 標示：SKU B 的 AM5 主機板（$300），以及 SKU C 的 1.2 TB NVMe（$200）、雙 LGA3647 主機板（$350）與二手 2U 機殼／電源（$300）。Supermicro X11DPi-N 已在 eBay 找到掛牌，但**無法取得已成交價格**。四項合計 **$1,150**，對 SKU C 的彙總影響重大（**佔其 $2,467 BOM 的 46%**），因此 **SKU C 的 0.66 倍是三者中最不可靠的數字**。
+- **未取得單顆 7.68 TB U.2 NVMe Gen4 硬碟的確切街頭價**（datacenterdisk 對應網址回傳 404）。SKU B 的儲存以 2 × 3.84 TB 計價，若 WebNX 實際使用單顆較大容量硬碟，則**可能高估成本**。另請注意**同一來源家族內部的矛盾**：對 3.84 TB Kioxia CD8，搜尋摘要引用 **$999.99／每 TB $260.41**，而 2026-08-10 的即時頁面擷取回傳 **$2,570.00／每 TB $669.27**。本文採用即時擷取值。**這是一個出現在三份 BOM 中兩份的元件上、2.6 倍的差距。**
+- **RTX 5090 的 $3,400 是中點**，取自 2026 年 8 月觀察到的 **$2,999–$3,700** 區間，**不是單一報價 SKU 的價格**。水冷版超過 $5,000，另有來源引用 Amazon 上 $4,329。**WebNX 實際使用的顯卡型號並未揭露。**
+- **40% 的營運成本扣除是「假設」**，不是查證得到的事實，已於 §10.1 標示。它**並非由 WebNX 成本資料推導**，該資料並不公開。唯一的真實錨點是 WebNX 自家的**零售**主機代管價目，它只能從上方界定收容成本，**無法揭露內部成本**。所有天花板數字在 30–50% 區間內約有 **±17%** 的變動。
+- **天花板未經折現**，且未計資金成本、殘值、授權、支援與業務管銷。在 10–12% 的現實資金成本下，24 個月回收比所列數字**嚴格約 8–10%**。
+
+---
+
+## 11. 客戶與網路
 
 ### 已具名客戶
 **無。零具名客戶、零 logo 牆、零案例研究、零指名客戶的新聞稿。** 這是硬性 GAP，不是研究疏漏。
@@ -213,7 +459,7 @@ Ogden 完整已查證型錄——**14 個 SKU，全部公開月租、無合約**
 
 ---
 
-## 9. 政治與公開紀錄
+## 12. 政治與公開紀錄
 
 僅取公開紀錄。逐條標記。僅針對具名主要當事人。
 
@@ -227,7 +473,7 @@ Ogden 完整已查證型錄——**14 個 SKU，全部公開月租、無合約**
 
 ---
 
-## 10. 公開聯絡管道
+## 13. 公開聯絡管道
 
 僅限公開來源。**本表不列個人手機號碼與私人住址，研究過程亦未蒐集。** 無公開管道者標記 GAP。
 
@@ -247,7 +493,7 @@ Ogden 完整已查證型錄——**14 個 SKU，全部公開月租、無合約**
 
 ---
 
-## 11. Supermicro 銷售切入點
+## 14. Supermicro 銷售切入點
 
 ### 分類：**Whitebox 自組商 → 平台轉換（platform conversion）**
 
@@ -280,9 +526,9 @@ WebNX 營運的機隊有相當規模——自述在全球有「thousands of high
 
 ---
 
-## 12. 查證附錄
+## 15. 查證附錄
 
-### 12.1 單一來源支撐的說法（引用前須再驗證）
+### 15.1 單一來源支撐的說法（引用前須再驗證）
 
 | 說法 | 唯一來源 | 風險 |
 |---|---|---|
@@ -296,7 +542,7 @@ WebNX 營運的機隊有相當規模——自述在全球有「thousands of high
 | DataCenterMap 對 Ogden 設施的登錄 | DataCenterMap，**直接抓取回 HTTP 429，僅有搜尋摘要** | 佐證細節未在來源端查證 |
 | USDOT #3244340「WEBNX INC」 | BrokerSnapshot 鏡像 | 聯邦紀錄之第三方鏡像；未自 FMCSA 原始來源取得 |
 
-### 12.2 第三方估計互相矛盾之處（呈現分歧，不擇一）
+### 15.2 第三方估計互相矛盾之處（呈現分歧，不擇一）
 
 **員工數**
 
@@ -345,9 +591,9 @@ WebNX 營運的機隊有相當規模——自述在全球有「thousands of high
 
 **未解。** 2018 這個日期最可能反映 Utah 的本地／外國公司登記事件而非創立日，但無任何來源作出解釋，須另行對帳。
 
-### 12.3 未結 GAP
+### 15.3 未結 GAP
 
-1. **系統廠確認——本銷售團隊最高優先。** WebNX 在所有公開資料中未具名任何系統廠、機殼型號或主機板 SKU；WebNX 本身不存在任何 Supermicro／Dell／HPE 證據。以第 11 節的資格問題在首通電話解決。
+1. **系統廠確認——本銷售團隊最高優先。** WebNX 在所有公開資料中未具名任何系統廠、機殼型號或主機板 SKU；WebNX 本身不存在任何 Supermicro／Dell／HPE 證據。以第 14 節的資格問題在首通電話解決。
 2. **Utah Division of Corporations 登記紀錄**——未取得實體編號、狀態、設立日與註冊代理人（businessregistration.utah.gov 為 JS 入口，抓取無回傳）。BBB 的「locally incorporated 2018-09-14」須與 1999 創立年份對帳。
 3. **營收**——無可辯護數字，本檔不作估計。查無任何資料支持 $100M+。
 4. **電力容量**——Ogden、LA、NY、Dallas、SLC 皆未公布 MW 或 kW 臨界 IT 負載。**整櫃 colocation 方案（$1,199/月）未公布安培配額**，亦無任何公開的每櫃 kW 密度或 PUE。在直接詢問之前，這一點會卡住所有 AI 密度規劃的對話。

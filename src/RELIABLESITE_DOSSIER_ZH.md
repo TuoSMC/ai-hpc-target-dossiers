@@ -162,11 +162,255 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 - **完全沒有 L40S、沒有 A100、沒有 H100、沒有 H200、沒有 RTX 6000 Ada；全站沒有任何多卡或 8 卡平台。**
 - 專用伺服器整體價帶：**每月 $49–$699**。
 
-**構成切入點的反差：** 公司在首頁掛出「GPU AI Dedicated Servers」服務線、把 **EPYC 4545P 定位為「AI inferencing」**，並發布 AI 視覺客戶案例（Little Planes Farm，見第 8 節）——**但支撐這整套訊息的實際加速器機隊，只有一款 A10 加一張入門級 Quadro 加購卡。** 他們有需求訊號，卻沒有可承接的高密度 GPU 平台。這是 Supermicro GPU 系統乾淨的切入點，且必須依其體質裁切：4U／5U GPU 最佳化準系統，或 2U 4 卡 L40S／RTX PRO 級節點，對應的是 1–2 個機櫃、以單路為主的營運型態，**而不是**他們既無電力也賣不動的 HGX／SXM 規模化提案（[GPU AI 專用伺服器頁](https://www.reliablesite.net/dedicated-servers/gpu-ai-dedicated-servers/)）。
+**構成切入點的反差：** 公司在首頁掛出「GPU AI Dedicated Servers」服務線、把 **EPYC 4545P 定位為「AI inferencing」**，並發布 AI 視覺客戶案例（Little Planes Farm，見第 11 節）——**但支撐這整套訊息的實際加速器機隊，只有一款 A10 加一張入門級 Quadro 加購卡。** 他們有需求訊號，卻沒有可承接的高密度 GPU 平台。這是 Supermicro GPU 系統乾淨的切入點，且必須依其體質裁切：4U／5U GPU 最佳化準系統，或 2U 4 卡 L40S／RTX PRO 級節點，對應的是 1–2 個機櫃、以單路為主的營運型態，**而不是**他們既無電力也賣不動的 HGX／SXM 規模化提案（[GPU AI 專用伺服器頁](https://www.reliablesite.net/dedicated-servers/gpu-ai-dedicated-servers/)）。
 
 ---
 
-## 8. 客戶與網路
+## 8. 融資鏈與 UCC 紀錄
+
+### 8.1 結論
+
+> ### **NO FILINGS — verified（查無任何備案——已查證）**
+
+該結論的精確範圍如下。在佛州擔保交易登記處（Florida Secured Transaction Registry, FSTR）中，以 **RELIABLESITE.NET LLC** 為債務人的 UCC-1 融資聲明為零；查詢已涵蓋 Filed、Lapsed 及 Filed+Lapsed 合併索引，涵蓋 Actual-name 與去標點的 Compact-name 兩種形式，涵蓋 `OrganizationDebtorName` 與 `LegacySearch` 兩種查詢型別，並涵蓋六種拼寫變體。本次不是僅憑空結果下判斷，而是以索引相鄰性直接證明：第 **5437842 列（`RELIABLE.FINANCIAL.MANAGEMENT INC`）** 與第 **5437843 列（`RELIABLESOURCE TALENT LLC`）** 彼此緊鄰、中間毫無其他紀錄，而該位置正是 `RELIABLESITE*` 若存在必須出現之處。
+
+受查實體：RELIABLESITE.NET LLC，佛州文件號 **L14000189024**，FEI/EIN **47-2515613**，申請日 **2014-12-11**，生效日 **2015-01-01**，狀態 **ACTIVE**，主要地址 2115 NW 22nd St, Miami, FL 33142（地址變更登錄於 2017-01-09）——與 ARIN 組織代號 RL-323 所登記之地址相同。
+
+- **GAP——索引時效。** 登記處自身的 [`/filings-completed-through-date`](https://publicsearchapi.floridaucc.com/filings-completed-through-date) 端點回傳 `2026-08-06`。任何在 2026-08-07 至今日 **2026-08-10** 之間送件的融資聲明尚不會出現。**任何要寫進合約的引用，都必須重跑一次。**
+- **GAP——管轄地。** 本次未於佛州以外進行 UCC 查詢。依 **UCC 9-307(e)**，佛州註冊之 LLC 以佛州為法定登記地，因此佛州是正確且實質上窮盡的查詢管轄地；但若硬體由關係企業或另一設籍地實體持有——考量到登記地在邁阿密、營運據點卻分布於 Piscataway／洛杉磯／阿姆斯特丹／Querétaro，且該事業在 2014 年 12 月設立本 LLC 之前即已營業，此情形並非不可能——則可能在紐約、紐澤西、德拉瓦或他州以另一債務人名稱存在備案。**「零備案」的結論僅對佛州的 RELIABLESITE.NET LLC 成立，不得外推。**
+- **GAP——認證查詢費用。** 佛州認證查詢（UCC-11 information request）之費用無法確定。入口網站的 [`/fees`](https://publicsearchapi.floridaucc.com/fees) 端點僅公布**申報**費用，未公布任何查詢或認證費用。取得正式認證查詢須聯絡 **Image API, LLC, UCC Filings, P.O. Box 5588, Tallahassee, FL 32314, tel 850.222.8526**——依 [dos.fl.gov](https://dos.fl.gov/) 說明，該公司自 2001-10-01 起受託民營化營運佛州 UCC 申報流程——費用未報價。
+- **GAP——無擔保權人索引。** 佛州 FSTR 完全未提供以擔保權人（secured party）為索引的查詢。因此在此入口網站上，不論付多少費用，都無法以出資方名稱反查，也就無法藉此蒐集「本產業區隔由哪些融資方承作」的競爭情報。
+
+### 8.2 查詢紀錄——逐次記錄，未合併任何一筆
+
+| 入口網站 | URL | 使用的查詢字串 | 回應 | 受阻時的替代路徑 |
+|---|---|---|---|---|
+| Florida Secured Transaction Registry（FSTR）——網頁前端 | [www.floridaucc.com/uccweb/searchStd.aspx](https://www.floridaucc.com/uccweb/searchStd.aspx) | `RELIABLESITE.NET LLC` | HTTP 200，但未回傳任何可查詢內容。頁面本體解析為 1,308 bytes 的 React 單頁應用外殼，僅含 `<title>FSTR Online Filing</title>` 與 `<noscript>You need to enable JavaScript to run this app.</noscript>`。對非 JS 客戶端未輸出任何表單欄位、查詢結果或費用說明。 | 入口未被封鎖，只是純前端渲染。已採用的具名替代路徑：該站自有的公開查詢 REST API，主機 [publicsearchapi.floridaucc.com](https://publicsearchapi.floridaucc.com)，於頁面 Content-Security-Policy 及 `/static/js/main.b002c695.js` 中以 `REACT_APP_PUBLIC_SEARCH_API` 宣告。**費用：$0.00**——端點免驗證、免帳號。第二具名替代路徑未動用：以郵寄方式向 Image API, LLC, UCC Filings, P.O. Box 5588, Tallahassee, FL 32314, tel 850.222.8526 申請認證查詢（UCC-11 information request）。 |
+| FSTR——根網域 | [floridaucc.com](https://floridaucc.com/) | `RELIABLESITE.NET LLC` | HTTP 200，1,308 bytes，同一份 SPA 外殼。轉址鏈：`https://www.floridaucc.com/uccweb/` → `https://floridaucc.com:443/`。伺服器輸出的 HTML 中無導覽連結、無選單項目、無費用說明、無帳號說明。 | 同上——[publicsearchapi.floridaucc.com](https://publicsearchapi.floridaucc.com)，**費用 $0.00**。 |
+| FSTR 端點探測（curl，4 條候選路徑） | [/uccweb/](https://www.floridaucc.com/uccweb/) · [/uccweb/searchStd.aspx](https://www.floridaucc.com/uccweb/searchStd.aspx) · [/uccweb/searchDebtor.aspx](https://www.floridaucc.com/uccweb/searchDebtor.aspx) · [floridaucc.com/search](https://floridaucc.com/search) | 無——端點探測，未送出債務人字串 | 四條路徑皆回傳 `http=200 size=1308`。所有舊版 `/uccweb/*.aspx` 路徑均塌縮至 `https://floridaucc.com:443/` 的同一份 SPA 外殼。證實傳統 ASP.NET 查詢頁面已不再以伺服器渲染端點存在。 | 自 `/static/js/main.b002c695.js`（1,989,713 bytes）萃取 API 契約。**費用：$0.00。** |
+| FSTR Public Search API——查詢選項列舉 | [publicsearchapi.floridaucc.com/search-types](https://publicsearchapi.floridaucc.com/search-types) | 無——能力列舉 | `{"status":"OK","notOk":false,...}` 僅有四種查詢型別：`OrganizationDebtorName`、`IndividualDebtorName`、`DocumentNumber`、`LegacySearch`（Organization／Individual Debtor Name）。每種名稱型別提供六個子選項：`FiledCompactDebtorNameList`、`LapsedCompactDebtorNameList`、`FiledAndLapsedCompactDebtorNameList`、`FiledActualDebtorNameList`、`LapsedActualDebtorNameList`、`FiledAndLapsedActualDebtorNameList`。Compact 子選項接受 `searchCategory` Standard（"Proximity search"）或 Exact（"Standard search logic"）；Actual 子選項不接受 category。**重大發現：完全沒有擔保權人查詢選項。佛州 FSTR 只以債務人名稱建立索引。** | 不需要。備查說明：因無擔保權人索引，在此入口網站上以出資方名稱反查在任何價格下都不可能。 |
+| FSTR Public Search API——索引時效檢查 | [publicsearchapi.floridaucc.com/filings-completed-through-date](https://publicsearchapi.floridaucc.com/filings-completed-through-date) | 無 | `{"status":"OK","notOk":false,"messages":[],"payload":"2026-08-06T04:00:00Z","messageSummary":"","friendlyMessageSummary":""}` | 不需要。確立索引完整至 2026-08-06；2026-08-07 至今日 2026-08-10 之間送件者尚不會出現。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList&searchCategory=Exact](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList&searchCategory=Exact) | `RELIABLESITE.NET LLC` | `{"status":"BadRequest","notOk":true,"messages":[{"type":"Validation","code":"SVC_006","message":"Invalid search category type.","args":[]}],"payload":null,"messageSummary":" code: SVC_006 message: Invalid search category type. ","friendlyMessageSummary":"Invalid search category type."}` | 非封鎖，而是參數錯誤。Actual-name 子選項在 `/search-types` 中宣告的 categories 陣列為空，故必須省略 `searchCategory`。已移除後重跑。**費用：$0.00。** |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE.NET%20LLC&…&searchOptionSubOption=FiledAndLapsedCompactDebtorNameList&searchCategory=Exact](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedCompactDebtorNameList&searchCategory=Exact) | `RELIABLESITE.NET LLC` | `{"status":"OK","notOk":false,"messages":[],"payload":{"debtors":[],"nextRowNumber":null,"previousRowNumber":null,"totalExactMatches":0},"messageSummary":"","friendlyMessageSummary":""}`——**Filed 與 Lapsed 合併 compact 索引，完全比對命中數為 0。** | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE.NET%20LLC&…&searchOptionSubOption=FiledCompactDebtorNameList&searchCategory=Exact](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledCompactDebtorNameList&searchCategory=Exact) | `RELIABLESITE.NET LLC` | status OK，`totalExactMatches = 0`，debtors 陣列長度 0。僅 Filed 的 compact 索引。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE.NET%20LLC&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLESITE.NET LLC` | status OK。索引錨點落在 rowNumber 5437843 = `RELIABLESOURCE TALENT LLC`，uccNumber 202400468514，FORT LAUDERDALE FL，狀態 Filed。後續各列：5437844 `RELIACO, INC.`（202301757831）；5437845 `RELIACRAFT, INC.`（20200268246X）；5437846 `RELIACRAFT, INC.`（202201483811）。**未回傳任何 RELIABLESITE 紀錄。** | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLESITE` | status OK。錨點完全相同：rowNumber 5437843 `RELIABLESOURCE TALENT LLC`。無 RELIABLESITE 紀錄。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE.NET&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLESITE.NET` | status OK。錨點完全相同：rowNumber 5437843 `RELIABLESOURCE TALENT LLC`。無 RELIABLESITE 紀錄。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE%20NET%20LLC&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE%20NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLESITE NET LLC` | status OK。錨點完全相同：rowNumber 5437843 `RELIABLESOURCE TALENT LLC`。無 RELIABLESITE 紀錄。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE.NET%2C%20LLC&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%2C%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLESITE.NET, LLC` | status OK。錨點完全相同：rowNumber 5437843 `RELIABLESOURCE TALENT LLC`。無 RELIABLESITE 紀錄。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLESITE%20LLC&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLESITE LLC` | status OK。錨點完全相同：rowNumber 5437843 `RELIABLESOURCE TALENT LLC`。無 RELIABLESITE 紀錄。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search` | [?text=RELIABLE%20SITE&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLE%20SITE&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) | `RELIABLE SITE`（加空格變體） | status OK。錨點 rowNumber 5437551 = `RELIABLE SITE SOLUTIONS, LLC`，uccNumber 202200227638，CALLAHAN FL 32011，Filed。後續 5437552–5437554 為同公司其他備案（202201449622、202401381331、202402303717），均在 CALLAHAN FL。**此為 Nassau County 的無關工地施工公司，非目標對象。** | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search`（鄰近查詢） | [?text=RELIABLESITE.NET%20LLC&…&searchOptionSubOption=FiledAndLapsedCompactDebtorNameList&searchCategory=Standard](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedCompactDebtorNameList&searchCategory=Standard) | `RELIABLESITE.NET LLC`（compact 索引，鄰近查詢） | status OK。compact 索引錨點 rowNumber 5487004 = `RELIABLE SITE SOLUTIONS, LLC`（202200227638，CALLAHAN FL），接著 5487005–5487010 為同公司其他備案，再來 5487011 `RELIABLE SLIDING GLASS DOOR REPAIR`、5487012 `RELIABLE SOD & SERVICES LLC`。在去標點的 compact 索引中，`RELIABLESITENETLLC` 應排在 `RELIABLESITESOLUTIONS` 之前；鄰近錨點直接越過該位置，**證實不存在**。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search`（回頁以證明相鄰性） | [?text=RELIABLESITE.NET%20LLC&…&searchOptionSubOption=FiledAndLapsedActualDebtorNameList&rowNumber=5437833](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList&rowNumber=5437833) | `RELIABLESITE.NET LLC`（自第 5437833 列起的視窗） | status OK，previousRowNumber 5437813，nextRowNumber 5437853。依序回傳：5437833 `RELIABLE WRAP INSTALLATIONS, LLC`（201806029586，Lapsed）；5437834–5437838 `RELIABLE WRECKING CO INC`（910000266491、910000031831、910000021438、960000047322、960000087179，皆 Lapsed）；5437839–5437841 `RELIABLE WRECKING INC`（950000085764、910000189652、920000026008，Lapsed）；5437842 `RELIABLE.FINANCIAL.MANAGEMENT INC`（20200224375X，ORLANDO FL，Filed）；5437843 `RELIABLESOURCE TALENT LLC`（202400468514，Filed）；5437844 `RELIACO, INC.`；5437845／5437846 `RELIACRAFT, INC.`。**決定性證據：5437842 與 5437843 兩列在字母序上緊鄰、中間毫無其他紀錄。索引直接由 RELIABLE.FINANCIAL.MANAGEMENT INC 跳到 RELIABLESOURCE TALENT LLC。在 filed+lapsed 合併的 actual organization debtor name 索引中，任何位置都不存在 RELIABLESITE\* 項目。** | 不需要——查詢成功且具決定性。 |
+| FSTR Public Search API——`/search`（LegacySearch，filed） | [?text=RELIABLESITE.NET%20LLC&searchOptionType=LegacySearch&searchOptionSubOption=FiledActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=LegacySearch&searchOptionSubOption=FiledActualDebtorNameList) | `RELIABLESITE.NET LLC` | status OK。錨點 rowNumber 1359337 `RELIABLESOURCE TALENT LLC`（202400468514，Filed），接著 1359338 `RELIACO, INC.`、1359339 `RELIACRAFT, INC.`。在合併 organization／individual 的 legacy filed 索引中無 RELIABLESITE 紀錄。 | 不需要——查詢成功。 |
+| FSTR Public Search API——`/search`（LegacySearch，lapsed） | [?text=RELIABLESITE.NET%20LLC&searchOptionType=LegacySearch&searchOptionSubOption=LapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=LegacySearch&searchOptionSubOption=LapsedActualDebtorNameList) | `RELIABLESITE.NET LLC` | status OK。錨點 rowNumber 4077565 `RELIABLE ABSTRACT INC`（200603926949，Lapsed），接著 4077566／4077567 `RELIABLE ACCOUNTING & TAX SERVICES, INC.`（201806966423、202004854500）。錨點落在 RELIABLE\* 區塊開頭而非精確插入點；未浮現任何 RELIABLESITE 紀錄。 | 已與 `FiledAndLapsedActualDebtorNameList`（見上方回頁查詢）交叉比對，該索引將 Filed 與 Lapsed 交錯排列，可獨立佐證於 lapsed 索引中同樣不存在。 |
+| FSTR Public Search API——`/search`（Organization，僅 lapsed） | [?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=LapsedActualDebtorNameList](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=LapsedActualDebtorNameList) | `RELIABLESITE.NET LLC` | status OK。錨點 rowNumber 4077565 `RELIABLE ABSTRACT INC`（200603926949，Lapsed），4077566／4077567 `RELIABLE ACCOUNTING & TAX SERVICES, INC.`。無 RELIABLESITE 紀錄。 | 不需要——已由 filed+lapsed 合併相鄰性證明佐證。 |
+| FSTR Public Search API——費率表 | [publicsearchapi.floridaucc.com/fees](https://publicsearchapi.floridaucc.com/fees) | 無 | status OK，8 個費用鍵值：`ADDITIONAL_FEE 3.0`；`UCC1_STANDARD_FORM_FEE 35.0`；`UCC1_NON_STANDARD_FORM_FEE 40.0`；`UCC3_STANDARD_FORM_FEE 12.0`；`UCC3_NON_STANDARD_FORM_FEE 17.0`；`UCC3_TERMINATION_BEFORE_FEE 12.0`；`UCC3_TERMINATION_AFTER_FEE 0.0`；`UCC5_FEE 12.0`。**注意：以上皆為「申報」費用。此端點未公布任何查詢或認證查詢（UCC-11）費用。** | 認證查詢費用無法由入口 API 取得。正式認證查詢的具名替代路徑：Image API, LLC, UCC Filings, P.O. Box 5588, Tallahassee, FL 32314, tel 850.222.8526（依 [dos.fl.gov](https://dos.fl.gov/)，自 2001-10-01 起受託民營化營運佛州 UCC 申報流程）。費用未經查證——已列為 GAP。 |
+
+### 8.3 全部備案明細
+
+**以下沒有任何備案區塊，而這個「沒有」本身就是發現，不是遺漏。** 為使空結果的形貌明確且可稽核，此處逐欄列出備案區塊本應載明的每一個欄位：
+
+| 備案區塊本應載明的欄位 | RELIABLESITE.NET LLC 的紀錄（佛州 FSTR，索引完整至 2026-08-06） |
+|---|---|
+| 備案編號 | **無。此債務人名稱下不存在任何 UCC-1、UCC-3 或 UCC-5 紀錄。** |
+| 備案日期 | **無。** |
+| 失效日／續期 | **無。既無續期（continuation）亦無終止（termination）可供解讀，因此既無「尚有擔保債務」的證據，也無「近期清償完畢」的證據。** |
+| 擔保權人名稱＋地址 | **無。沒有任何銀行、沒有任何原廠融資部門（無 Dell Financial Services、無 HPE Financial Services、無 Supermicro 關聯之融資租賃機構）、沒有任何設備出租人、沒有任何大盤通路商登記為擔保權人。** |
+| 債務人名稱＋地址 | **無債務人紀錄。受查實體為 RELIABLESITE.NET LLC, 2115 NW 22nd St, Miami, FL 33142——該名稱不存在於索引中。** |
+| 擔保品說明（逐字引用） | **不存在任何可逐字引用的擔保品說明。紀錄上沒有概括性留置權（blanket lien）、沒有全部資產擔保品描述、沒有後取財產條款（after-acquired-property clause）、沒有消極擔保條款（negative pledge）。** |
+| 修正／讓與／終止 | **無。** |
+| 紀錄連結 | 不存在紀錄頁面。查詢可於 [publicsearchapi.floridaucc.com/search](https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&searchOptionType=OrganizationDebtorName&searchOptionSubOption=FiledAndLapsedActualDebtorNameList) 重現；入口前端見 [floridaucc.com](https://floridaucc.com/) |
+
+### 8.4 這份紀錄代表什麼
+
+| 觀察 | 推論意涵 | 信心度 | 銷售後果 |
+|---|---|---|---|
+| 以 RELIABLESITE.NET LLC 為債務人的 UCC-1 融資聲明為零，涵蓋 Filed、Lapsed 與 Filed+Lapsed 合併索引，涵蓋 Actual-name 與去標點 Compact-name 兩種形式，涵蓋 `OrganizationDebtorName` 與 `LegacySearch` 兩種型別，並涵蓋六種拼寫變體。相鄰性已直接證明：索引第 5437842 列（`RELIABLE.FINANCIAL.MANAGEMENT INC`）與第 5437843 列（`RELIABLESOURCE TALENT LLC`）緊鄰、中間無任何紀錄。索引完整至 2026-08-06。 | 佛州對此債務人而言是法律上正確、且實質窮盡的管轄地。依 **UCC 9-307(e)**，註冊組織之所在地即其設立州，因此出資方或出租人若要對佛州 LLC 完善擔保權益，就會在佛州申報。故此「無」並非管轄地造成的假象——它代表在該公司十二年的存續期間，從未有任何出資方、設備出租人、原廠融資部門或通路商對其完善過擔保權益。 | 「不存在」此一事實為**高**（相鄰性具決定性、兩種索引皆查、索引時效至 2026-08-06）。法律管轄地之解讀為**中高**。 | 沒有留置權人需要取得同意，你與採購單之間也不存在債權人間協議或次順位問題。程序上沒有任何事情擋住這筆生意。但同樣地，也沒有現成的設備融資額度可供動用——大額訂單只能靠自有現金，或靠你帶進來的融資方案。**請在第一次商務對話就把租賃或原廠融資夥伴帶進來，不要留到最後；也不要假設他們手上已有額度待用。** |
+| 紀錄上完全沒有任何擔保權人——沒有銀行、沒有原廠融資部門（無 Dell Financial Services、無 HPE Financial Services、無 Supermicro 關聯融資租賃機構）、沒有設備出租人，也沒有任何大盤通路商申報購置價金擔保權（PMSI）。 | 由此可得兩點。第一，他們並非透過「會例行完善 PMSI 的通路」採購整機系統——一級通路商若以帳期出售六、七位數的整櫃系統，通常會申報。第二，這與其餘證據一致：單路 AM5 桌機級與 EPYC 4005 級矽晶、伺服器由自家技師自行組裝上架佈線、清倉頁面主打 SuperMicro 機殼與伺服器級主機板而非具名整機 SKU。其採購型態讀起來像是以零組件、主機板與準系統為單位，向電商與區域經銷商刷卡或以短天期開放帳期購買，而非通路商方案。 | **中。** 「無 PMSI」是事實；「採購通路」的推論屬情境證據，係自矽晶等級、自建定位與機殼／主機板用語推得，而非取自採購紀錄。 | 與**規則 8 通路核准**直接相關：公開紀錄上沒有任何通路商對此帳戶擁有登記權益，因此引入通路商不會排擠既有者，也不會在公開紀錄上造成通路衝突。但通路條件上要預期摩擦——習慣零組件式交易採購的買方，會抗拒最低訂購量、帳期文件與信用申請。**開場請用他們現在就在消耗的準系統／主機板 SKU 清單，而不是整櫃整機提案。** |
+| 沒有備案日期可讀，因為根本沒有備案。採購時鐘完全靠型錄考古（見第 9 節）重建，而非靠留置權日期間距。 | 對這個規模的公司而言，常見的商業破口——每次大型設備交付後數日內出現的 UCC-1，等於免費送你一份交機行事曆——根本不存在。任何關於本帳戶採購節奏的說法，都必須取自庫存證據，並承擔隨之而來的較大誤差帶。反過來說，競爭對手同樣看不到他們的採購節奏；此帳戶對「監看留置權」型開發工具是不透明的，這對願意做型錄功課的人是一項小小的結構性優勢。 | **高。** | **不要等留置權警示來觸發接觸——那個警示永遠不會響。** 改為把專用伺服器型錄頁納入定期監看：新的 CPU 或 GPU 家族出現在該頁，是這個帳戶唯一穩定對外釋放的採購訊號，而且它落後實際採購約兩個月（EPYC 4545P 於 2025 年 8 月在其自家新聞室發布，直到 2025 年 10 月的快照才出現在型錄）。 |
+| 因為不存在任何融資聲明，所以既無概括性留置權，也無全部資產擔保品描述；連帶地，明日採購的硬體上沒有後取財產條款，也沒有消極擔保條款。 | 機隊未設定任何負擔。他們完全可以用它借款、做售後回租，或對新的設備融資方設定第一順位 PMSI，無須取得任何人的解除或次順位同意。 | **高。** | 考量第 10 節的回收期算式，融資是一條暢通且可用的槓桿，也是你能提供的最有用的東西。對新交付硬體設定第一順位 PMSI 可以乾淨落地。此點在當下尤其關鍵，因為他們正同時建置三個新據點（阿姆斯特丹已上線、Querétaro 開放預訂、達拉斯開始出現），而環境是十年來最糟的 DRAM 與 NAND 價格。**把一次性資本支出高峰轉換為月費的結構化方案，才是對準他們真正限制條件的提案。** |
+| 沒有續期、也沒有終止可供解讀，因此既無尚有擔保債務的證據，也無近期清償完畢的證據。一家在六個據點運作 1–5 Tbps 網路、依型錄證據推估擁有數千台伺服器的公司，在其十二年存續期間背負過零筆已完善的留置權。 | 有兩種讀法，且兩者不互斥。最可能：創辦人持股、規避負債的經營者，以營運現金流支應硬體，隨營收小額分批採購——這正是型錄顯示的樣貌，SKU 家族隨庫存週轉一兩台地出現與消失，而非全機隊式的換代波段。可能性較低但必須排除：硬體不在本實體的資產負債表上，而在關係企業或另一設籍地實體，若如此，備案會以該名稱出現在該州。IP 面的佐證同樣呈現輕資本姿態——[bgp.tools](https://bgp.tools/as/23470) 顯示 AS23470 宣告約 238 條 IPv4 前綴、約 60,928 個位址，但 ARIN 顯示 RL-323 僅持有 16 個直接網段，最後一次 IPv4 配發停在 2019-06-11。差額來自租賃，且檔案中最新一筆是由上游（parent 10VPN-PRIMARY）指派給他們的 IPv6 /48，而非直接配發。 | 「以現金支應、規避負債」為**中高**；「表外持有」的替代解釋為**中**，因未進行佛州以外的 UCC 查詢，故無法排除。 | 要預期資本支出紀律、以回收期為主的決策方式，以及真實的價格敏感度——這位買方會自己把第 10 節的算式算一遍。請以**綁定單一具名據點、一次一櫃**的方式銷售，而不是整機隊汰換。開場講回收月數，不要講抽象 TCO 或效能功耗行銷語言。並且在需求探詢初期就問兩個具體問題：**採購單由哪一家法人簽署，硬體由哪一家法人擁有。** 若兩者不同名，信用與融資對話應轉向後者，且他處可能存在佛州看不到的備案。 |
+| 佛州登記處完全未提供擔保權人索引——[`/search-types`](https://publicsearchapi.floridaucc.com/search-types) 僅提供 `OrganizationDebtorName`、`IndividualDebtorName`、`DocumentNumber` 與 `LegacySearch`。 | 即使佛州確有備案，也無法以出資方反查，藉以得知哪一家融資方活躍於一組主機代管公司之間。關於「誰在為這個產業區隔提供融資」的競爭情報，只能一家一家債務人地建立。 | **高**——API 自身的能力列舉即為定論。 | 若要知道可比的佛州主機商使用哪一家出租人，必須針對同業清單逐一執行具名債務人查詢。此端點每次查詢成本為 $0.00，而且值得在**提出融資夥伴之前**先做，好讓你引介的對象是這個區隔已經認得的名字。 |
+
+---
+
+## 9. 採購時鐘
+
+### 9.1 型錄快照時間軸
+
+以 Wayback Machine 對 [reliablesite.net/dedicated-servers/](https://www.reliablesite.net/dedicated-servers/) 的十二次擷取為基礎，直接解析該頁自身的結構化標記（`data-server-name`、`data-cores`、`data-cpu-speed`、`data-memory`、`data-price`，以及自 2026-06 起的 `data-dc-*` 供應屬性）。
+
+| 快照日期 | SKU 數 | 最新矽晶 | 相較前次新增（史上首見） | 相較前次消失 | 快照 |
+|---|---|---|---|---|---|
+| **2023-03-14** | 38 個 SKU 家族／57 種組態 | AMD Ryzen 9 7950X（Zen 4, Raphael）；Intel Core i9-13900K（Raptor Lake）；AMD EPYC 7773X（Milan-X）；AMD Threadripper 3990X | 基準快照，無前次可比。Zen 4 桌機版與 Raptor Lake 已在列，代表其首次出現早於本觀察窗。 | 不適用（基準） | [擷取](https://web.archive.org/web/20230314191127/https://www.reliablesite.net/dedicated-servers/) |
+| **2023-08-02** | 33 家族／47 組態 | AMD Ryzen 7 7700 與 Ryzen 5 7600（Zen 4 非 X，65W）；史上第一款 GPU SKU——nVidia Quadro RTX 4000 | **史上首見：** AMD Ryzen 7600；AMD Ryzen 7700；nVidia Quadro RTX 4000（型錄史上第一款 GPU 產品）；Dual Xeon Silver 4108；Dual Xeon E5 2620 V4；Intel Core i7 4770；Intel Xeon E5 1650 V2。**採購事件——而且是兩件：** 主流 Zen 4 65W 產品，以及切入 GPU 代管此一新產品類別。 | AMD Ryzen 7950X；AMD Threadripper 3990X；Dual Xeon E5 2699 V4；Dual Xeon Plat. 8160；Intel Atom D525；Intel Core i7 4790；Intel Core i7 9700K；Intel Core i9 10900K；Intel Core i9 13900K；Intel Xeon E3 1245 V2；Intel Xeon E5 1660 V3；Intel Xeon W 2155。*多數在後續快照重新出現，故消失代表缺貨而非退場。* | [擷取](https://web.archive.org/web/20230802115010/https://www.reliablesite.net/dedicated-servers/) |
+| **2023-10-23** | 34 家族／43 組態 | AMD Ryzen 9 7900（Zen 4，65W 12 核） | **史上首見：** AMD Ryzen 7900；Dual AMD EPYC 7281（Naples，舊世代）。Ryzen 7900 屬同一批 Zen 4 65W 採購的延伸，非新世代——屬增量，**不計為獨立採購事件**。 | Dual Xeon E5 2603 V3；Dual Xeon Silver 4108；Intel Core i5 4570；Intel Xeon E3 1230 V3；Intel Xeon E5 1650 V2；Intel Xeon W 2133（均屬庫存性質） | [擷取](https://web.archive.org/web/20231023023700/https://www.reliablesite.net/dedicated-servers/) |
+| **2024-01-07** | 27 家族／38 組態 | AMD Ryzen 9 7900／Ryzen 7600（Zen 4）——未出現比前次更新的矽晶 | **史上首見：** 僅 Intel Atom D510——一顆十年前的零件重新回到庫存。**無採購事件。** | AMD EPYC 7773X；AMD Ryzen 3950X；AMD Ryzen 5800X3D；AMD Ryzen 5900X；AMD Ryzen 5950X；AMD Ryzen 7700；AMD Ryzen 7900；AMD Ryzen 7950X；Dual AMD EPYC 7281；HDD Storage 32TB；Intel Core i7 7700K；Intel Special 256GB | [擷取](https://web.archive.org/web/20240107133526/https://www.reliablesite.net/dedicated-servers/) |
+| **2024-05-18** | 15 家族／15 組態——**擷取不完整**（封存物件僅 149,785 bytes，相鄰快照為 200,000–380,000 bytes；此列數字應視為下限，而非真實庫存讀數） | AMD Ryzen 7 8700G（Zen 4 Phoenix APU，2024 年 1 月上市） | **史上首見：** AMD Ryzen 8700G；Intel Special 128GB；Intel Special 6 Core；Intel Special 64GB。**採購事件**——8700G 屬新矽晶家族（單晶 Phoenix APU），其型錄首見時點約落在 AMD 2024 年 1 月上市後四個月。 | 22 個家族缺席，包含整條 Xeon E3／E5 線、Core i7／i9 線與 Ryzen 3700X／5800X／7600——幾可確定是擷取不完整所致而非真正退場，因為全部在 2024-12-18 重新出現。 | [擷取](https://web.archive.org/web/20240518063450/https://www.reliablesite.net/dedicated-servers/) |
+| **2024-12-18** | 28 家族／34 組態 | AMD Ryzen 9 9950X 與 Ryzen 9 9900X（**Zen 5**, Granite Ridge，2024 年 8 月上市）；Intel Core i9-14900K（Raptor Lake Refresh）；nVidia A10（Ampere 資料中心 GPU） | **史上首見：** AMD Ryzen 9900X；AMD Ryzen 9950X；AMD Ryzen 8600G；Intel Core i9 14900K；nVidia A10 GPU；AMD Opteron 6272。**重大採購事件——三件同時首見：** Zen 5 桌機世代、Raptor Lake Refresh 旗艦，以及一張真正的資料中心 GPU（A10, 24GB）取代工作站級 Quadro RTX 4000 成為 GPU 旗艦。**這是整個觀察窗中可見的最大一次換代。** | Dual AMD EPYC 7281；Intel Atom D525；Intel Special 128GB；Intel Special 6 Core | [擷取](https://web.archive.org/web/20241218043321/https://www.reliablesite.net/dedicated-servers/) |
+| **2025-06-10** | 33 家族／39 組態 | AMD EPYC 9965（Turin Dense, Zen 5c，192 核等級，2024 年 10 月上市）；AMD Threadripper PRO 7995WX（Storm Peak，96 核） | **史上首見：** AMD EPYC 9965；AMD Threadripper 7995WX；HDD Storage 40TB。**採購事件**——首度出現 Zen 5 **伺服器**矽晶（相對於 Zen 5 桌機版），以及首見 96 核 Threadripper PRO。其中 2,048GB DDR5／6×4TB NVMe 的 Threadripper 組態每月 $2,499，是他們有史以來上架過最大的單機。 | AMD Opteron 6272；AMD Ryzen 3900X；AMD Ryzen 7600；AMD Ryzen 8700G；Dual Xeon E5 2620 V4；Intel Core i7 9700K；Intel Core i9 10900K | [擷取](https://web.archive.org/web/20250610103328/https://www.reliablesite.net/dedicated-servers/) |
+| **2025-10-08** | 40 家族／48 組態——**整個觀察窗中最寬的型錄** | AMD EPYC 4545P（EPYC 4005「Grado」, Zen 5, 16C/32T, 65W TDP, AM5 腳位） | **史上首見：** AMD EPYC 4545P。另補貨：AMD Ryzen 3900X、7600、8700G、Dual Xeon E5 2603 V3、Dual Xeon E5 2620 V4、Intel Core i7 9700K、Intel Core i9 13900K、Intel Special 128GB、Intel Xeon W 2133。**採購事件——而且這是最近的一次。** 他們自家新聞室已於 2025 年 8 月宣布 EPYC 4545P 進駐紐約、邁阿密與洛杉磯，因此真實採購早於此型錄目擊約兩個月。上市組態價格為每月 $149（128GB／2TB）與每月 $199（256GB／4TB）。 | Dual AMD EPYC 7281；Dual Xeon E5 2620 V2；Intel Atom D510 | [擷取](https://web.archive.org/web/20251008002639/https://www.reliablesite.net/dedicated-servers/) |
+| **2025-11-12** | 34 家族／42 組態 | AMD EPYC 4545P——未變 | **無史上首見矽晶。** 僅補貨：AMD Opteron 6272、Dual Xeon E5 2620 V2、Intel Core i9 10900K、Intel Xeon W 2155。**無採購事件。** | AMD EPYC 9965；AMD Ryzen 5800X3D；AMD Ryzen 7600；AMD Ryzen 9950X；Dual Xeon E5 2603 V3；Dual Xeon E5 2620 V4；Intel Atom D510；Intel Core i7 9700K；Intel Special 128GB；Intel Xeon W 2133 | [擷取](https://web.archive.org/web/20251112033200/https://www.reliablesite.net/dedicated-servers/) |
+| **2026-03-03** | 29 家族／37 組態 | AMD EPYC 4545P——連續第二次快照未變 | **無史上首見矽晶。** 僅補貨：AMD Ryzen 9950X、Intel Core i7 9700K、Intel Special 128GB。**無採購事件。價格轉折點落在此處**——在三年持平至走跌之後，本次快照全面調漲：EPYC 4545P 128GB／2TB $149 → $189；EPYC 4545P 256GB／4TB $199 → $279；Ryzen 9950X 192GB $249 → $329；Ryzen 7950X 192GB $239 → $289；i9-14900K 192GB $229 → $249。 | AMD EPYC 7773X；AMD Opteron 6272；AMD Ryzen 3950X；AMD Ryzen 7900；AMD Ryzen 8600G；Intel Special 64GB；Intel Xeon W 2155；nVidia Quadro RTX 4000 | [擷取](https://web.archive.org/web/20260303032526/https://www.reliablesite.net/dedicated-servers/) |
+| **2026-06-03** | 22 家族／26 組態 | AMD EPYC 4545P——連續第三次快照未變 | **無史上首見矽晶。** 僅補貨：AMD Ryzen 7600、AMD Ryzen 7900、Dual Xeon E5 2620 V4。**無採購事件。** 改變的是頁面標記結構：per-datacentre 供應屬性（`data-dc-pnj`／`mia`／`lax`／`ams`）與地區下拉標頭（United States、Europe）首次出現，且阿姆斯特丹已為現貨據點。價格續漲：A10 GPU $599 → $699；Ryzen 5950X $149 → $179；Ryzen 7600 $109 → $149。 | AMD Ryzen 3900X；AMD Ryzen 5900X；AMD Ryzen 7700；AMD Threadripper 3990X；Dual Xeon E5 2620 V2；Dual Xeon Silver 4108；Intel Core i7 9700K；Intel Core i9 13900K；Intel Special 128GB；Intel Special 6 Core | [擷取](https://web.archive.org/web/20260603011406/https://www.reliablesite.net/dedicated-servers/) |
+| **2026-08-07**（最近一次封存擷取；今日 2026-08-10 的線上頁面在最新矽晶與價格上緣皆相符） | 17 家族／20 組態——**觀察窗中最窄的型錄，較 2025 年 10 月的 40 家族高點減少 58%** | CPU 為 AMD EPYC 4545P（EPYC 4005, Zen 5）；GPU 為 nVidia A10。兩者分別自 2025-10-08 與 2024-12-18 起未變。 | **連續第四次快照無史上首見矽晶。** 僅補貨：AMD Ryzen 5800X3D、AMD Ryzen 8600G、Dual Xeon Silver 4108、Intel Special 64GB、nVidia Quadro RTX 4000。**無採購事件。** 機房屬性擴增為六個據點——`ams`、`dfw`、`lax`、`mia`、`pnj`、`qro`——其中 **DFW（達拉斯）與 QRO（Querétaro）首次出現**，並新增 Mexico 地區標頭。價格上緣再漲：Ryzen 9950X 256GB $359 → $399。 | AMD Ryzen 5950X；AMD Ryzen 7600；AMD Ryzen 8700G；AMD Threadripper 7995WX；Dual Xeon E5 2620 V4；HDD Storage 32TB；HDD Storage 40TB；Intel Core i9 10900K；Intel Special 256GB。**值得注意的是整條大容量 HDD 儲存線（32TB／40TB／80TB）全數消失，2,048GB Threadripper 旗艦亦然——這與記憶體與 NAND 缺貨一致，而非需求流失。** | [擷取](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+
+### 9.2 採購節奏
+
+**已觀察到的間隔。** 採購事件的定義嚴格限定為：在十二次快照中，新的 CPU 或 GPU 世代首次出現在型錄。符合者共五次。
+
+| 事件 | 日期 | 出現內容 |
+|---|---|---|
+| **E1** | 2023-08-02 | 主流 Zen 4 65W（Ryzen 7600／7700），加上史上第一款 GPU 產品（Quadro RTX 4000） |
+| **E2** | 2024-05-18 | Zen 4 Phoenix APU（Ryzen 8700G） |
+| **E3** | 2024-12-18 | Zen 5 桌機版（Ryzen 9900X／9950X）＋ Raptor Lake Refresh（i9-14900K）＋ 資料中心 GPU（nVidia A10）——觀察到的最大一次換代 |
+| **E4** | 2025-06-10 | Zen 5 伺服器版（EPYC 9965 Turin Dense）＋ Threadripper PRO 7995WX |
+| **E5** | 2025-10-08 | EPYC 4005 Zen 5（EPYC 4545P），原廠於 2025 年 8 月宣布 |
+
+連續事件間隔（月）：**E1→E2 = 9.5 · E2→E3 = 7.0 · E3→E4 = 5.8 · E4→E5 = 3.9**（若 E5 以 2025 年 8 月的宣布日而非型錄目擊日計算，則為 2.1）。**此數列單調遞減——直到最後一次事件為止，換代時鐘都在穩定加速。**
+
+**中位數月數。** **6.4 個月**（9.5、7.0、5.8、3.9 之中位數）。平均 6.6 個月。若採用宣布日修正後的 E5，中位數為 6.4、平均降為 6.1。**可視為約 6 個月的節奏，並在 2025 年全年持續收緊。**
+
+**最近一次採購事件。** **AMD EPYC 4545P**（EPYC 4005 系列, Zen 5, 16C/32T, 65W TDP, AM5 腳位）。ReliableSite 自家新聞室於 **2025 年 8 月**宣布進駐紐約、邁阿密與洛杉磯；型錄首次目擊為 **2025-10-08** 快照，128GB DDR5 + 2TB NVMe 每月 $149、256GB DDR5 + 4TB NVMe 每月 $199。截至今日 **2026-08-10**，距宣布已 **12 個月、距型錄首見已 10.1 個月，對比 6.4 個月的中位數**——約為歷史間隔的 **1.6 至 1.9 倍**，且連續四次快照（2025-11、2026-03、2026-06、2026-08）皆無新矽晶。**這是觀察窗中最長的一次矽晶空窗，且差距甚大**（[新聞室貼文](https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/)）。
+
+**下一個時間窗推估。** **2026 年 9 月至 2027 年 1 月，機率最高落在 2026 年 10 至 11 月。** 兩股推力方向一致。第一，換代時鐘已逾期 4 至 6 個月，且尚未採用的矽晶存量已相當可觀——Zen 5 X3D 產品、4545P 以上的 EPYC 4005 產品線、NVIDIA 的 L4／L40S 世代都在出貨，而他們的型錄天花板仍停在一顆 65W 16 核，以及一張自 2024 年 12 月起就擔任 GPU 旗艦的 Ampere 世代 A10。第二，也更具決定性的是，他們正同時建置三個新據點：**阿姆斯特丹於 2026-04-29 上線，達拉斯（DFW）與 Querétaro（QRO）的供應旗標於 2026-07-30 出現在標記中**，墨西哥仍處預訂狀態。新據點無論換代時鐘如何都需要新機器——**Querétaro 與達拉斯的建置本身就是那筆採購**，而且必須在這些據點能把預訂轉為營收之前落地。反向作用力是零組件價格，這也正是空窗形成的原因；若 DRAM 與 NAND 維持現價，該筆採購可能被拆成數個較小的分批，而非單一大單。
+
+**依據。** 對 [reliablesite.net/dedicated-servers/](https://www.reliablesite.net/dedicated-servers/) 自 2023-03-14 至 2026-08-07 的十二次 Wayback Machine 擷取，直接解析頁面自身結構化標記，並與 2026-08-10 的線上頁面、以及 ReliableSite 自家標註日期的新聞室貼文交叉核對（[EPYC 4545P，2025 年 8 月](https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/)；[阿姆斯特丹，2026 年 4 月](https://www.reliablesite.net/hosting-news/reliablesite-dedicated-servers-are-now-available-in-amsterdam/)）。**所有型錄首見日期都是受快照頻率限制的「上限值」——真實採購早於目擊。** EPYC 4545P 一案把這個時間差校準在約兩個月。
+
+**信心度。** 歷史節奏本身為**中高**（五次事件、單調收緊一致、且有獨立原廠宣布日佐證）。下一時間窗推估為**中**——方向有三據點擴張強力支撐，但時點受制於一個真正處於錯位狀態的零組件市場，且其中一次快照（2024-05-18）擷取不完整，可能遮蔽了一次中間事件。
+
+**GAP——限制本節推論的資料覆蓋缺口。**
+- Wayback 對型錄在 **2024-12-18 至 2025-06-10** 之間的覆蓋幾乎空白——該六個月區間僅存在一次 status-200 擷取（2025-01-08 回 403、2025-09-19 回 301）。**2025 上半年若曾發生採購事件，可能未被觀察到**，若如此則實際 E3→E4 間隔會更短。
+- **2024-05-18** 擷取為不完整封存物件（149,785 bytes，相鄰者為 200,000–380,000 bytes），僅得 15 個 SKU，其計數僅為下限。
+- 以直接 HTTP 客戶端擷取線上專用伺服器頁面遭阻擋（回應僅 5,639 bytes），因此「今日」讀數取自 2026-08-07 的 Wayback 擷取，並與一次成功的代理抓取交叉核對。兩者在最新矽晶與價格上緣一致，但線上 SKU 計數為 22 種組態、封存擷取為 20 種——**此微小落差與三天的庫存變動一致。**
+- **伺服器總數、機櫃數、機箱數與已裝機規模皆未對外揭露。** 型錄供應數字只顯示各據點各 SKU 的當前未售庫存（通常 1–5 台），完全無法推知裝機基數。**任何關於他們運行多少台伺服器的說法，都不受本研究支持。**
+
+### 9.3 擴張訊號
+
+| 訊號 | 日期 | 來源 |
+|---|---|---|
+| ARIN 直接配發 **206.221.176.0/20**——最初的 IPv4 區塊，登記於 ReliableSite.Net LLC（組織代號 RL-323） | 2014-07-23 | [ARIN NET-206-221-176-0-1](https://whois.arin.net/rest/net/NET-206-221-176-0-1) |
+| ARIN 直接配發 **2605:9880::/32**——其主要 IPv6 區塊，完整一個 /32 | 2014-07-25 | [ARIN NET6-2605-9880-1](https://whois.arin.net/rest/net/NET6-2605-9880-1) |
+| ARIN 直接配發 **104.243.32.0/20** | 2014-11-13 | [RDAP 104.243.46.1](https://rdap.arin.net/registry/ip/104.243.46.1) |
+| ARIN 直接配發 **45.58.112.0/20** | 2015-02-24 | [ARIN NET-45-58-112-0-1](https://whois.arin.net/rest/net/NET-45-58-112-0-1) |
+| ARIN 直接配發 **172.93.96.0/20** | 2015-06-03 | [ARIN NET-172-93-96-0-1](https://whois.arin.net/rest/net/NET-172-93-96-0-1) |
+| ARIN 直接配發 **209.222.96.0/20**——十五個月內第四個 /20，為其 IPv4 累積期的高峰 | 2015-10-02 | [ARIN NET-209-222-96-0-1](https://whois.arin.net/rest/net/NET-209-222-96-0-1) |
+| ARIN 配發 **172.96.160.0/23** 與 **172.96.172.0/23**——隨 ARIN 存量池枯竭，區塊規模自 /20 縮至 /23 | 2017-02-24 | [ARIN NET-172-96-160-0-1](https://whois.arin.net/rest/net/NET-172-96-160-0-1) |
+| ARIN 配發 **199.127.60.0/22** | 2017-05-24 | [ARIN NET-199-127-60-0-1](https://whois.arin.net/rest/net/NET-199-127-60-0-1) |
+| ARIN 配發 **172.96.140.0/22** | 2017-07-28 | [ARIN NET-172-96-140-0-1](https://whois.arin.net/rest/net/NET-172-96-140-0-1) |
+| ARIN 配發 **104.128.72.0/22** | 2017-10-20 | [ARIN NET-104-128-72-0-1](https://whois.arin.net/rest/net/NET-104-128-72-0-1) |
+| ARIN 配發 **104.238.220.0/22** | 2018-04-13 | [ARIN NET-104-238-220-0-1](https://whois.arin.net/rest/net/NET-104-238-220-0-1) |
+| ARIN 配發 **104.238.204.0/22** | 2018-08-24 | [ARIN NET-104-238-204-0-1](https://whois.arin.net/rest/net/NET-104-238-204-0-1) |
+| ARIN 配發 **104.194.8.0/22** | 2019-02-14 | [ARIN NET-104-194-8-0-1](https://whois.arin.net/rest/net/NET-104-194-8-0-1) |
+| ARIN 配發 **185.150.189.0/24** 與 **185.150.190.0/23**——**紀錄上最後一次直接 IPv4 配發，其後是七年的沉默。** 由於 [bgp.tools](https://bgp.tools/as/23470) 顯示 AS23470 宣告約 238 條 IPv4 前綴、約 60,928 個位址，而 ARIN 僅顯示 16 個直接持有網段，2019 年後的位址成長來自移轉或租賃而非配發——此一輕資本姿態與其設備留置權之全然缺席互相呼應。 | 2019-06-11 | [ARIN NET-185-150-189-0-1](https://whois.arin.net/rest/net/NET-185-150-189-0-1) |
+| 型錄標記：第四個下單地點選項 **「Pre-Order (USA)」** 首次出現，與三個長期據點（New York City Metro、Miami、Los Angeles）並列。見於 2026-01-16、2026-01-27 與 2026-01-31 擷取，至 2026-03-03 撤下。**達拉斯專案最早的公開痕跡。** | 2026-01-16 | [擷取](https://web.archive.org/web/20260116070311/https://www.reliablesite.net/dedicated-servers/) |
+| 型錄標記：**「Pre-Order (EU)」** 選項與「Europe」地區下拉標頭首次出現——阿姆斯特丹開放預訂 | 2026-04-14 | [擷取](https://web.archive.org/web/20260414161143/https://www.reliablesite.net/dedicated-servers/) |
+| AS23470 的 PeeringDB 紀錄最後更新——機房清單新增 **Databarn Amsterdam** 與 **Equinix AM7 – Amsterdam**，與 165 Halsey Meet-Me Room（Newark）、QTS Piscataway PNJ1、CoreSite LA1 One Wilshire、CoreSite LA2、CoreSite Miami MI1、Equinix MI1 並列。公開對等互連於 Any2West、DE-CIX New York、Equinix Miami、FL-IX 與 NYIIX，皆為 100G。流量等級 1–5 Tbps、以出向為主、開放對等政策。 | 2026-04-14 | [PeeringDB net/17907](https://www.peeringdb.com/net/17907) |
+| **阿姆斯特丹上線——美國境外的第一批現貨庫存。** per-datacentre 供應屬性（`data-dc-pnj`、`data-dc-mia`、`data-dc-lax`、`data-dc-ams`）在同一次擷取中導入頁面標記，且下單選單中「Amsterdam, NL」取代「Pre-Order (EU)」。時點可框定在 2026-04-14 至 2026-04-29 的十五天內；ReliableSite 自家新聞室將其標為 2026 年 4 月，並稱之為第一個國際據點、第四個據點。 | 2026-04-29 | [擷取](https://web.archive.org/web/20260429114107/https://www.reliablesite.net/dedicated-servers/) |
+| ReliableSite 新聞室貼文「ReliableSite Dedicated Servers Are Now Available in Amsterdam」——開幕 SKU 為 **AMD Ryzen 9950X**（16 核、256GB DDR5、2×4TB NVMe）與 **AMD EPYC 4545P**（16 核、256GB DDR5、4TB NVMe），皆搭配 1 Gbps 不計流量與完整 KVM over IP | 2026 年 4 月 | [新聞室](https://www.reliablesite.net/hosting-news/reliablesite-dedicated-servers-are-now-available-in-amsterdam/) |
+| 型錄標記：**「Pre-Order (USA)」與「Pre-Order (EU)」同時並存**——達拉斯專案在阿姆斯特丹上線後兩個月內重啟 | 2026-06-30 | [擷取](https://web.archive.org/web/20260630061011/https://www.reliablesite.net/dedicated-servers/) |
+| ARIN：IPv6 **/48 2602:FED2:7110::/48** 登記於 ReliableSite.Net LLC（組織 RL-323），ARIN 網段名稱為 **「CHICAGOSERVERS」**，母網段 10VPN-PRIMARY（NET6-2602-FED2-1），登記日與最後異動日同日。該網段名稱指向一個芝加哥部署，但其官網、新聞室、型錄標記中都沒有對應項目——**可能是尚未宣布的第七個據點。** 該筆為自上游指派的下游再分配，而非新的 ARIN 直接配發。**GAP——此訊號確實有歧義；不得對客戶陳述為已確認的芝加哥部署。** | 2026-07-25 | [ARIN NET6-2602-FED2-7110-1](https://whois.arin.net/rest/net/NET6-2602-FED2-7110-1) |
+| 型錄標記：機房屬性由四個據點擴為六個——**`data-dc-dfw`（達拉斯）與 `data-dc-qro`（Querétaro）首次出現**，新增「Mexico」地區下拉標頭，且「Pre-Order (Mexico)」取代「Pre-Order (USA)」。DFW 供應初期僅限單一 SKU（Ryzen 9950X 256GB），顯示建置仍屬極早期。 | 2026-07-30 | [擷取](https://web.archive.org/web/20260730191917/https://www.reliablesite.net/dedicated-servers/) |
+| Querétaro 據點頁面上線：AMD EPYC 與 Ryzen 專用伺服器開放預訂。設施條件載明為 **31 MW 總電力、258,000 平方英尺**，三匯流排電力備援搭配 48 小時燃料自主，N+1 冰水主機。網路將使用在地上游 IENTC 與 Wantelco，並直連 PIX México 1 與 PIX México 2。據載已進入最後階段，機櫃就位、網路測試中。 | 2026-07 至 2026-08 | [Querétaro 機房頁](https://www.reliablesite.net/data-center/queretaro-mexico.aspx) |
+| LowEndTalk 討論串「ReliableSite launches in Querétaro, Mexico」——社群可見的上線公告。**GAP——該討論串回傳 HTTP 403 無法讀取；開串日期、官方發文日期，以及任何關於機櫃數、硬體或上線時程的營運方發言均未取得。** | 2026（討論串內容無法取得） | [LowEndTalk 討論串](https://lowendtalk.com/discussion/219644/reliablesite-launches-in-queretaro-mexico) |
+| 線上網站現已列出**六個機房**——「New York City Metro, Miami, FL, Los Angeles, CA, Dallas, TX, Amsterdam, NL, Querétaro, MX」——獨立佐證達拉斯為已承諾據點，而不只是標記旗標 | 2026-08-10（觀察日） | [機房總覽頁](https://www.reliablesite.net/data-center/) |
+| ReliableSite 新聞室貼文宣布 **AMD EPYC 4545P** 專用伺服器進駐紐約、邁阿密與洛杉磯——三種組態（64GB/1TB、128GB/2TB、256GB/4TB），理由為 65W TDP 與效能功耗比，定位於 AI inferencing 與高密度運算。**這是最近一次採購事件的原廠日期錨點。** | 2025 年 8 月 | [新聞室](https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/) |
+
+**GAP——達拉斯尚無任何價格或 SKU 廣度資料。** 在 2026-07-30 與 2026-08-07 的擷取中，DFW 僅以單一 SKU（Ryzen 9950X 256GB）的供應屬性出現，Querétaro 仍為預訂狀態。**兩個據點建置訂單的規模與時點均為未知。**
+
+---
+
+## 10. 成本天花板
+
+### 10.1 假設——請先讀完這一節，再看表
+
+**方法。** N 個月的硬體成本天花板 = **（每月租金 − 每月營運成本）× N**。這是理性經營者在滿載出租下、於 N 個月內回收硬體所能支付的上限，尚未計入融資成本，也未計入任何資本報酬。年營收以牌價租金 × 12、100% 出租率表示。
+
+> **以下每一項營運成本數字都是產業常規「假設」，不是關於 ReliableSite 的查證事實。** 任何一項都不是來自該公司。它是針對一家 1–5 Tbps 規模、具自有人力的自營裸機主機商所設定的可辯護區間，**在任何面向客戶的使用場合都必須重申其為假設。**
+
+| 假設項目 | 採用值 | 合理區間 | 依據（明示為假設） |
+|---|---|---|---|
+| **電力與冷卻** | 綜合到戶電價 **$0.13/kWh**、**PUE 1.5**，套用於*估計平均*系統耗電（非標稱 TDP）→ **每瓦每月 $0.1423**（$0.13/kWh × 730 h/月 × 1.5） | $0.09–$0.18/kWh、PUE 1.3–1.7，會使電力項變動約 **±45%** | 假設。屬產業常規，非 ReliableSite 揭露值。 |
+| **估計系統耗電** | 70W（DDR3 世代 4 核清倉機）· 110W（Ryzen 5600X／8600G 級）· 130W（EPYC 4545P 128GB，65W TDP CPU）· 145W（EPYC 4545P 256GB）· 220W（Ryzen 9950X 256GB，170W TDP CPU 搭配大量 DIMM 與 NVMe）· 300W（A10 GPU 節點：150W GPU + 65W CPU + 平台） | — | 假設。由公開 TDP 與零組件數量推得的工程估計值，**非實測值**。 |
+| **空間與機櫃** | **每台每月 $10** 攤提——機櫃、佈線、PDU、交叉連接，以及電力以外的設施成本 | $8–$25 | 假設。低端錨點反映的是在次級成本市場以租賃 wholesale 空間進行高密度單路部署；他們自家網站載明 Querétaro 為 258,000 平方英尺、31 MW，屬 wholesale 規模經濟。若其密度確實顯著優於每台 1U，真值會落在此區間下緣或更低，**這會把以下所有天花板往上推。** |
+| **頻寬** | **每台每月 $10** 綜合值 | $8–$30 | 假設。低端錨點的理由：他們自營 AS，於五個交換中心（Any2West、DE-CIX New York、Equinix Miami、FL-IX、NYIIX）以 100G 公開對等，1–5 Tbps 且以出向為主、採開放對等政策，故相當比例流量為免結算。其行銷宣稱不限流量、每台 10 Gbps 以上，那是突發與埠速宣稱，**不是承諾速率成本**。 |
+| **其他營運成本** | **每台每月 $12**——自有工程與客服人力、IPMI／KVM 佈建、DDoS 清洗、作業系統授權、帳務、金流與退款爭議 | $10–$30 | 假設。 |
+| **據此套用的營運成本合計** | **$42**（Intel Special）· **$48**（Ryzen 5600X、Ryzen 8600G）· **$50**（EPYC 4545P 128GB）· **$53**（EPYC 4545P 256GB）· **$63**（Ryzen 9950X 256GB）· **$75**（A10 GPU 節點）——每台每月 | 依上述各區間之全幅敏感度約為每台每月 **$35–$140** | 假設，由上列四項假設推導而得。 |
+
+**刻意排除的項目，以及其偏誤方向。** 出租率假設為 **100%**；現實 70–85% 的使用率會使每一個天花板下修 15–30%，而線上頁面多數 SKU 只剩單台庫存，顯示他們確實跑得很緊。資金成本、IP 位址租賃成本（考量其宣告空間多為租賃，此項並不小）、上架工時與 RMA 備品全數排除。**因此本節公布的每一個天花板都是樂觀上限。若某個 SKU 在這樣的天花板下已經無法涵蓋其 BOM，在現實中只會更差。**
+
+**在任何合理假設組合下都成立的那一項發現。** 每月 $49 的 Intel Special，相對 $42 的營運成本假設約產生 **每月 $7 的邊際貢獻**，換算 **12 個月天花板 $84**、**24 個月天花板 $168**。這個金額買不到任何新硬體。他們價格帶最底層只有在完全折舊完畢的機器上才成立——而這正是他們自家清倉頁面所寫的：銷售先前已部署過、採用 SuperMicro 機殼、預期壽命 5 年以上的伺服器。**該層級在新硬體銷售上結構性地無法承接，無論假設怎麼調，往那裡提案都會敗在算術上。**
+
+### 10.2 由租金推導的成本天花板
+
+| SKU | 每月價格 | 規格 | 100% 出租率年營收 | 12 個月回收天花板 | 18 個月 | 24 個月 | 來源 |
+|---|---|---|---|---|---|---|---|
+| **Intel Special** | $49/mo | 4 × Varies（DDR3 世代 Xeon／Core 級）、32GB DDR3、1TB SSD。供應 PNJ + MIA。*估計*系統耗電 70W。 | $588 | **$84** | **$126** | **$168** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+| **AMD Ryzen 5600X (128GB)** | $119/mo | 6 × 3.70 GHz Zen 3、128GB DDR4、1TB NVMe。供應 MIA + PNJ。*估計*系統耗電 110W。 | $1,428 | **$852** | **$1,278** | **$1,704** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+| **AMD Ryzen 8600G** | $159/mo | 6 × 4.30 GHz Zen 4 Phoenix APU、128GB DDR5、2×1TB NVMe。供應 MIA + PNJ。*估計*系統耗電 110W。 | $1,908 | **$1,332** | **$1,998** | **$2,664** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+| **AMD Epyc 4545P (128GB)**——出貨主力，也是機隊中最新的矽晶 | $199/mo | 16 × 3.00 GHz EPYC 4005 Zen 5、65W TDP、AM5 腳位、128GB DDR5、2TB NVMe。供應 LAX + PNJ。*估計*系統耗電 130W。**2025 年 10 月上市時為 $149/mo——十個月內租金上調 34%。** | $2,388 | **$1,788** | **$2,682** | **$3,576** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+| **AMD Epyc 4545P (256GB)**——同時被選為阿姆斯特丹與 Querétaro 開幕 SKU | $279/mo | 16 × 3.00 GHz EPYC 4005 Zen 5、256GB DDR5、4TB NVMe。供應 AMS + LAX + QRO。*估計*系統耗電 145W。**2025 年 10 月與 11 月為 $199/mo——上調 40%，為型錄中漲幅最陡者。** | $3,348 | **$2,712** | **$4,068** | **$5,424** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+| **AMD Ryzen 9950X (256GB)**——唯一在全部六個機房（含達拉斯）皆有庫存的 SKU | $399/mo | 16 × 4.30 GHz Zen 5 Granite Ridge、170W TDP、256GB DDR5、2×4TB NVMe。供應 AMS + DFW + LAX + MIA + PNJ + QRO。*估計*系統耗電 220W。**價格軌跡 $299（2025-06）→ $349（2026-03）→ $359（2026-06）→ $399（2026-08）——十四個月內上調 33%。** | $4,788 | **$4,032** | **$6,048** | **$8,064** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+| **nVidia A10 GPU**——型錄中邊際貢獻最高的 SKU | $699/mo | nVidia A10 24GB GDDR6 PCIe Gen4 加速卡 + 12 × 3.70 GHz（Ryzen 9 7900 級）、128GB DDR5、2×2TB NVMe。供應 LAX。*估計*系統耗電 300W。**2024 年 12 月至 2026 年 3 月為 $599/mo，2026 年 6 月起調升至 $699。** | $8,388 | **$7,488** | **$11,232** | **$14,976** | [2026-08-07 型錄](https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/) |
+
+### 10.3 街頭價物料清單（BOM）
+
+| SKU | 元件 | 零件 | 街頭價 | 來源 |
+|---|---|---|---|---|
+| **AMD Epyc 4545P (128GB) — $199/mo** | CPU | AMD EPYC 4545P，EPYC 4005 系列，16C/32T Zen 5，64MB L3，AM5 腳位，65W TDP，料號 **100-100001764WOF** | **$592.99**（Newegg 標示 Out of stock）。觀察到較低街頭價：eBay $524.99；AMD 定價 $549。 | [Newegg](https://www.newegg.com/amd-epyc-4545p-socket-am5/p/N82E16819113893) |
+| **AMD Epyc 4545P (128GB) — $199/mo** | 機殼 + PSU + 主機板 + NIC（整合式準系統） | **Supermicro AS-1015A-MT** 1U 準系統——16.9 吋深、單路 AM5，支援 EPYC 4005/4004 與 Ryzen 7000/9000 至 170W，4× DDR5 UDIMM 插槽、2× M.2、1× 3.5 吋 SATA、2× 1GbE 內建、500W Platinum PSU。選用整合式準系統而非分件計價，因為它正是對應其型錄中所有 AM5 SKU 的平台等級，且可避免主機板、機殼、電源重複計價。 | **$1,046.00**（NeweggBusiness 標示 Out of stock）。較高街頭價：Broadberry $1,373.56。 | [NeweggBusiness](https://www.neweggbusiness.com/product/product.aspx?item=9b-16-139-455) |
+| **AMD Epyc 4545P (128GB) — $199/mo** | 記憶體 | 4 × 32GB DDR5-5600 ECC UDIMM 2Rx8 CL46，Micron **MTC20C2085S1EC56BD1R**——此為正確的模組類別，因 AM5 的 EPYC 4005 平台使用無緩衝 ECC UDIMM，而非 RDIMM | **每條 $215.34 × 4 = $861.36**（Walmart 標示缺貨） | [Walmart](https://www.walmart.com/ip/MICRON-32GB-DDR5-Server-RAM-ECC-UDIMM-2Rx8-5600-CL46-MTC20C2085S1EC56BD1R/5312708792) |
+| **AMD Epyc 4545P (128GB) — $199/mo** | NVMe 儲存 | 1 × 2TB NVMe M.2 PCIe Gen4——以 Samsung 990 PRO 2TB，**MZ-V9P2T0B/AM** 作為流動性佳的參考 SKU 計價 | **$385.00**（目前追蹤價）。同一追蹤器上的波動脈絡：2026-04-21 高點 $917.84；2023-11-22 低點 $119.99。 | [Pangoly 價格歷史](https://pangoly.com/en/price-history/samsung-990-pro-2tb) |
+| **AMD Ryzen 9950X (256GB) — $399/mo** | CPU | AMD Ryzen 9 9950X，16C/32T Zen 5 Granite Ridge，170W TDP，AM5 腳位 | **$499.99**（Amazon，2026 年 7 月下旬）。其他觀察點：第三方新品 $474.99；2026 年年中 Newegg $485；上市定價 $649。 | [Pangoly 價格歷史](https://pangoly.com/en/price-history/amd-ryzen-9-9950x) |
+| **AMD Ryzen 9950X (256GB) — $399/mo** | 主機板 | **Supermicro H13SAE-MF**，micro-ATX，AM5 腳位（LGA-1718），AMD B650 晶片組，支援 EPYC 4005/4004 與 Ryzen 7000/8000/9000 至 170W，4× DDR5-5200 UDIMM，2× PCIe Gen5 x16（x16/x0 或 x8/x8），2× M.2 PCIe Gen5 x4，內建 IPMI。料號 **MBD-H13SAE-MF-O**。 | **$549.00**（Newegg 牌價，標示缺貨）。觀察到的量價街頭價：$467.11。 | [NeweggBusiness](https://www.neweggbusiness.com/product/product.aspx?item=9b-13-183-830) |
+| **AMD Ryzen 9950X (256GB) — $399/mo** | 記憶體 | 4 × 64GB DDR5 UDIMM 以達 256GB。**值得在需求探詢中提出的技術矛盾：** H13SAE-MF 官方規格為四槽合計 192GB，因此 256GB 組態要嘛是超規格的 4×64GB 插滿，要嘛是使用了與這片顯而易見的 Supermicro 選擇不同的主機板。**GAP——無法取得任何 64GB DDR5 ECC UDIMM 模組的已查證街頭價。** 此處以 2026 年 7 月所報消費級／UDIMM DDR5 市價每 GB $12–$14 計算。 | **256GB 約 $3,072–$3,584，中點 $3,328——由每 GB 市價推導，非來自模組報價。** 對照之下，registered（RDIMM）市場更嚴峻：64GB DDR5-5600 RDIMM 報價每條 $2,064.00，即每 GB $32.25，256GB 約需 $8,256。 | [DDR5 選購指南，2026 年 7 月](https://techfuelhq.com/articles/ddr5-ram-buying-guide-2025/) |
+| **AMD Ryzen 9950X (256GB) — $399/mo** | NVMe 儲存 | 2 × 4TB NVMe M.2 PCIe Gen4 | **一對估計 $1,500–$1,700——非已查證報價。** 係以已查證的 2TB 參考價（$385）等比放大，並套用所報 4TB 與 8TB 容量的不成比例溢價推得。支持此加成的市場脈絡：NAND 價格自 2025 年底以來約已翻倍；一年前 $120–$150 的 2TB NVMe 現價 $300–$480；4TB 與 8TB 區間出現不成比例的價格飆升與庫存短缺。 | [2026 年 NAND 短缺](https://tech-insider.org/ssd-prices-nand-shortage-2026/) |
+| **AMD Ryzen 9950X (256GB) — $399/mo** | 機殼 + PSU | 1U 機架式機殼含電源。參考價取自 Supermicro SuperChassis **CSE-505-203B**（1U、200W 80 PLUS Gold、9.8 吋深）。**尺寸相容性警語：** CSE-505 僅接受 mini-ITX，而 H13SAE-MF 為 micro-ATX——實際組裝需要 SC813 級機殼或直接採用 AS-1015A-MT 準系統。**此列應視為機殼與電源項目的下限價，而非已驗證的搭配。** | **$204.92** | [CompSource](https://www.compsource.com/buy/CSE505203B/Supermicro-428) |
+| **nVidia A10 GPU — $699/mo** | GPU | NVIDIA A10 Tensor Core，24GB GDDR6，PCIe Gen4，單槽被動式，150W | **$2,750**（美國新品最低在架報價）。43 筆在架報價中位數約 $4,299–$4,320；最高 $4,750。 | [GPU 報價追蹤](https://gpupoet.com/gpu/shop/nvidia-a10) |
+| **nVidia A10 GPU — $699/mo** | CPU | AMD Ryzen 9 7900，12C/24T Zen 4，基頻 3.7 GHz，65W TDP，AM5 腳位——由型錄自身的 `data-cores=12` 與 `data-cpu-speed=3.70` 屬性判定 | **未查證——GAP。** 搜尋結果回傳的是 Ryzen 9 7900**X**（觀察區間 $199.99 至 $316），而非非 X 的 7900。僅為彙總目的採用約 **$330** 的佔位值，並標示為未查證。 | [Amazon 商品頁](https://www.amazon.com/AMD-7900-24-Thread-Unlocked-Processor/dp/B0BMQK718H) |
+| **nVidia A10 GPU — $699/mo** | 主機板 | Supermicro **H13SAE-MF**（雙 PCIe Gen5 x16 使其成為單槽 A10 的自然承載平台），**MBD-H13SAE-MF-O** | **$549.00** | [NeweggBusiness](https://www.neweggbusiness.com/product/product.aspx?item=9b-13-183-830) |
+| **nVidia A10 GPU — $699/mo** | 記憶體 | 4 × 32GB DDR5-5600 ECC UDIMM，Micron **MTC20C2085S1EC56BD1R**，合計 128GB | **每條 $215.34 × 4 = $861.36** | [Walmart](https://www.walmart.com/ip/MICRON-32GB-DDR5-Server-RAM-ECC-UDIMM-2Rx8-5600-CL46-MTC20C2085S1EC56BD1R/5312708792) |
+| **nVidia A10 GPU — $699/mo** | NVMe 儲存 | 2 × 2TB NVMe M.2 PCIe Gen4，以 Samsung 990 PRO 為參考 | **$385.00 × 2 = $770.00** | [Pangoly 價格歷史](https://pangoly.com/en/price-history/samsung-990-pro-2tb) |
+| **nVidia A10 GPU — $699/mo** | 機殼 + PSU | 可承載 GPU 的 1U／2U 機殼，電源需可支撐 150W 被動式加速卡（被動卡需要導風設計） | **未計價——GAP。** 未能指認或取得任何具體可承載 GPU 的機殼 SKU 報價。**因此以下彙總低估了這個組態的實際成本。** | [Supermicro 機殼產品線](https://www.supermicro.com/en/products/chassis) |
+
+### 10.4 彙總——街頭組裝成本對比租金推導天花板
+
+**組態 A——AMD EPYC 4545P、128GB DDR5、2TB NVMe，售價每月 $199。**
+街頭價組裝：CPU $592.99 + AS-1015A-MT 準系統 $1,046.00 + 4×32GB ECC UDIMM $861.36 + 2TB NVMe $385.00 = **$2,885.35**。
+對比租金推導天花板：**12 個月 $1,788——短少 $1,097。18 個月 $2,682——短少 $203。24 個月 $3,576——過關，尚餘 $691。**
+請仔細看這個結果。**他們最新、出貨量最大、刻意以能效為由選定的平台，在十八個月內回收不了自身的街頭價物料成本，需要大約二十二個月。** 而且這還是對照一個假設 100% 出租率、且未計資金成本的樂觀天花板。
+
+**組態 B——AMD Ryzen 9950X、256GB DDR5、2×4TB NVMe，售價每月 $399。** 這是唯一在全部六個機房都有庫存的 SKU，也是阿姆斯特丹開幕的兩款 SKU 之一。
+街頭價組裝：CPU $499.99 + H13SAE-MF $549.00 + 256GB DDR5 約 $3,328（推導值——見 10.3 之 GAP）+ 2×4TB NVMe 約 $1,600（估計值——見 10.3 之 GAP）+ 機殼／電源 $204.92 = **約 $6,181.91**。
+對比天花板：**12 個月 $4,032——短少約 $2,150。18 個月 $6,048——短少約 $134，基本上是平手。24 個月 $8,064——過關，尚餘約 $1,880。**
+**光是記憶體就佔這個組態的 54%。這一個數字就是他們 2026 年的全部故事。**
+
+**組態 C——nVidia A10 GPU 節點、128GB DDR5、2×2TB NVMe，售價每月 $699。**
+街頭價組裝：A10 $2,750（最低報價；中位數 $4,299）+ CPU 約 $330（未查證——見 10.3 之 GAP）+ H13SAE-MF $549.00 + 128GB ECC UDIMM $861.36 + 2×2TB NVMe $770.00 = **約 $5,260，且未含未計價的 GPU 機殼**。
+對比天花板：**12 個月 $7,488——過關，即使尚未計入機殼仍餘約 $2,228。18 個月 $11,232 與 24 個月 $14,976——輕鬆過關。** 即使以 $4,299 的 GPU 中位數計，組裝成本約 $6,810，仍可在十二個月內回收。
+
+#### 這個落差對「整合平台 vs. 自行組裝」的提案意味著什麼
+
+1. **自行組裝的優勢已經反轉，而 2026 年就是原因。** 2023 年至 2025 年底，這家公司的整套模式之所以成立，是因為零組件街頭價下跌快於租金下跌：在型錄中，相同組態逐年變便宜——Ryzen 3700X 128GB $139 → $99、Ryzen 5950X 128GB $269 → $139、i9-13900K 128GB $299 → $179。買零件自己鎖起來，明確就是最便宜的路徑。**2026 年 3 月起，這件事劇烈反轉。** 型錄中每一組可對照的組態現在都在漲：EPYC 4545P 128GB $149 → $199（+34%）、EPYC 4545P 256GB $199 → $279（+40%）、Ryzen 9950X 256GB $299 → $399（+33%）、Ryzen 9950X 192GB $249 → $329（+32%）、A10 GPU $599 → $699（+17%）、Ryzen 7950X 192GB $239 → $299（+25%）。**漲幅與裝機記憶體容量成正比，這指認了 DRAM 就是驅動因子。** 他們正把零組件通膨原封不動轉嫁給客戶，而記憶體容量最高的 SKU 被調價得最兇。
+
+2. **算術現在站在你這邊，而不是對立面。** 記憶體與 NAND 便宜的年代，沒有任何整合商打得過一家在公開市場買 DIMM 的主機商。今天，一家握有 DRAM 與 NAND 契約供應、且具備主機板量價的供應商，可以把整合式 EPYC 4005 或 Zen 5 節點的落地價，做到明顯低於組態 A 的 $2,885 街頭價——而 **18 個月回收與 22 個月回收之間的差距，恰恰就是「他能核准的系統」與「他會延後的系統」之間的差距。** 這就是提案本身：不是效能、不是密度、也不是抽象的 TCO，而是**把他們目前在街頭價下做不成的組態，回收期拉回十八個月以內**。
+
+3. **佐證他們已經撞上這道牆的訊號。** 他們的型錄已連續四次快照、涵蓋十個月沒有出現新的 CPU 或 GPU 世代，對比 6.4 個月的歷史中位數（見 9.2）。整條大容量 HDD 儲存線（32TB、40TB、80TB）在 2026 年 6 月至 8 月間消失。2,048GB Threadripper 旗艦消失。型錄廣度由 2025 年 10 月的 40 個 SKU 家族崩落至 2026 年 8 月的 17 個。**一家正在採購的主機商，不會在十個月內把型錄砍掉 58%。他們已經停止採購、改為調價——而且是在同時建置阿姆斯特丹、達拉斯與 Querétaro 的情況下這麼做，這個矛盾終究必須以一筆採購來收斂。**
+
+4. **從 GPU 層級切入，而且現在就切。** 組態 C 以最低街頭 GPU 價計算，十二個月回收還有約 $2,200 餘裕；而他們的 A10 自 2024 年 12 月起就是 GPU 旗艦——在 L4 與 L40S 等級加速卡都已出貨的情況下，一張 Ampere 世代產品撐了二十個月。它同時是他們**邊際貢獻最高的 SKU**（相對假設營運成本為每月 $624，EPYC 4545P 僅 $149）與**最陳舊的 SKU**。這個組合是本帳戶最強的單一切入點。
+
+5. **不要往價格帶底層提案。** 每月 $49 的 Intel Special 約產生每月 $7 邊際貢獻，即使拉到二十四個月，天花板也只有 $168。該層級照設計就是跑在完全折舊的機器上——他們自家清倉頁面就是這麼寫的——**任何新硬體提案碰到它都活不下來。**
+
+**GAP——支撐「機殼 vs. 主機板錢包切分」的自製機殼前提，在本次研究中未獲佐證。** 本次工作的任務說明指出 ReliableSite 已轉為自行設計機殼、密度較 1U 高約 50%。**本次查核未找到該轉換的任何公開證據，因此也無法自型錄推定其時點。** 紀錄上呈現的反而是相反的延續性：其機房頁面自 2015-06-22 至 2025-12-08 的每一次封存擷取中，都**原封不動**載有 *"Every dedicated server offered is physically racked using only server grade SuperMicro equipment in tier 3 and tier 4 facilities"* 這句話，且今日 2026-08-10 的線上頁面仍然在列。清倉頁面自 2015-04-06 至 2024-07-15 亦原封不動載有 *"Each clearance server includes a quality server grade motherboard and SuperMicro branded rackable chassis with a 5+ year life expectancy"*，今日同樣仍在。本次查核所涵蓋的機房頁、清倉頁、首頁、關於頁、新聞室、PeeringDB，以及回傳的 Web Hosting Talk 與 LowEndTalk 結果中，均未出現自製機殼、自研機殼或任何密度宣稱。可能該轉換確實發生但未留下公開痕跡——這完全有可能，因為機殼選擇對客戶不可見——也可能該前提本身不準確。**在以此為基礎建立任何提案之前，必須直接向客戶查證，因為它決定了剩餘錢包究竟是「只有主機板」，還是「主機板加準系統加機殼」。** 本項並未推翻第 6 節（該節奠基於 CEO 第一人稱專訪），而是記錄：為第 8 至 10 節所蒐集的型錄與網站證據，並未獨立佐證該說法（[機房頁](https://www.reliablesite.net/data-center/)；[清倉伺服器頁](https://www.reliablesite.net/dedicated-servers/clearance-servers/)）。
+
+**GAP——自建組裝說法之信心度已下調。** 未能自阿姆斯特丹新聞室貼文萃取硬體相關的逐字句子。某搜尋引擎對該網址的摘要宣稱，阿姆斯特丹設施由 ReliableSite 自有技師駐點、硬體全數由 ReliableSite 擁有，所有伺服器均由其自行組裝、上架、佈線與維護。直接抓取該頁面並未回傳這些句子。**對客戶引用前必須重新查證**——此點重要，因為它是「他們採購主機板與準系統而非整合式系統」的最強可得訊號（[阿姆斯特丹新聞室貼文](https://www.reliablesite.net/hosting-news/reliablesite-dedicated-servers-are-now-available-in-amsterdam/)）。
+
+**GAP——採購通路尚未確立。** 他們究竟是向 Supermicro 直接採購、透過通路商，還是透過電商經銷商，**無法自公開紀錄判定。** 完全沒有 PMSI 備案（見第 8 節）與交易式採購一致，但並不足以證明——現金買方無論走哪條通路都不會產生備案。**就規則 8 通路核准而言，這是需求探詢中最重要的一項待確認事項，而且只能靠開口問。**
+
+---
+
+## 11. 客戶與網路
 
 ### 具名客戶（全部來自公司自行發布的案例研究）
 
@@ -186,7 +430,7 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 
 ---
 
-## 9. 政治與公開紀錄
+## 12. 政治與公開紀錄
 
 本節僅涵蓋具名負責人，且每一項均附明確標記。
 
@@ -201,7 +445,7 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 
 ---
 
-## 10. 公開聯絡管道
+## 13. 公開聯絡管道
 
 **僅限公開來源。本表不列任何個人行動電話與私人住址，研究過程亦未蒐集。若無已公布之管道，該列標記為 GAP。**
 
@@ -223,7 +467,7 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 
 ---
 
-## 11. Supermicro 銷售切入點
+## 14. Supermicro 銷售切入點
 
 ### 分類：**已確認既有客戶——但實際上是「機殼已流失、板級仍開放」的防守戰，外加 GPU 全新開發。**
 
@@ -253,9 +497,9 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 
 ---
 
-## 12. 查證附錄
+## 15. 查證附錄
 
-### 12.1 單一來源支撐的說法——引用前須再驗證
+### 15.1 單一來源支撐的說法——引用前須再驗證
 
 | 說法 | 唯一來源 | 風險 |
 |---|---|---|
@@ -267,7 +511,7 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 | **Querétaro 區域** | ReliableSite 自家機房頁與網路頁 | **僅有公司自行公布；設施營運商未具名，亦無法獨立識別**（[Querétaro 頁](https://www.reliablesite.net/data-center/queretaro-mexico.aspx)） |
 | **三則具名客戶案例** | ReliableSite 自行發布之案例研究 | **業者自行發布，未經獨立查證。Scirra 的規格年代顯示為舊案例** |
 
-### 12.2 第三方估計互相矛盾之處——並列呈現，刻意不擇一
+### 15.2 第三方估計互相矛盾之處——並列呈現，刻意不擇一
 
 **營收**
 
@@ -299,7 +543,7 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 
 第 5 節中所有已公布的面積／電力數字，**全部是房東的整棟數值**（QTS：360,000 sq ft／約 176,000 sq ft raised floor／約 52–65 MW；CoreSite MI1：約 43,000+ sq ft）。**ReliableSite 自身的房客配額在任何一個站點都未公開。房東數字與房客數字永遠不得當作同一種量測併用。**
 
-### 12.3 未結 GAP
+### 15.3 未結 GAP
 
 1. **伺服器數、節點數、機櫃數**——公司與任何第三方皆未公開。僅能由約 50,944 個宣告 IPv4 位址間接推得。**首通電話直接問。**
 2. **ReliableSite 在每一個設施的自身租用量體**（sq ft、cage／套房面積、合約 kW／MW）——QTS Piscataway、CoreSite MI1、CoreSite LA1／LA2、Equinix MI1／AM7、Databarn、165 Halsey，全部未公開。現有數字全為房東整棟值。
@@ -315,7 +559,7 @@ ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／�
 12. **三則已發布案例（Scirra、CloudieWeb、Little Planes Farm）以外的具名企業客戶。** 無 logo 牆、無客戶清單、無轉售商名冊。
 13. **BBB「F」評等（5 件投訴未回應，檔案開立於 2018-02-26）屬客服聲譽訊號，不是法律或監理處分。** 查無任何訴訟、執法或制裁紀錄。此處記載是為了避免日後才被發現，不代表對該公司構成不利認定。
 
-### 12.4 影響本檔完整度的工具與取得限制
+### 15.4 影響本檔完整度的工具與取得限制
 
 - **JavaScript 驅動介面無法以程式查詢：** fec.gov 個人捐獻查詢與 OpenSecrets 捐款人查詢。**因此 Rodion Davydov 的 FEC 結果屬「未取得資料」，不得寫成「沒有政治獻金」。**
 - **本次研究遭遇的 HTTP 阻擋來源：** Web Hosting Talk（403）、datacentermap（429）、datacenters.com（403）、ZoomInfo（403）、Crunchbase（403）。凡依賴上述來源之發現，本檔皆已標記為社群來源、次級擷取或第三方估計。
