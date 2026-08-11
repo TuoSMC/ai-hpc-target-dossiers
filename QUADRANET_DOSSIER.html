@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,7 +66,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>QuadraNet (QuadraNet Enterprises, LLC) — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>QuadraNet (QuadraNet Enterprises, LLC) — Sales Intelligence Dossier</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-04
 <strong>Method:</strong> Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. <span class="gap">GAP</span> = not found in verified material. No fabrication.
 <strong>Territory:</strong> Los Angeles, California — West Coast South California = <strong>T1</strong> | T2. Team 1 could register, but see the commercial verdict before spending a slot.
@@ -74,7 +76,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>QuadraNet is a Los Angeles bare-metal, colocation, InfraCloud/private-cloud and DDoS-mitigation provider founded in 2001 by Ilan Mishan, operating AS8100 out of the Telecom Center building at 530 W 6th Street downtown plus leased space in roughly a dozen third-party facilities across the US and one in the Netherlands. <strong>The commercial verdict is: do not forward-sell this account</strong> — it is a credit-risk, asset-tracking and successor-account file, not a server pipeline, because the company has effectively collapsed (sold by VSS Capital Partners to Edge Centres on 2024-04-08; the Australian parent Edge Centres Pty Ltd had a liquidator appointed 2025-06-16; 200,000+ IPv4 addresses sold to HostPapa in early 2025; LA colocation customers given roughly one week to vacate in February 2025). The single strongest piece of evidence in this file is the hardware confirmation: QuadraNet's own promotional spec sheets state the chassis vendor verbatim — "1U Supermicro Server – 4x Hot-Swap Bays" on all four published LA dedicated-server SKUs, and "Supermicro CSE" chassis with "Supermicro IPMI" on its own bare-metal specials page (<a target="_blank" rel="noopener noreferrer" href="https://lowendbox.com/blog/quadranet-exclusive-black-friday-dedi-offers-in-los-angeles/">LowEndBox exclusive offers</a>) — so Supermicro is a confirmed incumbent platform here, first-party and verbatim. The one thing that kills any deal is the unresolved legal and operating status of the US entity after the parent's liquidation: nobody has established whether QuadraNet Enterprises, LLC and Edge Centres LLC (US) are in receivership, dissolved, on-sold or nominally trading, and until that is answered no selling hours and no credit terms of any kind should be committed.</p>
 <hr />
 <h2>2. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -119,11 +121,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Los Angeles, CA → <strong>West Coast South California = T1 | T2</strong> per "Territory Map-Jan.2026 (Rev.1)" Sales Territory Assign tab → Team 1's own territory (T2 may also work it), <strong>but the target itself has collapsed</strong>.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. Corrections to the working list</h2>
 <p>Only the rows that concern QuadraNet. Read these before any first contact — opening on a wrong premise loses credibility immediately.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -158,13 +160,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Across the six-provider study only <strong>two</strong> are confirmed Supermicro (ReliableSite and QuadraNet — and QuadraNet has collapsed); one is strong circumstantial; one is an inference signal only; one is entirely unverified; one is confirmed <strong>Lenovo</strong>. For QuadraNet specifically the premise is correct — but correct about a company that no longer functions.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Leadership &amp; ownership</h2>
 <p><strong>Ownership chain:</strong> founder-owned (Ilan Mishan, from 2001) → <strong>VSS / Veronis Suhler Stevenson</strong> private equity → <strong>Edge Centres</strong>, completed on or about <strong>2024-04-08</strong> (terms undisclosed). No individual VSS deal partner or board director is named in any accessible source — QuadraNet Enterprises, LLC is an LLC, so no board roster is publicly filed (<strong><span class="gap">GAP</span></strong>). <strong>Insolvency-status note:</strong> a dedicated insolvency check in this pass returned <strong>nothing</strong> — CourtListener's federal API shows <strong>no</strong> QuadraNet bankruptcy, receivership or assignment-for-benefit-of-creditors docket (all 48 "QuadraNet" hits are third-party matters where QuadraNet was merely the hosting provider), and no administrator/liquidator appointment for Edge Centres was located. The collapse mechanism that <strong>is</strong> documented is state-court unlawful detainer plus piecemeal asset sales, not a formal insolvency proceeding. The ASIC winding-up notice cited elsewhere in this file (§2, and the Edge Centres row below) was <strong>not re-confirmed in this pass</strong> — treat "parent in liquidation" as an unresolved conflict, not as an established fact.</p>
 <h3>4.1 Named people — company, registry and network records</h3>
 <p>Evidence grade: <strong>primary-record</strong> = company-published or state/registry/court filing · <strong>corroborated</strong> = two or more independent sources · <strong>single-source</strong> = one source only · <strong>unverified</strong> = user-generated content, not corroborated.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -403,9 +405,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>n/a — entities</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.2 Registry record</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -459,12 +461,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/entity/QEL-5">ARIN RDAP — QEL-5</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 Buying committee</h3>
 <blockquote>
 <p><strong>THRESHOLD FINDING — there is currently no credible active server-purchase authority at QuadraNet. This overrides every individual route below.</strong> Evidence that the operating business has collapsed: (1) quadranet.com now serves only a black placeholder page containing a logo image and nothing else; (2) blog.quadranet.com no longer resolves in DNS and squiggly.quadranet.com refuses connections on port 443, so the company's own leadership, careers and news pages are gone; (3) AS8100 is still "active" but announces only 2 prefixes with 2 peers, against 18,500 IPv4 prefixes recorded in its PeeringDB entry — consistent with the IP address space having been sold off; (4) the landlord filed two unlawful detainer actions on 2025-02-13 (verified 2025-02-12) over <strong>$318,722.24</strong> and <strong>$280,657.52</strong> of past-due rent, roughly <strong>$599,379</strong> combined, after posting 3-day notices on 2025-02-06, and customers were given about one week to remove equipment from Los Angeles. <strong>Treat any QuadraNet-branded hardware opportunity as a wind-down / asset situation, not a refresh cycle.</strong> Do not open a hardware pursuit against QuadraNet as an operating account. Redirect to the successor operators who actually absorbed the workloads and footprint — Hivelocity (AS29802) and Multacom (AS35916), the only remaining AS8100 peers — and to Edge Centres as the parent that still controls the brand. If the goal is distressed hardware acquisition rather than a sale, the counterparty is the landlord / asset side, not QuadraNet management.</p>
 </blockquote>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -504,7 +506,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Do not treat as a buying-committee member for a hardware purchase order.</strong> Useful only as a lateral introduction to the technical and finance seats, or as a channel / partner contact. No public LinkedIn URL or individual contact was confirmed for him</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 Unfilled roles — every role that could not be named</h3>
 <p><strong><span class="gap">GAP</span></strong> — <em>Insolvency practitioner / assignee / liquidator / trustee</em>: <strong>NOT FOUND, and the briefing premise appears unsupported</strong> — CourtListener's federal API returned no QuadraNet bankruptcy, receivership or assignment-for-benefit-of-creditors docket, and no Australian administrator or liquidator appointment for Edge Centres was found; the verified collapse mechanism was state-court unlawful detainer plus piecemeal asset sales, <strong>so do not brief "parent in liquidation" as fact</strong>. · <strong><span class="gap">GAP</span></strong> — <em>Chief Financial Officer, currently serving</em>: <strong>AMBIGUOUS</strong> — Brian Flowers was CFO from 2018-08-21 per company press release; Ken Lee is described as CFO in a third-party profile but is only filed with the state as Manager and Agent for Service of Process; <strong>no filing names a current CFO</strong>. · <strong><span class="gap">GAP</span></strong> — <em>VP of Infrastructure / VP of Engineering</em>: no such role found in any source. · <strong><span class="gap">GAP</span></strong> — <em>Procurement / purchasing lead / supply-chain manager</em>: <strong>no name and no evidence the role exists</strong> — no procurement title appeared in any filing, press release, directory or job listing. · <strong><span class="gap">GAP</span></strong> — <em>Chief Operating Officer</em>: none identified. · <strong><span class="gap">GAP</span></strong> — <em>General Counsel / legal lead</em>: none identified; notably the USPTO filing shows "Attorney of Record — None", i.e. the company self-filed, suggesting no in-house counsel at that time. · <strong><span class="gap">GAP</span></strong> — <em>VP of Information Executive &amp; CIO</em>: role <strong>exists</strong> but name withheld — LeadIQ exposes only initials "J. G.". Not guessed. · <strong><span class="gap">GAP</span></strong> — <em>VP of Administration and People (HR lead)</em>: role exists, initials "C. W." only. · <strong><span class="gap">GAP</span></strong> — <em>Director of Information Technology</em>: role exists, initials "B. H." only. · <strong><span class="gap">GAP</span></strong> — <em>Chief Cloud Officer</em>: role exists, initials "W. S." only. · <strong><span class="gap">GAP</span></strong> — <em>Technical Support Manager, Data Analyst, Sales Engineer, Technical Advisor, Advertisement Manager</em>: roles exist in the LeadIQ directory but <strong>all</strong> names are masked to initials ("J. E.", "E. W.", "Z. M.", "J. W.", "W. J.", "A. B."). · <strong><span class="gap">GAP</span></strong> — <em>"Michelle"</em>: a real staff first name evidenced by the USPTO correspondent e-mail michelle@quadranet.com on serial 87762260, but the <strong>surname is not recoverable from any source</strong>. · <strong><span class="gap">GAP</span></strong> — <em>Trademark declaration signatory and title</em>: <strong>not recoverable</strong> — TSDR's status view does not expose the signatory and the document viewer surfaced only the Notice of Abandonment. · <strong><span class="gap">GAP</span></strong> — <em>QuadraNet's own lease signatories</em>: <strong>not recoverable</strong> — on the Sixth and Seventh Amendment signature pages the QuadraNet, Inc. and QuadraNet Enterprises, LLC blocks were executed with illegible handwritten signatures and the printed "Name:" and "Title:" lines <strong>left blank</strong>; the pages were rendered to images at 3x zoom to check visually and no name is legible. <strong>Deliberately not guessed.</strong> · <strong><span class="gap">GAP</span></strong> — <em>Named NOC / network engineers on ARIN and PeeringDB</em>: <strong>none exist</strong> — every ARIN POC is a role account and the PeeringDB poc_set is completely empty. · <strong><span class="gap">GAP</span></strong> — <em>Named hiring managers or recruiters from job postings</em>: none published — the archived careers page carries no named contact, no listed roles and no hiring manager; it simply redirects applicants to the LinkedIn page and a general number, 888-578-2372. · <strong><span class="gap">GAP</span></strong> — <em>Conference speaker bios (HostingCon, WHD.global, DataCenter World, Cloudfest)</em>: searched, <strong>none found</strong>; the only conference evidence located was NANOG attendance, which yielded Kate Gerry. · <strong><span class="gap">GAP</span></strong> — <em>Named VSS deal partner or board director</em>: no individual named in any accessible source; QuadraNet is an LLC, so no board roster is publicly filed. · <strong><span class="gap">GAP</span></strong> — <em>Delaware registry officers / managers</em>: <strong>not obtained</strong> — icis.corp.delaware.gov is blocked by browser policy here; note that Delaware LLC filings would not have disclosed members or managers anyway, so the California Statement of Information is the better source and was used. · <strong><span class="gap">GAP</span></strong> — <em>UCC-1 secured parties and debtor signatories</em>: <strong>not obtained</strong> — the California UCC search sits behind a bot-detection gate that was not bypassed. · <strong><span class="gap">GAP</span></strong> — <em>FEC contribution records</em>: <strong>not established for eleven of the twelve individuals</strong> — see §4.5; no "no record found" determination can be claimed for anyone except the single Ilan Mishan record captured in an earlier pass and recorded in §12.</p>
 <h3>4.5 Sources worked — what was actually queried, and what returned nothing</h3>
@@ -515,7 +517,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>5. Footprint — sites and datacenters</h2>
 <p>With the sole exception of QuadraNet DTLA and QuadraNet LAX, <strong>every one of these sites is leased space inside a third-party operator's facility — QuadraNet is not a datacenter owner at those locations.</strong> Present-day operational status of any of them is unverified after the January 2025 multi-day outages and the February 2025 LA evictions.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Site</th>
@@ -592,10 +594,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>A search-derived summary of the Preqin/Mergr acquisition records lists QuadraNet facilities in "Los Angeles, Atlanta, Chicago, Dallas, Miami, New Jersey, Reston, St. Louis, and Seattle". <strong>Reston and St. Louis do NOT appear in PeeringDB for AS8100 and do not appear on any QuadraNet page reachable — tag: unverified</strong> (<a target="_blank" rel="noopener noreferrer" href="https://mergr.com/transaction/edge-centres-acquires-quadranet">Mergr transaction record</a>).</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>6. Hardware fleet — vendors with explicit evidence grade</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -630,7 +632,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>No HPE, ProLiant or iLO reference found in any QuadraNet spec page, offer post, forum thread, job posting or facility listing across all searches performed.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>CPU generations observed and what they imply about fleet age:</strong> Nehalem/Lynnfield (X3450), Westmere (E5620), Haswell (E3-1241v3), Ivy Bridge (E5-2650 v2), Broadwell (E5-2620v4 / E5-2698 v4), Coffee Lake (E-2124G). <strong>Nothing newer than Broadwell/Coffee Lake is documented anywhere.</strong> That means the fleet was <strong>already 5–10 years behind current silicon before the company collapsed</strong> — a refresh-starved estate rather than a mid-cycle one.</p>
 <hr />
 <h2>7. GPU &amp; AI position</h2>
@@ -650,7 +652,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </blockquote>
 <p>This is <strong>not</strong> a "no filings" finding. <strong>Zero result rows — positive or negative — were retrieved from any UCC index.</strong> Four separate California attempts returned Imperva/Incapsula interstitials; Delaware has no free public debtor-name search at all and gates searching to state-authorized searchers behind a fee schedule; Florida was left unsearched because its free registry sits behind a click-through Terms of Use agreement that was not accepted on the user's behalf; Illinois returned no connection; Georgia returned HTTP 500; Texas requires a paid SOSDirect account. <strong>Any statement that QuadraNet Enterprises, LLC is unencumbered is unsupported by this file.</strong></p>
 <h3>8.2 Search log — every attempt, logged separately, none merged</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Portal</th>
@@ -816,7 +818,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>OpenCorporates API token (free tier for non-commercial, paid from ~<strong>USD 149/mo</strong>), or free interactive search at <a target="_blank" rel="noopener noreferrer" href="https://opencorporates.com/">opencorporates.com</a>; or CA SOS bizfile business-entity search (also Incapsula-blocked from this host).</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 Filings — full text of every filing retrieved</h3>
 <blockquote>
 <h3><strong>ZERO FILINGS RETRIEVED. There is no filing text to reproduce, because no index returned a single row.</strong></h3>
@@ -833,7 +835,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </ul>
 <p><strong>Nothing in this file establishes the presence or absence of a security interest.</strong> The zero-row result is an artefact of access, documented row-by-row in §8.2 above.</p>
 <h3>8.4 What the record means</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Observation</th>
@@ -892,7 +894,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Treat the Delaware UCC-11 as a gating action item with an owner and a date, not as background research. Owner: Team 1 (US8664 Tuo Cheng). Until it is run, the account plan cannot answer whether this buys direct or through channel, and therefore cannot be scored against the Rule 8 distributor-approval requirement or the $100M threshold.</strong> Order it on <strong>Multacom Corporation</strong> and the <strong>Edge Centres US entity</strong> simultaneously — those are the entities with a future, and the same $150 covers all three names.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.5 <span class="gap">GAP</span> — financing-chain track</h3>
 <ul>
 <li><strong><span class="gap">GAP</span> — DELAWARE IS THE WHOLE BALL GAME AND IT IS UNSEARCHED.</strong> QuadraNet Enterprises, LLC is a Delaware LLC, so under <strong>UCC §9-307(e)</strong> any perfected security interest against it is filed in Delaware and nowhere else. Delaware's UCC database is restricted to state-authorized searchers: <strong>$25 certification search per debtor + $25 mandatory expedite + $10 first page / $2 per additional page</strong>, or roughly <strong>USD 75–150 all-in</strong> through a registered agent. <strong>It was NOT run.</strong> Everything in §8.4 about liens is <strong>inference from absence of evidence, not evidence of absence</strong>.</li>
@@ -910,7 +912,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <h2>9. Purchase clock</h2>
 <h3>9.1 Catalogue snapshot timeline</h3>
 <p>Purchase events are defined strictly as <strong>the first catalogue appearance of a new CPU or GPU generation</strong>. Source: Wayback Machine CDX index plus nineteen individually fetched and parsed snapshots of <code>quadranet.com/los-angeles-dedicated-servers</code> and <code>quadranet.com/dedicated-servers/</code>, 2018-10-27 → 2025-12-04, cross-checked against the live site fetched 2026-08-10.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Snapshot date</th>
@@ -1075,7 +1077,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://quadranet.com/">quadranet.com</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 Purchase cadence</h3>
 <p><strong>Observed intervals.</strong> Exactly <strong>ONE</strong> purchase event is observable inside the archived window, and then nothing. <strong>Event 1 (and last):</strong> the Intel Xeon E-2100 series (<strong>E-2124G, E-2146G</strong>; Coffee Lake, Intel launch Q3 2018) first appears in the catalogue between the <strong>2018-10-27</strong> and <strong>2019-01-29</strong> snapshots, simultaneously retiring the entire Xeon E3 line (E3-1230v2, E3-1240v3, E3-1240v6, E3-1270v6) and the older dual-socket tiers (E5-2620v2, E5-2620v3). <strong>From 2019-01-29 through 2025-03-06 — the last live capture, 74 months later — the CPU set never changed once:</strong> E-2124G, E-2146G, Dual Xeon E5-2650, Dual Xeon E5-2620v4, across <strong>nine independently verified snapshots</strong>. Prices also froze completely from 2020-04-25 onward (<strong>59 months, zero movement</strong>). Prior-generation transitions can be <strong>INFERRED</strong> from the silicon present in the 2018-10-27 baseline (E5-2620v2 ≈ 2013–14 purchase, E5-2620v3 ≈ 2015, E5-2620v4 and E3-1240v6/E3-1270v6 ≈ 2017) — implying a roughly <strong>18–24 month</strong> refresh rhythm up to 2018 — <strong>but pre-2018 catalogue snapshots were not pulled, so those are inference, not observation.</strong></p>
 <p><strong>Median months.</strong> <strong>Not computable.</strong> A median requires at least two observed intervals and there is one observed event. What <strong>is</strong> measurable, and is the real number: <strong>74 months</strong> elapsed between the last purchase event (2018-Q4 / 2019-01) and the last live catalogue (2025-03-06), and <strong>91 months</strong> elapsed to today (2026-08-10), with <strong>zero new CPU or GPU generations introduced in that entire span.</strong> The pre-2018 inferred rhythm of ~18–24 months makes the post-2018 freeze roughly <strong>3–4× longer than this operator's own historical cadence</strong>.</p>
@@ -1084,7 +1086,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>Basis.</strong> Wayback Machine CDX index plus <strong>nineteen</strong> individually fetched and parsed snapshots of <code>quadranet.com/los-angeles-dedicated-servers</code> and <code>quadranet.com/dedicated-servers/</code> spanning 2018-10-27 to 2025-12-04, with CPU model strings and per-SKU monthly prices extracted programmatically from each; cross-checked against the live site fetched 2026-08-10. Purchase events defined strictly as the first catalogue appearance of a new CPU or GPU generation. Retarget-window basis: the announced Multacom→Digital Space facility relocation dates and the <a target="_blank" rel="noopener noreferrer" href="https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json">ARIN transfer record</a>.</p>
 <p><strong>Confidence.</strong> <strong>HIGH on the freeze itself</strong> — nine snapshots across 74 months returning an identical CPU set and, from 2020 onward, an identical 13-item price vector is about as unambiguous as web archaeology gets, and it is corroborated independently by the December 2024 "while supplies last / limited inventory" clearance listing and by the 2018 E-2 announcement still being flagged "NEW" in 2025. <strong>MEDIUM-LOW on the pre-2018 cadence</strong>, which is inferred from silicon vintage rather than observed in snapshots. <strong>MEDIUM on the retargeted next-window estimate</strong> — the relocation dates are reported from a community source rather than a company filing, and could not be independently confirmed against a primary document.</p>
 <h3>9.3 Expansion signals</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Date</th>
@@ -1184,7 +1186,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS8100">bgp.he.net/AS8100</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.4 <span class="gap">GAP</span> — purchase-clock track</h3>
 <ul>
 <li><strong><span class="gap">GAP</span> — 2023 IS A HOLE IN THE CATALOGUE RECORD.</strong> The Wayback Machine holds <strong>no 2023 capture</strong> of <code>quadranet.com/los-angeles-dedicated-servers</code>, the page carrying the full SKU table. 2023 coverage rests on three captures of the summary <code>/dedicated-servers/</code> page. Given the catalogue is provably identical either side of the gap (2022-12-05 and 2024-09-05), the risk of a missed purchase event is <strong>low but not zero</strong>.</li>
@@ -1213,7 +1215,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>Sensitivity:</strong> if the true opex ratio is <strong>45%</strong> rather than 52.5%, <strong>every ceiling rises about 16%</strong>. If it is <strong>60%</strong>, <strong>every ceiling falls about 16%</strong>. <strong>The ranking between SKUs is unaffected either way, and the ranking is what matters for the pitch.</strong></p>
 <p><strong>Further caveats (all assumptions, all stated as such):</strong> (1) Ceilings assume <strong>100% occupancy</strong> for the full payback period, which is generous — real utilisation on a low-end fleet with monthly churn is materially below that, so treat these as <strong>optimistic upper bounds</strong>. (2) Ceilings are <strong>pre-tax, pre-financing</strong> and ignore the time value of money. (3) They <strong>exclude switching, routing, out-of-band, cabling and DDoS-scrubbing capex</strong>, all shared infrastructure the node must also carry. (4) The $999 colocation line is a <strong>promotional rate that steps to $1,299 in months 7–12</strong>, and the annual revenue figure holds the $999 rate flat, which <strong>understates</strong> the true 12-month take. (5) <strong>The colocation ceiling is not comparable to the server ceilings</strong> — for colocation the operator buys rack, power and network, not servers.</p>
 <h3>10.2 Rent-derived cost ceilings</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1308,10 +1310,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20241207023812/https://quadranet.com/dedicated-servers/">2024-12-07 archive</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.3 Bill of materials — reconstructed builds</h3>
 <p>All component prices from <strong>parts.theserverstore.com</strong>, fetched <strong>2026-08-10</strong>, single-unit retail.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU reconstruction</th>
@@ -1470,10 +1472,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://parts.theserverstore.com/products/cse-pt34l-supermicro-1u-chassis-mounting-rail-kit-28-37-3-complete-set">theserverstore</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.4 Roll-up — assembled component cost vs rent-derived ceiling</h3>
 <p>All ceilings at the <strong>52.5% opex assumption</strong>.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Build</th>
@@ -1514,7 +1516,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>$1,596.40</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>What the gap actually means for the pitch</strong></p>
 <ol>
 <li>
@@ -1546,7 +1548,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>11. Customers &amp; network</h2>
 <h3>Named customers</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Customer</th>
@@ -1575,7 +1577,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>"QuadraNet has more than <strong>1,000 active customers</strong>" as recorded in coverage of the April 2024 Edge Centres deal; vertical positioning was media, gaming and financial services. <strong>Individual enterprise logos are a <span class="gap">GAP</span> — no enterprise customer names were ever published</strong> (<a target="_blank" rel="noopener noreferrer" href="https://mergr.com/transaction/edge-centres-acquires-quadranet">Mergr transaction record</a>).</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>Network, capacity, peering and IX presence</h3>
 <ul>
 <li><strong>ASN:</strong> <strong>AS8100</strong> — ASName ASN-QUADRANET-GLOBAL, ARIN-allocated <strong>2009-10-22</strong>, org QuadraNet Enterprises LLC. PeeringDB "aka" field reads "FKA AS29761". IRR AS-SET: <strong>AS-SET-QUADRANET</strong>. BGP communities published via RADB include 8100:6666 (blackhole), 8100:1 / 8100:2 / 8100:3 (prepend), 8100:9 (global no-export).</li>
@@ -1596,7 +1598,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>13. Public contact channels</h2>
 <p><strong>Public-source only. No personal mobile numbers and no private addresses are recorded in this file. <span class="gap">GAP</span> is shown where no published channel exists.</strong> Given the company's state, most of these are degraded or dead — each is flagged.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -1656,7 +1658,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://quadranet.com">quadranet.com</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro sales angle</h2>
 <h3>Classification: <strong>NOT A FORWARD-SELLING TARGET</strong> — credit risk and asset tracking only</h3>
@@ -1677,7 +1679,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>15. Verification appendix</h2>
 <h3>15.1 Single-source claims — re-verify before quoting</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Claim</th>
@@ -1717,10 +1719,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Third-party marketing, not a QuadraNet spec page. Every QuadraNet-authored configuration recovered is Intel Xeon. Unverified.</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 Conflicting third-party estimates — shown side by side, not resolved</h3>
 <p><strong>Headcount</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1737,10 +1739,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>No usable figure</strong> — all paywalled or HTTP 403</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Single third-party source, no cross-corroboration. Post-liquidation headcount is almost certainly far below 28 — <span class="gap">GAP</span>.</strong> Separately, Enlyft's profiling of QuadraNet's <em>customer base</em> (not its own staff) indicates its customers skew small: 82% under 50 employees, 11% mid-size, 6% over 1,000 employees.</p>
 <p><strong>Revenue</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1757,10 +1759,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>None exists</strong> — private company, VSS sale price never disclosed</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Vintage unknown, almost certainly pre-2024, and no longer representative after the 2025 asset sales, customer evictions and parent liquidation. Do not present as fact.</strong></p>
 <p><strong>LA square footage — two different things being measured</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1780,10 +1782,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Whole building</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>These are not reconcilable and should not be mixed.</strong> The same pattern applies to Dallas (68,000 sq ft) and Miami (50,000 sq ft) — both are facility totals, not QuadraNet's occupied footprint.</p>
 <p><strong>Network capacity</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1800,7 +1802,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>"over <strong>300 Gbps</strong> of capacity" — <strong>marketing, unverified</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Different measurements; and both are historical — actual present-day usable capacity is a <span class="gap">GAP</span> and likely near zero given the network teardown.</strong></p>
 <h3>15.3 Open gaps</h3>
 <ol>
@@ -1825,8 +1827,8 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>HTTP-blocked sources:</strong> WebHostingTalk (403), datacenters.com (403), ZoomInfo (403), Crunchbase (403), HostingAdvice (403), DataCenterDynamics (403), bizfileonline.sos.ca.gov (403), Bizapedia / OpenCorporates (security check / CAPTCHA, not bypassed). <strong>Any finding that depends on these is tagged in this file as community-sourced, secondary-capture or third-party estimate.</strong></li>
 <li><strong>JavaScript-only interfaces that cannot be queried programmatically:</strong> fec.gov individual-contribution search and OpenSecrets donor search. The FEC record for Ilan Mishan was obtained via the FEC's own Schedule A API and is therefore solid; the absence of records for the other four named individuals is a <strong>not-searched/not-found result, not a proven negative</strong>.</li>
 <li><strong>OAuth-gated connectors:</strong> the ZoomInfo MCP connector available in this environment requires authorization that could not be completed in a non-interactive session. <strong>Authorizing it (via claude.ai connector settings, or /mcp in an interactive session) would likely close the headcount, revenue and named-contact gaps on a re-run.</strong></li>
-</ul></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>QuadraNet（QuadraNet Enterprises, LLC） — 銷售情報檔案</h1>
+</ul></section>
+<section class="lang" id="zh"><h1>QuadraNet（QuadraNet Enterprises, LLC） — 銷售情報檔案</h1>
 <p><strong>編製對象：</strong> Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-04
 <strong>方法：</strong> 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。<span class="gap">GAP</span> = 查證資料中未找到，不得憑記憶補寫。
 <strong>轄區：</strong> 加州洛杉磯 — West Coast South California = <strong>T1</strong>｜T2。一組雖可註冊，惟請先讀商業判定再決定是否動用名額。
@@ -1836,7 +1838,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>QuadraNet 是一家 2001 年由 Ilan Mishan 創立於洛杉磯的裸機／專用伺服器、colocation、InfraCloud 私有雲與 DDoS 緩解業者，營運 AS8100，據點以市中心 Telecom Center 大樓（530 W 6th Street）為旗艦，另在美國約十餘處第三方資料中心及荷蘭一處租用空間。<strong>商業判定：不對本帳戶做前瞻銷售</strong>——這是一份信用風險、資產追蹤與後手帳戶檔案，不是伺服器管線，因為公司實質上已經瓦解（2024-04-08 由 VSS Capital Partners 售予 Edge Centres；澳洲母公司 Edge Centres Pty Ltd 於 2025-06-16 遭指派清算人；2025 年初逾 200,000 個 IPv4 售予 HostPapa；2025-02 LA colocation 客戶被通知約一週內撤離）。本檔最強的一項證據是硬體確認：QuadraNet 自家促銷規格書逐字寫出機殼廠牌——四款公開的 LA 專用伺服器 SKU 規格行皆為「1U Supermicro Server – 4x Hot-Swap Bays」，自家裸機特賣頁則列「Supermicro CSE」機殼與「Supermicro IPMI」（<a target="_blank" rel="noopener noreferrer" href="https://lowendbox.com/blog/quadranet-exclusive-black-friday-dedi-offers-in-los-angeles/">LowEndBox 專屬優惠</a>）——因此 Supermicro 在此是第一手、逐字、已確認的既有平台。而足以讓任何案子當場作廢的單一因素是：母公司清算之後，美國實體的法律與營運現況完全未解——沒有人確認 QuadraNet Enterprises, LLC 與美國的 Edge Centres LLC 是進入接管、解散、再轉售，還是名義上仍在營業；在這一點釐清之前，不投入任何銷售工時，也不以任何形式承作信用條件。</p>
 <hr />
 <h2>2. 公司速覽</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1881,11 +1883,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>加州洛杉磯 →「Territory Map-Jan.2026 (Rev.1)」Sales Territory Assign 分頁之 <strong>West Coast South California = T1 | T2</strong> → 一組自有轄區（T2 亦可承作），<strong>但標的本身已崩解</strong>。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. 原始名單更正表</h2>
 <p>僅列與 QuadraNet 有關者。首次接觸前務必先讀完——以錯誤前提開場會立刻失去可信度。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1920,13 +1922,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>六家逐一實查後：<strong>已確認 Supermicro 者僅 2 家</strong>（ReliableSite、QuadraNet，且後者已崩解）；<strong>強旁證 1 家</strong>；<strong>僅推論訊號 1 家</strong>；<strong>完全未證實 1 家</strong>；<strong>確認為 Lenovo 者 1 家</strong>。就 QuadraNet 而言此前提是對的——但對的是一家已經不再運作的公司。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. 領導層與所有權</h2>
 <p><strong>所有權沿革：</strong> 創辦人自有（Ilan Mishan，2001 年起）→ 私募基金 <strong>VSS／Veronis Suhler Stevenson</strong> → <strong>2024-04-08 前後</strong>由 <strong>Edge Centres</strong> 完成收購（交易條件未揭露）。任何可取得之來源皆未具名 VSS 的交易團隊成員或董事——QuadraNet Enterprises, LLC 為 LLC，法律上無須公開董事名冊（<strong><span class="gap">GAP</span></strong>）。<strong>破產狀態註記：</strong> 本次專案針對破產程序另做查核，結果為<strong>查無</strong>——CourtListener 聯邦 API 查無 QuadraNet 的破產、接管或債權人利益讓與（ABC）案號（48 筆「QuadraNet」命中全部是第三方案件，QuadraNet 僅以主機服務商身分被提及），亦查無 Edge Centres 之管理人／清算人指派紀錄。<strong>有文件支撐的瓦解途徑是州法院的不當佔有（unlawful detainer）訴訟加上資產零散出售，並非正式破產程序。</strong> 本檔他處（§2 及下方 Edge Centres 一列）引用之 ASIC 清算公告，<strong>本次未能複核</strong>——請將「母公司進入清算」視為<strong>未解衝突</strong>，不得當作既定事實陳述。</p>
 <h3>4.1 具名人物——公司、登記與網路紀錄</h3>
 <p>證據等級：<strong>primary-record（一手紀錄）</strong> ＝公司自行公布，或州登記／法院／註冊機構文件 · <strong>corroborated（互相佐證）</strong> ＝兩個以上獨立來源 · <strong>single-source（單一來源）</strong> ＝僅一個來源 · <strong>unverified（未證實）</strong> ＝使用者自產內容，未獲佐證。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2165,9 +2167,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>不適用——法人</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.2 登記紀錄</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2221,12 +2223,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/entity/QEL-5">ARIN RDAP — QEL-5</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 採購決策圈（Buying committee）</h3>
 <blockquote>
 <p><strong>門檻結論——QuadraNet 目前不存在任何可信的現行伺服器採購權責。此結論優先於下列所有個別路徑。</strong> 營運實體已瓦解之證據：(1) quadranet.com 現僅提供一張只含 logo 圖檔的黑底佔位頁，別無內容；(2) blog.quadranet.com 已無法 DNS 解析，squiggly.quadranet.com 於 443 埠拒絕連線，公司自家的領導層、徵才與新聞頁面均已消失；(3) AS8100 雖仍標示「active」，卻僅宣告 2 個前綴、2 個 peer，對照其 PeeringDB 條目所載的 18,500 個 IPv4 前綴——與 IP 位址空間已被出售的情形相符；(4) 房東於 2025-02-13 提起兩件不當佔有訴訟（驗證日 2025-02-12），欠繳租金分別為 <strong>$318,722.24</strong> 與 <strong>$280,657.52</strong>，合計約 <strong>$599,379</strong>，此前已於 2025-02-06 張貼三日限期通知，客戶被告知約一週內須自洛杉磯搬離設備。<strong>任何掛 QuadraNet 品牌的硬體機會，都應視為清算／資產處分情境，而非汰換週期。</strong> 不要把 QuadraNet 當成營運中帳戶開啟硬體開發案。應改向實際承接其工作負載與版圖的後手營運商——Hivelocity（AS29802）與 Multacom（AS35916），即 AS8100 僅存的兩個 peer——以及仍握有品牌的母公司 Edge Centres。若目的是承接不良資產硬體而非銷售，交易對造是房東／資產方，不是 QuadraNet 管理層。</p>
 </blockquote>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2266,7 +2268,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>不要將其視為硬體採購單的決策圈成員。</strong> 僅適合作為橫向引薦至技術與財務席次的跳板，或作為通路／合作夥伴窗口。查無其公開 LinkedIn 網址或個人聯絡方式</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 未能具名的職位（全數列為 <span class="gap">GAP</span>）</h3>
 <p><strong><span class="gap">GAP</span></strong> — <em>破產管理人／受讓人／清算人／受託人</em>：<strong>查無，且該簡報前提看來並無支撐</strong>——CourtListener 聯邦 API 查無 QuadraNet 之破產、接管或債權人利益讓與案號，亦查無 Edge Centres 之澳洲管理人或清算人指派；經查證的瓦解途徑是州法院不當佔有訴訟加上資產零散出售，<strong>故不得將「母公司進入清算」當作事實簡報</strong>。 · <strong><span class="gap">GAP</span></strong> — <em>現任財務長</em>：<strong>狀態不明</strong>——Brian Flowers 依公司新聞稿自 2018-08-21 任 CFO；Ken Lee 在第三方檔案中被描述為 CFO，但在州政府申報中僅為 Manager 與 Agent for Service of Process；<strong>沒有任何申報文件指出現任 CFO 為何人</strong>。 · <strong><span class="gap">GAP</span></strong> — <em>VP of Infrastructure／VP of Engineering</em>：任何來源皆查無此職。 · <strong><span class="gap">GAP</span></strong> — <em>採購／購案負責人／供應鏈經理</em>：<strong>無姓名，且無證據顯示此職位存在</strong>——任何申報文件、新聞稿、名錄或徵才啟事皆未出現採購類職稱。 · <strong><span class="gap">GAP</span></strong> — <em>Chief Operating Officer</em>：任何來源皆未辨識出 COO。 · <strong><span class="gap">GAP</span></strong> — <em>法務長／法務主管</em>：均未辨識；值得注意的是 USPTO 商標申請顯示「Attorney of Record — None」，即公司自行申請，暗示當時並無內部法務。 · <strong><span class="gap">GAP</span></strong> — <em>VP of Information Executive &amp; CIO</em>：該職<strong>存在</strong>但姓名遭遮蔽——LeadIQ 僅露出縮寫「J. G.」。不臆測。 · <strong><span class="gap">GAP</span></strong> — <em>VP of Administration and People（人資主管）</em>：職位存在，僅有縮寫「C. W.」。 · <strong><span class="gap">GAP</span></strong> — <em>Director of Information Technology</em>：職位存在，僅有縮寫「B. H.」。 · <strong><span class="gap">GAP</span></strong> — <em>Chief Cloud Officer</em>：職位存在，僅有縮寫「W. S.」。 · <strong><span class="gap">GAP</span></strong> — <em>Technical Support Manager、Data Analyst、Sales Engineer、Technical Advisor、Advertisement Manager</em>：這些職位在 LeadIQ 名錄中存在，但<strong>姓名全數遮蔽為縮寫</strong>（「J. E.」「E. W.」「Z. M.」「J. W.」「W. J.」「A. B.」）。 · <strong><span class="gap">GAP</span></strong> — <em>「Michelle」</em>：由序號 87762260 之 USPTO 通訊 email michelle@quadranet.com 可證實確有此員工名字，但<strong>姓氏無法自任何來源還原</strong>。 · <strong><span class="gap">GAP</span></strong> — <em>商標聲明書簽署人及其職稱</em>：<strong>無法取得</strong>——TSDR 狀態檢視頁不暴露簽署人，文件檢視器亦僅顯示 Notice of Abandonment。 · <strong><span class="gap">GAP</span></strong> — <em>QuadraNet 自身的租約簽署人</em>：<strong>無法取得</strong>——第六、第七次修訂本簽名頁上，QuadraNet, Inc. 與 QuadraNet Enterprises, LLC 欄位以無法辨識的手寫簽名簽署，且印刷的「Name:」與「Title:」欄位<strong>留白</strong>；已將該等頁面以 3 倍放大轉為影像目視確認，確無可辨識姓名。<strong>刻意不臆測。</strong> · <strong><span class="gap">GAP</span></strong> — <em>ARIN 與 PeeringDB 上具名的 NOC／網路工程師</em>：<strong>根本不存在</strong>——每一個 ARIN POC 都是角色帳號，PeeringDB 的 poc_set 完全為空。 · <strong><span class="gap">GAP</span></strong> — <em>徵才啟事中的具名用人主管或招募人員</em>：均未公布——存檔的徵才頁無任何具名窗口、無職缺清單、無用人主管，僅將應徵者導向 LinkedIn 頁面與總機 888-578-2372。 · <strong><span class="gap">GAP</span></strong> — <em>研討會講者簡歷（HostingCon、WHD.global、DataCenter World、Cloudfest）</em>：已查，<strong>均無所獲</strong>；唯一取得的研討會證據是 NANOG 出席紀錄，並由此得到 Kate Gerry。 · <strong><span class="gap">GAP</span></strong> — <em>具名之 VSS 交易合夥人或董事</em>：任何可取得之來源皆未具名；QuadraNet 為 LLC，法律上無須公開董事名冊。 · <strong><span class="gap">GAP</span></strong> — <em>Delaware 登記之職員／經理人</em>：<strong>未取得</strong>——本環境瀏覽器政策封鎖 icis.corp.delaware.gov；且須注意 Delaware 的 LLC 申報本就不會揭露成員或經理人，故加州 Statement of Information 是更好的來源，本檔亦採之。 · <strong><span class="gap">GAP</span></strong> — <em>UCC-1 擔保權人與債務人簽署人</em>：<strong>未取得</strong>——加州 UCC 查詢位於機器人偵測閘門之後，未予繞過。 · <strong><span class="gap">GAP</span></strong> — <em>FEC 捐獻紀錄</em>：十二位個人中有<strong>十一位未確立</strong>——詳見 §4.5；除前次查核已取得並記載於 §12 的 Ilan Mishan 單筆紀錄外，對任何人皆不得主張「查無紀錄」之結論。</p>
 <h3>4.5 已實查來源——實際查詢了哪些登記與資料庫，哪些一無所獲</h3>
@@ -2277,7 +2279,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>5. 據點與機房</h2>
 <p>除 QuadraNet DTLA 與 QuadraNet LAX 兩處外，<strong>其餘每一個站點都是租用第三方營運商設施內的空間——QuadraNet 在那些地點並非資料中心業主。</strong> 且在 2025-01 多日斷線與 2025-02 LA 客戶撤離之後，各站現行營運狀態皆未經證實。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>站點</th>
@@ -2354,10 +2356,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Preqin／Mergr 併購紀錄的搜尋摘要列出 QuadraNet 設施位於「Los Angeles, Atlanta, Chicago, Dallas, Miami, New Jersey, Reston, St. Louis, and Seattle」。<strong>Reston 與 St. Louis 在 AS8100 的 PeeringDB 資料中皆無，任何可觸及的 QuadraNet 自述頁面亦無——標記未證實</strong>（<a target="_blank" rel="noopener noreferrer" href="https://mergr.com/transaction/edge-centres-acquires-quadranet">Mergr 交易紀錄</a>）。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>6. 硬體機隊與證據等級</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>廠商</th>
@@ -2392,7 +2394,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>所有已檢索的 QuadraNet 規格頁、優惠貼文、論壇討論串、徵才啟事與設施清單中，皆無 HPE、ProLiant 或 iLO 之任何提及。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>可觀察到的 CPU 世代，及其對機隊年齡的意涵：</strong> Nehalem/Lynnfield（X3450）、Westmere（E5620）、Haswell（E3-1241v3）、Ivy Bridge（E5-2650 v2）、Broadwell（E5-2620v4／E5-2698 v4）、Coffee Lake（E-2124G）。<strong>任何來源皆無比 Broadwell／Coffee Lake 更新的世代。</strong> 這代表其機隊<strong>在公司崩解之前，就已落後當世代矽晶 5–10 年</strong>——是一批長期未換代的資產，不是換代週期中段的資產。</p>
 <hr />
 <h2>7. GPU 與 AI 佈局</h2>
@@ -2412,7 +2414,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </blockquote>
 <p>這<strong>不是</strong>「查無擔保設定」的結論。<strong>任何 UCC 索引都沒有回傳任何一筆結果列——不論是正面或負面的。</strong> 加州四次獨立嘗試全部回傳 Imperva／Incapsula 攔截頁；德拉瓦州根本沒有免費的公開債務人姓名查詢，並將查詢權限限縮給州政府核可之查詢人並收費；佛州因其免費登記系統設有須勾選同意的使用條款彈窗，未代使用者接受而未執行查詢；伊利諾州無法建立連線；喬治亞州回傳 HTTP 500；德州須付費開立 SOSDirect 帳號。<strong>因此，任何「QuadraNet Enterprises, LLC 名下無擔保負擔」的說法，本檔均不予支持。</strong></p>
 <h3>8.2 查詢紀錄——逐次分列，不合併</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>查詢入口</th>
@@ -2578,7 +2580,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>申請 OpenCorporates API token（非商業用途有免費層，付費自約 <strong>USD 149/月</strong>起），或在 <a target="_blank" rel="noopener noreferrer" href="https://opencorporates.com/">opencorporates.com</a> 免費互動查詢；或用 CA SOS bizfile 商業實體查詢（自本主機同樣被 Incapsula 擋下）。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 已取得之登記檔案全文</h3>
 <blockquote>
 <h3><strong>零筆。沒有任何登記檔案文字可以呈現，因為沒有任何索引回傳過任何一列。</strong></h3>
@@ -2595,7 +2597,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </ul>
 <p><strong>本檔並未就擔保權益之存否作成任何認定。</strong> 零結果係取得管道所致，逐列記錄於上方 §8.2。</p>
 <h3>8.4 這份紀錄實際說明什麼</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>觀察</th>
@@ -2654,7 +2656,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>把德拉瓦州 UCC-11 當成有負責人、有期限的關卡型行動項目，不是背景研究。負責人：一組（US8664 Tuo Cheng）。在跑完之前，帳戶計畫無法回答本案是直購或走通路，因此也無法對 Rule 8 經銷商核准要求與 $100M 門檻進行評分。</strong> 請同時對 <strong>Multacom Corporation</strong> 與 <strong>Edge Centres 美國實體</strong>下單——那才是有未來的實體，而同一筆約 $150 就涵蓋三個名稱。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.5 <span class="gap">GAP</span>——融資鏈軌道</h3>
 <ul>
 <li><strong><span class="gap">GAP</span> — 德拉瓦州才是勝負關鍵，而它沒有被查。</strong> QuadraNet Enterprises, LLC 是德拉瓦州 LLC，依 <strong>UCC §9-307(e)</strong>，任何對其之已完善擔保權益只會登記在德拉瓦州。德拉瓦州 UCC 資料庫限縮給州核可查詢人：<strong>每一債務人 $25 認證查詢＋$25 強制加急＋影本首頁 $10／每加頁 $2</strong>，透過註冊代理人之總成本約 <strong>USD 75–150</strong>。<strong>本次未執行。</strong> §8.4 中所有關於留置權的內容都是<strong>從「沒有證據」推論而來，不是「證明沒有」</strong>。</li>
@@ -2672,7 +2674,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <h2>9. 採購時鐘</h2>
 <h3>9.1 型錄快照時間軸</h3>
 <p>採購事件之定義嚴格限於<strong>新一代 CPU 或 GPU 首次出現在型錄上</strong>。來源：Wayback Machine CDX 索引，加上對 <code>quadranet.com/los-angeles-dedicated-servers</code> 與 <code>quadranet.com/dedicated-servers/</code> 之十九次個別抓取與解析（2018-10-27 至 2025-12-04），並與 2026-08-10 直接抓取之線上網站交叉核對。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>快照日期</th>
@@ -2837,7 +2839,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://quadranet.com/">quadranet.com</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 採購節奏</h3>
 <p><strong>已觀察到的間隔。</strong> 在存檔窗口內只觀察到<strong>一次</strong>採購事件，之後什麼都沒有。<strong>事件 1（也是最後一次）：</strong> Intel Xeon E-2100 系列（<strong>E-2124G、E-2146G</strong>；Coffee Lake，Intel 於 2018 Q3 發表）在 <strong>2018-10-27</strong> 與 <strong>2019-01-29</strong> 兩次快照之間首次出現在型錄上，同時汰除整條 Xeon E3 線（E3-1230v2、E3-1240v3、E3-1240v6、E3-1270v6）與較舊的雙路層級（E5-2620v2、E5-2620v3）。<strong>自 2019-01-29 到 2025-03-06——最後一次活型錄，74 個月之後——CPU 組一次都沒有變過：</strong> E-2124G、E-2146G、Dual Xeon E5-2650、Dual Xeon E5-2620v4，橫跨<strong>九次獨立驗證的快照</strong>。價格則自 2020-04-25 起完全凍結（<strong>59 個月，零變動</strong>）。更早的世代轉換可自 2018-10-27 基準快照上的矽晶<strong>推論</strong>（E5-2620v2 ≈ 2013–14 年採購、E5-2620v3 ≈ 2015、E5-2620v4 與 E3-1240v6／E3-1270v6 ≈ 2017）——推得 2018 年以前約為 <strong>18–24 個月</strong>的換機節奏——<strong>但本次未抓取 2018 年以前的型錄快照，故此為推論，非觀察。</strong></p>
 <p><strong>中位數月數。</strong> <strong>無法計算。</strong> 中位數至少需要兩個已觀察間隔，而目前只有一次已觀察事件。真正<strong>可測量</strong>且真正重要的數字是：最後一次採購事件（2018 Q4／2019-01）到最後一份活型錄（2025-03-06）之間相隔 <strong>74 個月</strong>，到今天（2026-08-10）相隔 <strong>91 個月</strong>，而<strong>這整段期間沒有引進任何新的 CPU 或 GPU 世代</strong>。以 2018 年以前推得的 ~18–24 個月節奏對照，2018 年之後的凍結期約為該業者自身歷史節奏的 <strong>3–4 倍長</strong>。</p>
@@ -2846,7 +2848,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>依據。</strong> Wayback Machine CDX 索引，加上對 <code>quadranet.com/los-angeles-dedicated-servers</code> 與 <code>quadranet.com/dedicated-servers/</code> 之<strong>十九次</strong>個別抓取與解析（2018-10-27 至 2025-12-04），逐次以程式擷取 CPU 型號字串與各 SKU 月費；並與 2026-08-10 直接抓取之線上網站交叉核對。採購事件嚴格定義為新一代 CPU 或 GPU 首次出現在型錄上。改指向窗口之依據：已公告之 Multacom→Digital Space 機房搬遷日期與 <a target="_blank" rel="noopener noreferrer" href="https://ftp.arin.net/pub/stats/arin/transfers/transfers_latest.json">ARIN 移轉紀錄</a>。</p>
 <p><strong>信心度。</strong> <strong>凍結本身為高</strong>——九次快照橫跨 74 個月回傳同一組 CPU，且自 2020 年起回傳同一組 13 項價格向量，這在網頁考古中已是極少見的明確；並由 2024 年 12 月「while supplies last／limited inventory」清倉列表，以及 2018 年 E-2 公告在 2025 年仍標示為「NEW」兩項獨立佐證。<strong>2018 年以前的節奏為中低</strong>，係由矽晶年份推論而非自快照觀察。<strong>改指向的下一個窗口推估為中</strong>——搬遷日期出自社群來源而非公司文件，且無法對照第一手文件獨立確認。</p>
 <h3>9.3 擴張訊號</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>日期</th>
@@ -2946,7 +2948,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://bgp.he.net/AS8100">bgp.he.net/AS8100</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.4 <span class="gap">GAP</span>——採購時鐘軌道</h3>
 <ul>
 <li><strong><span class="gap">GAP</span> — 2023 年是型錄紀錄的一個破洞。</strong> Wayback Machine 沒有任何 2023 年對 <code>quadranet.com/los-angeles-dedicated-servers</code>（承載完整 SKU 表的頁面）之擷取。2023 年僅靠摘要頁 <code>/dedicated-servers/</code> 的三次擷取涵蓋。由於型錄在破洞兩側（2022-12-05 與 2024-09-05）可證明完全相同，漏掉採購事件的風險<strong>低，但不是零</strong>。</li>
@@ -2975,7 +2977,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>敏感度：</strong> 若真實營運成本比為 <strong>45%</strong> 而非 52.5%，則<strong>每一個天花板上升約 16%</strong>；若為 <strong>60%</strong>，則<strong>每一個天花板下降約 16%</strong>。<strong>SKU 之間的排序在兩種情況下都不變，而排序才是提案要用的東西。</strong></p>
 <p><strong>其他但書（皆為假設，並如實標示）：</strong>（1）天花板假設整個回本期間<strong>滿載 100%</strong>，這偏寬鬆——低階機隊按月流失下的實際使用率明顯更低，因此請視為<strong>樂觀上限</strong>。（2）天花板為<strong>稅前、融資前</strong>，且不計貨幣時間價值。（3）<strong>不含交換、路由、帶外管理、佈線與 DDoS 清洗之資本支出</strong>，這些都是節點也必須分攤的共用基礎設施。（4）$999 的 colocation 品項是<strong>促銷價，第 7–12 個月會調升至 $1,299</strong>，而年營收數字是以 $999 平推，因此<strong>低估</strong>了真實的 12 個月收入。（5）<strong>colocation 天花板不可與伺服器天花板相比</strong>——colocation 的業者買的是機櫃、電力與網路，不是伺服器。</p>
 <h3>10.2 由租金推導之成本天花板</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -3070,10 +3072,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20241207023812/https://quadranet.com/dedicated-servers/">2024-12-07 存檔</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.3 物料清單（BOM）——重建之機型</h3>
 <p>所有零件價格均取自 <strong>parts.theserverstore.com</strong>，抓取日 <strong>2026-08-10</strong>，單台零售價。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU 重建</th>
@@ -3232,10 +3234,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://parts.theserverstore.com/products/cse-pt34l-supermicro-1u-chassis-mounting-rail-kit-28-37-3-complete-set">theserverstore</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.4 彙總比較——自組零件成本 vs 租金推導天花板</h3>
 <p>所有天花板均採 <strong>52.5% 營運成本假設</strong>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>機型</th>
@@ -3276,7 +3278,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>$1,596.40</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>這個落差對提案實際代表什麼</strong></p>
 <ol>
 <li>
@@ -3308,7 +3310,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>11. 客戶與網路</h2>
 <h3>已具名客戶</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>客戶</th>
@@ -3337,7 +3339,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>2024-04 Edge Centres 交易報導記載「QuadraNet has more than <strong>1,000 active customers</strong>」；垂直定位為媒體、遊戲與金融服務。<strong>具名企業客戶＝<span class="gap">GAP</span>，從未公布</strong>（<a target="_blank" rel="noopener noreferrer" href="https://mergr.com/transaction/edge-centres-acquires-quadranet">Mergr 交易紀錄</a>）。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>網路、容量、peering 與 IX 據點</h3>
 <ul>
 <li><strong>ASN：</strong> <strong>AS8100</strong>——ASName ASN-QUADRANET-GLOBAL，ARIN 於 <strong>2009-10-22</strong> 配發，組織 QuadraNet Enterprises LLC。PeeringDB「aka」欄位記「FKA AS29761」。IRR AS-SET：<strong>AS-SET-QUADRANET</strong>。經 RADB 公布的 BGP community 包含 8100:6666（blackhole）、8100:1／8100:2／8100:3（prepend）、8100:9（global no-export）。</li>
@@ -3358,7 +3360,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>13. 公開聯絡管道</h2>
 <p><strong>僅限公開來源。本檔不記錄任何個人手機或私人住址。無公開管道者標記 <span class="gap">GAP</span>。</strong> 以公司現況而言，以下多數已失效或降級，逐一標註。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -3418,7 +3420,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://quadranet.com">quadranet.com</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro 銷售切入點</h2>
 <h3>分類：<strong>不做前瞻銷售</strong> — 僅作信用風險與資產追蹤</h3>
@@ -3439,7 +3441,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>15. 查證附錄</h2>
 <h3>15.1 單一來源支撐的說法（引用前須再驗證）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>說法</th>
@@ -3479,10 +3481,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>第三方行銷，非 QuadraNet 規格頁。所有可還原的 QuadraNet 自述組態皆為 Intel Xeon。未證實。</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 第三方估計互相矛盾之處（<strong>呈現分歧，不擇一</strong>）</h3>
 <p><strong>員工數</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3499,10 +3501,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>無可用數字</strong>——皆付費牆或 HTTP 403</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>單一第三方來源，無交叉佐證。清算後的實際人數幾可確定遠低於 28——<span class="gap">GAP</span>。</strong> 另須分清：Enlyft 對 QuadraNet <strong>客群</strong>（而非其自身員工）的分析顯示其客戶偏小——82% 未滿 50 人、11% 中型、6% 逾 1,000 人。</p>
 <p><strong>營收</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3519,10 +3521,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>不存在</strong>——私有公司，VSS 出售價格從未公開</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>年份不明，幾可確定為 2024 年之前；在 2025 年資產出售、客戶撤離與母公司清算之後已不具代表性。不得以此為事實陳述。</strong></p>
 <p><strong>LA 面積——兩者量測對象不同</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3542,10 +3544,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>整棟建物</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>兩者無法相互調和，不可混用。</strong> 同一模式亦適用於 Dallas（68,000 sq ft）與 Miami（50,000 sq ft）——皆為設施總量，非 QuadraNet 佔用面積。</p>
 <p><strong>網路容量</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3562,7 +3564,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>「over <strong>300 Gbps</strong> of capacity」——<strong>行銷、未證實</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>兩者是不同量測；且皆為歷史值——現行實際可用容量＝<span class="gap">GAP</span>，且以網路拆解程度判斷很可能趨近於零。</strong></p>
 <h3>15.3 未結 <span class="gap">GAP</span></h3>
 <ol>
@@ -3587,7 +3589,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>HTTP 阻擋來源：</strong> WebHostingTalk（403）、datacenters.com（403）、ZoomInfo（403）、Crunchbase（403）、HostingAdvice（403）、DataCenterDynamics（403）、bizfileonline.sos.ca.gov（403）、Bizapedia／OpenCorporates（安全檢查／CAPTCHA，未予繞過）。<strong>凡依賴上述來源之發現，皆已在本檔中標記為社群來源、次級擷取或第三方估計。</strong></li>
 <li><strong>JavaScript 介面無法程式查詢：</strong> fec.gov 個人捐獻查詢與 OpenSecrets 捐款人查詢。Ilan Mishan 的 FEC 紀錄係經 FEC 自家 Schedule A API 取得故屬可靠；其餘四位具名人士的「查無紀錄」屬<strong>未查詢／未找到</strong>，<strong>不得寫成已證明的負面結論</strong>。</li>
 <li><strong>需 OAuth 授權的連接器：</strong> 本環境可用的 ZoomInfo MCP 連接器需授權，而本次為非互動工作階段無法完成。<strong>若經由 claude.ai 連接器設定（或於互動工作階段執行 /mcp）完成授權，重跑時很可能可補上員工數、營收與具名聯絡人的缺口。</strong></li>
-</ul></div></section>
+</ul></section>
 </main>
 </div>
 <footer>UNCLASSIFIED // FOR INTERNAL SUPERMICRO SALES USE ONLY &nbsp;·&nbsp; Every figure carries an inline source and date. GAP marks honestly-missing evidence. Assumptions are labelled as assumptions. Not investment advice.</footer>

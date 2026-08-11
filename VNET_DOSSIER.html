@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,13 +66,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>VNET Group, Inc. (NASDAQ: VNET) — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>VNET Group, Inc. (NASDAQ: VNET) — Sales Intelligence Dossier</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-04
 <strong>Basis:</strong> Two-pass verified research (pass A pass + pass B pass, cross-checked 2026-07-27). Every fact carries its source and date inline. Rows marked <strong><span class="gap">GAP</span></strong> are intentionally unresolved — do not fill them from memory.
 <strong>Not investment advice. Research scores are not buy/sell/hold recommendations.</strong></p>
 <hr />
 <h2>1. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -130,10 +132,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Q1 2026 PR "Recent Developments" (2026-05-26); Schedule 13D/A May 2026</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>2. Leadership &amp; Decision-Makers</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -208,9 +210,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Route:</strong> Board oversight only — not a commercial route. Contact only via the company secretary / IR desk.<br><strong>Email:</strong> <span class="gap">GAP</span><br><strong>Phone:</strong> <span class="gap">GAP</span><br><strong>LinkedIn:</strong> <span class="gap">GAP</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>Corporate contact channels (public)</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -285,10 +287,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.vnet.com/en/contactus.html">VNET corporate contact page</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Contact data is public-source only (SEC filings, IR and company contact pages, press releases, public professional profiles). No personal mobile numbers or private addresses. <span class="gap">GAP</span> = no published channel found for that individual; route via the corporate desk instead.</em></p>
 <p><strong>Datacenter buying committee (for server/infrastructure sales):</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Function</th>
@@ -323,12 +325,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. HQ &amp; Footprint</h2>
 <p><strong>HQ:</strong> Guanjie Building, Southeast 1st Floor, 10# Jiuxianqiao East Road, Chaoyang District, Beijing 100016, PRC · +86 10 8456-2121 (20-F FY2024 &amp; FY2025 cover pages, verbatim match).</p>
 <p><strong>Capacity snapshot</strong> (Q4/FY2025 PR 2026-03-16; Q1 2026 PR + earnings call 2026-05-26 — both passes match on all figures):</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -369,9 +371,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td style="text-align: right;">64.1%</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Named sites / campuses</strong> (per-site MW = <strong><span class="gap">GAP</span></strong> for all; whether MW is gross power or critical IT load = <strong><span class="gap">GAP</span></strong>; GPU counts = <strong><span class="gap">GAP</span></strong>):</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Site</th>
@@ -412,14 +414,14 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>20-F FY2024/FY2025; FY2025 PR</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Pipeline &amp; delivery</strong> — 7 of 8 data centers under construction are in Greater Beijing (<strong>pass B-only</strong>, earnings calls). Total wholesale resource pipeline 2.48 GW incl. 697 MW short-term + 359 MW long-term reserves; delivery plan ~250 MW Q2-Q3 2026 and ~266 MW Q4 2026-Q1 2027; FY2026 delivery target 450-500 MW; unit capex ~RMB20,000/kW (<strong>pass B-only</strong>, Q1 2026 earnings call 2026-05-26). Record 404 MW delivered in 2025 (<strong>pass A-only</strong>, CEO commentary, FY2025 PR 2026-03-16). Retail footprint in MW terms = <strong><span class="gap">GAP</span></strong> (reported only in cabinets).</p>
 <hr />
 <h2>4. Political Profile of Principals</h2>
 <blockquote>
 <p><strong>Disclaimer:</strong> Political donation records do NOT equal party registration or party membership. Absence of evidence is not evidence of absence. Nothing below may be extended beyond the cited public record.</p>
 </blockquote>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Principal</th>
@@ -472,10 +474,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>public-record lookup — negative result / unverified at bulk level</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>Recipient organizations — history, leaning &amp; principals</h4>
 <p><em>Scope note: every donation lookup above returned zero rows, so no actual donation recipient exists. The organizations below are the political/party-state bodies this section searched (and did not find) as principal affiliations, plus the state bodies and institutions behind the disclosed non-political roles and honors. All existing <span class="gap">GAP</span> tags remain in force.</em></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Organization</th>
@@ -561,13 +563,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://ir.21vianet.com/management/josh-sheng-chen">VNET IR (Chen bio)</a> · <a target="_blank" rel="noopener noreferrer" href="https://ir.21vianet.com/board-directors/josh-sheng-chen/">VNET IR (Board: Chen)</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Surname origin is name-etymology from public onomastic references only — it is NOT a verified statement of any individual's ethnicity or ancestry. Self-identified background is shown only where publicly stated by the person, with source.</em></p>
 <hr />
 <h2>5. Funding &amp; Ownership</h2>
 <p><strong>Structure:</strong> Cayman holding company; PRC operations via WFOEs + contractual consolidation of VIEs. Four named VIEs: Beijing Yiyun Network Technology (VNET Technology), Beijing iJoy Information Technology, HuLianXinCheng Network Technology (Beijing), Shanghai Zhiyan Yunwei Technology (<strong>pass A-only</strong>, cited to 20-F FY2024 intro — primary).</p>
 <p><strong>Key events:</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Event</th>
@@ -614,9 +616,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Q1 2026 PR (2026-05-26); Schedule 13D/A May 2026; VNET 6-K May 2026; Bloomberg/Reuters 2026-05-13</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Ownership table (20-F FY2024 Item 7, as of 28 Feb 2025; share base 1,614,155,406):</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Holder</th>
@@ -639,12 +641,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Incl. voting proxy over Success Flow's 455.3M Class A shares under voting/consortium agreement, term through 2026-12-28 (corroborated by SC 13D)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Balance sheet markers (pass B-only, company PRs):</strong> total debt RMB19.95B (US$2.85B) at 2025-12-31; cash + restricted cash + ST investments RMB8.80B (US$1.28B) at 2026-03-31.</p>
 <p><strong><span class="gap">GAP</span>:</strong> Post-close ownership split (founder vehicles vs SDHG residual vs PJ Millennium/CATL affiliates) — unknowable until closing + new 13D/A filings.</p>
 <hr />
 <h2>6. Customers</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Customer</th>
@@ -674,12 +676,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>20-F FY2024 business section; 20-F FY2025</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Concentration:</strong> one customer &gt;10% of net revenues in each of 2022-2024 (20-F FY2024); <strong>two</strong> customers each &gt;10% but &lt;20% of FY2025 revenues (20-F FY2025 customer-risk note — filing-vintage difference, not a contradiction). Top-20 customer average monthly recurring revenue RMB260.2M (2024) → RMB354.5M (2025). Retail monthly churn 0.1% in 2025 (<strong>pass B-only</strong>, 20-F FY2025). <strong><span class="gap">GAP</span>:</strong> identity and exact % of the &gt;10% customers — never disclosed; ByteDance attribution remains media-only.</p>
 <hr />
 <h2>7. Financials</h2>
 <p><strong>FY2025 (unaudited PR, year ended 2025-12-31)</strong> — source: Q4/FY2025 results PR (PRNewswire 2026-03-16; 6-K ex-99.1); both research passes match exactly:</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -724,9 +726,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Income tax RMB557.5M; fair-value loss RMB314.3M; partly offset by RMB469.8M gain on subsidiary deconsolidation</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Q1 2026 (ended 2026-03-31)</strong> — source: Q1 2026 results PR (PRNewswire 2026-05-26); both passes match exactly:</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -763,12 +765,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>RMB531.8M (US$77.1M), primarily RMB486.2M capital-transactions-related income tax (vs RMB237.6M loss Q1 2025)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>FY2026 guidance (reaffirmed 2026-05-26):</strong> revenues RMB11.5-11.8B (+15.6% to +18.6%); adjusted EBITDA RMB3.55-3.75B; <strong>capex RMB10-12B</strong>.</p>
 <p><strong><span class="gap">GAP</span>:</strong> FY2025 audited operating income and full net-margin detail from the FY2025 20-F — not extracted by either pass (PR-level unaudited figures only).</p>
 <hr />
 <h2>8. Service Lines</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Line</th>
@@ -797,7 +799,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Same</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span>:</strong> cloud vs VPN revenue split within non-IDC — not disclosed in any earnings release or 20-F extract reviewed.</p>
 <hr />
 <h2>9. Supermicro Sales Angle</h2>
@@ -819,7 +821,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>10. Verification Appendix</h2>
 <h3>10.1 Conflicts between research passes</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -860,9 +862,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Not a contradiction</strong> — two different metrics (overall commitment rate vs pre-commitment on under-construction only). Use either, but label precisely; never merge</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.2 Single-source claims (use with the stated caveat)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -942,9 +944,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>pass A only, FY2025 PR comparative</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.3 Open gaps</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1002,13 +1004,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </tr>
 </tbody>
 </table></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>VNET Group, Inc.（NASDAQ: VNET，世紀互聯／原 21Vianet）— 銷售情報檔案</h1>
+<section class="lang" id="zh"><h1>VNET Group, Inc.（NASDAQ: VNET，世紀互聯／原 21Vianet）— 銷售情報檔案</h1>
 <p><strong>編製對象：</strong> Supermicro 美國第一銷售團隊（Sales Team 1, USA） · 專員 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-04
 <strong>依據：</strong> 兩輪交叉驗證研究（研究線甲 輪 + 研究線乙 輪，2026-07-27 交叉比對）。每項事實均於行內標註來源與日期。標示 <strong><span class="gap">GAP</span></strong> 之列為刻意保留之待查缺口——不得憑記憶補齊。
 <strong>本檔非投資建議。研究評分不等於買進／賣出／持有建議。</strong></p>
 <hr />
 <h2>1. 公司速覽（Snapshot）</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1068,10 +1070,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Q1 2026 新聞稿「Recent Developments」（2026-05-26）；Schedule 13D/A（2026 年 5 月）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>2. 領導層與決策者</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1146,9 +1148,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>管道：</strong> 僅屬董事會監督角色，非商務接觸管道。如有正當聯繫需求，請透過公司秘書／投資人關係窗口。<br><strong>Email：</strong> <span class="gap">GAP</span><br><strong>電話：</strong> <span class="gap">GAP</span><br><strong>LinkedIn：</strong> <span class="gap">GAP</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>公司公開聯絡管道</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -1223,10 +1225,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.vnet.com/en/contactus.html">VNET 公司聯絡頁</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>聯絡資料僅來自公開來源（SEC 申報文件、投資人關係與公司聯絡頁、新聞稿、公開專業檔案）。不含個人手機或私人地址。<span class="gap">GAP</span> = 該個人查無公開管道，請改走公司窗口。</em></p>
 <p><strong>資料中心採購決策委員會（伺服器／基礎設施銷售對象）：</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>職能</th>
@@ -1261,12 +1263,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. 總部與據點布局</h2>
 <p><strong>總部：</strong> Guanjie Building, Southeast 1st Floor, 10# Jiuxianqiao East Road, Chaoyang District, Beijing 100016, PRC · +86 10 8456-2121（20-F FY2024 與 FY2025 封面，逐字相符）。</p>
 <p><strong>容量快照</strong>（Q4/FY2025 新聞稿 2026-03-16；Q1 2026 新聞稿 + 法說會 2026-05-26——兩輪數字完全相符）：</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>指標</th>
@@ -1307,9 +1309,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td style="text-align: right;">64.1%</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>具名園區／基地</strong>（各基地 MW = 全數 <strong><span class="gap">GAP</span></strong>；MW 為總電力或關鍵 IT 負載 = <strong><span class="gap">GAP</span></strong>；GPU 數量 = <strong><span class="gap">GAP</span></strong>）：</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>基地</th>
@@ -1350,14 +1352,14 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>20-F FY2024/FY2025；FY2025 新聞稿</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>儲備與交付</strong>——在建 8 座資料中心中 7 座位於大北京地區（<strong>僅 研究線乙 輪</strong>，法說會）。批發資源儲備總計 2.48 GW，含短期儲備 697 MW + 長期儲備 359 MW；交付計畫：2026 年 Q2-Q3 約 250 MW、2026 年 Q4 至 2027 年 Q1 約 266 MW；FY2026 交付目標 450-500 MW；單位資本支出約人民幣 20,000 元/kW（<strong>僅 研究線乙 輪</strong>，Q1 2026 法說會 2026-05-26）。2025 年交付 404 MW 創紀錄（<strong>僅 研究線甲 輪</strong>，執行長評論，FY2025 新聞稿 2026-03-16）。零售據點之 MW 口徑 = <strong><span class="gap">GAP</span></strong>（僅以機櫃數揭露）。</p>
 <hr />
 <h2>4. 主要人物政治檔案</h2>
 <blockquote>
 <p><strong>聲明：</strong> 政治獻金紀錄<strong>不等於</strong>政黨登記或黨籍。查無紀錄不等於證明不存在。以下內容不得延伸超出所引公開紀錄之範圍。</p>
 </blockquote>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>人物</th>
@@ -1410,10 +1412,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>公開紀錄查詢——負面結果／批次層級未驗證</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>受贈機構 — 沿革、政治傾向與負責人</h4>
 <p><em>範疇說明：上列各項獻金查詢均為零筆，故實際上並不存在任何受贈機構。下表所列為本節「已查找但查無」主要人物任職／席位之政治／黨國機構，以及已揭露之非政治性職務與獎項所涉之國家機關與機構。原有 <span class="gap">GAP</span> 標記全數維持有效。</em></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>機構（連結）</th>
@@ -1499,13 +1501,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://ir.21vianet.com/management/josh-sheng-chen">VNET IR（Chen 簡歷）</a> · <a target="_blank" rel="noopener noreferrer" href="https://ir.21vianet.com/board-directors/josh-sheng-chen/">VNET IR（董事會：Chen）</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>姓氏語源僅為公開姓名學資料之語源考據,並非對任何個人族裔或血統之查證陳述。惟當事人曾公開自述背景者,方列出並附來源。</em></p>
 <hr />
 <h2>5. 募資與股權</h2>
 <p><strong>架構：</strong> 開曼控股公司；中國業務經由外商獨資企業（WFOE）+ 契約合併之 VIE。四家具名 VIE：北京億雲網絡科技（VNET Technology）、北京愛玖信息技術（iJoy）、互聯新城網絡科技（北京）、上海智彥運維科技（<strong>僅 研究線甲 輪</strong>，引自 20-F FY2024 前言——屬第一手文件）。</p>
 <p><strong>重要事件：</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>事件</th>
@@ -1552,9 +1554,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Q1 2026 新聞稿（2026-05-26）；Schedule 13D/A（2026 年 5 月）；VNET 6-K（2026 年 5 月）；Bloomberg／Reuters 2026-05-13</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>持股表（20-F FY2024 Item 7，截至 2025-02-28；股本基礎 1,614,155,406 股）：</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>持有人</th>
@@ -1577,12 +1579,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>含依表決權／聯盟協議對 Success Flow 4.553 億股 A 類股之表決權委託，效期至 2026-12-28（SC 13D 佐證）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>資產負債表指標（僅 研究線乙 輪，公司新聞稿）：</strong> 2025-12-31 總負債人民幣 199.5 億元（28.5 億美元）；2026-03-31 現金 + 受限現金 + 短期投資人民幣 88.0 億元（12.8 億美元）。</p>
 <p><strong><span class="gap">GAP</span>：</strong> 交割後股權結構（創辦人載具 vs SDHG 殘餘 vs PJ Millennium／CATL 關聯方）——須待交割完成並提交新 13D/A 後方可得知。</p>
 <hr />
 <h2>6. 客戶</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>客戶</th>
@@ -1612,12 +1614,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>20-F FY2024 業務章節；20-F FY2025</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>集中度：</strong> 2022-2024 各年度均有一家客戶占淨營收逾 10%（20-F FY2024）；FY2025 揭露<strong>兩家</strong>客戶各占逾 10% 但低於 20%（20-F FY2025 客戶風險附註——屬申報年度版本差異，非矛盾）。前 20 大客戶平均每月經常性收入：人民幣 2.602 億元（2024）→ 3.545 億元（2025）。零售月流失率 0.1%（2025 年，<strong>僅 研究線乙 輪</strong>，20-F FY2025）。<strong><span class="gap">GAP</span>：</strong> 逾 10% 集中度客戶之身分與確切占比——公司從未揭露；字節跳動之指認仍僅止於媒體。</p>
 <hr />
 <h2>7. 財務</h2>
 <p><strong>FY2025（未經審計新聞稿，年度截至 2025-12-31）</strong>——來源：Q4/FY2025 業績新聞稿（PRNewswire 2026-03-16；6-K ex-99.1）；兩輪數字完全相符：</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>指標</th>
@@ -1662,9 +1664,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>所得稅人民幣 5.575 億元；金融工具公允價值損失人民幣 3.143 億元；部分由子公司除併利益人民幣 4.698 億元抵銷</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Q1 2026（季度截至 2026-03-31）</strong>——來源：Q1 2026 業績新聞稿（PRNewswire 2026-05-26）；兩輪數字完全相符：</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>指標</th>
@@ -1701,12 +1703,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>人民幣 5.318 億元（7,710 萬美元），主因為資本交易相關所得稅人民幣 4.862 億元（Q1 2025 為淨損人民幣 2.376 億元）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>FY2026 財測（2026-05-26 重申）：</strong> 營收人民幣 115-118 億元（+15.6% 至 +18.6%）；調整後 EBITDA 人民幣 35.5-37.5 億元；<strong>資本支出人民幣 100-120 億元</strong>。</p>
 <p><strong><span class="gap">GAP</span>：</strong> FY2025 20-F 之經審計營業利益與完整淨利率細節——兩輪均未摘取（僅有新聞稿層級之未審計數字）。</p>
 <hr />
 <h2>8. 業務線拆解</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>業務線</th>
@@ -1735,7 +1737,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>同上</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span>：</strong> 非 IDC 內雲端與 VPN 之營收拆分——所有已檢閱之財報新聞稿與 20-F 摘錄均未揭露。</p>
 <hr />
 <h2>9. Supermicro 銷售切入點</h2>
@@ -1757,7 +1759,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>10. 驗證附錄</h2>
 <h3>10.1 兩輪研究之衝突</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1798,9 +1800,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>非數字矛盾</strong>——為兩個不同指標（整體承諾率 vs 僅在建容量之預承諾率）。兩者皆可使用，但須精確標示各自口徑；不得合併為單一「承諾」數字</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.2 單一來源之主張（引用時應附註）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1880,9 +1882,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>僅 研究線甲 輪，取自 FY2025 新聞稿比較欄</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.3 未解缺口（<span class="gap">GAP</span>）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>

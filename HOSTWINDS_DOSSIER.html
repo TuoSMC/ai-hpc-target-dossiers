@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,7 +66,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>Hostwinds LLC — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>Hostwinds LLC — Sales Intelligence Dossier</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-04
 <strong>Method:</strong> Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. <span class="gap">GAP</span> = not found in verified material. No fabrication.
 <strong>Territory:</strong> Tukwila, Washington — West Coast North = T4 | T31. Team 1 is NOT eligible, and neither T7 nor T11 covers this region. Route through <strong>T4 (lead: Kambiez Tahvilian)</strong> or T31.
@@ -74,7 +76,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>Hostwinds LLC is a privately held Tukwila (Seattle-metro), Washington bare-metal, VPS, cloud and reseller-hosting provider founded in Tulsa, Oklahoma, running its own ASN (AS54290, 303,360 IPv4 addresses) out of three leased colocation sites — Seattle/Tukwila, Dallas and Amsterdam — plus resold colocation capacity in seven further markets. The commercial verdict is <strong>greenfield AI with a purchasing-authority question attached</strong>: there is no GPU product of any kind, the sellable dedicated fleet is roughly 8–19 years old with no Xeon Scalable and no EPYC anywhere in it, but on 2026-04-29 the company was acquired by HostPapa, Inc., so capex authority may already have moved north before any refresh conversation can start. The single strongest piece of evidence is the live public order form at <a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/cart.php?gid=12">clients.hostwinds.com/cart.php?gid=12</a>, which sells 20 CPU-only SKUs spanning Xeon 5300 Clovertown (2007) through E3-1270 v6 Kaby Lake (2017), with a desktop i7-3930K in the rack and not one Xeon Scalable or EPYC part — a fully priced, verifiable generational gap. The one thing that could kill the deal is the acquisition itself: <a target="_blank" rel="noopener noreferrer" href="https://www.hostpapa.com/about-hostpapa/pressroom/2026-04-29-hostpapa-acquires-hostwinds-to-expand-global-hosting-infrastructure/">HostPapa's 2026-04-29 press release</a> disclosed no terms, no retention commitment for founder Peter Holden and no capex plan, and <a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/54290">ARIN RDAP for AS54290</a> was re-registered to HostPapa (Buffalo, NY) on 2026-05-12 — if Hostwinds no longer buys its own hardware, every specification discussion held with Tukwila is wasted.</p>
 <hr />
 <h2>2. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -129,11 +131,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Territory Map-Jan.2026 (Rev.1), Sales Territory Assign tab</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. Corrections to the working list</h2>
 <p>Every row below is a working-list statement that this research <strong>overturned</strong> or <strong>could not substantiate</strong>. Read this before first contact so the call does not open on a false premise.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -186,13 +188,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>The Tukwila DC-tech req found in search belongs to <strong>Wowrack</strong>, a different company at <strong>12201</strong> Tukwila International Blvd (18,000 sq ft raised floor, 3.0 MW). Hostwinds is at <strong>12101</strong>. <strong>Do not attribute it to Hostwinds and do not conflate the two facilities.</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Leadership &amp; ownership</h2>
 <p><strong>Ownership status.</strong> Hostwinds LLC was founder-owned and self-funded from 2010 until <strong>HostPapa, Inc. acquired it on 2026-04-29</strong> (<a target="_blank" rel="noopener noreferrer" href="https://www.hostpapa.com/about-hostpapa/pressroom/2026-04-29-hostpapa-acquires-hostwinds-to-expand-global-hosting-infrastructure/">HostPapa press release</a>, terms undisclosed). Control of the network asset is already registry-confirmed as transferred: <a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/54290">ARIN RDAP for AS54290</a> still carries <code>ASName: HOSTWINDS</code> but the owning Org is now <code>OrgName: HostPapa, OrgId: HOSTP-7</code>, 325 Delaware Avenue Suite 300, Buffalo NY 14202, record updated 2026-05-12. Materially for a hardware conversation, <a target="_blank" rel="noopener noreferrer" href="https://www.colocrossing.com/company/">ColoCrossing's own acquisition write-up</a> states Hostwinds' <strong>infrastructure will be transitioned to ColoCrossing</strong>, the HostPapa Infrastructure Business Unit — which relocates the buying decision out of Tukwila. No board, no institutional investor and no outside shareholder was identified for Hostwinds at any point.</p>
 <h3>4.1 Named people — Hostwinds, acquirer, registry and network contacts</h3>
 <p>Evidence grades: <strong>primary-record</strong> = company-published, registry or government filing · <strong>corroborated</strong> = two or more independent sources agree · <strong>single-source</strong> = one source only, usually a data aggregator, re-verify before use.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -467,9 +469,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.hostwinds.com/legal/terms">Hostwinds Terms of Service</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.2 Registry record</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -537,9 +539,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://trademarks.justia.com/871/25/hostwinds-87125319.html">Justia — HOSTWINDS 87125319</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 Buying committee</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -589,7 +591,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Only relevant if the offering touches provisioning, automation or the cloud control plane. <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matthew-anderson-196822149/">linkedin.com/in/matthew-anderson-196822149</a>, Kirkland WA. Use as corroboration of Waggoner's spec, not as an independent entry point</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 Unfilled roles</h3>
 <p><strong>Every one of the following is a <span class="gap">GAP</span> — searched for and not obtained, not merely unlisted:</strong> Hostwinds LLC governors / members / managers of record — <span class="gap">GAP</span> (WA SOS CCFS bot-walled at both API and UI) · Hostwinds LLC registered agent name and address — <span class="gap">GAP</span> (same blocker) · Hostwinds LLC UBI number, formation date and filing history including previously listed officers — <span class="gap">GAP</span> (same blocker) · annual-report signatory for Hostwinds LLC — <span class="gap">GAP</span> (same blocker) · Delaware / Nevada parallel-entity check — <span class="gap">GAP</span> (every source names the operating entity as "Hostwinds LLC" with a WA address, confirmed verbatim in the Terms of Service, and no DE/NV holdco evidence surfaced, but neither state registry was searched directly, so a holdco cannot be ruled out) · Hostwinds CFO or any Hostwinds finance lead — <span class="gap">GAP</span> · Hostwinds CTO — <span class="gap">GAP</span> (LeadIQ shows only masked initials "T. M."; no full name resolved anywhere) · HostPapa CTO full name — PARTIAL/<span class="gap">GAP</span> (published only as "V. S." / first name "Vince"; surname never appears, and it was <strong>not guessed</strong>) · HostPapa VP of Sales, Infrastructure BU full name — PARTIAL/<span class="gap">GAP</span> (published only as "Ernie Q."; surname never appears, <strong>not guessed</strong>) · HostPapa CFO — <span class="gap">GAP</span> (no named CFO on any source reached; only Director of Finance and Controller surfaced, and hostpapa.com/about-hostpapa/leadership/ returns HTTP 404 so no company-published executive list exists) · dedicated procurement / purchasing / supply-chain lead at Hostwinds, ColoCrossing or HostPapa — <span class="gap">GAP</span> at all three entities · VP Infrastructure or VP Engineering at Hostwinds — <span class="gap">GAP</span> (the org appears to top out at Director level under the CEO) · named NOC or network engineer for AS54290 — <span class="gap">GAP</span> (ARIN publishes only role accounts and PeeringDB publishes no contacts at all; the only personally-named network contact anywhere is Peter Holden on the IRR object) · named DMCA designated agent — <span class="gap">GAP</span> (the ToS references one but never names them, and the US Copyright Office directory returned no result for "Hostwinds") · site managers for the Dallas and Amsterdam facilities — <span class="gap">GAP</span> (press coverage confirms the sites but names nobody at either) · post-close Hostwinds general manager / brand lead under HostPapa — <span class="gap">GAP</span> (no source states who runs the brand day to day, nor whether Peter Holden retained any role after 2026-04-30) · board of directors and investors of Hostwinds LLC — <span class="gap">GAP</span> (every source describes it as founder-owned and self-funded since 2010; no board, no institutional investor, no outside shareholder, deal terms undisclosed) · exact job titles for Benjamin Bream and Guy Hopkins — <span class="gap">GAP</span> (both confirmed Hostwinds employees by primary FEC filings, but no occupation was retrievable) · trademark declaration signatory and correspondent of record for the HOSTWINDS mark — <span class="gap">GAP</span> (TSDR now requires a registered API key; Justia mirror returned HTTP 403) · UCC-1 secured parties and debtor signatories — <span class="gap">GAP</span> (Washington UCC records sit with the Dept of Licensing and require an interactive or paid search).</p>
 <h3>4.5 Sources worked</h3>
@@ -598,7 +600,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>5. Footprint</h2>
 <p>Hostwinds claims <strong>three</strong> data centers of its own but sells colocation in <strong>ten</strong> markets. It says it owns its <em>hardware</em> — "Our hardware is directly owned and sold by us" — but never claims to own any building, and describes using "SAS Type II, audited, Tier 3+ Data centers", which is third-party-facility language. <strong>All sites are leased/colocation.</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Site</th>
@@ -643,12 +645,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.hostwinds.com/colocation">colocation page</a> lists the ten markets and the four rack/power tiers verbatim</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Scale.</strong> Current server and rack counts are <strong>unpublished = <span class="gap">GAP</span></strong>. The only hard published figure is the stale ~40 servers / 3 cabinets in Dallas above. Best current proxy is IP space: AS54290 originates <strong>303,360 IPv4 addresses across 75 IPv4 prefixes plus 4 IPv6 prefixes</strong> — roughly 4.6 /16-equivalents, a meaningful VPS/hosting footprint consistent with low thousands of physical hosts. <strong>IP count is not a server count and must never be presented as one.</strong></p>
 <hr />
 <h2>6. Hardware fleet</h2>
 <p>Evidence grades used below: <strong>confirmed</strong> = first-party named disclosure or multiple independent corroborations · <strong>circumstantial</strong> = behaviour points strongly but the vendor is never named · <strong>inferred</strong> = derived only from CPU/chassis shape · <strong>contradicted</strong> = evidence runs against the working-list claim · <strong><span class="gap">GAP</span></strong> = nothing found.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Vendor / element</th>
@@ -688,7 +690,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Cloud servers sold in 1–16 vCPU and 1–96 GB RAM tiers, "Solid State Drives" (SSD vs NVMe not specified), 1 Gbps ports, hourly billing $0.006931/hr to $0.456931/hr. <strong>No CPU vendor and no hypervisor named on the page</strong> (third-party reviews reference KVM and OpenVZ). A historical company blog described early VPS main nodes as 4-core/16 GB and shared nodes as 8-core/8 GB — 2012–13 era, not current (<a target="_blank" rel="noopener noreferrer" href="https://www.hostwinds.com/cloud/cloud-servers">cloud servers</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Sales read.</strong> The vendor question is the single most important open item on this account and <strong>can only be closed by a discovery call, a site visit, or an IPMI/BMC banner check on a trial server.</strong></p>
 <hr />
 <h2>7. GPU &amp; AI position</h2>
@@ -709,7 +711,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </blockquote>
 <p><strong>Search date: 2026-08-10.</strong> The scope note above is not boilerplate. Washington is clean and provably clean; Ontario and New York were never searched, and the group's actual security package almost certainly sits in Ontario. Read 8.2 and 8.4 together before quoting the verdict to anyone.</p>
 <h3>8.2 Search log — every attempt, none merged</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Portal</th>
@@ -812,7 +814,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>n/a — analytical step, no cost.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 Filings — full record</h3>
 <p><strong>There are none.</strong> No UCC financing statement naming HOSTWINDS, HOSTWINDS LLC or HOSTPAPA INC as debtor exists in the Washington index, lapsed records included, as of 2026-08-10. Because the filing set is empty, there is no filing block to render: <strong>no file number, no filing date, no lapse or continuation date, no secured party name or address, no debtor address of record, no collateral description to quote, and no amendment, assignment or termination history.</strong> Nothing is being abbreviated or compressed here — the record itself is empty.</p>
 <p>To be explicit about what an empty set does and does not mean:</p>
@@ -831,7 +833,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>No individual-debtor UCC search run.</strong> Personal guarantees from founder Peter Holden would be indexed under the individual-debtor index, which was <strong>deliberately not searched</strong>. Targeting a named private individual's financial records is out of scope for this exercise.</li>
 </ul>
 <h3>8.4 What the record means</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Observation</th>
@@ -890,12 +892,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>THIS IS THE CO-OP REFERRAL.</strong> The buying authority is not in Washington and not in Team 1's USA territory in any meaningful sense — it is <strong>HostPapa, Inc. in Burlington, Ontario, executing through ColoCrossing in Buffalo, New York</strong>. Package it as a cross-team co-op hand-off to the partner team with the evidence attached: $130M BMO facility (2025-06-03), three fleets absorbed in 34 months, Buffalo expansion launching Q1 2026, ~405 idle legacy dedicated units in Dallas/Seattle whose newest silicon is a 2017 Kaby Lake E3, and a brand-new 10-market colocation product that needs modern density to sell. Per the cross-team co-op rule, <strong>do not kill this on HQ location alone</strong> — it stays alive through the partner team, and <strong>Team 1 keeps the origination credit</strong>.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. Purchase clock</h2>
 <h3>9.1 Snapshot timeline</h3>
 <p>Reconstructed from the live product catalogue API endpoint <a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">clients.hostwinds.com/API/dedis.php</a>, replayed against Wayback captures of that same endpoint. <strong>A purchase event is defined as a CPU or GPU generation appearing in the catalogue for the first time.</strong> Rows marked "NOT a purchase event" add only equal-or-older silicon.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Snapshot date</th>
@@ -996,7 +998,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">live endpoint</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 Cadence</h3>
 <p><strong>Observed intervals.</strong> Two clean intervals between the three observable purchase events. <strong>Purchase event #1:</strong> E5-2620 v3 (Haswell-EP) first observed 2022-05-09 (true event lies in the window 2021-11-08 → 2022-05-09). <strong>Purchase event #2:</strong> E3-1270 v5 (Skylake) first observed 2023-04-17 (window 2022-05-09 → 2023-04-17) → interval <strong>11.3 months</strong>. <strong>Purchase event #3:</strong> E3-1270 v6 (Kaby Lake) first observed 2024-04-12 (window 2024-01-27 → 2024-04-12) → interval <strong>11.9 months</strong>. Since 2024-04-12: <strong>28 months with ZERO new CPU generations.</strong> Every SKU added since is 2007–2014 silicon.</p>
 <p><strong>Median months.</strong> <strong>11.6 months</strong> (mean of the two observed intervals 11.3 and 11.9; with n=2 the median and mean coincide). Call it a <strong>~12-month refresh rhythm through 2024</strong>.</p>
@@ -1017,7 +1019,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>Source conflict, deliberately not resolved.</strong> Mergr reports "HostPapa acquired by Deluxe Corp. 2023-01-31", which contradicts the primary sources showing HostPapa <strong>acquiring</strong> Deluxe Corporation's web hosting and logo design operations in 2023. <strong>The Mergr entry appears to invert the direction of the transaction and was not relied upon</strong>; Crunchbase was inaccessible (HTTP 403) for cross-checking.</li>
 </ul>
 <h3>9.3 Expansion signals</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Date</th>
@@ -1107,7 +1109,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">clients.hostwinds.com/API/dedis.php</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>10. Cost ceiling</h2>
 <h3>10.1 Rent-derived hardware ceiling</h3>
@@ -1123,7 +1125,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>Support, provisioning, billing, payment processing, IP/ARIN costs, churn and remarketing — assumed, not verified.</strong> Assumed band: <strong>15–25% of list price</strong>. Hostwinds markets these as "fully managed" servers with 24/7/365 support, so this component is real and non-trivial.</li>
 </ul>
 <p><strong>SENSITIVITY.</strong> At the optimistic end of the band (40% deduction, 60% contribution) <strong>every ceiling below rises by 20%</strong>; at the pessimistic end (60% deduction, 40% contribution) <strong>every ceiling falls by 20%</strong>. For the volume SKU (E3-1270 v2 at $90/month) the 12-month hardware ceiling therefore spans <strong>$432 to $648</strong> around the $540 midpoint.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1218,7 +1220,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">dedis.php</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>MATERIAL CAVEATS TO CARRY.</strong></p>
 <ol>
 <li><strong>Ceilings are computed on BASE price only.</strong> RAM is metered separately at a flat <strong>$1/GB/month</strong>, which is close to pure margin against a street cost of roughly $2.80/GB for used DDR4-2133 RDIMM — a 32 GB upsell adds $32/month, or <strong>$768 over 24 months</strong>, against a one-off parts cost of about $90. Bandwidth overages and additional IP blocks are also incremental. <strong>A realistically configured customer therefore pays well above base, so these ceilings are conservative floors.</strong></li>
@@ -1227,7 +1229,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </ol>
 <p><strong><span class="gap">GAP</span> — operating-cost deduction is unverified.</strong> The 40–60% band (power, bandwidth, rack, support) is an industry rule of thumb. <strong>No Hostwinds or ColoCrossing power tariff, transit contract, rack cost or support cost per server was obtained. Every ceiling figure moves ±20% across the band.</strong></p>
 <h3>10.2 Bill of materials and roll-up</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1351,7 +1353,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://serverpartdeals.com/search?q=480GB+SATA+SSD+2.5">ServerPartDeals</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span> — BOM completeness and price reliability:</strong></p>
 <ul>
 <li><strong>BOM 2 chassis is a proxy.</strong> The 8-bay chassis required by the 2 × E5-2620 v3 SKU was not sourced at street price; a 4-bay 1U barebone at $156.99 stands in as a floor. <strong>The true 8-bay figure is higher, so the BOM 2 total of $471.87 understates the real build cost.</strong> The $639.00 Dell R630 whole-system comparator is the more reliable number for that SKU.</li>
@@ -1403,7 +1405,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>13. Public contact channels</h2>
 <p><strong>Public-source only. No personal mobile numbers and no private addresses are listed here.</strong> Where the company publishes no channel, the row says <span class="gap">GAP</span>.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -1478,7 +1480,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro sales angle</h2>
 <p><strong>Classification: greenfield AI — conditional, with purchasing authority possibly relocated.</strong> This is <strong>not</strong> an incumbent-defence account (no OEM is confirmed), <strong>not</strong> a displacement account (no competing vendor is named), and <strong>not</strong> a platform-conversion account in the WebNX sense. It is new development, gated on two things.</p>
@@ -1499,7 +1501,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>15. Verification appendix</h2>
 <h3>15.1 Single-source claims — re-verify before quoting</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Claim</th>
@@ -1539,10 +1541,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Campus figure, not a Hostwinds footprint figure. Hostwinds' own cage/rack/sq ft is <span class="gap">GAP</span></strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 Conflicting third-party estimates — shown side by side, deliberately not resolved</h3>
 <p><strong>Headcount (no company disclosure; ~40x spread; no authoritative source)</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1577,10 +1579,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Third-party-estimate</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The data-vendor cluster of ~16–30 is likely closer for a company at ~$3–5M revenue than the LinkedIn band, <strong>but no source is authoritative and this dossier does not pick one.</strong></p>
 <p><strong>Revenue (all third-party-estimate; never company-confirmed; no SEC filings; HostPapa disclosed no deal terms)</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1605,10 +1607,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Third-party-estimate</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The three cluster at <strong>$3M–$5M</strong>, but the company claims a past <strong>Inc. 5000</strong> listing (no year specified), which implies materially higher historical growth than these estimates suggest — <strong>treat the range as soft. Do not present any of these as fact in a CRM record or a forecast.</strong></p>
 <p><strong>Founding year</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1625,7 +1627,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>"Date of Business Started: March 14, 2016"</strong> — likely the WA registration / BBB-file date rather than original formation</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Unresolved. Both dates are reported here; neither is discarded.</strong></p>
 <h3>15.3 Open gaps</h3>
 <ol>
@@ -1649,8 +1651,8 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>HTTP-blocked sources encountered:</strong> WebHostingTalk (403), Crunchbase (403), ZoomInfo (403). Any finding depending on these is tagged community-sourced, secondary-capture or third-party-estimate above.</li>
 <li><strong>JavaScript interfaces that cannot be queried programmatically:</strong> fec.gov individual-contributions search, and Washington's CCFS business registry. <strong>Consequently the FEC result for Peter Holden is "no data" and must never be written as "no political contributions"</strong>; the WA UBI number is a <span class="gap">GAP</span> for the same reason.</li>
 <li><strong>Political-record consistency rule:</strong> all political data in this dossier comes from public records only and is tagged <code>public-record</code>, <code>unverified</code> or <code>gap</code> line by line.</li>
-</ul></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>Hostwinds LLC — 銷售情報檔案</h1>
+</ul></section>
+<section class="lang" id="zh"><h1>Hostwinds LLC — 銷售情報檔案</h1>
 <p><strong>編製對象：</strong> Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-04
 <strong>方法：</strong> 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。<span class="gap">GAP</span> = 查證資料中未找到，不得憑記憶補寫。
 <strong>轄區：</strong> 華盛頓州 Tukwila — West Coast North = T4｜T31。<strong>一組不符資格</strong>，T7 與 T11 亦均不涵蓋此區。應循 <strong>T4（主管 Kambiez Tahvilian）</strong> 或 T31。
@@ -1660,7 +1662,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>Hostwinds LLC 是一家私人持股、位於華盛頓州 Tukwila（西雅圖都會區）的裸機、VPS、雲端與轉售型主機業者，創立於奧克拉荷馬州 Tulsa，持有自有 ASN（AS54290，303,360 個 IPv4 位址），營運三個租用的 colocation 站點——Seattle／Tukwila、Dallas 與 Amsterdam——另在其他七個市場轉售 colocation 容量。商業判定為<strong>帶著採購權問號的全新開發（greenfield）AI 標的</strong>：完全沒有任何 GPU 產品，目前可下單的專用伺服器機隊約 8 至 19 年舊、機隊中沒有任何一顆 Xeon Scalable、也沒有 EPYC，但公司已於 2026-04-29 被 HostPapa, Inc. 併購，資本支出決策權很可能在任何換機對話開始之前就已經北移。最強的單一證據是即時公開訂購表單 <a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/cart.php?gid=12">clients.hostwinds.com/cart.php?gid=12</a>：20 個 CPU-only SKU 涵蓋 Xeon 5300 Clovertown（2007）到 E3-1270 v6 Kaby Lake（2017），機架裡還有一顆桌上型 i7-3930K，卻沒有任何一顆 Xeon Scalable 或 EPYC——這是一個完全標價、可驗證的世代落差。最可能讓案子直接死掉的一件事就是這樁併購本身：<a target="_blank" rel="noopener noreferrer" href="https://www.hostpapa.com/about-hostpapa/pressroom/2026-04-29-hostpapa-acquires-hostwinds-to-expand-global-hosting-infrastructure/">HostPapa 2026-04-29 新聞稿</a> 未揭露交易條件、未說明創辦人 Peter Holden 的留任承諾、也未公布資本支出計畫，而 <a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/54290">ARIN 對 AS54290 的 RDAP</a> 已於 2026-05-12 改登記為 HostPapa（Buffalo, NY）——若 Hostwinds 已不再自行採購硬體，所有與 Tukwila 進行的規格討論都是白費。</p>
 <hr />
 <h2>2. 公司速覽</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1715,11 +1717,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Territory Map-Jan.2026 (Rev.1)，Sales Territory Assign 分頁</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. 原始名單更正表</h2>
 <p>以下每一列都是原始工作名單中被本研究<strong>推翻</strong>或<strong>無法證實</strong>的敘述。首次接觸前必須先讀完本表，避免以錯誤前提開場。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1772,13 +1774,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>檢索到的 Tukwila 機房技師職缺屬於 <strong>Wowrack</strong>，是位於 <strong>12201</strong> Tukwila International Blvd 的另一家公司（18,000 sq ft raised floor、3.0 MW）。Hostwinds 位於 <strong>12101</strong>。<strong>不得誤植於 Hostwinds，兩處設施亦不可混為一談。</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. 領導層與所有權</h2>
 <p><strong>所有權現況。</strong> Hostwinds LLC 自 2010 年起由創辦人自有、自籌資金經營，直至 <strong>HostPapa, Inc. 於 2026-04-29 完成收購</strong>（<a target="_blank" rel="noopener noreferrer" href="https://www.hostpapa.com/about-hostpapa/pressroom/2026-04-29-hostpapa-acquires-hostwinds-to-expand-global-hosting-infrastructure/">HostPapa 新聞稿</a>，交易條件未揭露）。網路資產的控制權移轉已由登記機構證實：<a target="_blank" rel="noopener noreferrer" href="https://rdap.arin.net/registry/autnum/54290">ARIN 對 AS54290 的 RDAP</a> 仍載明 <code>ASName: HOSTWINDS</code>，但所屬組織已變更為 <code>OrgName: HostPapa, OrgId: HOSTP-7</code>，地址 325 Delaware Avenue Suite 300, Buffalo NY 14202，紀錄更新日 2026-05-12。就硬體採購而言更關鍵的是，<a target="_blank" rel="noopener noreferrer" href="https://www.colocrossing.com/company/">ColoCrossing 自身的併購說明</a> 明載 Hostwinds 的 <strong>基礎設施將移轉至 ColoCrossing</strong>（即 HostPapa 的 Infrastructure Business Unit）——<strong>這使採購決策點離開 Tukwila。</strong> Hostwinds 在任何階段均查無董事會、機構投資人或外部股東。</p>
 <h3>4.1 具名人物一覽——Hostwinds、收購方、登記機構與網路聯絡人</h3>
 <p>證據等級定義：<strong>primary-record</strong>＝公司自行發布、登記機構或政府檔案 · <strong>corroborated</strong>＝兩個以上獨立來源互相印證 · <strong>single-source</strong>＝僅單一來源（多為資料聚合商），使用前須重新查證。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2053,9 +2055,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.hostwinds.com/legal/terms">Hostwinds 服務條款</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.2 登記機構紀錄</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2123,9 +2125,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://trademarks.justia.com/871/25/hostwinds-87125319.html">Justia——HOSTWINDS 87125319</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 採購決策圈（buying committee）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2175,7 +2177,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>僅在提案涉及佈建、自動化或雲端控制平面時才具相關性。管道為 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matthew-anderson-196822149/">linkedin.com/in/matthew-anderson-196822149</a>，所在地 Kirkland WA。用於佐證 Waggoner 的規格，而非作為獨立切入點</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 未能補齊的角色</h3>
 <p><strong>以下每一項均為 <span class="gap">GAP</span>——皆為實際查找後未取得，而非單純未列出：</strong> Hostwinds LLC 登記在案的 governors／members／managers——<span class="gap">GAP</span>（WA SOS CCFS 於 API 與 UI 兩端皆遭機器人防護阻擋） · Hostwinds LLC 註冊代理人姓名與地址——<span class="gap">GAP</span>（同一阻礙） · Hostwinds LLC 的 UBI 號碼、設立日期與申報沿革（含歷任登記主管）——<span class="gap">GAP</span>（同一阻礙） · Hostwinds LLC 年報簽署人——<span class="gap">GAP</span>（同一阻礙） · Delaware／Nevada 平行實體查核——<span class="gap">GAP</span>（所有來源均將營運實體記為「Hostwinds LLC」並搭配華盛頓州地址，服務條款逐字確認，且查無 DE／NV 控股公司證據；惟兩州登記處均未直接搜尋，故無法排除控股架構） · Hostwinds 的 CFO 或任何財務主管——<span class="gap">GAP</span> · Hostwinds 的 CTO——<span class="gap">GAP</span>（LeadIQ 僅顯示遮蔽首字母「T. M.」，任何來源皆無法還原全名） · HostPapa CTO 全名——部分／<span class="gap">GAP</span>（僅公開為「V. S.」／名字「Vince」，姓氏從未出現，<strong>未予臆測</strong>） · HostPapa Infrastructure BU 業務副總全名——部分／<span class="gap">GAP</span>（僅公開為「Ernie Q.」，姓氏從未出現，<strong>未予臆測</strong>） · HostPapa 的 CFO——<span class="gap">GAP</span>（所有已觸及來源皆無具名 CFO，僅出現 Director of Finance 與 Controller，且 hostpapa.com/about-hostpapa/leadership/ 回 HTTP 404，並無官方高管名單可比對） · Hostwinds、ColoCrossing 或 HostPapa 的專職採購／供應鏈主管——三家皆 <span class="gap">GAP</span> · Hostwinds 的 VP Infrastructure 或 VP Engineering——<span class="gap">GAP</span>（該組織在 CEO 之下似乎最高僅到 Director 層級） · AS54290 的具名 NOC 或網路工程師——<span class="gap">GAP</span>（ARIN 僅公開角色帳號，PeeringDB 完全未公開聯絡人；唯一具名的自然人網路聯絡人是 IRR 物件上的 Peter Holden） · 具名的 DMCA 指定代理人——<span class="gap">GAP</span>（服務條款提及卻從未具名，且美國著作權局名錄以「Hostwinds」查詢無結果） · Dallas 與 Amsterdam 站點的場站主管——<span class="gap">GAP</span>（新聞報導可確認站點存在，卻未具名任何人） · 併購後 Hostwinds 品牌的日常負責人／總經理——<span class="gap">GAP</span>（查無任何來源說明品牌日常由誰負責，亦無來源說明 Peter Holden 在 2026-04-30 後是否保有職務） · Hostwinds LLC 的董事會與投資人——<span class="gap">GAP</span>（所有來源均描述其自 2010 年起為創辦人自有、自籌資金；查無董事會、機構投資人或外部股東，交易條件亦未揭露） · Benjamin Bream 與 Guy Hopkins 的確切職稱——<span class="gap">GAP</span>（兩人皆由原始 FEC 申報證實為 Hostwinds 員工，但職業欄無法取得） · HOSTWINDS 商標的聲明書簽署人與登記通訊代表人——<span class="gap">GAP</span>（TSDR 現需註冊 API key，Justia 鏡像回 HTTP 403） · UCC-1 擔保權人與債務人簽署人——<span class="gap">GAP</span>（華盛頓州 UCC 紀錄由 Dept of Licensing 保管，須以互動式或付費方式查詢）。</p>
 <h3>4.5 已實際查詢的來源</h3>
@@ -2184,7 +2186,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>5. 據點與機房</h2>
 <p>Hostwinds 只聲稱擁有<strong>三個</strong>自有資料中心，卻在<strong>十個</strong>市場銷售 colocation。公司明說自有<em>硬體</em>——「Our hardware is directly owned and sold by us」——但從未聲稱擁有任何建物，並自述使用「SAS Type II, audited, Tier 3+ Data centers」，<strong>這是第三方設施的用語。所有站點均為租用／colocation。</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>站點</th>
@@ -2229,12 +2231,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.hostwinds.com/colocation">colocation 頁</a> 逐字列出十個市場與四個機櫃／電力級距</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>規模。</strong> 現行伺服器與機櫃數<strong>未公開＝<span class="gap">GAP</span></strong>。唯一硬數字是上述 Dallas 的陳舊數字。最佳現況代理是 IP 空間：AS54290 originates <strong>75 個 IPv4 前綴 ＋ 4 個 IPv6 前綴，合計 303,360 個 IPv4 位址</strong>——約 4.6 個 /16，屬有意義的 VPS／主機代管足跡，與「低至數千台實體主機」相符。<strong>IP 數不是伺服器數，絕不得如此呈現。</strong></p>
 <hr />
 <h2>6. 硬體機隊</h2>
 <p>本節證據等級：<strong>已確認</strong>＝業者第一手具名揭露或多方獨立佐證・<strong>旁證</strong>＝業者行為強烈指向但從未具名・<strong>推論</strong>＝僅由 CPU／機殼形狀推得・<strong>反證</strong>＝證據與原始名單相反・<strong><span class="gap">GAP</span></strong>＝查無。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>供應商／項目</th>
@@ -2274,7 +2276,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>雲端伺服器以 1–16 vCPU、1–96 GB RAM 分級銷售，「Solid State Drives」（未區分 SSD 或 NVMe），1 Gbps 埠，時計 $0.006931/hr 至 $0.456931/hr。<strong>頁面未具名 CPU 廠、亦未具名 hypervisor</strong>（第三方評測提及 KVM 與 OpenVZ）。歷史部落格描述早期 VPS 主節點為 4 核／16 GB、共享節點為 8 核／8 GB——2012–13 年代，非現況（<a target="_blank" rel="noopener noreferrer" href="https://www.hostwinds.com/cloud/cloud-servers">雲端伺服器頁</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>銷售解讀。</strong> 供應商問題是本帳戶最重要的未解項目，<strong>只能靠訪談、現場，或在試用機上查看 IPMI／BMC 橫幅來確認。</strong></p>
 <hr />
 <h2>7. GPU 與 AI 佈局</h2>
@@ -2295,7 +2297,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </blockquote>
 <p><strong>查詢日期：2026-08-10。</strong> 上述範圍聲明不是樣板文字。Washington 是乾淨的、而且可以證明是乾淨的；Ontario 與 New York 則根本沒查過，而集團真正的擔保包裹幾可確定就在 Ontario。對外引用此結論之前，<strong>必須連同 8.2 與 8.4 一起讀</strong>。</p>
 <h3>8.2 查詢紀錄——逐筆列出，不合併</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>查詢入口（Portal）</th>
@@ -2398,7 +2400,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>不適用——純分析步驟，無成本。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 各筆申報全文</h3>
 <p><strong>一筆都沒有。</strong> 截至 2026-08-10，Washington 索引中（含失效紀錄）不存在任何以 HOSTWINDS、HOSTWINDS LLC 或 HOSTPAPA INC 為債務人的 UCC financing statement。既然申報集合為空，就沒有任何申報區塊可以呈現：<strong>沒有檔號、沒有申報日、沒有失效或續期日、沒有擔保權人名稱與地址、沒有債務人登記地址、沒有可逐字引用的擔保品（collateral）描述，也沒有任何修正、讓與或終止紀錄。</strong> 此處沒有任何縮寫或壓縮——是紀錄本身為空。</p>
 <p>關於「空集合」代表什麼、不代表什麼，講明白：</p>
@@ -2417,7 +2419,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>未執行個人債務人查詢。</strong> 創辦人 Peter Holden 的個人保證會登錄在個人債務人索引中，本次<strong>刻意不查</strong>。針對具名私人個人的財務紀錄進行檢索，不在本作業範圍內。</li>
 </ul>
 <h3>8.4 這份紀錄的意義</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>觀察</th>
@@ -2476,12 +2478,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>這就是跨團隊協同（co-op）轉介案。</strong> 採購決策權不在 Washington，實質上也不在一組（Team 1）的美國轄區內——它在 <strong>Burlington, Ontario 的 HostPapa, Inc.，並透過 Buffalo 的 ColoCrossing 執行</strong>。請以跨團隊協同案交付給夥伴團隊，並附上證據：2025-06-03 的 1.3 億美元 BMO 額度、34 個月內吸收三批機隊、Q1 2026 啟動的 Buffalo 擴建、Dallas／Seattle 約 405 台最新矽晶僅到 2017 年 Kaby Lake E3 的閒置舊機，以及一個全新、需要現代密度才賣得動的十市場 colocation 產品。依跨團隊協同規則，<strong>不得僅因總部位置就把本案結掉</strong>——它應透過夥伴團隊存續，而<strong>一組（Team 1）保留原始開發歸屬</strong>。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. 採購時鐘</h2>
 <h3>9.1 快照時間軸</h3>
 <p>以即時產品型錄 API 端點 <a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">clients.hostwinds.com/API/dedis.php</a> 重建，並以該端點的 Wayback 存檔逐次回放。<strong>「採購事件」的定義是：某一 CPU 或 GPU 世代首次出現在型錄中。</strong> 標示「非採購事件」的列，只新增了同世代或更舊的矽晶。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>快照日期</th>
@@ -2582,7 +2584,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">即時端點</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 採購節奏</h3>
 <p><strong>觀察到的間隔。</strong> 三次可觀察的採購事件之間，有兩段乾淨的間隔。<strong>採購事件 #1：</strong> E5-2620 v3（Haswell-EP）首次觀察到於 2022-05-09（真實事件落在 2021-11-08 → 2022-05-09 的窗內）。<strong>採購事件 #2：</strong> E3-1270 v5（Skylake）首次觀察到於 2023-04-17（窗：2022-05-09 → 2023-04-17）→ 間隔 <strong>11.3 個月</strong>。<strong>採購事件 #3：</strong> E3-1270 v6（Kaby Lake）首次觀察到於 2024-04-12（窗：2024-01-27 → 2024-04-12）→ 間隔 <strong>11.9 個月</strong>。自 2024-04-12 起：<strong>28 個月內零個新 CPU 世代。</strong> 期間新增的每一個 SKU 都是 2007–2014 年的矽晶。</p>
 <p><strong>中位數月數。</strong> <strong>11.6 個月</strong>（兩段觀察間隔 11.3 與 11.9 的平均；n=2 時中位數與平均相同）。可視為<strong>至 2024 年為止約 12 個月的換機節奏</strong>。</p>
@@ -2603,7 +2605,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>來源衝突，刻意不擇一。</strong> Mergr 記載「HostPapa acquired by Deluxe Corp. 2023-01-31」，與第一手來源所示「HostPapa 於 2023 年<strong>收購</strong> Deluxe Corporation 的網站代管與 logo 設計業務」相互矛盾。<strong>Mergr 該筆條目看來把交易方向弄反了，本檔未予採用</strong>；Crunchbase 無法存取（HTTP 403），無從交叉查核。</li>
 </ul>
 <h3>9.3 擴張訊號</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>日期</th>
@@ -2693,7 +2695,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">clients.hostwinds.com/API/dedis.php</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>10. 成本天花板</h2>
 <h3>10.1 由租金推導的硬體天花板</h3>
@@ -2709,7 +2711,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>支援、開通、帳務、金流、IP／ARIN 成本、流失與再銷售——假設值，未經驗證。</strong> 假設區間：<strong>定價的 15–25%</strong>。Hostwinds 以「fully managed」加 24/7/365 支援行銷這些機器，因此這一塊是真實且不可忽略的成本。</li>
 </ul>
 <p><strong>敏感度。</strong> 取區間樂觀端（扣減 40%、貢獻 60%），<strong>以下每一個天花板都上升 20%</strong>；取悲觀端（扣減 60%、貢獻 40%），<strong>每一個天花板都下降 20%</strong>。以量最大的 SKU（E3-1270 v2，每月 $90）為例，12 個月硬體天花板因此落在中點 $540 附近的 <strong>$432 至 $648</strong> 區間。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -2804,7 +2806,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://clients.hostwinds.com/API/dedis.php">dedis.php</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>必須一併帶走的實質但書。</strong></p>
 <ol>
 <li><strong>天花板僅以基本定價計算。</strong> RAM 另以固定 <strong>$1/GB/月</strong>計價，對照二手 DDR4-2133 RDIMM 街價約 $2.80/GB，這幾乎是純毛利——加購 32 GB 每月多 $32，<strong>24 個月即 $768</strong>，而一次性料件成本約 $90。頻寬超量與額外 IP 區塊同樣是增額項目。<strong>因此實際配置後的客戶付費遠高於基本價，這些天花板是保守下限。</strong></li>
@@ -2813,7 +2815,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </ol>
 <p><strong><span class="gap">GAP</span>——營運成本扣減率未經驗證。</strong> 40–60% 區間（電力、頻寬、機櫃、支援）是業界經驗法則。<strong>本次並未取得任何 Hostwinds 或 ColoCrossing 的電費費率、傳輸合約、機櫃成本或每台支援成本。每一個天花板數字都會在此區間內 ±20% 移動。</strong></p>
 <h3>10.2 料表（BOM）與彙總比較</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -2937,7 +2939,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://serverpartdeals.com/search?q=480GB+SATA+SSD+2.5">ServerPartDeals</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span>——料表完整度與價格可靠度：</strong></p>
 <ul>
 <li><strong>BOM 2 的機殼是代用品。</strong> 2 × E5-2620 v3 SKU 所需的 8 槽機殼未取得街價，以 $156.99 的 4 槽 1U barebone 作為下限代入。<strong>真實 8 槽數字更高，因此 BOM 2 的 $471.87 合計低估了實際組裝成本。</strong> 該 SKU 以 $639.00 的 Dell R630 整機對照數字較為可靠。</li>
@@ -2989,7 +2991,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>13. 公開聯絡管道</h2>
 <p><strong>僅限公開來源。本表不列任何個人行動電話與私人住址。</strong> 若業者未公布該管道，該列標示 <span class="gap">GAP</span>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -3064,7 +3066,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro 銷售切入點</h2>
 <p><strong>分類：全新開發（greenfield）AI——附帶條件，且採購權可能已移轉。</strong> 這<strong>不是</strong>既有客戶防守案（無任何已確認 OEM），<strong>不是</strong>替換案（無任何具名競爭廠商），也<strong>不是</strong> WebNX 那種平台轉換案。這是新客開發，並卡在兩件事上。</p>
@@ -3085,7 +3087,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>15. 查證附錄</h2>
 <h3>15.1 單一來源支撐的說法（引用前須再驗證）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>說法</th>
@@ -3125,10 +3127,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>這是園區數字，不是 Hostwinds 的足跡數字。Hostwinds 自身的 cage／機櫃／sq ft ＝ <span class="gap">GAP</span></strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 第三方估計互相矛盾之處（<strong>呈現分歧，不擇一</strong>）</h3>
 <p><strong>員工數（公司未揭露；約 40 倍落差；無任何權威來源）</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3163,10 +3165,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>第三方估計</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>以一家營收約 $3–5M 的公司而言，資料商聚攏的約 16–30 人可能比 LinkedIn 區間更接近實況，<strong>但沒有任何來源具權威性，本檔不擇一。</strong></p>
 <p><strong>營收（全部為第三方估計；從未經公司確認；無 SEC 申報；HostPapa 未揭露交易條件）</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3191,10 +3193,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>第三方估計</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>三家聚攏在 <strong>$3M–$5M</strong>，但公司自稱曾入選 <strong>Inc. 5000</strong>（未指明年份），暗示歷史成長明顯高於這些估計——<strong>故此區間應視為軟性。任何一項皆不得以事實形式寫入 CRM 紀錄或預測。</strong></p>
 <p><strong>創立年份</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3211,7 +3213,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>「Date of Business Started: March 14, 2016」</strong>——應為 WA 登記／BBB 建檔日，非原始設立日</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>未解。兩個日期均予保留，不擇一捨棄。</strong></p>
 <h3>15.3 未結 <span class="gap">GAP</span></h3>
 <ol>
@@ -3235,7 +3237,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>本次遭遇的 HTTP 阻擋來源：</strong> WebHostingTalk（403）、Crunchbase（403）、ZoomInfo（403）。凡依賴上述來源之發現，均已於本檔標記為社群來源、次級擷取或第三方估計。</li>
 <li><strong>無法以程式查詢的 JavaScript 介面：</strong> fec.gov 個人捐獻查詢，以及 Washington 的 CCFS 商業登記。<strong>因此 Peter Holden 的 FEC 結果屬「無資料」，絕不可寫成「沒有政治獻金」</strong>；WA 的 UBI 編號亦因同一原因為 <span class="gap">GAP</span>。</li>
 <li><strong>政治紀錄一致原則：</strong> 本檔所有政治資料僅取自公開紀錄，並逐條標記為 <code>public-record</code>、<code>unverified</code> 或 <code>gap</code>。</li>
-</ul></div></section>
+</ul></section>
 </main>
 </div>
 <footer>UNCLASSIFIED // FOR INTERNAL SUPERMICRO SALES USE ONLY &nbsp;·&nbsp; Every figure carries an inline source and date. GAP marks honestly-missing evidence. Assumptions are labelled as assumptions. Not investment advice.</footer>

@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,7 +66,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>Sharktech, Inc. — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>Sharktech, Inc. — Sales Intelligence Dossier</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-04
 <strong>Method:</strong> Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. <span class="gap">GAP</span> = not found in verified material. No fabrication.
 <strong>Territory:</strong> Las Vegas, Nevada — West Coast South excl. CA = <strong>T1</strong> | T31. Team 1 can register directly.
@@ -74,7 +76,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>Sharktech, Inc. is a founder-owned, family-controlled DDoS-protected bare-metal, cloud and colocation provider headquartered in Las Vegas, Nevada, running its own ASN (AS46844) and leased cage/rack space across five sites — Las Vegas, Los Angeles, Denver, Chicago and Amsterdam — with roughly 25–50 staff and no outside investors. The commercial verdict is <strong>displacement / second-source</strong>, not incumbent defence: the one and only time Sharktech has ever named a server vendor in public, it named <strong>Lenovo</strong>, and "Supermicro" returns zero hits across every Sharktech-controlled property searched, so any opening that assumes existing Supermicro incumbency will fail on the first call. The single strongest piece of evidence in this file is Sharktech's own client-portal announcement #221 of 16 January 2025 launching the AMD EPYC 7702P line, whose spec block reads verbatim <strong>"System: Lenovo"</strong> (<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php/announcements/221/Now-Available-AMD-EPYC-7702P-with-NVMe-U.2.html">announcement #221</a>) — a first-party disclosure by the operator, not an inference. The one thing that could kill the deal is the channel: Sharktech buys through an <strong>unnamed supplier/distributor</strong> ("we received a new batch of EPYC 7702 servers from our supplier"), so under Rule 8 the distributor relationship must be cleared and a do-not-call flag confirmed <em>before</em> anyone dials — walking in without that risks a channel conflict on an account that has never once appeared in the CRM.</p>
 <hr />
 <h2>2. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -129,11 +131,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Territory Map-Jan.2026 (Rev.1), Sales Territory Assign tab</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. Corrections to the working list</h2>
 <p>Only the rows that concern Sharktech. Read these before the first call so nobody opens on a false premise.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -168,13 +170,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Across the six-provider working list, only two providers are confirmed Supermicro; Sharktech is the one provider <strong>confirmed on a competing vendor (Lenovo)</strong>. Opening as if Sharktech were an existing Supermicro account destroys credibility immediately. Open with a question about the platform vendor, not a statement</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Leadership &amp; ownership</h2>
 <p>Closely held and family-controlled. <strong>Tim Timrawi is simultaneously President, Treasurer <em>and</em> the sole Director</strong> of record in Nevada, and the complete Nevada historical officer view — all 20 records from 2019-04-02 to 2026-06-08 — contains no name other than Tim Timrawi and Erin Timrawi. No outside investor, PE or VC holding was found anywhere. Two registries were opened directly this pass, <strong>Nevada SOS / SilverFlume entity E0295442013-6</strong> and <strong>Montana SOS entity D221339</strong>, which closes the "Montana charter = <span class="gap">GAP</span>" previously carried in this file: the Montana Articles of Incorporation were filed <strong>2011-12-30</strong> (filing D221339-1224501) naming Tim Timrawi as <strong>sole incorporator</strong> and original registered agent, with 50,000 no-par shares authorised. Two corrections to §2 follow from the live registry read: the <strong>current</strong> Nevada registered agent is <strong>Ann C. Pongracz</strong> of Sklar Williams PLLC, <em>not</em> Tim Timrawi; and the BBB descriptor "Managing Member" for Erin Timrawi is inconsistent with the corporate form and is superseded by the Nevada record, which shows her as <strong>Secretary</strong>.</p>
 <h3>4.1 Named people</h3>
 <p>Registry officers and ARIN/PeeringDB network contacts are included as their own rows and labelled as such — a registry officer or an ARIN OrgAdmin is a real named person and belongs in this table. Evidence grade: <strong>primary-record</strong> = government/registry/USPTO filing; <strong>corroborated</strong> = two or more independent aggregators or an aggregator plus a live public profile; <strong>single-source</strong> = one aggregator only, re-verify before use.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -413,10 +415,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/api/poc?net_id=16595">PeeringDB POC API, net_id 16595</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Three aggregator claims are recorded and explicitly rejected — do not use them:</strong> <strong>Shivam Kant</strong> labelled "Owner", <strong>Muhammad Khubaib</strong> labelled "Chairperson" and <strong>Lourdes Helman</strong> labelled "Co-founder", all from the <a target="_blank" rel="noopener noreferrer" href="https://www.signalhire.com/companies/sharktech">SignalHire roster</a> alone. Each is <strong>directly contradicted</strong> by the Nevada officer table and its full 20-record 2019–2026 history, by the Montana annual reports, by the Articles of Incorporation naming Tim Timrawi as sole incorporator, and by the USPTO record showing the SHARKTECH mark owned by Tim Timrawi as an <strong>INDIVIDUAL</strong>. None of the three has an FEC record with a Sharktech employer. Treat all three as <strong>unverified</strong>.</p>
 <h3>4.2 Registry record</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -526,10 +528,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://tsdr.uspto.gov/statusview/sn85516464">USPTO TSDR sn85516464</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Also on the public record, and relevant to how the account is handled rather than to who buys: Tim Timrawi is named <strong>individually</strong>, alongside the company, as a co-defendant in <em>Millennium Funding, Inc. v. Sharktech, Inc.</em>, D. Colo. 1:21-cv-01261 (filed 2021-05-07), where the party list reads "Tim Mouhieddine Timrawi" — the source of his full legal name. Two further suits are very recent: <em>Nagravision SA v. Sharktech, Inc.</em>, D. Nev. 2:26-cv-00167 (2026-01-26) and 2:26-cv-00202 (2026-01-28).</p>
 <h3>4.3 Buying committee</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -564,7 +566,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Lowest outbound priority and strictly a technical-enablement contact, not a commercial one.</strong> Engage only once an evaluation is agreed, then support his team generously: provisioning automation, driver and firmware baselines, IPMI/Redfish integration, documentation. Schedule around the India timezone. <strong>No verified contact details exist</strong>, so reach him through Mohsin Rizwan or whoever Tim designates — do not attempt a cold approach</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 Unfilled roles — every one is a researched <span class="gap">GAP</span>, not an omission</h3>
 <p><strong>CFO — NO NAME EXISTS; Tim Timrawi holds the Treasurer seat himself, so the role is almost certainly not filled by a separate person (searched: NV officer table, all 20 NV historical officer records 2019–2026, MT AR2018/AR2019, targeted web search)</strong> · <strong>Controller / Finance Manager / AP lead — <span class="gap">GAP</span></strong> (no name in any registry, roster or job posting; the 2011 incorporation used an outside CPA, suggesting finance has historically been outsourced, currency unverified) · <strong>Procurement / Purchasing Manager — <span class="gap">GAP</span></strong>, no procurement function is evidenced anywhere; purchasing authority appears to sit with the CEO/Treasurer directly · <strong>CTO / VP Engineering / Chief Architect — <span class="gap">GAP</span></strong>; senior technical authority appears to be VP Operations Mohsin Rizwan, with the founder as de facto chief technologist · <strong>Customer Support Manager — NAME MASKED, NOT RESOLVED</strong>: Datanyze/ZoomInfo expose the role only as initials "F. S. A." and cross-referencing the SignalHire roster produced no unambiguous match — <strong>not guessed, stays a <span class="gap">GAP</span></strong> · <strong>Board of Directors beyond Tim Timrawi — CONFIRMED ABSENT rather than merely unfound</strong> (complete NV historical view + MT annual reports show him as the only Director at every point in time) · <strong>In-house General Counsel — <span class="gap">GAP</span></strong>; external counsel is indicated instead (NV registered agent is attorney Ann C. Pongracz; the USPTO record states "Attorney of Record — None") · <strong>Site-level Data Center / Facilities Manager for each of the five sites — <span class="gap">GAP</span></strong> (all are leased colocation footprints, not owned buildings) · <strong>Amsterdam / EU country manager or entity officer — <span class="gap">GAP</span></strong>; a RIPE database search for "sharktech" returned <strong>ZERO objects</strong>, so no European registry contact exists to mine · <strong>HR / Talent lead and named hiring managers — <span class="gap">GAP</span></strong>: no careers page (sharktech.net/careers 404s on the reachable mirror), no Sharktech-branded postings on Indeed, ZipRecruiter, Glassdoor or SimplyHired, therefore no "reports to" lines, no recruiter names, no org-structure signal · <strong>Capex approver below CEO level / any delegated signing authority — <span class="gap">GAP</span>, and probably genuinely nonexistent</strong> · <strong>Named individual network engineers in public registries — <span class="gap">GAP</span> BY DESIGN</strong>: ARIN OrgTech and OrgNOC both resolve to role account NOC2002-ARIN and abuse to ABUSE1080-ARIN, and PeeringDB publishes no POCs at all, so <strong>only Tim Timrawi (TMT-ARIN) is exposed as a named human across all network registries.</strong></p>
 <h3>4.5 Sources worked — including the ones that returned nothing</h3>
@@ -574,7 +576,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>5. Footprint</h2>
 <p>Five sites, <strong>all leased/colocated — Sharktech owns no facility.</strong> Sharktech's own about page names <strong>Equinix, CoreSite, Flexential and Crown Castle</strong> as facility partners.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Site</th>
@@ -621,12 +623,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Sharktech's Amsterdam page: "Sharktech's Amsterdam, Netherlands data center (Equinix AM11)". PeeringDB confirms "Amsterdam (AM11 Equinix)" as a private facility and <strong>AMS-IX as the sole public IX at 100G</strong>. Only non-US site; carries the highest EPYC pricing ($499/$699 vs $459/$659 in the US) (<a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/data-centers/amsterdam/">Amsterdam DC page</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Scale proxies (no rack, cabinet, server count or MW figure is disclosed by Sharktech or by any colo partner — <span class="gap">GAP</span>):</strong> (i) 51 publicly orderable bare-metal SKUs across 5 sites, of which <strong>only 17 are in stock</strong>, and batch builds are explicitly small ("We're currently building 12 of them in Las Vegas"); (ii) AS46844 originates 413 IPv4 + 9 IPv6 prefixes = <strong>124,416 IPv4 addresses</strong>; (iii) the colocation product is sold in <strong>1–6U increments (200–1200 W)</strong> and <strong>10–42U cabinets (1600–5500 W)</strong>, implying Sharktech leases cabinet/cage space rather than whole halls.</p>
 <hr />
 <h2>6. Hardware fleet</h2>
 <p>Evidence grades are explicit and must be repeated when this is spoken aloud: <strong>confirmed</strong> = first-party named disclosure or multiple independent corroboration; <strong>circumstantial</strong> = behaviour strongly indicates but never named; <strong>inferred</strong> = derived from CPU/chassis shape only; <strong>contradicted</strong> = evidence runs against the working-list claim; <strong><span class="gap">GAP</span></strong> = not found.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -656,9 +658,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>No Supermicro SKU, chassis, motherboard, barebone or SuperServer model is named in any Sharktech-controlled property or in any third-party source located. Zero "Supermicro" hits across: sharktech.net product/DC/colo/DDoS pages, the servers.json feed (51 SKUs), the <a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php/announcements">portal announcements archive</a> (all 25 items across 3 pages), PeeringDB, ARIN RDAP, the LinkedIn company page, and the LowEndTalk review thread. <strong>Recorded explicitly so the sales team does not walk in on a false premise.</strong> Supermicro is best positioned here as a <strong>displacement / second-source</strong> play, not a renewal</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>CPU generations observed in the live catalog, and what they imply about fleet age</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Platform</th>
@@ -688,7 +690,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Rome, <strong>2019</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Read:</strong> the largest single block of the fleet is a 2016 Broadwell platform, and the newest CPU family in the catalog is 2019. <strong>Nothing Ice Lake, Sapphire Rapids, Emerald Rapids, Granite Rapids, Genoa, Bergamo or Turin appears anywhere.</strong> The catalog centre of gravity is therefore 7–10 years old, which is consistent with the small, repeated, in-house build batches described above — and with their own admission that part of the installed base lacks 10G-capable NICs.</p>
 <p><strong>Software / virtualization stack (platform-fit context):</strong> OpenStack (public/private cloud), <strong>Proxmox</strong> ("Smart-VPS: New Proxmox based VPS Solution now available!"), <strong>Virtuozzo</strong> (named PaaS partner), cPanel, Acronis Cyber Protect, S3-compatible object storage at <strong>$4.9/TB</strong>. Sharktech's about page names OpenStack and Virtuozzo for virtualization. <strong>Relevance: object storage + Proxmox + OpenStack all pull toward high-density NVMe and high-bay-count storage chassis — matching the 24-bay and 10× U.2 SKUs they already sell.</strong> (<a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/about/">about page</a>)</p>
 <hr />
@@ -714,7 +716,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>Do not tell the account team "Sharktech has no liens."</strong> The only defensible sentence is: <em>"No Montana UCC filings exist against Sharktech, and the Nevada index has not been searched."</em></p>
 <p><strong><span class="gap">GAP</span> — DOMICILE STATE NOT CONFIRMED, and it undermines the whole UCC exercise.</strong> Public records show Sharktech, Inc. filed as a <strong>FOREIGN Corporation in Nevada on 2013-06-14</strong>, which by definition means it is incorporated somewhere else — but the record naming that home state could not be retrieved in this pass. The Montana business-entity search API (<code>POST https://biz.sosmt.gov/api/Records/businesssearch</code>) returns a Cloudflare "Just a moment…" interstitial for every query, even though the Montana <strong>lien</strong> search API on the same host answers normally. Under <strong>UCC Article 9-307</strong> the correct filing office is the debtor's state of incorporation, so <strong>if the domicile is not Montana, a clean Montana index proves nothing at all.</strong> Note the tension with §2 and §4.2 of this file, which record home jurisdiction = Montana from a registry-mirror read; that premise was <strong>not</strong> re-confirmed at source in this pass and should be treated as open. <strong>Resolve by:</strong> pulling the Nevada foreign-corporation record (which states the home state) via the Nevada SOS entity search, or by calling Nevada SOS on <strong>(775) 684-5708</strong>.</p>
 <h3>8.2 Search log — every attempt, one row each, none merged</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Portal</th>
@@ -894,7 +896,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Automated access to Nevada is not achievable. Required routes are: (a) a human browser session on SilverFlume with a registered account; (b) Nevada SOS Commercial Recordings by telephone on <strong>(775) 684-5708</strong>; or (c) a commercial lien-search vendor (CSC, Wolters Kluwer Lien Solutions) running a Nevada debtor search on instruction. <strong>NEVADA FEES NOT VERIFIED — deliberately not stated rather than guessed.</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 Filings on record — in full</h3>
 <p><strong>Zero filings. <code>ucc_filings[]</code> is empty by evidence, not by omission.</strong></p>
 <p>There is no filing block to render here because the one index that answered — the Montana free public lien index, debtor-name indexed, covering UCC, EFS and Title 71 lien types — returned <strong>zero records</strong> under <code>SHARKTECH</code>, <code>SHARK TECH</code>, <code>SHARKTECH, INC.</code> and <code>SHARKTECH INC</code>, under <code>STATUS="ALL"</code>, <code>STATUS="ACTIVE_LAPSED_UNLAPSED"</code> and <code>STATUS="ACTIVE_UNLAPSED"</code>, and a <code>SHARK</code> control query on the same endpoint in the same session returned six real Montana filings with full secured-party detail. The zero is therefore a <strong>true negative for that index</strong>, not a silent failure.</p>
@@ -913,7 +915,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong><span class="gap">GAP</span>:</strong> the secured-party identity is entirely unknown. Because zero filings were found in the one index that answered, there is no secured party name, address, collateral description, filing number, lapse date, amendment, assignment or termination to transcribe.</p>
 <p><strong><span class="gap">GAP</span>:</strong> the Nevada index has never been searched, so a Nevada filing — including a possible Lenovo Financial Services or equipment-lessor UCC-1 — may exist and would not appear anywhere in this file.</p>
 <h3>8.4 What the record means</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Observation</th>
@@ -960,7 +962,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Two consequences. <strong>First</strong>, there is no lien-lapse date to time an approach to — so on current evidence the timing question is <strong>moot in Montana</strong>, and the constraint on deal size is <strong>cash, not encumbrance</strong>. <strong>Second</strong>, the H5 episode is the single most useful thing in this file for framing a pitch: <strong>this is a buyer who will physically relocate a data centre to avoid a price increase.</strong> Any proposal must be led by <strong>total cost per sellable node per month</strong> with the power, rack-density and memory/storage sourcing savings quantified explicitly. <strong>Do not lead with performance. Lead with the cost per node</strong>, because that is the lever they have demonstrably, publicly and expensively pulled. (<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/223">announcement #223</a> · <a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/235">announcement #235</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.5 Open GAPs in this section</h3>
 <ol>
 <li><strong>DOMICILE STATE NOT CONFIRMED</strong> — the single biggest gap. Nevada foreign-corporation status is confirmed (filed 2013-06-14), which proves incorporation <em>somewhere else</em>, but the record naming that state was not retrieved. Montana business-entity API is Cloudflare-gated. <strong>Resolve via Nevada SOS entity search or (775) 684-5708.</strong></li>
@@ -973,7 +975,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>9. Purchase clock</h2>
 <h3>9.1 Catalogue snapshot timeline</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Snapshot date</th>
@@ -1082,7 +1084,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/servers.json">live servers.json</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 Cadence</h3>
 <p><strong>Basis — two independent evidence streams, reconciled.</strong> <strong>STREAM 1, catalogue archaeology:</strong> 12 usable captures of <a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/dedicated-servers/">https://sharktech.net/dedicated-servers/</a> and <a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/servers.json">https://sharktech.net/servers.json</a> from 2022-12-07 to today, parsed at the SKU-row level. Base processors were extracted specifically from the head-text span inside <code>div.processor-field</code> so that <strong>CPU UPGRADE OPTIONS</strong> (which live in adjacent tooltip scripts) were never miscounted as base-config arrivals — this matters, because a naive regex over the page finds Gold 6248/6238/6246 as early as December 2024 when they were only upsell options, not purchased base inventory. The 2026-07-28 and live captures were diffed at the <code>id</code> level from the servers.json feed. <strong>STREAM 2, the company's own dated procurement announcements</strong> at <a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements">portal.sharktech.net announcements</a> (RSS, 27 items), which state purchases in plain language with dates. <strong>Stream 2 consistently dates events EARLIER than Stream 1</strong> (e.g. Gold 6148 announced in stock 2023-06-01 versus first catalogue sighting 2023-09-21), so Stream 2 is the leading indicator and Stream 1 is the confirmation. A <a target="_blank" rel="noopener noreferrer" href="https://www.webhostingtalk.com/showthread.php?t=1898496">Web Hosting Talk offer</a> dated 2023-06-20 was used as a third-party cross-check on the 2023 pricing and spec.</p>
 <p><strong>Observed intervals.</strong> <em>Catalogue-observed new-model first-appearances (Stream 1):</em> Gold 6148 (≤2023-06-01) → E5-2695v4 (2024-08-06) = <strong>~14.2 months</strong>; E5-2695v4 → RTX A4000 (2024-12-01) = <strong>3.9 months</strong>; RTX A4000 → EPYC 7702P (2025-01-16 announced) = <strong>1.5 months</strong>; EPYC 7702P → Gold 6262V (2025-09-07) = <strong>7.7 months</strong>; Gold 6262V → Dual Gold 6248 (2026-07-01 announced) = <strong>9.8 months</strong>; Dual Gold 6248 → Dual EPYC 7702 (2026-07-13) = <strong>0.4 months</strong>; Dual EPYC 7702 → Gold 6248 fleet-wide (2026-07-21) = <strong>0.3 months</strong>; Gold 6248 → Gold 6246 (≤2026-08-10) = <strong>0.6 months</strong>. <em>Company-announced procurement events (Stream 2, stronger evidence):</em> 2023-06-01 → 2025-01-16 = <strong>19.5 months</strong>; 2025-01-16 → 2026-07-01 = <strong>17.5 months</strong>; 2026-07-01 → 2026-07-13 = <strong>0.4 months</strong>; 2026-07-13 → 2026-07-21 = <strong>0.3 months</strong>; 2026-07-21 → 2026-08-10 = <strong>0.6 months</strong>. <strong>THE SHAPE IS UNMISTAKABLE: procurement is CAMPAIGN-BASED, not a steady cadence. Long dormancy of 17–20 months, then three or four purchases compressed into a 3–6 week burst.</strong></p>
@@ -1091,7 +1093,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>Next window estimate.</strong> <strong>THE WINDOW IS OPEN NOW — this is not a forecast, it is an observation.</strong> Three announced procurement events on 2026-07-01, 2026-07-13 and 2026-07-21, then five new SKUs live by 2026-08-10 and eight SKUs restocked. The campaign has been running for roughly six weeks and <strong>has not closed</strong>. Expect it to remain open <strong>through approximately October 2026</strong>, on the reasoning that the two prior campaigns each ran several months and that two stated commitments are still outstanding: <a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/241">announcement #241</a> (2026-06-18) says "Soon we will be adding more storage systems to our clusters", and the 400GE transit upgrade completed 2026-06-25 was explicitly framed as increasing "capacity for rapid deployment" — <strong>network capacity was bought before the servers, which is the standard sequencing of a planned expansion with more to come.</strong> <strong>SECOND WINDOW:</strong> if the historical 17–20 month inter-campaign gap repeats from the current campaign's start, the next distinct campaign lands approximately <strong>Q4 2027 to Q1 2028</strong>. <strong>Treat that as weak.</strong> <strong>THE OPERATIONAL POINT: do not wait.</strong> Their own words are "servers of this type are usually sold out within 48 hours" and "If you were planning to expand, now might be a good time." <strong>A company that sells out inventory in 48 hours and is buying in three-week bursts is making supplier decisions on a timescale of days, not quarters.</strong></p>
 <p><strong>Confidence.</strong> <strong>HIGH</strong> that a buying campaign is live right now — three dated first-party announcements in 21 days, five new SKUs inside the last 13 days, eight SKUs flipping back to in-stock in the same window; multiple independent confirmations. <strong>HIGH</strong> that the fleet is stalled on 2019-and-older silicon — directly observable in the live JSON feed, no inference required. <strong>MEDIUM</strong> on the campaign-gap model and the 2027 forward estimate — it rests on only <strong>two</strong> complete inter-campaign intervals (19.5 and 17.5 months), and a 19-month hole in the announcement archive (numbers 209–220 are missing, so twelve announcements were deleted) means H2-2023 and all of 2024 procurement is <strong>invisible in the strongest source</strong> and had to be inferred from catalogue diffs alone. <strong>LOW</strong> on any claim about what they buy but do <strong>not</strong> retail — the unverified LowEndTalk post hints at Genoa-class Supermicro/Gigabyte stock that has never appeared in the catalogue, and that could not be confirmed.</p>
 <h3>9.3 Expansion signals</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Date</th>
@@ -1196,7 +1198,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/api/net?asn=46844">PeeringDB API AS46844</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.4 Open GAPs in this section</h3>
 <ol>
 <li><strong>LOWENDTALK JANUARY 2025 POST COULD NOT BE TRANSCRIBED</strong> — <a target="_blank" rel="noopener noreferrer" href="https://lowendtalk.com/discussion/201506/new-year-new-servers-in-stock">the thread</a> returns HTTP 403 (Cloudflare JS challenge) to both WebFetch and direct curl with full browser headers, and the single Wayback capture (timestamp 20250108134355) recorded a 403 rather than the page body. The Supermicro/Gigabyte EPYC 9004 Genoa stocking claim and the "~50,000 refurbished servers in warehouse" figure therefore rest on <strong>a search-engine summary only. NOT VERIFIED. Do not quote either figure to a customer.</strong></li>
@@ -1231,7 +1233,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 </ol>
 <p><strong>FACT, NOT ASSUMPTION, AND IT CONSTRAINS ALL OF THE ABOVE:</strong> Sharktech raised Bare-Metal and Colocation prices by <strong>9.25% effective 2025-04-01</strong>, stating "as our own costs of operation continue to grow, we must keep up with the economy" and "It's been years since we increased our prices" (<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/223">announcement #223</a>). Separately, they moved their entire Denver point of presence from H5 Data Centers to US Signal COO1 in May 2026 because H5 presented a "massive price increase" they refused to pass to clients (<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/235">announcement #235</a>). <strong>Both facts indicate the opex ratio is under upward pressure and that the 55% (pessimistic) end of the band is the safer planning assumption.</strong></p>
 <h4>Rent-derived ceiling by SKU</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1326,10 +1328,10 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/servers.json">servers.json</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.2 Bill of materials, and what the gap means for the pitch</h3>
 <h4>Component-level BOM</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1460,7 +1462,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.newegg.com/intel-x520-da2/p/14U-0045-00560">Newegg Intel X520-DA2</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>Roll-up: assembled component cost vs rent-derived ceiling</h4>
 <p>All opex assumptions per §10.1; 50% opex midpoint.</p>
 <p><strong>SKU 704 — Dual Xeon Gold 6248, 128GB, 2TB M.2, 10GbE — $259/mo.</strong>
@@ -1526,7 +1528,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <hr />
 <h2>13. Public contact channels</h2>
 <p>All entries below are <strong>public-source only</strong> — no personal mobiles, no private residential addresses. <span class="gap">GAP</span> is stated where no published channel exists.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -1606,7 +1608,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro sales angle</h2>
 <h3>Classification: <strong>competitor account → displacement / second-source</strong></h3>
@@ -1629,7 +1631,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <hr />
 <h2>15. Verification appendix</h2>
 <h3>15.1 Single-source claims — re-verify before quoting</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Claim</th>
@@ -1664,10 +1666,10 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><strong>These describe the whole buildings, not Sharktech's footprint. Never present them as Sharktech capacity.</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 Conflicting third-party estimates — shown side by side, not resolved</h3>
 <p><strong>Headcount</strong> (all estimates)</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1688,10 +1690,10 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><strong>18</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Spread ≈ 3×. Pragmatic working number: </em><em>25–50</em><em>. No authoritative source exists.</em></p>
 <p><strong>Revenue</strong> (all estimates)</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1708,10 +1710,10 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><strong>None exists</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Single third-party estimate. Catalog sanity check — 51 SKUs at $219–$699/mo, VPS from $2.48/mo, cloud from $0.065/hr, colo from $35/mo, object storage at $4.9/TB, and a claimed 1,000–10,000 business customers — is </em><em>consistent with</em><em> an eight-figure band but </em><em>not confirmable</em><em>.</em></p>
 <p><strong>Customer count</strong> (company self-contradiction, not a third-party conflict)</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1732,10 +1734,10 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>"over <strong>1,000 clients across 73 countries</strong>"</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Defensible figure: </em><em>1,000+ customers in ~73 countries</em><em>. Treat 10,000 as marketing.</em></p>
 <p><strong>Founding year</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1760,7 +1762,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>Foreign qualification <strong>2013-06-14</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Unresolved. </em><em>2003 is a company claim, not a registry fact.</em>**</p>
 <p><strong>Network capacity wording</strong></p>
 <ul>
@@ -1789,8 +1791,8 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <li><strong>HTTP-blocked sources encountered:</strong> HostingAdvice (403), ZoomInfo (403), Crunchbase (403), Bizapedia / OpenCorporates (security check / CAPTCHA, not bypassed), esos.nv.gov (Incapsula). Every finding that depends on those sources is marked in this file as community-sourced, secondary-snippet, or third-party estimate.</li>
 <li><strong>JavaScript-only interfaces that cannot be queried programmatically:</strong> fec.gov's individual-contributions UI. The Timrawi FEC results in section 12 were obtained via the FEC Schedule A data and are tagged <code>public-record</code>; nothing in this file infers "no donations" from a failed retrieval.</li>
 <li><strong>Political-record consistency rule:</strong> all political data here comes from public records only and is tagged <code>public-record</code>, <code>unverified</code>, or <code>gap</code> line by line.</li>
-</ul></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>Sharktech, Inc. — 銷售情報檔案</h1>
+</ul></section>
+<section class="lang" id="zh"><h1>Sharktech, Inc. — 銷售情報檔案</h1>
 <p><strong>編製對象：</strong> Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-04
 <strong>方法：</strong> 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。<span class="gap">GAP</span> = 查證資料中未找到，不得憑記憶補寫。
 <strong>轄區：</strong> 內華達州拉斯維加斯 — West Coast South excl. CA = <strong>T1</strong>｜T31。一組可直接註冊。
@@ -1800,7 +1802,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <p>Sharktech, Inc. 是一家創辦人自有、家族控股的 DDoS 防護型裸機（bare metal）、雲端與 colocation 業者，總部位於內華達州拉斯維加斯，自有 ASN（AS46844），在拉斯維加斯、洛杉磯、丹佛、芝加哥與阿姆斯特丹五個站點租用機櫃／cage 空間，員工約 25–50 人，無外部投資人。商業判定是<strong>替換／第二供應商（displacement）</strong>，不是既有客戶防守：他們唯一一次公開具名伺服器品牌，指的是 <strong>Lenovo</strong>，而「Supermicro」一詞在所有已檢索的 Sharktech 自有資產中出現 <strong>0 次</strong>，因此任何預設「他們已在用 Supermicro」的開場，第一通電話就會破功。本檔最強的單一證據，是 Sharktech 自家客戶入口公告 #221（2025-01-16）推出 AMD EPYC 7702P 產品線時，規格行逐字寫著 <strong>「System: Lenovo」</strong>（<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php/announcements/221/Now-Available-AMD-EPYC-7702P-with-NVMe-U.2.html">公告 #221</a>）——這是業者第一手揭露，不是推論。最可能讓這筆生意告吹的，是通路問題：Sharktech 透過<strong>未具名的供應商／經銷商</strong>進貨（「we received a new batch of EPYC 7702 servers from our supplier」），因此依 Rule 8，<strong>必須在任何人撥出第一通電話之前</strong>先釐清經銷商關係並確認 do-not-call 標記——在一個從未在 CRM 出現過的帳戶上貿然進場，會直接造成通路衝突。</p>
 <hr />
 <h2>2. 公司速覽</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1855,11 +1857,11 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>Territory Map-Jan.2026 (Rev.1)，Sales Territory Assign 分頁</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. 原始名單更正表</h2>
 <p>以下僅列與 Sharktech 相關的列。首次接觸前務必讀完，避免以錯誤前提開場。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1894,13 +1896,13 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>在六家業者的原始名單中，僅 2 家確認為 Supermicro；Sharktech 是<strong>唯一一家已確認採用競爭廠牌（Lenovo）</strong>者。若以「我們知道你們在用 Supermicro」開場，可信度會立即崩解。<strong>改用問句詢問平台廠，不要用陳述句</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. 領導層與所有權</h2>
 <p>封閉持股、家族控制。<strong>Tim Timrawi 同時是 President、Treasurer，並且是唯一的 Director</strong>；內華達州幹部歷史紀錄全部 20 筆（2019-04-02 至 2026-06-08）中，除 Tim Timrawi 與 Erin Timrawi 外查無第三人。任何來源皆查無外部投資人、PE 或 VC 持股。本次已直接開啟兩個登記系統——<strong>Nevada SOS／SilverFlume 實體 E0295442013-6</strong> 與 <strong>Montana SOS 實體 D221339</strong>——因此本檔先前標示的「Montana 章程＝<span class="gap">GAP</span>」已結案：Montana 設立章程（Articles of Incorporation，文號 D221339-1224501）於 <strong>2011-12-30</strong> 提交，Tim Timrawi 為<strong>唯一發起人（sole incorporator）</strong>兼原始註冊代理人，核准發行 50,000 股無面額股。實查登記後，第 2 節有兩處需更正：內華達州<strong>現任</strong>註冊代理人是 <strong>Ann C. Pongracz</strong>（Sklar Williams PLLC），<strong>不是</strong> Tim Timrawi；BBB 將 Erin Timrawi 記為「Managing Member」與公司型態不符（股份有限公司只有幹部、沒有 member），以內華達州登記之 <strong>Secretary</strong> 為準。</p>
 <h3>4.1 具名人員表</h3>
 <p>登記幹部與 ARIN／PeeringDB 網路聯絡人皆單獨列為一列並標註身分——登記幹部或 ARIN OrgAdmin 都是真實的具名自然人，本表應予收錄。證據等級定義：<strong>primary-record（一手登記紀錄）</strong>＝政府登記／USPTO 申報文件；<strong>corroborated（多方佐證）</strong>＝兩個以上獨立資料商，或資料商加上可查證的公開個人頁；<strong>single-source（單一來源）</strong>＝僅一家資料商，引用前須再驗證。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2139,10 +2141,10 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/api/poc?net_id=16595">PeeringDB POC API，net_id 16595</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>三筆資料商說法已記錄並明確否決，不得使用：</strong> <strong>Shivam Kant</strong> 標為「Owner」、<strong>Muhammad Khubaib</strong> 標為「Chairperson」、<strong>Lourdes Helman</strong> 標為「Co-founder」，三者皆僅出自 <a target="_blank" rel="noopener noreferrer" href="https://www.signalhire.com/companies/sharktech">SignalHire 名冊</a>。每一筆都被<strong>一手紀錄直接推翻</strong>：內華達州幹部表及其 2019–2026 完整 20 筆歷史紀錄、Montana 各年度年報、載明 Tim Timrawi 為唯一發起人的設立章程，以及 USPTO 顯示 SHARKTECH 商標由 Tim Timrawi 以 <strong>INDIVIDUAL（個人）</strong>身分持有。三人亦皆無雇主為 Sharktech 的 FEC 紀錄。一律視為<strong>未經證實</strong>。</p>
 <h3>4.2 登記紀錄</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2252,10 +2254,10 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><a target="_blank" rel="noopener noreferrer" href="https://tsdr.uspto.gov/statusview/sn85516464">USPTO TSDR sn85516464</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>另有一項公開紀錄，影響的是本帳戶的往來處理方式而非採購決策鏈：Tim Timrawi 在 <em>Millennium Funding, Inc. v. Sharktech, Inc.</em>（科羅拉多州聯邦地院 1:21-cv-01261，2021-05-07 立案）中與公司<strong>並列為共同被告</strong>，當事人欄位載為「Tim Mouhieddine Timrawi」——其法定全名即由此確認。另有兩案時間非常近期：<em>Nagravision SA v. Sharktech, Inc.</em>，內華達州聯邦地院 2:26-cv-00167（2026-01-26）與 2:26-cv-00202（2026-01-28）。</p>
 <h3>4.3 採購決策圈（buying committee）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -2290,7 +2292,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><strong>外訪優先序最低，且嚴格定位為技術賦能聯絡人，不是商業聯絡人。</strong> 等到雙方同意進行評估後再接觸，然後大方支援他的團隊：供裝自動化、驅動與韌體基準、IPMI／Redfish 整合、文件。排程請配合印度時區。<strong>查無任何已驗證聯絡方式</strong>，因此請透過 Mohsin Rizwan 或 Tim 指定的窗口聯繫——不得嘗試冷接觸</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 查不到姓名的職位 — 每一項都是查過的 <span class="gap">GAP</span>，不是漏寫</h3>
 <p><strong>CFO — 根本查無此人；Tim Timrawi 自己兼任 Treasurer，因此該職位幾乎確定沒有另設專人（已查：NV 幹部表、2019–2026 全部 20 筆 NV 幹部歷史紀錄、MT AR2018／AR2019、針對性網路檢索）</strong> ・<strong>Controller／財務經理／應付帳款主管＝<span class="gap">GAP</span></strong>（任何登記、名冊或徵才啟事皆查無姓名；2011 年設立時委由外部會計師辦理，顯示財務職能歷來可能外包，但現況未經證實）・<strong>採購／Purchasing Manager＝<span class="gap">GAP</span></strong>，任何來源皆無採購職能的跡證，採購權限看來直接落在 CEO／Treasurer 身上・<strong>CTO／工程副總／首席架構師＝<span class="gap">GAP</span></strong>；最高技術權威看來是 VP Operations Mohsin Rizwan，而創辦人本人為事實上的技術長・<strong>客服主管＝姓名被遮蔽，未能解析</strong>：Datanyze／ZoomInfo 僅以字首「F. S. A.」揭露該職位，與 SignalHire 名冊交叉比對無法得出唯一對應——<strong>不臆測，維持 <span class="gap">GAP</span></strong>・<strong>Tim Timrawi 以外的董事會成員＝已確認不存在</strong>，而非只是查不到（NV 完整歷史檢視＋MT 各年度年報顯示每一時點他都是唯一董事）・<strong>內部法務長（in-house GC）＝<span class="gap">GAP</span></strong>；證據指向外部律師（內華達州註冊代理人為律師 Ann C. Pongracz；USPTO 紀錄明載「Attorney of Record — None」）・<strong>五個站點各自的機房／設施負責人＝<span class="gap">GAP</span></strong>（全部為租用 colocation，非自有建物）・<strong>阿姆斯特丹／歐盟區負責人或當地實體幹部＝<span class="gap">GAP</span></strong>；RIPE 資料庫以「sharktech」查詢回傳 <strong>0 筆物件</strong>，代表歐洲登記端根本沒有可挖的聯絡人・<strong>HR／人才主管與具名招募主管＝<span class="gap">GAP</span></strong>：無徵才頁（可連線鏡像的 sharktech.net/careers 回 404），Indeed、ZipRecruiter、Glassdoor、SimplyHired 皆無 Sharktech 名義職缺，因此取不到任何「report to」關係、招募人員姓名或組織結構訊號・<strong>CEO 之下的資本支出核准權／任何被授權的簽核權限＝<span class="gap">GAP</span>，而且很可能是真的不存在</strong>・<strong>公開登記中的具名網路工程師＝結構性 <span class="gap">GAP</span></strong>：ARIN 的 OrgTech 與 OrgNOC 都指向角色帳號 NOC2002-ARIN、abuse 指向 ABUSE1080-ARIN，PeeringDB 更是完全不公開 POC，因此<strong>在所有網路登記系統中，唯一露出的具名自然人就是 Tim Timrawi（TMT-ARIN）。</strong></p>
 <h3>4.5 已實際查詢的來源 — 含查完是空的那些</h3>
@@ -2300,7 +2302,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <hr />
 <h2>5. 據點與機房</h2>
 <p>五個站點，<strong>全部為租用／colocation — Sharktech 未擁有任何設施。</strong> Sharktech 自家 about 頁具名 <strong>Equinix、CoreSite、Flexential、Crown Castle</strong> 為設施夥伴。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>站點</th>
@@ -2347,12 +2349,12 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>Sharktech 阿姆斯特丹頁：「Sharktech's Amsterdam, Netherlands data center (Equinix AM11)」。PeeringDB 確認「Amsterdam (AM11 Equinix)」為私有設施，且 <strong>AMS-IX 100G 是其唯一公開交換點</strong>。唯一非美國站點；EPYC 定價最高（$499／$699，對比美國 $459／$659）（<a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/data-centers/amsterdam/">阿姆斯特丹資料中心頁</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>規模代理指標（伺服器數、機櫃數、cage 面積與 MW 全部未由 Sharktech 或任一機房夥伴揭露＝<span class="gap">GAP</span>）：</strong>（i）跨 5 站共 <strong>51 個</strong>可公開下單的裸機 SKU，其中<strong>僅 17 個在庫</strong>，且批量明確偏小（「We're currently building 12 of them in Las Vegas」）；（ii）AS46844 宣告 413 個 IPv4 ＋ 9 個 IPv6 前綴 ＝ <strong>124,416 個 IPv4 位址</strong>；（iii）colocation 產品以 <strong>1–6U（200–1200 W）</strong> 與 <strong>10–42U 機櫃（1600–5500 W）</strong> 出售，顯示 Sharktech 租的是機櫃／cage 空間，而非整個機房。</p>
 <hr />
 <h2>6. 硬體機隊</h2>
 <p>證據等級必須明示，口頭陳述時也要一併帶出：<strong>已確認</strong>＝業者第一手具名揭露或多方獨立佐證；<strong>旁證</strong>＝行為強烈指向但從未具名；<strong>推論</strong>＝僅由 CPU／機殼形狀推得；<strong>反證</strong>＝證據與原始名單相反；<strong><span class="gap">GAP</span></strong>＝查無。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>廠商</th>
@@ -2382,9 +2384,9 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>任何 Sharktech 自有資產或已找到的第三方來源中，皆未具名任何 Supermicro 的 SKU、機殼、主機板、準系統或 SuperServer 型號。「Supermicro」在下列來源皆為 0 命中：sharktech.net 產品／資料中心／colocation／DDoS 頁、servers.json（51 個 SKU）、<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php/announcements">公告存檔</a>（3 頁共 25 則）、PeeringDB、ARIN RDAP、LinkedIn 公司頁、LowEndTalk 評論串。<strong>特此明確記錄，以免銷售帶著錯誤前提進場。</strong> Supermicro 在此最適合定位為 <strong>替換／第二供應商</strong>，不是續約</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>即時型錄中觀察到的 CPU 世代，以及對機隊年齡的意涵</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>平台</th>
@@ -2414,7 +2416,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>Rome，<strong>2019</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>解讀：</strong> 機隊中最大的單一區塊是 2016 年的 Broadwell 平台，型錄中最新的 CPU 家族也只到 2019 年。<strong>Ice Lake、Sapphire Rapids、Emerald Rapids、Granite Rapids、Genoa、Bergamo、Turin 完全未出現。</strong> 型錄重心因此落在 7–10 年前，與前述小批量、重複、自行組裝的採購節奏一致，也與他們自己承認部分既有機隊沒有 10G 網卡相符。</p>
 <p><strong>軟體／虛擬化堆疊（平台適配脈絡）：</strong> OpenStack（公有／私有雲）、<strong>Proxmox</strong>（「Smart-VPS: New Proxmox based VPS Solution now available!」）、<strong>Virtuozzo</strong>（具名 PaaS 夥伴）、cPanel、Acronis Cyber Protect、S3 相容物件儲存 <strong>$4.9/TB</strong>。Sharktech 自家 about 頁具名 OpenStack 與 Virtuozzo 為虛擬化夥伴。<strong>相關性：物件儲存 ＋ Proxmox ＋ OpenStack 全都拉向高密度 NVMe 與高槽位儲存機殼——正好對應他們已在賣的 24 槽與 10×U.2 SKU。</strong>（<a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/about/">about 頁</a>）</p>
 <hr />
@@ -2440,7 +2442,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <p><strong>不可以對業務團隊說「Sharktech 沒有任何留置權」。</strong> 唯一站得住腳的講法是：<strong>「Sharktech 在 Montana 沒有任何 UCC 申報紀錄，而 Nevada 的索引尚未查詢。」</strong></p>
 <p><strong><span class="gap">GAP</span> — 債務人的設立州（domicile state）未確認，這一點動搖了整個 UCC 查核的基礎。</strong> 公開紀錄顯示 Sharktech, Inc. 於 <strong>2013-06-14 以 FOREIGN Corporation（外國公司）身分在 Nevada 申報</strong>，依定義即代表其設立地在別州——但本次未能取得載明該母州的紀錄。Montana 的公司實體查詢 API（<code>POST https://biz.sosmt.gov/api/Records/businesssearch</code>）對每一次查詢都回傳 Cloudflare「Just a moment…」攔截頁，儘管<strong>同一主機上的留置權查詢 API 卻正常回應</strong>。依 <strong>UCC Article 9-307</strong>，正確的申報機關是債務人的設立州，因此<strong>若設立州不是 Montana，那份乾淨的 Montana 查詢結果就完全不具意義</strong>。請注意本檔第 2 節與第 4.2 節載有「home jurisdiction＝Montana」（取自登記鏡像站），該前提<strong>本次並未在原始來源再確認</strong>，應視為未結案。<strong>解法：</strong> 透過 Nevada SOS 實體查詢調出 Nevada 外國公司登記紀錄（其中載有母州），或直接致電 Nevada SOS <strong>(775) 684-5708</strong>。</p>
 <h3>8.2 查詢紀錄 — 每一次嘗試各佔一列，不合併</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>入口（Portal）</th>
@@ -2620,7 +2622,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>自動化存取 Nevada 不可行。必要路徑為：(a) 以註冊帳號在 SilverFlume 進行人工瀏覽器工作階段；(b) 致電 Nevada SOS Commercial Recordings <strong>(775) 684-5708</strong>；或 (c) 委由商業留置權查詢服務商（CSC、Wolters Kluwer Lien Solutions）代為執行 Nevada 債務人查詢。<strong>NEVADA 費用未查證——寧可不列，也不臆測。</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 在案申報全文</h3>
 <p><strong>零筆申報。<code>ucc_filings[]</code> 是因為證據為零而空白，不是因為漏寫。</strong></p>
 <p>此處沒有申報明細可以呈現，因為唯一有回應的索引——Montana 免費公開留置權索引，以債務人姓名建索引，涵蓋 UCC、EFS 與 Title 71 各類留置權——在 <code>SHARKTECH</code>、<code>SHARK TECH</code>、<code>SHARKTECH, INC.</code>、<code>SHARKTECH INC</code> 四種名稱下，以及 <code>STATUS="ALL"</code>、<code>STATUS="ACTIVE_LAPSED_UNLAPSED"</code>、<code>STATUS="ACTIVE_UNLAPSED"</code> 三種狀態篩選下，全部回傳<strong>零筆紀錄</strong>；而同一工作階段、同一端點上的 <code>SHARK</code> 對照查詢回傳了六筆真實的 Montana 申報並附完整擔保權人資料。因此這個零是<strong>該索引的真陰性</strong>，不是靜默失敗。</p>
@@ -2639,7 +2641,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <p><strong><span class="gap">GAP</span>：</strong> 擔保權人身分完全未知。由於唯一有回應的索引查出零筆，因此沒有任何擔保權人名稱、地址、擔保品描述、文號、失效日、修正、讓與或終止可供謄錄。</p>
 <p><strong><span class="gap">GAP</span>：</strong> Nevada 索引從未被查詢，因此 Nevada 可能存在申報——包括可能的 Lenovo Financial Services 或設備出租人 UCC-1——而這些完全不會出現在本檔任何位置。</p>
 <h3>8.4 這份紀錄的意義</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>觀察</th>
@@ -2686,7 +2688,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td>兩個推論。<strong>第一</strong>，沒有留置權到期日可以對準，因此以目前證據，<strong>時點問題在 Montana 是無實益的</strong>，而交易規模的限制因素是<strong>現金，不是擔保負擔</strong>。<strong>第二</strong>，H5 事件是本檔中最好用的一段素材：<strong>這是一個為了避免漲價而願意實體搬遷整個資料中心的買家。</strong> 任何提案都必須以<strong>每台可售節點的每月總成本</strong>為主軸，並把機櫃空間與電力節省明確量化，因為那正是他們已經公開、實際且付出代價去操作過的槓桿。<strong>不要以效能開場，要以每台節點的成本開場。</strong>（<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/223">公告 #223</a>・<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/235">公告 #235</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.5 本節未結 <span class="gap">GAP</span></h3>
 <ol>
 <li><strong>設立州未確認</strong> — 本節最大的缺口。Nevada 外國公司身分已確認（2013-06-14 申報），證明公司設立於<strong>其他州</strong>，但載明該州的紀錄未取得。Montana 公司實體 API 遭 Cloudflare 攔截。<strong>解法：Nevada SOS 實體查詢，或致電 (775) 684-5708。</strong></li>
@@ -2699,7 +2701,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <hr />
 <h2>9. 採購時鐘</h2>
 <h3>9.1 型錄快照時間軸</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>快照日期</th>
@@ -2808,7 +2810,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/servers.json">即時 servers.json</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 採購節奏</h3>
 <p><strong>依據 — 兩條獨立證據線互相勾稽。</strong> <strong>第一條，型錄考古：</strong> 自 2022-12-07 至今，<a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/dedicated-servers/">https://sharktech.net/dedicated-servers/</a> 與 <a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/servers.json">https://sharktech.net/servers.json</a> 共 12 個可用擷取，逐 SKU 列解析。基礎處理器特別自 <code>div.processor-field</code> 內的標題文字區塊擷取，以確保<strong>CPU 升級選項</strong>（存放於相鄰的 tooltip script）絕不會被誤計為基礎組態的新到貨——這點很重要，因為對整頁做粗略 regex 會在 2024 年 12 月就「找到」Gold 6248／6238／6246，但當時它們只是加購選項，不是已採購的基礎庫存。2026-07-28 與即時擷取則以 servers.json 的 <code>id</code> 層級做差異比對。<strong>第二條，公司自家附日期的採購公告</strong>，位於 <a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements">portal.sharktech.net announcements</a>（RSS，27 則），以白話文加日期直接陳述採購。<strong>第二條線的事件日期一貫早於第一條線</strong>（例如 Gold 6148 公告到貨為 2023-06-01，型錄首見則是 2023-09-21），因此第二條線是領先指標，第一條線是確認。另以 2023-06-20 的 <a target="_blank" rel="noopener noreferrer" href="https://www.webhostingtalk.com/showthread.php?t=1898496">Web Hosting Talk 促銷</a> 作為第三方交叉檢核 2023 年的定價與規格。</p>
 <p><strong>觀察到的間隔。</strong> <em>型錄觀察之新機種首次出現（第一條線）：</em> Gold 6148（≤2023-06-01）→ E5-2695v4（2024-08-06）＝<strong>約 14.2 個月</strong>；E5-2695v4 → RTX A4000（2024-12-01）＝<strong>3.9 個月</strong>；RTX A4000 → EPYC 7702P（2025-01-16 公告）＝<strong>1.5 個月</strong>；EPYC 7702P → Gold 6262V（2025-09-07）＝<strong>7.7 個月</strong>；Gold 6262V → Dual Gold 6248（2026-07-01 公告）＝<strong>9.8 個月</strong>；Dual Gold 6248 → Dual EPYC 7702（2026-07-13）＝<strong>0.4 個月</strong>；Dual EPYC 7702 → Gold 6248 全機隊（2026-07-21）＝<strong>0.3 個月</strong>；Gold 6248 → Gold 6246（≤2026-08-10）＝<strong>0.6 個月</strong>。<em>公司公告之採購事件（第二條線，證據力較強）：</em> 2023-06-01 → 2025-01-16＝<strong>19.5 個月</strong>；2025-01-16 → 2026-07-01＝<strong>17.5 個月</strong>；2026-07-01 → 2026-07-13＝<strong>0.4 個月</strong>；2026-07-13 → 2026-07-21＝<strong>0.3 個月</strong>；2026-07-21 → 2026-08-10＝<strong>0.6 個月</strong>。<strong>形狀非常明確：採購是戰役式（campaign-based），不是穩定節奏。先是 17–20 個月的長期靜默，然後三到四筆採購壓縮在 3–6 週內完成。</strong></p>
@@ -2817,7 +2819,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <p><strong>下一個窗口推估。</strong> <strong>窗口現在就是開的——這不是預測，是觀察。</strong> 2026-07-01、2026-07-13、2026-07-21 三起公告採購事件，接著 2026-08-10 有五個新 SKU 上線、八個 SKU 補貨。這場戰役已經跑了約六週，<strong>而且尚未關閉</strong>。預期會持續開放<strong>到大約 2026 年 10 月</strong>，理由是前兩次戰役各持續數個月，且目前仍有兩項已宣示但未完成的承諾：<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/241">公告 #241</a>（2026-06-18）說 "Soon we will be adding more storage systems to our clusters"，而 2026-06-25 完成的 400GE 傳輸升級被明確定位為提升 "capacity for rapid deployment"——<strong>網路容量先於伺服器採購完成，這正是有後續動作的計畫性擴張的標準順序。</strong> <strong>第二個窗口：</strong> 若歷史上 17–20 個月的戰役間隔自本次戰役起點重演，下一場獨立戰役約落在 <strong>2027 年第四季至 2028 年第一季</strong>。<strong>此推估請視為弱證據。</strong> <strong>實務重點：不要等。</strong> 他們自己的話是 "servers of this type are usually sold out within 48 hours" 與 "If you were planning to expand, now might be a good time."。<strong>一家庫存 48 小時內售罄、且以三週為單位連續採購的公司，其供應商決策的時間尺度是以天計，不是以季計。</strong></p>
 <p><strong>信心度。</strong> <strong>HIGH</strong> — 採購戰役現正進行中：21 天內三則有日期的第一手公告、最近 13 天內五個新 SKU、同一窗口內八個 SKU 回復有貨，多重獨立佐證。<strong>HIGH</strong> — 機隊停滯在 2019 年（含）以前的料件：可於即時 JSON 資料源直接觀察，無需推論。<strong>MEDIUM</strong> — 戰役間隔模型與 2027 年前瞻推估：僅建立在<strong>兩個</strong>完整的戰役間隔上（19.5 與 17.5 個月），且公告存檔有 19 個月的空洞（編號 209–220 缺漏，代表十二則公告遭刪除），使 2023 下半年與整個 2024 年的採購在最強來源中<strong>完全不可見</strong>，只能靠型錄差異推論。<strong>LOW</strong> — 任何關於「他們買了但不對外零售」的說法：未經查證的 LowEndTalk 貼文暗示存在從未出現在型錄中的 Genoa 世代 Supermicro／Gigabyte 庫存，但無法確認。</p>
 <h3>9.3 擴張訊號</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>日期</th>
@@ -2922,7 +2924,7 @@ The only verified 6246 price is an OEM-branded HP workstation kit at <strong>$4,
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/api/net?asn=46844">PeeringDB API AS46844</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.4 本節未結 <span class="gap">GAP</span></h3>
 <ol>
 <li><strong>2025 年 1 月的 LOWENDTALK 貼文無法謄錄</strong> — <a target="_blank" rel="noopener noreferrer" href="https://lowendtalk.com/discussion/201506/new-year-new-servers-in-stock">該討論串</a> 對 WebFetch 與帶完整瀏覽器標頭的直接 curl 皆回 HTTP 403（Cloudflare JS 挑戰），唯一的 Wayback 擷取（時戳 20250108134355）記錄到的也是 403 而非頁面內容。因此 Supermicro／Gigabyte EPYC 9004 Genoa 的備貨說法，以及「倉庫約 50,000 台翻新伺服器」的數字，<strong>僅建立在搜尋引擎摘要上。未經查證。這兩個數字都不可以對客戶引用。</strong></li>
@@ -2957,7 +2959,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 </ol>
 <p><strong>以下是事實而非假設，且它限制了上述所有內容：</strong> Sharktech 自 <strong>2025-04-01 起將 Bare-Metal 與 Colocation 價格調漲 9.25%</strong>，並表示 "as our own costs of operation continue to grow, we must keep up with the economy" 與 "It's been years since we increased our prices"（<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/223">公告 #223</a>）。另外，他們於 2026 年 5 月將整個丹佛 point of presence 自 H5 Data Centers 遷至 US Signal COO1，原因是 H5 提出他們拒絕轉嫁給客戶的 "massive price increase"（<a target="_blank" rel="noopener noreferrer" href="https://portal.sharktech.net/index.php?rp=/announcements/235">公告 #235</a>）。<strong>這兩項事實都指出營運成本比正承受上行壓力，因此以 55%（保守）端作為規劃假設較為安全。</strong></p>
 <h4>各 SKU 的租金反推天花板</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -3052,10 +3054,10 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><a target="_blank" rel="noopener noreferrer" href="https://sharktech.net/servers.json">servers.json</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.2 物料清單（BOM），以及這個落差對提案的意義</h3>
 <h4>零組件層級 BOM</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -3186,7 +3188,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.newegg.com/intel-x520-da2/p/14U-0045-00560">Newegg Intel X520-DA2</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>彙總對照：組裝零件成本 vs 租金反推天花板</h4>
 <p>所有營運成本假設依第 10.1 節；採 50% 營運成本中點。</p>
 <p><strong>SKU 704 — Dual Xeon Gold 6248、128GB、2TB M.2、10GbE — $259/月。</strong>
@@ -3252,7 +3254,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <hr />
 <h2>13. 公開聯絡管道</h2>
 <p>以下全部<strong>僅為公開來源</strong> — 不含個人行動電話、不含私人住址。無公開管道者明列 <span class="gap">GAP</span>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -3332,7 +3334,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro 銷售切入點</h2>
 <h3>分類：<strong>競爭對手的帳戶 → 替換／第二供應商（displacement）</strong></h3>
@@ -3355,7 +3357,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <hr />
 <h2>15. 查證附錄</h2>
 <h3>15.1 單一來源支撐的說法（引用前須再驗證）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>說法</th>
@@ -3390,10 +3392,10 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><strong>這些描述的是整棟建物，不是 Sharktech 的佔用量。絕對不可當成 Sharktech 的容量陳述。</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 第三方估計互相矛盾之處（呈現分歧，不擇一）</h3>
 <p><strong>員工數</strong>（全部為估計）</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3414,10 +3416,10 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><strong>18</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>分歧約 3 倍。務實工作值：</em><em>25–50 人</em><em>。查無任何權威來源。</em></p>
 <p><strong>營收</strong>（全部為估計）</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3434,10 +3436,10 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td><strong>不存在</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>單一第三方估計。型錄佐證——51 個 SKU $219–$699/月、VPS $2.48/月起、雲端 $0.065/hr 起、colo $35/月起、物件儲存 $4.9/TB，宣稱 1,000–10,000 家企業客戶——與八位數美元區間</em><em>相符</em><em>，但</em><em>無法證實</em><em>。</em></p>
 <p><strong>客戶數</strong>（屬公司自我矛盾，非第三方衝突）</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3458,10 +3460,10 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td>「over <strong>1,000 clients across 73 countries</strong>」</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>可辯護值：</em><em>1,000+ 家客戶、約 73 國</em><em>。10,000 視為行銷語。</em></p>
 <p><strong>創立年份</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3486,7 +3488,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <td>外國公司資格登記 <strong>2013-06-14</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>未解。</em><em>2003 為公司主張，非登記事實。</em>**</p>
 <p><strong>網路容量措辭</strong></p>
 <ul>
@@ -3515,7 +3517,7 @@ ceiling_24mo = monthly_price × 0.50 × 24</code></p>
 <li><strong>遭遇的 HTTP 阻擋來源：</strong> HostingAdvice（403）、ZoomInfo（403）、Crunchbase（403）、Bizapedia／OpenCorporates（安全檢查／CAPTCHA，未予繞過）、esos.nv.gov（Incapsula）。凡依賴上述來源的發現，本檔皆已標記為社群來源、次級擷取或第三方估計。</li>
 <li><strong>無法以程式查詢的 JavaScript 介面：</strong> fec.gov 的個人捐獻查詢介面。第 12 節的 Timrawi FEC 結果係取自 FEC Schedule A 資料並標記為 <code>公開紀錄</code>；<strong>本檔不因抓取失敗而推論「沒有捐獻」。</strong></li>
 <li><strong>政治紀錄一致原則：</strong> 本檔所有政治資料僅取自公開紀錄，並逐條標記為 <code>公開紀錄</code>、<code>未證實</code> 或 <code><span class="gap">GAP</span></code>。</li>
-</ul></div></section>
+</ul></section>
 </main>
 </div>
 <footer>UNCLASSIFIED // FOR INTERNAL SUPERMICRO SALES USE ONLY &nbsp;·&nbsp; Every figure carries an inline source and date. GAP marks honestly-missing evidence. Assumptions are labelled as assumptions. Not investment advice.</footer>

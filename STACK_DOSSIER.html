@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,12 +66,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>STACK Infrastructure — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>STACK Infrastructure — Sales Intelligence Dossier</h1>
 <p>Prepared for: Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · date 2026-08-04</p>
 <p>Sourcing rule: every fact carries its source + date inline. <span class="gap">GAP</span> rows are kept visible. Verification basis: dual-pass research (pass A crawl 2026-07-26/27 + pass B fetch 2026-07-27) with live-site verifier fetches 2026-07-27; conflicts and single-source claims are listed in Section 10.</p>
 <hr />
 <h2>1. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Item</th>
@@ -119,10 +121,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Blue Owl PR 2024-10-07; Blue Owl PR 2025-01-06; OWL 10-Q; Apollo PR 2025-04-29</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>2. Leadership &amp; decision-makers</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -239,9 +241,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Sponsor-level route only. Blue Owl publishes a bio page but no personal email or phone. Realistic paths: (1) LinkedIn InMail; (2) Blue Owl corporate contact form at blueowl.com/contact; (3) Blue Owl IR line 212-419-3000 / blueowlir@blueowl.com for ownership-level questions; (4) conference route — he does public podcast/panel appearances on US datacentre market strategy, which are the easiest legitimate introduction surface. He is also listed as a Director on STACK's SEC Form D filings at the Denver address. <strong>Email:</strong> <span class="gap">GAP</span> · <strong>Phone:</strong> <span class="gap">GAP</span> · <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matthew-a-hearn-0745a07">LinkedIn</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>Corporate contact channels (public)</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -336,7 +338,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://ceqanet.lci.ca.gov/2022060141/6">California CEQAnet, Notice of Determination, SCH #2022060141</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Contact data is public-source only (SEC filings, IR and company contact pages, press releases, public professional profiles). No personal mobile numbers or private addresses. <span class="gap">GAP</span> = no published channel found for that individual; route via the corporate desk instead.</em></p>
 <p>Datacenter buying-committee read (derived from titles above; roles are disclosed, purchasing-authority mapping is inference):</p>
 <ul>
@@ -349,7 +351,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>HQ: Denver, CO — company contact page states city only (stackinfra.com/about/contact, both passes 2026-07-27). Working street address 1700 Broadway, Suite 1750, Denver, CO 80290 is directory-sourced (D&amp;B, LeadIQ, LegiStorm, chamber listings, consistent across both passes) — use for filings/directories with that caveat; NOT printed on the company site. Historical address 1600 Broadway, Suite 1320, Denver, CO 80202 (2019 era) — single-source, do not use in current materials.</p>
 <p>Global headline (stackinfra.com homepage/locations, both passes verified 2026-07-27): 24 global markets; 8.5+ GW built &amp; under development; 7.5+ GW planned &amp; potential development. Company does not split built vs under-construction in the headline. A "13 GW current + pipeline" figure appears in STACK PR 2025-12-12 (single-source, pass B pass only).</p>
 <h3>Americas (company market pages, both passes; verifier live fetches 2026-07-27)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Market</th>
@@ -432,9 +434,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>DCD/local coverage 2026-05 (pass A only)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>Pipeline / development-stage (not on Americas MW rollup)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Program</th>
@@ -457,9 +459,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>STACK PR 2025-09-26; Oracle.com data-centers page 2025-09-30; Fierce Network 2025-12-17; Albuquerque Journal 2025-09</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>APAC</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Market</th>
@@ -506,9 +508,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Both passes</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>EMEA (note: pan-European colocation business is in the Apollo carve-out, Sec. 5)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Market</th>
@@ -543,13 +545,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>DCF 2025-02-21 (pass A only)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Footprint gaps: critical-IT vs gross MW breakdown for most campuses — <span class="gap">GAP</span>. Built vs under-construction split of 8.5+ GW — <span class="gap">GAP</span>. GPU counts — <span class="gap">GAP</span> (none disclosed for any site). Third-party estimate (do not treat as official): ABI Research 2026-02-25 — 35 US DCs, 410 MW active IT capacity 2025, "Hyperscale Tier Two" (pass A single-source).</p>
 <hr />
 <h2>4. Political profile of principals</h2>
 <p>Public-record basis: FEC Schedule A itemized receipts via api.open.fec.gov, retrieved 2026-07-27 (primary public record). Identity match is name + employer ("Stack Infrastructure") as printed on the FEC row itself.</p>
 <p>DISCLAIMER: Federal campaign contributions are public records. A donation is NOT party registration, NOT proof of personal ideology, and NOT company policy. Absence of a record is NOT proof of zero giving. Use for relationship context only; never for discriminatory targeting.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Person</th>
@@ -631,10 +633,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/committees/?q=stack+infrastructure">Both passes 2026-07-26/27; FEC committee search "Stack Infrastructure" — no corporate PAC registered</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Method note (conflict resolved): the pass A web-search pass surfaced no FEC hits and warned not to treat absence as $0; the pass B pass queried the FEC API directly (primary record) and found the three rows above. Direct-API primary record prevails.</p>
 <h4>Recipient organizations — history, leaning &amp; principals</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Organization</th>
@@ -684,7 +686,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/committee/C00509729/">FEC committee</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/candidate/H2KY04121/">FEC candidate</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.opensecrets.org/members-of-congress/thomas-massie/summary?cid=N00034041">OpenSecrets</a> · <a target="_blank" rel="noopener noreferrer" href="https://ballotpedia.org/Thomas_Massie">Ballotpedia</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>Surname origin is name-etymology from public onomastic references only — it is NOT a verified statement of any individual's ethnicity or ancestry. Self-identified background is shown only where publicly stated by the person, with source.</em></p>
 <hr />
 <h2>5. Funding &amp; ownership</h2>
@@ -695,7 +697,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li>Acquisition completed 2025-01-03 (OWL 10-Q; Blue Owl PR 2025-01-06). STACK = portfolio company of Blue Owl Digital Infrastructure Advisors LLC (Apollo PR 2025-04-29).</li>
 </ul>
 <p>Sponsor-level fund raises (SINGLE-SOURCE: pass A pass only; sponsor-level, not STACK-level equity):</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Vehicle</th>
@@ -730,7 +732,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Blue Owl PR 2025-05-15</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Do not conflate the separate $1.7B Bloomberg-reported fund (2025-12-04) with ODI III.</p>
 <p>Debt / securitization:</p>
 <ul>
@@ -744,7 +746,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </ul>
 <hr />
 <h2>6. Customers</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Customer</th>
@@ -773,11 +775,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Both passes 2026-07-26/27; ASR 2020-08-23 (pass B single-source)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Concentration: tenant concentration percentages are locked in gated rating-agency presales (S&amp;P presale HTTP 403) — <span class="gap">GAP</span>. Customer list beyond Amazon and Oracle — <span class="gap">GAP</span>.</p>
 <hr />
 <h2>7. Financials</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -818,10 +820,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>STACK PR 2026-02-23; DCF 2025-02-21</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>8. Service lines breakdown</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Line</th>
@@ -861,7 +863,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Both passes 2026-07-26/27</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. Supermicro sales angle</h2>
 <p>Honest read from the verified facts:</p>
@@ -877,7 +879,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>10. Verification appendix</h2>
 <h3>Conflicts between research passes (all resolved)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -930,7 +932,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Minor/historical — both agree current directory address is 1700 Broadway Ste 1750 and company site prints city only. 1600 Broadway = historical, single-source; do not use in current materials.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>Single-source claims (usable only with attribution; not dual-verified)</h3>
 <ul>
 <li>Donough Roche (COO EMEA); Ravi Thota (CIO Americas) — pass A team-page crawl only.</li>
@@ -971,13 +973,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li>Critical-IT vs gross MW breakdown; built vs under-construction split of 8.5+ GW.</li>
 <li>GPU counts — none disclosed for any site.</li>
 <li>Australia/Korea MW rollup beyond Melbourne/Sydney; NW Louisiana program MW (announcement-stage only).</li>
-</ul></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>STACK Infrastructure — 銷售情報檔案</h1>
+</ul></section>
+<section class="lang" id="zh"><h1>STACK Infrastructure — 銷售情報檔案</h1>
 <p>編製對象:Supermicro 業務一組(美國) · 專員 US8664 Tuo Cheng · 日期 2026-07-27</p>
 <p>引用規則:每項事實均於行內附上來源與日期。<span class="gap">GAP</span>(資料缺口)列保留可見。查證基礎:雙軌研究(研究線甲 爬取 2026-07-26/27 + 研究線乙 抓取 2026-07-27),並於 2026-07-27 以官網即時抓取複核;兩軌衝突與單一來源主張列於第 10 節。</p>
 <hr />
 <h2>1. 公司速覽(Snapshot)</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>項目</th>
@@ -1027,10 +1029,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Blue Owl 新聞稿 2024-10-07、2025-01-06;OWL 10-Q;Apollo 新聞稿 2025-04-29</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>2. 領導層與決策者</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1147,9 +1149,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>僅限出資方層級路徑。Blue Owl 有公布個人簡介頁,但未公布個人電子郵件或電話。可行做法:(1) LinkedIn InMail;(2) Blue Owl 官網聯絡表單 blueowl.com/contact;(3) 所有權層級問題可走 Blue Owl 投資人關係專線 212-419-3000 / blueowlir@blueowl.com;(4) 會議路徑 — 他常公開參與談美國資料中心市場策略的 podcast/座談,是最容易且正當的引薦面。他亦於 STACK 的 SEC Form D 中列名為董事,地址為丹佛。<strong>電子郵件:</strong> <span class="gap">GAP</span> · <strong>電話:</strong> <span class="gap">GAP</span> · <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/matthew-a-hearn-0745a07">LinkedIn</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h4>公司公開聯絡管道</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -1244,7 +1246,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://ceqanet.lci.ca.gov/2022060141/6">加州 CEQAnet,Notice of Determination,SCH #2022060141</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>聯絡資料僅來自公開來源(SEC 申報文件、投資人關係與公司聯絡頁、新聞稿、公開專業檔案)。不含個人手機或私人地址。<span class="gap">GAP</span> = 該個人查無公開管道,請改走公司窗口。</em></p>
 <p>資料中心採購委員會判讀(依上列已揭露職稱推導;職稱為揭露事實,採購權限對應為推論):</p>
 <ul>
@@ -1257,7 +1259,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>總部:美國科羅拉多州丹佛市 — 公司聯絡頁僅列城市(stackinfra.com/about/contact,兩軌 2026-07-27)。工作用街道地址 1700 Broadway, Suite 1750, Denver, CO 80290 為名錄來源(D&amp;B、LeadIQ、LegiStorm、商會名錄;兩軌一致)— 供申報/名錄使用並附此但書;未印於官網。歷史地址 1600 Broadway, Suite 1320, Denver, CO 80202(2019 年時期)— 單一來源,勿用於現行文件。</p>
 <p>全球總覽(stackinfra.com 首頁/據點頁,兩軌並於 2026-07-27 複核):24 個全球市場;已建置及建置中(built &amp; under development)8.5+ GW;規劃及潛在開發 7.5+ GW。公司未在總覽中拆分「已建置」與「建置中」。另有「現有+管線合計 13 GW」出現於 STACK 新聞稿 2025-12-12(單一來源,僅 研究線乙 軌)。</p>
 <h3>美洲(公司市場頁,兩軌;2026-07-27 即時複核)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>市場</th>
@@ -1340,9 +1342,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>DCD/地方報導 2026-05(僅 研究線甲)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>管線/開發階段(未列入美洲 MW 彙總)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>專案</th>
@@ -1365,9 +1367,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>STACK 新聞稿 2025-09-26;Oracle.com 資料中心頁 2025-09-30;Fierce Network 2025-12-17;Albuquerque Journal 2025-09</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>亞太(APAC)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>市場</th>
@@ -1414,9 +1416,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>兩軌</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>EMEA(注意:泛歐主機代管業務屬 Apollo 分拆案,見第 5 節)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>市場</th>
@@ -1451,13 +1453,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>DCF 2025-02-21(僅 研究線甲)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>布局資料缺口:多數園區之關鍵 IT 容量 vs 總 MW 拆分 — <span class="gap">GAP</span>。8.5+ GW 之已建置 vs 建置中拆分 — <span class="gap">GAP</span>。GPU 數量 — <span class="gap">GAP</span>(任何據點皆未揭露)。第三方估計(勿視為官方):ABI Research 2026-02-25 — 美國 35 座資料中心、2025 年啟用 IT 容量 410 MW、「Hyperscale Tier Two」(研究線甲 單一來源)。</p>
 <hr />
 <h2>4. 高層人物政治檔案(公開紀錄)</h2>
 <p>公開紀錄基礎:FEC(美國聯邦選舉委員會)Schedule A 明細,經 api.open.fec.gov 檢索,2026-07-27(一手公開紀錄)。身分比對依據為 FEC 紀錄列上所印之姓名+雇主欄「Stack Infrastructure」。</p>
 <p>聲明:聯邦政治獻金為公開紀錄。捐款不等於政黨登記、不等於個人意識形態證明、亦不代表公司立場。查無紀錄不等於零捐款。僅供關係經營脈絡參考;不得用於歧視性目的。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>人物</th>
@@ -1539,10 +1541,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/committees/?q=stack+infrastructure">兩軌 2026-07-26/27;FEC 委員會檢索「Stack Infrastructure」— 查無註冊之公司 PAC</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>方法備註(衝突已解決):研究線甲 網頁搜尋軌未查得任何 FEC 紀錄,且自註「查無不代表 0 元」;研究線乙 軌直接查詢 FEC API(一手紀錄)查得上列三筆。以直接 API 一手紀錄為準。</p>
 <h4>受贈機構 — 沿革、政治傾向與負責人</h4>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>機構</th>
@@ -1592,7 +1594,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/committee/C00509729/">FEC 委員會</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.fec.gov/data/candidate/H2KY04121/">FEC 候選人</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.opensecrets.org/members-of-congress/thomas-massie/summary?cid=N00034041">OpenSecrets</a> · <a target="_blank" rel="noopener noreferrer" href="https://ballotpedia.org/Thomas_Massie">Ballotpedia</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><em>姓氏語源僅為公開姓名學資料之語源考據,並非對任何個人族裔或血統之查證陳述。惟當事人曾公開自述背景者,方列出並附來源。</em></p>
 <hr />
 <h2>5. 募資與股權</h2>
@@ -1603,7 +1605,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li>收購於 2025-01-03 完成(OWL 10-Q;Blue Owl 新聞稿 2025-01-06)。STACK 為 Blue Owl Digital Infrastructure Advisors LLC 旗下投資組合公司(Apollo 新聞稿 2025-04-29)。</li>
 </ul>
 <p>出資方層級基金募集(單一來源:僅 研究線甲 軌;屬出資方層級,非 STACK 層級股權):</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>基金</th>
@@ -1638,7 +1640,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Blue Owl 新聞稿 2025-05-15</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>勿將 Bloomberg 報導之另一支 17 億美元基金(2025-12-04)與 ODI III 混為一談。</p>
 <p>債務/資產證券化:</p>
 <ul>
@@ -1652,7 +1654,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </ul>
 <hr />
 <h2>6. 客戶</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>客戶</th>
@@ -1681,11 +1683,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>兩軌 2026-07-26/27;ASR 2020-08-23(研究線乙 單一來源)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>集中度:租戶集中度百分比鎖在付費牆內之評級機構預售報告(S&amp;P 預售 HTTP 403)— <span class="gap">GAP</span>。Amazon 與 Oracle 以外之客戶名單 — <span class="gap">GAP</span>。</p>
 <hr />
 <h2>7. 財務</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>指標</th>
@@ -1726,10 +1728,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>STACK 新聞稿 2026-02-23;DCF 2025-02-21</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>8. 服務線拆解</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>服務線</th>
@@ -1769,7 +1771,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>兩軌 2026-07-26/27</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. Supermicro 銷售切入點</h2>
 <p>依已驗證事實之誠實判讀:</p>
@@ -1785,7 +1787,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>10. 查證附錄</h2>
 <h3>兩軌研究衝突(均已解決)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1838,7 +1840,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>輕微且屬歷史 — 兩軌均同意現行名錄地址為 1700 Broadway Ste 1750,且官網僅列城市。1600 Broadway 屬歷史、單一來源;勿用於現行文件。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>單一來源主張(引用須附出處;未經雙軌驗證)</h3>
 <ul>
 <li>Donough Roche(EMEA 營運長)、Ravi Thota(美洲資訊長)— 僅 研究線甲 團隊頁爬取。</li>
@@ -1879,7 +1881,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li>關鍵 IT vs 總 MW 拆分;8.5+ GW 之已建置 vs 建置中拆分。</li>
 <li>GPU 數量 — 任何據點皆未揭露。</li>
 <li>墨爾本/雪梨以外之澳洲/韓國 MW 彙總;西北路易斯安那(Amazon)計畫 MW(僅屬宣布階段)。</li>
-</ul></div></section>
+</ul></section>
 </main>
 </div>
 <footer>UNCLASSIFIED // FOR INTERNAL SUPERMICRO SALES USE ONLY &nbsp;·&nbsp; Every figure carries an inline source and date. GAP marks honestly-missing evidence. Assumptions are labelled as assumptions. Not investment advice.</footer>

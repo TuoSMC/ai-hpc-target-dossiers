@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,14 +66,14 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>BUY WINDOW — U.S. Bare-Metal Operators</h1>
+<section class="lang" id="en"><h1>BUY WINDOW — U.S. Bare-Metal Operators</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-10</p>
 <p>Six operators researched across three tracks: lien position (UCC), purchase clock (catalogue archaeology), and rent-derived hardware cost ceilings. Every dated window below is anchored to a named, sourced event. Where no dated window exists, the operator is listed under "no dated window — monitor" rather than assigned a month.</p>
 <p><strong>Read this first:</strong> every operating-cost deduction used to derive a hardware ceiling in Section 3 is an <strong>assumption</strong>, not a researched fact. None of these six companies publishes cost or margin data; all are private. The assumptions are stated plainly at the head of Section 3 and must be restated as assumptions in any customer-facing use.</p>
 <hr />
 <h2>1. The calendar</h2>
 <p>Month-by-month, next twelve months. Ordered by <strong>when to act</strong>, not by company size. February–June 2027 are compressed into one row because the evidence supports a single continuous window there, not five distinguishable ones.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Month</th>
@@ -216,9 +218,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>No dated window — monitor</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Operator</th>
@@ -238,11 +240,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Nothing. Screen AS8100 out of any AS-based prospecting list. The residual value here is the <strong>buyer list</strong>: HostPapa took 256,512 IPs across 209 blocks between 2024-12-13 and 2025-01-30 and must put compute behind them — which is the same account already on the calendar.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>2. Financing posture</h2>
 <p><strong>Rule 8 note applied throughout:</strong> a distributor may cross territory boundaries, but only with <strong>advance approval</strong> and a <strong>do-not-call flag</strong> on the account. Where the evidence shows an incumbent channel relationship, that relationship must be identified <em>before</em> registration, or the lead collides with it.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Operator</th>
@@ -296,7 +298,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Unknown until Delaware is searched.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>General lesson for the territory, drawn from these six:</strong> <em>no liens does not mean cash-rich and ready to buy.</em> On a fleet of fully-depreciated commodity Xeons, the absence of a lien often means the assets were never worth lending against. Use the <strong>catalogue-age test</strong> (Section 1) as the primary qualifier and the UCC record as the secondary one.</p>
 <hr />
 <h2>3. Price to beat</h2>
@@ -306,7 +308,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>ceiling = monthly rent × (1 − operating-cost deduction) × N months</strong></p>
 </blockquote>
 <p><strong>The operating-cost deduction is an ASSUMPTION in every single case.</strong> None of these six companies publishes cost or margin data; all are private and file no public accounts. The deductions used are industry-norm judgements, not researched facts:</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Operator</th>
@@ -353,11 +355,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>±16%</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The only real-world anchor found anywhere is that <strong>WebNX publishes its own retail colocation rate card</strong> (<a target="_blank" rel="noopener noreferrer" href="https://www.webhostingtalk.com/showthread.php?t=1933969">2025-01-24</a>): 1U/2U with ~400W, /29, 10G and 50TB at <strong>$129/mo</strong>; full rack 3KW/100G/100TB at <strong>$1,500/mo</strong>; 25-rack cage 75KW at <strong>$23,000/mo</strong>. That is a <strong>retail</strong> price to a third party and therefore an <em>upper bound</em> on internal housing cost, not internal cost itself. Psychz and Hostwinds publish comparable retail colo rates and the same caveat applies.</p>
 <p><strong>Also excluded from every ceiling, all of which bias the numbers optimistically:</strong> cost of capital (a 24-month payback at a realistic 10–12% is ~8–10% more demanding than shown); occupancy below 100%; residual value; assembly labour, burn-in, licensing, rails, freight, spares/RMA pool; and sales/support/G&amp;A allocation. <strong>Payback windows of 12/18/24 months are hurdle rates, not asset-life constraints</strong> — dedicated-server hardware in this segment is routinely held 4–6 years.</p>
 <h3>The table</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Operator</th>
@@ -474,12 +476,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Unwinnable on price.</strong> Fourteen dollars of CPU generating $7,788/yr. Any pitch leading with processor generation is aimed at the smallest line on the invoice.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>One cross-cutting conclusion:</strong> in every one of the six BOMs, <strong>memory and flash — not CPU — are where the money is.</strong> WebNX 71% of a current-gen build; Psychz 52–76%; Sharktech 78%; ReliableSite 54%; Hostwinds 38% (against $9.90 of CPU); QuadraNet successor 85.8%. The self-assembly advantage these operators have relied on for a decade was built on cheap open-market components — which is precisely the market that broke. <strong>A vendor with contracted DRAM and NAND allocation has a temporary, real advantage over a spot buyer, in several cases for the first time in the company's history.</strong></p>
 <hr />
 <h2>4. Ranked call order</h2>
 <p>Ranked by <strong>(evidence-dated window) × (fleet size) × (winnability given the incumbent)</strong>.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -519,12 +521,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>A <strong>real re-rack event just occurred</strong> (reported 2026-07-06 → 07-14) and the entry tier is genuinely winnable — but the relocation dates are second-hand, the fleet size, contracting entity and signer are all unestablished, the estate carries active litigation and clouded-title hardware, and the only valid lien venue (Delaware) is paywalled and unsearched.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>5. What is still unknown</h2>
 <p>Every gap below would change the ranking, the deal structure, or a customer-facing number if resolved. Grouped by cost to resolve.</p>
 <h3>Cheap and decisive — do these first (&lt; $200 total)</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Gap</th>
@@ -571,9 +573,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>free</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>Moderate cost — order before committing a structure</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Gap</th>
@@ -608,9 +610,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>not published</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>Free but requires a human, a phone call, or a click-through</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Gap</th>
@@ -670,9 +672,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Confirm against a company document or by phone before acting.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>Data-quality flags that would change a customer-facing number</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Flag</th>
@@ -726,14 +728,14 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </tr>
 </tbody>
 </table></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>採購窗口 — 美國裸機業者</h1>
+<section class="lang" id="zh"><h1>採購窗口 — 美國裸機業者</h1>
 <p><strong>呈送對象：</strong> Supermicro 業務一部（美國） · 業務代表 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-10</p>
 <p>本報告涵蓋六家業者，分三條線調查：擔保權登記狀況（UCC）、採購時鐘（型錄考古）、以及由租金反推的硬體成本上限。以下每一個有日期的窗口，都錨定在具名且有出處的事件上。若查無日期依據，該業者會列入「無明確窗口 — 持續觀察」名單，而不會被硬塞進某個月份。</p>
 <p><strong>請先讀這一段：</strong> 第三節中用來推導硬體上限的每一個營運成本扣除率，都是<strong>假設</strong>，不是查證過的事實。這六家公司都是私人公司，均未公布成本或毛利資料。假設條件已在第三節開頭完整列出，任何對外使用時都必須同樣標示為假設。</p>
 <hr />
 <h2>一、採購行事曆</h2>
 <p>未來十二個月，逐月排列。排序依據是<strong>何時該行動</strong>，不是公司規模。2027 年 2 月至 6 月合併為一列，因為證據支持的是一個連續窗口，而不是五個可區分的月份。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>月份</th>
@@ -878,9 +880,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>無明確窗口 — 持續觀察</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>業者</th>
@@ -900,11 +902,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>沒有。請將 AS8100 從所有以 AS 為基礎的開發名單中剔除。這裡的剩餘價值是<strong>買家名單</strong>：HostPapa 在 2024-12-13 至 2025-01-30 間接手 209 個區塊、共 256,512 個 IP，必然要在其後面放上運算資源——而那正是行事曆上已經在追的同一個客戶。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>二、融資結構定位</h2>
 <p><strong>全篇適用的第八條規則提醒：</strong> 代理商可以跨區域界線，但必須<strong>事先取得核准</strong>並在客戶上設定<strong>禁止聯繫（do-not-call）旗標</strong>。凡證據顯示存在既有通路關係者，該關係必須在登記之前先辨識清楚，否則線索會與其衝突。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>業者</th>
@@ -958,7 +960,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>在德拉瓦查完之前皆未知。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>由這六家歸納、可套用到整個責任區的通則：</strong> <em>沒有擔保權登記，不等於現金充裕、隨時可買。</em> 對一支折舊完畢的商用 Xeon 機隊而言，沒有擔保權往往代表這些資產根本不值得放款。請以<strong>型錄年齡測試</strong>（第一節）作為主要資格判斷，UCC 紀錄作為次要判斷。</p>
 <hr />
 <h2>三、要打敗的價格</h2>
@@ -968,7 +970,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>上限 ＝ 月租 × (1 − 營運成本扣除率) × N 個月</strong></p>
 </blockquote>
 <p><strong>每一個案例的營運成本扣除率都是「假設」。</strong> 這六家公司皆為私人公司、不申報公開財報，也未公布任何成本或毛利資料。所採用的扣除率是產業慣例判斷，不是查證過的事實：</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>業者</th>
@@ -1015,11 +1017,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>±16%</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>全篇唯一找到的真實世界錨點，是 <strong>WebNX 自行公布的零售主機代管價目表</strong>（<a target="_blank" rel="noopener noreferrer" href="https://www.webhostingtalk.com/showthread.php?t=1933969">2025-01-24</a>）：1U/2U 約 400W、含 /29、10G、50TB，月租 <strong>$129</strong>；3KW/100G/100TB 整櫃 <strong>$1,500/月</strong>；75KW 的 25 櫃籠 <strong>$23,000/月</strong>。那是對第三方的<strong>零售</strong>價格，因此只是其自身容納成本的<em>上界</em>，而非內部成本本身。Psychz 與 Hostwinds 也公布了可比的零售代管價，同樣的警語適用。</p>
 <p><strong>以下項目全數被排除在每一個上限之外，且全部使數字偏向樂觀：</strong> 資金成本（以合理的 10–12% 計，24 個月回本要求會比表列數字再嚴格約 8–10%）、低於 100% 的使用率、殘值、組裝工時、燒機、授權、滑軌、運費、備品／RMA 庫存，以及業務／支援／管銷分攤。<strong>12／18／24 個月的回本期是門檻報酬率，不是資產壽命限制</strong>——此區隔的獨立主機硬體通常持有 4–6 年。</p>
 <h3>對照表</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>業者</th>
@@ -1136,12 +1138,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>價格上無勝算。</strong> 十四美元的 CPU 產出每年 $7,788。任何以處理器世代開場的提案，都是瞄準發票上最小的一行。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>一個貫穿全篇的結論：</strong> 在這六份 BOM 中，錢都在<strong>記憶體與快閃，不在 CPU</strong>。WebNX 新世代機型 71%；Psychz 52–76%；Sharktech 78%；ReliableSite 54%；Hostwinds 38%（對照 $9.90 的 CPU）；QuadraNet 繼承者 85.8%。這些業者十年來仰賴的自組優勢，建立在便宜的公開市場零組件之上——而那正是已經崩壞的市場。<strong>擁有 DRAM 與 NAND 合約配額的供應商，對現貨買家而言擁有一個暫時但真實的優勢，其中數家更是公司史上第一次。</strong></p>
 <hr />
 <h2>四、拜訪優先順序</h2>
 <p>排序依據：<strong>（有證據的日期窗口）×（機隊規模）×（考量既有供應商後的勝算）</strong>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1181,12 +1183,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>確實剛發生一次搬機事件</strong>（報導期間 2026-07-06 → 07-14），且入門層確實可打——但搬遷日期是二手來源，機隊規模、締約主體與簽字人全部未確認，資產背著進行中的訴訟與權利不清的硬體，而唯一有效的登記地（德拉瓦）需付費且尚未查詢。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>五、仍然未知的部分</h2>
 <p>以下每一項若被釐清，都會改變排序、交易結構，或某個對外的數字。依解決成本分組。</p>
 <h3>便宜且關鍵 — 請優先執行（合計 &lt; $200）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>未知項</th>
@@ -1233,9 +1235,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>免費</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>中等成本 — 在確定交易結構前先下單</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>未知項</th>
@@ -1270,9 +1272,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>未公布</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>免費但需要人、一通電話，或一次點擊同意</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>未知項</th>
@@ -1332,9 +1334,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>行動前請以公司文件或電話確認。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>會改變對外數字的資料品質警示</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>警示</th>

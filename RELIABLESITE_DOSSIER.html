@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,7 +66,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>ReliableSite (RELIABLESITE.NET LLC) — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>ReliableSite (RELIABLESITE.NET LLC) — Sales Intelligence Dossier</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-04
 <strong>Method:</strong> Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. <span class="gap">GAP</span> = not found in verified material. No fabrication.
 <strong>Territory:</strong> Miami, Florida (legal) and Piscataway, New Jersey (operations) — East Coast 3 / East Coast 1 = T2|T3|T6|T7|T12. Team 1 is NOT eligible: Rule 11 sets the large-datacenter exception at 100MW or more and this provider is far below it. Route through <strong>T7 (lead: Brian Leaver)</strong>. T11 is not eligible.
@@ -74,7 +76,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>ReliableSite is a founder-owned, ~11–50-person U.S. bare-metal / dedicated-server provider running its own AS23470 network and its own servers across six leased colocation regions — Piscataway NJ, Newark NJ, Miami FL, Los Angeles CA, Amsterdam NL, and a Querétaro MX build-out — selling single-socket desktop/workstation-class machines at $49–$699/month. The commercial verdict is that this is a <strong>confirmed Supermicro account that has already been half-lost</strong>: the chassis business is gone to an in-house design, but the motherboard and power-supply socket is explicitly still open, and there is a clean, empty AI/GPU shelf to fill — so this is a board-level defence plus a greenfield GPU play, not a routine renewal, and it must be run by the East Coast team, not Team 1. The single strongest piece of evidence in the whole file is CEO Radic Davydov's on-record <a target="_blank" rel="noopener noreferrer" href="https://lowendbox.com/blog/custom-built-for-success-interview-with-radic-davydov-ceo-of-reliablesite/">LowEndBox interview</a>, in which he names Supermicro MicroCloud in his fleet and then explains, in his own words, that he designed a proprietary ~50%-higher-density chassis after MicroCloud replacement parts became unavailable and cost "2-3 times the cost" — while deliberately keeping it compatible with off-the-shelf motherboards and power supplies. The one thing that could kill the deal is opening with a vendor-integrated chassis or complete-system pitch: that re-opens the exact wound that lost the account, and the honest opening is the board/PSU socket and the missing GPU platform — the motherboard supplier behind the custom chassis is the single most commercially important unknown in this entire dossier.</p>
 <hr />
 <h2>2. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -119,11 +121,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>FL = <strong>East Coast 3</strong>, NJ = <strong>East Coast 1</strong> — both <strong>T2 | T3 | T6 | T7 | T12</strong>. Team 1 may only act under the Large End User / Data Center exception, and <strong>Rule 11 defines a large data centre as 100MW or more — this provider does not qualify</strong>, so the T1 exception does not apply. <strong>Route through T7 (lead: Brian Leaver).</strong> T11 is not eligible</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. Corrections to the working list</h2>
 <p>Every row below is a statement in the original working list that this research <strong>overturned</strong> or <strong>could not confirm</strong> for this provider. Read this before first contact — opening on a wrong premise costs credibility immediately.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -164,13 +166,13 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Across the six providers researched in the same pass, only <strong>two</strong> had Supermicro confirmed, and ReliableSite is the stronger of the two. That is genuinely useful — but see row 2: confirmation of Supermicro <strong>in the fleet</strong> is not confirmation of Supermicro <strong>in the current buying cycle</strong>. Current-generation SKU-level confirmation is a <strong><span class="gap">GAP</span></strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Leadership &amp; ownership</h2>
 <p><strong>Three named humans exist in the entire public record for this account, and one of them signs for everything.</strong> Rodion Radic Davydov is the sole authorised person on <strong>six</strong> Florida LLCs — the operating company, the parent, the hardware entity, the software arm and two data-centre entities — continuously from formation on <strong>2014-12-11</strong> through the annual report he personally signed on <strong>2026-02-09</strong>. No co-owner, no board and no second signatory has <em>ever</em> been listed on any of them. Two further staff were identified in this pass through non-obvious routes — a <strong>USPTO patent</strong> and an <strong>FEC employer sweep</strong> — and both are commercially relevant: the <strong>co-inventor of the company's own server chassis</strong>, and the <strong>manager of the New Jersey site where most of the fleet lives</strong>.</p>
 <h3>4.1 Named people</h3>
 <p>Evidence grades used below: <strong>primary-record</strong> = the person's name appears on an official filing or registry record · <strong>corroborated</strong> = a primary record plus at least one independent second source · <strong>single-source</strong> = one source only, re-verify before quoting.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -265,7 +267,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/net/17907">PeeringDB net/17907</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>What is new in this pass, and why it is not just the same CEO claim repeated:</strong></p>
 <ul>
 <li><strong>Davydov — verified and expanded, not restated.</strong> The Sunbiz entity detail lists exactly <strong>one</strong> Authorized Person ("Title CEO — DAVYDOV, RODION R, 2115 NW 22nd St, Miami, FL 33142") and the same person as Registered Agent, with "No Events / No Name History". The original <strong>12/11/2014 Electronic Articles of Organization</strong> were pulled and OCR'd: Article IV names one person authorised to manage the LLC — "Title: CEO, RODION R DAVYDOV, 7600 Collins Ave #712, Miami Beach, FL 33141" — with his signature at Article III (registered agent) and Article V (electronic signature). <strong>There has therefore never been a second officer, from formation to today.</strong> The text layer of the <strong>02/09/2026 annual report</strong> gives the signature block "SIGNATURE: RODION RADIC DAVYDOV / CEO / 02/09/2026", which resolves the long-standing Rodion-vs-Radic question: <strong>Radic is his middle name and his trade name.</strong> He is sole CEO of all six Florida entities (§4.2). His support-portal account "Radic D." carries an <strong>Employee badge with join date 2008-04-29</strong> — the operation predates the 2014 LLC, consistent with the "since 2006" claim on the About page. He is named as CEO/Founder in LowEndBox, HostingJournalist and HostingAdvice interviews and is the author byline on the company's CloudFest 2026 recap post.</li>
@@ -274,7 +276,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>Ownership — founder-owned, unlevered, no approval gate above him.</strong> No outside investors, no PE/VC, no board and no advisors were found. The Florida Secured Transaction Registry returns <strong>zero UCC-1 filings</strong> against any of the six entities (control query "PUBLIX SUPER MARKETS" returned 20 debtor rows, proving the query path works), which corroborates the About page's "financially stable and debt-free" self-description and means <strong>there is no lender or investor sign-off on a purchase.</strong> Membership interests in a Florida LLC are not public record, so the cap table itself remains unverifiable.</li>
 </ul>
 <h3>4.2 Registry record</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -342,9 +344,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=OfficerRegisteredAgentName&amp;directionType=Initial&amp;searchNameOrder=X&amp;aggregateId=flal-l24000326360-a76cc248-1e4d-4355-bc41-e63b90c01f81&amp;searchTerm=DAVYDOV%20RODION&amp;listNameOrder=X">Sunbiz detail</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 Buying committee</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Who</th>
@@ -379,7 +381,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Monitor reliablesite.net/careers and LinkedIn for the hire. <strong>Until then there is no one to call — do not fabricate a contact.</strong> Also open at the same time: Senior Network Engineer (Remote), Senior .NET Software Engineer (Remote), Data Center Technician (Miami). All four reqs route only to careers@reliablesite.net with <strong>no named hiring manager</strong>.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 Unfilled roles — every one of these is a <span class="gap">GAP</span></h3>
 <p><strong>CFO / Controller / VP Finance — NO NAME FOUND</strong> (no finance officer on any of the six Sunbiz filings and no finance contact anywhere public; strong inference the function sits with the CEO personally) · <strong>CTO — NO NAME FOUND</strong> (none exists; the company is instead recruiting a Director of Engineering reporting to the CEO) · <strong>Director of Engineering — ROLE EXISTS BUT VACANT</strong>, no incumbent and no named hiring manager · <strong>VP Infrastructure / Head of Data Center Operations — NO NAME FOUND at group level</strong> (only site-level management identified: Hossain, NYC Metro; Sinelnikov, DC tech team lead) · <strong>Procurement / purchasing / supply-chain lead — NO NAME FOUND</strong> (no procurement function is publicly evidenced; the CEO states he works directly with hardware manufacturers himself) · <strong>COO / General Manager — NO NAME FOUND</strong> · <strong>Head of Network Engineering / NOC lead — NO NAME FOUND</strong> (ARIN OrgTech and PeeringDB Policy/NOC are role accounts only: support@, peering@, complaints@; the Senior Network Engineer req is open and unfilled) · <strong>General Counsel / legal contact — NO NAME FOUND</strong> (no attorney of record surfaced; the one federal lawsuit named only the LLC, and no trademark correspondent exists because no trademark was ever filed) · <strong>Board of directors / investors / advisors — NONE EXIST</strong> (single-authorized-person LLC, no Crunchbase funding, zero UCC-1 liens, self-described "financially stable and debt-free" — <strong>there is no investor or lender approval gate on a purchase</strong>) · <strong>HR / talent / recruiting lead — NO NAME FOUND</strong> (all four open reqs route to the careers@ role mailbox) · <strong>Sales / business development / partnerships lead — NO NAME FOUND</strong> · <strong>Site leads for Los Angeles, Amsterdam and Querétaro — NO NAMES FOUND for any of the three newer locations</strong> · <strong>Brand/product leads for the sibling companies (Deploy2K, ADMN, LaunchMC, Presence, System Data Centers) — NO NAMES FOUND</strong>; all are Davydov-owned entities with him as sole CEO · <strong>Trademark declaration signatory and correspondent — DOES NOT EXIST</strong> (validated: no US trademark application or registration for "ReliableSite" or "Boot Hardware") · <strong>UCC-1 secured party and debtor signatory — DOES NOT EXIST</strong> (validated: zero Florida UCC filings against any of the six entities) · <strong>Named authorised buyer / PO signatory other than the CEO — NO NAME FOUND, and the registry evidence affirmatively indicates none exists.</strong></p>
 <h3>4.5 Sources worked — including the ones that returned nothing</h3>
@@ -388,7 +390,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>5. Footprint</h2>
 <p><strong>Six regions, all leased. They own the servers and the network inside other people's buildings — they do not own a single data centre.</strong> Every size and power figure below that exists is a <strong>whole-building landlord number</strong>; ReliableSite's own cage/suite footprint and contracted kW are <strong>not published at any site</strong>.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Site</th>
@@ -441,7 +443,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>The company's data-centre page lists Querétaro with "carrier-neutral connectivity, dedicated telecom meet-me rooms, and direct access to PIX México 1 and PIX México 2"; the network page shows "Network Test Coming Soon" for QRO and lists IENTC / Wantelco peering — i.e. build-out is in progress. <strong>This is the most likely near-term new-hardware purchase trigger in the account</strong> (<a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/data-center/queretaro-mexico.aspx">Querétaro page</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Scale:</strong> server count, node count and rack count are <strong>nowhere published</strong> — not by the company and not by any third party. The best available proxy is AS23470's <strong>~50,944 announced IPv4 addresses</strong> across 199 originated IPv4 prefixes. At typical bare-metal allocation practice this implies a fleet plausibly in the low-to-mid thousands of servers across six regions, but <strong>that is an INFERENCE, not a published figure — do not quote it as fact.</strong> Ask directly on the first call.</p>
 <hr />
 <h2>6. Hardware fleet</h2>
@@ -505,7 +507,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong><span class="gap">GAP</span> — no secured-party index.</strong> Florida FSTR exposes no secured-party search at all. Reverse lookup by lender name is structurally impossible on this portal at any price, so no competitive intelligence on which financiers serve this segment could be gathered from it.</li>
 </ul>
 <h3>8.2 Search log — every attempt, logged separately, none merged</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Portal</th>
@@ -664,10 +666,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Certified search fee not obtainable from the portal API. Named alternative for an official certified search: Image API, LLC, UCC Filings, P.O. Box 5588, Tallahassee, FL 32314, tel 850.222.8526 (privatised operator of the Florida UCC filing process since 2001-10-01 per <a target="_blank" rel="noopener noreferrer" href="https://dos.fl.gov/">dos.fl.gov</a>). Fee not verified — recorded as a <span class="gap">GAP</span>.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 Filings in full</h3>
 <p><strong>There are no filing blocks below, and that absence is the finding rather than an omission.</strong> A block-per-filing rendering is set out here for every field such a block would carry, so that the shape of the null result is explicit and auditable:</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field a filing block would carry</th>
@@ -708,9 +710,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>No record page exists. Search reproducible at <a target="_blank" rel="noopener noreferrer" href="https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&amp;searchOptionType=OrganizationDebtorName&amp;searchOptionSubOption=FiledAndLapsedActualDebtorNameList">publicsearchapi.floridaucc.com/search</a> · portal front end at <a target="_blank" rel="noopener noreferrer" href="https://floridaucc.com/">floridaucc.com</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.4 What the record means</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Observation</th>
@@ -757,12 +759,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>If you want to know which lessor the comparable Florida hosters use, you must run named-debtor searches one at a time against a peer list. That is cheap ($0.00 per query on this endpoint) and worth doing <strong>before</strong> proposing a finance partner, so that whoever you introduce is one the segment already recognises.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. Purchase clock</h2>
 <h3>9.1 Catalogue snapshot timeline</h3>
 <p>Twelve Wayback Machine captures of <a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/dedicated-servers/">reliablesite.net/dedicated-servers/</a>, parsed from the page's own structured markup (<code>data-server-name</code>, <code>data-cores</code>, <code>data-cpu-speed</code>, <code>data-memory</code>, <code>data-price</code>, and from 2026-06 onward <code>data-dc-*</code> availability attributes).</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Snapshot date</th>
@@ -871,10 +873,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/">capture</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 Cadence</h3>
 <p><strong>Observed intervals.</strong> Purchase events are defined strictly as the first-ever appearance of a new CPU or GPU generation in the catalogue across the twelve snapshots. Five qualify.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Event</th>
@@ -909,7 +911,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>EPYC 4005 Zen 5 (EPYC 4545P), vendor-announced August 2025</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Intervals between consecutive events, in months: <strong>E1→E2 = 9.5 · E2→E3 = 7.0 · E3→E4 = 5.8 · E4→E5 = 3.9</strong> (or 2.1 if E5 is dated to the August 2025 announcement rather than the catalogue sighting). <strong>The sequence is monotonically decreasing — the refresh clock was accelerating steadily right up to the last event.</strong></p>
 <p><strong>Median months.</strong> <strong>6.4 months</strong> (median of 9.5, 7.0, 5.8, 3.9). Mean 6.6 months. Using the announcement-corrected E5 date the median falls to 6.4 and the mean to 6.1. <strong>Call it a 6-month cadence with a tightening trend through 2025.</strong></p>
 <p><strong>Last purchase event.</strong> <strong>AMD EPYC 4545P</strong> (EPYC 4005 series, Zen 5, 16C/32T, 65W TDP, socket AM5). Announced in ReliableSite's own newsroom in <strong>August 2025</strong> for New York, Miami and Los Angeles; first observed in the catalogue in the <strong>2025-10-08</strong> snapshot at $149/mo for 128GB DDR5 + 2TB NVMe and $199/mo for 256GB DDR5 + 4TB NVMe. As of today, <strong>2026-08-10</strong>, that is <strong>12 months since announcement and 10.1 months since catalogue debut, against a 6.4-month median</strong> — roughly <strong>1.6× to 1.9× their historical interval</strong>, with no new silicon in four consecutive snapshots (2025-11, 2026-03, 2026-06, 2026-08). <strong>This is the longest silicon drought in the observed window by a wide margin</strong> (<a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/">newsroom post</a>).</p>
@@ -922,7 +924,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 - Live retrieval of the dedicated-servers page by direct HTTP client was blocked (5,639-byte response), so the "today" reading is taken from the 2026-08-07 Wayback capture cross-checked against a successful proxied fetch of the live page. The two agree on newest silicon and top-of-range pricing, but the live SKU count read 22 configurations versus 20 in the archived capture — <strong>a small discrepancy consistent with three days of stock movement.</strong>
 - <strong>Total server count, rack count, cabinet count and installed fleet size are nowhere disclosed.</strong> Catalogue availability figures show only current unsold stock per SKU per site (typically 1–5 units), which says nothing about installed base. Any statement about how many servers they run is unsupported by this research.</p>
 <h3>9.3 Expansion signals</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Signal</th>
@@ -1062,7 +1064,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/">newsroom</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span> — no pricing or SKU breadth exists yet for Dallas.</strong> DFW appears only as an availability attribute on a single SKU (Ryzen 9950X 256GB) in the 2026-07-30 and 2026-08-07 captures, and Querétaro remains at pre-order. <strong>The size and timing of the fit-out order for both sites is unknown.</strong></p>
 <hr />
 <h2>10. Cost ceiling</h2>
@@ -1071,7 +1073,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <blockquote>
 <p><strong>EVERY OPERATING-COST FIGURE BELOW IS AN INDUSTRY-NORM ASSUMPTION, NOT A RESEARCHED FACT ABOUT RELIABLESITE.</strong> None of it was sourced from the company. It is a defensible band for a self-operating bare-metal host at 1–5 Tbps scale with in-house staff, and <strong>it must be restated as an assumption in any customer-facing use.</strong></p>
 </blockquote>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Assumption</th>
@@ -1118,11 +1120,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>ASSUMPTION, derived from the four assumption lines above.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>What is deliberately excluded, and which way it biases the ceilings.</strong> Occupancy is assumed at <strong>100%</strong>; real-world utilisation of 70–85% would cut every ceiling by 15–30%, and the live page shows single-unit availability across most SKUs, which suggests they do run tight. Cost of capital, IP address lease cost (material given they lease most of their announced space), setup labour and RMA/spares are all excluded. <strong>Every published ceiling is therefore an OPTIMISTIC UPPER BOUND. If a SKU already fails to clear its BOM at these ceilings, it fails harder in reality.</strong></p>
 <p><strong>The one finding that survives any reasonable assumption set.</strong> At $49/mo the Intel Special returns roughly <strong>$7/mo of contribution</strong> against a $42 opex assumption, giving a <strong>12-month ceiling of $84</strong> and a <strong>24-month ceiling of $168</strong>. No new hardware of any kind can be bought for that. The bottom of their range is only viable on fully depreciated iron — which is exactly what their own clearance page says it is, marketing previously-deployed servers with SuperMicro chassis and a 5+ year life expectancy. <strong>That tier is structurally unaddressable for a new-hardware sale, and pitching into it will fail on arithmetic no matter how the assumptions are tuned.</strong></p>
 <h3>10.2 Rent-derived cost ceilings</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1207,9 +1209,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/">2026-08-07 catalogue</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.3 Bill of materials at street prices</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1326,7 +1328,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.supermicro.com/en/products/chassis">Supermicro chassis range</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.4 Roll-up — assembled street cost against the rent-derived ceiling</h3>
 <p><strong>BUILD A — AMD EPYC 4545P, 128GB DDR5, 2TB NVMe, sells at $199/mo.</strong>
 Assembled at street: CPU $592.99 + AS-1015A-MT barebone $1,046.00 + 4×32GB ECC UDIMM $861.36 + 2TB NVMe $385.00 = <strong>$2,885.35</strong>.
@@ -1398,7 +1400,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <hr />
 <h2>13. Public contact channels</h2>
 <p><strong>Public sources only. No personal mobile numbers and no private addresses are listed here, and none were sought. Where no published channel exists, the row reads <span class="gap">GAP</span>.</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -1473,7 +1475,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro sales angle</h2>
 <h3>Classification: <strong>confirmed incumbent — but in practice this is a chassis-loss defence in which the board-level socket is still open, plus a greenfield AI/GPU play.</strong></h3>
@@ -1498,7 +1500,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <hr />
 <h2>15. Verification appendix</h2>
 <h3>15.1 Single-source claims — re-verify before quoting</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Claim</th>
@@ -1543,10 +1545,10 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><strong>Vendor-published case studies, not independently verified. The Scirra spec vintage indicates an old case</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 Conflicting third-party estimates — shown side by side, deliberately not resolved</h3>
 <p><strong>Revenue</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1571,10 +1573,10 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>Private LLC, no SEC filings, no self-published financials</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Assessment presented rather than resolved:</strong> the $1.2M figure is <strong>internally inconsistent with observable infrastructure</strong> — ~50,944 IPv4 addresses, five IXP presences on 100G ports, 1–5 Tbps self-reported traffic, six regions of leased colocation and 11–50 employees. Colocation fees plus transit plus payroll alone would very likely exceed $1.2M. <strong>Both estimates are shown; neither is adopted; no figure is substituted.</strong> Treat all revenue numbers here as low-confidence third-party modelling.</p>
 <p><strong>Headcount</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1589,9 +1591,9 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><strong>Single source. No competing third-party figure was located for this provider, so there is no conflict to display — but there is also no corroboration.</strong> Exact headcount = <span class="gap">GAP</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Founding year</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1612,7 +1614,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><strong>2018-08-10</strong> (AS23470 registration)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Correct framing: "brand/operations since 2006, legal entity since 2014, own ASN since 2018." Do not say "20 years in business."</strong></p>
 <p><strong>Facility size and power</strong></p>
 <p>Every published size/power figure in §5 is a <strong>landlord whole-building number</strong> (QTS: 360,000 sq ft / ~176,000 sq ft raised floor / ~52–65 MW; CoreSite MI1: ~43,000+ sq ft). <strong>ReliableSite's own tenant allocation is not published at any site. Landlord figures and tenant figures must never be presented as the same measurement.</strong></p>
@@ -1638,8 +1640,8 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <li><strong>HTTP-blocked sources encountered in this research pass:</strong> Web Hosting Talk (403), datacentermap (429), datacenters.com (403), ZoomInfo (403), Crunchbase (403). Any finding that depends on those sources is flagged in this file as a community source, a secondary capture, or a third-party estimate.</li>
 <li><strong>The ReliableSite Facebook page body was not retrievable by direct fetch</strong>; the "from tray to rack" caption was captured via search index only.</li>
 <li><strong>Political-record consistency principle:</strong> all political data in this file comes only from public records and each item is tagged <code>public-record</code>, <code>no-findings</code>, <code>gap</code> or <code>unverified</code>. No inference, no attribution by surname alone, and no substitution of a similar name.</li>
-</ul></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>ReliableSite（RELIABLESITE.NET LLC） — 銷售情報檔案</h1>
+</ul></section>
+<section class="lang" id="zh"><h1>ReliableSite（RELIABLESITE.NET LLC） — 銷售情報檔案</h1>
 <p><strong>編製對象：</strong> Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-04
 <strong>方法：</strong> 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。<span class="gap">GAP</span> = 查證資料中未找到，不得憑記憶補寫。
 <strong>轄區：</strong> 佛州邁阿密（法定）與紐澤西 Piscataway（營運）— East Coast 3／East Coast 1 = T2｜T3｜T6｜T7｜T12。<strong>一組不符資格</strong>：規則 11 之大型資料中心例外門檻為 100MW 以上，本業者遠低於此。應循 <strong>T7（主管 Brian Leaver）</strong>。T11 不符資格。
@@ -1649,7 +1651,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <p>ReliableSite 是一家創辦人自有、員工約 11–50 人的美國裸機／專用伺服器業者，自營 AS23470 網路與自有伺服器，橫跨六個租用的第三方機房區域——紐澤西 Piscataway、紐澤西 Newark、佛州邁阿密、加州洛杉磯、荷蘭阿姆斯特丹，以及建置中的墨西哥 Querétaro——販售單路桌上型／工作站級機種，價帶為每月 $49–$699。商業判定是：<strong>這是一個已被打掉一半的既有 Supermicro 帳戶</strong>——機殼生意已經流失到他們自製的設計，但主機板與電源這個插槽依照 CEO 自己公布的設計意圖仍然開放，而 AI／GPU 這一層則是一塊乾淨的空架，因此本案是「板級防守戰 ＋ GPU 全新開發」，不是例行續約，而且<strong>必須由東岸團隊承作，不是一組</strong>。全檔最強的單一證據，是 CEO Radic Davydov 具名的 <a target="_blank" rel="noopener noreferrer" href="https://lowendbox.com/blog/custom-built-for-success-interview-with-radic-davydov-ceo-of-reliablesite/">LowEndBox 專訪</a>：他在文中親口指出機隊中有 Supermicro MicroCloud，接著用自己的話說明，在 MicroCloud 替換零件斷貨、價格變成「2-3 times the cost」之後，他自行設計了密度較標準 1U 高約 50% 的專屬機殼——<strong>並刻意保持與市售主機板及電源相容</strong>。唯一可能讓本案立刻死掉的做法，是開場就推整機或原廠機殼方案：那等於重新掀開當初失去這個帳戶的傷口；誠實的切角是板級／電源插槽與缺失的 GPU 平台，而<strong>自製機殼所使用的主機板供應商是誰，是本檔商業價值最高的單一未知</strong>。</p>
 <hr />
 <h2>2. 公司速覽</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1694,11 +1696,11 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>FL＝<strong>East Coast 3</strong>、NJ＝<strong>East Coast 1</strong>，皆為 <strong>T2 | T3 | T6 | T7 | T12</strong>。一組僅在 Large End User／Data Center 例外下可承作，而 <strong>規則 11 明定「大型資料中心」為 100MW 以上，本業者不符</strong>，故該例外不適用。<strong>應循 T7（主管 Brian Leaver）承作。</strong> T11 不符資格</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. 原始名單更正表</h2>
 <p>以下每一列，都是原始工作名單中針對本業者被研究<strong>推翻</strong>或<strong>無法證實</strong>的敘述。首次接觸前必須先讀完——以錯誤前提開場會立即失去可信度。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1739,13 +1741,13 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>在同一批研究的六家業者中，僅 <strong>兩家</strong> 的 Supermicro 獲得確認，而 ReliableSite 是其中證據較強的一家。這確實有價值——但見第 2 列：確認 Supermicro <strong>在機隊中</strong>，不等於確認 Supermicro <strong>在當前採購循環中</strong>。當世代 SKU 級確認仍是 <strong><span class="gap">GAP</span></strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. 領導層與所有權</h2>
 <p><strong>整份公開紀錄中只存在三位具名自然人，而其中一位包辦所有簽核。</strong> Rodion Radic Davydov 是 <strong>六家</strong> 佛州 LLC 的唯一授權人——營運公司、母公司、硬體公司、軟體部門，以及兩家資料中心實體——自 <strong>2014-12-11</strong> 設立起，至他本人於 <strong>2026-02-09</strong> 簽署的年度申報為止，從未間斷。這六家公司<strong>從來沒有</strong>列過共同所有人、董事會或第二位簽署人。本次調查另循兩條非顯性路徑找出兩名員工——<strong>USPTO 專利</strong>與 <strong>FEC 雇主欄位掃描</strong>——兩人在商業上都具意義：一位是公司自有伺服器機殼的<strong>共同發明人</strong>，另一位是<strong>機隊主力所在的紐澤西站點經理</strong>。</p>
 <h3>4.1 具名人員</h3>
 <p>以下證據等級定義：<strong>primary-record（一手紀錄）</strong>＝該姓名出現在官方申報或登記紀錄上 · <strong>corroborated（多源佐證）</strong>＝一手紀錄再加至少一個獨立第二來源 · <strong>single-source（單一來源）</strong>＝僅一個來源，引用前須再驗證。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1840,7 +1842,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/net/17907">PeeringDB net/17907</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>本次的新發現，以及為何這不只是把同一個 CEO 說法重講一次：</strong></p>
 <ul>
 <li><strong>Davydov——是查證並擴充，不是複述。</strong> Sunbiz 實體明細只列出<strong>一位</strong>授權人（「Title CEO — DAVYDOV, RODION R, 2115 NW 22nd St, Miami, FL 33142」），且註冊代理人為同一人，頁面顯示「No Events／No Name History」。本次已調閱並 OCR <strong>2014-12-11 的原始電子設立章程</strong>：Article IV 僅列一名獲授權管理該 LLC 之人——「Title: CEO, RODION R DAVYDOV, 7600 Collins Ave #712, Miami Beach, FL 33141」，Article III（註冊代理人）與 Article V（電子簽章）亦為其簽名。<strong>因此自設立至今，從未出現過第二位幹部。</strong> <strong>2026-02-09 年度申報</strong>的文字層顯示簽名欄為「SIGNATURE: RODION RADIC DAVYDOV／CEO／02/09/2026」，一舉解決長期存在的 Rodion 與 Radic 之疑：<strong>Radic 是他的中間名，也是他對外使用的名字。</strong> 他是全部六家佛州實體的唯一 CEO（見 §4.2）。其客服系統帳號「Radic D.」帶有 <strong>Employee 標章、加入日期 2008-04-29</strong>——營運早於 2014 年設立的 LLC，與 About 頁「自 2006 年起」的說法一致。他在 LowEndBox、HostingJournalist、HostingAdvice 專訪中均以 CEO／創辦人具名，並且是公司 CloudFest 2026 回顧文的署名作者。</li>
@@ -1849,7 +1851,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <li><strong>所有權——創辦人自有、無槓桿、其上無任何核准關卡。</strong> 查無外部投資人、無 PE／VC、無董事會、無顧問。Florida Secured Transaction Registry 對六家實體均回傳 <strong>零筆 UCC-1</strong>（對照組查詢「PUBLIX SUPER MARKETS」回傳 20 筆債務人資料，證明查詢路徑有效），此與 About 頁自稱「financially stable and debt-free」一致，代表<strong>採購案上頭沒有貸方或投資人需要簽核</strong>。惟佛州 LLC 的會員權益非公開紀錄，股權結構本身仍無法查證。</li>
 </ul>
 <h3>4.2 登記紀錄</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1917,9 +1919,9 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><a target="_blank" rel="noopener noreferrer" href="https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=OfficerRegisteredAgentName&amp;directionType=Initial&amp;searchNameOrder=X&amp;aggregateId=flal-l24000326360-a76cc248-1e4d-4355-bc41-e63b90c01f81&amp;searchTerm=DAVYDOV%20RODION&amp;listNameOrder=X">Sunbiz 明細</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 採購決策圈</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>對象</th>
@@ -1954,7 +1956,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>持續追蹤 reliablesite.net/careers 與 LinkedIn 的到職動態。<strong>在此之前無人可聯絡——不得虛構聯絡人。</strong> 同期開放的另有：Senior Network Engineer（遠端）、Senior .NET Software Engineer（遠端）、Data Center Technician（Miami）。四則職缺一律只導向 careers@reliablesite.net，<strong>未列任何具名招募主管</strong>。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 無法具名的職位——以下每一項均為 <span class="gap">GAP</span></h3>
 <p><strong>CFO／Controller／VP Finance——查無姓名</strong>（六份 Sunbiz 申報均無財務幹部，公開資料亦無任何財務窗口；強烈推論此職能由 CEO 本人兼理） · <strong>CTO——查無姓名</strong>（該職並不存在；公司改以招募直接向 CEO 匯報的 Director of Engineering 取代） · <strong>Director of Engineering——職位存在但從缺</strong>，無在任者、無具名招募主管 · <strong>VP Infrastructure／機房營運主管——集團層級查無姓名</strong>（僅識別出站點層級管理者：Hossain 負責紐約都會區、Sinelnikov 為機房技師團隊主管） · <strong>採購／進貨／供應鏈主管——查無姓名</strong>（公開資料無任何採購職能證據；CEO 自述由他本人直接與硬體製造商往來） · <strong>COO／總經理——查無姓名</strong> · <strong>網路工程主管／NOC 主管——查無姓名</strong>（ARIN OrgTech 與 PeeringDB Policy／NOC 皆僅為角色帳號：support@、peering@、complaints@；Senior Network Engineer 職缺開放中且未補實） · <strong>法務長／法務窗口——查無姓名</strong>（查無任何代理律師；唯一一起聯邦訴訟僅列該 LLC 為當事人，且因從未申請商標，故亦無商標聯絡人） · <strong>董事會／投資人／顧問——並不存在</strong>（單一授權人 LLC、Crunchbase 無募資、零筆 UCC-1 留置權、自述「financially stable and debt-free」——<strong>採購案上頭沒有投資人或貸方的核准關卡</strong>） · <strong>人資／招募主管——查無姓名</strong>（四則職缺全數導向 careers@ 角色信箱） · <strong>業務／業務開發／合作夥伴主管——查無姓名</strong> · <strong>Los Angeles、Amsterdam、Querétaro 三個較新據點的站點主管——三者均查無姓名</strong> · <strong>兄弟品牌（Deploy2K、ADMN、LaunchMC、Presence、System Data Centers）的品牌／產品主管——查無姓名</strong>；全部為 Davydov 所有，且他是唯一 CEO · <strong>商標聲明簽署人與聯絡人——並不存在</strong>（已驗證：「ReliableSite」與「Boot Hardware」皆無任何美國商標申請或註冊） · <strong>UCC-1 擔保權人與債務人簽署人——並不存在</strong>（已驗證：六家實體在佛州皆為零筆 UCC 申報） · <strong>CEO 以外的具名授權採購人／PO 簽署人——查無姓名，且登記證據積極顯示此人並不存在。</strong></p>
 <h3>4.5 已實際查詢的來源——包含查了但一無所獲者</h3>
@@ -1963,7 +1965,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <hr />
 <h2>5. 據點與機房</h2>
 <p><strong>六個區域，全部租用。他們在別人的大樓裡擁有自己的伺服器與網路——一座資料中心都不擁有。</strong> 以下所有存在的面積與電力數字，<strong>皆為房東的整棟數值</strong>；ReliableSite 自身的 cage／套房面積與合約 kW <strong>在每一個站點都未公開</strong>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>站點</th>
@@ -2016,7 +2018,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>公司機房頁列出 Querétaro 具備「carrier-neutral connectivity, dedicated telecom meet-me rooms, and direct access to PIX México 1 and PIX México 2」；網路頁顯示 QRO 為「Network Test Coming Soon」並列出 IENTC／Wantelco peering，即建置進行中。<strong>這是本帳戶最可能的近期新硬體採購觸發點</strong>（<a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/data-center/queretaro-mexico.aspx">Querétaro 頁</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>規模：</strong> 伺服器數、節點數、機櫃數<strong>皆未公開</strong>——公司與任何第三方都沒有。最佳代理值為 AS23470 的 <strong>約 50,944 個宣告 IPv4 位址</strong>（分布於 199 個 originated IPv4 前綴）。依裸機業界常見的位址配置慣例，可推得機隊規模可能落在六個區域合計「低至中千台」，但<strong>這是推論，不是已公布數字——不得引為事實</strong>。首通電話直接問。</p>
 <hr />
 <h2>6. 硬體機隊</h2>
@@ -2080,7 +2082,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <li><strong><span class="gap">GAP</span>——無擔保權人索引。</strong> 佛州 FSTR 完全未提供以擔保權人（secured party）為索引的查詢。因此在此入口網站上，不論付多少費用，都無法以出資方名稱反查，也就無法藉此蒐集「本產業區隔由哪些融資方承作」的競爭情報。</li>
 </ul>
 <h3>8.2 查詢紀錄——逐次記錄，未合併任何一筆</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>入口網站</th>
@@ -2239,10 +2241,10 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>認證查詢費用無法由入口 API 取得。正式認證查詢的具名替代路徑：Image API, LLC, UCC Filings, P.O. Box 5588, Tallahassee, FL 32314, tel 850.222.8526（依 <a target="_blank" rel="noopener noreferrer" href="https://dos.fl.gov/">dos.fl.gov</a>，自 2001-10-01 起受託民營化營運佛州 UCC 申報流程）。費用未經查證——已列為 <span class="gap">GAP</span>。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.3 全部備案明細</h3>
 <p><strong>以下沒有任何備案區塊，而這個「沒有」本身就是發現，不是遺漏。</strong> 為使空結果的形貌明確且可稽核，此處逐欄列出備案區塊本應載明的每一個欄位：</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>備案區塊本應載明的欄位</th>
@@ -2283,9 +2285,9 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>不存在紀錄頁面。查詢可於 <a target="_blank" rel="noopener noreferrer" href="https://publicsearchapi.floridaucc.com/search?text=RELIABLESITE.NET%20LLC&amp;searchOptionType=OrganizationDebtorName&amp;searchOptionSubOption=FiledAndLapsedActualDebtorNameList">publicsearchapi.floridaucc.com/search</a> 重現；入口前端見 <a target="_blank" rel="noopener noreferrer" href="https://floridaucc.com/">floridaucc.com</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>8.4 這份紀錄代表什麼</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>觀察</th>
@@ -2332,12 +2334,12 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>若要知道可比的佛州主機商使用哪一家出租人，必須針對同業清單逐一執行具名債務人查詢。此端點每次查詢成本為 $0.00，而且值得在<strong>提出融資夥伴之前</strong>先做，好讓你引介的對象是這個區隔已經認得的名字。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. 採購時鐘</h2>
 <h3>9.1 型錄快照時間軸</h3>
 <p>以 Wayback Machine 對 <a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/dedicated-servers/">reliablesite.net/dedicated-servers/</a> 的十二次擷取為基礎，直接解析該頁自身的結構化標記（<code>data-server-name</code>、<code>data-cores</code>、<code>data-cpu-speed</code>、<code>data-memory</code>、<code>data-price</code>，以及自 2026-06 起的 <code>data-dc-*</code> 供應屬性）。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>快照日期</th>
@@ -2446,10 +2448,10 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/">擷取</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 採購節奏</h3>
 <p><strong>已觀察到的間隔。</strong> 採購事件的定義嚴格限定為：在十二次快照中，新的 CPU 或 GPU 世代首次出現在型錄。符合者共五次。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>事件</th>
@@ -2484,7 +2486,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>EPYC 4005 Zen 5（EPYC 4545P），原廠於 2025 年 8 月宣布</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>連續事件間隔（月）：<strong>E1→E2 = 9.5 · E2→E3 = 7.0 · E3→E4 = 5.8 · E4→E5 = 3.9</strong>（若 E5 以 2025 年 8 月的宣布日而非型錄目擊日計算，則為 2.1）。<strong>此數列單調遞減——直到最後一次事件為止，換代時鐘都在穩定加速。</strong></p>
 <p><strong>中位數月數。</strong> <strong>6.4 個月</strong>（9.5、7.0、5.8、3.9 之中位數）。平均 6.6 個月。若採用宣布日修正後的 E5，中位數為 6.4、平均降為 6.1。<strong>可視為約 6 個月的節奏，並在 2025 年全年持續收緊。</strong></p>
 <p><strong>最近一次採購事件。</strong> <strong>AMD EPYC 4545P</strong>（EPYC 4005 系列, Zen 5, 16C/32T, 65W TDP, AM5 腳位）。ReliableSite 自家新聞室於 <strong>2025 年 8 月</strong>宣布進駐紐約、邁阿密與洛杉磯；型錄首次目擊為 <strong>2025-10-08</strong> 快照，128GB DDR5 + 2TB NVMe 每月 $149、256GB DDR5 + 4TB NVMe 每月 $199。截至今日 <strong>2026-08-10</strong>，距宣布已 <strong>12 個月、距型錄首見已 10.1 個月，對比 6.4 個月的中位數</strong>——約為歷史間隔的 <strong>1.6 至 1.9 倍</strong>，且連續四次快照（2025-11、2026-03、2026-06、2026-08）皆無新矽晶。<strong>這是觀察窗中最長的一次矽晶空窗，且差距甚大</strong>（<a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/">新聞室貼文</a>）。</p>
@@ -2497,7 +2499,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 - 以直接 HTTP 客戶端擷取線上專用伺服器頁面遭阻擋（回應僅 5,639 bytes），因此「今日」讀數取自 2026-08-07 的 Wayback 擷取，並與一次成功的代理抓取交叉核對。兩者在最新矽晶與價格上緣一致，但線上 SKU 計數為 22 種組態、封存擷取為 20 種——<strong>此微小落差與三天的庫存變動一致。</strong>
 - <strong>伺服器總數、機櫃數、機箱數與已裝機規模皆未對外揭露。</strong> 型錄供應數字只顯示各據點各 SKU 的當前未售庫存（通常 1–5 台），完全無法推知裝機基數。<strong>任何關於他們運行多少台伺服器的說法，都不受本研究支持。</strong></p>
 <h3>9.3 擴張訊號</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>訊號</th>
@@ -2637,7 +2639,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.reliablesite.net/hosting-news/offering-amd-epyc-4545p-dedicated-servers/">新聞室</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span>——達拉斯尚無任何價格或 SKU 廣度資料。</strong> 在 2026-07-30 與 2026-08-07 的擷取中，DFW 僅以單一 SKU（Ryzen 9950X 256GB）的供應屬性出現，Querétaro 仍為預訂狀態。<strong>兩個據點建置訂單的規模與時點均為未知。</strong></p>
 <hr />
 <h2>10. 成本天花板</h2>
@@ -2646,7 +2648,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <blockquote>
 <p><strong>以下每一項營運成本數字都是產業常規「假設」，不是關於 ReliableSite 的查證事實。</strong> 任何一項都不是來自該公司。它是針對一家 1–5 Tbps 規模、具自有人力的自營裸機主機商所設定的可辯護區間，<strong>在任何面向客戶的使用場合都必須重申其為假設。</strong></p>
 </blockquote>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>假設項目</th>
@@ -2693,11 +2695,11 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>假設，由上列四項假設推導而得。</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>刻意排除的項目，以及其偏誤方向。</strong> 出租率假設為 <strong>100%</strong>；現實 70–85% 的使用率會使每一個天花板下修 15–30%，而線上頁面多數 SKU 只剩單台庫存，顯示他們確實跑得很緊。資金成本、IP 位址租賃成本（考量其宣告空間多為租賃，此項並不小）、上架工時與 RMA 備品全數排除。<strong>因此本節公布的每一個天花板都是樂觀上限。若某個 SKU 在這樣的天花板下已經無法涵蓋其 BOM，在現實中只會更差。</strong></p>
 <p><strong>在任何合理假設組合下都成立的那一項發現。</strong> 每月 $49 的 Intel Special，相對 $42 的營運成本假設約產生 <strong>每月 $7 的邊際貢獻</strong>，換算 <strong>12 個月天花板 $84</strong>、<strong>24 個月天花板 $168</strong>。這個金額買不到任何新硬體。他們價格帶最底層只有在完全折舊完畢的機器上才成立——而這正是他們自家清倉頁面所寫的：銷售先前已部署過、採用 SuperMicro 機殼、預期壽命 5 年以上的伺服器。<strong>該層級在新硬體銷售上結構性地無法承接，無論假設怎麼調，往那裡提案都會敗在算術上。</strong></p>
 <h3>10.2 由租金推導的成本天花板</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -2782,9 +2784,9 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><a target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20260807123507/https://www.reliablesite.net/dedicated-servers/">2026-08-07 型錄</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.3 街頭價物料清單（BOM）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -2901,7 +2903,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.supermicro.com/en/products/chassis">Supermicro 機殼產品線</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>10.4 彙總——街頭組裝成本對比租金推導天花板</h3>
 <p><strong>組態 A——AMD EPYC 4545P、128GB DDR5、2TB NVMe，售價每月 $199。</strong>
 街頭價組裝：CPU $592.99 + AS-1015A-MT 準系統 $1,046.00 + 4×32GB ECC UDIMM $861.36 + 2TB NVMe $385.00 = <strong>$2,885.35</strong>。
@@ -2973,7 +2975,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <hr />
 <h2>13. 公開聯絡管道</h2>
 <p><strong>僅限公開來源。本表不列任何個人行動電話與私人住址，研究過程亦未蒐集。若無已公布之管道，該列標記為 <span class="gap">GAP</span>。</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -3048,7 +3050,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro 銷售切入點</h2>
 <h3>分類：<strong>已確認既有客戶——但實際上是「機殼已流失、板級仍開放」的防守戰，外加 GPU 全新開發。</strong></h3>
@@ -3073,7 +3075,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <hr />
 <h2>15. 查證附錄</h2>
 <h3>15.1 單一來源支撐的說法——引用前須再驗證</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>說法</th>
@@ -3118,10 +3120,10 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><strong>業者自行發布，未經獨立查證。Scirra 的規格年代顯示為舊案例</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 第三方估計互相矛盾之處——並列呈現，刻意不擇一</h3>
 <p><strong>營收</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3146,10 +3148,10 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td>私人 LLC、無 SEC 申報、無自行公布之財務資料</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>評註（並列呈現而非裁定）：</strong> $1.2M 這個數字與 <strong>可觀測的基礎設施明顯不一致</strong>——約 50,944 個 IPv4 位址、五個 IXP 據點各 100G 埠、自報 1–5 Tbps 流量、六個租用機房區域與 11–50 名員工。光是機房費加 transit 加薪資，很可能就超過 $1.2M。<strong>兩個估計皆予呈現、皆不採用，也不以任何自行推算的數字取代。</strong> 本檔所有營收數字均視為低可信度第三方模型。</p>
 <p><strong>員工數</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3164,9 +3166,9 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><strong>單一來源。本業者未找到任何相競的第三方數字，因此沒有可並列的分歧——但同時也沒有任何佐證。</strong> 確切員工數＝<span class="gap">GAP</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>成立年份</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3187,7 +3189,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <td><strong>2018-08-10</strong>（AS23470 註冊）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>正確表述：「品牌／營運自 2006、法人自 2014、自有 ASN 自 2018」。不要講「20 年公司歷史」。</strong></p>
 <p><strong>設施面積與電力</strong></p>
 <p>第 5 節中所有已公布的面積／電力數字，<strong>全部是房東的整棟數值</strong>（QTS：360,000 sq ft／約 176,000 sq ft raised floor／約 52–65 MW；CoreSite MI1：約 43,000+ sq ft）。<strong>ReliableSite 自身的房客配額在任何一個站點都未公開。房東數字與房客數字永遠不得當作同一種量測併用。</strong></p>
@@ -3213,7 +3215,7 @@ Against the ceilings: <strong>12-month $7,488 — CLEARS with roughly $2,228 of 
 <li><strong>本次研究遭遇的 HTTP 阻擋來源：</strong> Web Hosting Talk（403）、datacentermap（429）、datacenters.com（403）、ZoomInfo（403）、Crunchbase（403）。凡依賴上述來源之發現，本檔皆已標記為社群來源、次級擷取或第三方估計。</li>
 <li><strong>ReliableSite 的 Facebook 頁面內文無法直接抓取</strong>；「from tray to rack」的標題僅由搜尋索引取得。</li>
 <li><strong>政治紀錄一致原則：</strong> 本檔所有政治資料僅取自公開紀錄，且逐條標記為 <code>public-record</code>、<code>no-findings</code>、<code>gap</code> 或 <code>unverified</code>。不作推論、不以姓氏單獨歸屬、不以相近姓名替代。</li>
-</ul></div></section>
+</ul></section>
 </main>
 </div>
 <footer>UNCLASSIFIED // FOR INTERNAL SUPERMICRO SALES USE ONLY &nbsp;·&nbsp; Every figure carries an inline source and date. GAP marks honestly-missing evidence. Assumptions are labelled as assumptions. Not investment advice.</footer>

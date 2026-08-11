@@ -46,6 +46,8 @@ nav.toc a.cur{color:var(--accent);font-weight:600;border-left-color:var(--accent
 .lang th{border-bottom:1px solid var(--line);padding:7px 10px;vertical-align:top;text-align:left}
 .lang tbody tr:hover td{background:#f7f9fc}
 .lang td a{word-break:break-word}
+main{min-width:0;max-width:100%}
+.lang td,.lang th,.lang p,.lang li{overflow-wrap:anywhere}
 .gap{color:var(--red);font-weight:700;font-size:.95em}
 footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospace,monospace;color:var(--grey);padding:20px;letter-spacing:.06em;line-height:1.9}
 @media(max-width:1000px){.wrap{grid-template-columns:1fr;gap:0;padding:16px}nav.toc{display:none}header.mast{position:static}}
@@ -64,7 +66,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <div class="wrap">
 <nav class="toc" id="toc"></nav>
 <main>
-<section class="lang" id="en"><div class="tablewrap"><h1>Psychz Networks (Profuse Solutions, Inc.) — Sales Intelligence Dossier</h1>
+<section class="lang" id="en"><h1>Psychz Networks (Profuse Solutions, Inc.) — Sales Intelligence Dossier</h1>
 <p><strong>Prepared for:</strong> Supermicro Sales Team 1 (USA) · Officer US8664 Tuo Cheng · <strong>Date:</strong> 2026-08-04
 <strong>Method:</strong> Researched through corporate history, financial and registry records, U.S. political leanings, legislative and policy positions, and the company's relationships with its customers. This is a privately held company with no SEC filings — evidence comes from state business registries, ARIN/PeeringDB, the provider's own published server specifications and pricing, job postings, community forums, and FEC records. Every fact carries its source + date inline. <span class="gap">GAP</span> = not found in verified material. No fabrication.
 <strong>Territory:</strong> Los Angeles, California — West Coast South California = <strong>T1</strong> | T2. Team 1 can register directly.
@@ -74,7 +76,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>Psychz Networks is the operating brand of <strong>Profuse Solutions, Inc.</strong>, a founder-controlled California corporation that runs a self-operated ~15,000 sq ft Los Angeles datacenter at 700 Wilshire Blvd plus leased space across 16–17 interconnection facilities worldwide, selling bare-metal dedicated servers, colocation, DDoS mitigation, IP transit, CDN and — newly — quote-only NVIDIA GPU servers on <strong>AS40676</strong>. The commercial verdict is <strong>incumbent defence + refresh + GPU line extension</strong>: Supermicro is a strong circumstantial read on the existing fleet, their own reference architecture shows a live 3rd/4th/5th Gen Xeon Scalable refresh cycle underway, and they are marketing H100/H200/B200/B300 capacity with <strong>no configurator, no published price and no named platform vendor</strong> — the signature of a provider sourcing GPU nodes deal-by-deal rather than off a standing supply agreement. The single strongest piece of evidence is that Psychz <strong>authors and hosts Supermicro-specific BMC documentation on its own support domain</strong> (<a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/client/question/en/access-supermicro-ipmi-remote-console.html">Access Supermicro IPMI Remote Console</a>, plus a Supermicro IPMI default-password article), while a site-restricted search of psychz.net returns <strong>no Dell iDRAC and no HPE iLO equivalents</strong> — and their live inventory carries a <strong>Core i7-7700K server SKU that Dell and HPE do not manufacture</strong>. The one thing that could kill the deal is the <strong>channel</strong>: this is a sizeable multi-site fleet that has never once appeared in the CRM, which points at purchase through distribution — under Rule 8 a distributor may cross territory boundaries but needs advance approval and a do-not-call flag, so calling before the channel is checked, or opening with "we know you run Supermicro" (which is inference, not disclosure), burns credibility on the first call.</p>
 <hr />
 <h2>2. Snapshot</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -127,11 +129,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Los Angeles, CA → <strong>West Coast South California = T1 | T2</strong>. Team 1's own territory — can register directly; align with T2 before registering to avoid a duplicate</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. Corrections to the working list</h2>
 <p>Every row below is a working-list statement that this research <strong>overturned or could not confirm</strong>. Read this before the first call so you do not open on a wrong premise.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -166,14 +168,14 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Across the six-provider sweep this dossier belongs to, Supermicro was <strong>confirmed at only two providers</strong>, <strong>strong-circumstantial at one — Psychz</strong> — inferred-signal at one, unproven at one, and <strong>contradicted at one (Lenovo)</strong>. Opening a Psychz call with "we know you're running Supermicro" asserts as fact something the research graded circumstantial. <strong>Convert it into a question instead</strong> (see §14)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Leadership &amp; ownership</h2>
 <p><strong>Ownership structure.</strong> Psychz Networks is the operating brand of <strong>Profuse Solutions, Inc.</strong> — California entity <strong>No. 3470432</strong> (General Corporation, incorporated <strong>2012-04-23</strong>, status Active, stated purpose "IT Network Services"), HQ <strong>611 Wilshire Blvd Ste 300, Los Angeles CA 90017</strong>, registered/principal office <strong>20687-2 Amar Rd #312, Walnut CA 91789</strong> — which is the <em>same</em> address ARIN holds for the <strong>AS40676</strong> org record (OrgId PS-184). The structurally decisive finding: <strong>one man, William H. Lu, appears in the state registry as Chief Executive Officer, Chief Financial Officer, Director AND Agent for Service of Process simultaneously</strong> — four capacities, one person, one address. That is the signature of a closely held owner-operator, and it means there is <strong>no independent finance officer and no separate budget authority to route around</strong>. <strong>No outside investors, PE or VC were found</strong> — no funding rounds, no acquisitions, no institutional holders; Crunchbase and PitchBook profiles exist for both Psychz Networks and Profuse Solutions but disclose <strong>no funding</strong> — a negative result consistent with repeated Inc. 5000 listings (best rank No. 1403 in 2014) for an independent, non-sponsor-backed private company. <strong>Percentage equity ownership is NOT public — <span class="gap">GAP</span>.</strong></p>
 <p><strong>Access caveat, stated up front:</strong> bizfileOnline.sos.ca.gov was <em>reached but blocked</em> by Incapsula on every attempt — the direct API POST and a real browser session both returned block pages (incidents 414000320489645630, 414000320489932269, 902036079574386741). Officer data therefore comes from <strong>republications of the same CA SOS registry record</strong> (<a target="_blank" rel="noopener noreferrer" href="https://www.bizprofile.net/ca/walnut/profuse-solutions-inc">BizProfile, registry data extracted 2025-07-15</a>; <a target="_blank" rel="noopener noreferrer" href="https://www.corporationwiki.com/California/Walnut/william-lu/46948992.aspx">CorporationWiki</a>) rather than the first-party state portal. Re-pull directly from CA SOS before relying on any of it contractually.</p>
 <h3>4.1 Named people</h3>
 <p>Evidence grades: <strong>primary-record</strong> = a government/registry filing or an equivalent filed-under-penalty record; <strong>corroborated</strong> = two or more independent sources agree; <strong>single-source</strong> = one source only, re-verify before quoting.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -322,10 +324,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><code>whois psychz.net</code> (registrar record, 2025-11-15)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Practical note on reachability:</strong> the company publishes <strong>first name + last initial only</strong> for its executive team, so <strong>no individual executive email address is public anywhere</strong>. Only <strong>William H. Lu</strong> and <strong>Renjielyn Gazzingan</strong> have verifiable full names, both via the state registry. The only routes the company publishes at all are functional: <strong>peering@psychz.net, legal@psychz.net, noc@psychz.net, abuse@psychz.net, sales@psychz.net</strong>.</p>
 <h3>4.2 Registry record</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -393,9 +395,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://opengovus.com/los-angeles-business/0002850652-0001-0">OpenGovUS LA business record</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 Buying committee</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -435,7 +437,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Verify rather than assume.</strong> Ask Jimmy Lu directly <strong>who signs hardware POs</strong> and whether purchasing is centralised. If the answer confirms William Lu signs personally, <strong>compress the cycle</strong>: skip formal RFP choreography and expect a fast, relationship-driven, price-sensitive decision typical of an owner-operator rather than a committee process</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 Unfilled roles — every one of these is a <span class="gap">GAP</span></h3>
 <p><strong>CFO as an independent officer</strong> (the title exists but is held by William H. Lu concurrently with CEO and Director; <strong>no separate finance executive, controller or accounting head</strong> could be named anywhere) · <strong>Procurement / purchasing lead</strong> (searched across the website, careers page, LinkedIn, ZoomInfo/LeadIQ, FEC employer data and all registry filings — <strong>no name, and no evidence such a role exists</strong>) · <strong>VP Infrastructure / VP Data Center Operations</strong> (no name, despite ten to sixteen owned and partner facilities) · <strong>CTO / Chief Technology Officer / Chief Network Architect</strong> (<strong>no such title on any roster, current or archived</strong>) · <strong>Director of Network Engineering / Head of Network</strong> (only a truncated "Carlos A., Network Engineer" individual contributor was found) · <strong>Board of directors members</strong> (the company's own history timeline explicitly states "Board of directors was created", but <strong>not one board member is named in any public source</strong>; only William Lu is registered as a Director with the state) · <strong>General Counsel / legal lead</strong> (only the functional route legal@psychz.net; no named attorney) · <strong>Head of Sales / CRO</strong> (only sales@psychz.net and the "Profuse-Jimmy" forum sales persona) · <strong>HR / recruiting lead and named hiring managers</strong> (the careers page delegates entirely to an embedded Indeed widget with no named contact) · <strong>SURNAME of Deepak K.</strong> (General Manager — company publishes the initial only; LeadIQ also masks it) · <strong>SURNAME of Ron K.</strong> (VP of Product) · <strong>SURNAME of George B.</strong> (VP Business Development on the 2023 roster; absent from the current roster, departure unconfirmed) · <strong>SURNAME of "Carlos A."</strong> (truncated by LinkedIn's own privacy setting) · <strong>SURNAME and TITLE of "Jason"</strong>, the on-the-record spokesperson quoted by HostingAdvice in 2018 · <strong>Any named individual in ARIN, PeeringDB or domain WHOIS</strong> — all three registries expose <strong>ONLY role accounts</strong> (NOC, Trust and Safety, "Texas - NOC", "Networks, Psychz"), even though the domain WHOIS is <strong>not</strong> privacy-masked.</p>
 <h3>4.5 Sources worked — what was queried, and what returned nothing</h3>
@@ -445,7 +447,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>Checked and discarded:</strong> a CA SOS filing-image endpoint was fetched, but the PDF returned was an <strong>UNRELATED entity</strong> — a 2024-11-25 Statement of Information for "GovPro Solutions California LLC" (entity 202464713148). Verified by text extraction and <strong>discarded; no Profuse Solutions data was taken from it.</strong> <strong>Not pursued:</strong> Delaware and Nevada corporate registries (all evidence places the operating entity in California — CA entity 3470432, a CA registered agent who is the CEO personally, an LA BTRC, and ARIN/WHOIS at the same Walnut CA address; <strong>recorded as an open, unverified gap rather than a cleared one</strong>) · county property/assessor records for the LA, Walnut and Dallas addresses (<strong>not reached</strong>; note that 611 Wilshire Ste 300 and the Amar Rd suite are near-certainly leased/mailbox suites, so assessor records would likely name a landlord, not a Psychz officer).</p>
 <hr />
 <h2>5. Footprint</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Site</th>
@@ -492,12 +494,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>PeeringDB lists <strong>16 interconnection facilities</strong> for AS40676 across North America, Europe, APAC, Africa and South America; the company's own network page claims <strong>17</strong> major datacenter locations (<a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/net/6747">PeeringDB net/6747</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Facility-count conflict — do not quote the high number.</strong> PeeringDB lists <strong>16</strong>; psychz.net/network.html claims <strong>17</strong>; a fetch of the colocation page surfaced a claim of <strong>"66 data center facilities."</strong> The 66 figure is <strong>almost certainly a partner/reseller footprint count, not Psychz-operated sites — do not quote it as Psychz-operated.</strong></p>
 <hr />
 <h2>6. Hardware fleet</h2>
 <p><strong>Evidence grades used below:</strong> <em>confirmed</em> = first-hand named disclosure by the provider or multiple independent corroborations · <em>circumstantial</em> = provider behaviour points strongly at it but never names it · <em>inferred</em> = derived only from CPU SKUs or chassis form factors · <em>contradicted</em> = evidence runs against the claim · <em><span class="gap">GAP</span></em> = nothing found.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Vendor</th>
@@ -550,7 +552,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.juniper.net/content/dam/www/assets/case-studies/us/en/3520727-en.pdf">Juniper case study PDF</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>What the CPU generations imply about fleet age.</strong> The live inventory spans <strong>Ivy Bridge-era E3-1230 v2 (2012) and E5-2620 v2 (2013) at the bottom, through Skylake/Kaby Lake E3-1230 v5 / E3-1270 v6 and i7-7700K (2015–2017) in the mid-tier, up to Cascade Lake dual Xeon Silver 4214/4216 and dual Xeon Platinum 8270 (2019) at the top</strong> — a <strong>7-to-14-year spread</strong> still on the price list. Above that, the company's own reference architecture already names <strong>3rd/4th/5th Gen Xeon Scalable</strong>, which is not visible in the self-serve inventory. <strong>Read: a long-tail legacy fleet still earning revenue, with a current-generation refresh happening quote-side rather than catalogue-side.</strong> That gap between what is documented as deployed and what is listed for sale is the refresh conversation.</p>
 <p><strong>Scale — no fleet size is published.</strong> Server count, rack count and cabinet count are <strong><span class="gap">GAP</span></strong> at every site. The only quantitative proxies are the <strong>15,000 sq ft LA gross whitespace</strong>, <strong>16–17 facilities</strong>, colocation cabinets sold at <strong>1.92–4.99 kW licensed (up to 10 kW supported)</strong>, and <strong>188,928–283,904 announced IPv4 addresses (source-dependent)</strong>. For a bare-metal host with /29–/28 per-server allocations that implies a fleet plausibly in the thousands of physical servers — <strong>INFERENCE ONLY, do not quote as fact.</strong> Two supply-constraint signals worth a hardware seller's attention: live inventory pages show <strong>many SKUs marked out of stock with waiting lists</strong>, and a customer publicly reported a <strong>3-week provisioning delay attributed to being "out of hard drives"</strong> (<em>community-sourced, unverified</em>).</p>
 <hr />
@@ -575,7 +577,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>Read that verdict literally. It does <strong>not</strong> mean "no liens," it does <strong>not</strong> mean "clean," and it does <strong>not</strong> mean "searched and nothing found." Eight distinct query routes into the California UCC record were attempted and every one terminated in a bot-mitigation interstitial, an HTTP 403, an HTTP 401, or an empty single-page-application shell. <strong>At no point did the portal return a result grid, a result count, or a "no records found" confirmation</strong> for either <strong>PROFUSE SOLUTIONS, INC.</strong> or <strong>PSYCHZ NETWORKS</strong>. The financing position of this debtor is genuinely unknown. Writing "no liens" into CRM or a deal memo on the strength of this section would be a fabrication.</p>
 <p><strong>The controlling debtor string is <code>PROFUSE SOLUTIONS, INC.</code></strong> — "Psychz Networks" is a trade name, not the debtor. Under UCC Article 9-503 a financing statement is sufficient only if it names the debtor's exact organic legal name as shown on its public organic record, so any search <em>or filing</em> keyed to the brand is non-conforming: it will miss existing filings, and if we file that way it will fail to perfect our own security interest. Entity anchors for whoever runs the search: legal entity <strong>PROFUSE SOLUTIONS, INC.</strong> (California) · <strong>AS40676</strong> · <a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net">psychz.net</a> · LA HQ <strong>611 Wilshire Blvd Suite #300, Los Angeles, CA 90017-2911</strong> · LA business tax registration <strong>0002850652-0001-0</strong> · NAICS <strong>518210</strong> · known alternate/fictitious names <strong>Psychz Networks, GigePipe, PhotonVPS, YardVPS, ChimeHost</strong>.</p>
 <h3>8.1 Search log — every attempt logged separately, none merged</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -652,7 +654,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>Re-run the portal search in an interactive session</strong> where per-action browser approval can be granted, or use the mailed UCC-11 / paid bureau routes above</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Process note.</strong> The shared browser environment contained pre-existing tabs from other sessions (a Washington State DOL UCC search showing an unrelated debtor, plus Florida UCC and California bizfile tabs). <strong>None of that content was used as evidence for this dossier.</strong> Only the tab opened for this research was addressed, and it was blocked by the approval gate.</p>
 <h3>8.2 Filings on record — every filing, in full</h3>
 <p><strong>FILINGS RETRIEVED: NONE. The filing list for this debtor is EMPTY — and it is empty because the portal was unreachable, not because a search returned zero.</strong> There is therefore no filing block to present. Set out explicitly, so that no reader mistakes a blank for a finding, every field a filing block would carry is a <strong><span class="gap">GAP</span></strong>:</p>
@@ -671,7 +673,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </blockquote>
 <p><strong>How to close this gap.</strong> Order a <strong>UCC-11 Information Request</strong> from the California Secretary of State on debtor string <strong><code>PROFUSE SOLUTIONS, INC.</code></strong> by mail (copy fees <strong>$1.00 first page + $0.50 per page thereafter</strong>, certified copies <strong>$5.00 per document</strong>, the <strong>$6.00</strong> counter fee <strong>waived on mail requests</strong>, pre-approval above <strong>$50.00</strong>, enclose a check marked <strong>"not to exceed $35"</strong> — <a target="_blank" rel="noopener noreferrer" href="https://bpd.cdn.sos.ca.gov/ucc/ucc-fee-schedule.pdf">fee schedule</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.sos.ca.gov/business-programs/ucc/information-request">request instructions</a>), <strong>or</strong> push it through the credit team's bureau account (<a target="_blank" rel="noopener noreferrer" href="https://www.ficoso.com">First Corporate Solutions</a>, CSC Global, Wolters Kluwer Lien Solutions, <a target="_blank" rel="noopener noreferrer" href="https://www.sosccs.com">SOS Corporate &amp; Court Services</a>). <strong>Budget 5–10 business days.</strong> Ask specifically for attention to filings between <strong>2023-06 and 2023-12</strong> (reason in 8.3, row 3).</p>
 <h3>8.3 What the record means</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Observation</th>
@@ -730,7 +732,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>When the UCC-11 comes back, <strong>read lapse/continuation FIRST, before reading collateral</strong>. If everything has lapsed or terminated, they are borrowable and a financed GPU deal is viable. If anything is continued, assume constrained capital and pivot to a <strong>deposit-plus-staged-delivery structure that needs no new lien</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Open GAPs in this section</strong></p>
 <ul>
 <li><strong>BLOCKING:</strong> no UCC record obtained at all. <code>ucc_filings[]</code> is <strong>empty because the portal was unreachable</strong>, not because a search returned zero. No filing number, secured party, collateral description, filing date or continuation status exists in this dossier for this debtor.</li>
@@ -741,7 +743,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <h2>9. Purchase clock</h2>
 <h3>9.1 Snapshot timeline</h3>
 <p><strong>Method limitation, stated up front rather than buried.</strong> The instructed method — pull roughly three catalogue snapshots per year across 2023–2026 and diff them for SKU count, newest silicon, and appeared/disappeared parts — <strong>could not be executed.</strong> <code>web.archive.org</code> is hard-blocked at the fetch layer in this environment; <code>archive.ph</code> is likewise hard-blocked; <code>timetravel.mementoweb.org</code> does not resolve (ENOTFOUND); the CDX index API returned HTTP 404 via the archive.org host and is blocked via web.archive.org; and the browser pane returned "This site requires per-action approval" in a non-interactive session. <strong>Only snapshot EXISTENCE and DATES were obtainable, via the archive.org availability API. No historical snapshot CONTENT was ever read.</strong> Everything in the "SKU count" and "newest silicon" columns below is therefore <strong>NOT RETRIEVED</strong> except for the live row, which was read directly today.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Snapshot date</th>
@@ -802,7 +804,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/catalog/plans">catalogue plans</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/order/dedicated-server">dedicated-server order page</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/catalog/plan/508.json">plan 508 JSON</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 Cadence</h3>
 <p><strong>Observed intervals — two independent series, neither derived from catalogue snapshot diffing (which was blocked).</strong></p>
 <ul>
@@ -819,7 +821,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>Basis.</strong> Live catalogue enumeration (138 plans, max ID 508, all prices and stock flags directly read on 2026-08-10); live GPU page content; <strong>ARIN RDAP registration dates</strong> for all seven org allocations; <strong>PeeringDB netfac created-dates</strong> for all fifteen facilities; <strong>archive.org availability-API snapshot existence probes</strong>. <strong>NOT</strong> based on Wayback snapshot content diffing, which was impossible — web.archive.org, archive.ph and timetravel.mementoweb.org were all unreachable from this environment, and the browser pane required per-action approval unavailable in a non-interactive session.</p>
 <p><strong>Confidence. LOW-TO-MEDIUM on the dated cadence itself</strong>, because the instructed method — defining a purchase event as a new CPU/GPU generation first appearing in a catalogue snapshot, then measuring the intervals — could not be executed without snapshot content. Silicon launch years are a <strong>lagging and imprecise proxy</strong> for acquisition dates, since used-market buyers acquire parts years after launch, <strong>and this operator demonstrably buys used</strong>. <strong>MEDIUM-HIGH, by contrast, on the two structural conclusions that actually drive the sales motion and that do not depend on the blocked data:</strong> that <strong>no new CPU generation has entered the self-serve catalogue since 2019</strong>, and that <strong>GPU is procured build-to-order rather than stocked</strong>.</p>
 <h3>9.3 Expansion signals</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Signal</th>
@@ -879,7 +881,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://lowendtalk.com/discussion/214435/looking-for-dedicated-server">lowendtalk.com discussion 214435</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Open GAPs in this section</strong></p>
 <ul>
 <li><strong>BLOCKING:</strong> Wayback snapshot <strong>content</strong> could not be retrieved for any date — web.archive.org and archive.ph hard-blocked, timetravel.mementoweb.org unresolvable, CDX index API HTTP 404, browser pane gated on per-action approval. <strong>The instructed method (≈3 snapshots/year 2023–2026, each with SKU count, newest silicon, and appeared/disappeared diffs) could not be executed.</strong> Only snapshot existence and dates were obtainable.</li>
@@ -901,7 +903,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>HOW TO READ THOSE ANCHORS.</strong> They are <strong>RETAIL colocation prices</strong> — what Psychz <em>charges</em> a colocation customer — and therefore <strong>already contain Psychz's own margin. They are an upper bound on internal cost, not internal cost.</strong> Applied naively they would overstate opex badly: a 400 W dedicated server allocated at retail would absorb <strong>~$58/mo of power plus ~$4.50/mo of rack space</strong>, which against the <strong>$48/mo E3-1230 v2 SKU</strong> would imply <strong>negative margin</strong>. Since that SKU is demonstrably still sold, internal cost must sit <strong>materially below retail</strong>, and bandwidth must be <strong>heavily oversubscribed</strong> rather than provisioned at the $225/mo unmetered rate. <strong>ASSUMPTION: internal cost runs at roughly 40–60% of these published retail rates</strong> — this is what pins the deduction band to 35–55% rather than something higher.</li>
 <li><strong>FURTHER ASSUMPTIONS, all labelled as such, none researched.</strong> <strong>(1)</strong> The <strong>12 / 18 / 24-month payback horizons are test points, not observed company policy</strong> — no evidence was found of what payback period this operator actually targets, and their willingness to run 2010–2012 silicon suggests their real horizon is <strong>far longer than 24 months</strong>, which would raise every ceiling substantially. <strong>(2)</strong> Ceilings are computed on the <strong>RENEWAL price, not the discounted first-term promotional price</strong>; several SKUs carry heavy first-term discounts (E3-1230 v2 at $9.60 then $48.00; E5-1650 v3 at $92.40 then $462.00), so blended first-year revenue and therefore the true 12-month ceiling is <strong>LOWER</strong> than shown for those SKUs. <strong>(3)</strong> <strong>100% utilisation is assumed</strong> — no vacancy discount beyond what is embedded in the opex band. <strong>(4)</strong> <strong>No allowance is made for the cost of IPv4 addresses</strong> assigned to each server, despite the 2023 /16 acquisition representing real deployed capital. <strong>(5)</strong> Ceilings are <strong>hardware-only</strong> and exclude sales, billing, licensing and G&amp;A.</li>
 </ul>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -996,10 +998,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/catalog/plan/508.json">plan 508 JSON</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>What the ceilings mean in practice.</strong> Even at the conservative <strong>24-month, 45%-deduction</strong> setting, the top catalogue SKU (<strong>Dual Platinum 8270, $1,159/mo</strong>) supports only about <strong>$15,300 of hardware cost</strong>. That is <strong>roughly half the price of a SINGLE H100 80GB SXM GPU</strong> at 2026 street pricing. <strong>The entire priced CPU catalogue, top to bottom, is economically incapable of funding GPU hardware.</strong> This is the arithmetic reason the GPU line is quote-only and build-to-order rather than stocked, and it is the arithmetic reason <strong>any GPU deal with this account is a financing conversation before it is a product conversation.</strong></p>
 <h3>10.2 Bill of materials, and the roll-up</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -1116,7 +1118,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>NOT SOURCED</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Roll-up — assembled cost versus rent-derived ceiling.</strong> Priced lines only; unpriced lines are noted, so <strong>every figure below is an UNDERSTATEMENT of true build cost.</strong></p>
 <ul>
 <li><strong>Dual Silver 4214 — $298.00/mo.</strong> Priced lines: 2 × Silver 4214 at $15–$44.85 = <strong>$30–$90</strong>; 128 GB DDR4 ECC RDIMM at $198/module = <strong>$792</strong> (or ~$600 refurbished); 2U barebone chassis/PSU <strong>~$150</strong>. <strong>Priced subtotal ≈ $780–$1,032.</strong> Unpriced: 1 TB HDD, NIC. <strong>Realistic all-in ≈ $850–$1,150.</strong> Against ceilings of <strong>$1,967 (12 mo), $2,950 (18 mo), $3,934 (24 mo)</strong>, the assembled box costs roughly <strong>43–53% of the 12-month ceiling and only 22–27% of the 24-month ceiling. Payback on parts alone at a 55% contribution margin: approximately 5.2–7.0 months.</strong></li>
@@ -1144,7 +1146,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>11. Customers &amp; network</h2>
 <h3>Named customers</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Customer</th>
@@ -1184,7 +1186,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>Landlord-published (<a target="_blank" rel="noopener noreferrer" href="https://www.coresite.com/marketplace/psychz-networks">CoreSite Marketplace</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Segments Psychz markets to:</strong> hosting providers / resellers (dedicated hosting-provider landing page), gaming and game-server operators (multiple game-server setup KB articles — Unturned, Conan Exiles, etc.), CDN / media delivery, and AI/LLM GPU tenants.</p>
 <h3>Network</h3>
 <ul>
@@ -1200,7 +1202,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>12. Political &amp; public record</h2>
 <p>Public records only, each tagged. Nothing here is material to the sale — it is included because the research brief requires the political and public-record axis to be covered explicitly rather than skipped.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Person / entity</th>
@@ -1230,12 +1232,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>public-record | unverified award history | gap</strong> (<a target="_blank" rel="noopener noreferrer" href="https://govtribe.com/vendors/profuse-solutions-inc-dot-psychz-networks-7vvq0">GovTribe</a>)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Plainly stated:</strong> there is <strong>no meaningful political footprint</strong> for this company or its owner in the public record. The only two contributions found total <strong>$3.70</strong>, both from employees rather than the owner, and they point in opposite partisan directions. <strong>No legislative or policy position, no lobbying, no PAC.</strong> Do not build any call framing on political alignment here — there is nothing to build on.</p>
 <hr />
 <h2>13. Public contact channels</h2>
 <p><strong>All entries below are public-source only.</strong> No personal mobile numbers and no private residential addresses are included — none were sought and none should be. Where no published channel exists, the row says <strong><span class="gap">GAP</span></strong>.</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Channel</th>
@@ -1320,7 +1322,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro sales angle</h2>
 <h3>Classification: <strong>high-probability existing / quasi-existing account → incumbent defence + generational refresh + GPU line extension</strong></h3>
@@ -1355,7 +1357,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>15. Verification appendix</h2>
 <h3>15.1 Claims resting on a single source — re-verify before quoting</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Claim</th>
@@ -1390,10 +1392,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>bizfileonline.sos.ca.gov returned HTTP 403 to automated fetch. This is a registry mirror, not the first-party SOS page — re-pull directly from CA SOS before relying on it contractually</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 Conflicting third-party estimates — shown side by side, deliberately not resolved</h3>
 <p><strong>Headcount</strong> <em>(all third-party estimates; none authoritative)</em></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1423,10 +1425,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>current</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Spread ≈ 25×. Not resolved.</strong> The company publishes only 4 named executives (first name + last initial) and states it has a "highly experienced management and technical team with over 20 years of industry expertise." Community reporting (LowEndTalk, unverified) that support is outsourced to India would explain a low US headcount. <strong>No careers page or job postings were found</strong>, so there is no recruiting-derived cross-check.</p>
 <p><strong>Revenue</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1443,10 +1445,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>#3413 (2018) · #3869 (2019) · #3499/#3501 (2020) · #2372 (2025), 179% three-year growth</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong><span class="gap">GAP</span> for any absolute revenue figure.</strong> The Inc. 5000 listings independently corroborate a real, growing, revenue-generating private business because eligibility requires verified US revenue and YoY growth — <strong>but this dossier will not state a revenue number that no source published.</strong> <em>Tag: third-party-estimate / public list.</em></p>
 <p><strong>Facility count</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1467,10 +1469,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>66</strong> data center facilities</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Not resolved — but the 66 figure is almost certainly a partner/reseller footprint and must not be quoted as Psychz-operated sites.</strong></p>
 <p><strong>Announced IPv4 address count</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1487,10 +1489,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>517 IPv4 and 124 IPv6 ranges / 283,904 IPv4 addresses / 23 countries / 241 peers / 8 upstreams</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Both shown. Not reconciled.</strong></p>
 <p><strong>Network capacity vs traffic</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1515,10 +1517,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>actual traffic level</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>These are different measures and must not be conflated.</strong></p>
 <p><strong>Founding year</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1543,10 +1545,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>2014</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Unresolved.</strong> Correct framing: brand-founding claim 2001, verified legal-entity date 2012, own-facility operations 2014. <strong>Do not say "25-year-old company" as a fact.</strong></p>
 <p><strong>LA facility area</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>Source</th>
@@ -1566,7 +1568,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>LAX1 building footprint — the envelope, not Psychz whitespace</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Different objects of measurement. Do not conflate.</strong></p>
 <h3>15.3 Open gaps</h3>
 <ul>
@@ -1592,8 +1594,8 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>HTTP blocks encountered:</strong> bizfileonline.sos.ca.gov (403), Crunchbase (403), ZoomInfo (403). Findings depending on these are marked as registry-mirror or third-party-estimate throughout.</li>
 <li><strong>Encoded / redirected primary source:</strong> the Juniper case study HTML 301-redirects to hpe.com and the PDF body text is font-subset encoded, so <strong>every fact drawn from it — customer names, the 25,000 figure, MX960/MX240, "Rack n' Stack" — is secondary-extraction</strong>.</li>
 <li><strong>JavaScript-only interfaces</strong> (fec.gov individual-contribution search, OpenSecrets donor lookup) cannot be queried programmatically; the FEC results here came from the open.fec.gov API by employer name, which is why the <strong>owner-level result is a negative/gap rather than a clean negative</strong>.</li>
-</ul></div></section>
-<section class="lang" id="zh"><div class="tablewrap"><h1>Psychz Networks（Profuse Solutions, Inc.） — 銷售情報檔案</h1>
+</ul></section>
+<section class="lang" id="zh"><h1>Psychz Networks（Profuse Solutions, Inc.） — 銷售情報檔案</h1>
 <p><strong>編製對象：</strong> Supermicro 銷售一組（美國） · 專員 US8664 Tuo Cheng · <strong>日期：</strong> 2026-08-04
 <strong>方法：</strong> 以公司歷史、財務與登記資料、美國政治傾向、法案與政策立場，以及該公司與其客戶之關係為研究軸線。本公司為私有公司、無 SEC 申報，證據來自各州商業登記、ARIN／PeeringDB、業者自行公布之伺服器規格與定價、徵才啟事、社群論壇及 FEC 紀錄。每項事實均隨附來源與日期。<span class="gap">GAP</span> = 查證資料中未找到，不得憑記憶補寫。
 <strong>轄區：</strong> 加州洛杉磯 — West Coast South California = <strong>T1</strong>｜T2。一組可直接註冊。
@@ -1603,7 +1605,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>Psychz Networks 是 <strong>Profuse Solutions, Inc.</strong>（加州法人）的營運品牌，由創辦人掌控，在洛杉磯 700 Wilshire Blvd 經營一座約 15,000 平方英尺的自營資料中心，並在全球 16–17 個互連設施承租空間，以 <strong>AS40676</strong> 販售裸機專用伺服器、colocation、DDoS 防護、IP transit、CDN，以及新近推出、僅接受報價的 NVIDIA GPU 伺服器。商業判定為<strong>既有客戶防守 ＋ 換代 ＋ GPU 產品線延伸</strong>：Supermicro 在其現行機隊上是強旁證，其自家參考架構顯示 3rd／4th／5th Gen Xeon Scalable 的換代週期正在進行，而他們正在行銷 H100／H200／B200／B300 容量，卻<strong>沒有設定器、沒有公開價格、也沒有具名平台廠</strong>——這正是「逐案調貨 GPU 節點、沒有常設供應協議」的樣態。最強的單一證據是：Psychz <strong>在自家支援網域撰寫並託管 Supermicro 專屬的 BMC 文件</strong>（<a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/client/question/en/access-supermicro-ipmi-remote-console.html">Access Supermicro IPMI Remote Console</a>，以及一篇 Supermicro IPMI 預設密碼文章），而站內限定檢索<strong>查無任何 Dell iDRAC 或 HPE iLO 對應文件</strong>——且其線上庫存含有 <strong>Dell 與 HPE 根本不生產的 Core i7-7700K 機種</strong>。最可能讓這筆生意告吹的是<strong>通路問題</strong>：這是一個具相當規模的多站點機隊，卻在 CRM 中一筆紀錄都沒有，合理推論是他們透過經銷通路採購——依 Rule 8，經銷商可以跨越轄區邊界，但必須事先取得核准並掛上 do-not-call 標記，因此在未確認通路前撥打電話，或以「我們知道你們在用 Supermicro」開場（那是推論而非揭露），第一通電話就會失去可信度。</p>
 <hr />
 <h2>2. 公司速覽</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>欄位</th>
@@ -1656,11 +1658,11 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>加州洛杉磯 → <strong>West Coast South California = T1 | T2</strong>。一組自有轄區，可直接註冊；<strong>登錄前先與 T2 對齊，避免撞單</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. 原始名單更正表</h2>
 <p>以下每一列都是原始工作名單中被本次研究<strong>推翻</strong>或<strong>無法證實</strong>的敘述。首次接觸前必須先讀完，避免以錯誤前提開場。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -1695,14 +1697,14 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>在本檔所屬的六家業者實查中，Supermicro <strong>僅在兩家為已確認</strong>、<strong>一家為強旁證（即 Psychz）</strong>、一家僅有推論訊號、一家完全未證實、一家<strong>確認為 Lenovo（反證）</strong>。以「我們知道你們在用 Supermicro」開場，等於把研究等級為旁證的事情講成事實。<strong>請改成問句</strong>（見第 14 節）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. 領導層與所有權</h2>
 <p><strong>所有權結構。</strong> Psychz Networks 是 <strong>Profuse Solutions, Inc.</strong> 的營運品牌——加州法人編號 <strong>3470432</strong>（General Corporation，設立日 <strong>2012-04-23</strong>，狀態 Active，登記營業目的為「IT Network Services」），總部 <strong>611 Wilshire Blvd Ste 300, Los Angeles CA 90017</strong>，登記／主要辦公處 <strong>20687-2 Amar Rd #312, Walnut CA 91789</strong>——此地址與 ARIN 對 <strong>AS40676</strong> 組織紀錄（OrgId <strong>PS-184</strong>）所載完全相同。結構上最關鍵的發現：<strong>同一人 William H. Lu 在州登記中同時擔任 Chief Executive Officer、Chief Financial Officer、Director 與 Agent for Service of Process</strong>——四種身分、一個人、一個地址。這是封閉持股 owner-operator 的典型特徵，意味著<strong>公司內部沒有獨立財務長，也沒有可以繞道的獨立預算核准權</strong>。<strong>查無任何外部投資人、PE 或 VC</strong>——無募資輪次、無併購、無機構持股；Crunchbase 與 PitchBook 對 Psychz Networks 與 Profuse Solutions 皆有檔案但<strong>未揭露任何募資</strong>——此負面結果與其多次入選 Inc. 5000（最佳名次為 2014 年第 1403 名）之獨立、非 sponsor 支持私人公司性質相符。<strong>持股比例非公開＝<span class="gap">GAP</span>。</strong></p>
 <p><strong>取得限制（先行說明）：</strong> bizfileOnline.sos.ca.gov <strong>已觸及但遭封鎖</strong>——直接 API POST 與真實瀏覽器工作階段皆被 Incapsula 擋下（事件編號 414000320489645630、414000320489932269、902036079574386741）。因此幹部資料係取自<strong>同一份加州 SOS 登記紀錄的轉載版本</strong>（<a target="_blank" rel="noopener noreferrer" href="https://www.bizprofile.net/ca/walnut/profuse-solutions-inc">BizProfile，登記資料擷取日 2025-07-15</a>；<a target="_blank" rel="noopener noreferrer" href="https://www.corporationwiki.com/California/Walnut/william-lu/46948992.aspx">CorporationWiki</a>），而非州政府第一手頁面。任何契約性引用前，務必自加州 SOS 直接重新調取。</p>
 <h3>4.1 具名人員</h3>
 <p>證據等級定義：<strong>primary-record（第一手紀錄）</strong>＝政府／登記申報或同等效力之具結文件；<strong>corroborated（互證）</strong>＝兩個以上獨立來源一致；<strong>single-source（單一來源）</strong>＝僅一個來源，引用前須再驗證。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1851,10 +1853,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><code>whois psychz.net</code>（註冊商紀錄，2025-11-15）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>可接觸性實務註記：</strong> 公司僅公布主管的<strong>名＋姓氏首字母</strong>，因此<strong>任何地方都查不到主管的個人 email</strong>。全名可考者僅 <strong>William H. Lu</strong> 與 <strong>Renjielyn Gazzingan</strong>，且兩者皆出自州登記。公司對外公布的管道全屬功能型信箱：<strong>peering@psychz.net、legal@psychz.net、noc@psychz.net、abuse@psychz.net、sales@psychz.net</strong>。</p>
 <h3>4.2 登記紀錄</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1922,9 +1924,9 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://opengovus.com/los-angeles-business/0002850652-0001-0">OpenGovUS 洛杉磯營業登記</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.3 採購決策圈（Buying committee）</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>姓名</th>
@@ -1964,7 +1966,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>要查證，不要假設。</strong> 直接問 Jimmy Lu <strong>誰簽硬體採購單</strong>、採購是否集中。若確認由 William Lu 親自簽署，就<strong>壓縮流程</strong>：略過正式 RFP 的繁文縟節，並預期一個快速、以關係為導向、對價格敏感的 owner-operator 式決策，而非委員會式流程</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>4.4 未能具名的職位——以下每一項皆為 <span class="gap">GAP</span></h3>
 <p><strong>獨立的 CFO</strong>（職稱存在，但由 William H. Lu 與 CEO、Director 併任；<strong>查無任何獨立財務主管、主計或會計主管</strong>）．<strong>採購／購買負責人</strong>（已查遍官網、徵才頁、LinkedIn、ZoomInfo／LeadIQ、FEC 雇主資料與全部登記申報——<strong>查無姓名，亦無證據顯示存在此職位</strong>）．<strong>VP Infrastructure／VP Data Center Operations</strong>（儘管其營運十至十六個自有與夥伴設施，仍查無姓名）．<strong>CTO／技術長／首席網路架構師</strong>（<strong>現行與封存名單皆無此職稱</strong>）．<strong>Director of Network Engineering／網路部門主管</strong>（僅找到姓氏被截斷的個別貢獻者「Carlos A., Network Engineer」）．<strong>董事會成員</strong>（公司自家沿革時間軸明載「Board of directors was created」，但<strong>任何公開來源皆未具名任何一位董事</strong>；州登記中僅 William Lu 一人登記為 Director）．<strong>法務長／法務負責人</strong>（僅有功能型信箱 legal@psychz.net，查無具名律師）．<strong>業務主管／CRO</strong>（僅有 sales@psychz.net 與論壇上的「Profuse-Jimmy」業務人格）．<strong>HR／招募負責人與具名的用人主管</strong>（徵才頁完全委由內嵌的 Indeed widget，無任何具名聯絡人）．<strong>Deepak K.（General Manager）之姓氏</strong>（公司僅公布首字母；LeadIQ 亦同樣遮蔽）．<strong>Ron K.（VP of Product）之姓氏</strong>．<strong>George B.（2023 年名單之 VP Business Development）之姓氏</strong>（現行名單已無此人，離職未經證實）．<strong>「Carlos A.」之姓氏</strong>（遭 LinkedIn 自身隱私設定截斷）．<strong>2018 年 HostingAdvice 具名受訪之「Jason」的姓氏與職稱</strong>．<strong>ARIN、PeeringDB 或網域 WHOIS 中的任何具名自然人</strong>——三個登記機構<strong>一律僅曝露職務帳號</strong>（NOC、Trust and Safety、「Texas - NOC」、「Networks, Psychz」），即便網域 WHOIS <strong>並未</strong>啟用隱私遮蔽亦然。</p>
 <h3>4.5 已查作業來源——查了什麼、什麼是空的</h3>
@@ -1974,7 +1976,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>已查證並剔除：</strong> 曾抓取一份加州 SOS 申報影像端點，但取回的 PDF 屬於<strong>完全無關的法人</strong>——2024-11-25 的「GovPro Solutions California LLC」Statement of Information（法人 202464713148）。經文字擷取確認後<strong>已剔除；未自該檔採用任何 Profuse Solutions 資料。</strong> <strong>未進行者：</strong> 德拉瓦州與內華達州公司登記（所有證據均指向營運主體在加州——加州法人 3470432、由 CEO 本人擔任的加州註冊代理人、洛杉磯市 BTRC，以及位於同一 Walnut CA 地址的 ARIN／WHOIS 紀錄；<strong>列為尚未查證的未結缺口，而非已排除項</strong>）．洛杉磯、Walnut 與達拉斯三處地址的郡級不動產／估價官紀錄（<strong>未查詢</strong>；須注意 611 Wilshire Ste 300 與 Amar Rd 該套房幾可確定是租用／信箱套房，故估價官紀錄查到的很可能是房東，而非 Psychz 的幹部）。</p>
 <hr />
 <h2>5. 據點與機房</h2>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>站點</th>
@@ -2021,12 +2023,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>PeeringDB 為 AS40676 列出 <strong>16 個互連設施</strong>，橫跨北美、歐洲、亞太、非洲與南美；公司自家 network 頁則稱 <strong>17</strong> 個主要資料中心據點（<a target="_blank" rel="noopener noreferrer" href="https://www.peeringdb.com/net/6747">PeeringDB net/6747</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>設施數衝突——不得引用高值。</strong> PeeringDB 列 <strong>16</strong>；psychz.net/network.html 稱 <strong>17</strong>；colocation 頁的一次抓取出現 <strong>「66 data center facilities」</strong>。<strong>66 幾可確定是夥伴／轉售足跡，不得引為 Psychz 自營站點數。</strong></p>
 <hr />
 <h2>6. 硬體機隊</h2>
 <p><strong>以下使用的證據等級：</strong> <em>已確認</em> ＝ 業者第一手具名揭露，或多方獨立佐證 · <em>旁證</em> ＝ 業者行為強烈指向但從未具名 · <em>推論</em> ＝ 僅由 CPU SKU 或機殼形狀推得 · <em>反證</em> ＝ 證據與該說法相反 · <em><span class="gap">GAP</span></em> ＝ 查無。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>供應商</th>
@@ -2079,7 +2081,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.juniper.net/content/dam/www/assets/case-studies/us/en/3520727-en.pdf">Juniper 案例研究 PDF</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>CPU 世代對機隊年齡的意涵。</strong> 線上庫存自最底層的 <strong>Ivy Bridge 世代 E3-1230 v2（2012）與 E5-2620 v2（2013）</strong>，經中段的 <strong>Skylake／Kaby Lake E3-1230 v5、E3-1270 v6 與 i7-7700K（2015–2017）</strong>，到頂層的 <strong>Cascade Lake 雙 Xeon Silver 4214/4216 與雙 Xeon Platinum 8270（2019）</strong>——<strong>價目表上仍掛著 7 至 14 年的世代跨距</strong>。再往上，公司自家參考架構已具名 <strong>3rd／4th／5th Gen Xeon Scalable</strong>，而這些在自助庫存中完全看不到。<strong>判讀：一條仍在賺錢的長尾舊機隊，加上一個發生在報價端、而非型錄端的當世代換機動作。</strong> 已部署文件與上架商品之間的落差，就是換機對話的切入口。</p>
 <p><strong>規模——未公布任何機隊數量。</strong> 各站的伺服器數、機櫃數與機箱數皆為 <strong><span class="gap">GAP</span></strong>。僅有的量化代理值為：<strong>LA 15,000 平方英尺 gross 白空間</strong>、<strong>16–17 個設施</strong>、colocation 機櫃售 <strong>1.92–4.99 kW 授權（可支援至 10 kW）</strong>、以及 <strong>188,928–283,904 個宣告 IPv4 位址（依來源而異）</strong>。對一家以每台 /29–/28 配發的裸機業者而言，這意味著實體伺服器數量合理落在數千台——<strong>純屬推論，不得當作事實引用</strong>。另有兩個對硬體供應商有價值的供給緊縮訊號：線上庫存頁<strong>多個 SKU 標示缺貨並開候補</strong>；曾有客戶公開回報<strong>因「out of hard drives」而延遲 3 週交機</strong>（<em>社群來源、未證實</em>）。</p>
 <hr />
@@ -2104,7 +2106,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p>這句判定請照字面理解。它<strong>不等於</strong>「沒有留置權」，<strong>不等於</strong>「乾淨」，也<strong>不等於</strong>「已查且查無資料」。本次共嘗試八條進入加州 UCC 紀錄的查詢路徑，每一條都終止於 bot 防護攔截頁、HTTP 403、HTTP 401 或空的 single-page-application 殼層。<strong>在任何一次嘗試中，查詢入口都未曾回傳結果清單、結果筆數，或「no records found」的確認</strong>，無論查詢對象是 <strong>PROFUSE SOLUTIONS, INC.</strong> 或 <strong>PSYCHZ NETWORKS</strong>。這家債務人的融資狀態<strong>確實不明</strong>。若依本節內容在 CRM 或任何 deal memo 上寫「無留置權」，那是編造。</p>
 <p><strong>具控制力的債務人字串是 <code>PROFUSE SOLUTIONS, INC.</code></strong>——「Psychz Networks」只是商業名稱（trade name），不是債務人。依 <strong>UCC Article 9-503</strong>，融資聲明必須載明債務人在其公開組織文件上的正式法定名稱才具效力；因此任何以品牌名進行的查詢<strong>或申報</strong>都不符規定：查詢會漏掉既有申報，而我方若以品牌名申報，我方擔保權益將<strong>無法完善（fail to perfect）</strong>。承辦查詢者所需的實體錨點：法人 <strong>PROFUSE SOLUTIONS, INC.</strong>（California）· <strong>AS40676</strong> · <a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net">psychz.net</a> · 洛杉磯總部 <strong>611 Wilshire Blvd Suite #300, Los Angeles, CA 90017-2911</strong> · 洛杉磯市營業稅登記 <strong>0002850652-0001-0</strong> · NAICS <strong>518210</strong> · 已知別名／假名 <strong>Psychz Networks、GigePipe、PhotonVPS、YardVPS、ChimeHost</strong>。</p>
 <h3>8.1 查詢作業日誌——每次嘗試獨立列示，不合併</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>#</th>
@@ -2181,7 +2183,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>改在可逐次授權瀏覽器操作的互動式工作階段中重跑該查詢</strong>，或改用上述郵寄 UCC-11／付費代辦路徑</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>作業說明。</strong> 共用瀏覽器環境中存在其他工作階段遺留的分頁（一個顯示無關債務人的 Washington State DOL UCC 查詢，以及 Florida UCC 與 California bizfile 分頁）。<strong>上述內容一律未被採納為本檔證據。</strong> 本研究僅處理自行開啟的分頁，且該分頁被授權閘門阻擋。</p>
 <h3>8.2 在案申報——逐筆完整列示</h3>
 <p><strong>取得之申報：無。本債務人的申報清單為空——而且是因為查詢入口無法連通而為空，不是因為查詢回傳零筆。</strong> 因此沒有任何申報區塊可供呈現。為避免任何人把空白誤讀為結論，以下明列：申報區塊應載的每一個欄位，目前皆為 <strong><span class="gap">GAP</span></strong>：</p>
@@ -2200,7 +2202,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 </blockquote>
 <p><strong>如何補上這個缺口。</strong> 以債務人字串 <strong><code>PROFUSE SOLUTIONS, INC.</code></strong> 向 California Secretary of State 郵寄申請 <strong>UCC-11 Information Request</strong>（影本費<strong>首頁 $1.00、其後每頁 $0.50</strong>，認證本<strong>每份 $5.00</strong>，<strong>$6.00</strong> 臨櫃費<strong>郵寄免收</strong>，預估逾 <strong>$50.00</strong> 須事先核准，隨函附上註明 <strong>"not to exceed $35"</strong> 的支票——<a target="_blank" rel="noopener noreferrer" href="https://bpd.cdn.sos.ca.gov/ucc/ucc-fee-schedule.pdf">規費表</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.sos.ca.gov/business-programs/ucc/information-request">申請說明</a>），<strong>或</strong>透過信用團隊的代辦帳戶送件（<a target="_blank" rel="noopener noreferrer" href="https://www.ficoso.com">First Corporate Solutions</a>、CSC Global、Wolters Kluwer Lien Solutions、<a target="_blank" rel="noopener noreferrer" href="https://www.sosccs.com">SOS Corporate &amp; Court Services</a>）。<strong>作業時間抓 5–10 個工作天。</strong> 並請特別要求<strong>留意 2023-06 至 2023-12 之間的申報</strong>（理由見 8.3 第 3 列）。</p>
 <h3>8.3 這份紀錄的意義</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>觀察</th>
@@ -2259,7 +2261,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>UCC-11 回來時，<strong>先讀失效／續期，再讀擔保品</strong>。若全部已失效或終止，代表他們可借貸，融資型 GPU 案可行。若有任何一筆續期中，就假設資本受限，改推<strong>不需設定新留置權的「訂金＋分批交付」架構</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>本節未結 <span class="gap">GAP</span></strong></p>
 <ul>
 <li><strong>阻斷性：完全未取得任何 UCC 紀錄。</strong> 申報清單<strong>為空是因為查詢入口無法連通</strong>，不是因為查詢回傳零筆。本檔對該債務人<strong>不存在</strong>任何申報編號、擔保權人、擔保品描述、申報日期或續期狀態。</li>
@@ -2270,7 +2272,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <h2>9. 採購時鐘</h2>
 <h3>9.1 快照時間軸</h3>
 <p><strong>方法限制先講清楚，不藏在後面。</strong> 指定方法——在 2023–2026 年間每年約取三個型錄快照，逐一比對 SKU 數、最新矽片與新增／退場品項——<strong>無法執行。</strong> 本環境在 fetch 層硬性封鎖 <code>web.archive.org</code>；<code>archive.ph</code> 同樣被硬封鎖；<code>timetravel.mementoweb.org</code> 無法解析（ENOTFOUND）；CDX index API 經 archive.org 主機回傳 HTTP 404、經 web.archive.org 則被封鎖；瀏覽器分頁在非互動式工作階段回傳「This site requires per-action approval」。<strong>因此只取得快照的「存在與日期」（透過 archive.org availability API），從未讀到任何歷史快照的內容。</strong> 下表「SKU 數」與「最新矽片」兩欄除即時觀測那一列外，一律為 <strong>NOT RETRIEVED</strong>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>快照日期</th>
@@ -2331,7 +2333,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/catalog/plans">型錄方案頁</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/order/dedicated-server">dedicated-server 下單頁</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/catalog/plan/508.json">plan 508 JSON</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>9.2 採購節奏</h3>
 <p><strong>觀測到的間隔——兩組獨立數列，皆非由型錄快照比對取得（該方法遭封鎖）。</strong></p>
 <ul>
@@ -2348,7 +2350,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <p><strong>依據。</strong> 即時型錄列舉（138 個方案、最高 ID 508、所有價格與供貨旗標於 2026-08-10 直接讀取）；即時 GPU 頁內容；該組織全部七筆配發的 <strong>ARIN RDAP 登記日期</strong>；全部十五個設施的 <strong>PeeringDB netfac 建立日期</strong>；<strong>archive.org availability API 的快照存在性探測</strong>。<strong>並非</strong>基於 Wayback 快照內容比對——該方法不可行，web.archive.org、archive.ph 與 timetravel.mementoweb.org 在本環境皆無法連通，瀏覽器分頁亦需非互動式工作階段無法提供的逐次授權。</p>
 <p><strong>信心度。就「有日期的採購節奏」本身：低至中</strong>，因為指定方法（以「新 CPU/GPU 世代首次出現在型錄快照」定義採購事件並量測間隔）在沒有快照內容的情況下無法執行。以矽片上市年份代替取得日期是<strong>落後且不精確的代理</strong>，二手市場買家往往在上市數年後才取得零件，<strong>而這家業者明顯就是買二手</strong>。<strong>相對地，就真正驅動銷售動線、且不依賴被封鎖資料的兩個結構性結論：中高</strong>——即<strong>自 2019 年起未有新 CPU 世代進入自助型錄</strong>，以及 <strong>GPU 為接單後採購而非備庫存</strong>。</p>
 <h3>9.3 擴張訊號</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>訊號</th>
@@ -2408,7 +2410,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://lowendtalk.com/discussion/214435/looking-for-dedicated-server">lowendtalk.com discussion 214435</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>本節未結 <span class="gap">GAP</span></strong></p>
 <ul>
 <li><strong>阻斷性：任何日期的 Wayback 快照「內容」皆無法取得</strong>——web.archive.org 與 archive.ph 遭硬封鎖、timetravel.mementoweb.org 無法解析、CDX index API HTTP 404、瀏覽器分頁卡在逐次授權。<strong>指定方法（2023–2026 年每年約 3 個快照，各含 SKU 數、最新矽片與新增／退場比對）無法執行。</strong> 僅取得快照的存在與日期。</li>
@@ -2430,7 +2432,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>這些錨點該怎麼讀。</strong> 它們是<strong>零售 colocation 價格</strong>——是 Psychz 向 colocation 客戶<em>收</em>的錢——因此<strong>已內含 Psychz 自己的毛利。它們是內部成本的上界，不是內部成本本身。</strong> 若直接套用會嚴重高估 opex：一台 400 W 的專屬伺服器若以零售價分攤，將吃掉<strong>約 $58/月電力加約 $4.50/月機櫃空間</strong>，對照 <strong>$48/月的 E3-1230 v2 SKU</strong> 就會得出<strong>負毛利</strong>。既然該 SKU 明明還在賣，內部成本必然<strong>顯著低於零售價</strong>，且頻寬必然是<strong>高度超賣</strong>而非以 $225/月不計量費率配置。<strong>假設（ASSUMPTION）：內部成本約為上述公布零售價的 40–60%</strong>——這正是把扣除區間釘在 35–55%（而非更高）的理由。</li>
 <li><strong>其餘假設，全部標示為假設，皆未經查證。</strong> <strong>(1) 12 / 18 / 24 個月的回收期是測試點，不是觀察到的公司政策</strong>——本次未發現任何關於該業者實際目標回收期的證據，而他們願意營運 2010–2012 年矽片，暗示其真實期程<strong>遠長於 24 個月</strong>，那會大幅拉高所有天花板。<strong>(2)</strong> 天花板以<strong>續約價、而非首期促銷價</strong>計算；數個 SKU 有大幅首期折扣（E3-1230 v2 $9.60 後轉 $48.00；E5-1650 v3 $92.40 後轉 $462.00），因此這些 SKU 的混合首年收入、以及真實的 12 個月天花板<strong>低於</strong>表列值。<strong>(3)</strong> 假設<strong>滿載 100%</strong>——除 opex 區間已內含者外，未再另計空置折扣。<strong>(4)</strong> <strong>未計入配發給每台伺服器的 IPv4 位址成本</strong>，儘管 2023 年的 /16 取得代表真實投入的資本。<strong>(5)</strong> 天花板<strong>僅含硬體</strong>，不含業務、帳務、授權與管銷。</li>
 </ul>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -2525,10 +2527,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><a target="_blank" rel="noopener noreferrer" href="https://www.psychz.net/dashboard/client/web/catalog/plan/508.json">plan 508 JSON</a></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>這些天花板在實務上的意義。</strong> 即使在最保守的 <strong>24 個月、45% 扣除</strong>設定下，型錄最高階 SKU（<strong>雙 Platinum 8270，$1,159/月</strong>）也只支撐得起約 <strong>$15,300 的硬體成本</strong>。這大約是 2026 年市場行情下<strong>單一顆 H100 80GB SXM GPU 價格的一半</strong>。<strong>整份標價 CPU 型錄，從上到下，在經濟上都無力支應 GPU 硬體。</strong> 這就是 GPU 產品線之所以報價制、接單後採購而非備庫存的算術原因，也是<strong>任何 GPU 案子在成為產品對話之前，先是一場融資對話</strong>的算術原因。</p>
 <h3>10.2 物料清單（BOM）與彙總比較</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>SKU</th>
@@ -2645,7 +2647,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>NOT SOURCED</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>彙總——自組成本 vs. 由租金推導的天花板。</strong> 僅計已詢價項目；未詢價項目已標註，因此<strong>以下每一個數字都是真實建置成本的低估。</strong></p>
 <ul>
 <li><strong>Dual Silver 4214 — $298.00/月。</strong> 已詢價項目：2 × Silver 4214，每顆 $15–$44.85 = <strong>$30–$90</strong>；128 GB DDR4 ECC RDIMM，每條 $198 = <strong>$792</strong>（整新約 $600）；2U 準系統機殼／電源 <strong>約 $150</strong>。<strong>已詢價小計約 $780–$1,032。</strong> 未詢價：1 TB HDD、網卡。<strong>實際全備約 $850–$1,150。</strong> 對照天花板 <strong>$1,967（12 個月）、$2,950（18 個月）、$3,934（24 個月）</strong>，自組整機成本約為 <strong>12 個月天花板的 43–53%，僅為 24 個月天花板的 22–27%。以 55% 貢獻毛利率計，光是零件的回收期約為 5.2–7.0 個月。</strong></li>
@@ -2673,7 +2675,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>11. 客戶與網路</h2>
 <h3>已具名客戶</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>客戶</th>
@@ -2713,7 +2715,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>房東公布（<a target="_blank" rel="noopener noreferrer" href="https://www.coresite.com/marketplace/psychz-networks">CoreSite Marketplace</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Psychz 行銷的客群：</strong> 主機商／轉售商（設有專用主機商登陸頁）、遊戲與遊戲伺服器營運者（多篇遊戲伺服器建置 KB 文章，如 Unturned、Conan Exiles 等）、CDN／媒體遞送，以及 AI/LLM GPU 租戶。</p>
 <h3>網路</h3>
 <ul>
@@ -2729,7 +2731,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>12. 政治與公開紀錄</h2>
 <p>僅取公開紀錄，逐條標記。以下內容對本案銷售<strong>不具實質重要性</strong>；之所以列入，是因為研究方法要求政治與公開紀錄這條軸線必須明確交代，而非略過。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>人員／法人</th>
@@ -2759,12 +2761,12 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>公開紀錄｜得標紀錄未證實｜<span class="gap">GAP</span></strong>（<a target="_blank" rel="noopener noreferrer" href="https://govtribe.com/vendors/profuse-solutions-inc-dot-psychz-networks-7vvq0">GovTribe</a>）</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>直白結論：</strong> 本公司與其業主在公開紀錄中<strong>沒有實質政治足跡</strong>。查到的兩筆捐獻合計僅 <strong>$3.70</strong>，且皆來自員工而非業主，黨派方向還相反。<strong>無立法或政策立場、無遊說、無 PAC。</strong> 請勿以政治傾向作為任何話術框架——這裡沒有東西可以建構。</p>
 <hr />
 <h2>13. 公開聯絡管道</h2>
 <p><strong>以下全部為公開來源。</strong> 不含任何個人行動電話與私人住址——本研究未蒐集、亦不應蒐集。查無公布管道者，該列標示 <strong><span class="gap">GAP</span></strong>。</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>管道</th>
@@ -2849,7 +2851,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>14. Supermicro 銷售切入點</h2>
 <h3>分類：<strong>高機率既有／類既有帳戶 → 防守 ＋ 世代換機 ＋ GPU 產品線延伸</strong></h3>
@@ -2884,7 +2886,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <hr />
 <h2>15. 查證附錄</h2>
 <h3>15.1 僅由單一來源支撐的說法——引用前須再驗證</h3>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>說法</th>
@@ -2919,10 +2921,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>bizfileonline.sos.ca.gov 對自動抓取回 HTTP 403。此為登記鏡像而非 SOS 第一手頁面——簽約前須自加州 SOS 直接重拉</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>15.2 第三方估計互相矛盾之處——並陳分歧，刻意不擇一</h3>
 <p><strong>員工數</strong>（皆為第三方估計，無任何權威來源）</p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -2952,10 +2954,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td>現行</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>落差約 25 倍，未予裁定。</strong> 公司僅公布 4 名具名主管（名＋姓氏首字母），並自述擁有「highly experienced management and technical team with over 20 years of industry expertise」。社群回報（LowEndTalk，未證實）指支援外包至印度，可解釋美國本地人數偏低。<strong>查無任何徵才頁或職缺</strong>，因此沒有由招募面取得的交叉佐證。</p>
 <p><strong>營收</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -2972,10 +2974,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>#3413（2018）· #3869（2019）· #3499/#3501（2020）· #2372（2025），三年成長 179%</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>任何絕對營收數字皆為 <span class="gap">GAP</span>。</strong> Inc. 5000 入選需經查核之美國營收與年增率，故該榜單可獨立佐證這是一家真實且成長中的營收型企業——<strong>但本檔不編造任何來源未曾公布的營收數字。</strong> <em>標記：第三方估計／公開榜單。</em></p>
 <p><strong>設施數</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -2996,10 +2998,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>66</strong> 個 data center facilities</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>未予裁定——但 66 幾可確定是夥伴／轉售足跡，不得引為 Psychz 自營站點數。</strong></p>
 <p><strong>宣告 IPv4 位址數</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3016,10 +3018,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>517 個 IPv4 與 124 個 IPv6 範圍／283,904 個 IPv4 位址／23 國／241 個 peer／8 個上游</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>兩者並陳，未予調和。</strong></p>
 <p><strong>網路容量 vs 實際流量</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3044,10 +3046,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>實際流量層級</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>兩者是不同量測，不可混用。</strong></p>
 <p><strong>創立年份</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3072,10 +3074,10 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>2014</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>未解。</strong> 正確表述：品牌自稱創立 2001、法人可考日期 2012、自營機房自 2014。<strong>不得把「25 年老公司」當成事實陳述。</strong></p>
 <p><strong>洛杉磯設施面積</strong></p>
-<table>
+<div class="tablewrap"><table>
 <thead>
 <tr>
 <th>來源</th>
@@ -3095,7 +3097,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <td><strong>LAX1 建物量體——整棟建物的外框面積，非 Psychz 白空間</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>量測對象不同，不可混用。</strong></p>
 <h3>15.3 未結 <span class="gap">GAP</span></h3>
 <ul>
@@ -3121,7 +3123,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:9.5px ui-monospac
 <li><strong>遭遇的 HTTP 阻擋：</strong> bizfileonline.sos.ca.gov（403）、Crunchbase（403）、ZoomInfo（403）。凡依賴上述來源之發現，本檔均已標記為登記鏡像或第三方估計。</li>
 <li><strong>編碼／轉址的第一手來源：</strong> Juniper 案例研究的 HTML 已 301 轉址至 hpe.com，PDF 內文為子集字型編碼，因此<strong>自該處取得的每一項事實——客戶名稱、25,000 這個數字、MX960／MX240、「Rack n' Stack」——皆為次級擷取</strong>。</li>
 <li><strong>JavaScript 介面無法程式查詢</strong>（fec.gov 個人捐獻查詢、OpenSecrets 捐款人查詢）。本檔的 FEC 結果係透過 open.fec.gov API 以雇主名稱查詢取得，<strong>因此業主層級的結果屬於負面／<span class="gap">GAP</span>，而非乾淨的否定結論</strong>。</li>
-</ul></div></section>
+</ul></section>
 </main>
 </div>
 <footer>UNCLASSIFIED // FOR INTERNAL SUPERMICRO SALES USE ONLY &nbsp;·&nbsp; Every figure carries an inline source and date. GAP marks honestly-missing evidence. Assumptions are labelled as assumptions. Not investment advice.</footer>
