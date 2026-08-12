@@ -8,13 +8,11 @@
 
 ## 1. 結論摘要
 
-phoenixNAP 是一家 2009 年創立、由創辦人持有的亞利桑那州裸機雲（bare-metal cloud）、主機代管與網路業者，營運 **AS12189**，總部與旗艦資料中心同址於鳳凰城 3402 E. University Drive 的 200,000 平方英尺園區，於 PeeringDB 登錄 16 個據點、橫跨五大洲，實際計費區域為六個（[ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·[PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)）。商業上，這是一個**贏回（win-back）案，不是新開發案，也不是對陌生對手的取代案**：Supermicro 曾於 2017 年 6 月發布具名案例研究——X11 BigTwin、Simply Double 全快閃 SuperStorage、Rack Scale Design、Supermicro Server Manager，並附上總裁 **Ian McClarty** 與時任產品副總 **William Bell** 的具名引述（[Supermicro 案例研究，2017-06](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)）；ServeTheHome 在 2023 年 3 月的實機報導，也將其 Sapphire Rapids 裸機執行個體記載為 Supermicro 硬體（[ServeTheHome，2023-03-31](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/)）。**但最近兩次平台改朝換代都被 HPE 拿走**：2023 年 8 月的 ProLiant RL300 Gen11（Ampere），以及 2025 年 4 月的 ProLiant Compute DL320 Gen12（Intel Xeon 6），兩則都由 HPE 發布，且都由 phoenixNAP 自家總裁與產品執行副總具名背書。這個客戶是溫的，而且正在流失。
+phoenixNAP（法人名稱 **PHOENIX NAP, LLC**，亞利桑那州本地 LLC，ACC 檔號 **L15102933**，實體狀態 ACTIVE）是一家私人持股的全球 Bare Metal Cloud、專用伺服器與主機代管（colocation）業者，總部設於其位於亞利桑那州鳳凰城 3402 East University Drive 的自建旗艦資料中心內，營運 **AS12189** 及另外七個 ASN，在六個地區提供已標價運算資源，並在橫跨四大洲的十六處設施設有網路據點（[GLEIF LEI 549300AC0LNX8QT0G149](https://api.gleif.org/api/v1/lei-records/549300AC0LNX8QT0G149)，已對亞利桑那州公司委員會查核；[PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189&depth=2)）。商業上，這是**一個既有客戶防守案，且帶有急迫的被替換威脅；任何把它當成全新開發案來談的人都會輸掉**。Supermicro 是有據可查的九年既有供應商——Supermicro 於 2017 年 6 月與 phoenixNAP 共同發表案例研究，具名引述總裁 Ian McClarty 與產品副總 William Bell，內容涵蓋 X11 Building Block Solutions、BigTwin 2U 4 節點系統、Simply Double 全快閃 SuperStorage、Supermicro Rack Scale Design 以及跨全部據點使用的 Supermicro Server Manager（[CaseStudy_PhoenixNAP.pdf](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)）——且 ServeTheHome 於 2023 年 3 月實機拆解，確認 phoenixNAP 一台生產節點就是 Supermicro twin node（[ServeTheHome，2023-03-31](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/)）。**但在 2025 年 4 月，HPE 公開宣稱 phoenixNAP 是其首個符合 DC-MHS 規範之解耦式硬體、搭載 Intel Xeon 6 的部署場域**（[HPE 新聞室，2025 年 4 月](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)），而對應的 `s4.x6`（Xeon 6 6731E）SKU 正好在同一時間窗出現在 phoenixNAP 自家型錄中。**競爭對手已在一個 Supermicro 既有帳戶裡，把最新一代矽晶的旗子插了下去。**
 
-全公司最可攻擊的一條線是加速器層。本次直接抓取了支撐其官方定價頁的正式產品／價格 JSON——全部 101 項產品——**整份檔案中 `gpuConfigurations` 欄位的唯一值就是「Intel Max 1100 GPU」**。三個 SKU、三種 CPU 分級、一款加速器，約於 2023 年 10 月導入，此後約 34 個月未動。**現行型錄中完全沒有任何 NVIDIA SKU，也沒有任何 AMD Instinct SKU**（[phoenixNAP 現行型錄 JSON，2026-08-10 抓取](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)）。而其自家行銷頁只敢宣稱六個計費區域中的兩個有現貨（[GPU 伺服器頁](https://phoenixnap.com/bare-metal-cloud/gpu-servers)）。他們有 AI 故事——一個具名 AI 客戶案例，加上 HPE 引用的 adtech／fintech／SLED 需求——卻只有一款逐漸老化的加速器可供支撐。這個位置 HPE 沒有拿下，任何人都沒有拿下。
+有三件事讓這個時間點格外有利。第一，**他們自己擁有機隊**——這不是推論：亞利桑那州稅務法院紀錄載明，IaaS 客戶使用的是「PNAP-owned servers」，且法院認定這些伺服器是 PNAP 出租的有形動產（[TX2024-000075 minute entry，2026-05-21 歸檔](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)）。第二，**一個次世代 GPU SKU 已經卡在待發狀態十六個月**：產品代碼 `d3.g3.c2.medium` 存在於 phoenixNAP 自家產品系統中，卻沒有硬體規格、沒有 GPU 型號、也沒有價格，僅以價格 0 的形式出現在兩筆 Windows Server 2025 授權列的關聯產品代碼上——在 2025-04-22 快取的 Wayback 快照中就已存在，2026-08-11 的線上型錄中仍然原封不動（[phoenixNAP 快取定價 API](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)）。這是一個**原則上已決定、但尚未在矽晶選型或資本支出上拍板的 GPU 平台決策**。第三，**2026 年 3 月 12 日，RadiusDC 同意收購其鳳凰城資料中心與主機代管業務**，預計 2026 年第二季完成交割；此後 phoenixNAP 在自家旗艦建物內轉為**承租方**，並保留約 80% 的全球業務，明確包含 Bare Metal Cloud 與網路平台（[RadiusDC 新聞稿，2026-03-12](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html)；[phoenixNAP 新聞稿，2026-03-17](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html)）。他們剛把一門不動產生意換成一門運算生意，手上有現金；**機隊如今就是整間公司**。
 
-時機點異常乾淨。亞利桑那州州務卿 UCC 紀錄顯示共 **20 筆歸檔**、自 2014 年起與 BMO（Harris）Bank 未曾中斷的設備與資產融資關係，且 **2025 年 7 月至 2026 年 4 月之間，新增擔保撥款的間隔中位數約 33 天**——然後在 2026-04-02 硬生生停止，四個月毫無動靜，時間正好涵蓋 RadiusDC 主機代管切割案於 2026 年 Q2 完成交割（[AZ SOS UCC Lien Search](https://apps.azsos.gov/apps/ucc/search/)·[PRNewswire，2026-03-12](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html)）。他們用銀行債務在自己的資產負債表上買硬體——**紀錄上完全沒有 Dell Financial Services、沒有 HPEFS、沒有 Cisco Capital、沒有任何原廠融資子公司**——因此每一塊錢的單機成本，都直接落在他們自己的折舊與利息上。對這個買家而言，「每台部署成本」不是話術，而是整場對話本身。下一筆融資撥款將用來支撐一支純裸機雲機隊，而加速器層是其中最外露的一條科目。
-
-唯一可能讓這筆生意破局的是通路。這是一個有長期歷史的回頭 Supermicro 買家，因此依 Rule 8，**必須在任何報價之前**先確認經銷商歸屬——見第 13 節。
+可能讓這筆生意破局的因素是價格，而且是算術問題而非態度問題。其旗艦 GPU 節點由租金推導出的成本天花板落在約 **$8,000–$12,000**，而街頭價物料清單（BOM）約為 **$14,000–$18,300**（第 10 節）——這兩個數字唯有在 phoenixNAP 以顯著低於街頭價採購時才對得上，而這正是 Supermicro 自家案例研究所記載的事實：phoenixNAP 是**透過 Supermicro**進入 Intel 的 Early Deployment 計畫。**守住這個帳戶的路徑是 Intel 計畫關係與計畫價，不是機殼規格。**還有一項在第一次報價前必須讓團隊知道的逆風：2026 年 5 月 18 日的亞利桑那州稅務法院裁定，使其主機代管與伺服器租賃收入**自此往後**須繳交先前未曾負擔的州、郡與鳳凰城市交易特權稅（TPT），本季他們在價格上會更硬。
 
 ---
 
@@ -22,675 +20,644 @@ phoenixNAP 是一家 2009 年創立、由創辦人持有的亞利桑那州裸機
 
 | 欄位 | 內容 | 證據／日期 |
 |---|---|---|
-| **法人名稱** | **PHOENIX NAP, LLC**（品牌書寫為 phoenixNAP；ARIN 組織名稱為 PhoenixNAP LLC，代號 **PHOEN-56**）。經 UCC 證實之關係企業／共同債務人：**SECURED SERVERS, LLC**（持有 131.153.0.0/16 位址區塊，ARIN 代號 SSL-65）·**CC PROPERTY INVESTMENTS, LLC**（不動產部門，Tempe AZ）·**PHOENIX NAP MANAGEMENT RESOURCES LLC**（自 2019 年起獨立之 BMO Harris 債務人）。另有「PHOENIXNAP」與 **ALTAY CORPORATION** 於 2022 年一筆 Express Computer Systems 歸檔中並列為共同債務人 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·[AZ SOS UCC Lien Search](https://apps.azsos.gov/apps/ucc/search/)，20 筆歸檔全文見第 8 節 |
-| **設立州別** | **亞利桑那州（本州設立）。** 未查得 phoenixNAP 的德拉瓦州營運或控股實體。德拉瓦州僅以一件無關的 2016 年破產附屬程序（*Stanziale v. Phoenixnap*）之管轄地出現。**GAP：德拉瓦州登記機關本身未查詢** — 見第 14 節 | 依 UCC §9-301／§9-307，亞利桑那 LLC 之正確歸檔機關即為亞利桑那州，這也是 20 筆歸檔全在亞利桑那的原因 |
-| **登記機關證據** | **在登記機關本身即遭封鎖。** 舊入口 `ecorp.azcc.gov` 已無法解析（**NXDOMAIN**）。替代入口對非瀏覽器用戶端回 **HTTP 403**；以真實瀏覽器輸入 Business Name =「PHOENIX NAP」時，會先跳出 **6 字元圖形 CAPTCHA**（「User validation required to continue」）才釋出結果。**本檔不解 CAPTCHA**，因此**未取得任何幹部、經理人、成員、法定代理人紀錄，也未取得年報簽署人與歸檔沿革**。OpenCorporates（HAProxy CAPTCHA）與 Bizapedia（security check）亦遭封鎖。**上列實體關係圖係由 UCC 紀錄與 ARIN RDAP 佐證，而非由公司登記機關佐證** | [ArizonaBusinessCenter.azcc.gov/businesssearch](https://arizonabusinesscenter.azcc.gov/businesssearch)，2026-08-10 嘗試 |
-| **創立年份** | **2009** — 四個獨立錨點：Supermicro 2017 年 6 月案例研究載明「Founded in 2009, phoenixNAP…」；網域 phoenixnap.com 建立於 **2009-02-26**；鳳凰城 3402 E University Dr 廠房於 **2009 年以 USD 6.3m 購入**；ARIN autnum **AS12189 註冊於 2009-07-23** | [Supermicro 案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)·[ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·phoenixnap.com 之 Verisign RDAP |
-| **總部（實查地址）** | **3402 E. University Drive, Suite 420, Phoenix, AZ 85034-7200** — 旗艦資料中心與公司總部同一園區。歸檔上使用之次要／關係企業地址：**2353 W University Drive, Tempe, AZ 85281-7223**（CC Property Investments、Secured Servers、Phoenix NAP Management Resources） | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)（組織 PHOEN-56）·AZ SOS UCC 檔號 **2026-003-2810-7**，該筆呈現含 Suite 420 之地址形式 |
-| **所有權** | **創辦人持有，無已揭露之外部股權。** New Project Media 報導公司「established in 2009 by Stephanie Cadwell and Ron Cadwell」；Infralogic 報導第三方股權背景**不明確**。**GAP：未取得股權結構、持股比例或任何所有權申報** | [New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/)·[ION Analytics／Infralogic](https://ionanalytics.com/insights/infralogic/goldman-run-sale-for-colo-firm-slated-for-early-2025/) |
-| **員工數** | **約 183 人（第三方估計 — Zippia 彙整）。** LinkedIn 與其他資料商區間不一。**誠實區間：150–300 人。** 工程團隊分布於鳳凰城／貝爾格勒／馬爾他，證據是具名 ARIN 技術聯絡人所登錄之 +381 與 +356 電話號碼 | [Zippia](https://www.zippia.com/phoenixnap-careers-1559024/revenue/)（估計值）·[ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)（地理分布之一手證據） |
-| **營收** | **兩組無法調和的來源，而且低的那一組幾乎確定是錯的。** 資料商（Zippia、Kona Equity）給 **$18–25m — 視為不可靠之第三方估計**。相對地，報導其出售程序的產業媒體給出 **USD 70m 之對外行銷 EBITDA**（前一年為 USD 50m），第一輪出價 **突破 USD 1bn，倍數 14.3x EV/EBITDA**。一家 EBITDA 有 $70m 的公司不會是營收 $18m 的公司。**本檔捨棄資料商數字，且不主張任何精確營收值**；可辯護的工作假設是數億美元等級（low-to-mid hundreds of millions USD） | [New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/)·[ION Analytics／Infralogic](https://ionanalytics.com/insights/infralogic/goldman-run-sale-for-colo-firm-slated-for-early-2025/)·[Zippia](https://www.zippia.com/phoenixnap-careers-1559024/revenue/) |
-| **CRM $100M 門檻** | 依產業媒體數字，本案**很可能跨過** $100M 門檻；依資料商數字則否。**兩者不可能同時為真——在取得權威來源之前，不得將任何營收數字以事實形式登錄 CRM。** 另請注意，該 EBITDA 是**賣方行銷數字**經產業媒體轉述，不是經查核之揭露 | 併陳比較見第 14 節 |
-| **ASN** | **AS12189 — PhoenixNAP LLC。** ARIN 代號 PHOEN-56，autnum 註冊於 **2009-07-23**，最後異動 **2026-04-06**。IRR AS-SET 為 **LEVEL3::AS-PHOENIXNAP**。另外，**131.153.0.0/16 登記於 SECURED SERVERS LLC**（ARIN 代號 SSL-65），技術聯絡人與 phoenixNAP 完全相同 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·[ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0) |
-| **進行中的結構性事件** | **RadiusDC 收購其鳳凰城資料中心與主機代管事業** — 2026-03-12 宣布，預計 2026 年 Q2 交割。phoenixNAP 保留其自述之**約 80% 全球業務**，明確包含 Bare Metal Cloud 與網路平台，並**以承租戶身分續留該設施** | [PRNewswire，2026-03-12](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html)·[DataCenterDynamics](https://www.datacenterdynamics.com/en/news/radiusdc-enters-arizona-acquires-phoenixnap-facility-in-phoenix/) |
-| **CRM 狀態** | **2026-08-11 實查為乾淨** — 無 lead、無 account、無 do-not-call | salesleads Search（Type = All） |
-| **轄區／團隊** | Phoenix, AZ → West Coast South excl. CA = **T1｜T31** → 一組自有轄區，可逕行註冊 | Territory Map-Jan.2026 (Rev.1)，Sales Territory Assign 分頁 |
+| **法人名稱** | **PHOENIX NAP, LLC** — 商業字號寫作「phoenixNAP」；於亞利桑那州稅務法院案件標題中呈現為「PHOENIX NAP L L C」。亞利桑那州本地 LLC，法律形式 O85W。**無 SEC 註冊。查無德拉瓦州實體。** | [GLEIF LEI **549300AC0LNX8QT0G149**](https://api.gleif.org/api/v1/lei-records/549300AC0LNX8QT0G149) — 狀態 FULLY_CORROBORATED，查核機關 **RA000597 ＝亞利桑那州公司委員會（Arizona Corporation Commission）**，`validatedAs`／`registeredAs` ＝ ACC 檔號 **L15102933**，管轄 US-AZ，實體狀態 **ACTIVE**；OpenCorporates id `us_az/L15102933`；S&P company id 61203246。另由 [TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf) 之案件標題獨立佐證。**請注意區分：LEI 的「註冊狀態」為 LAPSED**（nextRenewalDate 2023-10-14）——失效的是 LEI 憑證本身，不是公司；**底層的亞利桑那州實體仍為 ACTIVE** |
+| **總部（實查地址）** | **3402 East University Drive, Phoenix, AZ 85034** — 旗艦資料中心兼總部。**Suite 420** 是 ARIN POC 紀錄上使用的行政／收件套房。另有**第二個登記地址**：**2353 W University Drive, Tempe, AZ 85281** — CCBill／CWIE 大樓，作為本 LLC 的法定登記地址，也是休眠 ARIN org PHOEN-89 的街道地址 | GLEIF 總部地址；法定登記地址逐字為「**C/O MARCUS BOHN, 2353 W UNIVERSITY DRIVE, TEMPE, AZ 85281**」（[GLEIF](https://api.gleif.org/api/v1/lei-records/549300AC0LNX8QT0G149)）；ARIN org PHOEN-56 街道地址為 3402 E. University Drive（[ARIN POC 清單](https://whois.arin.net/rest/org/PHOEN-56/pocs)） |
+| **創立年份** | **2009** — 依 ACC 紀錄，實體 creationDate 為 **2009-03-04**。值得一記的細節：網域 **phoenixnap.com 註冊於 2009-02-26T18:04:14Z**，比 LLC 設立**早八天** | [GLEIF](https://api.gleif.org/api/v1/lei-records/549300AC0LNX8QT0G149)（creationDate）；Verisign RDAP（網域建立日）；Supermicro 2017 年案例研究亦載「Founded in 2009」（[CaseStudy_PhoenixNAP.pdf](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)） |
+| **所有權** | **由創辦人主導；受益所有權與出資額比例＝GAP。** CWIE／CCBill 集團關係有多方佐證，但**查無任何確立母公司或控股公司之申報文件**——GLEIF 對直接母公司與最終母公司皆記為 reporting exceptions，亦即**未申報任何母公司 LEI** | 集團關係有三項佐證：法定登記地址即 Tempe 的 CCBill／CWIE 大樓；Marcus A. Bohn 於鳳凰城市遊說申報上公布的聯絡信箱為 **MarcusB@cwie.net**（[遊說登記 PDF](https://lobbyist.phoenix.gov/PDF/Registration/f9bc617c-1340-44ac-aa24-0e45f75a28fa)）；ARIN POC **PETRO182-ARIN** 的 `companyName` 欄位逐字寫著「**CCBill EU**」，而其信箱為 draganp@phoenixnap.com（[ARIN](https://whois.arin.net/rest/poc/PETRO182-ARIN)） |
+| **員工數** | **公司未揭露。僅有第三方估計，且彼此矛盾：Datanyze 約 300 人 · ZoomInfo 201–500 · Ampliz 51–200。** 2017 年版 Ron Cadwell 簡介提及約 450 人的集團規模，但那是更大的 CWIE／CCBill 集團，不是 phoenixNAP 單體 | 資料商估計為**無可見方法論的第三方模型——登錄 CRM 時必須標示為估計值**。唯一一項有紀錄的規模陳述，是 phoenixNAP 自己在訴訟中主張其於 2016 年 10 月至 2020 年 8 月查核期間「provided hundreds of employees and independent contractors to operate its data center」（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)）——此為訴訟攻防脈絡下的陳述，且其法律主張已遭法院駁回 |
+| **營收** | **未揭露。Datanyze 約 $25M 屬不可靠的第三方模型。** 另有一個較有依據的 **ESTIMATE — DERIVED（推導估計）**：鳳凰城市對 2016 年 10 月至 2020 年 8 月共 47 個月，就商業租賃類 TPT 核課 **$2,537,075.23**，而裁定書逐字引述市稅率為「two and eight-tenths percent」→ $2,537,075.23 ÷ 0.028 ≈ **47 個月內約 $90.6M 的主機代管毛收入 ≈ 每年約 $23M**。若對 $1,096,327.97 的州「個人財產租賃」核課套用**假設**的 5.5% 州稅率（**此稅率並未出現在裁定書中，屬本檔假設**），推得同期 IaaS 伺服器租賃毛收入約 $19.9M ≈ **每年約 $5M**。鳳凰城單一據點合計 ≈ **2016–2020 年間每年約 $28M** | [TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)。**警告：** 州商業租賃的 $528,288.69 在 5.5% 稅率下無法對回同一稅基，可見分類與稅基確實不同——這是**有界限的估計，不是算術上的真值**。此推導真正確立的是：**流傳的 $25M 全公司數字，對一家六地區的全球業者而言幾乎可以確定偏低**，因為光是鳳凰城主機代管在 2019 年就可能已接近該數字。**CRM $100M 門檻：公開資料不支持——但請注意上述推導只涵蓋鳳凰城，不涵蓋整個集團** |
+| **ASN** | **主要營運 ASN：AS12189**（PeeringDB net id 2932，名稱「PhoenixNAP」，IRR as-set LEVEL3::AS-PHOENIXNAP，紀錄建立 2010-02-17，最後更新 2026-03-25）。ARIN org **PHOEN-56** 持有 **八個 ASN**：AS11572（SS-ATL）、AS12189、AS46385、AS53605、AS394643、AS397378、AS400672、AS401633。另有一個**休眠**的 ARIN org：**PHOEN-89**（2353 W University, Tempe；登記於 2017-07-25；canAllocate＝N；**零 POC、零 ASN**） | [PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189&depth=2)；[ARIN org PHOEN-56 POC](https://whois.arin.net/rest/org/PHOEN-56/pocs)。phoenixNAP 另自行營運 rwhois 服務於 `rwhois://rwhois.phoenixnap.com:4321` |
+| **機隊所有權** | **自有伺服器——此為法院紀錄所確立，非推論** | 「PNAP's customers pay for … (2) infrastructure as a service（"IaaS"）services（**utilization by customers of PNAP-owned servers**）」（PSOF ¶10）；法院認定該等硬體與軟體為 PNAP 出租之有形動產（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)）。**這是整個帳戶的資格條件** |
+| **線上型錄規模** | **101 個產品代碼** — 84 個具完整硬體 metadata 的伺服器 SKU、3 個 GPU SKU，另加儲存／頻寬／OS／Netris 品項——橫跨 **6 個地區**（PHX、ASH、NLD、SGP、CHI、SEA）標價 | 直接讀取 phoenixNAP 自家快取定價 API payload，**1,061,819 bytes**，2026-08-11 取得：[api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json) |
+| **正在進行的結構性變化** | **鳳凰城資料中心與主機代管業務正被出售給 RadiusDC**（IPI Partners 設立之平台，執行長 Mike Krza），2026-03-12 宣布，預計 **2026 年第二季**交割。phoenixNAP 保留約 80% 全球業務，明確包含 Bare Metal Cloud 與網路平台，並在 3402 E University Drive **轉為承租方**。**GAP：截至 2026-08-11 查無交割完成之確認** | [RadiusDC 新聞稿](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html) · [phoenixNAP 新聞稿](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html)。顧問：BofA Securities（phoenixNAP）、J.P. Morgan（RadiusDC）；Cleary Gottlieb（phoenixNAP）、Gibson Dunn ＋ Snell & Wilmer（RadiusDC） |
+| **對州政府機關之進行中訴訟** | **Phoenix NAP, LLC v. Arizona Department of Revenue**，亞利桑那州稅務法院 **TX2024-000075**，承審法官 Hon. Erik Thorson。核課總額 **$4,549,556.05**。裁定於 2026-05-21 歸檔：ADOR 在實體爭點勝訴（主機代管與伺服器租賃**確實**應課 TPT），但 phoenixNAP 部分勝訴——該適用僅得**向後生效（PROSPECTIVELY ONLY）** | [Minute entry PDF](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)。**商業上具實質意義：這是一項針對「支撐 GPU 採購的那條收入線」的永久性新稅負** |
+| **CRM 狀態** | **乾淨 — 無 lead、無 account、無 do-not-call** | salesleads Search（Type = All），2026-08-11 實查 |
+| **轄區／團隊** | 亞利桑那州鳳凰城 → West Coast South excl. CA ＝ **T1｜T31** → 一組自有轄區，可逕行註冊 | Territory Map-Jan.2026 (Rev.1)，Sales Territory Assign 分頁 |
 
 ---
 
-## 3. 領導層與所有權
+## 3. 原始名單更正表
 
-本節證據等級：**primary-record（一手紀錄）**＝網路號碼登錄機構、法院案卷、聯邦競選財務申報、官方州級歸檔，或公司自家已發布頁面｜**corroborated（多方佐證）**＝兩個以上獨立來源互相印證｜**single-source（單一來源）**＝僅一個次級來源｜**aggregator-only（僅資料商）**＝第三方資料商，無任何一手佐證，**未經查證前不得用於信件**｜**GAP**＝已具名搜尋但查無。
+僅列與 phoenixNAP 相關者。判定尺度：**confirmed（確認）**＝一手具名揭露或多方獨立佐證｜**partly confirmed（部分確認）**＝核心屬實，但表述方式必須修正｜**contradicted（推翻）**＝證據與原始名單相反｜**unverified（無法查證）**＝無法由公開來源確立，**不得對客戶陳述**。
 
-進入表格前有兩項前提。第一，**phoenixNAP 完全沒有公開的領導層頁面**——`phoenixnap.com/company/leadership` 回 **HTTP 404**。因此以下每一位高階主管的姓名，都來自供應商新聞稿、產業媒體併購報導、官方歸檔或資料商，並逐一標示等級。第二，**登錄機關幹部與網路聯絡人以獨立列呈現並明確標示**：ARIN OrgTech 是本人親自驗證過、公開合法的真實聯絡管道；在這個客戶上，那五位工程師是全檔**可信度最高的具名人員——高於多數高階主管**。
+| # | 原始名單之說法 | 判定 | 證據與正確表述 |
+|---|---|---|---|
+| 1 | **phoenixNAP 營運 AS23033**（任務指派所載） | **CONTRADICTED — 該 ASN 屬於另一家公司** | AS23033 登記於 **Wowrack.com**，ARIN org 代號 **WOWTEC-1**，ASN 名稱「WOW」，登記於 **2002-01-07**。phoenixNAP 的自治系統是 **AS12189**，於 **2013-03-07** 登記於 ARIN org **PHOEN-56「PhoenixNAP LLC」**。PeeringDB 獨立佐證：net id **2932**、名稱 PhoenixNAP、asn 12189、IRR as-set LEVEL3::AS-PHOENIXNAP。**任何以 AS23033 為鍵值進行的 prefix、peering、路由或濫用處理工作，都會打到完全錯誤的業者**（[ARIN autnum 23033](https://whois.arin.net/rest/asn/23033.json) · [PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189)） |
+| 2 | **RadiusDC 交易「預計 2026 年第二季交割」，且查無交割完成之確認**（本檔前一版於 2026-08-11 所列之 GAP） | **CONFIRMED — 且郡府紀錄顯示已完成交割** | **馬里科帕郡估價官（Maricopa County Assessor）**不動產名冊顯示 **RADIUS DC PHOENIX I LLC** 為 **APN 122-03-089, 3402 E UNIVERSITY DR, PHOENIX 85034** 之所有權人（分區 ALLRED SOUTHBANK，MCR 46809，COMMERCIAL）——即旗艦資料中心——同時亦持有 **APN 122-03-005A, 3221 E ELWOOD ST**（VACANT LAND INDUSTRIAL），與已宣布之 DC2 開發案相符。並由公司登記文件佐證：**Radius DC Phoenix I, LLC** 於 **2026-03-13** 登記為亞利桑那州**外州** LLC，AZ 檔號 **25032212**，設立地為**德拉瓦州**，主營業所 3402 E University Dr。**phoenixNAP 已不再擁有其旗艦設施；它現在是承租方。** **仍為 GAP：** 馬里科帕郡地政事務所（Recorder）之產權移轉文件編號、登記日期與對價金額並未取得（[馬里科帕郡估價官](https://mcassessor.maricopa.gov/mcs/?q=3402+E+UNIVERSITY+DR) · [Radius DC Phoenix I, LLC 登記資料](https://www.bizapedia.com/az/radius-dc-phoenix-i-llc.html)） |
+| 3 | **無法取得 Phoenix NAP, LLC 於亞利桑那州公司委員會之幹部、經理人、股東與法定代理人**——本檔前一版最大的單一 GAP | **CONTRADICTED — 此缺口現已補上** | 檔號 **L15102933** 之 ACC 登記資料顯示：**本地 LLC，2009-03-04 申報，狀態 ACTIVE**；主營業地址 **3402 E University Dr Suite 420, Phoenix AZ 85034**；**法定代理人 MARCUS BOHN**，同址；以及**兩位經理人（Manager）——IRA RONALD CADWELL 與 STEPHANIE CADWELL**，同址。**來源出處必須如實說明：** 本筆資料讀自**最後更新於 2026-08-11 之登記資料鏡像站**，並非 ACC 官方入口。ACC 自身的 Business Search（arizonabusinesscenter.azcc.gov）於送出時出現圖形字元 CAPTCHA，其 API 對未驗證呼叫回傳「Authentication Failed」；**該 CAPTCHA 並未被破解，亦未被繞過**（[ACC 登記資料，經 Bizapedia 鏡像](https://www.bizapedia.com/az/phoenix-nap-llc.html)） |
+| 4 | **phoenixNAP 是一家由創辦人主導的公司，領導層為 Ron Cadwell 與 Ian McClarty** | **PARTLY CONFIRMED — 實際結構是兩位經理人，不是單一創辦人** | 已申報的經理人是 **Ira Ronald Cadwell** 與 **Stephanie Cadwell**——**雙經理人**結構。**Ian McClarty 是總裁與對外的高層代言人，但在登記資料上並未列為經理人或股東**，因此他的權限屬營運／執行層級，而非出資成員層級。另請注意其法定名字：登記資料寫的是 **IRA** Ronald Cadwell，不是 Ron 或 Ronald——**這正是先前每一次以「Ron Cadwell」為鍵值的 FEC 查詢都查錯字串的原因**（[ACC 登記資料](https://www.bizapedia.com/az/phoenix-nap-llc.html)） |
+| 5 | **查無任何確立 Phoenix NAP, LLC 母公司或控股公司之申報文件**（本檔前一版） | **PARTLY CONFIRMED — 狹義上仍成立，但 CWIE 關係現已有四方佐證** | 狹義上仍然成立：ACC 紀錄列的是**兩位自然人經理人，不是法人母公司**，且 GLEIF 對直接母公司與最終母公司皆記為 reporting exceptions。但 CWIE 關係現在已由**四個獨立方向**佐證：(1) **Stephanie Cadwell**——Phoenix NAP LLC 的申報經理人——公開自述為 **CWIE Holding Company, INC 的 Owner/Partner**；(2) 馬里科帕郡**營業用動產（business personal property）名冊**顯示 **CWIE HOLDING CO INC** 在 3402 E University Dr 持有兩個帳戶（9337591、9337607），與另一個獨立的 **PHOENIX NAP** 帳戶（0006384）並列；(3) **Marcus A. Bohn** 以 **marcusb@cwie.net** 在 phoenixNAP 的聯邦商標上署名為 Attorney of Record；(4) 現任 phoenixNAP 副總 **Danny Fuentes** 在一份聯邦 FEC 申報中，將雇主填為 **「CWIE」**。**在沒有申報所有權鏈的情況下，這個集團關係的證據強度大致已到極限**（[馬里科帕郡估價官](https://mcassessor.maricopa.gov/mcs/?q=3402+E+UNIVERSITY+DR)） |
+| 6 | **Marcus A. Bohn 的職稱是「Chief Legal Officer（法務長）」** | **UNVERIFIED — 任何申報文件皆未載明此職稱** | 此職稱仍僅來自資料商。**一手紀錄中確實存在的是：** 他是 ACC 檔案上的**法定／登記代理人**；是 Phoenix NAP LLC 聯邦商標（USPTO TSDR，序號 87396103 與 90366571）的 **Attorney of Record 與 Correspondent**；並且是鳳凰城市遊說登記上**具名的主事者**。USPTO 的「Attorney of Record」身分確實確立他**以律師身分代表該實體行事**——但「Chief Legal Officer」這幾個字並未出現在任何申報文件中（[USPTO TSDR sn 90366571](https://tsdr.uspto.gov/statusview/sn90366571)） |
+| 7 | **無法辨識 phoenixNAP 之 USPTO 商標代理人與簽署人**（本檔前一版之 GAP） | **PARTLY CONFIRMED — 代理人已解決，簽署人仍未解決** | TSDR 現已完整提供代理人與 correspondent：**Marcus A. Bohn，3402 E University Dr Suite 420, Phoenix AZ 85034，marcusb@cwie.net，電話與傳真均為 480-467-2450**，於 **SECURED SERVERS**（sn 87396103，註冊號 5293238，Supplemental Register，2017-09-19 註冊）與 **PHOENIX NAP**（sn 90366571，註冊號 6422118，Supplemental Register，2021-07-13 註冊）兩件商標上皆然。**Section 8 聲明於 2024-03-19 提出、2024-11-22 獲准**；通訊資料於 2025-01-28 變更。**但實際的聲明簽署人仍未確立**——那需要調閱申報文件影像，而 TSDR 的 bulk／document API 現已要求註冊之 USPTO API 金鑰（[USPTO TSDR sn 87396103](https://tsdr.uspto.gov/statusview/sn87396103)） |
+| 8 | **phoenixNAP 以 FLEXSERVERS 作為受保護品牌行銷** | **CONTRADICTED — 該商標已放棄，且在案的商標組合比想像中弱** | **FLEXSERVERS** 申請案（序號 88517423，以 Tempe 之 2353 West University Drive 地址提出）狀態記為 **「Abandoned — Failure to Respond or Late Response」，狀態日 2020-06-18**，無註冊號。同樣地，**SECURED CLOUD**（85577377，註冊號 4299511）與 **SECURED STORAGE**（85581244，註冊號 4200375）皆為 **「Cancelled — Section 8」**，而最早的 **PHOENIX NAP** 商標（77750335，註冊號 3700592）已於 **2020-06-05** 依 Section 8 註銷。**目前僅有兩件商標有效**——PHOENIX NAP（註冊號 6422118）與 SECURED SERVERS（註冊號 5293238）——**且兩者都掛在 SUPPLEMENTAL register，不是 Principal register**，保護強度明顯較弱（[商標組合，經登記資料鏡像](https://www.bizapedia.com/az/phoenix-nap-llc.html)） |
+| 9 | **PeeringDB 是切入 phoenixNAP 網路團隊的可用管道** | **CONFIRMED AS A NEGATIVE — 它根本沒有公開任何聯絡人** | AS12189 的 PeeringDB 紀錄 **2932** 之 `poc_set` **完全為空陣列**，`poc_updated` 凍結在 **2016-03-14T21:50:49Z**——已經十年沒動——即使 netixlan 資料在 2026-03-25 才更新過。org 紀錄（id 3061）的 address、city、state、country 欄位全部未填。Policy Selective、Heavy Outbound、500–1000 Gbps、10 個 IX、16 處設施。**因此所有 peering、NOC 或技術端的接觸都必須改走 ARIN 代號**——相對地 ARIN 那邊維護良好，其中三筆在 2026 年才建立或更新（[PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189)） |
+| 10 | **phoenixNAP 從事聯邦遊說** | **CONTRADICTED — 零筆聯邦申報** | 直接查詢**參議院遊說揭露法（LDA）API**，對**每一個**嘗試過的客戶名稱——「phoenix nap」「phoenixnap」「cwie」「ccbill」「radiusdc」「IPI Partners」——皆回傳 `{"count":0,"results":[]}`。這是一個乾淨、明確的否定結論。**他們的遊說足跡完全是市政層級的：** Phoenix NAP, LLC 是**鳳凰城市** **CY2025 與 CY2026** 的登記遊說客戶，具名主事者為 **Marcus A. Bohn**（[參議院 LDA API](https://lda.senate.gov/api/v1/filings/?client_name=phoenix%20nap) · [鳳凰城市 2026 年登記客戶名單](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2026)） |
+| 11 | **分割後 phoenixNAP 保留約 80% 的全球業務** | **UNVERIFIED — 僅為公司自身說法，每次引用都必須標明出處** | 此數字**只出現在該公司 2026 年 3 月自家新聞稿**與 RadiusDC 新聞稿中，並被產業媒體逐字轉載。phoenixNAP 為私人持股、不公布財務數字；**沒有任何申報文件、經審計報表或第三方量測可以用來檢核這個 80%**。請當成**具名歸屬的公司說法**使用，絕不可當成事實（[phoenixNAP 新聞稿，2026-03-17](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html)） |
+| 12 | **Stephanie Cadwell 是 Ron Cadwell 的母親**（或依另一流傳來源所稱，是他的姊妹） | **UNVERIFIED — 且兩種流傳說法彼此矛盾** | 一篇 2015 年的個人部落格稱她是「Ira R. Cadwell 的母親」；一份由資料商彙整的摘要則稱她「與其兄弟 Ron Cadwell 共同持有 CCBill LLC」。**兩者互斥，且兩者都不是紀錄**；亦查無任何申報文件、訃聞、法院文書或公司揭露可確立任何親屬關係。**已確立的事實是：兩人皆為 Phoenix NAP, LLC 同址之申報經理人。** 請記錄「共同擔任經理人」這件事；**不得以任何形式記錄親屬關係**（[ACC 登記資料](https://www.bizapedia.com/az/phoenix-nap-llc.html)） |
+| 13 | **phoenixNAP 約有 186–300 名員工**（各家資料商估計） | **UNVERIFIED — 各家估計彼此差異極大，且沒有一份是分割後的數字** | 與前一版相同，但值得重申：Datanyze 約 300 · ZoomInfo 201–500 · Ampliz 51–200 · 一份 2026 年搜尋摘要稱 2026 年 6 月約 186。**沒有任何一家揭露方法論，也沒有任何一家反映分割**——而分割已把主機代管與資料中心營運人員移轉給 RadiusDC。任何帶進 CRM 的人數，都必須標示為**第三方估計，並附上「未反映分割」之但書**（[ZoomInfo 公司頁](https://www.zoominfo.com/c/phoenix-nap-llc/352148054)） |
 
-### 3.1 具名人員
+---
+
+## 4. 領導層與所有權
+
+本節證據等級：**primary-record（一手紀錄）**＝公司登記、網路號碼登錄機構、USPTO 申報、郡府估價名冊、法院案卷、市政申報、競選財務申報，或公司自家已發布頁面｜**corroborated（多方佐證）**＝兩個以上獨立來源互相印證｜**single-source（單一來源）**＝僅一個次級來源，無佐證｜**GAP**＝已具名搜尋但查無。
+
+進入表格前有四項前提。第一，**前一版最大的亞利桑那州公司委員會缺口現已補上**：Phoenix NAP, LLC（檔號 **L15102933**）有**兩位申報經理人——Ira Ronald Cadwell 與 Stephanie Cadwell**——以及一位**法定代理人 Marcus Bohn**，三者同址於 3402 E University Dr Suite 420。請一併讀出處但書：本筆資料來自**更新於 2026-08-11 之登記資料鏡像站**，因為 ACC 官方入口有 CAPTCHA 阻擋，而**該 CAPTCHA 並未被破解，亦未被繞過**。第二，**法定名字是 IRA，不是 Ron 或 Ronald**——單就這一項更正，就能解釋為何先前以姓名為鍵值的紀錄查詢一再落空。第三，**ARIN 登錄資料仍是本帳戶最豐富的人員來源**：org PHOEN-56 揭露**五位真實具名人員**，附直接信箱與直撥電話，分布於鳳凰城、馬爾他與塞爾維亞，且**其中兩位是前一版之後新增的**（Carmody 於 2026-02-25 加入、Ilic 於 2026-04-06 加入）。登記機構幹部與 ARIN 聯絡人**以獨立列呈現並明確標示**——他們是真實具名的人，而且往往是一家私人公司唯一對外揭露、具幹部等級的名字。第四，**phoenixNAP 根本沒有發布領導層頁面**：phoenixnap.com/company/leadership 與 /about-us 皆回傳 **HTTP 404**，因此以下每一個名字都來自申報文件、登記機構、新聞稿或已分級之次級來源，**沒有一個來自公司現行名冊頁面**。
+
+**FEC 的狀態已經改變，且必須精確理解。** 本次查詢中 FEC 資料瀏覽器**確實有回傳結果**，因此數位主事者現在帶有**明確的否定結論（「查無紀錄」）**，而非先前的「查詢被阻擋」。但**仍有三個名字未解決**，原因是 FEC 介面卡住或無法套用可資區辨的過濾條件，且 openFEC API 在整段作業期間持續對共用 DEMO_KEY 限流。**「未解決」的一列絕對不是「查無紀錄」的一列，任何情況下都不得如此回報。**
+
+### 4.1 具名人員
 
 | 姓名 | 職稱 | 角色類型 | 證據等級 | 公開聯絡管道 | FEC 紀錄 | 來源 |
 |---|---|---|---|---|---|---|
-| **Ron Cadwell** | **Founder & Chief Executive Officer（創辦人暨執行長）** | **經濟決策者／最終所有權人** | **corroborated**（兩則獨立產業媒體報導，加上公司自家部落格署名） | 無公開直撥。總機 **+1-480-422-2022**（ARIN 管理聯絡人號碼）。[LinkedIn](https://www.linkedin.com/in/ron-cadwell-0b747313b/)。依推導之信箱規則會得到 `ronca@phoenixnap.com`——**屬推導、未經查證**，見第 12 節，**不得視為已確認** | **UNVERIFIED — 入口／API 遭阻，不等於「查無紀錄」。** `api.open.fec.gov` schedule_a 三次嘗試均回 `{"error":{"code":"OVER_RATE_LIMIT"}}`，fec.gov 結果頁亦未渲染任何資料列 | [New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/)·[ION Analytics／Infralogic](https://ionanalytics.com/insights/infralogic/goldman-run-sale-for-colo-firm-slated-for-early-2025/)·[phoenixNAP 部落格署名](https://phoenixnap.com/blog/ron-cadwell-devops) |
-| **Stephanie Cadwell** | **共同創辦人（2009）** | 所有權人／非營運 | **single-source** | **GAP** — 未查得 LinkedIn，無任何公開管道 | **UNVERIFIED — 未查詢。** 其姓氏拼法在來源間本身即未定，查詢結果不具可靠性 | [New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/) — **請注意同一篇文章內文將姓氏寫為「Caldwell」，而公司使用「Cadwell」** |
-| **Ian McClarty** | **President（總裁）**，多份側寫另記為共同創辦人 | **內部支持者／硬體決策的高層贊助人** | **primary-record** — 於 2017–2026 年間四則具日期之供應商公開文件中具名引述 | 無公開直撥。[LinkedIn](https://www.linkedin.com/in/mcclarty)。Forbes Technology Council 側寫為公開 | **UNVERIFIED — 入口／API 遭阻**（同一 OVER_RATE_LIMIT 狀況） | [Supermicro 案例研究，2017-06](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)·[NVIDIA Tesla 新聞稿，2018-10-01](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus)·[HPE RL300 Gen11 新聞稿，2023-08-03](https://www.hpe.com/us/en/newsroom/press-release/2023/08/phoenixnap-powers-expanded-ai-and-cloud-services-with-energy-saving-ampere-based-servers-from-hewlett-packard-enterprise.html)·[RadiusDC 新聞稿，2026-03-12](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html) |
-| **William Bell** | **Executive Vice President of Products（產品執行副總）**；2017–2018 年資料中為 VP of Products | **技術／產品決策者——真正挑硬體的人** | **primary-record** — 三個世代的具體矽晶皆由他具名發言 | 無公開直撥。[LinkedIn](https://www.linkedin.com/in/williamb) | **UNVERIFIED — 入口／API 遭阻。** 另請注意「BELL, WILLIAM」是**高度撞名**的姓名；任何命中都必須先以雇主、職業與鳳凰城都會區地址交叉比對，才可歸屬 | [Supermicro 案例研究，2017-06](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)·[NVIDIA Tesla 新聞稿，2018-10-01](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus)·[HPE DC-MHS／Xeon 6 新聞稿，2025-04-04](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html) |
-| **Robert Carmody** — *網路登錄列* | **phoenixNAP 技術聯絡人，ARIN 代號 CARMO67-ARIN** | **營運／網路工程——可驗證的直通管道** | **primary-record** — 自行公布之營運聯絡資料，非爬取所得 | **robertca@phoenixnap.com · +1-480-506-0120** | 未查詢——營運人員，不在主要人員政治篩查範圍 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·[ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0) |
-| **Brian Musgrave** — *網路登錄列* | **phoenixNAP 技術聯絡人，ARIN 代號 MUSGR48-ARIN** | 營運／網路工程 | **primary-record** | **brianmu@phoenixnap.com · +1-480-401-0309** | 未查詢——營運人員 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **Dragan Petrovic** — *網路登錄列* | **phoenixNAP 技術聯絡人，ARIN 代號 PETRO182-ARIN** | 營運／網路工程 — **EMEA** | **primary-record** | **draganp@phoenixnap.com · +356 77548965（馬爾他）· +381 621448366（塞爾維亞）** | 未查詢——營運人員 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **Milos Ilic** — *網路登錄列* | **phoenixNAP 技術聯絡人，ARIN 代號 ILICM-ARIN** | 營運／網路工程 — 塞爾維亞 | **primary-record** | **milosi@phoenixnap.com · +381 615494754** | 未查詢——營運人員 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **Adrian Montebello** — *網路登錄列* | **phoenixNAP 技術聯絡人，ARIN 代號 MONTE41-ARIN** | 營運／網路工程 — 馬爾他 | **primary-record** | **adrianm@phoenixnap.com · +356 79305305** | 未查詢——營運人員 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **「Admin」（群組）** — *網路登錄列* | **ARIN OrgAdmin，代號 ADMIN1723-ARIN**，適用 AS12189 與 Secured Servers 131.153.0.0/16 物件 | **登錄聯絡人 — 群組帳號，未具名任何個人（GAP）** | **primary-record**（就其為群組帳號而言） | **ipadmin@phoenixnap.com · +1-480-422-2022 ·** 3402 E. University Dr. Suite 420, Phoenix AZ 85034 | 不適用 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **「IPADMIN」** — *網路登錄列* | **技術 POC，代號 IPADM294-ARIN**，位於 **Secured Servers LLC** 之 131.153.0.0/16 網路物件 | **登錄聯絡人 — 群組帳號（GAP）** | **primary-record** | **ipadmin@phoenixnap.com** | 不適用 | [ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0) |
-| **「Abuse」／「Tech」（群組）** — *網路登錄列* | **OrgAbuse ABUSE2349-ARIN 與 ABUSE1536-ARIN；NOC／support 群組 POC TECH357-ARIN** | **登錄聯絡人 — 群組帳號（GAP）** | **primary-record** | **abuse@phoenixnap.com · +1-480-422-2022**；**support@phoenixnap.com · +1-480-646-5362** | 不適用 | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **PeeringDB 聯絡人** — *網路登錄列* | — | **網路聯絡人（PeeringDB）— 完全未公布（GAP）** | **primary-record**（就其為空集合而言） | net 2932 之 `poc_set` 為**空**；紀錄最後更新 **2026-03-25**。無任何政策、技術或 NOC 個人聯絡人 | 不適用 | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932) |
-| **Marcus Bohn** | **Chief Legal Officer（法務長）**《主張值》 | 法務／任何主約或融資合約之關卡 | **aggregator-only — 低。** 未於任何 phoenixNAP 官方頁面獲得確認。**查證前不得於信件中使用此職稱** | **GAP** | **UNVERIFIED — 未查詢** | [RocketReach 管理層列表](https://rocketreach.co/phoenixnap-management_b5c0b21bf42e087f) |
-| **Cindy Anastasi** | **Human Resources Director（人資總監）**《主張值》 | 非採購 | **aggregator-only — 低** | **GAP** | **UNVERIFIED — 未查詢** | [RocketReach 管理層列表](https://rocketreach.co/phoenixnap-management_b5c0b21bf42e087f) |
-| **Frank Eickenhorst** | **VP, Support Services & Data Center Operations（支援服務與資料中心營運副總）**《主張值》 | 營運——影響機櫃、散熱與可維修性需求 | **aggregator-only — 低。** 未取得任何 phoenixNAP 官方確認 | **GAP** | **UNVERIFIED — 未查詢** | [Tracxn 側寫](https://tracxn.com/d/companies/phoenixnap/__mD8bU1wR9YlaxJnT-i3Qsq2RAnC6xvg1lhsYqyiFn0g) |
-| **Seow Lim** | **VP of Architecture and Platform（架構與平台副總）**《主張值》 | 技術架構——平台／BMC 設計權責 | **aggregator-only — 低** | **GAP** | **UNVERIFIED — 未查詢** | [Tracxn 側寫](https://tracxn.com/d/companies/phoenixnap/__mD8bU1wR9YlaxJnT-i3Qsq2RAnC6xvg1lhsYqyiFn0g) |
+| **Ira Ronald Cadwell**（公開署名：「Ron Cadwell」） | 亞利桑那登記身分為 **Manager（經理人）**；對外則以 **Founder & Chief Executive Officer** 名義出現 | **股東／登記機構幹部／高階主管——最終經濟核准人** | **corroborated**（經理人身分經鏡像站取得；ACC 官方入口有 CAPTCHA 阻擋且未被繞過） | **GAP — 查無直接公開信箱。** 公司主線 **+1-480-422-2022**，公布於 org PHOEN-56 之 ARIN Admin／Abuse POC 紀錄 · [LinkedIn](https://www.linkedin.com/in/ron-cadwell-0b747313b/) | **查無紀錄——明確之否定結論。** 姓氏「Cadwell」且捐款人州別為 **AZ** 的 **45 筆** FEC 個人捐款紀錄，已跨兩頁全數逐筆列舉（Sarah、Holli Cadwell Dunn、Jeremy、Colleen、Capri、Sara、Delores、Bess、Jon、Susan、Daphne、Thomas）——**沒有 Ira、Ron 或 Ronald**。全國性查詢「cadwell ira」／「cadwell ron」僅回傳無關的 **RONALD G. CADWELL**（加州，雇主 Kindred Healthcare）與 **RONALD CADWELL**（華盛頓州，無業） | [ACC 登記資料，檔號 L15102933，經 2026-08-11 更新之鏡像站](https://www.bizapedia.com/az/phoenix-nap-llc.html) · [Crunchbase](https://www.crunchbase.com/person/ron-cadwell) · [FEC — Cadwell, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=cadwell&contributor_state=AZ) |
+| **Stephanie Cadwell** | 亞利桑那登記身分為 **Manager（經理人）**；LinkedIn 自述為 **「Owner/partner at CWIE Holding Company, INC」** | **股東／登記機構幹部** | 經理人身分為 **corroborated**（經鏡像站取得之登記資料）；CWIE 角色為 **single-source，且屬自行發布** | **GAP** · [LinkedIn](https://www.linkedin.com/in/stephanie-cadwell-36ba8348/) | **無可確認之紀錄。** 「CADWELL, STEPHANIE」全國共有九筆 FEC 紀錄（WinRed，**加州**，職業 SELF／SELF-EMPLOYED，2020-07-19 至 2021-03-01，$0.50–$70.00），但全部在**加州**，無法與亞利桑那的登記經理人連結。以 Chula Vista 市過濾（流傳中唯一的地址線索）回傳 **0 筆**。**查無 AZ 紀錄** | [ACC 登記資料，檔號 L15102933](https://www.bizapedia.com/az/phoenix-nap-llc.html) · [LinkedIn](https://www.linkedin.com/in/stephanie-cadwell-36ba8348/) · [FEC — Cadwell, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=cadwell&contributor_state=AZ) |
+| **Ian McClarty** | **總裁（President，共同創辦人）** | **高階主管——資本支出核准人／高層贊助者。並非申報經理人**，其權限屬營運層級，在授權範圍內行使 | **primary-record**（九年間持續於供應商與公司新聞稿中具名受訪） | **GAP** — 查無直接公開信箱 · [LinkedIn](https://www.linkedin.com/in/mcclarty) | **查無紀錄——明確之否定結論。** FEC 個人捐款查詢，捐款人姓名「mcclarty」，捐款人州別 **AZ**，全部年度：**「Viewing 0 filtered results」** | [Supermicro 2017 案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf) · [2018 NVIDIA Tesla 新聞稿](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus) · [phoenixNAP RadiusDC 新聞稿，2026-03-17](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html) · [FEC — mcclarty, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=mcclarty&contributor_state=AZ) |
+| **William (Bill) L. Bell** | **產品執行副總（Executive Vice President of Products）**；在研討會資料中亦呈現為「VP of Product Development, Cloud & Enterprise」 | **技術決策者——掌握 SKU／平台決策。本帳戶最重要的一個名字** | 職務為 **primary-record**；CloudFest 2026 之確切職稱變體為 **single-source** | **確切位址為 GAP。** ZoomInfo 僅顯示遮罩型態 `w***@phoenixnap.com`。**不得將依 ARIN 命名規則推得的 `williamb@phoenixnap.com` 視為已確認——那是推論** · [LinkedIn](https://www.linkedin.com/in/williamb) | **未解決——明確「不是」查無紀錄。** 「Bell, William」過於常見，無法僅憑姓名查詢；用以區辨身分的雇主過濾查詢（contributor_employer ＝ phoenixnap／CWIE ＋姓名）**在 FEC 介面上連續五次卡住**，而 openFEC API 全程對 DEMO_KEY 限流。狀態：**已嘗試查詢，未解決** | [Supermicro 2017 案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf) · [2018 NVIDIA Tesla 新聞稿](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus) · [2026 年 3 月 RadiusDC 新聞稿](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html) · CloudFest 講者名單 · [openFEC](https://api.open.fec.gov/v1/schedules/schedule_a/) |
+| **Marcus A. Bohn** | Phoenix NAP, LLC 之**法定／登記代理人**；公司 USPTO 商標之 **Attorney of Record 與 Correspondent**；鳳凰城市 Phoenix NAP, LLC **具名遊說主事者**。資料商稱其為「Chief Legal Officer」——**任何申報文件皆未載明此職稱** | **登記機構幹部／高階主管——法務關卡** | 代理人／律師／遊說主事者身分為 **primary-record**；「Chief Legal Officer」職稱為 **single-source（資料商）** | **marcusb@cwie.net** — 同時公布於 USPTO TSDR **與**鳳凰城市遊說 PDF，屬公開合法管道 · **+1-480-467-2450**（電話**與**傳真，公布於 USPTO TSDR）· LinkedIn **GAP — 未能確定定位** | **查無紀錄——明確之否定結論。** FEC 個人捐款查詢，捐款人姓名「bohn marcus」，捐款人州別 **AZ**，全部年度：**「Viewing 0 filtered results」** | [USPTO TSDR sn 87396103](https://tsdr.uspto.gov/statusview/sn87396103) · [USPTO TSDR sn 90366571](https://tsdr.uspto.gov/statusview/sn90366571) · [ACC 登記資料](https://www.bizapedia.com/az/phoenix-nap-llc.html) · [鳳凰城市 2026 年登記客戶名單](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2026) · [FEC — bohn marcus, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=bohn+marcus&contributor_name=carmody+robert&contributor_state=AZ) |
+| **Danny Fuentes** | **VP of Information Systems, PhoenixNAP LLC** — 其本人的 FEC 申報記載職業 **「VP」**、雇主 **「CWIE」** | **高階主管／管理職——在建置佈署與資產管理面的技術相鄰影響者** | **corroborated**（LinkedIn 職稱 ＋ 一份顯示 VP／CWIE 的獨立聯邦申報） | **GAP** · [LinkedIn](https://www.linkedin.com/in/danny-fuentes-02b2189/) | **查有紀錄。** FUENTES, DANNY — Mesa, AZ 85212 — 職業 **VP** — 雇主 **CWIE** — **2026-02-18 捐款 $10.00** 予 **ACTBLUE**（C00401224），備註「EARMARKED FOR TALARICO FOR TEXAS (C00919084)」，申報於 Form 3X line 11AI。**本次調查中唯一能連結到 phoenixNAP 具名在職者的 FEC 紀錄** | [LinkedIn](https://www.linkedin.com/in/danny-fuentes-02b2189/) · [FEC — fuentes danny, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=fuentes+danny&contributor_state=AZ) |
+| **Robert Carmody** — *ARIN 登錄聯絡人列* | **ARIN 技術聯絡人（CARMO67-ARIN），PhoenixNAP** | **技術聯絡人——網路／IP 工程** | **primary-record**（登錄紀錄） | **robertca@phoenixnap.com** · **+1-480-506-0120** · 3402 E University Dr, Phoenix AZ 85034 · LinkedIn **GAP** | **查無紀錄——明確之否定結論。** FEC 查詢「carmody robert」搭配捐款人州別 **AZ** 回傳 **0 筆** | [ARIN POC CARMO67-ARIN](https://whois.arin.net/rest/poc/CARMO67-ARIN) — 登記與更新皆為 **2026-02-25**，亦即與 RadiusDC 交易同一時間窗建立 · [FEC](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=bohn+marcus&contributor_name=carmody+robert&contributor_state=AZ) |
+| **Brian Musgrave** — *ARIN 登錄聯絡人列* | **ARIN 技術聯絡人（MUSGR48-ARIN），PhoenixNAP** | **技術聯絡人——網路／IP 工程** | **primary-record**（登錄紀錄） | **brianmu@phoenixnap.com** · **+1-480-401-0309** · 3402 E University Dr, Phoenix AZ 85034 · LinkedIn **GAP** | **未解決——明確「不是」查無紀錄。** 全國性姓名查詢帶出數筆「MUSGRAVE, BRIAN」紀錄（WinRed 與 ActBlue），但**用以區辨亞利桑那本人所需的州別過濾查詢在 FEC 介面上逾時**。狀態：已嘗試查詢，未解決 | [ARIN POC MUSGR48-ARIN](https://whois.arin.net/rest/poc/MUSGR48-ARIN) — ARIN 登記 **2021-07-13**，紀錄更新 **2026-02-03** |
+| **Milos Ilic** — *ARIN 登錄聯絡人列* | **ARIN 技術聯絡人（ILICM-ARIN），PhoenixNAP — 塞爾維亞 Niš** | **技術聯絡人——海外工程。該 org 上*最新*的技術聯絡人** | **primary-record**（登錄紀錄） | **milosi@phoenixnap.com** · **+381 61 549 4754** · Blagoja Parovica, Niš 18000, Serbia · LinkedIn **GAP** | **不適用** — 非美國人士 | [ARIN POC ILICM-ARIN](https://whois.arin.net/rest/poc/ILICM-ARIN) — 建立於 **2026-04-06**，正值分割交易前後 |
+| **Adrian Montebello** — *ARIN 登錄聯絡人列* | **ARIN 技術聯絡人（MONTE41-ARIN），PhoenixNAP — 馬爾他 Santa Venera** | **技術聯絡人——EMEA 網路。該 org 上*在任最久*的具名技術聯絡人** | **primary-record**（登錄紀錄） | **adrianm@phoenixnap.com** · **+356 7930 5305** · Phoenix Business Center, Penthouse Level, Triq il-Ferrovija, Santa Venera SVR9022, Malta · LinkedIn **GAP** | **不適用** — 非美國人士 | [ARIN POC MONTE41-ARIN](https://whois.arin.net/rest/poc/MONTE41-ARIN) — ARIN 登記 **2014-04-24**，紀錄更新 **2026-05-08** |
+| **Dragan Petrovic** — *ARIN 登錄聯絡人列* | ARIN 技術聯絡人（**PETRO182-ARIN**），其登錄 `companyName` 欄位逐字寫著 **「CCBill EU」**，信箱卻是 @phoenixnap.com | **技術聯絡人——同時是所有權問題上最具證明力的單一登錄證據** | **primary-record**（登錄紀錄） | **draganp@phoenixnap.com** · 行動 **+381 62 144 8366** · 辦公室 **+356 77548965** · 16. Oktobra 23/60, Belgrade 11000, Serbia · LinkedIn **GAP** | **不適用** — 非美國人士 | [ARIN POC PETRO182-ARIN](https://whois.arin.net/rest/poc/PETRO182-ARIN) — ARIN 登記 **2025-07-07**。**CCBill EU 與 phoenixNAP 的人員重疊，就白紙黑字寫在登錄資料裡** |
+| **ARIN 職務帳號** — *登錄聯絡人列* | **ADMIN1723-ARIN**（OrgAdmin，「IP Admin」）、**ABUSE2349-ARIN**（OrgAbuse）、**TECH357-ARIN**（一般 Tech） | **登錄機構聯絡人——皆為職務帳號，未具名任何個人（GAP）** | **primary-record**（就「皆為職務帳號」此一事實而言） | Admin **ipadmin@phoenixnap.com**、+1-480-422-2022、3402 E University Dr Suite 420 · Abuse **abuse@phoenixnap.com**、+1-480-422-2022 · Tech **support@phoenixnap.com**、+1-480-646-5362 | 不適用 | [ADMIN1723-ARIN](https://whois.arin.net/rest/poc/ADMIN1723-ARIN) · [ABUSE2349-ARIN](https://whois.arin.net/rest/poc/ABUSE2349-ARIN) · [TECH357-ARIN](https://whois.arin.net/rest/poc/TECH357-ARIN) |
+| **PeeringDB 聯絡人** — *網路登錄列* | — | **網路聯絡人（PeeringDB）——未公開任何一位（GAP）** | **primary-record**（就「清單為空」此一事實而言） | net id **2932** 的 `poc_set` 為**空陣列**，`poc_updated` 凍結在 **2016-03-14**——已十年未動。Policy Selective、Heavy Outbound、500–1000 Gbps、10 個 IX、16 處設施。**所有 peering 或網路端接觸都必須改走上方 ARIN 代號** | 不適用 | [PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189)（PeeringDB org id 3061） |
+| **Michael (Mike) Krza** | **RadiusDC 執行長** — 亦即 phoenixNAP 現正承租之鳳凰城設施的**新所有權人** | **高階主管——交易對手／房東，非 phoenixNAP 幹部** | **corroborated** | **GAP** · [LinkedIn](https://www.linkedin.com/in/michael-krza-3b37637/) | **未執行** — 不在 phoenixNAP 本身具名主事者的範圍內 | 所有權見[馬里科帕郡估價官名冊](https://mcassessor.maricopa.gov/mcs/?q=3402+E+UNIVERSITY+DR)（RADIUS DC PHOENIX I LLC 現為 APN 122-03-089 之所有權人）；領導層資訊出自 RadiusDC 資料／The Org。此前曾任 Flexential 及其前身 ViaWest 之 COO 與 CFO |
+| **Joe Guerriero** | **RadiusDC 營運長兼法務長（COO and General Counsel）** | **高階主管——交易對手。將掌管 phoenixNAP 佔用 3402 E University Dr 之租約文件** | **single-source** — 公司自行發布之領導層資料，經搜尋摘要取得；**領導層頁面本身對直接抓取回傳 HTTP 404** | **GAP** · LinkedIn **GAP** | **未執行** | [radius-dc.com/leadership](https://www.radius-dc.com/leadership)（直接抓取回 404）／RadiusDC 成立時之報導。此前曾任 Flexential 與 ViaWest 法務長，最近則於 Alvaria Inc. |
+| **Mitch Coan** | **RadiusDC 財務資深副總（Senior Vice President of Finance）** | **高階主管——交易對手** | **single-source** | **GAP** · LinkedIn **GAP** | **未執行** | [radius-dc.com/leadership](https://www.radius-dc.com/leadership)。此前於 Zayo Group 任職七年，包含其 $143 億的私有化交易 |
+| **Cindy Anastasi** | **人力資源總監，phoenixNAP**（*出自資料商*） | 管理職 | **single-source — 僅資料商，未經任何一手紀錄查證** | **GAP** | **未解決** — 包含「anastasi」的 AZ 合併查詢在 FEC 介面上**逾時** | [Comparably 高階團隊頁](https://www.comparably.com/companies/phoenix-nap/executive-team)。**列出是為了不讓這個職位被無聲略過；已標示為弱證據** |
+| **Harold Winey** | **全球業務與行銷副總，phoenixNAP**（*出自資料商*） | 高階主管 | **single-source — 僅資料商，未經查證** | **GAP** | **未解決** — 包含「winey」的 AZ 合併查詢**逾時** | [Comparably 高階團隊頁](https://www.comparably.com/companies/phoenix-nap/executive-team)。查無任何佐證之新聞引述、申報文件或公司頁面。**若獲確認，將是 Bell 在商務端的對口** |
+| **Frank Eickenhorst** | **支援服務與資料中心營運副總，phoenixNAP**（*出自資料商*） | 高階主管 | **single-source — 僅資料商，未經查證** | **GAP** | **全國姓氏查詢查無「FRANK EICKENHORST」之紀錄**，且**亞利桑那州完全沒有任何 Eickenhorst 紀錄**。全國查詢帶出 James Steven、Jay、Daniel R、Danielle、Stephanie E、Kristin 與 Cheryl E Eickenhorst——**沒有一個在亞利桑那，也沒有一個叫 Frank**——對此人在此職位上的存在毫無佐證作用 | [Comparably 高階團隊頁](https://www.comparably.com/companies/phoenix-nap/executive-team) |
+| **James G. Busby Jr.** | **Phoenix NAP, LLC 之登錄律師**，亞利桑那州稅務法院 TX2024-000075 | **外部顧問（稅務律師）——非公司幹部** | **primary-record**（法院紀錄） | **GAP** — minute entry 中未公布 · LinkedIn 未定位 | 本次未查詢——**屬 GAP，不是「查無紀錄」** | [2026-05-21 歸檔之 minute entry](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)，承審法官 Hon. Erik Thorson，對造為亞利桑那州稅務局之 **Benjamin H. Updike** |
+| **Benjamin Graff**（Quarles & Brady LLP） | 於較早期鳳凰城市遊說登記上簽署、聲明 Phoenix NAP, LLC 為付酬客戶之人；土地使用與都市計畫律師 | **外部——受託事務所之簽署人。並非 phoenixNAP 幹部** | **primary-record**（市政申報） | Quarles & Brady LLP, 2 N. Central Ave. #3, Phoenix AZ 85004，**(602) 229-5696** | 不適用——外部律師 | [鳳凰城市年度遊說登記](https://lobbyist.phoenix.gov/PDF/Registration/40cc5ed5-fd5c-48d3-afd9-ae9b03dc7e62)，2023-07-24（2023 年度）與 2023-01-17（2022 年度）送件 |
 
-**FEC 各列之明確警語：** 上表所有「UNVERIFIED」皆代表**查詢遭速率限制或頁面未渲染任何資料**，**不代表查詢乾淨且結果為空**。`api.open.fec.gov` 在共用 DEMO_KEY 下每次都回 `OVER_RATE_LIMIT`，fec.gov 瀏覽介面只回搜尋表單、無資料列。**本案沒有任何一位主要人員實際完成篩查。不得將上列任何一筆記為「查無紀錄」。**
+### 4.2 登錄紀錄（Registry record）
 
-### 3.2 登錄紀錄（Registry record）
+涵蓋公司登記、聯邦商標登記、市政遊說登記，以及郡府不動產／動產名冊。**每一列 ACC 資料皆適用出處但書：** 該資料讀自**最後更新於 2026-08-11 之登記資料鏡像站**，不是 ACC 官方入口；官方入口有 CAPTCHA 阻擋，且**未被繞過**。
 
-請務必注意界線。**亞利桑那州公司委員會（Arizona Corporation Commission）——也就是唯一會列出幹部、經理人、成員、法定代理人與年報簽署人的公司登記機關——並未觸及。** 以下內容不是**網路號碼登錄機構**（ARIN），就是**亞利桑那州州務卿 UCC 登記簿**；後者屬登記機關性質之官方紀錄，但它是留置權索引，不是公司登記簿。
-
-| 名稱 | 身分 | 歸檔 | 歸檔日期 | 來源 |
+| 名稱 | 身分／權限 | 申報文件 | 申報日期 | 來源 |
 |---|---|---|---|---|
-| **未取得任何幹部紀錄** | 不適用 | **亞利桑那州公司委員會 — Arizona Business Center（前身 eCorp）商業搜尋。** 舊主機 `ecorp.azcc.gov` 回 **NXDOMAIN**；現行主機 `arizonabusinesscenter.azcc.gov` 對 curl 回 **HTTP 403**，於瀏覽器中則在釋出結果前跳出 **6 字元圖形 CAPTCHA**。`ecorptestonline.azcc.gov/EntitySearch` 雖有存活的到達頁，但所有搜尋路徑皆 404。**未取得年報、設立章程、經理人／成員名單、法定代理人或任何簽署人。** 德拉瓦州 `icis.corp.delaware.gov` **未觸及** | 嘗試日 **2026-08-10** | [arizonabusinesscenter.azcc.gov/businesssearch](https://arizonabusinesscenter.azcc.gov/businesssearch) |
-| **PHOENIX NAP, LLC** | **在案債務人**（亞利桑那州州務卿 UCC） | **18 筆 UCC-1 融資聲明**以 PHOENIX NAP, LLC 為債務人——全文見第 8 節。在案地址由 **2353 W. University Drive**（2014）→ **3402 E University Dr**（2022 起）→ **3402 E University Dr. Suite 420**（2026） | **2014-07-08 至 2026-07-22** | [AZ SOS UCC Lien Search](https://apps.azsos.gov/apps/ucc/search/) |
-| **SECURED SERVERS, LLC** | **2014–2026 年每一筆 BMO 授信之共同債務人**；同時是 **131.153.0.0/16 的 ARIN 登記人（代號 SSL-65）** | 於 16 筆 BMO 歸檔中列為共同債務人：201400214595、202200504921、202200505528、202400214184、202400278438、202400409257、202500024233、202500258880、202500298428、202500335016、202500404699、202500459045、202600027546、202600124616、202600124750、202600151100。地址 **2353 W UNIVERSITY DR, TEMPE, AZ 85281-7223** | 2014-07-08 至 2026-04-02 | [AZ SOS UCC](https://apps.azsos.gov/apps/ucc/search/)·[ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0) |
-| **CC PROPERTY INVESTMENTS, LLC** | **2014–2026 年每一筆 BMO 授信之共同債務人**（不動產／實體資產部門；縮寫 CC **可能**指 Cadwell——*屬推論，非歸檔記載*） | 與 Secured Servers 同樣出現在上述 16 筆 BMO 歸檔。地址 **2353 W UNIVERSITY DR, TEMPE, AZ 85281-7223** | 2014-07-08 至 2026-04-02 | [AZ SOS UCC](https://apps.azsos.gov/apps/ucc/search/) |
-| **PHOENIX NAP MANAGEMENT RESOURCES LLC** | **獨立債務人實體**，債權人 BMO Harris Bank N.A. | UCC 檔號 **201900069940**，新申報 2019-02-13，2023-12-26 續期，2029-02-13 到期。地址 **2353 W UNIVERSITY DR, TEMPE, AZ 85281** | 2019-02-13 | [AZ SOS UCC](https://apps.azsos.gov/apps/ucc/search/) |
-| **PhoenixNAP LLC** | **ARIN 組織代號 PHOEN-56** — AS12189 與 12 個網路物件之登記人 | ARIN 組織紀錄，3402 E. University Drive, Phoenix AZ 85034 | autnum 註冊 **2009-07-23**；最後異動 **2026-04-06** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·[ARIN RDAP entity PHOEN-56](https://rdap.arin.net/registry/entity/PHOEN-56) |
-| **Secured Servers LLC** | **ARIN 組織代號 SSL-65** — 131.153.0.0 – 131.153.247.255 之登記人，**技術聯絡人與 phoenixNAP 完全相同**。這是獨立於 UCC 之外、能證明兩者關係的證據 | ARIN 網路物件 | 2026-08-10 取得 | [ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0) |
+| **Ira Ronald Cadwell** | **Manager（經理人）** | 亞利桑那州公司委員會 — **Phoenix NAP, LLC**，本地有限責任公司，檔號 **L15102933**，狀態 **ACTIVE**。主營業地址 **3402 E University Dr Suite 420, Phoenix AZ 85034** | 實體申報於 **2009-03-04**；登記資料最後更新 **2026-08-11** | [ACC 登記資料](https://www.bizapedia.com/az/phoenix-nap-llc.html) |
+| **Stephanie Cadwell** | **Manager（經理人）** | 亞利桑那州公司委員會 — Phoenix NAP, LLC，檔號 **L15102933**。**名列第二位經理人**，同為 Suite 420 地址。**本帳戶先前歷次查核從未辨識出此人** | 登記資料最後更新 **2026-08-11** | [ACC 登記資料](https://www.bizapedia.com/az/phoenix-nap-llc.html) |
+| **Marcus Bohn** | **法定／登記代理人（Registered / Statutory Agent）** | 亞利桑那州公司委員會 — Phoenix NAP, LLC，檔號 **L15102933**。代理人地址 3402 E University Dr Suite 420, Phoenix AZ 85034 — **請注意他的遊說申報改用 Tempe 的 CCBill／CWIE 大樓 2353 W University Dr** | 登記資料最後更新 **2026-08-11** | [ACC 登記資料](https://www.bizapedia.com/az/phoenix-nap-llc.html) |
+| **Marcus A. Bohn** | 公司聯邦商標之 **Attorney of Record 與 Correspondent** | USPTO TSDR — **SECURED SERVERS** 序號 87396103／註冊號 5293238，及 **PHOENIX NAP** 序號 90366571／註冊號 6422118，權利人 Phoenix NAP LLC（亞利桑那 LLC）。信箱 **marcusb@cwie.net**，電話與傳真 **480-467-2450**。**在一份聯邦商標申報文件上出現 @cwie.net 信箱，是登記層級的 CWIE 集團關係證據** | Section 8 聲明 **2024-03-19** 提出、**2024-11-22** 獲准；通訊資料 **2025-01-28** 變更 | [USPTO TSDR sn 87396103](https://tsdr.uspto.gov/statusview/sn87396103) |
+| **Phoenix Data Intermediate Pledgor I, LLC** | **Radius DC Phoenix I, LLC 之 Member（登記在案之唯一主事者）** — 該實體現持有 phoenixNAP 原旗艦設施 | 亞利桑那州公司委員會 — Radius DC Phoenix I, LLC，**外州**有限責任公司，AZ 檔號 **25032212**，設立管轄 **德拉瓦州**。Member 地址 2401 E 2nd Ave Ste 400, Denver CO 80206-4735（RadiusDC 的丹佛據點） | 於 ACC 申報 **2026-03-13**；登記資料更新 **2026-08-06** | [ACC 登記資料 — Radius DC Phoenix I, LLC](https://www.bizapedia.com/az/radius-dc-phoenix-i-llc.html) |
+| **C T Corporation System** | Radius DC Phoenix I, LLC 之**登記代理人** | 亞利桑那州公司委員會 — Radius DC Phoenix I, LLC，檔號 **25032212**。代理人地址 3800 N Central Ave Suite 460, Phoenix AZ 85012-1992 | 申報於 **2026-03-13** | [ACC 登記資料 — Radius DC Phoenix I, LLC](https://www.bizapedia.com/az/radius-dc-phoenix-i-llc.html) |
+| **RADIUS DC PHOENIX I LLC** | 鳳凰城旗艦資料中心地號與相鄰開發地號之**登記所有權人** | 馬里科帕郡估價官不動產名冊：**APN 122-03-089, 3402 E UNIVERSITY DR, PHOENIX 85034**，分區 ALLRED SOUTHBANK，MCR 46809，COMMERCIAL；以及 **APN 122-03-005A, 3221 E ELWOOD ST**，分區 SOUTHBANK，VACANT LAND INDUSTRIAL（與已宣布之 DC2 建案相符）。**這是「鳳凰城設施現在歸誰所有」這個問題的郡府紀錄答案** | 於估價名冊上觀察日 **2026-08-11** | [馬里科帕郡估價官](https://mcassessor.maricopa.gov/mcs/?q=3402+E+UNIVERSITY+DR) |
+| **CWIE HOLDING CO INC** | phoenixNAP 旗艦地址之**營業用動產納稅義務人**——**兩個獨立帳戶** | 馬里科帕郡估價官營業用動產名冊，帳號 **9337591** 與 **9337607**，均位於 3402 E UNIVERSITY DR, PHOENIX 85034 — 與同址另一個獨立的 **PHOENIX NAP** 帳戶 **0006384** 並列。關聯實體 **CWIE MANAGEMENT RESOURCES LLC** 持有 APN 215-47-003M（7880 E Beck Ln, Scottsdale，WAREHOUSE），而 **CC PROPERTY INVESTMENTS LLC** 持有 APN 122-03-005B，即緊鄰 RadiusDC 土地的工業地號 | 於估價名冊上觀察日 **2026-08-11** | [馬里科帕郡估價官](https://mcassessor.maricopa.gov/mcs/?q=3402+E+UNIVERSITY+DR) |
+| **Phoenix NAP, LLC**（*主事者：Marcus A. Bohn*） | **鳳凰城市登記遊說客戶**——市政層級，非聯邦 | 鳳凰城市 Registered Lobbyist Clients 名冊。登記條目：**Marcus A. Bohn ／ Phoenix NAP, LLC ／ 2353 West University Drive, Tempe AZ 85281 ／ MarcusB@cwie.net** | **CY2025**（名單更新 2025-09-16）與 **CY2026**（名單更新 2026-07-13）之登記客戶 | [鳳凰城市 2026 年登記客戶](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2026) · [2025 年](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2025) |
+| **GAP — 受益所有權與出資額比例** | 無法取得 | 亞利桑那州**不要求 LLC 揭露股東或出資比例**，因此 ACC 檔案列出兩位經理人即為止 | 不適用 | **Cadwell 家族與任何 CWIE 實體之間的實際股權分配仍屬未知** |
 
-### 3.3 採購決策圈（Buying committee）
+### 4.3 採購決策圈（Buying committee）
 
-phoenixNAP 是一家**創辦人持有、公開資料中沒有具名財務長**的公司，並且以近乎每月一次的頻率透過兩家銀行融資買硬體。從技術驗證到簽核的路徑很短，但技術關卡是真的：自 2017 年以來每一個世代的矽晶，都是同一位產品執行副總在對外發言，而他就是決定下一代加速器是什麼的人。
+phoenixNAP 是一家**雙經理人的私有 LLC，且有一位有據可查、異常穩定的平台決策擁有者**。這裡的技術決策者不是推論——他連續九年在供應商文件中被具名引述談伺服器平台選型。**這讓接觸順序異常清楚，也讓「從最上面開始談」變成異常容易犯的錯。** 分割之後，**機隊就是公司本身**，因此每一個 SKU 決策都比以往更靠近這門生意的核心。
 
-| 姓名 | 為何對伺服器採購重要 | 接觸方式 |
+| 姓名 | 為何對伺服器採購具關鍵性 | 接觸方式 |
 |---|---|---|
-| **William Bell** — EVP of Products | **他就是那個決策。** 唯一橫跨四個硬體世代都被引述的高階主管：2017 年 Supermicro X11、2018 年 NVIDIA Tesla V100/P40、2023 年 HPE／Ampere、2025 年 HPE／Intel Xeon 6。他掌管執行個體型錄，所以下一個 GPU SKU 是什麼由他決定。他也公開把成本框定為限制條件——高成本不應阻礙創新與效能 | **從型錄切入，不要從公司切入。** 用兩個可查證的事實開場：`d3.g2.*` 自 2023 年底以來未曾更新；**現行 BMC 計費型錄中完全沒有任何 NVIDIA 或 AMD 加速器 SKU**。提出一份 Supermicro GPU 機箱的單機 TCO 模型，落在他自己已公開的 **$920–$1,778／月／台** 價格區間內。不要用產品簡報開場 |
-| **Ian McClarty** — President | 簽署供應商關係，並且是出現在供應商新聞稿裡的人。他在 **2017 年親自為 Supermicro 背書**，理由正是今天對一家多區域業者仍然關鍵的三件事：全球配銷網路、備品、現場服務團隊。他也是 RadiusDC 切割案中 phoenixNAP 的具名發言人，因此他掌握切割後的敘事 | **是重新啟動，不是冷接觸。** 把他自己 2017 年的判準原封不動講回去，然後問：後來變了什麼。誠實的問題是——**Supermicro 是在供貨與財務條件上、還是在產品上輸掉 2023–2025 這兩輪改朝換代**，因為兩個新世代都給了 HPE |
-| **Ron Cadwell** — Founder & CEO | 無外部股權的業主型經營者，公司以約 USD 70m EBITDA 對外行銷、第一輪出價突破 USD 1bn，而且剛把鳳凰城主機代管事業切出去。未來 12 個月任何數百萬美元等級的機隊承諾都是他點頭，而且現在這是**純裸機雲的資本決策**，不再是主機代管決策 | **不要第一個找他。** 等 Bell 驗證過組態之後再找，並且以資本效率的語言包裝：每台部署的美元成本、以及對照他自家公開牌價的回收月數——不是產品推銷 |
-| **Frank Eickenhorst** — VP Support Services & Data Center Operations **（職稱未經查證，僅資料商來源）** | 掌管 PHX／ASH／CHI／SEA／AMS／BEG／SGP 的可維修性、備品倉與 24×7 機房現場。2017 年的決定性因素明確是**全球配銷與替換零件**，不是規格表 | **帶物流答案去，不要帶運算答案去：** 各區 RMA 週轉時間、AMS／BEG／SGP 的備品倉覆蓋、機櫃整合方案。**使用職稱前先確認** |
-| **Robert Carmody／Brian Musgrave** — 具名 ARIN 技術聯絡人 | 真實、自行公開、有直撥電話的工程師。他們**不是**買方，但卻是通往「誰在規格化 GPU 節點」最快且可驗證的路徑，而且一通電話就能知道 Max 1100 機隊是否正在更新 | **一通資格確認電話，不推銷。** 這是網路／IP 聯絡人，把提問限縮在窄而技術的範圍，然後轉交產品組織 |
-| **Marcus Bohn** — Chief Legal Officer **（未經查證，僅資料商來源）** | 只在後段相關。**BMO Bank N.A. 持有一組滾動式設備融資聲明**，因此任何新硬體採購都必須對照或並行於該授信額度立約 | **不要直接接觸。** 預期他會在主約階段出現；鑑於 BMO 的歸檔，請預先準備債權人同意與債權人間協議（intercreditor）條款 |
+| **William (Bill) L. Bell** — EVP of Products | **連續九年有據可查的平台選型代言人，也是 Supermicro 唯一曾經引述、說明為何選擇某一世代伺服器的 phoenixNAP 高階主管。** 分割後他們賣掉不動產、留下 Bare Metal Cloud 與網路——機隊就是這門生意。**如果這個帳戶要贏或要輸，就發生在這裡** | **以特定型錄產品線的每 rack-U、每瓦 SKU 經濟性開場，不要用公司能力簡報開場。** 他講的是節點密度、DIMM 數量與每節點 NVMe。最自然的開場是**他自家型錄裡那個已掛著待發、卻始終未標價的 GPU SKU**（第 7、8 節）——直接問卡在哪裡，不要繞著它推銷。**不要猜他的信箱**；經 LinkedIn，或請 ARIN 技術聯絡人引介 |
+| **Ian McClarty** — 總裁 | **高層贊助者與資本支出核准人**，也是 RadiusDC 交易雙邊的發言人。**他並非本 LLC 的申報經理人**，因此他是在授權範圍內核准，而不是自己擁有這筆錢——這意味著**任何大額承諾都需要 Cadwell 兩位經理人在後面撐** | **第二次會議，在 Bell 完成平台驗證之後。** 論述框架應圍繞他自己已公開表述的分割後策略——聚焦、隨選基礎設施——而不是硬體 |
+| **Ira Ronald Cadwell** — 申報經理人兼創辦人／執行長 | **現已確認為 Phoenix NAP, LLC 的申報經理人，不只是新聞稿上的創辦人。** 他是集團層級資本承諾的最終經濟核准人 | **僅限高層對高層，且必須在 Bell 完成技術認可之後。不要從這裡開場。** 請注意他的法定姓名是 **Ira Ronald Cadwell**——任何文件上都要寫對 |
+| **Stephanie Cadwell** — 申報經理人；CWIE Holding Company 之 Owner/Partner | **第二位申報經理人，也是通往 CWIE 所有權方最清楚的人脈連結。** 任何需要股東／經理人層級授權的承諾，合理推斷都需要她與 Ira Cadwell 一起點頭。**她在本帳戶歷次查核中始終不曾出現，這正是她重要的原因** | **不要直接接觸。** 知道她存在、知道她要簽字，並**確保呈給 Bohn 的交易結構，是兩位經理人不必重新談判就能核准的結構** |
+| **Marcus A. Bohn** — 登記代理人、Attorney of Record、遊說主事者 | **法務關卡**：ACC 檔案上的法定代理人、商標的 Attorney of Record，以及 2025 與 2026 年仍有效之鳳凰城市遊說登記的具名主事者。他將主導 MSA、保固條款與任何融資或租賃文件。他同時也是對**設備在亞利桑那交易特權稅（TPT）下如何被認定**最敏感的一方 | **不要從這裡開場，但要預期他一定會出現在文件端，並事先準備。** 一個能讓所有權歸屬乾淨、且明確記載為**購置自有資產而非租賃**的交易結構，在他們目前的稅務處境下是真實且非顯而易見的價值點。已公開管道：**marcusb@cwie.net**、**+1-480-467-2450**（兩者皆出自 USPTO 紀錄） |
+| **Danny Fuentes** — VP of Information Systems | **新辨識出的副總層級內部系統負責人**，其本人的聯邦申報將雇主填為 **CWIE**。內部系統副總通常掌管佈建、映像檔、監控與資產管理整合——**這些正是決定一次機隊汰換在營運上成或敗的環節** | **技術相鄰的影響者，不是簽核者。** 用來在 Bell 自己必須提問之前，先驗證擬議平台是否吻合他們的佈建與管理堆疊 |
+| **Robert Carmody 與 Brian Musgrave** — ARIN 技術聯絡人，鳳凰城 | 兩位都是該 org ARIN 紀錄上**自行登錄、可電話聯繫的鳳凰城工程師**，而且 **Carmody 是在 2026 年 2 月、交易宣布的當下才被加入**。實際上架、佈線、配址機隊的就是他們 | **具公開直撥號碼的正當技術切入點**（+1-480-506-0120／+1-480-401-0309）。用於由下而上探明實際正在佈署的內容，再把這份情報帶進與 Bell 的對話。**不要試圖對他們推銷** |
+| **Mike Krza** — RadiusDC 執行長（*房東，不是客戶*） | **馬里科帕郡名冊上，RADIUS DC PHOENIX I LLC 現為 3402 E University Dr 的登記所有權人。** phoenixNAP 想在鳳凰城增加的任何空間、電力或密度，如今都**由一位房東把關**，而該房東自己有 8 MW 的 DC1 擴建與 18 MW 的 DC2 計畫 | **獨立關係、獨立動作，不要混為一談。** 但任何涉及在鳳凰城據點大幅增加電力的 phoenixNAP 提案，都應與 RadiusDC 已公開承諾交付的內容與時程相互檢核 |
 
-### 3.4 未能具名之職位——每一項皆為 GAP
+### 4.4 未能具名之職位——每一項皆為 GAP
 
-**GAP — 完全未識別出 CFO／財務副總／財務主管。** 對一家幾乎每月透過兩家銀行融資買機隊的公司而言，這是本採購決策圈最大的破口。任何供應商新聞稿、產業媒體報導、資料商列表或官方歸檔中都沒有這個名字。·**GAP — 沒有任何採購、供應鏈或供應商管理的具名人員。**·**GAP — 沒有具名的 CTO 或工程副總**；公開存在的最高技術職稱就是 EVP of Products。·**GAP — 根本沒有領導層頁面**：`phoenixnap.com/company/leadership` 回 HTTP 404，沒有官方名冊可用。·**GAP — 在案幹部、經理人、成員與法定代理人**：亞利桑那州公司委員會搜尋受 CAPTCHA 阻擋，**本檔不解 CAPTCHA**；OpenCorporates 與 Bizapedia 亦遭封鎖。·**GAP — PHOENIX NAP, LLC 之年報簽署人與歸檔沿革。**·**GAP — 四位次要高階主管（Bohn、Anastasi、Eickenhorst、Lim）僅有資料商來源**，無任一由 phoenixNAP 官方頁面確認。·**GAP — Stephanie Cadwell 是否擔任任何營運職務**，甚至連姓氏拼法都未定（有來源寫成「Caldwell」）。·**GAP — USPTO 宣誓書簽署人、通訊代理人與代理律師**：搜尋結果顯示 Phoenix NAP L.L.C. 至少持有 **SECURED SERVERS**（序號 87396103）與 **HAAS**（序號 85655621），但 `tsdrapi.uspto.gov` 現回 **HTTP 401**（需註冊 API key）、`tmsearch.uspto.gov` 回 **HTTP 405**、`uspto.report` 回 **403**——**未從任何一手來源取得所有權人地址、簽署人、申請或展延日期**。·**GAP — phoenixnap.com 之歷史 WHOIS 登記人**：whoisrequest.com 回 Cloudflare 403，whoxy／securitytrails 需付費金鑰，因此僅有現行且已隱私保護的 RDAP 紀錄。·**GAP — 唯一查得之徵才啟事中無具名招募主管或招募人員。**
+**GAP — CFO／財務副總／財務主辦／司庫：** 任何申報文件、名冊、新聞稿、求職網站或資料商中皆查無姓名。**這是最顯眼的一個空缺，而且很重要——一家分割後手握出售價金的公司，此刻正有一個財務職能在做資本配置決策。** · **GAP — CTO／工程副總／首席架構師：** 查無姓名。公開存在的最高技術職稱是 **EVP of Products**（Bell）。某份資料商摘要提到一位未具名的「Chief Information Officer (T.T.)」與「VP of Architecture and Platform (S.L.)」，**僅有縮寫，不算名字，未予採用**。 · **GAP — 採購／採購主管／供應商管理／尋源負責人：** 任何申報文件、名冊、求職網站結果或資料商中皆無此職稱；**採購權限看起來是直接走產品部門與總裁，而非獨立職能**。 · **GAP — 資料中心營運招募主管：** 已確認鳳凰城有一則 Data Center Technician 職缺存在，但任何求職平台上都**未公布主管姓名、未公布「reports to」、未公布招募人員姓名**。 · **GAP — Section 8 商標聲明之簽署人：** 代理人與 correspondent 現已確知（Marcus A. Bohn），但實際簽署者需調閱申報文件影像，而 **TSDR 的 document／bulk API 現已要求註冊之 USPTO API 金鑰**。 · **GAP — phoenixnap.com 隱私遮罩之前的歷史 WHOIS 登記人**——正是能顯示該網域最初是否由 CWIE／CCBill 實體持有的關鍵資料。所有免費路徑皆遭阻擋（見 4.5）。僅取得現行 Verisign RDAP 紀錄：建立 **2009-02-26T18:04:14Z**，到期 2027-02-26，最後異動 2026-01-27，註冊商 NameCheap（IANA 1068）。 · **GAP — 經理人層級以下之受益所有權與出資額：** ACC 檔案列出兩位經理人，但**亞利桑那州不要求揭露股東／出資比例**，因此 Cadwell 家族與任何 CWIE 實體之間的實際股權分配未知。 · **GAP — 馬爾他與塞爾維亞營運據點之境外登記申報：** 由 ARIN 可證實員工登記於 Santa Venera（馬爾他）與 Niš／貝爾格勒（塞爾維亞），但**未取得任何馬爾他或塞爾維亞公司登記文件**。 · **GAP — William L. Bell 的確切電子郵件：** ZoomInfo 僅顯示遮罩型態 `w***@phoenixnap.com`；**依 ARIN 規則推得的位址已刻意不予採用**。 · **GAP — Marcus A. Bohn、Robert Carmody、Brian Musgrave、Milos Ilic、Adrian Montebello、Dragan Petrovic、Joe Guerriero 與 Mitch Coan 之 LinkedIn 網址**——未能定位。 · **GAP — WebHostingTalk、LowEndTalk、Reddit 或 Hacker News 上經查證之員工帳號及其真實姓名：** 已搜尋，**未浮現任何可查證者**。只有第三方討論 phoenixNAP 的串，沒有任何可辨識的員工帳號。 · **GAP — 2025–2026 年 NANOG、SC、GTC、DataCenter World 或 HostingCon 上具名 phoenixNAP 員工的講者簡介：** 僅找到一則與 Bell 有關的 **CloudFest 2026 論壇引用**，**未取得任何講者簡介頁**。 · **GAP — TX2024-000075 以外之法院案卷，以及載有 secured party／debtor 簽署人的 UCC-1 申報：** 本次未執行 PACER、聯邦案卷或亞利桑那州州務卿 UCC 查詢。 · **GAP — RADIUS DC PHOENIX I LLC 取得 APN 122-03-089 之產權移轉文件編號、登記日期與對價：** 估價名冊顯示所有權人已變更，但**馬里科帕郡地政事務所之產權移轉文件本身並未調閱**，因此交割日期與價格仍屬未知。 · **GAP — phoenixNAP、CWIE 或 CCBill 之公司 PAC：** FEC 委員會名稱查詢**始終未回傳**（介面卡住、API 限流）。403 筆員工紀錄的受贈對象型態*暗示*其不存在，但**未經證明**。 · **GAP — William L. Bell、Brian Musgrave、Adrian Montebello 與 Cindy Anastasi 之 FEC 狀態：** 已嘗試查詢，但**逾時或無法區辨身分**。明確**不得**記為「查無紀錄」。 · **GAP — 3492 E University Dr 的「Cadwell, Rockridge」是否與 phoenixNAP 經理人有關：** 該亞利桑那州級申報本身是真實的一手資料，但**身分連結並未確立**。
 
-### 3.5 已實際查詢之來源——含「查無」者
+### 4.5 已實際查詢之來源——含「查無」者
 
-**有產出者。** **[ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)** 是本檔在「人」這個面向上產出最高的單一來源——回傳完整紀錄外，還附上**六位具名技術與管理聯絡人，含電子郵件與直撥號碼**。**[ARIN RDAP entity PHOEN-56](https://rdap.arin.net/registry/entity/PHOEN-56)** 回傳 12 個網路物件。**[ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0)** 獨立於 UCC 之外證明 Secured Servers LLC 屬 phoenixNAP 體系。**[AZ SOS UCC Lien Search](https://apps.azsos.gov/apps/ucc/search/)** 以真實瀏覽器操作，回傳**全部 20 筆歸檔**與所有債務人、擔保權人資料。**[Supermicro 2017 年案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)**——因環境無 pdftotext，係以手動解壓 PDF content stream 取得——提供了兩位高階主管引述與歷史機隊內容。**[New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/)** 與 **[ION Analytics／Infralogic](https://ionanalytics.com/insights/infralogic/goldman-run-sale-for-colo-firm-slated-for-early-2025/)** 提供所有權與創辦人組合。**[CourtListener REST v4](https://www.courtlistener.com/)** 回傳 17 件案卷（僅 metadata，見第 14 節）。
+**有產出者。** **ARIN Whois REST** 是本帳戶最豐富的人員來源：`autnum 12189` **確認**了 phoenixNAP（org PHOEN-56「PhoenixNAP LLC」，登記於 2013-03-07）；`org PHOEN-56` 回傳 org 紀錄（3402 E. University Drive，更新於 2026-04-06，自營 rwhois 於 rwhois.phoenixnap.com:4321）與 **8 個 POC 代號**的完整清單；8 筆 POC 紀錄全數讀取，取得**五位具直接信箱與直撥電話的真實具名人員**（Musgrave、Ilic、Montebello、Petrovic、Carmody）加三個職務帳號，其中**兩位 POC 是前一版之後新增的**；`org PHOEN-56 nets` 回傳 **12 筆 IPv4／IPv6 資源**——64.38.220.0/22（PNAP-01）、104.244.52.0/22（PNAP-03）、144.90.0.0/16、192.240.192.0/18、69.160.32.0/20、103.67.200.0/22、125.253.64.0/18、199.201.104.0/21（SC-ASH）、23.235.242.0/24 與 23.235.243.0/24（PHOENIXNAP），以及 IPv6 2607:3000::/32（SECURED-CLOUD）與 2607:6000::/32（PHOENIXNAP-V6）。 · **ARIN `autnum 23033`** 產生了第 3 節的**更正**：該 ASN 屬於 Wowrack.com（WOWTEC-1），不是 phoenixNAP。 · **以 Bizapedia 作為 ACC 登記資料鏡像**是**本次的突破口**：檔號 L15102933，2009-03-04 申報，ACTIVE，主營業地址 3402 E University Dr Suite 420，法定代理人 MARCUS BOHN，以及**兩位經理人——IRA RONALD CADWELL 與 STEPHANIE CADWELL**，另附完整商標組合與註冊號、有效／失效狀態；第二次查詢回傳 **Radius DC Phoenix I, LLC**（AZ 外州 LLC 25032212，德拉瓦州設立，代理人 C T Corporation System，唯一 Member 為位於丹佛的 Phoenix Data Intermediate Pledgor I, LLC）。 · **馬里科帕郡估價官地號查詢**是**本次單一價值最高的來源**：RADIUS DC PHOENIX I LLC 持有 APN 122-03-089（旗艦）與 APN 122-03-005A；CC PROPERTY INVESTMENTS LLC 持有相鄰的 122-03-005B；CWIE MANAGEMENT RESOURCES LLC 持有一處 Scottsdale 倉庫；營業用動產名冊則顯示 **CWIE HOLDING CO INC（兩個帳戶）與 PHOENIX NAP 並列**於同一旗艦地址。 · **USPTO TSDR statusview** 對序號 **87396103** 與 **90366571** 回傳 Marcus A. Bohn 的完整律師／correspondent 紀錄，含 **marcusb@cwie.net** 與 480-467-2450，兩件商標皆在 **Supplemental** register。 · **參議院 LDA API** 對六種客戶名稱變體回傳乾淨、明確的**零**。 · **鳳凰城市遊說登記** — CY2025 與 CY2026 的 Registered Clients 名冊 PDF 已下載並解析，另加一份登記明細 PDF。 · **FEC 資料瀏覽器**產出四項明確否定（mcclarty/AZ、bohn marcus/AZ、carmody robert/AZ、cadwell/AZ 全 45 筆）、一項**命中**（fuentes danny/AZ），以及雇主為「CWIE」／AZ 的 403 筆彙總。 · **FEC 委員會紀錄** C00919084 與 C00401224 回傳完整委員會明細。 · **亞利桑那 SeeTheMoney** — 直接下載並解析了一份公開報表 PDF。 · **forebears.io** 對 Yee、Childress、Talarico、Lee、Gilmer、DeBergalis 與 Wallace 的姓氏頁皆回傳語源、出現數與分布（須用 WebFetch；直接 curl 無內容，因頁面為 JS 渲染）。 · **Verisign RDAP** 對 phoenixnap.com 僅回傳現行紀錄。 · **LinkedIn 公開個人頁**取得 Ian McClarty、William Bell、Ron Cadwell、Stephanie Cadwell、Danny Fuentes 與 Michael Krza 的可用網址。
 
-**有觸及但在「人」的面向查無者。** **[PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)** 網路面資料完整，但 **`poc_set` 為空**——未公布任何個人聯絡人。**`phoenixnap.com/company/leadership`** 回 **HTTP 404**——不存在領導層頁面。**ZipRecruiter 與 Indeed** 僅回一則鳳凰城 Data Center Technician 職缺（$21–30/hr），**無具名招募主管**。**`api.open.fec.gov`** 每次都回 `OVER_RATE_LIMIT`，因此**沒有任何主要人員完成篩查**。
+**已觸及但在人員面查無者。** **PeeringDB**（`net?asn=12189`、`org?name_search=phoenixnap`）——`poc_set` 為空陣列，`poc_updated` 凍結在 2016-03-14，org 紀錄地址欄位全空；**確認為硬性否定**。 · **phoenixnap.com/company/leadership** 與 **/about-us** — **兩者皆 HTTP 404**；該公司在最顯而易見的網址上根本沒有發布領導層頁面，這本身就是一項發現。 · **radius-dc.com/leadership** — 直接抓取回 **HTTP 404**，因此 Krza、Guerriero 與 Coan 只能以來自新聞報導的 single-source 信心度呈現。 · **Bizapedia 之 CWIE Holding Company, Inc. 頁面** — 連續四次嘗試（含強制重新載入）都**停在「Performing a quick security check」的過場畫面**，因此 **CWIE 母公司自身的幹部仍未讀取**。 · **馬里科帕郡估價官地號明細頁與 JSON API** — `/parcel/122-03-089` 呈現空白，`/mcs/122-03-089/` 回 404，JSON API 需要 AUTHORIZATION token，因此**產權移轉文件編號、成交日與對價皆未取得**。 · **網路搜尋** WebHostingTalk／LowEndTalk／Reddit／HN 員工帳號、研討會講者簡介（NANOG、CloudFest、DataCenter World、HostingCon、SC、GTC），以及帶有具名招募主管或「reports to」的職缺——**全部沒有可用結果**；ziprecruiter／Indeed 上確實有一則鳳凰城 Data Center Technician 職缺，但無主管、無招募人員、無回報線。 · 一般性高階主管搜尋帶出 **Danny Fuentes** 這個真正的新名字，以及僅出自資料商的 **Cindy Anastasi、Harold Winey 與 Frank Eickenhorst**，三者皆無法對照任何一手紀錄取得佐證。
 
-**遭封鎖者及原因。** **亞利桑那州公司委員會**——對 curl 回 HTTP 403，瀏覽器中出現 **6 字元圖形 CAPTCHA**；本檔不解 CAPTCHA，因此這是硬停止，不是疏漏。**`ecorp.azcc.gov`**——DNS **NXDOMAIN**，入口已退役。**OpenCorporates**——HAProxy CAPTCHA。**Bizapedia**——security check。**opengovus.com** 亞利桑那鏡像——HTTP 404。**所有 USPTO 端點**——401／405／403／連線失敗。**whoisrequest.com**——Cloudflare 403。**[mcassessor.maricopa.gov](https://mcassessor.maricopa.gov)**——結果表格由 AJAX 載入，`/mcs/api/` 端點在無授權 token 時只回 HTML 外殼，因此**兩處 University Drive 地址皆未取得任何地號、APN、估價或登記文件**。
+**受阻或未觸及者及其原因。** **亞利桑那州公司委員會** — 於真實瀏覽器工作階段中以 Business ID L15102933 查詢 arizonabusinesscenter.azcc.gov 的 Business Search：**遭圖形字元 CAPTCHA 阻擋**（「User validation required to continue」）。**未破解、未繞過，符合政策。** 舊主機 ecorp.azcc.gov 回傳連線失敗（DNS／主機已失效）。 · **ACC API** — 自該站自家 Angular bundle 取出的端點（`businesssearch/public-search`、`businesssearch/get`、`businesssearch/getbyidasync`）全數回傳 **HTTP 401「Authentication Failed」**；並請注意該 API 自身的路由名稱包含 `getcaptchafilinglist` 與 `getcaptcharegisteragenthistory`，亦即**申報歷史在設計上就是 CAPTCHA 控管的**。 · **OpenCorporates** `us_az/L15102933` — **HAProxy CAPTCHA 過場**，未繞過。 · **openFEC API**（DEMO_KEY）— **整段作業期間每一次呼叫都回傳 `{"error":{"code":"OVER_RATE_LIMIT"}}`**：依姓名的 schedule_a、依雇主的 schedule_a，以及委員會名稱 typeahead 皆然。**要完成雇主端的 FEC 工作，必須改用已註冊的 api.data.gov 金鑰。** · **FEC 資料瀏覽器，雇主「phoenixnap」／「phoenix nap」** — **反覆逾時**，三種網址變體共六次嘗試全部卡在「Loading…」；**記為「已嘗試查詢，未解決」**。 · **FEC 資料瀏覽器，含 musgrave／montebello／anastasi／winey 的 AZ 合併查詢** — **逾時**。 · **FEC 委員會瀏覽器** `q=phoenixnap／cwie／ccbill` — **逾時，從未回傳**；公司 PAC 問題未解決。 · **USPTO TSDR JSON API**（tsdrapi.uspto.gov）— **HTTP 401，現已要求 API 金鑰**；tmsearch.uspto.gov POST 回 HTTP 405 MethodNotAllowed。**因此聲明簽署人仍為 GAP。** · **馬里科帕郡地政事務所** — **未觸及**；RadiusDC 取得產權之移轉文件仍未調閱。 · **whoisrequest.com/history/phoenixnap.com** — WebFetch 回 HTTP 403，於瀏覽器中則顯示「Page not found!」。 · **whoxy.com/phoenixnap.com** — **遭「I'm not a Robot」機器人偵測攔截；未繞過，符合政策。** · **azfollowthe.money** — HTTP 403。 · **亞利桑那 SeeTheMoney 搜尋入口** — 卡在 Cloudflare 過場（但報表 PDF 仍直接取得）。 · **OpenSecrets** — 對自動化請求回 Cloudflare HTTP 403，與前一版一致；不過既然聯邦 LDA 申報已確認為**零**，OpenSecrets 的遊說檔案本來就應該是空的。 · **德拉瓦州公司司** — 對 Phoenix NAP LLC **未查詢**，因其為亞利桑那本地 LLC，本就不應有德拉瓦檔案；但德拉瓦**確實**經由 Radius DC Phoenix I, LLC 的亞利桑那外州 LLC 申報，確認為該公司的設立管轄。 · **法院案卷與 UCC-1 申報** — 本次未執行；**這是尋找幹部簽署人的一條真正未開發路徑**。
 
-**在不驚動客戶的前提下，補齊幹部缺口的最佳中性做法：** 透過 **AZ SOS／ACC 臨櫃或電話**調閱亞利桑那州公司委員會的實體紀錄，並與第 8 節所述之 **UCC-11 認證影本**一併辦理——同一趟即可同時補上幹部缺口與擔保品缺口。
+**在不驚動公司的前提下、補齊其餘缺口的最佳中性路徑：** 調閱 APN 122-03-089 的**馬里科帕郡地政事務所產權移轉文件**。單這一份文件就能確定 RadiusDC 的交割日期與對價，而其簽署欄很可能是 phoenixNAP 一方授權簽署人姓名最可能的公開來源——那是最後一個不必接觸公司就能補上的幹部等級缺口。
 
 ---
 
-## 4. 據點與機房
+## 5. 據點與機房
 
-以下有六處是現行 Bare Metal Cloud 型錄中的**計費區域**（PHX、ASH、NLD、SGP、CHI、SEA），其餘為網路節點。這個區別比據點總數重要得多，因為只有計費區域才吃得下新的伺服器 SKU。
+十六處網路設施中，只有六處提供**已標價的 Bare Metal Cloud 運算資源**；其餘十處是網路 PoP，**不是伺服器採購標的**。這個區分比設施總數重要得多。
 
-| 據點 | 設施營運者 | 自有／租用 | 面積／電力（僅列已公開者） | 證據 |
+| 站點 | 機房營運商 | 自有／租用 | 面積與電力（僅列已公布者） | 證據 |
 |---|---|---|---|---|
-| **鳳凰城 AZ — 3402 E University Drive（DC1，旗艦＋總部）** | 自 2010 年起由 phoenixNAP 自建自營。**正出售予 RadiusDC** — 2026-03-12 宣布，預計 2026 年 Q2 交割。**phoenixNAP 續留為承租戶** | **自有**（廠房於 **2009 年以 USD 6.3m 購入**）→ RadiusDC 交割後**轉為租用／承租戶**。不動產持有與 **CC PROPERTY INVESTMENTS, LLC** 出現在每一筆 BMO 授信中的共同債務人身分一致 | **約 200,000 平方英尺**，2010 年啟用。RadiusDC 規劃將現有設施擴充至 **8 MW IT 負載**，並增建第二棟（DC2）最高 **18 MW**，園區合計 **約 26 MW**，DC2 首期自 **2028 上半年**起。*（注意：既有建物目標為 8 MW，反推目前實際佔用 IT 負載遠低於 8 MW。）* | [PRNewswire，2026-03-12](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html) — 收購範圍含主機代管設施、互連基礎設施與園區開發權；**phoenixNAP 約 80% 全球業務仍在獨立所有權下持續營運，明確包含 Bare Metal Cloud 與網路平台**。顧問：RadiusDC 方為 J.P. Morgan＋Gibson Dunn＋Snell & Wilmer；**phoenixNAP 方為 BofA Securities＋Cleary Gottlieb**。[PeeringDB netfac_set](https://www.peeringdb.com/api/net/2932) 亦列有「PhoenixNAP, Phoenix US」 |
-| **Ashburn, VA** | **第三方** — Equinix DC1–DC15／DC21–DC22 與 **DataBank Ashburn（IAD1）** | 租用／代管 | **GAP** — 未公開 | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)。**ASH 為完整 BMC 區域**：包含三個 GPU SKU 在內的所有伺服器 SKU 均對 ASH 定價（[現行型錄](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)） |
-| **Chicago, IL** | Equinix **CH3**，Elk Grove Village | 租用／代管 | **GAP** | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)；**CHI 為含 GPU SKU 之計費 BMC 區域** |
-| **Seattle, WA** | Equinix **SE2／SE3** | 租用／代管 | **GAP** | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)；**SEA 為含 GPU SKU 之計費 BMC 區域** |
-| **Amsterdam, NL** | **Iron Mountain Data Center — Amsterdam（AMS-1）** | 租用／代管 | **GAP。** phoenixNAP 自家據點頁將阿姆斯特丹稱為其**第二座資料中心**（相對於網路節點），亦即完整服務據點 | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)·[phoenixNAP 據點頁](https://phoenixnap.com/global-it-services/locations)；**NLD 為含 GPU SKU 之計費 BMC 區域** |
-| **Singapore** | Equinix **SG1** 與 Equinix **SG3** | 租用／代管 | **GAP** | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)；**SGP 為含 GPU SKU 之計費 BMC 區域** |
-| **Belgrade, Serbia** | **Cetin Data Center** | 租用／代管 | **GAP。** 同時是**工程據點**——兩位具名 ARIN 技術 POC 使用 +381 號碼 | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)·[ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **Atlanta, GA** | **Digital Realty ATL13** | 租用／代管 | **GAP。注意：** ATL 同時出現在據點清單*與* 2017 年 Supermicro 案例研究中，但在現行型錄中**不是計費 BMC 區域**——僅為網路節點 | [PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)；未出現在六個 BMC 定價區域中 |
-| **洛杉磯 CA·法蘭克福 DE·馬德里 ES·米蘭 IT·華沙 PL·雪梨 AU** | Equinix **LA1**、**FR7**、**MD2**、**ML2**、**WA1**、**SY1/SY2** | 租用／代管——**網路節點** | **GAP** | [PeeringDB netfac_set](https://www.peeringdb.com/api/net/2932)（合計 16 個據點）。phoenixNAP 自家[據點頁](https://phoenixnap.com/global-it-services/locations)將其描述為網路節點而非資料中心，同列的還有**聖保羅、赫爾辛基、索菲亞與台北**，這些地點**未登錄任何 PeeringDB 設施** |
+| **鳳凰城 — 3402 East University Drive, AZ 85034（「PHX」，旗艦兼總部）** | **由 phoenixNAP 自建自有。** 自 2026 年 3 月起**正被出售給 RadiusDC**（IPI Partners 設立之平台；執行長 **Mike Krza**） | **自有 → 2026 年第二季轉為租用／承租方。這是本帳戶最重要的單一結構性變化** | 約 **200,000 平方英尺**，2010 年啟用；該不動產據報於 2009 年以 **$6.3M** 購入；報導稱約 **20 MW，並擴充至 25 MW**。RadiusDC 自家新聞稿則描述 **DC1 擴充至 8 MW 總 IT 電力**，並規劃 **DC2 達 18+ MW**（首批階段 2028 上半年），最終形成約 **26 MW** 的 Phoenix I 園區。**20 MW 的機房數字與 8 MW 的「IT 電力」數字量的是不同的東西——以「報導值」看待，不要視為已對帳** | [RadiusDC 新聞稿 2026-03-12](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html) · [phoenixNAP 新聞稿 2026-03-17](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html)。phoenixNAP 保留約 80% 全球業務含 Bare Metal Cloud 與網路。**Datacentermap 已將 3402 E University Dr 標示為「RadiusDC Phoenix I DC1」**，而 PeeringDB 仍列有一處名為「PhoenixNAP」的鳳凰城設施。**GAP：$6.3M 的 2009 年購入價為新聞數字，未對郡府登記處查核** |
+| **鳳凰城 PHX02 — 3221 E Elwood Street（第二棟）** | phoenixNAP 開發案 | 開發中／依報導為自有 | 報導稱約 **530,000 平方英尺、30 MW**，目標 **2026 年第四季**完工 | **未確認。** 由 DataCenterDynamics 報導，但 **DCD 對直接抓取回 HTTP 403——此數據出自[該篇文章](https://www.datacenterdynamics.com/en/news/phoenixnap-set-to-break-ground-on-second-data-center-in-phoenix-arizona/)的搜尋結果摘要，非原文閱讀。** 須與 RadiusDC 新聞稿中「development rights for future campus expansion」的措辭對照，兩者可能指同一塊土地 |
+| **維吉尼亞州 Ashburn（「ASH」）** | **DataBank Ashburn（IAD1）** 與 **Equinix DC1-DC15／DC21-DC22** | **租用**（phoenixNAP 為承租戶／colo 客戶） | 未揭露 | [PeeringDB AS12189 netfac_set](https://www.peeringdb.com/api/net?asn=12189&depth=2)。**ASH 是有效的 BMC 地區，承載完整 GPU SKU 組合，且價格與 PHX 完全相同** |
+| **阿姆斯特丹／荷蘭（「NLD」）** | **Iron Mountain Data Center — Amsterdam（AMS-1）** | **租用** | 未揭露 | [PeeringDB](https://www.peeringdb.com/api/net?asn=12189&depth=2)。NLD 為已標價 BMC 地區，含全部三個 GPU SKU。phoenixNAP 自家網路頁把**鳳凰城與阿姆斯特丹描述為其兩座「data centers」**，其餘皆為網路節點 |
+| **新加坡（「SGP」）** | **Equinix SG1** 與 **Equinix SG3** | **租用** | 未揭露 | [PeeringDB](https://www.peeringdb.com/api/net?asn=12189&depth=2)。已標價 BMC 地區，含全部三個 GPU SKU |
+| **芝加哥／伊利諾州 Elk Grove Village（「CHI」）** | **Equinix CH3 — Elk Grove** | **租用** | 未揭露 | [PeeringDB](https://www.peeringdb.com/api/net?asn=12189&depth=2)。已標價 BMC 地區，含全部三個 GPU SKU——**這與行銷頁宣稱 GPU 僅在「鳳凰城與 Ashburn」的說法互相矛盾。價格型錄的說法不同，而型錄才是有效來源** |
+| **華盛頓州西雅圖（「SEA」）** | **Equinix SE2／SE3 — Seattle** | **租用** | 未揭露 | [PeeringDB](https://www.peeringdb.com/api/net?asn=12189&depth=2)。已標價 BMC 地區，含全部三個 GPU SKU |
+| **無已標價 BMC 運算的網路節點設施：** 亞特蘭大（Digital Realty ATL13）、洛杉磯（Equinix LA1）、法蘭克福（Equinix FR7）、馬德里（Equinix MD2）、雪梨（Equinix SY1/SY2）、華沙（Equinix WA1）、米蘭（Equinix ML2）、貝爾格勒（Cetin Data Center） | Equinix／Digital Realty／Cetin | **租用** | 未揭露 | [PeeringDB netfac_set](https://www.peeringdb.com/api/net?asn=12189&depth=2) — AS12189 共 16 處設施。**線上型錄中沒有任何一處掛有已標價的 BMC 運算 SKU——它們是網路 PoP，因此不是伺服器採購標的** |
 
-**據點清單之時效性警告：** AS12189 的 PeeringDB 紀錄最後更新於 **2026-03-25**，但**據點清單本身最後更新於 2021-10-01**。該清單可能低估或誤述目前的實際版圖，**不得單憑 PeeringDB 推估本客戶規模**。
-
-**結構性註記（可作為談話切入點，非指摘）：** RadiusDC 交割後，**RadiusDC 將成為 phoenixNAP 在鳳凰城的房東與主機代管供應商**。2026 年 Q2 之後在鳳凰城上架的任何設備，都落在別人的建築、別人的電力路線圖上。這會改變機櫃密度與交付的談法，也是詢問機櫃整合與集併（staging）方案的正當理由。
+**結構性註記（本節最重要的一句）：** 2026 年第二季交割之後，phoenixNAP 將首次在自家旗艦據點向房東支付電費。**每一瓦都會變成他們看得見的帳上項目。** 這使得仍掛在價目表上的十二年舊節點（第 6 節）從一個抽象的密度論述，變成一個租金帳單上的論述。
 
 ---
 
-## 5. 硬體機隊
+## 6. 硬體機隊
 
-本節證據等級：**confirmed（確認）**＝第一手具名揭露或多方獨立佐證｜**circumstantial（旁證）**＝行為或未標日期之頁面強烈指向，但無任何具日期文件具名該供應商｜**contradicted（反證）**＝證據方向相反｜**GAP**＝各方向皆查無，且不作任何主張。
+本節證據等級：**已確認（CONFIRMED）**＝第一手具名揭露或多方獨立佐證｜**旁證（CIRCUMSTANTIAL）**＝行為或 SKU 命名強烈指向，但無已發布之協議｜**反證（CONTRADICTED）**＝證據方向相反｜**GAP**＝正反皆查無，亦即**未評估，不是排除**。
 
-| 供應商／類別 | 證據等級 | 證據實際說了什麼 |
+### 6.1 供應商證據分級
+
+| 供應商／類別 | 證據等級 | 證據實際內容 |
 |---|---|---|
-| **Supermicro** | **CONFIRMED（歷史，2017–2023）／CIRCUMSTANTIAL（現況）** | **歷史面已確認：** Supermicro 於 **2017 年 6 月**發布完整具名案例研究——**X11 Building Block Solutions、2U 四節點 BigTwin、Simply Double 全快閃 NVMe SuperStorage、Supermicro Rack Scale Design 與 Supermicro Server Manager（SSM）**——並附 **Ian McClarty（President）** 與 **William Bell（VP Products）** 具名引述。phoenixNAP 亦**透過 Supermicro 參與 Intel 的 Early Ship／Early Deployment 計畫**（[案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)）。**2023 年面已確認：** ServeTheHome 2023 年 3 月對 phoenixNAP BMC `d3.m6.xlarge` 執行個體的實機報導，標題與內文均以 **Supermicro Sapphire Rapids 硬體**呈現，並指出 phoenixNAP 是 **4th Gen Xeon 的首發雲端供應商**（[ServeTheHome，2023-03-31](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/)）。**現況為旁證：** phoenixNAP 仍維持一個線上的 [Supermicro 生態系頁面](https://phoenixnap.com/offers/supermicro-servers)，聲明其 Bare Metal Cloud 採用 Supermicro 方案，並於 **2025 年 6 月 19 日**共同舉辦 Supermicro 網路研討會——但**該頁面沒有任何型號、也沒有日期**，而且**2023 年之後宣布的兩個新世代都給了 HPE**。**未查得 2024–2026 年間任何 phoenixNAP 導入新 Supermicro 平台的公告。** |
-| **Hewlett Packard Enterprise（HPE）** | **CONFIRMED — 且正在取代** | 兩則具日期的 HPE 新聞稿具名 phoenixNAP。**(1) 2023-08-03：** phoenixNAP 以 **HPE ProLiant RL300 Gen11（Ampere 處理器）**擴充 Bare Metal Cloud，聲明部署於其橫跨五大洲、18 座資料中心的網路，並由 **Ian McClarty** 具名引述。對應現行 **`a1.c5.*` Ampere Altra Q80-30** SKU（[HPE 新聞稿](https://www.hpe.com/us/en/newsroom/press-release/2023/08/phoenixnap-powers-expanded-ai-and-cloud-services-with-energy-saving-ampere-based-servers-from-hewlett-packard-enterprise.html)）。**(2) 2025-04-04：** phoenixNAP 採用 **HPE ProLiant Compute DL320 Gen12（Intel Xeon 6）**——HPE 首款 DC-MHS／OCP 解構式硬體——由 **William Bell, EVP of Products** 具名引述，並點名 adtech、fintech 與 SLED 需求。對應 **`s4.x6.*` 與 `s5.x6.*`** SKU（[HPE 新聞稿](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)）。phoenixNAP 官網另設有 [HPE ProLiant RL300 專屬產品頁](https://phoenixnap.com/bare-metal-cloud/hpe-proliant-rl300)。**HPE 已連續拿下最近兩次平台更新。** |
-| **Intel（矽晶＋加速器，且極可能有共同行銷）** | **CONFIRMED** | Intel 矽晶主導型錄——**82 個伺服器 SKU 中有 72 個**。全型錄唯一販售的加速器就是 **Intel Data Center GPU Max 1100**，並設有專屬 offer 到達頁，明確主張 **Intel MAX GPU 功能無額外授權費**（[offer 頁](https://phoenixnap.com/offers/intel-data-center-max-gpu-1100-bmc)）。phoenixNAP 於 2017 年（透過 Supermicro）參與 Intel Early Deployment／Early Ship 計畫，2023 年為 4th Gen Xeon 首發供應商。**一個供應商品牌專屬 offer 頁，加上 2023 年 9 月的預購推廣，是 Intel 補貼或種子部署的典型特徵**——此為推論，但支撐紮實 |
-| **NVIDIA** | **CONTRADICTED（就現行機隊而言）** | phoenixNAP 曾於 **2018-10-01** 公開推出 **NVIDIA Tesla V100（4 卡與 8 卡 NVLink）與 Tesla P40** 專用伺服器（[新聞稿](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus)）。七年半後，**現行 Bare Metal Cloud 產品型錄中沒有任何 NVIDIA SKU**——101 項產品中唯一的 `gpuConfigurations` 值是 **「Intel Max 1100 GPU」**（[現行型錄](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)，2026-08-10 抓取）。**第三方清單文章聲稱 phoenixNAP 提供「L4 到 H100」，並不被 phoenixNAP 自家定價系統支持——視為資料商雜訊** |
-| **Ampere Computing** | **CONFIRMED（矽晶層級，經由 HPE 交付）** | **Ampere Altra Q80-30（`a1.c5.*`）** 與 **AmpereOne A96-36X（`a2.c9.*`）** 皆為現行已定價 SKU。Altra 世代有文件證明係經 **HPE ProLiant RL300 Gen11** 導入。**較新的 AmpereOne A96-36X SKU 之機箱供應商未在任何可觸及來源中揭露——這是一個空著的競爭位置** |
-| **AMD** | **CONFIRMED（僅矽晶層級；機箱供應商不明）** | **EPYC 4345P 與 EPYC 4565P** 單路 SKU（`s4.c3.medium`、`s4.c6.large/medium/xlarge`、`s4.s2.large`）皆為現行已定價項目。**沒有任何供應商公告指出這些機箱由誰供應。又一個空位**（[現行型錄](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)） |
-| **Express Computer Systems（Irvine, CA）** | **CIRCUMSTANTIAL** | 亞利桑那 UCC 檔號 **202200315262** 之擔保權人，**2022-05-19** 申報，債務人為 **ALTAY CORPORATION**（洛杉磯）與 **PHOENIXNAP**（3402 East University Drive）。Express Computer Systems 為硬體經銷／租賃商。**這是紀錄上唯一的非銀行設備擔保權人**，顯示 2022 年至少有一批經銷商融資的硬體。**擔保品文字未由 AZ 入口呈現，因此融資標的無從證實**（[AZ SOS UCC](https://apps.azsos.gov/apps/ucc/search/)） |
-| **Pliops** | **CIRCUMSTANTIAL** | 現行型錄中存在專屬 SKU **`d2.c4.db1.pliops1`**（2× Xeon Gold 6336Y、4× 4 TB NVMe），意味已部署 Pliops 儲存加速卡。規模小且利基，但足以證明**他們願意驗證第三方 PCIe 加速卡** |
-| **Netris（網路層）** | **CONFIRMED** | **Netris SoftGate 1G／10G／25G** 以可計費產品形式存在（`netris/softgate_*`），亦即**採用軟體定義閘道而非專有設備**。可解讀為：這是一家對解構式、不被單一供應商鎖定的硬體抱持開放態度的業者 |
-| **Dell／Lenovo／ODM（浪潮、緯穎、廣達）** | **GAP** | **各方向皆查無證據，本檔不作任何主張。** 所有已查詢來源中，均未出現任何與 phoenixNAP 有關的 Dell、Lenovo、Inspur、Wiwynn 或 Quanta 記載。已查詢清單見 3.5 與第 14 節 |
+| **Supermicro（Super Micro Computer, Inc.）** | **已確認** | 三條獨立線索。**（1）** Supermicro 發表過一份七頁共同案例研究《SUPERMICRO AND PHOENIXNAP PARTNER TO DELIVER IT EQUIPMENT FOR EVOLVING BUSINESS OPPORTUNITIES》，2017 年 6 月，文件編號 `14_PhoenixNAP-CaseStudy_2017-06_Rev1`，內含 **Ian McClarty（總裁）** 與 **William Bell（產品副總）** 的具名引述。文中載明 phoenixNAP 選用 **Supermicro X11 Building Block Solutions 與 SuperServers**，部署 **BigTwin 2U 4 節點**系統與 **Simply Double SuperStorage 全快閃 NVMe**，並在所有據點使用 **Supermicro Rack Scale Design** 與 **Supermicro Server Manager（SSM）**。文中亦載明 phoenixNAP「participated in Intel's Early Deployment program to validate performance and new platform features with Intel Xeon Scalable Processor Family **THROUGH SUPERMICRO**」——**Supermicro 就是他們取得早期矽晶的通路。** **（2）** ServeTheHome 在鳳凰城機房實測 phoenixNAP BMC `d3.m6.xlarge` 執行個體，指認其為 **Supermicro twin node**（2023-03-31 發表）——六年後的獨立、非行銷佐證。**（3）** phoenixNAP 維持一個線上的「Bare Metal Cloud Ecosystem」頁面 `/offers/supermicro-servers`，載明「phoenixNAP utilizes Supermicro's solutions to ensure Bare Metal Cloud servers deliver stability, reliability, and efficiency.」（[案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf) · [ServeTheHome](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/) · [/offers/supermicro-servers](https://phoenixnap.com/offers/supermicro-servers)） |
+| **HPE（Hewlett Packard Enterprise）** | **已確認——而且這是競爭失分指標** | HPE 於 **2025 年 4 月**發布新聞稿（businesswire 2025-04-04 與 hpe.com 新聞室），標題為《phoenixNAP Advances Cloud Services Using HPE Disaggregated Data Center Modular Hardware System Servers with Intel Xeon 6》，稱其為 **HPE 首個符合 DC-MHS 設計規範的解耦式運算硬體**。`s4.x6`（Intel Xeon 6 6731E）SKU 於同一時間窗出現在 phoenixNAP 自家型錄中。**請注意界限：新聞稿內文從未被讀取**——hpe.com 於 60 秒逾時且未重試——因此**部署規模、機型與是否有 phoenixNAP 高管引述皆為未讀**。供應商關係本身由標題加型錄佐證確認（[HPE 新聞室](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)） |
+| **Intel（矽晶，非機殼）** | **已確認** | Intel 矽晶佔絕對主導：**84 個伺服器 SKU 中有 68 個搭載 Intel CPU**（Xeon Scalable 第 1–4 代、Xeon 6 P-core 與 E-core、Xeon E 系列、Core i9 14900K）。**三個 GPU SKU 全部是 Intel Data Center GPU Max 1100。** phoenixNAP 設有專屬的 Intel Max GPU 與 Intel Xeon 6 產品落地頁。2017 年案例研究載明 phoenixNAP 參與 **Intel 的 Early Deployment／Early Ship 計畫**。GPU 節點上另特別標註啟用 SGX。**Intel 是平台錨點**（[/offers/intel-data-center-max-gpu-1100-bmc](https://phoenixnap.com/offers/intel-data-center-max-gpu-1100-bmc)） |
+| **NVIDIA** | **就現行隨選型錄而言＝反證／就歷史客製專用伺服器而言＝已確認** | phoenixNAP 於 **2018-10-01** 發表 **NVIDIA Tesla V100 與 Tesla P40** 專用伺服器，提供 4 張或 8 張 V100 搭配 NVLink，並引述 McClarty 與 Bell。**但 2026-08-11 的線上價格型錄中，NVIDIA SKU 為零**——已逐一列舉全部 101 個產品代碼與每一個 `gpuConfigurations` 區塊，全網唯一出現的 GPU 字串是「Intel Max 1100 GPU」。第三方部落格（Cherry Servers、Ventus）宣稱 phoenixNAP 提供「L4 到 H100」；**此說法不受 phoenixNAP 自家型錄支持，且無法由任何 phoenixNAP 發布之來源佐證。不得在客戶面前複述 H100／L40S 的說法**（[2018 新聞稿](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus) · [線上型錄](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)） |
+| **Dell** | **GAP — 未評估，不是排除** | 正反皆查無。phoenixNAP 任何已發布頁面、新聞稿、PeeringDB 紀錄，或所觸及的 Supermicro／ServeTheHome 素材中皆無 Dell 字樣。**這僅是「缺乏證據」**——本次未執行針對 Dell 的專項檢索，且該型錄中根本不出現任何供應商名稱，只有 CPU／GPU 零件名。**請將 Dell 視為未評估** |
+| **Ampere Computing（矽晶）** | **矽晶已確認／機殼供應商 GAP** | `a1.c5`（Ampere Altra Q80-30）與 `a2.c9`（AmpereOne A96-36X）SKU 皆為線上且已標價。**Arm 節點背後的機殼供應商不明** |
+| **AMD（矽晶）** | **矽晶已確認／機殼供應商 GAP** | `s4` 系列採用 **EPYC 4345P** 與 **EPYC 4565P** — **僅入門級單路。型錄中無 SP5／Genoa／Turin，亦無任何 Instinct MI 系列 GPU** |
+| **Netris（網路軟體）與 Pliops（儲存加速器）** | **旁證** | 型錄中列有 `netris/softgate_1g`、`netris/softgate_10g` 與 `netris/softgate_25g` 為已標價產品，並有一個 `d2.c4.db1.pliops1` SKU（雙 Xeon Gold 6336Y、256 GB、4× 4 TB NVMe），暗示配有 Pliops XDP 卡。**這是真實的整合夥伴，但證據僅止於 SKU 命名，並無已發布之協議** |
+| **VMware 與 Veeam（軟體）** | **歷史上已確認** | 2017 年 Supermicro 案例研究載明 phoenixNAP 為「a VMware Premier Service Provider and Veeam Platinum Partner」。**已九年——現況未經查證** |
 
-### 觀察到的 CPU 世代，以及對機隊年齡的意涵
+### 6.2 機隊本身
 
-直接讀自現行產品型錄——**101 項產品中含 82 個獨立伺服器 SKU**（[現行型錄 JSON](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)，2026-08-10 抓取）：
+| 項目 | 證據內容 | 依據 | 對 Supermicro 的對照 |
+|---|---|---|---|
+| **機隊所有權——法律上已確立，非推論** | 亞利桑那州稅務法院紀錄：「PNAP's customers pay for … (2) infrastructure as a service（"IaaS"）services（**utilization by customers of PNAP-owned servers**）」（PSOF ¶10）。稅務局成功主張、法院並認定「the computer hardware (i.e., servers) and software are tangible personal property」為 PNAP 出租之標的 | **法院紀錄**——能證明這是一家「自購機隊」業者而非轉售他人硬體者的最強證據（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)） | **這是整個帳戶的資格條件：他們取得伺服器的所有權** |
+| **線上 BMC 伺服器 SKU 總數** | **84 個具完整硬體 metadata 的伺服器產品代碼**，加 **3 個 GPU SKU**，加儲存／頻寬／OS／Netris 品項——**合計 101 個產品代碼**——橫跨 **6 個地區**標價 | 直接讀取線上快取定價 API，1,061,819 bytes，2026-08-11 取得（[api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)） | 84 SKU × 6 地區，每個 SKU 在每個地區都需備品池，**下限推得為數千台實體節點。確切節點數未揭露——見第 15 節** |
+| **實機指認的 Supermicro 節點 — `d3.m6.xlarge`** | 雙 **Intel Xeon Platinum 8452Y**（各 36c/72t，Sapphire Rapids）、標配 512 GB、2× 4 TB NVMe、雙 25 GbE 綁定——經實機拆解指認為 **Supermicro twin node** | [ServeTheHome 實機評測，2023-03-31](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/)，於鳳凰城機房實測一台 phoenixNAP BMC 執行個體。**這是本次取得的唯一一項第三方實機機殼供應商指認** | **Supermicro BigTwin／X13 2U 4 節點——直接的既有供應商證據。** `d3.m6.xlarge` 與 `d3.m6.xxlarge`（1 TB）**今日皆仍在線並標價** |
+| **旗艦 GPU 節點 — `d3.g2.c3.xlarge`** | **2× Intel Data Center GPU Max 1100**（56 Xe cores、48 GB HBM2E、各 300 W）＋ 雙 **Xeon Gold 6442Y**（24c @ 2.6 GHz，啟用 SGX）＋ **512 GB DDR5** ＋ **4× 2 TB NVMe** ＋ **2× 25 Gbps** 綁定 | 線上型錄 JSON 的產品 metadata 區塊，逐字取得 | 雙路 Sapphire Rapids 平台，承載兩張雙寬 300 W PCIe Gen5 加速卡，加 4× U.2 NVMe 與雙 25G SIOM／OCP NIC。Supermicro GPU SuperServer 與 X13 雙路 GPU 產品線直接涵蓋此規格範圍。**注意：GPU 節點的實體機殼供應商並未確認——見下方 GAP 列** |
+| **機隊中最新的 CPU 世代 — `s5.x6` 系列（Intel Xeon 6 P-core／Granite Rapids）** | `s5.x6.c3.large/medium`（Xeon 6527P，256 GB）、`s5.x6.c8.large/medium`（Xeon 6767P）、`s5.x6.c9.large/medium`（Xeon 6770P）、`s5.x6.m8.xlarge`／`m9.xlarge`（512 GB）、`s5.x6.s5.large`（Xeon 6767P，512 GB，6× 15 TB NVMe ＋ 1× 1 TB） | 線上型錄 JSON；**首見於 2025-11-09 的 Wayback 快照，2025-04-23 快照中不存在** | **單路 Intel Xeon 6 P-core 平台——Supermicro X14 Hyper／單路 SuperServer 的守備範圍。這是一次真實發生的 2025 年採購事件，帳戶團隊應該要知道這一單是否拿到** |
+| **Intel Xeon 6 E-core（Sierra Forest）— `s4.x6` 系列——由 HPE 供應** | `s4.x6.c6.large`（Xeon 6 6731E，256 GB，2× 2 TB NVMe）與 `s4.x6.m6.xlarge`（512 GB，2× 4 TB NVMe） | 線上型錄 JSON；**首見於 2025-01-14 的 Wayback 快照**，並由 [HPE 2025 年 4 月 DC-MHS 新聞稿](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)佐證 | **競爭失分指標。在有反證之前，`s4.x6` 產品線應視為 HPE 已握有** |
+| **Arm 機隊 — `a1`／`a2` 系列** | `a1.c5.large/xlarge`（**Ampere Altra Q80-30**，256 GB）；`a2.c9.large`（**AmpereOne A96-36X**，256 GB，1× 4 TB ＋ 1× 1 TB NVMe）與 `a2.c9.xlarge`（384 GB） | 線上型錄 JSON。**a2／AmpereOne 系列存在於 2026-08-11 的線上型錄，但在 2025-11-09 與 2026-01-17 兩份 Wayback 快照中皆不存在——這是一次發生於 2026-01-17 至 2026-08-11 之間的採購事件** | Supermicro ARM／MegaDC Ampere 平台。**這是本次能確定日期的最近一次採購事件，因此也是「採購動能仍活躍」最新鮮的證據** |
+| **AMD 機隊 — `s4` 系列** | `s4.c3.medium`（EPYC 4345P，128 GB）、`s4.c6.medium/large/xlarge`（EPYC 4565P，128–192 GB）、`s4.s2.large`（EPYC 4345P，64 GB，2× 8 TB ＋ 1× 1 TB NVMe） | 線上型錄 JSON；`s4` 系列首見於 2025-01-14 | AMD 4004／4005 系列單路 AM5 平台——Supermicro AS-1015／AS-2015 等級。**注意這是入門級 EPYC，不是 SP5——屬於成本最佳化的專用伺服器線，不是 AI 機隊** |
+| **高密度 NVMe 儲存節點** | `d3.s5.xlarge`（雙 Xeon Gold 6430，256 GB，**6× 15.36 TB NVMe** ＋ 1× 1 TB）與 `s5.x6.s5.large`（Xeon 6767P，512 GB，6× 15 TB NVMe ＋ 1× 1 TB） | 線上型錄 JSON | **Supermicro「Simply Double」SuperStorage 全快閃 NVMe 在 2017 年案例研究中被明確點名為已部署於 phoenixNAP**——這條產品線有明確的 Supermicro 淵源，是天然的汰換標的 |
+| **仍在創造營收的舊機隊** | `s0.d1.small`／`s0.d1.medium`，搭載 **Intel E3-1240v3／E3-1270v3**（Haswell，**2013 年世代**，16–32 GB、SATA SSD、**2× 1 Gbps**）——**2026 年仍在標價販售** | 線上型錄 JSON | **汰換標的。** 十二年前的單路 Haswell 節點、掛在 1 GbE 上，至今仍在價目表中。這是一個具體、可標定日期的生命週期終止對話，帶有清楚的電力／密度 ROI 論述——**而且在他們變成向 RadiusDC 繳電費的承租方之後，這個論述會更鋒利** |
+| **已建置但未發表的 GPU SKU — `d3.g3.c2.medium`** | 產品代碼存在於 phoenixNAP 的產品系統中，但**無伺服器產品紀錄、無硬體 metadata、無價格**。它只以關聯產品代碼的形式，出現在 **Windows Server 2025 Datacenter**（sku `WWBN-M6YV-QYJ6`）與 **Windows Server 2025 Standard**（sku `CBHG-TCTK-B1QS`）兩筆 OS 授權列上，**且價格皆為 0** | 首見於 **2025-04-22** 快取之 Wayback 快照（`20250423054018`）。**在 2026-08-11 取得的線上型錄中仍然存在，形式完全相同（$0 OS 關聯）。** 兩處皆已驗證其「不存在為伺服器產品」 | **本帳戶最好的單一採購訊號。** 一個次世代 GPU SKU（「g3」，g2／Max 1100 產品線的後繼）已在其內部產品系統中掛了約 16 個月，卻從未被賦予硬體規格或價格。這是**一個原則上已決定、但尚未在矽晶或資本支出上拍板的 GPU 平台決策的特徵。任何來源都未指名任何 GPU 型號——不要猜** |
+| **GAP — GPU、Ampere、AMD 與 Xeon 6 P-core 節點的機殼供應商** | **不明。** Supermicro 在 `d3.m6` twin node 上由實機拆解確認、在 BigTwin／SuperStorage 上由 2017 案例研究確認，但**沒有任何證據指出誰製造雙 Max 1100 的 `d3.g2` 節點**，或 Ampere、AMD、Xeon 6 P-core 節點 | 所觸及之全部來源皆無證據 | **不得就這些產品線陳述任何機殼供應商。這是一個探詢題，不是已知事實** |
 
-- **當世代：** Intel Xeon 6 P-core **6527P／6767P／6770P**（`s5.x6.*`）·Intel Xeon 6 E-core **6731E**（`s4.x6.*`）·**AmpereOne A96-36X**（`a2.c9.*`）·AMD **EPYC 4345P／4565P**（`s4.c3/c6.*`）·Intel **Core i9 14900K**（`s3.c3.*`）
-- **中生代：** Intel **Emerald Rapids** 6536／6540／6542Y（`d3.c1/c2/c3`、`d3.m1/m2/m3`）·Intel **Sapphire Rapids** 5418Y／6426／6430／6436／6442Y／8452Y（`d3.*`，含全部三個 GPU SKU）·**Ampere Altra Q80-30**（`a1.c5.*`）·Intel **E-2356G／E-2388G**（`s2.*`）
-- **老舊：** Intel **Ice Lake** 5315Y／5317／6326／6336Y／8352Y（`d2.*`）·Intel **Cascade Lake-R 6258R**（`d1.*`）·Intel **E-2276G／E-2288G**（`s1.*`）·Intel **E3 v3**（`s0.*`）
+### 6.3 觀察到的 CPU 世代，以及對機隊年齡的意涵
 
-**意涵。** **`d1` 加 `d2` 的 Cascade Lake／Ice Lake 機隊共 26 個 SKU，機齡 4–6 年**——這是天然的整併標的；而 phoenixNAP **已經跑過 Supermicro X11 BigTwin**，因此 **X11 BigTwin → X14 BigTwin 是字面上的同族升級**，不是平台遷移。型錄中出現 **AMD EPYC 4000 系列與 Core i9 桌上型等級零件**，代表只要價格／效能划算，他們願意買單路工作站級矽晶——而這正是機箱供應商能做出差異的區段。另外兩個**高密度儲存 SKU**——`d3.s5.xlarge`（2× Xeon Gold 6430、6× 15.36 TB NVMe＋1 TB 開機碟）與 `s5.x6.s5.large`（Xeon 6767P、6× 15 TB NVMe＋1 TB 開機碟）——直接對應 Supermicro Petascale／SSG 全 NVMe，而依 2017 年案例研究，他們**已經跑過 Supermicro「Simply Double」SuperStorage**。這是有歷史基礎的重返切入點，不是冷推銷。
+以下直接由線上已標價型錄讀出（此為由公開組態推得的**平台族系推論**，非廠商揭露）：
+
+- **當世代：** Intel Xeon 6 P-core（Granite Rapids — 6527P／6767P／6770P）；Intel Xeon 6 E-core（Sierra Forest — 6731E）；AmpereOne A96-36X；AMD EPYC 4565P／4345P（AM5 入門級）
+- **中生代：** Intel Xeon Scalable 第 4 代（Sapphire Rapids — Platinum 8452Y、Gold 6442Y／6436／6426／6430）；Ampere Altra Q80-30；Intel Xeon Gold 6336Y
+- **仍在創造營收的舊世代：** Intel Xeon E3-1240v3／E3-1270v3（**Haswell，2013**），掛在 2× 1 Gbps 上
+- **網路標準：** **每一個伺服器 SKU 的上限都是 2× 25 Gbps 綁定**，較舊的 s0–s3 層級為 2× 1 Gbps 或 2× 10 Gbps。**型錄中任何地方都沒有 100G 伺服器網卡**
+
+**意涵：** 這是一支**啞鈴型且多供應商**的機隊。phoenixNAP 在同一份價目表裡同時掛著 2013 年的 Haswell 與 2025 年的 Granite Rapids，而且**至少同時向兩家系統廠採購**（Supermicro 由拆解與案例研究確認；HPE 由新聞稿確認、且拿下最新的 E-core 矽晶）。因此對 Supermicro 而言，實際可切入的點是 **GPU 平台決策、機殼供應商不明的 Xeon 6 P-core 與 Ampere 產品線，以及那批十二年舊的 s0 層級**——**不是** `s4.x6` 產品線，該線在有反證之前應視為已失。全機隊 2×25 Gbps 的上限，則是任何多節點 AI 訓練論述的真實限制，也是一條正當的探詢主線。
 
 ---
 
-## 6. GPU 型錄與 AI 佈局
+## 7. GPU 型錄與 AI 佈局
 
-**這是全公司最弱、最外露的一塊，也是打這通電話的理由。**
+**已確認、範圍狹窄、且明顯停滯。** phoenixNAP 全部的公開 GPU 型錄就是**三個 SKU**，全部建立在同一款加速器上——**每節點 2× Intel Data Center GPU Max 1100**——且全部在 **2024 年 2 月（含）之前**上線，**2.5 年來沒有任何 GPU 換代**。與此同時，第四個產品代碼 **`d3.g3.c2.medium`** 自 2025 年 4 月起就掛在他們自家產品系統中，沒有規格、沒有價格。
 
-整個加速器型錄就是**同一台機器的三個分級**。三者搭載完全相同的加速器：**2× Intel Data Center GPU Max 1100**（每張 48 GB HBM2e、56 Xe cores、Intel Xe Link 橋接）。以下每一個價格都讀自 phoenixNAP 自家的**正式產品／價格 JSON**——支撐其公開定價頁的那一份檔案——於 **2026-08-10** 抓取，並與渲染後的 GPU 頁面交叉核對。
-
-| SKU | 完整規格 | 每小時 | 1 個月 | 12 個月 | 24 個月 | 36 個月 | 供應狀況 |
-|---|---|---|---|---|---|---|---|
-| **d3.g2.c1.xlarge** | 2× **Intel Max 1100**；2× Xeon Gold **6426**（合計 32 核 @2.9 GHz）；**512 GB** RAM；**4× 2 TB NVMe**；2× 25 Gbps（bonding 後 50 Gbps）＋20 Gbps DDoS；含 15 TB 流量 | **$2.49/hr** | **$1,646.72/mo** | **$998.26/mo** | **$880.11/mo** | **$808.21/mo** | 於 **PHX、ASH、NLD、SGP、CHI、SEA** 定價——**各區域價格完全相同**。行銷頁僅宣稱 **Phoenix (AZ) 與 Ashburn (VA)** 有現貨，「More Coming Soon…」 |
-| **d3.g2.c2.xlarge** | 2× **Intel Max 1100**；2× Xeon Gold **6436**（合計 40 核 @2.7 GHz）；**512 GB** RAM；**4× 2 TB NVMe**；2× 25 Gbps | **$2.60/hr** | **$1,726.02/mo** | **$1,065.66/mo** | **$947.52/mo** | **$875.63/mo** | 六個區域均定價；行銷為 **PHX＋ASH** |
-| **d3.g2.c3.xlarge — 旗艦 GPU SKU** | 2× **Intel Max 1100**；2× Xeon Gold **6442Y**（合計 48 核 @2.6 GHz）；**512 GB** RAM；**4× 2 TB NVMe**；2× 25 Gbps | **$2.67/hr** | **$1,778.49/mo** | **$1,110.27/mo** | **$992.12/mo** | **$920.23/mo** | 六個區域均定價；行銷為 **PHX＋ASH**。**這是要拿來對價的那一台** |
-| **NVIDIA — 任何型號** | **未提供。** 101 項產品的現行型錄中不存在任何 NVIDIA SKU | — | — | — | — | — | **無。** 最後一次 NVIDIA 產品是 **2018 年 10 月的 Tesla V100／P40** 專用伺服器線，早已退場 |
-| **AMD Instinct — 任何型號** | **未提供** | — | — | — | — | — | **無** |
-
-上表來源：[phoenixNAP 現行型錄 JSON](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)（[/bare-metal-cloud/instances](https://phoenixnap.com/bare-metal-cloud/instances) 背後的檔案）·[GPU 伺服器頁](https://phoenixnap.com/bare-metal-cloud/gpu-servers)·[Intel Max 1100 offer 頁](https://phoenixnap.com/offers/intel-data-center-max-gpu-1100-bmc)·[2018 年 NVIDIA Tesla 新聞稿](https://phoenixnap.com/press/dedicated-servers-with-nvidia-tesla-gpus)。
-
-### 非 GPU 價格錨點——供 BOM 與毛利三角驗證
+以下每一個價格皆於 **2026-08-11** 直接讀自 phoenixNAP 自家快取定價 API（[api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)）。**六個地區的定價分毫不差、完全相同**——PHX、ASH、NLD、SGP、CHI、SEA。
 
 | SKU | 規格 | 每小時 | 1 個月 | 12 個月 | 24 個月 | 36 個月 |
 |---|---|---|---|---|---|---|
-| **s5.x6.m9.xlarge** — 最接近的當世代 CPU 機種 | Xeon **6770P**（64 核）、512 GB、2× 4 TB NVMe | **$3.11/hr** | **$2,111.26/mo** | **$1,316.31/mo** | **$1,111.50/mo** | **$968.14/mo** |
-| **d3.m6.xxlarge** — 成本上最接近 GPU 機種的純 CPU 機種 | 2× Platinum **8452Y**（72 核）、**1 TB** RAM、2× 4 TB NVMe | **$2.56/hr** | **$1,650.20/mo** | **$1,416.32/mo** | **$1,301.44/mo** | **$1,208.43/mo** |
+| **`d3.g2.c1.xlarge`** | 2× Intel Data Center GPU Max 1100（各 56 Xe cores、48 GB HBM2E）＋ 雙 **Xeon Gold 6426**（2×16c @ 2.9 GHz，SGX）＋ 512 GB DDR5 ＋ 4× 2 TB NVMe ＋ 2× 25 Gbps | **$2.49/hr** | **$1,646.72/月** | **$998.26/月** | **$880.11/月** | **$808.21/月** |
+| **`d3.g2.c2.xlarge`** | 2× Intel Data Center GPU Max 1100 ＋ 雙 **Xeon Gold 6436**（2×20c @ 2.7 GHz，SGX）＋ 512 GB DDR5 ＋ 4× 2 TB NVMe ＋ 2× 25 Gbps | **$2.60/hr** | **$1,726.02/月** | **$1,065.66/月** | **$947.52/月** | **$875.63/月** |
+| **`d3.g2.c3.xlarge`** — **旗艦** | 2× Intel Data Center GPU Max 1100 ＋ 雙 **Xeon Gold 6442Y**（2×24c @ 2.6 GHz，SGX）＋ 512 GB DDR5 ＋ 4× 2 TB NVMe ＋ 2× 25 Gbps | **$2.67/hr** | **$1,778.49/月** | **$1,110.27/月** | **$992.12/月** | **$920.23/月** |
+| **`d3.g3.c2.medium`** — **未發表** | **無伺服器產品紀錄。無硬體 metadata。未指名任何 GPU 型號。** 僅以 **$0** 關聯產品代碼形式出現在兩筆 Windows Server 2025 OS 授權列上（`WWBN-M6YV-QYJ6` srv2025dc、`CBHG-TCTK-B1QS` srv2025std） | **無價格** | **無價格** | **無價格** | **無價格** | **無價格** |
+| **歷史品項——不在現行型錄中：** NVIDIA **Tesla V100** 與 **Tesla P40** 專用伺服器，**4 張或 8 張 V100 搭配 NVLink**，可完全客製，搭配 Intel Xeon Scalable | 發表於 **2018-10-01**，引述 Ian McClarty 與 William Bell | **未公布** — 客製報價之專用伺服器，從未列入隨選價目表 | — | — | — | — |
 
-兩者於六個區域均可供應。來源：[現行型錄 JSON](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)。
+**內部 SKU 代碼，供客戶引述某一列品項時對照用**（PHX 地區）：`d3.g2.c1.xlarge` — 每小時 `PEL2-QH4Q-FP4T`、1 個月 `MAFO-FS6G-RD6R`、12 個月 `DDTM-SKBE-GCXN`、24 個月 `IHK0-HA8C-EVJL`、36 個月 `ETLK-RCB9-BIVM`。`d3.g2.c3.xlarge` — 每小時 `XDUF-XDER-93WU`、1 個月 `VUZM-7GJ8-L04C`、12 個月 `2TKW-XWSE-UJPC`、24 個月 `LLEK-TPQB-BPMZ`、36 個月 `ZUX8-LKYV-JKTL`。
 
-### 行銷與計費系統的不一致——以及它說明了什麼
+**開會前該知道的可用地區矛盾：** 三個 GPU SKU 在**六個地區都已標價且可下單**，但 phoenixNAP 自家行銷頁仍寫著這些機種「currently available in Phoenix (AZ) and Ashburn (VA) only」。**價格型錄與行銷頁互相矛盾，而型錄才是有效來源。**
 
-GPU 行銷頁寫的供應區域是 **Phoenix (AZ) 與 Ashburn (VA)**，「More Coming Soon」。現行計費型錄則對三個 GPU SKU 在**六個**地點定價——PHX、ASH、NLD、SGP、CHI、SEA——**且各區價格完全相同**。這不是可以拿來指摘的矛盾，而是一個誠實的線索：**價格是全球性佈建的，但現貨只敢認兩個美國據點。** 應解讀為**規模小而集中的 GPU 機隊**。因此一次更新會是**不大的台數，這反而有利於快速試點而非大單** ——對一家每次採購都必須對照銀行授信立約的客戶而言，試點是遠比大單容易成交的第一步。
+**判讀：** phoenixNAP 選定了一條**單一加速器的 GPU 路線**——Intel Data Center GPU Max 1100，每節點兩張，三個 SKU 構成一道 CPU 階梯，全球一價。這是一個連貫、有紀律的定位，而它已經**兩年半沒動**。線上型錄中**完全沒有 NVIDIA**、沒有 AMD Instinct、沒有 H100／H200／L40S——儘管第三方部落格聲稱有（第 6.1 節——不得複述）。而一個後繼世代 **g3**，已在內部掛了約**十六個月，既無規格也無價格**。這個組合——凍結的 GPU 產品線、卡在產品系統中的次世代代碼、加上一筆剛釋出資本的分割案——是本帳戶最清楚、且可標定日期的 AI 汰換切入口。
 
-### AI 佈局，如實陳述
-
-phoenixNAP 有真實的 AI 需求故事，卻只有一支很薄的 AI 機隊。**Kaligent** 是 phoenixNAP 自家具名案例，明確關於把 AI 放進客戶端工具（[客戶實績頁](https://phoenixnap.com/customer-experience)）；HPE 2025 年 4 月新聞稿點名 **adtech、fintech 與 SLED** 需求；**加州大學柏克萊分校統計系**是具名的學術／研究運算客戶，而那正是 Max 1100 這一級最典型的買家輪廓。相對於此：**一款加速器、三個分級、約 34 個月未更新、沒有 NVIDIA 選項、沒有 AMD 選項，而且只在六個計費區域中的兩個承認有現貨。** 這個位置 HPE 沒有拿走，它是空的。
-
----
-
-## 7. 採購時鐘
-
-phoenixNAP 實際上多久買一次，用兩條互相獨立的線索讀：**(A)** 新矽晶世代何時首次出現在他們自家公開型錄中；**(B)** 何時新增一筆擔保設備融資撥款。兩條線互相佐證。
-
-### 7.1 線索 A — 型錄世代首次出現
-
-以 [phoenixnap.com/bare-metal-cloud/instances](https://phoenixnap.com/bare-metal-cloud/instances) 的 Wayback Machine 快照定年。每一個世代都**夾在一個「確定未出現」與一個「確定已出現」的快照之間**，再與具日期的供應商新聞稿交叉核對。
-
-| 世代／SKU 家族 | 未出現於 | 首次出現於 | 區間 | 佐證 |
-|---|---|---|---|---|
-| **`d2.*` Intel Ice Lake** | 2021-07-07 | **2021-09-28** | 約 12 週 | — |
-| **`d3.*` Intel Sapphire Rapids** | 2023-01-30 | **2023-05-08** | 約 14 週 | phoenixNAP 為 **4th Gen Xeon 首發雲端供應商**；[ServeTheHome，2023-03-31](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/) 記載該執行個體為 **Supermicro** 硬體 |
-| **`a1.c5.*` Ampere Altra Q80-30** | 2023-05-08 | **2023-09-13** | 約 18 週 | 對應 **[HPE ProLiant RL300 Gen11 新聞稿，2023-08-03](https://www.hpe.com/us/en/newsroom/press-release/2023/08/phoenixnap-powers-expanded-ai-and-cloud-services-with-energy-saving-ampere-based-servers-from-hewlett-packard-enterprise.html)** |
-| **`d3.g2.*` Intel Max 1100 GPU**（同一視窗另含 `s3.c3.*` Core i9 14900K） | 2023-09-13 | **2023-11-09** | **約 8 週——全研究中最緊的區間** | 與 phoenixNAP **2023-09-19 的預購推廣**及專屬 [Intel Max 1100 offer 頁](https://phoenixnap.com/offers/intel-data-center-max-gpu-1100-bmc) 一致 |
-| **`s4.x6.*` Intel Xeon 6 E-core（6731E）** | 2024-08-06 | **2024-12-07** | 約 17 週 | — |
-| **`s5.x6.*` Intel Xeon 6 P-core（6527P／6767P／6770P）** | 2025-03-27 | **2025-08-15** | 約 20 週 | 對應 **[HPE ProLiant DL320 Gen12／DC-MHS 新聞稿，2025-04-04](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)** |
-| **`a2.c9.*` AmpereOne A96-36X** | — | **2026-08-10 已在現行計費型錄中** | **日期無法確定** | **從未出現在任何已存檔的 instances 頁面快照中。** 最新導入項目；如何補上日期見第 14 節 |
-
-### 7.2 線索 B — 融資事件（亞利桑那 UCC-1 起始日）
-
-對 **PHOENIX NAP, LLC** 的每一筆**新** UCC-1 視為一次融資採購事件。**修正與續期排除**——它們是重述而非新增擔保品。**2026-07-22 的 UBS AG Aviation & Yacht Finance 歸檔排除——那不是 IT 設備。**
-
-| 年度 | 新 UCC-1 起始日 | 筆數 |
-|---|---|---|
-| 2014 | 2014-07-08 | 1 |
-| 2022 | 2022-05-19·2022-09-02·2022-09-02 | 3 |
-| 2023 | — | **0** |
-| 2024 | 2024-05-10·2024-06-21·2024-09-25 | 3 |
-| 2025 | 2025-01-10·2025-07-03·2025-08-06·2025-09-04·2025-10-15·2025-12-01 | **6** |
-| 2026（至今） | 2026-01-13·2026-02-13·2026-03-18·2026-04-02·2026-04-02 | 5 |
-
-### 7.3 採購節奏
-
-**硬體世代更新：** 大約**每 7–9 個月會有一個新 CPU 家族進入型錄**——2023 年 5 月 Sapphire Rapids → 2023 年 9 月 Ampere Altra＋Intel Max 1100 GPU → 2024 年 8／12 月 Xeon 6 E-core → 2025 年 4／8 月 Xeon 6 P-core。
-
-**融資節奏更快，而且曾在加速。** 2025 年 7 月至 2026 年 4 月間，相鄰**新** UCC-1 的間隔：
-
-| 起 → 迄 | 天數 |
-|---|---|
-| 2025-07-03 → 2025-08-06 | 34 |
-| 2025-08-06 → 2025-09-04 | 29 |
-| 2025-09-04 → 2025-10-15 | 41 |
-| 2025-10-15 → 2025-12-01 | 47 |
-| 2025-12-01 → 2026-01-13 | 43 |
-| 2026-01-13 → 2026-02-13 | 31 |
-| 2026-02-13 → 2026-03-18 | 33 |
-| 2026-03-18 → 2026-04-02 | 15 |
-
-**中位數約 33 天。** 與線索 A 合讀：**他們每兩年更新兩到三個矽晶世代，並且大約每個月動用一筆新的擔保設備撥款來支付。**
-
-**最後事件。** 最後一筆 **IT 設備融資事件為 2026-04-02** — 同日兩筆 BMO Bank N.A. UCC-1（檔號 **2026-001-2461-6** 與 **2026-001-2475-0**，各 6 頁，債務人均為 Phoenix NAP LLC＋CC Property Investments＋Secured Servers）。可偵測到的最後**型錄新增**：**AmpereOne A96-36X** SKU，2026-08-10 已在現行計費型錄中，但從未出現在任何已存檔的 instances 頁面。**最後一次 GPU 採購訊號：自 2023 年 10 月左右導入 Intel Max 1100 之後就沒有了——34 個月沒有加速器更新。**
-
-### 7.4 下一個視窗 — 已逾期，且正在開啟
-
-以 33 天中位數計，2026-04-02 之後理應在 **2026 年 5 月**再出現一筆新撥款。實際上是**四個月完全沒有任何 IT 相關動作**，時間正好涵蓋 **RadiusDC 主機代管切割案於 2026 年 Q2 交割**。誠實的讀法是：**這是切割期間刻意的資本暫停，不是業務衰退**——而且請注意，2026-03-18 新開了一條 **U.S. Bank Equipment Finance** 額度，債務人**只有 Phoenix NAP LLC 一家**，不含不動產共同債務人，時間點在 RadiusDC 宣布前三週。那正是「把可融資的 IT 設備與待售不動產分開」該有的樣子。
-
-**預估下一個視窗：2026 年 9 月至 12 月。** 最高機率的觸發點是**切割後第一份裸機雲機隊計畫**，而該計畫中最外露的一條科目就是**加速器層——自 2023 年起未更新，且沒有 NVIDIA 或 AMD 的替代方案**。
-
-**信心水準：中等。** 這是**由歸檔間距與型錄考古推導而來，不是公司的任何陳述**。
-
-### 7.5 方法——及其限制
-
-**(1) 型錄。** 列舉 phoenixNAP **instances** 與 **gpu-servers** 兩頁的所有 Wayback CDX 快照（分別 52 與 54 筆），透過 `web.archive.org` 原始 `id_` 擷取下載約 **35** 筆、解壓縮後以 regex 檢測 SKU 前綴與 CPU 型號，把每個世代夾在「確定未出現」與「確定已出現」之間；再逐一與具日期的供應商新聞稿交叉核對。**(2) 融資。** 於亞利桑那州州務卿 UCC Lien Search 查詢——Organization =`PHOENIX NAP`、Wildcard、Party = Debtor、Filter = All（含已失效）——抄錄每一筆起始日，將每一筆新 UCC-1 視為一次融資採購事件，並計算事件間距。**(3) 排除。** 修正與續期不計入節奏；UBS 航空／遊艇歸檔以非 IT 排除。
-
-**限制，如實列出。** **UCC-1 只能證明一次融資動撥，不能證明交付日期。** **AZ 入口不呈現擔保品文字**，因此**無法把任何一筆撥款對應到特定硬體**。Wayback 對重複的原始擷取請求施加速率限制，因此有數個快照回傳截斷或被擋的內容。另外，價格檔 `api-data.json` 自 **2025 年 10 月**才開始被存檔，因此 AmpereOne 的導入日期無法定年——見第 14 節。
+**不要猜 g3 的加速器。** 所觸及的任何來源都未指名任何 GPU 型號。**這是本檔中最有價值的單一未知**（第 15 節）。
 
 ---
 
-## 8. UCC 融資紀錄
+## 8. 採購時鐘
 
-**範圍：** 於**亞利桑那州**針對 **PHOENIX NAP, LLC** 及其關係企業進行債務人查詢；依 UCC §9-301／§9-307，亞利桑那州是亞利桑那 LLC 的正確歸檔機關。**未執行德拉瓦州查詢**，且依現有證據亦無必要——未查得任何德拉瓦實體——但請見第 14 節之但書。
+以其自家公開型錄，回看三年間 phoenixNAP 實際多久買一次新矽晶。
 
-### 8.1 判定
+### 8.1 快照時間軸
 
-> ### **20 筆歸檔 — 已取得並逐筆抄錄**
->
-> **……但擔保品內容不可得。** 以下每一筆均按亞利桑那州州務卿公開檢視器呈現的內容原樣重現：檔號、起始日、到期日、留置權類型、每一筆修正／續期及其申報日、登錄日與頁數，以及每一位債務人與擔保權人之完整名稱與地址。**該檢視器不呈現擔保品文字，也不對公開查詢提供歸檔影像。** 本次未看到任何一條擔保品條款，因此**不抄錄，也不改寫轉述**。
+日期取自 `phoenixnap.com/bare-metal-cloud/instances` 的 Wayback 快照，該頁面內嵌完整產品型錄 JSON。
 
-### 8.2 已在案之申報——每筆完整列出
-
-**1）檔號 2019-000-6994-0** — 起始 **2019-02-13**，到期 **2029-02-13**，Standard。
-· 新申報 2019-02-13，登錄 2019-02-26，**3 頁**。續期申報 2023-12-26，登錄 2023-12-26，1 頁。
-· **債務人：** PHOENIX NAP MANAGEMENT RESOURCES LLC, 2353 W UNIVERSITY DR, TEMPE, AZ 85281。
-· **擔保權人：** BMO HARRIS BANK N.A., 770 N WATER ST 8TH FL, MILWAUKEE, WI 53202。
-· **擔保品：** *入口未呈現 — 見 8.4。*
-
-**2）檔號 2014-002-1459-5** — 起始 **2014-07-08**，到期 **2029-07-08**，Standard。
-· 新申報 2014-07-08，登錄 2014-07-10，**2 頁**。續期 2019-04-16，登錄 2019-05-16，1 頁。續期 2024-05-02，登錄 2024-05-02，1 頁。
-· **債務人：** PHOENIX NAP, LLC／SECURED SERVERS, LLC／CC PROPERTY INVESTMENTS, LLC — 均位於 2353 W. UNIVERSITY DRIVE, PHOENIX, AZ 85281。
-· **擔保權人：** BMO HARRIS BANK, N.A., 111 WEST MONROE, CHICAGO, IL 60603。
-· **擔保品：** *入口未呈現。*
-· **註：** 這是**現存最久的有效歸檔**，已續期兩次，滿十二年仍未失效。
-
-**3）檔號 2022-005-0492-1** — 起始 **2022-09-02**，到期 **2027-09-02**，Standard。
-· 新申報 2022-09-02，**2 頁**。修正 2022-12-20，**2 頁**。
-· **債務人：** PHOENIX NAP, LLC, 3402 E UNIVERSITY DR, PHOENIX, AZ 85034-7200／CC PROPERTY INVESTMENTS, LLC 與 SECURED SERVERS, LLC，均為 2353 W UNIVERSITY DR, TEMPE, AZ 85281-7223。
-· **擔保權人：** BMO HARRIS BANK N.A., 790 N. WATER STREET, 14TH FLOOR, MILWAUKEE, WI 53202。
-· **擔保品：** *入口未呈現。*
-
-**4）檔號 2022-005-0552-8** — 起始 **2022-09-02**，到期 **2027-09-02**，Standard。
-· 新申報 2022-09-02，**2 頁**。**無修正。**
-· **債務人：** 同上三家 — PHOENIX NAP, LLC／CC PROPERTY INVESTMENTS, LLC／SECURED SERVERS, LLC。
-· **擔保權人：** BMO HARRIS BANK N.A., 790 N. WATER STREET, 14TH FLOOR, MILWAUKEE, WI 53202。
-· **擔保品：** *入口未呈現。*
-
-**5）檔號 2024-002-1418-4** — 起始 **2024-05-10**，到期 **2029-05-10**，Standard。
-· 新申報 2024-05-10，**2 頁**。修正 2024-06-11，**5 頁**。
-· **債務人：** 同上三家。
-· **擔保權人：** BMO BANK N.A., 790 N. WATER STREET, 15TH FLOOR, MILWAUKEE, WI 53202。
-· **擔保品：** *入口未呈現。*
-· **註：** 這是第一筆以 **「BMO Bank N.A.」** 名義（原為 BMO Harris）並使用 15 樓地址的歸檔。
-
-**6）檔號 2024-002-7843-8** — 起始 **2024-06-21**，到期 **2029-06-21**，Standard。
-· 新申報 2024-06-21，**2 頁**。修正 2024-09-05，**2 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 790 N. WATER STREET, 15TH FLOOR, MILWAUKEE, WI 53202。
-· **擔保品：** *入口未呈現。*
-
-**7）檔號 2024-004-0925-7** — 起始 **2024-09-25**，到期 **2029-09-25**，Standard。
-· 新申報 2024-09-25，**2 頁**。修正 2024-12-17，**2 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**8）檔號 2025-000-2423-3** — 起始 **2025-01-10**，到期 **2030-01-10**，Standard。
-· 新申報 2025-01-10，**2 頁**。修正 2025-03-26，**5 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**9）檔號 2025-002-5888-0** — 起始 **2025-07-03**，到期 **2030-07-03**，Standard。
-· 新申報 2025-07-03，**2 頁**。修正 2025-07-23，**4 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**10）檔號 2025-002-9842-8** — 起始 **2025-08-06**，到期 **2030-08-06**，Standard。
-· 新申報 2025-08-06，**16 頁 — 全紀錄中篇幅最大的單筆 UCC-1。****無修正。**
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。* **一份 16 頁的 UCC-1 意味著一份很長的逐項設備清冊**——這是整份清單中最值得優先調閱認證影本的一筆。
-
-**11）檔號 2025-003-3501-6** — 起始 **2025-09-04**，到期 **2030-09-04**，Standard。
-· 新申報 2025-09-04，**2 頁**。修正 2025-09-23，**7 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**12）檔號 2025-004-0469-9** — 起始 **2025-10-15**，到期 **2030-10-15**，Standard。
-· 新申報 2025-10-15，**5 頁**。**無修正。**
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**13）檔號 2025-004-5904-5** — 起始 **2025-12-01**，到期 **2030-12-01**，Standard。
-· 新申報 2025-12-01，**2 頁**。修正 2025-12-19，**7 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**14）檔號 2026-000-2754-6** — 起始 **2026-01-13**，到期 **2031-01-13**，Standard。
-· 新申報 2026-01-13，**2 頁**。修正 2026-01-28，**10 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 15 樓。
-· **擔保品：** *入口未呈現。*
-
-**15）檔號 2026-001-5110-0** — 起始 **2026-02-13**，到期 **2031-02-13**，Standard。
-· 新申報 2026-02-13，**遲至 2026-04-21 才登錄**，**6 頁**。
-· **債務人：** 同上三家。**擔保權人：** BMO BANK N.A., 790 N. WATER STREET, 15TH FLOOR。
-· **擔保品：** *入口未呈現。*
-
-**16）檔號 2026-001-0311-3** — 起始 **2026-03-18**，到期 **2031-03-18**，Standard。**自 2022 年以來第一家新債權人。**
-· 新申報 2026-03-18，**2 頁**。
-· **債務人：** PHOENIX NAP, LLC, 3402 E UNIVERSITY DR, PHOENIX, AZ 85034 — **唯一債務人。無 Secured Servers，無 CC Property Investments。**
-· **擔保權人：** U.S. BANK EQUIPMENT FINANCE, A DIVISION OF U.S. BANK NATIONAL ASSOCIATION, 1310 MADRID STREET, MARSHALL, MN 56258。
-· **擔保品：** *入口未呈現。*
-
-**17）檔號 2026-001-2461-6** — 起始 **2026-04-02**，到期 **2031-04-02**，Standard。
-· 新申報 2026-04-02，**6 頁**。
-· **債務人：** PHOENIX NAP, LLC, 3402 E UNIVERSITY DR, PHOENIX, AZ 85034／CC PROPERTY INVESTMENTS, LLC 與 SECURED SERVERS, LLC, 2353 W UNIVERSITY DR, TEMPE, AZ 85281。
-· **擔保權人：** BMO BANK N.A., 790 NORTH WATER STREET, 14W, MILWAUKEE, WI 53202。
-· **擔保品：** *入口未呈現。*
-
-**18）檔號 2026-001-2475-0** — 起始 **2026-04-02**，到期 **2031-04-02**，Standard。**最近一筆 IT 設備歸檔。**
-· 新申報 2026-04-02，**6 頁**。
-· **債務人與擔保權人：** 與第 17 筆完全相同。
-· **擔保品：** *入口未呈現。*
-
-**19）檔號 2026-003-2810-7** — 起始 **2026-07-22**，到期 **2031-07-22**，Standard。**非 IT 設備。**
-· 新申報 2026-07-22，登錄 2026-07-30，**2 頁**。
-· **債務人：** PHOENIX NAP, LLC, **3402 E UNIVERSITY DR. SUITE 420**, PHOENIX, AZ 85034。
-· **擔保權人：** UBS AG, AVIATION & YACHT FINANCE (IVV2), BAHNHOFSTRASSE 45, ZURICH, ZU 8001, CHE。
-· **擔保品：** *入口未呈現。* 這是掛在營運公司名下的一筆航空器或船舶融資。**已自第 7 節的採購節奏中排除。**
-
-**20）檔號 2022-003-1526-2** — 起始 **2022-05-19**，到期 **2027-05-19**，Standard。**紀錄上唯一的非銀行設備擔保權人。**
-· 新申報 2022-05-19，登錄 2022-05-31，**1 頁**。
-· **債務人：** ALTAY CORPORATION, 4470 W SUNSET BLVD SUITE 697, LOS ANGELES, CA 90027／**PHOENIXNAP**, 3402 EAST UNIVERSITY DRIVE, PHOENIX, AZ 85034。
-· **擔保權人：** EXPRESS COMPUTER SYSTEMS, 1733 KAISER AVENUE, IRVINE, CA 92614。
-· **擔保品：** *入口未呈現。*
-
-**20 筆紀錄中，沒有任何一筆出現終止（termination）或讓與（assignment）。每一筆都仍然有效。**
-
-### 8.3 查詢紀錄
-
-| 入口／URL | 使用之查詢字串 | 回應（引號內為原文） | 遭阻時之替代途徑 |
+| 日期 | 型錄狀態 | 事件 | 快照／來源 |
 |---|---|---|---|
-| **AZ SOS UCC 留置權檢視器** — [apps.azsos.gov/apps/ucc/search/LiensViewerView.aspx](https://apps.azsos.gov/apps/ucc/search/LiensViewerView.aspx)，自動化抓取 | 嘗試直接載入留置權明細檢視器 | **HTTP 403 Forbidden。** 無資料 | 以真實瀏覽器操作同一 URL（見下列） |
-| **AZ SOS UCC 留置權檢視器** — 同一 URL，真實瀏覽器、冷啟動 | 嘗試在沒有先行查詢的情況下取得明細 | 頁面渲染出標頭 **「View Liens」** 與一行 **「Results from this search contain all UCC records filed on or prior to unknown」**——**無資料。** 此檢視器需要先有查詢工作階段 | 先執行查詢，再觸發 View postback |
-| **AZ SOS UCC 到達頁** — [azsos.gov/business/ucc](https://azsos.gov/business/ucc) | 唯讀：定位權威查詢網址 | **HTTP 200。** 取得權威連結：**「UCC Lien Search ⇒ https://apps.azsos.gov/apps/ucc/search/」** | 不適用——此次呼叫成功 |
-| **AZ SOS UCC Lien Search** — [apps.azsos.gov/apps/ucc/search/](https://apps.azsos.gov/apps/ucc/search/)，真實瀏覽器 | 表單渲染內容：Organization＋Standard／Wildcard＋Party（Debtor／Secured Party）；Individual Last／First／Middle＋Party；File Number；Search Filter Unlapsed／All（含已失效）；起訖日期 | **HTTP 200。** 橫幅寫著 **「Results from this search contain all UCC records filed on or prior to Thursday, April 9, 2026」**——**請注意此橫幅已過時**，因為結果集中包含一筆 **2026-07-22** 的歸檔 | 不適用 |
-| **AZ SOS UCC Lien Search — 實際執行之查詢** | **Organization =`PHOENIX NAP`·Search Type = Wildcard·Party = Debtor·Search Filter = All（含已失效）·未設日期篩選** | **「20 entries found」**，分組為 **PHOENIX NAP MANAGEMENT RESOURCES LLC（1）· PHOENIX NAP, LLC（18）· PHOENIXNAP（1）** | 不適用——8.2 節即由此查詢產出 |
-| **AZ SOS UCC Lien Search — 明細取得** | 以表格之「Select first 100 items」核取方塊全選 20 筆，觸發 View postback | **「20 entries selected」**，隨後取得完整多筆 **View Liens** 頁面——已抄錄於 8.2 | 不適用 |
-| **未執行——以「BMO」為擔保權人端之查詢** | — | — | 可列出 `PHOENIX NAP` 萬用字元未涵蓋之其他 phoenixNAP 關係債務人名稱下的 BMO 歸檔。**免費，應該執行** |
-| **未執行——個人姓名查詢** | — | — | 可捕捉任何以 Cadwell／McClarty 個人保證形式索引的歸檔。**免費，值得跑一次** |
-| **未執行——德拉瓦州 UCC 查詢** | — | — | **刻意未執行。** phoenixNAP 於亞利桑那州設立，依 UCC §9-301／§9-307，亞利桑那州為正確歸檔機關。只有在存在德拉瓦控股公司時才需要查德拉瓦，而本次未查得——**但德拉瓦公司登記機關本身也未查詢**，因此這是一個建立在未經檢驗前提上的假設。見第 14 節 |
-| **擔保品文字——此入口不可得** | — | AZ SOS 公開 UCC 檢視器（`LiensViewerView.aspx`）呈現**檔號、日期、留置權類型、申報事件類型、頁數，以及完整債務人與擔保權人名稱與地址**。它**不**呈現擔保品文字，也不對公開查詢提供歸檔影像 | 向 **AZ SOS Business Services Division, 1700 W Washington St Fl 2, Phoenix AZ 85007, 602-542-6187** 提出 **UCC-11 資訊請求或認證影本申請** |
+| **2023-01-30、2023-05-08、2023-08-29、2023-12-14** | **42–48 KB 的純 JS 空殼，內嵌產品代碼為零** | **無資料——這是覆蓋率失敗，不是研究發現。** 這四份快照無法用來收斂任何時點 | Wayback CDX |
+| **2024-02-27（含）之前** | **58 個產品代碼**，橫跨 a1／d1／d2／d3／s0／s1／s2／s3 | **三個 `d3.g2` Intel Max 1100 GPU SKU 已經上線。** 該快照中 GPU 價格渲染為 **$0.00**，因此 GPU 線已上線但**尚未公開標價**。**這是整份研究中觀察到的最後一次 GPU 採購事件** | Wayback 快照 `20240227211036` |
+| **2023-12-14 至 2024-02-27 之間** | — | **無法再收斂。** 2023 年的快照全是純 JS 空殼（見第一列），因此真正的 GPU 採購日期只有上界 | Wayback CDX |
+| **2025-01-14** | 型錄成長至 **71 個代碼** | **採購事件——`s4` 系列與 `s4.x6`（Intel Xeon 6 6731E，Sierra Forest）首次出現。** 由 [HPE 2025 年 4 月 DC-MHS Xeon 6 發布](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)佐證 | Wayback 快照 2025-01-14 |
+| **2025-04-23**（頁面快取於 2025-04-22） | 型錄達到高點 **79 個代碼** | **`d3.g3.c2.medium` 首次出現——僅作為 OS 關聯項，無伺服器產品、無價格。** 這個停滯的 GPU 決策的時鐘從這裡開始跑 | Wayback 快照 `20250423054018` |
+| **2025-11-09** | **新增 10 個 SKU** | **採購事件——整個 `s5.x6` 系列出現**（Xeon 6527P／6767P／6770P，Granite Rapids P-core） | Wayback 快照 2025-11-09 |
+| **2026-01-17** | 無新系列 | **無採購事件。** 已驗證 `a2` AmpereOne **不存在** | Wayback 快照 2026-01-17 |
+| **2026-01-17 至 2026-08-11 之間** | — | **採購事件——`a2.c9` AmpereOne A96-36X 系列出現**（`a2.c9.large`、`a2.c9.xlarge`）。在 2025-11-09 與 2026-01-17 **兩份**快照中皆不存在，於線上型錄中存在。**這是最近一次可標定日期的採購事件** | [線上型錄，2026-08-11](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json) |
+| **2026-08-11（線上基準）** | **101 個產品代碼** — 84 個具完整 metadata 的伺服器 SKU、3 個 GPU SKU，另加儲存／頻寬／OS／Netris 品項，橫跨 6 個地區 | **`d3.g3.c2.medium` 仍然存在、仍然無價、仍然無 metadata——已掛在待發狀態約 16 個月** | [api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json) |
 
-### 8.4 這份紀錄的意涵
+### 8.2 採購節奏
 
-這是整份檔案中最清楚的訊號，而且毫不含糊。
+**CPU：** 新的伺服器 CPU 世代系列大約**每 9–12 個月**落地一次：
+
+| 期間 | 系列 | 間隔 |
+|---|---|---|
+| 約 2024 Q4／2025 Q1 | Intel Xeon 6 E-core（Sierra Forest，`s4.x6`）— **由 HPE 供應** | 基準 |
+| → 約 2025 Q3/Q4 | Intel Xeon 6 P-core（Granite Rapids，`s5.x6`） | 約 10 個月 |
+| → 約 2026 上半年 | AmpereOne A96-36X（`a2.c9`） | 約 9 個月 |
+
+**GPU：** 慢得多。整個 2024–2026 窗口中，**只有一個 GPU 世代**（g2／Intel Max 1100）曾被公開標價。**2.5 年以上沒有 GPU 換代**，而一個 g3 後繼世代已掛在待發狀態、未標價約 16 個月。
+
+**最近一次事件：** **AmpereOne A96-36X**，發生於 2026-01-17 至 2026-08-11 之間。前一次 CPU 事件：`s5.x6` Granite Rapids，約 2025 年第四季。**最近一次 GPU 採購事件：g2／Intel Max 1100，2024 年 2 月（含）之前。**
+
+### 8.3 下一個窗口
+
+**估計：2026 下半年至 2027 上半年，而 GPU 決策是其中活的那一個。** 三個交會中的觸發條件：
+
+1. **RadiusDC 交易於 2026 年第二季交割**，釋出資本，並以 phoenixNAP 自己的話說「sharpening focus」於保留下來的那約 80% 隨選基礎設施業務（[新聞稿](https://www.prnewswire.com/news-releases/phoenixnap-sharpens-focus-on-on-demand-infrastructure-with-strategic-transaction-for-phoenix-colocation-business-302716069.html)）。
+2. **`d3.g3` 已掛了 16 個月，早該落地。** GPU 世代決策是**待決，不是假設**。
+3. **CPU 節奏**依 AmpereOne 事件起算的 9–12 個月週期，把下一次系列汰換推到大約 **2026 Q4 – 2027 Q1**。
+
+**反向因素，且是真實的：** **2026-05-18 的亞利桑那州稅務法院裁定**使其伺服器租賃收入**自此往後**須課 TPT——這是一個可能延後可裁量資本支出的新增毛利逆風（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)）。
+
+### 8.4 方法——以及為何每個日期都是上界
+
+以 Wayback CDX API 查詢（`url=phoenixnap.com/bare-metal-cloud/instances`、`from=2023`、`to=2026`、`collapse=timestamp:6`），取得 **32 份快照**。其中 15 份以 `id_` 原始內容旗標抓取，對每一個符合 `[adsn]N.family.size` 型態的產品代碼做正規表示式擷取，再逐對比較相鄰快照的系列集合差異。**十份快照**（`20230130`、`20230508`、`20230829`、`20231214`、`20240702`、`20241126`、`20250815`、`20260327`、`20260715`、`20260801`）**只擷取到 JS 空殼、無內嵌型錄，已排除。**
+
+**必然的推論，如實陳述：上表中每一個「首次出現」日期，都是真實上線日期的「上界」；而上線日期又晚於採購／上架日期，因此它同時也是採購日期的上界。** 線上基準為 2026-08-11 取得之 phoenixNAP 自家快取定價 API JSON。
+
+**信心水準：** 對「GPU 產品線自 2024 年 2 月（含）以來未曾換代」為**中高**（該窗口中五份資料完整的快照都顯示同樣的三個 g2 SKU）。對 `d3.g3` 的掛載日期及其持續存在為**中高**（頭尾兩端皆為直接觀察）。對 CPU 節奏為**中等**，因其建立在五份可用快照所得的三個間隔上。對 2023 年的任何推論為**低**——覆蓋率根本不足，**任何 2023 年的間隔都不得引用為事實**。
+
+---
+
+## 9. UCC 融資紀錄
+
+**本軌研究範圍：** PHOENIX NAP, LLC（亞利桑那州本地 LLC，ACC 檔號 L15102933）——亞利桑那州鳳凰城。亞利桑那州為設立地，依 UCC §9-301／§9-307 即為正確的申報機關所在。
+
+### 9.1 判定
+
+> ### UNVERIFIED — portal blocked
+
+**請完全照字面理解。** **未取得任何 UCC 申報紀錄。無法取得任何 filing number、filing date、lapse／continuation 狀態、secured party、debtor、collateral description、amendment、assignment 或 termination——因為亞利桑那州州務卿 UCC 入口從未送出過任何搜尋表單。**
+
+由於表單從未載入，**從未有任何搜尋字串被送出**——本次查詢甚至沒有走到「輸入 debtor 名稱」那一步。
+
+9.3 節之所以是空的，代表**什麼都沒看到**。這**不代表** phoenixNAP 沒有擔保債務。此結果不得對客戶陳述、不得引用給徵信單位，也不得以「查無留置權」寫入 CRM。**此處的阻擋是程序性的，不是資產負債表乾淨的證據。**
+
+### 9.2 查詢紀錄——一次嘗試一列，不合併
+
+全部執行於 **2026-08-11**，對象為設立地**亞利桑那州**。四次 curl 嘗試皆使用完整的桌面版 Chrome User-Agent 加上 `Accept` 與 `Accept-Language` 標頭。
+
+| 入口 | URL | 使用之查詢字串 | 回應 | 受阻時之替代路徑 |
+|---|---|---|---|---|
+| 亞利桑那州州務卿 — UCC 應用根路徑 | [apps.azsos.gov/apps/ucc/](https://apps.azsos.gov/apps/ucc/) | **未送出任何字串** — 嘗試載入應用以觸及 debtor 搜尋欄位 | **HTTP 403，5,687 bytes。** Cloudflare 互動式挑戰；內文逐字為 `<title>Just a moment...</title> … Enable JavaScript and cookies to continue`。**該挑戰未被破解或繞過** | **以真人操作之瀏覽器工作階段開啟同一 URL — 成本 $0。** 此為反機器人閘門，非付費牆。否則走向 AZ SOS 申請認證 **UCC-11** |
+| 亞利桑那州州務卿 — UCC 搜尋路徑 | [apps.azsos.gov/apps/ucc/search/](https://apps.azsos.gov/apps/ucc/search/) | **未送出任何字串** — 無表單渲染 | **HTTP 403，5,708 bytes。** 相同 Cloudflare 挑戰 | 同上 |
+| 亞利桑那州州務卿 — UCC debtor 搜尋路徑 | [apps.azsos.gov/apps/ucc/search/debtor](https://apps.azsos.gov/apps/ucc/search/debtor) | **未送出任何字串** — 這正是本應接收 debtor 名稱的端點，而它從未渲染 | **HTTP 403，5,726 bytes。** 相同 Cloudflare 挑戰 | 同上 |
+| 亞利桑那州州務卿 — UCC 說明頁 | [azsos.gov/business/uniform-commercial-code](https://azsos.gov/business/uniform-commercial-code) | 唯讀：定位權威搜尋 URL 與認證查詢途徑 | **HTTP 403，5,773 bytes。** 相同 Cloudflare 挑戰。**連說明頁都無法觸及，因此認證查詢的規費與作業時程也無法確立** | 真人瀏覽器工作階段；或直接致電 AZ SOS 商業部門 |
+| 亞利桑那州州務卿 — WebFetch 嘗試 | [apps.azsos.gov/apps/ucc/search/](https://apps.azsos.gov/apps/ucc/search/) | **未送出任何字串** | **「The server returned HTTP 403 Forbidden.」** | 同上 |
+| *（同一次作業中相關的登記機關阻擋，一併載明）* 亞利桑那州公司委員會 — 舊主機 | `ecorp.azcc.gov` | 查詢 PHOENIX NAP, LLC 之實體／幹部 | **DNS NXDOMAIN — 主機已無法解析。實測兩次** | 改用替代入口（見下一列） |
+| 亞利桑那州公司委員會 — 替代 API | [api-azbusinessconnectonline.azcc.gov/api/businesssearch/advance-search](https://api-azbusinessconnectonline.azcc.gov/api/businesssearch/advance-search) | POST 查詢 PHOENIX NAP, LLC／檔號 L15102933；另 GET `/api/businesssearch/get` | **兩者皆回 HTTP 401 `{"detail":"Authentication Failed.","instance":"/api/businesssearch/advance-search"}`** | 於 `arizonabusinesscenter.azcc.gov` 以真人瀏覽器工作階段查詢 |
+| OpenCorporates API | `api.opencorporates.com` | 直接公司查詢 `us_az/L15102933` 與 AZ 管轄搜尋 | **`{"error":{"message":"Invalid Api Token. Please check your OpenCorporates account"}}`** | 付費 OpenCorporates token，或改走上列州政府入口 |
+
+### 9.3 已在案之申報——每筆完整列出
+
+**取得之申報筆數：0。**
+
+以下沒有申報明細區塊，因為**任何介面都不曾回傳過任何一筆申報**。此處沒有任何壓縮、簡寫或省略——**登記簿根本沒有被觸及**。因此，做出徵信或通路決策所需的每一個逐筆欄位，都是明確的 GAP：
+
+| 所需之逐筆欄位 | `PHOENIX NAP, LLC` |
+|---|---|
+| Filing number（申報編號） | **GAP — 登記簿從未觸及** |
+| Filing date（申報日） | **GAP — 登記簿從未觸及** |
+| Lapse date／continuation 狀態 | **GAP — 登記簿從未觸及** |
+| Secured party 名稱＋地址 | **GAP — 登記簿從未觸及** |
+| Debtor 名稱＋申報時地址 | **GAP — 登記簿從未觸及** |
+| Collateral description（擔保標的描述，逐字） | **GAP — 登記簿從未觸及** |
+| Amendments／assignments／terminations | **GAP — 登記簿從未觸及** |
+| 紀錄連結 | **GAP — 登記簿從未觸及** |
+
+**重做查詢時「必須」逐一執行的 debtor 字串**——這不是選配，因為 UCC 搜尋邏輯以字串精確比對為基礎，只查一組字串等於在等一個偽陰性：
+
+| # | Debtor 字串 | 理由 |
+|---|---|---|
+| 1 | `PHOENIX NAP, LLC` | 經 ACC 查核紀錄中的正式登記名稱 |
+| 2 | `PHOENIX NAP LLC` | 無逗號變體；索引項目不同 |
+| 3 | `PHOENIXNAP` | 其自家所有素材通篇使用的商業字號 |
+| 4 | `SECURED SERVERS, LLC` | 被併購的子公司，**其商標至今仍由 Phoenix NAP LLC 持有**，其舊有 ASN AS11572（「SS-ATL」）也仍掛在 phoenixNAP 的 ARIN org 上 |
+| 5 | `CWIE` | 關係人清查——位於 Tempe 2353 W University Drive 的集團 |
+
+### 9.4 這份紀錄的意涵
+
+**以下為推論，非目擊證據。** 每一列自行標示信心水準。
 
 | 觀察 | 意涵 | 信心 | 對銷售的後果 |
 |---|---|---|---|
-| **BMO（Harris）Bank N.A. 自 2014 年起就是其設備與資產債權人** — 十二年、BMO 端三次換地址、**十八筆歸檔**。每一筆實質授信都**同時以三家實體交叉擔保**：Phoenix NAP LLC（營運公司）、Secured Servers LLC（IP 位址持有者）、CC Property Investments LLC（不動產部門） | 債權人同時對**營運設備、網路資產與不動產**設有擔保——典型的業主型經營者借款基礎，**不是租賃額度** | **高** — 直接讀自 18 筆已抄錄歸檔 | 預期是**主往來銀行的核准路徑**，不是供應商信用路徑。財務端的對話會落在**既有整批擔保之下的留置權順位**，對他們而言是例行公事 |
-| **他們不向原廠融資子公司租機隊。** 紀錄上**完全沒有 Dell Financial Services、沒有 HPEFS、沒有 Cisco Capital、沒有 CIT／DLL／Key Equipment** | 機隊是**用銀行債務、在自己的資產負債表上買下來的。** 這正是「自購機隊」型客戶 | **高** — 因為登記簿已完整取得，20 筆中的「不存在」才具有意義 | **供應商對話是採購對話，不是用量對話。** 每台價格直接落在他們的現金、折舊與利息上。**他們對每台單價會極度敏感** |
-| **2025 年年中節奏性質改變。** 2025 年 7 月至 2026 年 4 月間大約**每 33 天**動用一筆新的擔保撥款，修正頁數從 **2 → 5 → 7 → 10** 攀升，並在 2025 年 8 月出現一筆 **16 頁的原始申報** | 清冊變長代表設備清單變長。**那段期間有東西在被大量且穩定地採購** | **中高** — 頁數是清冊長度的代理指標，不是證明 | 那段期間買的東西**現在機齡 12–18 個月且已完成融資**。更新對話的主題是**接下來要買什麼**，不是換掉剛付完錢的東西 |
-| **2026 年出現兩家新債權人：** U.S. Bank Equipment Finance（**2026-03-18**，值得注意的是債務人**只有 Phoenix NAP LLC**，不含 Secured Servers 與 CC Property 共同債務人）以及 UBS AG Aviation & Yacht Finance（2026-07-22） | U.S. Bank 那一筆才是關鍵——**一條獨立的營運公司設備額度，出現在 RadiusDC 案宣布前三週，且結構上完全不碰不動產實體。** 這正是**刻意把可融資的 IT 設備與待售不動產分離**該有的樣子 | **中高** — 結構與時序為直接觀察；意圖為推論 | **現在存在第二條「純 IT、不牽涉不動產」的設備額度。** 那正是新硬體訂單最自然會對照的授信，而且它是全新的、推測尚未動用 |
-| **接著一切停止。** 自 **2026-04-02** 起沒有任何 IT 設備 UCC-1，對照 **33 天中位數，等於四個月靜默** | 合併 **2026 年 Q2 主機代管切割交割**來看，合理推論是**切割期間的融資暫停，重啟待定**。重啟後將是**純裸機雲的借款基礎**，由 BMO 與現在的 U.S. Bank 支撐，擔保品會是**伺服器而不是建築物** | **中** — 停止是觀察值；原因是推論 | **這是整個客戶的時機論證。** 在重啟之前接觸，不要在之後。見 7.4 |
-| **20 筆紀錄中沒有任何終止或讓與；每一筆都仍然有效** | **擔保品池已被完全綁住。** 沒有任何已釋放、可自由再質押的借款能量 | **高** — 直接觀察 | 新採購必須**在既有整批擔保之內被容納，或對其次順位**。若要對出貨硬體取得購買價金擔保權（PMSI），**PMSI 通知程序與 20 日設備完善期限必須在出貨前規劃好，而不是出貨後** |
-| **擔保品內容從未被看到** | **無從得知** BMO 各筆歸檔究竟是整批擔保（「all assets, wherever located, now owned or hereafter acquired」）還是特定設備清冊。這個差別對新供應商而言**就是整個商業問題** | **高** — 這是關於「證據裡沒有什麼」的陳述 | **在任何條件洽談之前先調閱認證影本。** 從 **2025-002-9842-8**（16 頁）、**2026-001-2461-6** 與 **2026-001-2475-0**（各 6 頁）以及 **2026-001-0311-3**（U.S. Bank 那條額度）開始。聯絡：**AZ SOS Business Services, 1700 W Washington St Fl 2, Phoenix AZ 85007, 602-542-6187** |
+| **亞利桑那州州務卿 UCC 入口對自動化存取完全不可觸及。** 四個 URL 變體全數 HTTP 403，卡在同一個 Cloudflare 挑戰；debtor 搜尋端點本身從未渲染。**正確的判讀是：phoenixNAP 的留置權狀態為「未知」，不是「乾淨」** | 不能由「查無結果」推出任何關於其擔保債務的結論。任何「phoenixNAP 沒有留置權」的陳述都**毫無根據** | **高** — 四次直接觀察，附位元組數 | **不得讓任何人以「查無 UCC 申報」為基礎，建立徵信或通路核准論述。** 在任何定價或融資對話**之前**，必須以真人瀏覽器工作階段或認證 UCC-11 完成此查詢 |
+| **其他來源「能」確立的事實，已大幅收斂這個問題。** 亞利桑那州稅務法院紀錄以無爭執事實載明 IaaS 客戶使用的是「**PNAP-owned servers**」，且法院認定這些伺服器是 PNAP 出租的有形動產（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)） | **phoenixNAP 對機隊擁有所有權。** 它不是在轉售他人的硬體，也不是在跑客戶自帶設備的模式。這是任何結構的硬體交易的前提條件 | **高** — 法院紀錄 | **這是資格條件。** 它排除了此類帳戶最大的一項失格風險，且可在內部直接引用 |
+| **三種融資假說仍然開放，且都與現有證據相容。**（a）**營運現金**——考量該集團與 CCBill／CWIE 支付事業的關聯，以及 phoenixNAP 於 2009 年以報導中的 $6.3M 全額購入 3402 E University Dr，此假說合理。（b）**供應商或 OEM 租賃額度**——phoenixNAP 自己就在銷售「hardware leasing」與 HaaS，而*一家把硬體租出去的公司，往往也把硬體融資進來*。（c）**ABL 或設備融資額度**，這會以銀行或 OEM 融資部門為 secured party 的 UCC-1 呈現 | 三者各自對應不同的銷售動作。（a）代表價格是唯一的槓桿。（b）代表已存在一條融資通路，必須把它找出來。（c）代表可能有一張總括留置權壓在擔保標的池上 | **中** — 硬體租賃產品為直接觀察；到融資結構的映射是商業推理，**不是目擊到的申報** | **實務上最關鍵的是 secured party 的「名稱」。** 一張以 **OEM 融資部門**（Supermicro、HPE 或 Dell 相關之融資機構）為 secured party 的 UCC-1，會立刻揭露既有的融資通路，**以及最近一次動撥的大致時點**——與第 8 節的採購時鐘交叉比對，即可標定 HPE Xeon 6 部署的融資時點 |
+| **與稅務裁定的交叉關聯。** 自 2026 年中起，phoenixNAP 在亞利桑那的主機代管與 IaaS 伺服器租賃收入須負擔先前未曾繳交的州、郡與市 TPT | 對**恰好是用來償付設備債務、支撐 GPU 資本支出的那條收入線**，新增一筆數個百分點的永久性扣減 | **高** — 裁定為直接閱讀；毛利效果為算術 | 若確有融資存在，這會**壓縮「以機隊為擔保之收入」的償債覆蓋率**。本季應預期更硬的價格談判，以及對結構化條件更高的接受度 |
+| **第二項關係人風險。** phoenixNAP 與 CWIE／CCBill 集團共用地址、共用法務聯絡人、至少共用一位 ARIN POC，且仍持有 SECURED SERVERS 商標與 SS-ATL ASN | **若確有融資，它可能掛在「持有硬體的那個實體」上。** 只查「PHOENIX NAP, LLC」有可能漏掉一張針對關係實體、卻壓在同一批實體機隊上的留置權 | **中** — 關聯性有登記資料佐證；**共同控制屬推論，未由所有權文件查證** | **請查 9.3 節全部五組 debtor 字串，不要只查一組。** 承擔擔保債務的那個實體才是真正的資產負債表——與它簽約，或要求它出具保證 |
 
-**一句話的實務結論：** 他們的採購能力**是真的、有銀行支撐**；核准路徑要經過一位**已經握有整批擔保**的債權人；而新硬體訂單**會以設備撥款的形式立約**。財務與法務關於留置權順位與供應商請款的對話，對他們而言**是例行而非障礙**——但也請預期他們**在每台單價上毫不讓步**，因為折舊與利息都是他們自己扛。
+### 9.5 GAP — Track 1，如實列出
 
-### 8.5 GAP — UCC 軌，如實列出
-
-- **擔保品文字是本檔最大的單一缺口。** 20 筆歸檔全數定位、當事人／日期／修正全數抄錄，但 AZ SOS 公開檢視器**不呈現擔保品描述、也不提供歸檔影像**。**一條擔保品條款都沒有看到，也沒有任何改寫轉述。** 頁數是唯一的代理指標。**解法：** 向 **AZ SOS Business Services Division, 1700 W Washington St Fl 2, Phoenix AZ 85007, 602-542-6187** 申請 UCC-11 資訊請求或認證影本，優先順序為 **2025-002-9842-8**、**2026-001-2461-6**、**2026-001-2475-0** 與 **2026-001-0311-3**。
-- **未執行擔保權人端查詢。** 以「BMO」為擔保權人查詢，可捕捉 `PHOENIX NAP` 萬用字元未涵蓋的關係債務人名稱。**免費，未執行。**
-- **未執行個人姓名查詢。** 任何以 Ron Cadwell、Stephanie Cadwell 或 Ian McClarty 個人保證形式歸檔者，不會出現在組織名稱查詢中。**免費，未執行。**
-- **未查詢德拉瓦州 UCC，而且這建立在一個未經查證的前提上。** 亞利桑那州是**亞利桑那 LLC** 的正確歸檔機關，且未查得任何德拉瓦實體——但**德拉瓦公司登記機關本身從未查詢**（`icis.corp.delaware.gov` 未觸及），且 **Cleary Gottlieb 擔任 RadiusDC 案賣方律師，使控股架構具相當可能性**。若確有德拉瓦控股公司，可能存在本檔完全未見的歸檔。
-- **入口自己的資料涵蓋橫幅已過時。** 橫幅寫「all UCC records filed on or prior to Thursday, April 9, 2026」，卻回傳了一筆 2026-07-22 的歸檔。索引顯然比它自稱的更新，但**真正的涵蓋截止日不明**，因此理論上 2026 年 4 月至 8 月間仍可能有遺漏。
-- **ALTAY CORPORATION 的關係未獲解釋。** 檔號 2022-003-1526-2 將「PHOENIXNAP」與一家洛杉磯公司並列為對硬體經銷商的共同債務人。**兩者關係為何、融資標的為何，均不明。**
+- **UCC 是「未經查證」，不是「乾淨」。** 未取得任何亞利桑那州 UCC 申報。該入口對四個 URL 變體全數回傳 Cloudflare HTTP 403，curl（含完整瀏覽器標頭）與 WebFetch 皆然。**9.3 節之所以為空是因為什麼都沒看到——絕不可回報為「沒有融資」。**
+- **從未有任何 debtor 名稱查詢真正送進亞利桑那州任何一套 UCC 系統。** 9.3 節所列字串是**必須執行**的字串，不是已執行的字串。**不得讀作已完成之搜尋。**
+- **亞利桑那州的認證查詢規費與作業時程無法確立**，因為連 [azsos.gov/business/uniform-commercial-code](https://azsos.gov/business/uniform-commercial-code) 的說明頁都回 HTTP 403。編列預算前，請直接向亞利桑那州州務卿確認現行 UCC-11 規費與處理時間。
+- **亞利桑那州公司委員會的實體紀錄同樣未取得**（舊主機 NXDOMAIN；替代 API HTTP 401），因此 **phoenixNAP 與任何 CWIE／CCBill 實體之間的幹部重疊，只能主張為「合理」，屬未經查證**。*（與 4.4 節所載為同一個硬性中止。）*
+- **3402 E University Drive 於 2009 年以 $6.3M 購入之報導價格，未對馬里科帕郡登記處查核** — mcassessor.maricopa.gov 回傳 HTML 空殼而非 JSON，其 API 需要 token。地號、估定價值、產權移轉鏈與 RadiusDC 之登記移轉皆未經查證。
 
 ---
 
-## 9. 成本天花板
+## 10. 成本天花板
 
-一台 GPU 機種對 phoenixNAP 能值多少錢，以及同一台機器要花多少成本組出來。本節只回答一個問題：**在什麼樣的硬體取得成本之下，他們的旗艦 GPU SKU 才付得起自己？**
+一台旗艦 GPU 節點對 phoenixNAP 值多少錢，以及今天重建同一台機器要花多少錢。**標的：`d3.g2.c3.xlarge`。**
 
-**標的機種：** **`d3.g2.c3.xlarge`** — 2× Intel Max 1100、2× Xeon Gold 6442Y、512 GB、4× 2 TB NVMe、2× 25 GbE。**公開牌價（鳳凰城）：** $2.67/hr 隨需；1 個月 **$1,778.49/mo**；12 個月 **$1,110.27/mo**；24 個月 **$992.12/mo**；36 個月 **$920.23/mo**（[現行型錄 JSON](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)）。
+### 10.1 假設——請先讀這一段；這些是假設，不是查證發現
 
-### 9.1 假設——請先讀這一段；這些是假設，不是查證發現
+**以下只有一項輸入是他們的，其餘全部是本檔自訂的。**
 
-**9.2 節中的每一個數字都是假設驅動的模型，不是查證發現。phoenixNAP 未公布任何成本資料，本次也未查得任何成本資料。**
+**每節點的公開營收已查證**，取自 phoenixNAP 自家型錄（[api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json)，2026-08-11）：**$2.67/hr · 1 個月 $1,778.49/月 · 12 個月 $1,110.27/月 · 24 個月 $992.12/月 · 36 個月 $920.23/月。** 由此往下：
 
-1. **牌價＝實現營收。** 實際上企業客戶會議價，實現營收很可能**低 10–25%**，這只會**讓天花板更低**。
-2. **營運成本佔營收 45–60%。** 涵蓋假設每台 1.2–1.6 kW 的電力、空間與機櫃、內含的 15 TB 流量、20 Gbps DDoS 清洗、24×7 NOC 與支援、佈建自動化，以及分攤的管銷。**這些輸入值一項都沒有查證來源。** 真實比例可能是 35%，也可能是 70%。
-3. **假設機器 100% 使用率。** 任何閒置或未售出的產能都會等比壓低天花板——而**他們自家行銷頁只承認六個計費區域中的兩個有現貨，暗示使用率才是真正的限制**。
-4. **未計融資成本。** 但他們實際上是借款的（BMO、U.S. Bank），**加上利息後真實天花板再降 5–10%**。
-5. **12／18／24 個月的回收期是慣例，不是他們的政策。** 一家用 **5 年 UCC 期限**融資的業主型業者，實務上可能接受 **36–48 個月**，那會讓區間上緣大致**翻倍**。
+- **假設 1 — 可持續營收率。** 假設 GPU 節點主要以 **12 至 36 個月保留方案**售出，而非以 1 個月牌價售出，得出可持續區間 **每月 $920–$1,110**。
+- **假設 2 — 營運成本佔營收 40–55%。** 涵蓋每節點 600 W 以上的電力（兩張 300 W 加速卡加雙路 Sapphire Rapids）、冷卻、空間、網路、遠端協助、支援、管銷，以及自 2026 年 5 月起新增的**亞利桑那伺服器租賃 TPT**。**這是最吃重的單一假設，且背後沒有任何 phoenixNAP 的成本資料。** 據此得出每節點每月貢獻毛利 **$414–$666**。
+- **假設 3 — 使用率高到足以讓保留營收連續發生。** **GPU 節點閒置會摧毀整個計算，而本檔沒有任何使用率資料。**
+- **假設 4 — 回收期取 12／18／24 個月**，反映此規模的自營業者看待 GPU 折舊的方式。若改採 36 或 48 個月，天花板會按比例上升。
+- **假設 5 — 不計入生命週期結束時的殘值。**
+- **假設 6 — 亞利桑那 TPT 自 2026 年中起向後適用於伺服器租賃**，使淨營收下降數個百分點（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)）。
 
-**任何人在客戶面前使用這些數字時，都必須說成「這是模型，請糾正我的輸入值」，絕不可說成對他們經濟結構的斷言。**
+**以上皆非 phoenixNAP 揭露之數字。以下每一個天花板都是模型估計值，一旦離開本文件就必須如此標示。**
 
-### 9.2 由租金推導之天花板 — `d3.g2.c3.xlarge`
+### 10.2 由租金推導之天花板
 
-| 情境 | 營收基礎 | 可用於硬體之比例 | 每月可攤硬體金額 | 12 個月天花板 | 18 個月天花板 | 24 個月天花板 |
-|---|---|---|---|---|---|---|
-| **低** | $920.23/mo 實現（36 個月預約） | 40% | **$368** | **$4,416** | **$6,624** | **$8,832** |
-| **中** | $1,110.27/mo 實現（12 個月預約） | 50% | **$555** | **$6,663** | **$9,995** | **$13,327** |
-| **高** | $1,778.49/mo 實現（1 個月牌價） | 55% | **$978** | **$11,738** | **$17,607** | **$23,476** |
+| 回收期 | 可回收之硬體成本 |
+|---|---|
+| **12 個月** | **$4,970 – $7,990** |
+| **18 個月** | **$7,450 – $11,990** |
+| **24 個月** | **$9,940 – $15,980** |
 
-**每台 GPU 機種硬體取得成本的可辯護工作區間：以未折現月費計算，約自 12 個月硬回收的 $6,700，到 24 個月寬鬆回收的約 $23,500。**
+**推得之硬體成本天花板：最激進的讀法（36 個月費率、高營運成本、12 個月回收）約 $5,000，最寬鬆的讀法（12 個月費率、低營運成本、24 個月回收）約 $16,000，重心落在每台雙 GPU 節點 $8,000–$12,000。**
 
-**首次會議要拿來對價的數字，是中情境 18 個月的那一格：每台約 $10,000。**
+**敏感度：** 營運成本比率是主導槓桿。下行側現在還多了一個更硬的錨——2026-05-18 裁定使伺服器租賃自此往後須課州、郡與鳳凰城市 TPT，**這是直接打在同一條收入線上、數個百分點的新增扣減**，會進一步壓縮天花板。
 
-### 9.3 街頭價 BOM 重建——以及關鍵發現
+### 10.3 街頭價物料清單（BOM）重建 — `d3.g2.c3.xlarge`
 
-重建 `d3.g2.c3.xlarge`。**有來源者標示清楚；無來源者亦標示清楚並留白——不憑空編造。**
+每一列均已分級。**兩列有依據，四列是本檔自訂的估計區間。**
 
-| 元件 | 品項 | 街頭價 | 狀態 |
+| 元件 | 零件 | 街頭價 | 等級／來源 |
 |---|---|---|---|
-| **CPU × 2** | **Intel Xeon Gold 6442Y**（24 核、60 MB、2.60 GHz） | **每顆 $5,580.56 ＝ $11,161.12** | **有來源** — Newegg 單顆街頭價。**註：**[Intel ARK SKU 232380](https://www.intel.com/content/www/us/en/ark.html) 回傳規格但**未公布 1KU 建議客戶價**；量產與 OEM tray 價格必然顯著低於街頭價，但無任何可引用數字 |
-| **GPU × 2** | **Intel Data Center GPU Max 1100**（48 GB HBM2e、300 W、PCIe 雙寬） | **每張約 $8,000 ＝ 約 $16,000** | **有來源** — 2025 年 4 月起始零售價約 $8,000（CpuTronic 規格／價格頁，該頁同時以約 $15,000 的 NVIDIA H100 作對照） |
-| **記憶體** | 512 GB DDR5 RDIMM | — | **無來源。必須報價取得。** |
-| **儲存** | 4× 2 TB U.2／E1.S NVMe | — | **無來源。必須報價取得。** |
-| **平台** | 雙路主機板、可支援 300 W 雙寬插槽之 2U／4U GPU 機箱、備援 Titanium 電源、BMC、滑軌 | — | **無來源。必須報價取得。** |
-| **網路** | 2× 25 GbE 網卡 | — | **無來源。必須報價取得。** |
-| **有來源之小計（僅 CPU＋GPU）** | — | **每台約 $27,161（街頭價）** | — |
+| **CPU（2 顆）** | **Intel Xeon Gold 6442Y** — Intel 建議客戶價每顆 **$2,878.00** | RCP 計為 **$5,756** · 合理量產 tray 價計為 **$4,000–$4,800**（每顆約 $2,000–2,400） | **硬價格點（RCP，非街頭價）。** RCP 經搜尋結果佐證取得——**intel.com 對直接抓取回 HTTP 403**。量產 tray 價會顯著更低 |
+| **GPU（2 張）** | **Intel Data Center GPU Max 1100，48 GB** | **約 $4,798**（2 × $2,399） | **單一次級市場資料點——不是通路價。** **不存在任何公開的新品通路牌價**：Intel 訂購頁與 HPE Store（料號 S1T66C）皆為報價制，MegaGrid Supply 則要求 **$5,000 可退押金，只為鎖價 14 天**。唯一觀察到可成交的數字是次級市場上一張 **Dell 品牌 WG7J6 Max 1100 48 GB HBM2e 300 W PCIe x16，售價 $2,399** |
+| **記憶體** | 512 GB DDR5-4800 RDIMM，以 16 × 32 GB 配置 | **$1,800 – $2,600** | **估計區間——本檔自訂，無來源** |
+| **NVMe 儲存** | 4 × 2 TB 企業級 U.2 NVMe | **$700 – $1,100** | **估計區間——本檔自訂，無來源** |
+| **網卡** | 雙埠 25GbE SIOM／OCP | **$300 – $500** | **估計區間——本檔自訂，無來源** |
+| **機殼＋主機板＋電源** | 2U/4U 可裝 GPU 之機殼、主機板與冗餘電源，需能支撐 2 × 300 W 加速卡 | **$2,500 – $4,500** | **估計區間——本檔自訂，無來源** |
+| **合計** | | **約 $14,100 – $18,300** | 視 CPU 以 RCP 或量產價計算而定 |
 
-> ### **關鍵發現**
->
-> **僅 CPU 加 GPU 的街頭價小計約 $27,161，就已經超過整個由租金推導的取得成本天花板——中情境 18 個月為 $6,700，即使最寬鬆的 24 個月情境也只有 $23,476——而且這還沒有計入任何記憶體、儲存、機箱、網路或整合成本。**
+**與 Supermicro 的比較——如實陳述。** **本次未取得任何 Supermicro 報價，也不會憑空編造。** 誠實的比較是結構性的：一台 Supermicro 雙路 Sapphire Rapids GPU 平台，承載兩張雙寬 300 W PCIe Gen5 卡、16 條 DIMM 插槽填滿至 512 GB、4 × U.2 NVMe 與雙 25G SIOM，用的是**同一條 Intel 通路的同樣矽晶**，差異在機殼、散熱、整合與計畫價，而不在元件成本。
 
-有三種可能的解釋，而**三種在商業上都有用**：
+### 10.4 最吃重的結論
 
-**(a) phoenixNAP 以遠低於街頭價取得這些 GPU。** 考量到那個 [Intel 品牌專屬 offer 到達頁](https://phoenixnap.com/offers/intel-data-center-max-gpu-1100-bmc)、「無額外授權費」的訴求，以及他們透過 Supermicro 參與 Intel Early Ship／Early Deployment 計畫的紀錄，**Intel 計畫價或種子價的可能性很高**。
-**(b) 他們以 36–60 個月而非 12–24 個月攤提**，與其 **5 年 UCC 期限**一致。
-**(c) GPU 機隊本來就刻意做小、屬於策略性而非利潤中心**，與只在六個計費區域中的兩個承認有現貨一致。
+**由租金推導的天花板（$5K–$16K，重心 $8–12K）落在街頭價 BOM（$14.1K–$18.3K）之下或齊平。**
 
-**三者指向同一個結論：他們的加速器層在市場硬體價格下無法自給自足。這正是一份可信的「每台價格」提案會讓他們感興趣的原因。**
+這兩個數字唯有在 **phoenixNAP 以顯著低於街頭價採購**時才對得上——而這正是 [2017 年 Supermicro 案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)所記載的事實：phoenixNAP **是透過 Supermicro** 參與 Intel 的 Early Deployment／Early Ship 計畫，因此其採購走的是**計畫經濟，不是牌價**。
 
-### 9.4 Supermicro 對應機種——以及真正該做的比較
-
-對等替代品是 **Supermicro X13／X14 雙路 2U 或 4U PCIe GPU SuperServer，可容納 2–4 張 300–350 W 雙寬加速器，搭配 512 GB DDR5 與 4× U.2 NVMe。** **本檔沒有該組態的 Supermicro 定價或街頭價，也不虛構——那正是要去做的報價。**
-
-**要為他們做的比較，不是「同樣裝 Intel Max 1100，Supermicro 對 HPE」。** 而是：**在他們已經公開的同一份月費牌價之下，一台 Supermicro 機箱能裝什麼樣的加速器，並且仍然能在 18 個月內回收？** 在 $6,700–$10,000 的中情境天花板下，答案是**單張 GPU 或雙張中階 GPU 的機種，不是旗艦 AI 機箱**——而**這個重新框定，就是整場銷售對話本身**。
-
-### 9.5 GAP — 成本天花板軌
-
-- **BOM 僅有兩項有來源**：兩顆 Xeon Gold 6442Y（Newegg 街頭價每顆 $5,580.56），以及 Intel Max 1100（約 $8,000 起始零售價，該資料點為 **2025 年 4 月**，距今已 16 個月）。**512 GB DDR5 RDIMM 組、4× 2 TB NVMe、雙路 GPU 機箱、電源與 25 GbE 網卡皆無來源價格。此比較是刻意做成不完整，而不是編造補齊。**
-- **未取得對等機箱的 Supermicro 定價或街頭價。**
-- **所有營運成本輸入值皆為假設**：每台 GPU 機種耗電、鳳凰城與 Ashburn 電價、機櫃成本、使用率。**一項都未查證。第 9 節的成本天花板區間是模型，不是查證發現。**
-- **街頭價是上限。** phoenixNAP 以經銷或合約價採購，而且——考量 Intel offer 頁與其計畫歷史——**在加速器這一項上可能遠低於街頭價**。結論的方向（加速器層在市場價格下無法自給自足）是穩健的；**幅度**在真實合約價下會壓縮。
-- **回收期是慣例。** 他們的五年 UCC 期限暗示實務上可能容忍 36–48 個月，那會讓區間上緣大致翻倍、整個算式改觀。**直接問他們用什麼回收期核算——這是正當的探詢問題，也是這個模型中影響最大的單一輸入值。**
+**這就是這個帳戶的商業真相：價格是關卡，而既有供應商的結構性優勢是 Intel 計畫關係，不是金屬件。** 任何以機殼規格而非計畫價與 Intel 通路為主軸的訴求，都在講錯東西。而 2026 年的稅務裁定意味著本季這個天花板是**往下**移動，不是往上。
 
 ---
 
-## 10. 客戶與網路
+## 11. 客戶與網路
 
 ### 已具名客戶
 
-與本轄區多數業者不同，phoenixNAP **確實公布具名客戶案例**。以下四家均出自公司自家的[客戶實績頁](https://phoenixnap.com/customer-experience)。
+以此類業者而言相當少見——phoenixNAP **公開了一份具名客戶索引**，[phoenixnap.com/customer-experience](https://phoenixnap.com/customer-experience) 上列有 24 個名字。**它沒有公開的，是任何一位具名個人與職稱。**
 
-| 名稱 | 等級 | 來源實際說了什麼 |
+| 客戶 | 來源實際內容 | 相關性 |
 |---|---|---|
-| **chuck-stack** | **公司自行發布之案例研究** | 一家中小企業 ERP 供應商，自 AWS 移轉至 Bare Metal Cloud，回報**雲端基礎設施成本降低約 75%**——描述為以 AWS 或 Azure 四分之一價格取得的高效能混合雲 |
-| **UC Berkeley, Department of Statistics** | **公司自行發布之案例研究** | 學術與研究運算，內容涵蓋雲端方案、支援與計費體驗。**之所以重要，是因為學術統計與 ML 教學工作負載，正是 Intel Max 1100 這一級最典型的買家** |
-| **Kaligent** | **公司自行發布之案例研究** | **明確為 AI 用例**——使用 Bare Metal Cloud 將 AI 導入其面客工具。**這是他們加速器業務的具名參考客戶** |
-| **TPilot** | **公司自行發布之案例研究** | 透過 phoenixNAP 為其高階客戶建立第一個美國主機據點 |
-| **Ubersmith** | **第三方發布，且屬系統面而非客戶** | Ubersmith 發布了一則 [phoenixNAP 案例研究](https://ubersmith.com/case-studies/phoenixnap/)，顯示 phoenixNAP **以 Ubersmith 作為裸機事業的訂閱計費與佈建平台** |
-| **產業組合（有陳述、未具名）** | **供應商發布＋第三方** | HPE 2025 年 4 月新聞稿指出 phoenixNAP 正在滿足 **廣告科技、金融科技與州／地方政府暨教育（SLED）** 的需求。ServeTheHome 2023 年的機房報導指出其機籠服務**金融、醫療與政府**客戶。phoenixNAP 亦公開宣布完成 **AzRAMP**（亞利桑那州雲端授權），與 SLED 曝險一致（[HPE，2025-04-04](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)·[ServeTheHome](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/)） |
-| **RadiusDC** | **新聞稿——是交易對手，不是客戶** | 2026 年 Q2 交割後成為 phoenixNAP 在鳳凰城的**房東與主機代管供應商**；phoenixNAP 明確**續留為承租戶**。不是客戶，但會影響未來機櫃落在哪裡（[PRNewswire](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html)） |
+| **TGen（Translational Genomics Research Institute）** | 列出**兩次**——一次為基因體研究擴充與 GDPR 合規，一次為 COVID-19 研究運算。位於鳳凰城的非營利基因體研究機構 | **名單中最具說服力的 AI／HPC 錨定客戶。** 基因體是 GPU／HPC 密集型工作負載，且與旗艦據點同城 |
+| **UC Berkeley — 統計系** | 列為整合學生運算資源 | 真正的研究運算工作負載 |
+| **SpyFu** | 明確列在 **AI 工作負載**項下 | **最明確的具名 AI 客戶** |
+| **Namecheap** | 列為伺服器部署 | 大規模主機託管公司，成批採購 bare metal |
+| **RTB House** | 列為歐洲擴張基礎設施 | 廣告科技即時競價——對延遲敏感、高流量運算 |
+| **Authentic8** | 列為基礎設施成本削減 | 資安／瀏覽器隔離廠商 |
+| **Ascent Aerospace** | 列為製造業資安營運 | — |
+| **chuck-stack** | 公開被引述為以「AWS 或 Azure 四分之一的價格」建置混合雲，並將基礎設施成本降至 AWS 支出的四分之一或五分之一 | **可作為 phoenixNAP 價格定位的證據——而這反過來限制了他們能為硬體付出多少**（第 10 節） |
+| **同一索引中的其他名單** | Kaligent（符合 HIPAA 的健康平台）、itpilot ApS、Glimpse（CI/CD 與代管私有雲）、My Party Album Inc.（自述較公有雲支出下降 80%）、Sagenext Infotech、ServerGenie.com、CMA Technology Solutions、FossHub、Ligris、Electric Mirror、NutPile Networks、ServerMiner、Sneaker Server、MCProHosting | 長尾主機託管、中小企業與垂直 SaaS |
+| **Crown Castle** — *互連客戶，非運算客戶* | Crown Castle 在 phoenixNAP 鳳凰城資料中心**內部**設立 PoP | **與 RadiusDC 交易相關——互連平台正是被出售的資產之一**（[Lightwave](https://www.lightwaveonline.com/data-center/data-center-interconnectivity/article/14292834/crown-castle-establishes-pop-in-phoenixnaps-data-center-in-phoenix)） |
 
-### 網路 — AS12189
+### 網路 — AS12189 與另外七個 ASN
 
-- **登錄：** **AS12189（PhoenixNAP LLC）**，ARIN 代號 PHOEN-56，autnum 註冊於 **2009-07-23**，最後異動 **2026-04-06**。IRR AS-SET 為 **LEVEL3::AS-PHOENIXNAP**（[ARIN RDAP](https://rdap.arin.net/registry/autnum/12189)）
-- **登記於 PhoenixNAP LLC（PHOEN-56）之位址空間：** 144.90.0.0/16·192.240.192.0/18·125.253.64.0/20＋/21＋/22＋/23·103.67.200.0/22·104.244.52.0/22（PNAP-03）·199.201.104.0/21（SC-ASH）·69.160.32.0/20·64.38.220.0/23（PNAP-01）·23.235.242.0/24 與 23.235.243.0/24·IPv6 **2607:6000::/28**（PHOENIXNAP-V6）與 **2607:3000::/32**（SECURED-CLOUD）（[ARIN RDAP entity PHOEN-56](https://rdap.arin.net/registry/entity/PHOEN-56)）
-- **另行登記：** **131.153.0.0 – 131.153.247.255 登記於 SECURED SERVERS LLC**（ARIN 代號 SSL-65），**技術聯絡人與 phoenixNAP 完全相同**（[ARIN RDAP 131.153.36.0](https://rdap.arin.net/registry/ip/131.153.36.0)）
-- **容量：** 自報流量等級 **500–1000 Gbps**·比例 **Heavy Outbound**·範圍 **Global**·網路類型 **Content**·啟用 IPv6、無 multicast·宣告 **1,000 個 IPv4 與 100 個 IPv6 前綴**（[PeeringDB net/2932](https://www.peeringdb.com/api/net/2932)）
-- **面客連接埠：** 所有現代裸機 SKU 皆配 **2× 25 Gbps bonding**；GPU 機種行銷為 **50 Gbps，含 20 Gbps DDoS 清洗與 15 TB 內含流量**
-- **對接政策：** **Selective**，於特定據點優先，**不需簽約、不看流量比例**
-- **IX 佈點——10 條連線、宣告埠容量約 650 Gbps：** Equinix Ashburn **100G**·AMS-IX **100G**·DE-CIX Frankfurt **100G**·SIX Seattle **100G**·BIX.BG **100G**·DE-CIX Phoenix **100G**·Equinix Chicago **20G**·Equinix Los Angeles **10G**·Equinix IX Milan **10G**·Ninja-IX Phoenix **10G**
-- **無公開 looking glass、無 route server，PeeringDB 中亦無任何個人 PoC**
-- **次要 ASN 但書——未解：** 第三方 BGP 工具將 **AS59210**（對應前綴 131.153.46.0/23）與 **AS207134**（IPinfo 標為「PHOENIX NAP, LLC.」）歸屬於 phoenixNAP。**ARIN RDAP 將 59210 解析到 APNIC 區塊、將 207134 解析到 RIPE 區塊**——兩者皆為境外註冊且**無法在來源端確認**。**請將 AS12189 視為唯一經查證之 ASN**；境外 ASN 與前綴版圖尚未測繪
+- **登錄：** 主要營運 ASN **AS12189**（[PeeringDB net id 2932](https://www.peeringdb.com/api/net?asn=12189&depth=2)），名稱「PhoenixNAP」，IRR as-set **LEVEL3::AS-PHOENIXNAP**，紀錄建立 2010-02-17，最後更新 2026-03-25。ARIN org **PHOEN-56** 共持有 **八個 ASN**：AS11572（SS-ATL — Secured Servers 亞特蘭大的舊有資產）、AS12189、AS46385（PNAP-SE3）、AS53605、AS394643（AUS1）、AS397378（BRA）、AS400672（LA0）、AS401633（RDU0）。自營 rwhois 於 `rwhois://rwhois.phoenixnap.com:4321`
+- **申報容量：** **500–1000 Gbps**、**Heavy Outbound** 流量比、**Global** 範圍、**1,000 個 IPv4 前綴與 100 個 IPv6 前綴**、peering 政策 **Selective**（PeeringDB）
+- **公司宣稱：** 「**9+ Tbps 全球網路骨幹**」與每台伺服器內含 **20 Gbps DDoS 防護**（phoenixNAP 自家網路頁）。**視為行銷用語，非稽核值**
+- **申報之 IX 埠總容量：640 Gbps**，橫跨 10 筆 PeeringDB `netixlan` — Equinix Ashburn 100G · AMS-IX 100G · DE-CIX Frankfurt 100G · SIX Seattle 100G · BIX.BG 100G · DE-CIX Phoenix 100G · Equinix Chicago 20G · Ninja-IX Phoenix 10G · Equinix Los Angeles 10G · Equinix Milan 10G
+- **鳳凰城的電信商：** 行銷為 40 家以上，含 Cogent、Arelion、Lumen、TATA、GSL、NTT、DE-CIX、Telxius、Cox、Telstra 與 Global Layer，並**直連 AWS 與 Google Cloud**
+- **設施：16 處**（自有／租用、有無運算的區分見第 5 節）
+- **伺服器端網路標準——這是商業上最相關的一行：** **所有 BMC 伺服器 SKU 一律為 2× 25 Gbps 綁定**（較舊的 s0–s3 層級為 2× 1 Gbps 或 2× 10 Gbps）。**型錄中任何地方都沒有 100G 伺服器網卡**——這是任何 AI fabric 對話的相關缺口，也是一條正當的探詢主線
+- **聯絡人：PeeringDB 未公開任何一位。** `poc_set` 為空，因此 peering 端接觸必須改走第 4.1 與第 13 節的 ARIN 代號
 
-**時效性但書：** PeeringDB 紀錄最後更新於 **2026-03-25**，但其**據點清單最後更新於 2021-10-01**。不得單憑 PeeringDB 推估本客戶規模。
+來源：[PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189&depth=2) · [ARIN org PHOEN-56](https://whois.arin.net/rest/org/PHOEN-56/pocs)
 
 ---
 
-## 11. 政治與公開紀錄
+## 12. 政治與公開紀錄
 
-僅限公開紀錄。每一列均標示等級。僅列具名主要人員。
+僅限公開紀錄。每一行皆已標記。**凡是查無者即如實寫明——一項「經執行並完成之查詢後確認不存在的 FEC 紀錄」是一項發現，不是空白。** 請特別注意以下使用的第三種狀態：**「未解決」**代表查詢已嘗試但工具失敗，**絕不可**回報為「查無紀錄」。
 
-| 對象 | 查得內容 | 標籤 |
-|---|---|---|
-| **Ron Cadwell**（創辦人暨執行長） | **FEC 個人捐獻查詢未完成。** `api.open.fec.gov` schedule_a 查詢在共用 DEMO_KEY 下三次嘗試皆回 `{"error":{"code":"OVER_RATE_LIMIT"}}`，fec.gov 瀏覽頁僅回搜尋表單、無任何資料列。**這是工具層失敗，不是查證結果——不得記為「查無紀錄」**（[API 查詢](https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=CADWELL%2C+RON)·[fec.gov 瀏覽](https://www.fec.gov/data/receipts/individual-contributions/)） | **unverified — 入口／API 遭阻** |
-| **Ian McClarty**（總裁） | **FEC 個人捐獻查詢未完成** — 同一 OVER_RATE_LIMIT 狀況。**正反皆無結果**（[API 查詢](https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=MCCLARTY%2C+IAN)） | **unverified — 入口／API 遭阻** |
-| **William Bell**（產品執行副總） | **FEC 個人捐獻查詢未完成** — 同一狀況。另請注意 **「BELL, WILLIAM」屬高度撞名姓名**；任何命中都必須先以雇主、職業與鳳凰城都會區地址比對後才可歸屬（[API 查詢](https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=BELL%2C+WILLIAM)） | **unverified — 入口／API 遭阻** |
-| **Stephanie Cadwell**（共同創辦人） | **未查詢。** 其姓氏拼法在來源間本身即未定——**Cadwell 對 Caldwell**——查詢不具可靠性（[New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/)） | **not searched** |
-| **phoenixNAP**（法人） | **相關的非聯邦層面姿態，有來源且屬正面：** phoenixNAP **完成 AzRAMP**，亦即亞利桑那州雲端資安授權計畫，由 Ian McClarty 對外公布。這是一項**州政府採購資格**，而 HPE 2025 年新聞稿確認 **SLED 為具名需求垂直領域**。**未發現任何公司政治行動委員會（PAC）**，且**未查詢州級競選財務資料庫（亞利桑那州州務卿、鳳凰城市政府）**（[AzRAMP 公告](https://www.linkedin.com/posts/mcclarty_phoenixnap-successfully-completes-azramp-activity-6867186225674108928-wEPk)·[HPE，2025-04-04](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)） | **政府相關業務姿態已查證；競選財務未查詢** |
+**重點：作為一個法人實體，phoenixNAP 唯一被找到的政治活動是鳳凰城市層級的市政遊說。完全沒有任何聯邦遊說登記，也找不到任何公司 PAC。** 在個人層級上，恰好只有**一筆** FEC 紀錄連結到具名的 phoenixNAP 在職者，而金額是 **$10.00**。
 
-**如實陳述：本案沒有任何一位主要人員實際完成聯邦政治獻金篩查。** 上表每一列的 FEC 結果都是**工具層失敗，不是乾淨結果**。要補上這個缺口，需要個人的 `api.data.gov` 金鑰，並對 Ron Cadwell、Ian McClarty、William Bell 與 Stephanie Cadwell／Caldwell 重跑一次。
+### 12.1 公開紀錄之政治獻金與申報
 
-**公開紀錄的正面意義：** AzRAMP 資格加上已確認的 SLED 垂直領域，代表**政府採購是他們業務中真實存在的一塊**；反過來說，任何硬體對話都可能出現供應鏈來源、原產國與 TAA 類型的問題。**請預先準備，不要被問倒。**
+| 對象 | 事實 | 金額＋日期 | 受贈方 | 標記 | 來源 |
+|---|---|---|---|---|---|
+| **Danny Fuentes** — VP of Information Systems, phoenixNAP（FEC 申報之雇主：**CWIE**） | 經 **ActBlue 導管**路由、並指定給一場民主黨聯邦參議員選戰的逐筆個人獻金。捐款人登載為 **Mesa, AZ 85212**，職業 **「VP」**，雇主 **「CWIE」**。申報於 **Form 3X, line 11AI**。**這是本次調查中唯一能連結到具名 phoenixNAP 在職者的 FEC 紀錄**——而且請注意，一位現任 phoenixNAP 副總把雇主填成 **CWIE 集團實體**，這是來自聯邦紀錄（而非行銷素材）對集團結構異常乾淨的自我陳報式佐證 | **$10.00 — 2026-02-18** | **ACTBLUE**（C00401224），備註：*EARMARKED FOR TALARICO FOR TEXAS (C00919084)* | **public-record（公開紀錄）** | [FEC — fuentes danny, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=fuentes+danny&contributor_state=AZ) |
+| **Cadwell, Rockridge** — 3492 E University Dr, Phoenix AZ 85034，職業 Self-Employed | 出現在亞利桑那州州務卿競選財務報表中的**州級**現金獻金。之所以記錄於此，**僅僅**是因為姓氏與 phoenixNAP 的經理人相同，且街道地址與旗艦設施同一街廓（**3492** 對 **3402** E University Dr）。**關鍵但書：查無任何證據可將此捐款人連結到 Ira Ronald Cadwell 或 Stephanie Cadwell。**「Rockridge」作為名字相當罕見，可能是申報方的資料輸入錯誤。**不得主張任何關聯** | **$520.51 — 2025-09-16** | **Kimberly Yee for Superintendent of Public Instruction**（亞利桑那州州務卿委員會 **#101898**），2025 年第 3 季報表，2025-10-15 送件 | **public-record** — 申報文件本身為一手資料；**但與 phoenixNAP 主事者之連結未經查證** | [亞利桑那州州務卿報表 PDF](https://seethemoney.az.gov/PublicReports/2026/41EA9853-D2EA-455F-8952-DC3A42066C35.pdf) |
+| **Ira Ronald Cadwell** — 經理人、創辦人／執行長 | **查無紀錄——這是經確認的「不存在」，不是未執行的查詢。** 亞利桑那州 45 筆「Cadwell」FEC 紀錄已跨兩頁全數逐筆列舉：Sarah、Holli Cadwell Dunn、Jeremy、Colleen、Capri、Sara、Delores、Bess、Jon、Susan、Daphne 與 Thomas Cadwell。**沒有 Ira、Ron 或 Ronald。** 全國性查詢僅回傳 **RONALD G. CADWELL**（加州，雇主 Kindred Healthcare，2008–2010 之 PAC 薪資扣繳）與 **RONALD CADWELL**（華盛頓州，ActBlue，2019–2022）——**兩者皆非該亞利桑那經理人** | 不適用 | 不適用 | **public-record（經確認之不存在）** | [FEC — cadwell, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=cadwell&contributor_state=AZ) |
+| **Stephanie Cadwell** — 經理人；CWIE Holding Company 之 Owner/Partner | **查無亞利桑那紀錄。** 全國有九筆「CADWELL, STEPHANIE」紀錄——**全部在加州、全部經 WinRed**，職業為 SELF 或 SELF-EMPLOYED，金額 $0.50 至 $70.00。這些**無法**歸屬於亞利桑那的登記經理人：州別不符、雇主欄從未出現 CWIE 或 phoenixNAP，且以 Chula Vista 市過濾（流傳中唯一的地址線索）回傳**零筆** | 加州紀錄橫跨 **2020-07-19 至 2021-03-01** | **WINRED**（僅加州紀錄——**未予歸屬**） | **unverified（無法查證）** | [FEC — cadwell 姓名查詢](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=cadwell+ira&contributor_name=cadwell+stephanie&contributor_name=cadwell+ron) |
+| **Ian McClarty** — 總裁 | **查無紀錄——明確之否定結論。** FEC 個人捐款，捐款人姓名「mcclarty」，捐款人州別**亞利桑那**，全部年度：**零筆**。這是經確認的否定，不是未執行的查詢 | 不適用 | 不適用 | **public-record（經確認之不存在）** | [FEC — mcclarty, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=mcclarty&contributor_state=AZ) |
+| **Marcus A. Bohn** — 登記代理人／Attorney of Record | **查無紀錄。** FEC 個人捐款，捐款人姓名「bohn marcus」，捐款人州別**亞利桑那**，全部年度：**零筆** | 不適用 | 不適用 | **public-record（經確認之不存在）** | [FEC — bohn marcus, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=bohn+marcus&contributor_name=carmody+robert&contributor_state=AZ) |
+| **Robert Carmody** — ARIN 技術聯絡人 | **查無紀錄。** FEC 個人捐款，捐款人姓名「carmody robert」，捐款人州別**亞利桑那**，全部年度：**零筆** | 不適用 | 不適用 | **public-record（經確認之不存在）** | [FEC — carmody robert, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_name=bohn+marcus&contributor_name=carmody+robert&contributor_state=AZ) |
+| **William (Bill) L. Bell** — EVP of Products | **未解決——且明確「不」記為查無紀錄。** 此姓名過於常見，無法在不加過濾的情況下查詢，而所有用以區辨其身分的雇主過濾 FEC 查詢**都在 FEC 資料介面上無限期卡住**，同時 openFEC API 全程對共用 DEMO_KEY **限流** | 不適用 | 不適用 | **gap** | [openFEC 端點](https://api.open.fec.gov/v1/schedules/schedule_a/) |
+| **Brian Musgrave** — ARIN 技術聯絡人 | **未解決。** 全國性姓名查詢帶出數筆「MUSGRAVE, BRIAN」紀錄（WinRed 與 ActBlue），但**用以區辨亞利桑那本人所需的州別過濾在 FEC 介面上逾時**。這不是否定發現 | 不適用 | 不適用 | **gap** | [openFEC 端點](https://api.open.fec.gov/v1/schedules/schedule_a/) |
+| **Cindy Anastasi／Harold Winey** — 出自資料商之高階主管 | **未解決** — 含「anastasi」與「winey」的亞利桑那合併查詢**在 FEC 介面上逾時**。另外，全國姓氏查詢中**不存在「FRANK EICKENHORST」的紀錄**，且**亞利桑那州完全沒有任何 Eickenhorst 紀錄** | 不適用 | 不適用 | **gap**（Eickenhorst：**經確認之不存在**） | [openFEC 端點](https://api.open.fec.gov/v1/schedules/schedule_a/) |
+| **CWIE 集團員工之整體樣態** — *非主事者* | **403 筆 FEC 逐筆個人獻金**登載捐款人位於亞利桑那、雇主為 **「CWIE」**、**「CWIE HOLDING」** 或 **「CWIE HOLDING CO」**。樣態是**小額且跨黨**：大量重複的 ActBlue 捐款（例如 DANIEL J WELDON，約 $2–$5，重複至 2026 年 2 月）、Harris for President 捐款（EDWIN AVALOS，$25–$50，2024 年 9–10 月），以及 WinRed 捐款（ANTHONY PRUITT，$50，2025-07-23）。**這些人沒有一位是 phoenixNAP 主事者**，其數量反映的是一份大型集團薪資名冊，而不是協同一致的企業政治立場。**列為背景脈絡，不列為公司政治活動** | 紀錄至少橫跨 **2024-09 至 2026-02** | ACTBLUE · WINRED · HARRIS FOR PRESIDENT | **public-record（彙總；個人未連結至 phoenixNAP 幹部職位）** | [FEC — 雇主 CWIE, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=CWIE&contributor_state=AZ) |
+| **phoenixNAP／CWIE／CCBill 之公司 PAC** | **未解決。** 已嘗試以「phoenixnap」「phoenix nap」「cwie」「ccbill」執行 FEC 委員會名稱查詢，但**FEC 委員會瀏覽器在反覆嘗試下始終未回傳結果**，且 openFEC 的委員會名稱端點**遭限流**。僅有間接訊號：在 **403 筆** CWIE 雇主獻金紀錄中，**觀察到的受贈方全部是導管（ActBlue、WinRed）或候選人委員會——沒有任何掛 CWIE 或 phoenixNAP 名稱的 PAC 出現在受贈方欄位。這暗示沒有公司 PAC，但未經證明** | 不適用 | 不適用 | **gap** | [FEC 委員會查詢](https://www.fec.gov/data/committees/?q=phoenixnap) |
+| **Phoenix NAP, LLC**（*公司本身——法人層級*） | **現行有效之市政遊說客戶。** Phoenix NAP, LLC 出現在**鳳凰城市 Registered Lobbyist Clients** 名單的 **2025 曆年**（名單最後更新 2025-09-16）與 **2026 曆年**（名單最後更新 2026-07-13）。登記上的具名主事者為 **Marcus A. Bohn**，2353 West University Drive, Tempe AZ 85281，**MarcusB@cwie.net**。**這是該公司作為法人唯一被找到的政治活動——而且是市級，不是聯邦級** | **CY2025 與 CY2026** 之登記客戶 | 鳳凰城市遊說登記與申報計畫 | **public-record** | [鳳凰城市 2026 年登記客戶](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2026) |
+| **Phoenix NAP, LLC v. Arizona Department of Revenue**（*自前一版保留——州稅訴訟，非政治獻金*） | 亞利桑那州稅務法院 **TX2024-000075**，承審法官 Hon. Erik Thorson；起訴狀 2024-03-13 提出，就一件由鳳凰城市執行、亞利桑那州稅務局授權、查核期間 2016-10-01 至 2020-08-31 的 TPT 查核提起救濟。**核課總額 $4,549,556.05。** 裁定於 **2026-05-21** 歸檔：ADOR 在實體爭點勝訴——主機代管與伺服器租賃**確屬**應課 TPT——但 phoenixNAP 部分勝訴，法院認定該適用屬於「to a new or additional category or type of taxpayer」，違反 **A.R.S. §42-2078(B)**，故僅得**向後生效（PROSPECTIVELY ONLY）**。**商業上具實質意義：這是一項針對「支撐 GPU 採購的那條收入線」的永久性新稅負** | 裁定 **2026-05-21** 歸檔 | 亞利桑那州稅務局（對造） | **public-record** | [Minute entry PDF](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf) |
+
+#### 受贈機構 — 沿革、政治傾向與負責人
+
+上表中出現的每一個受贈機構，都獨立研究。**導管不是終點：** 捐給 ActBlue 或 WinRed，實質上是捐給被指定（earmarked）的候選人，而 FEC 的備註欄正是判斷對象的依據。
+
+| 機構 | 類型 | 沿革 | 政治傾向（＋依據） | 負責人 | 負責人姓氏語源（onomastic） | 來源 |
+|---|---|---|---|---|---|---|
+| **[ActBlue](https://www.fec.gov/data/committee/C00401224/?tab=about-this-committee)**（FEC 委員會 **C00401224**） | **Hybrid PAC**，附設 non-contribution account；non-qualified、unauthorized。實際功能是民主黨與進步派候選人及議題的**付款導管**。登記於麻薩諸塞州，PO Box 962017, Boston MA 02196 | **2004 年**由 **Benjamin Rahn** 與 **Matt DeBergalis** 於麻州劍橋創立，最初為小額線上募款平台，其後成長為美國左翼最主要的募款導管。單就 **2025–2026** 這個兩年期，其申報總收入即達 **$1,925,847,484.38**，全數為逐筆個人獻金。Rahn 隨時間由總裁轉為執行董事與董事會成員等較被動的角色 | **民主黨／進步派——明示，非推論。** 其自述使命即為協助民主黨候選人與進步派組織進行小額募款，且平台僅接受民主黨及其盟友之委員會。本次調查中，導管功能是**直接可見的**：與 phoenixNAP 相關的那筆獻金經 ActBlue 通過，FEC 備註欄為 **「EARMARKED FOR TALARICO FOR TEXAS (C00919084)」**，即一場民主黨聯邦參議員選戰 | **登記司庫：GILMER, GEORGE**（依該委員會現行 Statement of Organization，FEC-1975230，2026-05-15 送件）。**總裁兼執行長：Regina Wallace-Jones**（2023 年就任）。**董事長／共同創辦人：Matt DeBergalis。** **共同創辦人：Benjamin Rahn** | **僅為姓名語源。** **GILMER**：源自蓋爾語 *Gille Moire*，意為「（聖母）瑪利亞的僕人」；另一種讀法為 *gille*（僕人）＋ *mor*（偉大）＝「great servant」；蘇格蘭與愛爾蘭源流，紀錄可溯至 1133–1156 年；全球約 10,503 人使用，以美國最多。**DEBERGALIS**：[forebears.io](https://forebears.io/surnames/debergalis) 明白記載「The meaning of this surname is not listed」，且未列出起源國；極為罕見，全球僅約 52 人，以美國最集中（紐約州 67%）。**WALLACE**（如 Wallace-Jones）：源自 *Le Waleis*，意為「威爾斯人」或「外來者」，依十二世紀特許狀更精確地指 Strathclyde 的不列顛人；出現於十二世紀的 Ayrshire 與 Renfrewshire；全球約 378,119 人使用 | [FEC C00401224](https://www.fec.gov/data/committee/C00401224/?tab=about-this-committee) · [forebears.io/gilmer](https://forebears.io/surnames/gilmer) · [forebears.io/debergalis](https://forebears.io/surnames/debergalis) · [forebears.io/wallace](https://forebears.io/surnames/wallace) |
+| **[Talarico for Texas](https://www.fec.gov/data/committee/C00919084/?tab=about-this-committee)**（FEC 委員會 **C00919084**） | **聯邦參議員主要競選委員會（principal campaign committee）**——單一聯邦候選人之授權委員會。PO Box 14508, Austin TX 78761 | 於 **2025-09-09** 向 FEC 登記，支持 **James Talarico** 之德州聯邦參議員選舉。募款速度極快：2025–2026 週期至 2026-06-30 之總收入為 **$68,555,930.42**，其中 **$65,585,741.88** 為個人獻金、**$36,717,034.10** 為未逐筆申報部分——屬小額為主的結構。期末現金 **$21,548,155.08**，無負債。現行 Statement of Organization 為 FEC-1997955，2026-07-15 送件 | **民主黨。** FEC 自身的委員會紀錄載明授權候選人為 **TALARICO, JAMES**，德州聯邦參議員候選人，**民主黨**。這是主要競選委員會，因此依定義只資助一個人：它自己的候選人 | **授權候選人：James Talarico。** **司庫：LEE, LAUREN DECOT** | **僅為姓名語源。** **TALARICO**：[forebears.io](https://forebears.io/surnames/talarico) 記載「The meaning of this surname is not listed」；全球約 9,341 人使用，絕對人數以美國最多（賓州 20%、紐約州 15%、紐澤西州 10%），但相對於人口的**密度**則以義大利最高。**LEE**：古英語地名型姓氏，源自 *leah*，意為草地或草原，即「居於草地或牧地者」；凱爾特語讀法則有「灰色」或「醫者／放血師」之義；「Alan de Leia」約於 1177 年見證一份特許狀；全球第 232 常見姓氏，約 2,280,266 人使用，**同時也是許多彼此無關之東亞姓氏的常見羅馬拼音——這正好說明為何一個拼寫的語源，對任何個別使用者都不具任何推論意義** | [FEC C00919084](https://www.fec.gov/data/committee/C00919084/?tab=about-this-committee) · [forebears.io/talarico](https://forebears.io/surnames/talarico) · [forebears.io/lee](https://forebears.io/surnames/lee) |
+| **[Kimberly Yee for Superintendent of Public Instruction](https://seethemoney.az.gov/PublicReports/2026/41EA9853-D2EA-455F-8952-DC3A42066C35.pdf)**（亞利桑那州州務卿委員會 **#101898**） | **亞利桑那州級候選人競選委員會**，管轄機關為亞利桑那州州務卿。PO Box 82071, Phoenix AZ 85071；(602) 456-9536；info@kimberlyyee.com | **Kimberly Yee** 參選 2026 年亞利桑那州公共教育廳長（Superintendent of Public Instruction）之候選人委員會。Yee 為現任**亞利桑那州財政廳長（State Treasurer）**，2018 年當選、2022 年連任，因任期限制不得再任該職。她於 **5 月 28 日**宣布參選廳長，並於 **2026 年 7 月的共和黨初選中擊敗現任 Tom Horne**，將於 11 月對上民主黨的 Teresa Leyba Ruiz。**2025 年第 3 季**報表（2025-10-15 送件，報表 ID 309517，涵蓋 2025-07-01 至 2025-09-30）顯示該季現金收入 **$42,951.52**，期末現金餘額 **$197,670.82** | **共和黨。** Yee 以共和黨籍擔任州級公職，並贏得 2026 年公共教育廳長之共和黨初選，且該委員會為**單一候選人委員會**，因此其全部資金都用於資助這位共和黨候選人。該委員會自身送件的報表即載明候選人與亞利桑那州州務卿之管轄 | **候選人：Yee, Kimberly。** **司庫：Childress, Phyllis**（PO Box 82071, Phoenix AZ 85071） | **僅為姓名語源。** **YEE**：[forebears.io](https://forebears.io/surnames/yee) 轉載之《Dictionary of American Family Names》（1956）釋為「(Chinese) First person singular pronoun, I」；全球約 189,056 人使用，以緬甸最多（98,397 人），其次為馬來西亞與美國。**CHILDRESS**：「(English) A variant of Childers」；另有使用者提交之語源將其溯自 Childerhouse 型地名，由古英語 *cildra*（child）＋ *hus*（house）組成；全球約 33,501 人使用，絕大多數在美國（德州 13%、維吉尼亞州 11%、田納西州 7%） | [亞利桑那州州務卿報表 PDF](https://seethemoney.az.gov/PublicReports/2026/41EA9853-D2EA-455F-8952-DC3A42066C35.pdf) · [Ballotpedia — Kimberly Yee](https://ballotpedia.org/Kimberly_Yee) · [forebears.io/yee](https://forebears.io/surnames/yee) · [forebears.io/childress](https://forebears.io/surnames/childress) |
+| **[WinRed](https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=CWIE&contributor_state=AZ)** | **共和黨陣營之線上募款導管**——ActBlue 在政治光譜右側的對應者 | **本次未深入研究**，列出僅為求完整，因為它在 CWIE 雇主的彙總 FEC 資料中以受贈方身分出現（例如 ANTHONY PRUITT，$50.00，2025-07-23），也出現在**未經歸屬**的加州「CADWELL, STEPHANIE」紀錄中。**沒有任何一筆流向 WinRed 的獻金能連結到具名的 phoenixNAP 主事者**，因此其創立沿革、負責人與司庫並未追查 | **共和黨。** 廣泛被認知、亦自述為共和黨小額募款導管；在本資料集中，其相關紀錄搭配的是共和黨委員會（例如 TRUMP NATIONAL COMMITTEE JFC、TEAM GRAHAM），而 ActBlue 紀錄搭配的則是民主黨委員會 | **GAP — 未研究**，因為沒有任何具名 phoenixNAP 主事者被連結到 WinRed 獻金 | **GAP — 未辨識出任何負責人，因此未查閱任何姓氏語源資料。並非杜撰** | [FEC — 雇主 CWIE, AZ](https://www.fec.gov/data/receipts/individual-contributions/?contributor_employer=CWIE&contributor_state=AZ) |
+
+*姓氏語源僅為公開姓名學資料之語源考據，並非對任何個人族裔或血統之查證陳述。政治獻金為公開紀錄，不等於政黨登記。*
+
+#### 遊說
+
+| 登記人／客戶 | 議題 | 支出 | 來源 |
+|---|---|---|---|
+| **不存在任何聯邦 LDA 登記——一項乾淨、明確的否定結論。** 已直接以客戶名稱「phoenix nap」「phoenixnap」「cwie」「ccbill」「radiusdc」「IPI Partners」查詢參議院遊說揭露法（LDA）API。**每一次查詢皆回傳 `{"count":0,"results":[]}`。** phoenixNAP 及其關係企業**未出現在聯邦遊說登記系統的任何位置** | 不適用——無聯邦登記 | **聯邦 $0**（不存在任何申報） | [參議院 LDA API](https://lda.senate.gov/api/v1/filings/?client_name=phoenix%20nap) |
+| **Phoenix NAP, LLC — 鳳凰城市登記遊說客戶（市政層級，非聯邦），CY2026。** 登記上之具名主事者：**Marcus A. Bohn**，2353 West University Drive, Tempe AZ 85281，**MarcusB@cwie.net** | Registered Clients 名冊 PDF **未逐項列出**議題明細。前幾年的 Annual Lobbyist Registration 申報（**2022 年度**，2023-01-17 送件；**2023 年度**，2023-07-24 送件）皆載明 Bohn 為 Phoenix NAP, LLC 之主事者。就其業務性質而言，市級資料中心事務——分區、公用事業、許可、University Drive 園區之開發協議——是顯而易見的可能主題，**但這是推論，不是申報文字** | **未揭露** — 名冊 PDF 只記載登記與最後更新日期，**不記載支出金額** | [鳳凰城市 2026 年登記客戶](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2026)（名單更新 2026-07-13） |
+| **Phoenix NAP, LLC — 鳳凰城市登記遊說客戶，CY2025** | 同一計畫、前一年度。**證明這段市政遊說關係具有延續性，不是一次性事件** | 名冊上**未揭露** | [鳳凰城市 2025 年登記客戶](https://lobbyist.phoenix.gov/PDF/RegisteredClients/2025)（名單更新 2025-09-16） |
+| **OpenSecrets 機構檔案** | **未取得** — OpenSecrets 對自動化請求回傳 Cloudflare **HTTP 403**，與前一版一致。既然聯邦 LDA 申報已確認為**零**，OpenSecrets 的遊說檔案本來就應該是空的 | 不適用 | [opensecrets.org](https://www.opensecrets.org/) |
+
+**評估。** 在政治軸線上，phoenixNAP 的足跡**規模不大、脈絡清晰，且幾乎完全是市政層級的**。**沒有聯邦遊說**、**找不到公司 PAC**，而且**創辦人兼經理人、總裁、登記代理人，以及兩位具名鳳凰城網路工程師其中一位，都完全沒有 FEC 紀錄**——這是四項獨立、且各自來自已執行並完成之查詢的確認性不存在。唯一確實存在的個人紀錄，是一位副總 **$10.00** 的導管獻金。CWIE 的薪資名冊顯示 403 筆小額紀錄分散於兩邊的導管，這是一個大型集團雇主應有的樣子，**而不是**企業的政治立場。**這些都不是切入點，也都不是風險。** 本節在商業上真正重要的是那件**亞利桑那州稅務法院裁定**，而它屬於定價簡報，不屬於關係經營簡報。
 
 ---
 
-## 12. 公開聯絡管道
+## 13. 公開聯絡管道
 
-僅限公開來源。**本節不列任何個人手機號碼與私人住址，本次亦未蒐集。** 無公開管道者標示為 GAP。
+僅限公開來源。**本節不列任何個人行動電話與私人住址，且本次亦未尋找。** 以下每一項，皆由 phoenixNAP 自行登錄於登記機構，或由政府機關公布於公開申報文件中。無公開管道者標示為 GAP。
 
 | 管道 | 內容 | 來源 |
 |---|---|---|
-| **總機／IP 管理** | **+1-480-422-2022** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **支援／NOC** | **+1-480-646-5362 · support@phoenixnap.com** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **IP 管理（群組信箱）** | **ipadmin@phoenixnap.com** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **濫用通報（群組信箱）** | **abuse@phoenixnap.com** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **具名工程師 — Robert Carmody**，ARIN OrgTech（美國） | **robertca@phoenixnap.com · +1-480-506-0120** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **具名工程師 — Brian Musgrave**，ARIN OrgTech（美國） | **brianmu@phoenixnap.com · +1-480-401-0309** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **具名工程師 — Dragan Petrovic**，ARIN OrgTech（EMEA） | **draganp@phoenixnap.com · +356 77548965 · +381 621448366** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **具名工程師 — Milos Ilic**，ARIN OrgTech（塞爾維亞） | **milosi@phoenixnap.com · +381 615494754** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **具名工程師 — Adrian Montebello**，ARIN OrgTech（馬爾他） | **adrianm@phoenixnap.com · +356 79305305** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **總部通訊地址（送貨與到訪）** | **phoenixNAP, 3402 E. University Drive, Suite 420, Phoenix, AZ 85034-7200** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189)·AZ SOS UCC 檔號 2026-003-2810-7 |
-| **LinkedIn — Ian McClarty, President** | [linkedin.com/in/mcclarty](https://www.linkedin.com/in/mcclarty) | LinkedIn |
-| **LinkedIn — William Bell, EVP Products** | [linkedin.com/in/williamb](https://www.linkedin.com/in/williamb) | LinkedIn |
-| **LinkedIn — Ron Cadwell, CEO** | [linkedin.com/in/ron-cadwell-0b747313b](https://www.linkedin.com/in/ron-cadwell-0b747313b/) | LinkedIn |
-| **LinkedIn — 公司頁** | [linkedin.com/company/phoenix-nap](https://www.linkedin.com/company/phoenix-nap) | LinkedIn |
-| **現行定價與產品型錄**（用來追蹤 GPU 層是否改版） | [phoenixnap.com/bare-metal-cloud/instances](https://phoenixnap.com/bare-metal-cloud/instances) — 價格由 JS 注入；底層資料為 [api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json) | phoenixNAP |
-| **信箱規則 — 推導值，未經查證** | 六個獨立公開的 ARIN 信箱（`robertca`、`brianmu`、`draganp`、`milosi`、`adrianm`）得出規則：**名字＋姓氏前兩字母 @phoenixnap.com**。套用到高階主管會得出 **ianmc@phoenixnap.com** 與 **williamb@phoenixnap.com**。**屬推導，未經確認。不得視為已查證，也不要在沒有備援管道的情況下據此發冷信** | [ARIN RDAP autnum 12189](https://rdap.arin.net/registry/autnum/12189) |
-| **任何高階主管之直撥** | **GAP — 未公開。** 僅有總機、支援專線與五位具名工程師的直撥號碼 | — |
-| **具名 CFO 或採購聯絡人** | **GAP — 全網未識別** | — |
+| **公司／OrgAdmin 電話** | **+1-480-422-2022** — 列於 ARIN 的 Admin 與 Abuse POC 紀錄，3402 E. University Dr. Suite 420, Phoenix AZ 85034 | [ADMIN1723-ARIN](https://whois.arin.net/rest/poc/ADMIN1723-ARIN) |
+| **IP 管理信箱——最近更新之 POC（2026-07-07），已確認活躍** | **ipadmin@phoenixnap.com** | [ADMIN1723-ARIN](https://whois.arin.net/rest/poc/ADMIN1723-ARIN) |
+| **支援電話與信箱** | **+1-480-646-5362**／**support@phoenixnap.com** | [TECH357-ARIN](https://whois.arin.net/rest/poc/TECH357-ARIN) |
+| **具名網路工程師 — Robert Carmody** | **robertca@phoenixnap.com** ｜ **+1-480-506-0120** ｜ 3402 E University Dr, Phoenix AZ | [CARMO67-ARIN](https://whois.arin.net/rest/poc/CARMO67-ARIN) |
+| **具名網路工程師 — Brian Musgrave** | **brianmu@phoenixnap.com** ｜ **+1-480-401-0309** ｜ 3402 E University Dr, Phoenix AZ | [MUSGR48-ARIN](https://whois.arin.net/rest/poc/MUSGR48-ARIN) |
+| **具名法務聯絡人 — Marcus A. Bohn** | **MarcusB@cwie.net** ｜ 2353 West University Drive, Tempe AZ 85281 | [鳳凰城市遊說登記](https://lobbyist.phoenix.gov/PDF/Registration/f9bc617c-1340-44ac-aa24-0e45f75a28fa) |
+| **具名 EMEA 網路 — Adrian Montebello（馬爾他）** | **adrianm@phoenixnap.com** ｜ **+356 7930 5305** ｜ Phoenix Business Center, Penthouse Level, Triq il-Ferrovija, Santa Venera, Malta | [MONTE41-ARIN](https://whois.arin.net/rest/poc/MONTE41-ARIN) |
+| **具名工程 — Milos Ilic（塞爾維亞）** | **milosi@phoenixnap.com** ｜ **+381 61 549 4754** ｜ Niš, Serbia | [ILICM-ARIN](https://whois.arin.net/rest/poc/ILICM-ARIN) |
+| **具名工程 — Dragan Petrovic（登載於「CCBill EU」名下）** | **draganp@phoenixnap.com** ｜ 辦公室 **+356 77548965** ｜ 行動 **+381 62 1448366** ｜ Belgrade, Serbia | [PETRO182-ARIN](https://whois.arin.net/rest/poc/PETRO182-ARIN) |
+| **Abuse** | **abuse@phoenixnap.com** ｜ +1-480-422-2022 | [ABUSE2349-ARIN](https://whois.arin.net/rest/poc/ABUSE2349-ARIN) |
+| **線上產品型錄與定價——可用來追蹤哪些 GPU SKU 在動** | [phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json) | phoenixNAP 自家快取定價 API |
+| **具名客戶索引** | [phoenixnap.com/customer-experience](https://phoenixnap.com/customer-experience) | phoenixNAP |
+| **高階主管管道 — Bell、McClarty、Cadwell** | **GAP — 三人皆無公開直接信箱。** 僅有 LinkedIn：[Bell](https://www.linkedin.com/in/williamb) · [McClarty](https://www.linkedin.com/in/mcclarty) · [Cadwell](https://www.linkedin.com/in/ron-cadwell-0b747313b/) | LinkedIn |
+| **信箱命名型態——推論，未經查證** | 六筆 ARIN 紀錄中已確認的型態是 **名字＋姓氏前兩個字母**：robertca@、brianmu@、milosi@、adrianm@、draganp@。依此型態，**William Bell 應為 williamb@phoenixnap.com——此為推論，未經查證。不得視為已確認，也不得向推測出來的位址發冷信** | [ARIN org PHOEN-56 POC 清單](https://whois.arin.net/rest/org/PHOEN-56/pocs) |
+| **業務直撥聯絡人** | **GAP — 未公布。** 僅有公司主線、支援專線，以及具名工程師的直撥號碼 | — |
+| **PeeringDB peering 聯絡人** | **GAP — `poc_set` 為空。** peering 相關問題請改走上方 ARIN 代號 | [PeeringDB AS12189](https://www.peeringdb.com/api/net?asn=12189&depth=2) |
 
 ---
 
-## 13. Supermicro 銷售切入點
+## 14. Supermicro 銷售切入點
 
-### 分類：**既有客戶防守已部分失守 → 贏回（WIN-BACK），不是新開發，也不是對陌生對手的取代**
+### 分類：**既有客戶防守，且帶有急迫的被替換威脅**
 
-Supermicro **在這裡不是新供應商。** Supermicro 曾於 **2017 年 6 月**發布具名 phoenixNAP 案例研究，附總裁與產品副總引述，並在全球部署 **X11 BigTwin 與 Simply Double SuperStorage，加上 Rack Scale Design 與 Supermicro Server Manager**，還把 phoenixNAP 帶進 **Intel Early Ship 計畫**。近至 **2023 年 3 月**，ServeTheHome 仍將其 Sapphire Rapids 裸機執行個體記載為 Supermicro；phoenixNAP 至今仍維持一個**線上的 Supermicro 生態系頁面**，並在 **2025 年 6 月**共同舉辦 Supermicro 網路研討會。
+**這不是全新開發案；任何把它當成全新開發案來談的人都會輸掉。** Supermicro 是有據可查的九年既有供應商：2017 年 6 月共同發表的案例研究**具名引述 Ian McClarty 與 William Bell**；已部署 BigTwin 2U 4 節點與 Simply Double 全快閃 SuperStorage；**Supermicro Rack Scale Design 與 Supermicro Server Manager 跨全部據點運行**；且早期 Intel 矽晶是**透過 Supermicro 的 Early Ship／Early Deployment 計畫**取得（[案例研究](https://www.supermicro.com/CaseStudies/CaseStudy_PhoenixNAP.pdf)）。ServeTheHome 更於 **2023 年 3 月**實機確認一台 Supermicro twin node 正作為 phoenixNAP 的 `d3.m6.xlarge` 運行（[拆解](https://www.servethehome.com/putting-the-bare-metal-server-in-the-phoenixnap-bare-metal-cloud-intel-xeon-sapphire-rapids-supermicro/)），而 phoenixNAP 至今仍掛著 [/offers/supermicro-servers](https://phoenixnap.com/offers/supermicro-servers) 生態頁。
 
-**但最近兩次平台更新都被 HPE 拿走：** 2023 年 8 月的 Ampere ProLiant RL300 Gen11，以及 2025 年 4 月的 ProLiant Compute DL320 Gen12（DC-MHS）。連續兩個世代，由 HPE 發布，由 phoenixNAP 自家總裁與產品執行副總具名背書。**這個客戶是溫的、正在流失，不是冷的。**
+**但在 2025 年 4 月，HPE 宣布其首個 DC-MHS 解耦式硬體部署落在 phoenixNAP，搭載 Intel Xeon 6**——而 `s4.x6`（Xeon 6 6731E）SKU 正好在同一時間窗出現在 phoenixNAP 的型錄中（[HPE](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)）。**HPE 在一個 Supermicro 帳戶裡拿下了最新矽晶的旗子。這是帳戶團隊必須交代的一件事。**
 
-### 這個業者獨有的切入口
+### 三個切入點，依優先順序
 
-**他們的加速器層被凍結，而且無人防守。** 整個 GPU 型錄是**同一台機器的三個分級**，圍繞 **2× Intel Data Center GPU Max 1100** 打造，約於 **2023 年 10 月**導入，此後 **約 34 個月**未動。**現行計費型錄中完全沒有任何 NVIDIA SKU，也沒有任何 AMD SKU**——支撐其自家定價頁的正式產品 JSON，全部 101 項產品中，`gpuConfigurations` 只有一個值：**「Intel Max 1100 GPU」**。同時，他們自家行銷頁只承認**六個計費區域中的兩個有 GPU 現貨**。
+**1. GPU 切入點——價值最高、時機最好。** phoenixNAP 全部的公開 GPU 型錄就是三個雙 Intel Data Center GPU Max 1100 的 SKU（`d3.g2.c1/c2/c3`），**全部在 2024 年 2 月（含）之前上線，2.5 年來沒有換代**。與此同時，後繼 SKU **`d3.g3.c2.medium`** 自 **2025 年 4 月**起就掛在他們自家產品系統中——僅以 **$0 的 Windows Server 2025 授權關聯項**形式可見，沒有硬體規格、沒有價格——而且**截至 2026 年 8 月 11 日仍然掛在那裡、仍未發表**。這是一個**原則上已決定、卻卡在矽晶選型或資本支出上的 GPU 平台決策**。誰幫他們把它結掉，誰就拿下這次汰換。
 
-他們有 AI 故事——**Kaligent** 案例、**UC Berkeley 統計系**參考客戶、HPE 引用的 **adtech／fintech／SLED** 需求——卻只有**一款逐漸老化的加速器**可以支撐。**這個位置 HPE 沒有拿走。任何人都沒有拿走。**
+**2. 分割後切入點——時機的催化劑。** **2026 年 3 月 12 日**，RadiusDC（IPI Partners 平台，執行長 Mike Krza）同意收購 phoenixNAP 的鳳凰城資料中心與主機代管業務，2026 年第二季交割；phoenixNAP 轉為**承租方**，保留約 80% 的全球業務，**明確包含 Bare Metal Cloud 與網路**。McClarty：「*This transaction sharpens our focus.*」Bell：「*We are building platforms for customers who want dedicated and private infrastructure without friction.*」**他們剛把一門不動產生意換成一門運算生意，手上有現金——機隊如今就是整間公司。**
 
-### 金錢論證——把他們自己的牌價講回去
-
-`d3.g2.c3.xlarge` 的牌價是 **36 個月預約 $920.23/mo**、**單月 $1,778.49/mo**。即使用寬鬆的模型（第 9 節），這也只支撐得起**每台約 $6,700–$10,000、18 個月回收**的硬體。而兩顆 Xeon Gold 6442Y 街頭價加上兩張 Max 1100 街頭價，**已經約 $27,000，還沒算記憶體、NVMe、機箱或網卡**。
-
-**他們現在這台 GPU 機種，在市場硬體價格下付不起自己。** 那代表它要嘛是用計畫價買的、要嘛是用五年攤提、要嘛就是策略性的賠本引流。**這三種都是「該談另一台機器」的理由。**
-
-而因為 UCC 紀錄顯示他們是**用銀行債務在自己的資產負債表上買**——BMO Bank N.A. 自 2014 年起未曾中斷，加上 **2026 年 3 月新增的 U.S. Bank Equipment Finance**——而不是向原廠融資子公司租，**每一塊錢的單機成本都落在他們的利息費用與折舊上。對這個買家而言，「每台部署成本」不是話術，而是整場對話本身。**
-
-### 時機
-
-**RadiusDC 交易於 2026 年 Q2 交割**，帶走了鳳凰城主機代管事業，讓 phoenixNAP 剩下**約 80% 的自己**，在結構上成為一家**裸機雲與網路公司**。他們的 UCC-1 節奏在 **2025 年 7 月至 2026 年 4 月間中位數約 33 天，然後在 2026-04-02 硬停**——切割期間四個月靜默。**這段暫停正在結束。** 下一筆融資撥款將支撐一支**純 BMC 機隊**，而加速器層是其中最外露的一條科目。**現在就接觸，趕在 9 月至 12 月的視窗之前。**
+**3. 舊機汰換切入點——不華麗、但好拿的一單。** 他們在 **2026 年**仍在販售 `s0.d1.small`／`s0.d1.medium`，搭載 **Intel E3-1240v3／E3-1270v3 — Haswell、2013 年世代、16–32 GB、SATA SSD、2× 1 Gbps**。針對十二年舊鐵件的密度與電力 ROI 論述自己就會寫，而且**在他們成為向 RadiusDC 繳電費的新承租方之後，他們對每一瓦的在意程度會是自有時期所沒有的**。
 
 ### 首次接觸的唯一資格問題
 
-只問這一題，對象是 **William Bell, EVP of Products**：
+對象為 **William Bell，EVP of Products**：
 
-> **「你們的 GPU 型錄從 2023 年底以來就是同一台雙 Max 1100 機器的三個分級，而且裡面完全沒有 NVIDIA 或 AMD 的選項——切割案之後要更新加速器層時，限制是矽晶供貨、是機箱，還是『能放在一台機器上、又能對照你們公開牌價回本』的那個價格？」**
+> **「你們的型錄裡從 2025 年 4 月起就掛著一個 `d3.g3` 的 GPU SKU，卻一直沒有標價——現在 RadiusDC 交割把你們變成承租方、也釋出了資本，這個 SKU 卡的是加速器選型，還是資本支出核准？交割後這個決策由誰負責？」**
 
-這個問題**不回答就無法迴避地暴露出這是三場仗中的哪一場**：採購經濟學（**Supermicro 該贏的仗**）、已在 HPE 上的平台標準化（**比較難打的仗，但值得早點知道**），或是 Intel 的商業安排（**若是如此，就把 Supermicro 機箱定位為載具，而不是去攻擊矽晶選擇**）。
+這個問題證明你讀的是他們的**型錄**而不是官網，直接點名那個停滯的決策，並在一句話內逼出**預算歸屬**的答案。
+
+### 商業現實檢核——第一次報價前務必讓團隊知道
+
+- **其旗艦 GPU 節點由租金推導的成本天花板約 $8–12K，而街頭價 BOM 約 $14–18K（第 10 節）。他們付不起牌價。** 他們走的是 **Intel 計畫經濟**——這記載於 Supermicro 自家案例研究——因此**守住這個帳戶的路徑是 Intel 關係與計畫價，不是機殼規格。**
+- **2026 年 5 月 18 日的亞利桑那州稅務法院裁定**使其伺服器租賃收入自此往後須課州、郡與鳳凰城市 TPT。**這是本季會讓他們在價格上更硬的新增毛利逆風，第一次報價前就該知道。**
+- **技術切入口：** 型錄中每一個伺服器 SKU 的上限都是 **2× 25 Gbps 綁定——他們的機隊裡任何地方都沒有 100G 伺服器網卡**，這是任何多節點 AI 訓練論述的真實限制，也是與 Carmody 或 Musgrave 之間一條正當的探詢主線。
+- **不要複述「L4 到 H100」的說法。** 第三方部落格如此宣稱；**phoenixNAP 自家型錄中的 NVIDIA SKU 為零**（第 6.1、7 節）。
+- **不得就 GPU、Ampere、AMD 或 Xeon 6 P-core 節點陳述任何機殼供應商。** Supermicro 僅在 `d3.m6` twin node 與歷史的 BigTwin／SuperStorage 部署上獲得確認。其餘皆為 **GAP**，必須用問的，不能用講的。
 
 ### Rule 8 — 經銷通路注意事項（撥號前必讀）
 
-**這是一個有長期且有據可查歷史的回頭 Supermicro 買家**，因此**請預設已有既有的市場通路，並在任何報價之前先找出來。** 在尚未確認**他們歷史上與目前的 Supermicro 採購是否經由經銷商或 VAR、以及是否已有夥伴在此客戶上具備立場**之前，不要直接對其報價。
+**註冊「終端用戶」——Phoenix NAP, LLC，AZ ACC 檔號 L15102933，3402 E University Drive, Phoenix AZ 85034——除此之外什麼都不要註冊。** 本帳戶有四個具體陷阱：
 
-若已有夥伴在位，**請以具名該夥伴的方式登錄此機會，並讓報價經由該夥伴走。** 為了搶一個單機價格而繞過對方，付出的通路代價會超過這筆生意的價值，而且**一定會立刻曝光**——他們的採購與法務本來就把所有事情都對照一份已立約的授信在跑，一張沒預期到的直接發票不可能悄悄過關。
+**（a）** phoenixNAP 有透過通路交易（Insight 公開列有 phoenixNAP 合作夥伴頁），**因此可能有經銷商試圖登錄這個商機。被註冊的一方必須是終端用戶實體。**
 
-**順序——不得調換：** ① 依 Rule 8 釐清通路／經銷商歸屬 → ② 登錄 lead（Phoenix AZ ＝ West Coast South excl. CA ＝ **T1｜T31**，一組自有轄區，**CRM 於 2026-08-11 實查為乾淨，無 lead、無 account、無 do-not-call**）→ ③ 以上述唯一資格問題進行接觸。**轄區可乾淨註冊——請註冊，但要在通路問題有答案之後註冊，而不是假設它沒問題。**
+**（b）** phoenixNAP 自己就在**銷售「hardware leasing」與 HaaS**，因此在 CRM 去重時可能被誤看成經銷商。**它不是**——亞利桑那州稅務法院已在紀錄上認定它**擁有**其出租的伺服器（[TX2024-000075](https://superiorcourt.maricopa.gov/media/yvoj0ksi/tx2024-000075.pdf)）。
+
+**（c）不要讓這筆商機被登錄到 RadiusDC 或 IPI Partners 名下。** 2026 年第二季交割後，3402 E University Drive 會變成「**RadiusDC Phoenix I DC1**」，datacentermap 已經這樣標示了。**易主的是建物，不是運算採購方。** 註冊地址而非實體，會把這筆商機掛到錯誤的公司上。
+
+**（d）註冊前先做關係人清查：** **Secured Servers, LLC**（2012 年被併購，商標至今仍由 Phoenix NAP LLC 持有，ASN **AS11572「SS-ATL」**仍掛在 phoenixNAP 的 ARIN org 上），以及位於 Tempe 2353 W University Drive 的 **CWIE／CCBill 集團**（Marcus Bohn 的 MarcusB@cwie.net 位址，以及公司欄位登載為「CCBill EU」、信箱卻是 @phoenixnap.com 的 ARIN POC Dragan Petrovic）——**這些都可能已經以獨立紀錄存在於 CRM 中。**
+
+**警告——依上一段行動前務必先讀：** Rule 8 的字面條文**並不在**本檔的來源之列。上述內容套用的是**「註冊終端用戶、不註冊經銷商」**的一般原則。**送件前請對照實際條文查證。**
+
+**順序——不得調換：** ① 執行關係人 CRM 清查並釐清通路／經銷商歸屬（Rule 8）→ ② 完成亞利桑那 UCC 查詢（第 9 節）→ ③ 註冊終端用戶實體（鳳凰城 AZ ＝ West Coast South excl. CA ＝ **T1｜T31**，一組自有轄區，可逕行註冊）→ ④ 以上述資格問題聯繫 **William Bell**，且只問這一題。
 
 ---
 
-## 14. 查證附錄
+## 15. 查證附錄
 
-### 14.1 單一來源與低等級說法（引用前須再驗證）
+### 15.1 單一來源支撐的說法（引用前須再驗證）
 
 | 說法 | 唯一來源 | 風險 |
 |---|---|---|
-| **Marcus Bohn ＝ 法務長**·**Cindy Anastasi ＝ 人資總監** | [RocketReach 管理層列表](https://rocketreach.co/phoenixnap-management_b5c0b21bf42e087f) | **僅資料商，無任何 phoenixNAP 官方確認。查證前不得於信件中使用這些職稱** |
-| **Frank Eickenhorst ＝ VP Support Services & DC Ops**·**Seow Lim ＝ VP Architecture & Platform** | [Tracxn 側寫](https://tracxn.com/d/companies/phoenixnap/__mD8bU1wR9YlaxJnT-i3Qsq2RAnC6xvg1lhsYqyiFn0g) | **僅資料商。** Eickenhorst 已被列入採購決策圈——**使用職稱前務必確認** |
-| **Stephanie Cadwell 為共同創辦人** | [New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/) | **單一來源，且同一篇文章內文將姓氏寫成「Caldwell」。** 信心低至中 |
-| **員工數約 183** | [Zippia](https://www.zippia.com/phoenixnap-careers-1559024/revenue/) | **無可見方法論的第三方估計。** 請用 150–300 區間並標示為估計值 |
-| **營收 $18–25m** | Zippia／Kona Equity | **幾乎確定是錯的**——與對外行銷 EBITDA USD 70m 無法調和。**不得登錄 CRM** |
-| **鳳凰城廠房 2009 年以 USD 6.3m 購入；約 200,000 平方英尺** | [DataCenterDynamics](https://www.datacenterdynamics.com/en/news/radiusdc-enters-arizona-acquires-phoenixnap-facility-in-phoenix/) — **直接抓取回 HTTP 403，內容僅由搜尋摘要取得** | 次級媒體數字，**未於來源端查證，亦未經任何郡級紀錄佐證** |
-| **2024–2026 年仍在使用 Supermicro** | [phoenixnap.com/offers/supermicro-servers](https://phoenixnap.com/offers/supermicro-servers) | **該頁面沒有型號、沒有日期。** 等級為 **circumstantial（旁證）**。**不得將「目前部署 Supermicro」陳述為事實** |
-| **第三方清單文章稱其提供「L4 到 H100」** | 各家資料商 | **與 phoenixNAP 自家定價系統相牴觸。** 屬資料商雜訊——**不得複述** |
+| **PHX02／3221 E Elwood Street — 530,000 平方英尺、30 MW、2026 年第四季** | 一則 [DataCenterDynamics 文章](https://www.datacenterdynamics.com/en/news/phoenixnap-set-to-break-ground-on-second-data-center-in-phoenix-arizona/)的**搜尋結果摘要**，該文**對直接抓取回 HTTP 403** | **原文從未閱讀。** 未確認，且**可能與移轉給 RadiusDC 的「development rights for future campus expansion」重疊**——亦即它有可能根本不是 phoenixNAP 的獨立專案 |
+| **HPE 在 phoenixNAP 的部署** | [2025 年 4 月 HPE 新聞稿](https://www.hpe.com/us/en/newsroom/press-release/2025/04/phoenixnap-advances-cloud-services-using-hpe-disaggregated-data-center-modular-hardware-system-servers-with-intel-xeon-6.html)的**標題**，加上型錄佐證 | **新聞稿內文從未閱讀**——hpe.com 於 60 秒逾時且未重試。**部署規模、機型數量與是否有 phoenixNAP 高管引述皆為未讀。** *關係*已確認；*規模*未確認 |
+| **3402 E University Drive 於 2009 年以約 $6.3M 購入** | 僅有新聞數字 | **未對馬里科帕郡登記處查核**（mcassessor.maricopa.gov 回 HTML，API 需 token） |
+| **「9+ Tbps 全球網路骨幹」與每台伺服器內含 20 Gbps DDoS 防護** | phoenixNAP 自家網路頁 | **公司行銷宣稱，非稽核值。** PeeringDB 自行申報的數字是 500–1000 Gbps |
+| **Marcus A. Bohn 的職稱「Chief Legal Officer」** | 資料商 | **並非出自申報文件。** *已申報*的事實是他為登記資料上的 care-of 當事人與具名遊說主事者 |
+| **Ron Cadwell 的 CWIE 集團敘事（約 450 名員工、支付＋主機託管＋資料機房）** | [Crunchbase 個人頁](https://www.crunchbase.com/person/ron-cadwell)與自行發布之簡介文字 | **自行發布之簡介，非登記申報。** 其*職務*為高信心；集團敘事為中等 |
+| **`d3.g2` GPU 節點是 Supermicro 機殼** | **本檔並未如此主張——且不得如此主張。** Supermicro 僅在 `d3.m6` twin node（拆解）與歷史的 BigTwin／SuperStorage 部署（案例研究）上獲得確認 | **GPU 節點的機殼供應商是 GAP。** 任何相反陳述都構成憑空杜撰 |
+| **「phoenixNAP 提供 L4 到 H100」** | 第三方部落格（Cherry Servers、Ventus） | **被 phoenixNAP 自家型錄反證**，該型錄中 **NVIDIA SKU 為零**。**不得對客戶複述** |
 
-### 14.2 互相矛盾的數字（併陳，不擇一）
+### 15.2 第三方估計互相矛盾之處（呈現分歧，不擇一）
+
+**員工數**
+
+| 來源 | 數字 |
+|---|---|
+| Datanyze | **約 300** |
+| ZoomInfo | **201–500** |
+| Ampliz | **51–200** |
+| Ron Cadwell 2017 年版簡介 | **約 450** — 但那是**更大的 CWIE／CCBill 集團，不是 phoenixNAP 單體** |
+| phoenixNAP 自身之訴訟主張 | 於 2016-10 至 2020-08 期間有「**hundreds of employees and independent contractors**」操作其資料中心——訴訟攻防脈絡下的陳述，其法律主張已遭法院駁回 |
+
+**未解決。** 三家資料商的模型橫跨 51–500 人，且皆無可見方法論。**任何引用皆須標示為「第三方估計」。**
 
 **營收**
 
 | 來源 | 數字 |
 |---|---|
-| Zippia／Kona Equity（資料商） | **$18–25m** |
-| [New Project Media](https://newprojectmedia.com/ma-phoenixnap-sale-process-moves-into-second-round-with-bids-topping-usd-1bn/) — 進行中之出售程序 | **對外行銷 EBITDA USD 70m**，第一輪出價**突破 USD 1bn**，倍數 **14.3x EV/EBITDA**（前一年 EBITDA 報導為 USD 50m） |
-| [ION Analytics／Infralogic](https://ionanalytics.com/insights/infralogic/goldman-run-sale-for-colo-firm-slated-for-early-2025/) | Goldman Sachs 籌備 **2025 年 Q1 的全公司出售** |
+| Datanyze | **約 $25M** — 不可靠的資料商模型 |
+| 由稅務紀錄推導（僅鳳凰城主機代管） | 2016–2020 年間**每年約 $23M**，由 $2,537,075.23 市 TPT ÷ 2.8% ÷ 47 個月推得 |
+| 由稅務紀錄推導（僅 IaaS 伺服器租賃，**假設**州稅率 5.5%） | 2016–2020 年間**每年約 $5M** |
+| 鳳凰城單一據點合計推導 | **2016–2020 年間每年約 $28M** |
 
-**判斷，非結論：** 一家 EBITDA 有 $70m 的公司不會是營收 $18m 的公司。**資料商數字應予捨棄。** 可辯護的工作假設是**營收在數億美元等級**、EBITDA 約 $70m（**對外行銷值**）——並請注意 RadiusDC 切割之後，phoenixNAP 保留其自述之**約 80% 全球業務**。**本次未取得任何權威營收數字。**
+**ESTIMATE — DERIVED（推導估計）。不得對客戶陳述為事實。** 州商業租賃的 $528,288.69 在 5.5% 稅率下**無法對回**同一稅基，可見分類與稅基確實不同。此推導真正確立的是：**流傳的 $25M 全公司數字，對一家六地區的全球業者而言幾乎可以確定偏低**，因為光是鳳凰城主機代管在 2019 年就可能已接近該數字。**CRM $100M 門檻：公開資料不支持——但請注意此推導只涵蓋鳳凰城，不涵蓋整個集團。**
 
-**GPU 區域供應**
+**鳳凰城據點電力**
 
-| 來源 | 區域 |
+| 來源 | 數字 |
 |---|---|
-| [GPU 行銷頁](https://phoenixnap.com/bare-metal-cloud/gpu-servers) | **Phoenix (AZ) 與 Ashburn (VA)**，「More Coming Soon」 |
-| [現行計費型錄](https://phoenixnap.com/wp-content/themes/bootscore-child/cache/api-data.json) | **PHX、ASH、NLD、SGP、CHI、SEA** — 六個全有，價格相同 |
+| 報導之機房數字 | **約 20 MW，並擴充至 25 MW** |
+| [RadiusDC 新聞稿](https://www.prnewswire.com/news-releases/radiusdc-to-acquire-phoenixnaps-phoenix-data-center-and-colocation-business-302711634.html) | **DC1 擴充至 8 MW 總 IT 電力**；規劃 **DC2 達 18+ MW**（首批階段 2028 上半年）；園區最終約 **26 MW** |
 
-**這不是可以拿來指摘的矛盾——應讀為規模小而集中的機隊，搭配全球佈建的定價。** 見第 6 節。
+**未解決——且請注意這兩個數字量的是不同的東西**（機房容量 vs 總 IT 電力）。**以「報導值」看待，不要視為已對帳。**
 
-**次要 ASN**
+**GPU 地區可用性**
 
-| 來源 | 主張 |
+| 來源 | 說法 |
 |---|---|
-| 第三方 BGP 工具／IPinfo | **AS59210** 與 **AS207134** 屬 phoenixNAP |
-| [ARIN RDAP](https://rdap.arin.net/registry/autnum/12189) | AS59210 解析到 **APNIC** 區塊；AS207134 解析到 **RIPE** 區塊——**兩者皆未於來源端確認** |
+| phoenixNAP 行銷頁 | GPU「currently available in **Phoenix (AZ) and Ashburn (VA) only**」 |
+| phoenixNAP 自家價格型錄 | 三個 GPU SKU 在**六個地區皆已標價且可下單** — PHX、ASH、NLD、SGP、CHI、SEA |
 
-**未解。請將 AS12189 視為唯一經查證之 ASN。**
+**型錄才是有效來源。** 行銷頁已過期。
 
-### 14.3 未結 GAP
+### 15.3 未結 GAP
 
-1. **UCC 擔保品文字——最大的單一缺口。** 20 筆亞利桑那歸檔全數定位並抄錄，但 AZ SOS 公開檢視器**不呈現擔保品描述、也不提供歸檔影像**。**一條擔保品條款都沒看到，也沒有任何改寫轉述。** 頁數是唯一代理指標（2025-08-06 那筆長達 **16 頁**，2026-01-28 修正為 **10 頁**——都是長清冊）。**解法：** 向 **AZ SOS Business Services, 1700 W Washington St Fl 2, Phoenix AZ 85007, 602-542-6187** 申請 UCC-11 資訊請求或認證影本，優先 **2025-002-9842-8**、**2026-001-2461-6**、**2026-001-2475-0**、**2026-001-0311-3**。
-2. **亞利桑那州公司委員會登記——未取得任何幹部、經理人、成員、法定代理人、年報簽署人或歸檔沿革。** 舊 `ecorp.azcc.gov` 為 **NXDOMAIN**；替代入口對非瀏覽器回 **403**，並以 **6 字元圖形 CAPTCHA** 阻擋結果，本檔不解 CAPTCHA。OpenCorporates（HAProxy CAPTCHA）與 Bizapedia（security check）亦遭封鎖。**本檔的實體關係圖來自 UCC 與 ARIN，不是來自登記機關。**
-3. **德拉瓦州——`icis.corp.delaware.gov` 未查詢。** 其他途徑未查得德拉瓦實體，且亞利桑那 LLC 的正確 UCC 歸檔機關就是亞利桑那，但**無法排除德拉瓦控股公司**，而 **Cleary Gottlieb 擔任 RadiusDC 案賣方律師，使控股架構具相當可能性**。
-4. **歷史 WHOIS——未取得。** whoisrequest.com 回 **Cloudflare 403**；whoxy 與 securitytrails 需付費 API 金鑰。僅有現行 RDAP：phoenixnap.com 建立於 **2009-02-26**，2027-02-26 到期，最後異動 2026-01-27，註冊商 **NameCheap**，名稱伺服器 **Cloudflare（ALEENA／MICAH）**，登記人**隱私保護**。**無任何歷史登記人姓名或地址。**
-5. **USPTO——未於來源端取得任何商標紀錄。** `tsdrapi.uspto.gov` 回 **HTTP 401**（現需註冊 API 金鑰）；`tmsearch.uspto.gov` 回 **HTTP 405**；`uspto.report` 回 **403**；`assignment-api.uspto.gov` 連線失敗。搜尋結果顯示 **Phoenix NAP L.L.C. 至少持有 SECURED SERVERS（序號 87396103）與 HAAS（序號 85655621）**，但**未從任何一手來源取得宣誓書簽署人、通訊代理人或代理律師、申請或展延日期、所有權人地址**。
-6. **FEC——沒有任何主要人員實際完成篩查。** `api.open.fec.gov` 在共用 DEMO_KEY 下每次都回 **OVER_RATE_LIMIT**，fec.gov 瀏覽介面未渲染資料列。**記為未查證，而非「查無紀錄」。** 需個人 `api.data.gov` 金鑰，對 Ron Cadwell、Ian McClarty、William Bell 與 Stephanie Cadwell／Caldwell 重跑。**州級（亞利桑那州州務卿）與鳳凰城市級競選財務資料庫亦未查詢。**
-7. **馬里科帕郡估價官——未取得地籍紀錄**，3402 E University Dr 與 2353 W University Dr（Tempe）皆無。`mcassessor.maricopa.gov` 搜尋結果由 AJAX 載入，`/mcs/api/` 端點在無授權 token 時只回 HTML 外殼。**無 APN、無估價、無登記契據、無抵押設定紀錄，也沒有 RadiusDC 移轉的任何紀錄。** 目前僅有次級媒體數字（2009 年 USD 6.3m、約 200,000 平方英尺）。
-8. **伺服器與 GPU 台數——完全未知。** 沒有任何公開數字，**本檔亦不虛構**。僅有邊界值：**6 個計費區域、82 個伺服器 SKU、16 個 PeeringDB 據點、僅 2 個區域承認 GPU 現貨**、ARIN 配置量級約為**數十萬個 IPv4 位址**，以及一座約 200,000 平方英尺的旗艦廠房——其 8 MW 擴充目標反推目前佔用 IT 負載**遠低於 8 MW**。
-9. **BOM 元件價格——僅兩項有來源。** Xeon Gold 6442Y 街頭價 **$5,580.56**（Newegg），Intel Max 1100 約 **$8,000** 起始零售（2025 年 4 月資料點）。**512 GB DDR5 RDIMM 組、4× 2 TB NVMe、雙路 GPU 機箱、電源與 25 GbE 網卡皆無來源價格，對等機箱的 Supermicro 定價或街頭價亦無。**
-10. **營運成本輸入值——全為假設。** 每台 GPU 機種耗電、鳳凰城與 Ashburn 電價、機櫃成本、使用率**皆未查證。第 9 節的成本天花板區間是模型，不是查證發現。**
-11. **GPU 機種的機箱供應商——無從歸屬。** 沒有任何人公開過 `d3.g2.*` Intel Max 1100 機種由誰製造。HPE 在 Ampere Altra（RL300 Gen11）與 Xeon 6（DL320 Gen12）上已確認；Supermicro 在 X11 BigTwin 上已確認、在 Sapphire Rapids 上為旁證。**GPU 機箱、AmpereOne A96-36X 機箱與 AMD EPYC 4000 系列機箱三者皆無歸屬——三個空著的競爭位置。**
-12. **AmpereOne `a2.c9.*` 導入日期——未能定年。** 2026-08-10 已在現行計費型錄中，但**未出現在任何已存檔的 instances 頁面快照**。Wayback 自 **2025 年 10 月**才開始擷取 `api-data.json` 價格檔；對那約 50 個快照做 diff 即可定年，**同時還能產出精確的價格變動史**。**因時間限制未執行——這是本檔 CP 值最高的後續動作。**
-13. **GPU 首次出現的精確度**——夾在 **2023-09-13（未出現）**與 **2023-11-09（已出現）**之間，並由 2023-09-19 的 phoenixNAP 預購推廣佐證。**因 Wayback 對重複原始擷取施加速率限制，未能再收斂。**
-14. **前三位以下的高階主管名冊——僅資料商。** Marcus Bohn、Cindy Anastasi、Frank Eickenhorst 與 Seow Lim 僅來自 RocketReach、Comparably 與 Tracxn。**phoenixNAP 沒有官方領導層頁面**——`phoenixnap.com/company/leadership` 回 **404**。**職稱未確認；查證前不得用於信件。**
-15. **未識別出 CFO。** 對一家每月透過兩家銀行融資買機隊的公司而言，**這是採購決策圈的實質破口。**
-16. **徵才啟事——資料很薄。** 僅查得一則鳳凰城 **Data Center Technician** 職缺（$21–30/hr）。**未查得任何採購、供應鏈、產能規劃或 GPU／ML 基礎設施職缺**，而那本來會是機隊擴建最好的領先指標。
-17. **法院案卷——僅 metadata，未讀取書狀。** CourtListener 回 **17 筆**。其中兩筆直接關於 phoenixNAP：***Phoenix NAP LLC v. Poofless LLC et al.***，D. Ariz. **2:19-cv-05005**，2019-08-21 立案、2020-06-03 終結（phoenixNAP 為**原告**；被告含 Poofless LLC、Poofless1 LLC、Cosmic Games ULC、Preston Arsement、Joe Melsha 與 Anthony Uckon）；以及 ***Stanziale, Jr. v. Phoenixnap***，Bankr. D. Del. **16-50054**，2016-02-19 立案、2016-07-11 終結（與 EP Liquidation LLC 破產財團相關之附屬程序，**幾乎可以確定是偏頗行為追回**）。**兩件案卷皆未讀取。馬里科帕郡高等法院完全未查詢。**
-18. **營收——無法調和。** 見 14.2。**未取得權威數字。**
-19. **出售程序的結果——未解，而且在商業上很重要。** 全公司出售程序在 2025 年進行、出價突破 USD 1bn；**唯一明確完成的只有 2026 年 Q2 將鳳凰城主機代管事業切給 RadiusDC。** 公司其餘部分究竟是**已出售、部分再資本化，還是撤出市場，並不清楚——而這直接決定下一份資本支出計畫由誰簽核。** 這應該是任何高層接觸前第一件要查清楚的事。
-20. **次要 ASN——未測繪。** 見 14.2。
-21. **HPE 新聞室頁面直接抓取逾時。** 2023-08-03 與 2025-04-04 兩則 HPE 新聞稿**兩次抓取皆逾時**、curl 亦未產出檔案，內容係經**搜尋摘要與鏡像站**（InsideHPC、DCD、Morningstar、Nasdaq、Silicon UK、HostingJournalist）取得。各鏡像的引述與產品名稱一致，但**HPE 一手頁面並未直接讀取**。
-22. **重跑時的工具備註。** ZoomInfo MCP 連接器——連同 carta、figma、atlassian、spglobal 與 adobe——需要 OAuth 授權，本次非互動式工作階段無法使用。**透過 claude.ai 連接器設定授權 ZoomInfo 連接器，重跑時很可能可以補上營收估計、CFO 與具名人員的缺口。**
+1. **UCC-1 融資申報——完全未解決，且是最高優先的缺口。** 亞利桑那州州務卿 UCC 入口對四個 URL 變體全數回傳 Cloudflare HTTP 403；**搜尋表單從未載入，因此未送出任何搜尋字串**，本檔中亦不存在任何 filing number、secured party、debtor、collateral description 或修訂歷程。**必須以真人瀏覽器工作階段或認證 UCC-11 申請重做。請查 9.3 節全部五組字串：** `PHOENIX NAP, LLC`、`PHOENIX NAP LLC`、`PHOENIXNAP`、`SECURED SERVERS, LLC`、`CWIE`。
+2. **亞利桑那州公司委員會之幹部、經理人、股東、法定代理人與申報歷史——未取得。** `ecorp.azcc.gov` 兩次 NXDOMAIN；替代入口為 Angular 空殼，其 API 回 HTTP 401；OpenCorporates 因無 token 而拒絕。**ACC 檔號（L15102933）與設立日（2009-03-04）僅來自 GLEIF 經查核的 LEI 紀錄，不是來自申報文件本身。**
+3. **所有具名主事者之 FEC 個人捐款——查詢被阻擋，未執行。** openFEC 對五個姓名於共用 DEMO_KEY 上全數回 OVER_RATE_LIMIT／HTTP 429（Retry-After 約 20 小時）；OpenSecrets 回 Cloudflare 403。**此結果明確「不是」查無紀錄。** 請以已註冊之 api.data.gov 金鑰，重跑 Cadwell（Ron／Ronald）、McClarty（Ian）、Bell（William）與 Bohn（Marcus）。
+4. **`d3.g3.c2.medium` 背後的 GPU 型號——完全未知。** 它只以 $0 的 Windows 授權關聯項存在，沒有任何 metadata。**不要猜。這是本檔中最有價值的單一未知。**
+5. **GPU 節點的機殼供應商——不明。** Supermicro 在 `d3.m6` twin node（實機拆解）與 BigTwin／SuperStorage（2017 案例研究）上已確認，但**沒有任何證據指出誰製造雙 Max 1100 的 `d3.g2` 節點，或 Ampere、AMD、Xeon 6 P-core 節點。**
+6. **HPE 部署規模——未讀。** 2025 年 4 月 HPE 新聞稿內文從未閱讀（hpe.com 60 秒逾時，未重試）。**這一單已確認丟掉；節點數、機型與是否有 phoenixNAP 引述則未確認。**
+7. **Dell 從未被評估。** 未執行針對 Dell 的專項檢索，也未出現任何附帶提及。**分級為 GAP，不是排除。**
+8. **確切的伺服器與 GPU 節點數——任何地方都未揭露。** 可由 84 SKU × 6 地區把機隊下限框在數千台，但無法陳述具體數字，且**對 GPU 節點數完全沒有任何推估依據**。
+9. **USPTO TSDR 商標聲明簽署人與代理人——未取得。** tmsearch.uspto.gov 對 POST 回 HTTP 405；assignment-api.uspto.gov 無回應（HTTP 000）；trademarks.justia.com 回 HTTP 403。僅由搜尋結果層級確立 Phoenix NAP LLC 持有 SECURED SERVERS（87396103）與 FLEXSERVERS（88517423），另有關聯之 HAAS 商標（85655621）。**無簽署人、無代理人、無註冊號、無狀態。**
+10. **phoenixnap.com 之歷史 WHOIS——未取得。** whoisrequest.com 回 Cloudflare 403；whoxy.com 為登入牆；securitytrails 無金鑰無法觸及。僅有現行 Verisign RDAP 紀錄。**歷史登記人姓名、機構與信箱——正是能顯示該網域最初是否由 CWIE／CCBill 實體持有的關鍵資料——完全缺漏。**
+11. **3402 E University Drive 與 3221 E Elwood Street 之馬里科帕郡估價／產權紀錄——未取得。** mcassessor.maricopa.gov 回傳 HTML 空殼而非 JSON，其 API 需要 token。**地號、估定價值、產權移轉鏈與 RadiusDC 之登記移轉皆未經查證。**
+12. **PHX02 專案未經確認**，且可能與移轉給 RadiusDC 的開發權重疊（見 15.1）。
+13. **具名之資料中心營運／採購招募主管——未識別。** 已確認鳳凰城有一則進行中的 Data Center Technician 職缺（時薪 $21–$30，2025-02-10 刊出），但**無主管姓名**。
+14. **phoenixNAP 是否仍接受客製 NVIDIA 機種報價。** 2018 年的 Tesla V100／P40 專用伺服器產品線有發表紀錄，但**不在 2026 年型錄中**；第三方宣稱的「L4 到 H100」無法由任何 phoenixNAP 來源佐證，**不得對客戶複述**。
+15. **BOM 六列中有四列是本檔自訂的估計區間**，不是有來源的報價（記憶體、NVMe、網卡、機殼——第 10.3 節）。只有 Xeon Gold 6442Y 的 RCP（$2,878，因 intel.com 回 403 而改由搜尋結果佐證取得）與**單一次級市場 Max 1100 觀察值**（$2,399，Dell WG7J6）有依據。**本次未取得任何 Supermicro 報價，也未憑空編造。**
+16. **驅動租金推導天花板的營運成本比率（40–55%）完全是本檔的假設**，背後沒有任何 phoenixNAP 成本資料。**GPU 資源池的使用率同樣未知，且會實質改變答案。**
+17. **LLC 層級以下之所有權結構。** CWIE／CCBill 關係佐證充分（共用 Tempe 地址、MarcusB@cwie.net、一位公司欄位寫著「CCBill EU」的 ARIN POC），但**查無任何確立母公司、控股公司或出資額之申報文件。** GLEIF 將直接母公司與最終母公司皆記為 reporting exceptions——**未申報任何母公司 LEI。**
+18. **RadiusDC 交易是否真的完成交割。** 兩份新聞稿皆稱「expected to close in Q2 2026」，須經主管機關核准；**截至 2026-08-11 查無交割完成之確認。在會議中使用「承租方」框架之前，請先查證。**
+19. **TX2024-000075 以外之法院案卷——未查詢。** 未執行 PACER 或聯邦案卷查詢。
+20. **境外登記申報——未觸及。** 由登記於馬爾他（Santa Venera）與塞爾維亞（Niš、貝爾格勒）的員工可推知存在境外關聯機構，但未取得任何境外登記文件。
+21. **重跑時的工具註記。** ZoomInfo MCP 連接器（以及 carta、figma、atlassian、spglobal、adobe 連接器）需要 OAuth 授權，本次非互動式工作階段中無法使用。**經 claude.ai 連接器設定授權 ZoomInfo，重跑時很可能可以補上員工數、營收估計與高階主管信箱的缺口。** 一組已註冊的 api.data.gov 金鑰可補上 FEC 缺口。一個真人瀏覽器工作階段可補上亞利桑那 UCC 與 ACC 缺口——這三個動作合起來，就能關掉本清單的大半。
