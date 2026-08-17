@@ -23,6 +23,9 @@ main{max-width:1080px;margin:0 auto;padding:10px 24px 80px}
 a.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);padding:24px;text-decoration:none;color:var(--ink);transition:.15s}
 a.card:hover{border-top-color:var(--red);box-shadow:0 4px 18px rgba(22,54,95,.10);transform:translateY(-2px)}
 a.card.wide{grid-column:1/-1;border-top-color:var(--grey)}
+a.card.out{border-top-color:var(--red);background:#fcfcfd}
+a.card.out .nm{color:var(--grey)}
+a.card.out .note{border-left-color:var(--red)}
 .tick{font:600 10px 'Courier New',monospace;letter-spacing:.14em;color:var(--grey)}
 .nm{font-family:Georgia,'Songti TC',serif;font-size:20px;margin:8px 0 3px;color:var(--accent)}
 .zh2{font-size:13px;color:var(--ink)}
@@ -47,7 +50,7 @@ footer{border-top:1px solid var(--line);text-align:center;font:10px 'Courier New
 <h1>AI / HPC TARGET DOSSIERS</h1>
 <div class="zh">人工智慧與高效能運算 目標公司情報檔案</div>
 <div class="rule"></div>
-<p class="lede">Decision-grade sales intelligence on four unclaimed AI/HPC datacenter targets — researched through corporate history, financial filings, U.S. political and legislative leanings, and each company's relationships with its customers.</p>
+<p class="lede">Decision-grade sales intelligence on 29 AI/HPC datacenter targets — researched through corporate history, financial filings, U.S. political and legislative leanings, and each company's relationships with its customers. Landlords, hosting operators, self-buying tenants, and the ones the evidence ruled out.</p>
 <div class="meta"><span>PREPARED FOR: SALES TEAM 1 (USA)</span><span>OFFICER US8664 TUO CHENG</span><span>2026-08-17</span></div>
 </header>
 <main><section class="band"><h2>LANDLORDS · 房東</h2><p class="bandnote">They build and lease the capacity. <strong>The tenant buys the servers, not them.</strong> Work these for tenant access, powered-shell adjacency and the mechanical/electrical scope — not for a box order.<br><span class="zhn">興建並出租容量。<strong>買伺服器的是租戶,不是他們。</strong>應以接觸租戶、powered shell 相鄰機會與機電範疇為切入,而非直接出貨。</span></p><div class="grid"><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/STACK_DOSSIER.html">
@@ -134,7 +137,49 @@ footer{border-top:1px solid var(--line);text-align:center;font:10px 'Courier New
 <div class="zh2">自有機房裸機主機商</div>
 <div class="en2">Dedicated servers and bare-metal cloud from a warehouse it owns outright</div>
 <div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — direct</div></div><div class="stat"><div class="l">FLEET</div><div class="v">1,000+ servers · 200 kW→1 MW</div></div><div class="stat"><div class="l">CRM</div><div class="v">GAP — check first</div></div></div>
-<div class="note">Bought its 10,718 sq ft Tempe building for $1.135M in 2018; founder-owned, single decider, and it publishes used-server price graphs — the rare account whose replacement economics can be read from outside.</div></a></div></section><section class="band"><h2>TENANTS · 房客（非主機商，自用機隊）</h2><p class="bandnote">They lease cage or rack space and fill it with their own machines. <strong>They are not in the hosting business at all — the servers run their own product.</strong> Found by reverse-engineering facility rosters, not from press releases, because tenants this size never announce.<br><span class="zhn">承租籠位或機櫃,裝的是自己的機器。<strong>他們根本不做主機生意 —— 伺服器跑的是自家產品。</strong>這些名單是從機房承租紀錄反查出來的,不是新聞稿:這個規模的租戶從不對外公告。</span></p><div class="grid"><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/ANDURIL_DOSSIER.html">
+<div class="note">Bought its 10,718 sq ft Tempe building for $1.135M in 2018; founder-owned, single decider, and it publishes used-server price graphs — the rare account whose replacement economics can be read from outside.</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/GTHOST_DOSSIER.html">
+<div class="tick">PRIVATE · DALLAS, TX · ONTARIO CORP</div>
+<div class="nm">GTHost (GlobalTeleHost Corp.)</div>
+<div class="zh2">28 個機房的專用主機商</div>
+<div class="en2">Dedicated servers across 28 facilities in 11 countries — DataBank DFW1 tenant</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — Texas direct</div></div><div class="stat"><div class="l">FLEET</div><div class="v">3,108 units · 100% SMC</div></div><div class="stat"><div class="l">MEAN CPU AGE</div><div class="v">11.4 years</div></div></div>
+<div class="note">Their own live inventory API shows 3,108 of 3,108 units are Supermicro and 92.1% carry SMC certified memory. Pure refresh account — 99.2% of sockets are 2017 silicon or older, zero new CPU generations in 30 months of catalogues.</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/LIMESTONE_DOSSIER.html">
+<div class="tick">PRIVATE · DALLAS, TX · SINCE 2007</div>
+<div class="nm">Limestone Networks, Inc.</div>
+<div class="zh2">裸機／雲／colo(21 站點)</div>
+<div class="en2">Bare metal, cloud and colocation — 21 facilities, 12 countries</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — Texas direct</div></div><div class="stat"><div class="l">INCUMBENT</div><div class="v">SMC — zero iDRAC/iLO</div></div><div class="stat"><div class="l">AI/ML</div><div class="v">marketed since 2024, no GPU SKU</div></div></div>
+<div class="note">Existing Supermicro shop, so the play is share-of-wallet and refresh timing. Their $3,300/mo Genoa SKU is underwater at a 12-month payback because memory moved 8.1× in a year. Clear the distributor position first (Rule 8).</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/ENZU_DOSSIER.html">
+<div class="tick">PRIVATE · DENVER, CO · 4 ENTITIES</div>
+<div class="nm">Enzu Inc (BudgetVM · Dash Networks)</div>
+<div class="zh2">裸機／colo／GPU 出租</div>
+<div class="en2">Bare-metal hosting, colocation and GPU rental across four legal entities</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — direct</div></div><div class="stat"><div class="l">CPU FLEET</div><div class="v">"Supermicro Server Hardware"</div></div><div class="stat"><div class="l">GPU TIER</div><div class="v">"Supermicro / Dell" — leaking</div></div></div>
+<div class="note">Defend-and-expand, not a new logo: their own site says Supermicro on dedicated and Supermicro/Dell on GPU — Dell got into the newest, most expensive tier. Next window Dec 2026–Mar 2027. Win it on GPUs-per-chassis, not dollars.</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/MOJOHOST_DOSSIER.html">
+<div class="tick">PRIVATE · SOUTHFIELD, MI · SINCE 1999</div>
+<div class="nm">MojoHost (Easy Online Solutions, Ltd.)</div>
+<div class="zh2">管理型主機商,自有機房</div>
+<div class="en2">Managed hosting from a wholly owned 17,000 sq ft Michigan datacenter</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — Chicago Area</div></div><div class="stat"><div class="l">LATE ON</div><div class="v">EPYC 9005 by ~22 months</div></div><div class="stat"><div class="l">FINANCING</div><div class="v">116 UCC-1s since 2020</div></div></div>
+<div class="note">Never bought a server any way but on lessor paper — financing is the mechanism, not a sweetener. Flagship is still Genoa 9654P. Two risks to respect: they buy on price and say so publicly, and adult-industry hosting some finance partners will not underwrite.</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/CYBERCON_DOSSIER.html">
+<div class="tick">ACQUIRED · ST. LOUIS, MO · NOW DIGITAL SPACE</div>
+<div class="nm">Cybercon, Inc. (Digital Space)</div>
+<div class="zh2">中西部主機商,已被澳商併購</div>
+<div class="en2">30-year St. Louis host — parent acquired by Edge Centres 2023, now trades as Digital Space</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — Kansas Area</div></div><div class="stat"><div class="l">INCUMBENT</div><div class="v">none named anywhere</div></div><div class="stat"><div class="l">AUTHORITY</div><div class="v">offshore since 2023</div></div></div>
+<div class="note">Platform-conversion with a financing problem. No source anywhere names a server vendor, chassis or motherboard brand — genuinely open. But cybercon.com now redirects to digitalspace.com and buying authority sits in Australia.</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/INTERNETVIKINGS_DOSSIER.html">
+<div class="tick">SWEDISH AB · CEDAR RAPIDS, IA</div>
+<div class="nm">Internet Vikings International AB</div>
+<div class="zh2">受監管線上博弈主機商</div>
+<div class="en2">Licensed in-state iGaming and sports-betting hosting — "live in 24 states"</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — Kansas Area</div></div><div class="stat"><div class="l">SMC STATUS</div><div class="v">named FIRST on their page</div></div><div class="stat"><div class="l">GPU LINE</div><div class="v">launched 2026-04-28, no vendor</div></div></div>
+<div class="note">Share-of-wallet contest already running: their bare-metal page lets the end customer pick Supermicro, Dell, HPE or Lenovo. The GPU platform standard is live and unmade. Approver may sit at the Swedish parent; balance sheet levered up hard in FY2025.</div></a></div></section><section class="band"><h2>TENANTS · 房客（非主機商，自用機隊）</h2><p class="bandnote">They lease cage or rack space and fill it with their own machines. <strong>They are not in the hosting business at all — the servers run their own product.</strong> Found by reverse-engineering facility rosters, not from press releases, because tenants this size never announce.<br><span class="zhn">承租籠位或機櫃,裝的是自己的機器。<strong>他們根本不做主機生意 —— 伺服器跑的是自家產品。</strong>這些名單是從機房承租紀錄反查出來的,不是新聞稿:這個規模的租戶從不對外公告。</span></p><div class="grid"><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/AUNALYTICS_DOSSIER.html">
+<div class="tick">PRIVATE · SOUTH BEND, IN · ~300 STAFF</div>
+<div class="nm">Aunalytics, Inc.</div>
+<div class="zh2">資料／AI 平台,自有兩座機房</div>
+<div class="en2">Data and AI platform for regulated banking — owns South Bend and Kalamazoo datacenters</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — Chicago Area</div></div><div class="stat"><div class="l">PROGRAMME</div><div class="v">$30M equipment, Apr 2024</div></div><div class="stat"><div class="l">MODEL</div><div class="v">direct end-buyer, no catalogue</div></div></div>
+<div class="note">They publish no server catalogue because they do not sell servers — they buy them for their own floor. Their own dated May 2026 essays commit publicly to owning inference silicon. Do not attack the NetApp estate; it is a regulator proof point.</div></a><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/ANDURIL_DOSSIER.html">
 <div class="tick">PRIVATE · COSTA MESA, CA · $61B</div>
 <div class="nm">Anduril Industries, Inc.</div>
 <div class="zh2">國防科技製造商（自建運算）</div>
@@ -152,7 +197,25 @@ footer{border-top:1px solid var(--line);text-align:center;font:10px 'Courier New
 <div class="zh2">自動駕駛卡車開發商</div>
 <div class="en2">Autonomous-trucking developer — in-house ruggedized servers, TRG HOU1 colo tier</div>
 <div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — direct</div></div><div class="stat"><div class="l">CARRIER</div><div class="v">USDOT 4190558 · 16 units</div></div><div class="stat"><div class="l">BUYING</div><div class="v">financed, not capex</div></div></div>
-<div class="note">Their own published doctrine is to avoid raising capital for depreciating assets and use bank financing — bring the financing partner to the first meeting. Vendor governance, not price, is the gate.</div></a></div></section><section class="band"><h2>ACT · 行動</h2><p class="bandnote">The convergence of everything above: <strong>who to call this month, and with which number.</strong><br><span class="zhn">以上所有研究的收斂點:<strong>這個月該打誰、帶哪個數字進去。</strong></span></p><div class="grid"><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/TIERS_DOSSIER.html">
+<div class="note">Their own published doctrine is to avoid raising capital for depreciating assets and use bank financing — bring the financing partner to the first meeting. Vendor governance, not price, is the gate.</div></a></div></section><section class="band"><h2>RULED OUT · 已排除（查證後不要打）</h2><p class="bandnote">Researched to the same depth as everything above, then <strong>disqualified on the evidence.</strong> They stay published because a documented reason not to call is worth as much as a reason to call — and because each one leaves something behind: an estate, a building, or a founder who is still buying elsewhere.<br><span class="zhn">與上方同樣深度查證後,<strong>依證據排除。</strong>之所以保留公開,是因為「有憑有據的不要打」跟「該打」一樣值錢 ——而且每一家都留下了東西:一批資產、一棟建築,或一位仍在別處採購的創辦人。</span></p><div class="grid"><a class="card out" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/EONIX_DOSSIER.html">
+<div class="tick">RULED OUT · PHOENIX, AZ · SINCE 2004</div>
+<div class="nm">Eonix Corporation (ServerHub®)</div>
+<div class="zh2">Supermicro 舊客,但已停售</div>
+<div class="en2">Dedicated servers and colocation at phoenixNAP — an incumbent in run-off</div>
+<div class="stats"><div class="stat"><div class="l">TERRITORY</div><div class="v">T1 — direct</div></div><div class="stat"><div class="l">SMC EVIDENCE</div><div class="v">own site, 2015→2026</div></div><div class="stat"><div class="l">WHY OUT</div><div class="v">storefront sells nothing</div></div></div>
+<div class="note">Eleven years of their own pages say "Supermicro IPMI tool" and no rival vendor appears anywhere — but all three product groups return "does not contain any visible products", the catalogue has been byte-frozen since 2018, and the GPU line still lists Tesla K80. They are not buying because they are not selling.</div></a><a class="card out" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/ACEDC_DOSSIER.html">
+<div class="tick">RULED OUT · PROVO, UT</div>
+<div class="nm">Ace Data Centers, Inc.</div>
+<div class="zh2">機房已售出,現為 IPv4 出租</div>
+<div class="en2">Sold its datacenter to Endurance in 2015 — now principally an IPv4 leasing estate</div>
+<div class="stats"><div class="stat"><div class="l">SOLD</div><div class="v">$74.0M, 2015-09-21</div></div><div class="stat"><div class="l">IPv4 HELD</div><div class="v">743,424 · 76.7% third-party</div></div><div class="stat"><div class="l">WHY OUT</div><div class="v">no fleet, no catalogue</div></div></div>
+<div class="note">The premise was wrong and the file says so on line one. What survives is an internet-number business, not a compute business. One thing is still worth a call: they quietly still own 1175 South 350 East, Provo — $2.11M of assessed improvements, mentioned in no company material.</div></a><a class="card out" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/HUGESERVER_DOSSIER.html">
+<div class="tick">RULED OUT · LOS ANGELES, CA · SUSPENDED</div>
+<div class="nm">HugeServer Networks, LLC</div>
+<div class="zh2">加州吊銷,網路全滅</div>
+<div class="en2">FTB-suspended California LLC — AS25780 announces zero prefixes since 2026-05-28</div>
+<div class="stats"><div class="stat"><div class="l">CA SOS</div><div class="v">Suspended – FTB, 2025-06-02</div></div><div class="stat"><div class="l">NETWORK</div><div class="v">100% packet loss, HTTP 000</div></div><div class="stat"><div class="l">CATALOGUE</div><div class="v">byte-frozen since 2019</div></div></div>
+<div class="note">A suspended California LLC cannot lawfully transact or enforce a contract until revived — do not attempt to sell into it. Two things carry forward: the interconnect estate at One Wilshire / 530 W 6th / Equinix LA1, and co-founder Saman Soltani, who runs the very-much-alive Xitoring.</div></a></div></section><section class="band"><h2>ACT · 行動</h2><p class="bandnote">The convergence of everything above: <strong>who to call this month, and with which number.</strong><br><span class="zhn">以上所有研究的收斂點:<strong>這個月該打誰、帶哪個數字進去。</strong></span></p><div class="grid"><a class="card" target="_blank" rel="noopener" href="https://tuosmc.github.io/ai-hpc-target-dossiers/TIERS_DOSSIER.html">
 <div class="tick">DIRECTORY · FOUR CAPACITY TIERS</div>
 <div class="nm">TARGET DIRECTORY</div>
 <div class="zh2">依容量分層的目標名錄</div>
